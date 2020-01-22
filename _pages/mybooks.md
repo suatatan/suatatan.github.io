@@ -12,7 +12,7 @@ I have two published books on data science and cloud computing in Turkish.
 - My Second Book is about Data Analysis with R Language [Buy](https://www.seckin.com.tr/kitap/878575616)
 
 
-One book about "Network Analysis" is on the verge of publication. 
+One book about **"Network Analysis"** is on the verge of publication. 
  
  
 
