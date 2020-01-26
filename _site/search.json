@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "My AI Classifies News Headlines",
+      "category" : "",
+      "tags"     : "NewsAnalytics",
+      "url"      : "/2020/01/26/whether_headline_is_local_news/",
+      "date"     : "26 Jan, 2020"
+    } ,
+  
+    {
       "title"    : "Syrian Refugee Crisis in Turkey",
       "category" : "",
       "tags"     : "NewsAnalytics",
