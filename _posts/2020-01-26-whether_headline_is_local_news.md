@@ -2,7 +2,7 @@
 layout: post
 title:  My AI Classifies News Headlines
 date:   2020-01-26 00:00:00 +0300
-image:  ai.jpg
+image:  ai.webp
 tags:   NewsAnalytics
 ---
 
