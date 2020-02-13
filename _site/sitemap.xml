@@ -9,6 +9,10 @@
 <lastmod>2020-01-26T00:00:00+03:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2020/01/26/yerel_mi_degilmi_siniflandirici/</loc>
+<lastmod>2020-01-26T00:00:00+03:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -22,5 +26,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/tag/newsanalytics/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/notebook/</loc>
 </url>
 </urlset>

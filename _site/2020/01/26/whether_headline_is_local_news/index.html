@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+  
   
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -93,6 +93,10 @@
               <li class="nav__item">
                 <a href="/mybooks/" class="nav__link">My Books</a>
               </li>
+              
+                
+              
+                
               
                 
               
@@ -181,463 +185,17 @@
       <div class="post__content">
         <h1 id="a-machine-learning-algorithm-for-classifying-whether-any-turkish-headline-local-or-non-local">A Machine Learning Algorithm for classifying whether any Turkish Headline ‘Local’ or ‘Non-local’.</h1>
 
-<h2 id="objection">Objection</h2>
+<h2 id="purpose">Purpose</h2>
 
-<p>I will build a machine learning algorithm for classifying Turkish News in terms of ‘local news’ or ‘non-local news’. The main motivation behind this algorithm is the fuzzy nature of search pages of news outlets. Most of the web pages inject non-local headlines into local news. This algorithm will detect the real nature of the headline.</p>
+<p>Online News outlets already have a “search-box”. When you write some keyword to here you get results. However, the problem starts in detail.  Intentionally or just a result of the poor algorithm the results include a  lot of irrelevant results.  I experienced it while I scraped the local news from Turkish news sites. To overcome this problem I decided to build my artificial intelligence tool to detect local news and non-local news listed in the search results of the local news keyword.</p>
 
-<p>For this purpose, I scraped the local and non-local news based on special queries. Then I trained multiple algorithms to find the best fit.</p>
+<p>I  build a machine learning algorithm for classifying Turkish News in terms of ‘local news’ or ‘non-local news’. The main motivation behind this algorithm is the fuzzy nature of search pages of news outlets. Most of the web pages inject non-local headlines into local news. This algorithm will detect the real nature of the headline.</p>
 
-<p>This notebok has been written with Python language.</p>
+<p>For this purpose, I scraped the local and non-local news based on special queries. Then I trained multiple algorithms to find the best fit. Linear SVC model winner. <a href="/2020/01/26/yerel_mi_degilmi_siniflandirici/" target="_blank">Here is my algorithm</a>. With Python language.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="c1"># Create your connection.
-</span><span class="n">cnx</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">'/home/suat/Dropbox/important_datum/il_haberleri/ilhaber.sqlite'</span><span class="p">)</span>
+<p>The accuracy of the prediction power of the algorithm according to the cross-validation of overall data is more than %95.</p>
 
-<span class="n">guya_yereller</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s">"SELECT * FROM haberler_gayri_mukerrer"</span><span class="p">,</span> <span class="n">cnx</span><span class="p">)</span>
-
-<span class="n">cnx2</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">'/home/suat/Dropbox/important_datum/ulusal_haberler/ulusal_haberler.sqlite'</span><span class="p">)</span>
-
-<span class="n">yerel_olmayanlar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s">"SELECT * FROM haberler"</span><span class="p">,</span> <span class="n">cnx2</span><span class="p">)</span>
-
-
-
-</code></pre></div></div>
-
-<p>The non-local headlines</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">yerel_olmayanlar</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>baslik           13058
-scrape_tarihi    13058
-id               13058
-sayfa_url        13058
-sorgu_ifadesi    13058
-dtype: int64
-</code></pre></div></div>
-
-<p>The local headlines</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">guya_yereller</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>baslik           88378
-sorgu_ifadesi    88378
-sayfa_url        88378
-insan_etiket      7699
-dtype: int64
-</code></pre></div></div>
-
-<p>The clear terms about local news (like mayor, governor, village) will be extract from local headlines to label them as ‘local’</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">yerel_haberler</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s">"""
-SELECT * FROM haberler where baslik like '</span><span class="si">%</span><span class="s">vali</span><span class="si">%</span><span class="s">' 
-                or baslik like '</span><span class="si">%</span><span class="s">kaymakam</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">mezra</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">müftü</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">muhtar</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">belediye başkanı</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">meclis üyesi</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">köy</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">mahalle</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">ilçe</span><span class="si">%</span><span class="s">'
-                or baslik like '</span><span class="si">%</span><span class="s">il müdür</span><span class="si">%</span><span class="s">'
-                or baslik like sorgu_ifadesi"""</span><span class="p">,</span> <span class="n">cnx</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">yerel_haberler</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>baslik           11864
-scrape_tarihi    11864
-id               11864
-sayfa_url        11864
-sorgu_ifadesi    11864
-insan_etiket      1024
-dtype: int64
-</code></pre></div></div>
-
-<p>Combining ‘local’ and ‘non-local’ news then labelling them</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">yerel_degil</span> <span class="o">=</span> <span class="n">yerel_olmayanlar</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
-<span class="n">yereldir</span> <span class="o">=</span> <span class="n">yerel_haberler</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
-<span class="n">yerel_degil</span><span class="p">[</span><span class="s">'yerelmi'</span><span class="p">]</span><span class="o">=</span><span class="s">'yerel_degil'</span>
-<span class="n">yereldir</span><span class="p">[</span><span class="s">'yerelmi'</span><span class="p">]</span><span class="o">=</span><span class="s">'yerel'</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">yerel_degil</span><span class="p">,</span><span class="n">yereldir</span><span class="p">])</span>
-<span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/python3/dist-packages/ipykernel_launcher.py:1: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
-of pandas will change to not sort by default.
-
-To accept the future behavior, pass 'sort=False'.
-
-To retain the current behavior and silence the warning, pass 'sort=True'.
-
-  """Entry point for launching an IPython kernel.
-</code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>baslik</th>
-      <th>id</th>
-      <th>insan_etiket</th>
-      <th>sayfa_url</th>
-      <th>scrape_tarihi</th>
-      <th>sorgu_ifadesi</th>
-      <th>yerelmi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>12320</th>
-      <td>Korkunç cinayette sır perdesi aralandı</td>
-      <td>28c8d8d5414877d49aa8706021d901d2</td>
-      <td>NaN</td>
-      <td>haber7.com</td>
-      <td>24-01-2020</td>
-      <td>kanun</td>
-      <td>yerel_degil</td>
-    </tr>
-    <tr>
-      <th>859</th>
-      <td>25.09.2019 13:18   Yol çalışmasında bulunan ma...</td>
-      <td>9880edc70bb18742d7fe50c776268abe</td>
-      <td>None</td>
-      <td>sondakika.com</td>
-      <td>29-09-2019</td>
-      <td>Ankara</td>
-      <td>yerel</td>
-    </tr>
-    <tr>
-      <th>4332</th>
-      <td>CHP 71 belediye başkanını açıkladı... İşte tam...</td>
-      <td>52f760319239fabd7476b461589a20b4</td>
-      <td>None</td>
-      <td>cumhuriyet.com.tr</td>
-      <td>29-09-2019</td>
-      <td>Gümüşhane</td>
-      <td>yerel</td>
-    </tr>
-    <tr>
-      <th>4309</th>
-      <td>Suriye</td>
-      <td>7e63e744cf72af3f8296c5df7befd6ce</td>
-      <td>NaN</td>
-      <td>tr.mehrnews.com</td>
-      <td>24-01-2020</td>
-      <td>beşiktaş</td>
-      <td>yerel_degil</td>
-    </tr>
-    <tr>
-      <th>2284</th>
-      <td>Türkiye’nin ilk 'Yüzen Ofis'i ilgi çekiyor</td>
-      <td>1caaad793172bd4868641892b1856969</td>
-      <td>NaN</td>
-      <td>virahaber.com</td>
-      <td>24-01-2020</td>
-      <td>fenerbahçe</td>
-      <td>yerel_degil</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
-<span class="n">col</span> <span class="o">=</span> <span class="p">[</span><span class="s">'yerelmi'</span><span class="p">,</span> <span class="s">'baslik'</span><span class="p">]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'baslik'</span><span class="p">])]</span>
-<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'yerelmi'</span><span class="p">,</span> <span class="s">'baslik'</span><span class="p">]</span>
-<span class="n">df</span><span class="p">[</span><span class="s">'category_id'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'yerelmi'</span><span class="p">]</span><span class="o">.</span><span class="n">factorize</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">category_id_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s">'yerelmi'</span><span class="p">,</span> <span class="s">'category_id'</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s">'category_id'</span><span class="p">)</span>
-<span class="n">category_to_id</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">category_id_df</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">id_to_category</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">category_id_df</span><span class="p">[[</span><span class="s">'category_id'</span><span class="p">,</span> <span class="s">'yerelmi'</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>If category id is 0 news is non-local, else headline is local news</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># yerelse 1 
-</span></code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>yerelmi</th>
-      <th>baslik</th>
-      <th>category_id</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>12813</th>
-      <td>yerel_degil</td>
-      <td>Türkiye</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>10280</th>
-      <td>yerel</td>
-      <td>19.09.2019 16:49   19 Eylül Gaziler Günü Zongu...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2189</th>
-      <td>yerel</td>
-      <td>16.09.2019 21:48   Vali Oktay Çağatay, Adilcev...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7244</th>
-      <td>yerel_degil</td>
-      <td>YATSI</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>8947</th>
-      <td>yerel</td>
-      <td>Muhtara tokat atıp kaçtılar</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>6377</th>
-      <td>yerel</td>
-      <td>23.09.2019 15:08   Milli sporcuların Avrupa ba...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>10673</th>
-      <td>yerel</td>
-      <td>Üç ile vali ataması yapıldı</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>11169</th>
-      <td>yerel</td>
-      <td>09.09.2019 17:19   Kadirli'de 3 araç çarpıştı:...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7850</th>
-      <td>yerel_degil</td>
-      <td>14.01.2020 15:54   HDP TBMM Grup Toplantısı HD...</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>327</th>
-      <td>yerel</td>
-      <td>16.09.2019 16:27   Döğer'de 2. Yunus Emre'yi a...</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Distribution of the news are normal</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'yerelmi'</span><span class="p">)</span><span class="o">.</span><span class="n">baslik</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p><img src="/images/2020-01-26-output_16_0.png" alt="png" /></p>
-
-<p>Stopwords removal:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">stop_words</span> <span class="kn">import</span> <span class="n">get_stop_words</span>
-<span class="n">stop_words_tr</span> <span class="o">=</span> <span class="n">get_stop_words</span><span class="p">(</span><span class="s">'tr'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
-<span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">sublinear_tf</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> 
-                        <span class="n">min_df</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s">'l2'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">,</span> <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> 
-                        <span class="n">stop_words</span><span class="o">=</span><span class="n">stop_words_tr</span><span class="p">)</span>
-<span class="n">features</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">baslik</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">category_id</span>
-<span class="n">features</span><span class="o">.</span><span class="n">shape</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/lib/python3.7/dist-packages/sklearn/feature_extraction/text.py:385: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['insermi'] not in stop_words.
-  'stop_words.' % sorted(inconsistent))
-
-
-
-
-
-(10000, 16579)
-</code></pre></div></div>
-
-<h2 id="chi-square-test-to-find-out-most-relevant-term-with-local-and-non-local-headlines">Chi-Square Test to Find-out Most Relevant Term with Local and Non-local Headlines</h2>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">chi2</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="k">for</span> <span class="n">Product</span><span class="p">,</span> <span class="n">category_id</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">category_to_id</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
-  <span class="n">features_chi2</span> <span class="o">=</span> <span class="n">chi2</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span> <span class="o">==</span> <span class="n">category_id</span><span class="p">)</span>
-  <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">features_chi2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-  <span class="n">feature_names</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tfidf</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">())[</span><span class="n">indices</span><span class="p">]</span>
-  <span class="n">unigrams</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">feature_names</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
-  <span class="n">bigrams</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">feature_names</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"# '{}':"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">Product</span><span class="p">))</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"  . Most correlated unigrams:</span><span class="se">\n</span><span class="s">. {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">. '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">unigrams</span><span class="p">[</span><span class="o">-</span><span class="n">N</span><span class="p">:])))</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">"  . Most correlated bigrams:</span><span class="se">\n</span><span class="s">. {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">. '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bigrams</span><span class="p">[</span><span class="o">-</span><span class="n">N</span><span class="p">:])))</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 'yerel':
-  . Most correlated unigrams:
-. 2019
-. 09
-  . Most correlated bigrams:
-. belediye başkanı
-. 09 2019
-# 'yerel_degil':
-  . Most correlated unigrams:
-. 2019
-. 09
-  . Most correlated bigrams:
-. belediye başkanı
-. 09 2019
-</code></pre></div></div>
-
-<h2 id="a-experiment-with-multionomial-naive-bayes-classifier">A experiment with Multionomial Naive Bayes Classifier</h2>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span>
-<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'baslik'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'category_id'</span><span class="p">],</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="n">count_vect</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
-<span class="n">X_train_counts</span> <span class="o">=</span> <span class="n">count_vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">tfidf_transformer</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span>
-<span class="n">X_train_tfidf</span> <span class="o">=</span> <span class="n">tfidf_transformer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train_counts</span><span class="p">)</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h1 id="experiment-with-different-classifier-to-select-best-performant-algorithm">Experiment with Different Classifier to Select Best Performant Algorithm</h1>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
-</code></pre></div></div>
-
-<p>I will use 5 random cross-validation experiment for each algorithm</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-    <span class="n">LinearSVC</span><span class="p">(),</span>
-    <span class="n">MultinomialNB</span><span class="p">(),</span>
-    <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-<span class="p">]</span>
-<span class="n">CV</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">cv_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">CV</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)))</span>
-<span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
-  <span class="n">model_name</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span>
-  <span class="n">accuracies</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s">'accuracy'</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">CV</span><span class="p">)</span>
-  <span class="k">for</span> <span class="n">fold_idx</span><span class="p">,</span> <span class="n">accuracy</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">accuracies</span><span class="p">):</span>
-    <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">model_name</span><span class="p">,</span> <span class="n">fold_idx</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">))</span>
-<span class="n">cv_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">entries</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'model_name'</span><span class="p">,</span> <span class="s">'fold_idx'</span><span class="p">,</span> <span class="s">'accuracy'</span><span class="p">])</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'model_name'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'accuracy'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">cv_df</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'model_name'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'accuracy'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">cv_df</span><span class="p">,</span> 
-              <span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">jitter</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s">"gray"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p><img src="/images/2020-01-26-output_27_0.png" alt="png" /></p>
-
-<p>Best peformance is with LinearSVC algorithm</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cv_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'model_name'</span><span class="p">)</span><span class="o">.</span><span class="n">accuracy</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>model_name
-LinearSVC                 0.9825
-LogisticRegression        0.9684
-MultinomialNB             0.9615
-RandomForestClassifier    0.8558
-Name: accuracy, dtype: float64
-</code></pre></div></div>
-
-<h2 id="confusion-matrix">Confusion Matrix</h2>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
-
-<span class="n">model</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">()</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">indices_train</span><span class="p">,</span> <span class="n">indices_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">clf_linear_svc</span><span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf_linear_svc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="n">conf_mat</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">conf_mat</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s">'d'</span><span class="p">,</span>
-            <span class="n">xticklabels</span><span class="o">=</span><span class="n">category_id_df</span><span class="o">.</span><span class="n">yerelmi</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="n">category_id_df</span><span class="o">.</span><span class="n">yerelmi</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Actual'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Predicted'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p><img src="/images/2020-01-26-output_31_0.png" alt="png" /></p>
-
-<h2 id="train-selected-algorithm">Train Selected Algorithm</h2>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span>
-<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'baslik'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'category_id'</span><span class="p">],</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">count_vect</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
-<span class="n">X_train_counts</span> <span class="o">=</span> <span class="n">count_vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">tfidf_transformer</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span>
-<span class="n">X_train_tfidf</span> <span class="o">=</span> <span class="n">tfidf_transformer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train_counts</span><span class="p">)</span>
-<span class="n">clf_linear_svc</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">clf_linear_svc</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
-          intercept_scaling=1, loss='squared_hinge', max_iter=1000,
-          multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
-          verbose=0)
-</code></pre></div></div>
-
-<h2 id="simple-test">Simple Test</h2>
+<p>Here a simple test:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="s">"""
 Cumhurbaşkanlığı Kararnamesinde yer alan hususlar
@@ -646,7 +204,7 @@ Cumhurbaşkanlığı Kararnamesinde yer alan hususlar
 <span class="k">print</span><span class="p">(</span><span class="n">category_id_df</span><span class="p">[</span><span class="n">category_id_df</span><span class="p">[</span><span class="s">'category_id'</span><span class="p">]</span> <span class="o">==</span> <span class="n">y</span><span class="p">][</span><span class="s">'yerelmi'</span><span class="p">])</span>
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5032    yerel_degil
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Result: 5032    yerel_degil
 Name: yerelmi, dtype: object
 </code></pre></div></div>
 
@@ -657,437 +215,9 @@ Van'ın Gürpınar ilçesinde Norduz Koyunları ile ilgili
 <span class="k">print</span><span class="p">(</span><span class="n">category_id_df</span><span class="p">[</span><span class="n">category_id_df</span><span class="p">[</span><span class="s">'category_id'</span><span class="p">]</span> <span class="o">==</span> <span class="n">y</span><span class="p">][</span><span class="s">'yerelmi'</span><span class="p">])</span>
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6286    yerel
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Result: 6286    yerel
 Name: yerelmi, dtype: object
 </code></pre></div></div>
-
-<h1 id="labelling-unlaballed-headlines">Labelling unlaballed headlines</h1>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#etiketsizler
-</span><span class="n">dfx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s">"""
-SELECT  * FROM haberler_islenmis
-"""</span><span class="p">,</span> <span class="n">cnx</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dfx</span><span class="p">[</span><span class="s">'makine_etiket_yerelmi'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dfx</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>level_0                  80679
-index                    80679
-baslik                   80679
-sorgu_ifadesi            80679
-sayfa_url                80679
-insan_etiket                 0
-makine_etiket            80679
-makine_etiket_id         80679
-makine_etiket_yerelmi        0
-dtype: int64
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dfx</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>level_0</th>
-      <th>index</th>
-      <th>baslik</th>
-      <th>sorgu_ifadesi</th>
-      <th>sayfa_url</th>
-      <th>insan_etiket</th>
-      <th>makine_etiket</th>
-      <th>makine_etiket_id</th>
-      <th>makine_etiket_yerelmi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>0</td>
-      <td>Dha yurt bülteni - 17</td>
-      <td>Adana</td>
-      <td>haberler.com</td>
-      <td>None</td>
-      <td>ol</td>
-      <td>2</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Adana'da terör saldırısı</td>
-      <td>Adana</td>
-      <td>haberler.com</td>
-      <td>None</td>
-      <td>ol</td>
-      <td>2</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>2</td>
-      <td>Adana'da polis servis aracına saldırıda patlam...</td>
-      <td>Adana</td>
-      <td>haberler.com</td>
-      <td>None</td>
-      <td>ol</td>
-      <td>2</td>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cincos</span> <span class="o">=</span> <span class="n">dfx</span>
-<span class="n">cincos</span><span class="o">.</span><span class="n">baslik</span>
-<span class="n">result_ids</span><span class="o">=</span> <span class="n">clf_linear_svc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">count_vect</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">cincos</span><span class="o">.</span><span class="n">baslik</span><span class="p">))</span>
-<span class="n">dfx</span><span class="p">[</span><span class="s">'makine_etiket_yerelmi'</span><span class="p">]</span><span class="o">=</span> <span class="n">result_ids</span>
-</code></pre></div></div>
-
-<h2 id="converting-numeric-labels-into-human-friendly-labels">Converting numeric labels into human-friendly labels</h2>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># try
-</span><span class="k">def</span> <span class="nf">convcat</span><span class="p">(</span><span class="n">catid</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s">"yerel"</span> <span class="k">if</span> <span class="n">catid</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s">"yerel_degil"</span>
-
-
-<span class="n">dfx</span><span class="p">[</span><span class="s">'makine_etiket_yerelmi'</span><span class="p">]</span><span class="o">=</span> <span class="n">dfx</span><span class="p">[</span><span class="s">'makine_etiket_yerelmi'</span><span class="p">]</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">convcat</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dfx</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>level_0</th>
-      <th>index</th>
-      <th>baslik</th>
-      <th>sorgu_ifadesi</th>
-      <th>sayfa_url</th>
-      <th>insan_etiket</th>
-      <th>makine_etiket</th>
-      <th>makine_etiket_id</th>
-      <th>makine_etiket_yerelmi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1271</th>
-      <td>1271</td>
-      <td>1271</td>
-      <td>Boynuz uzunluğu 127 santim olan yaban keçisi a...</td>
-      <td>Adıyaman</td>
-      <td>iha.com.tr</td>
-      <td>None</td>
-      <td>ol</td>
-      <td>2</td>
-      <td>yerel</td>
-    </tr>
-    <tr>
-      <th>56976</th>
-      <td>56976</td>
-      <td>56976</td>
-      <td>Türkiye 3 Bant Bilardo Şampiyonası başladı</td>
-      <td>Sinop</td>
-      <td>iha.com.tr</td>
-      <td>None</td>
-      <td>ol</td>
-      <td>2</td>
-      <td>yerel_degil</td>
-    </tr>
-    <tr>
-      <th>31672</th>
-      <td>31672</td>
-      <td>31672</td>
-      <td>Yönetmen Metin Günay'ın babası son yolculuğuna...</td>
-      <td>Isparta</td>
-      <td>iha.com.tr</td>
-      <td>None</td>
-      <td>ym</td>
-      <td>0</td>
-      <td>yerel_degil</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#dfx.to_sql('haberler_islenmis',con=cnx,if_exists="replace")
-</span></code></pre></div></div>
-
-<h2 id="results">Results</h2>
-
-<p>Results shows that some webpage’s search interface are pretty ‘dirty’. It is show a lot of unrelevant things</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gruplu_dfx</span> <span class="o">=</span> <span class="n">dfx</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">'sayfa_url'</span><span class="p">,</span><span class="s">'makine_etiket_yerelmi'</span><span class="p">])</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span>
-<span class="n">gruplu_dfx</span>
-</code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>level_0</th>
-      <th>index</th>
-      <th>makine_etiket_id</th>
-    </tr>
-    <tr>
-      <th>sayfa_url</th>
-      <th>makine_etiket_yerelmi</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2" valign="top">bbc.com</th>
-      <th>yerel</th>
-      <td>14628677</td>
-      <td>14628677</td>
-      <td>554</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>17068524</td>
-      <td>17068524</td>
-      <td>466</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">cumhuriyet.com.tr</th>
-      <th>yerel</th>
-      <td>109065882</td>
-      <td>109065882</td>
-      <td>3822</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>211051271</td>
-      <td>211051271</td>
-      <td>5242</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">ensonhaber.com</th>
-      <th>yerel</th>
-      <td>473463</td>
-      <td>473463</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>2209630</td>
-      <td>2209630</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">ermenihaber.am</th>
-      <th>yerel</th>
-      <td>22176919</td>
-      <td>22176919</td>
-      <td>746</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>60199430</td>
-      <td>60199430</td>
-      <td>1636</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">haber7.com</th>
-      <th>yerel</th>
-      <td>17833059</td>
-      <td>17833059</td>
-      <td>605</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>53827623</td>
-      <td>53827623</td>
-      <td>1043</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">haberler.com</th>
-      <th>yerel</th>
-      <td>358368614</td>
-      <td>358368614</td>
-      <td>14485</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>225344696</td>
-      <td>225344696</td>
-      <td>7300</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">iha.com.tr</th>
-      <th>yerel</th>
-      <td>477292865</td>
-      <td>477292865</td>
-      <td>19382</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>399238760</td>
-      <td>399238760</td>
-      <td>12978</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">milligazete.com.tr</th>
-      <th>yerel</th>
-      <td>176312717</td>
-      <td>176312717</td>
-      <td>5450</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>350337485</td>
-      <td>350337485</td>
-      <td>8181</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">posta.com.tr</th>
-      <th>yerel</th>
-      <td>31166751</td>
-      <td>31166751</td>
-      <td>1231</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>26135198</td>
-      <td>26135198</td>
-      <td>836</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">sondakika.com</th>
-      <th>yerel</th>
-      <td>366563966</td>
-      <td>366563966</td>
-      <td>17180</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>11351338</td>
-      <td>11351338</td>
-      <td>454</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">tr.euronews.com</th>
-      <th>yerel</th>
-      <td>12562580</td>
-      <td>12562580</td>
-      <td>458</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>38535898</td>
-      <td>38535898</td>
-      <td>873</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">tr.mehrnews.com</th>
-      <th>yerel</th>
-      <td>11758767</td>
-      <td>11758767</td>
-      <td>504</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>77124361</td>
-      <td>77124361</td>
-      <td>1876</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">virahaber.com</th>
-      <th>yerel</th>
-      <td>41997223</td>
-      <td>41997223</td>
-      <td>1544</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>109330008</td>
-      <td>109330008</td>
-      <td>3456</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">yenisafak.com</th>
-      <th>yerel</th>
-      <td>11329335</td>
-      <td>11329335</td>
-      <td>290</td>
-    </tr>
-    <tr>
-      <th>yerel_degil</th>
-      <td>21225141</td>
-      <td>21225141</td>
-      <td>554</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dfx</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">'sayfa_url'</span><span class="p">,</span><span class="s">'makine_etiket_yerelmi'</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fea0cdf2650&gt;
-</code></pre></div></div>
-
-<p><img src="/images/2020-01-26-output_51_1.png" alt="png" /></p>
 
 
       </div>
@@ -1168,6 +298,54 @@ News Analytics Report: Syrian Refugee Crisis in Turkey
     
 
     
+    <div class="next">
+      <a class="post__nav__image" href="/2020/01/26/yerel_mi_degilmi_siniflandirici/" style="background-image: url(/images/kod.jpg)">
+      </a>
+      <h2 class="post__nav__title">
+        <a href="/2020/01/26/yerel_mi_degilmi_siniflandirici/">Headline locality detection algorithm</a>
+        <i class="ion ion-md-arrow-forward"></i>
+      </h2>
+      <p class="next__excerpt">
+        
+          
+
+
+
+yerel_mi_degilmi_siniflandirici
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+
+  
+    
+
+
+
+
+A Machine Learning A...
+        
+      </p>
+    </div>
+    
   </div>
 
    <!-- begin comments -->
@@ -1243,7 +421,7 @@ News Analytics Report: Syrian Refugee Crisis in Turkey
     
 
     
-      <li><a href="https://github.com/suatatatan"><i class="ion ion-logo-github"></i></a></li>
+      <li><a href="https://github.com/suatatan"><i class="ion ion-logo-github"></i></a></li>
     
   
   </ul>

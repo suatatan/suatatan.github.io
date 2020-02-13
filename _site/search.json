@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Headline locality detection algorithm",
+      "category" : "",
+      "tags"     : "Notebook",
+      "url"      : "/2020/01/26/yerel_mi_degilmi_siniflandirici/",
+      "date"     : "26 Jan, 2020"
+    } ,
+  
+    {
       "title"    : "My AI Classifies News Headlines",
       "category" : "",
       "tags"     : "NewsAnalytics",
