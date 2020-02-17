@@ -14,7 +14,7 @@ Online News outlets already have a "search-box". When you write some keyword to 
 
 I  build a machine learning algorithm for classifying Turkish News in terms of 'local news' or 'non-local news'. The main motivation behind this algorithm is the fuzzy nature of search pages of news outlets. Most of the web pages inject non-local headlines into local news. This algorithm will detect the real nature of the headline.
 
-For this purpose, I scraped the local and non-local news based on special queries. Then I trained multiple algorithms to find the best fit. Linear SVC model winner. <a href='/2020/01/26/yerel_mi_degilmi_siniflandirici/' target='_blank'>Here is my algorithm</a>. With Python language.
+For this purpose, I scraped the local and non-local news based on special queries. Then I trained multiple algorithms to find the best fit. Linear SVC model winner. <a href='https://github.com/suatatan/suatatan.github.io/blob/master/_jupyter/yerel_mi_degilmi_siniflandirici.ipynb' target='_blank'>Here is my algorithm</a>. With Python language.
 
 
 The accuracy of the prediction power of the algorithm according to the cross-validation of overall data is more than %95.
