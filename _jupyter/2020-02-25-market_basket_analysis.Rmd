@@ -1,0 +1,151 @@
+---
+title: 'Market Basket Analysis'
+output: html_document
+author: "Dr. Suat ATAN"
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(arules)
+library(arulesViz)
+library(tidyverse)
+library(readxl)
+library(knitr)
+library(ggplot2)
+library(lubridate)
+library(plyr)
+library(dplyr)
+
+```
+
+# Data Set
+
+First column is *FaturaNo*. It reflects one procurement has been made by any user and products in the *Urun* column. 
+
+```{r}
+#read excel into R dataframe
+retail <- read_excel('suat_market.xlsx')
+head(retail)
+```
+
+
+# Preprocessing Data
+
+```{r}
+#complete.cases(data) will return a logical vector indicating which rows have no missing values. Then use the vector to get only rows that are complete using retail[,].
+retail <- retail[complete.cases(retail), ]
+glimpse(retail)
+```
+# Converting data from Relational Format To Transactional Format
+
+In this format, each procurement becomes single row. This conversion is required.
+
+```{r}
+library(plyr)
+#ddply(dataframe, variables_to_be_used_to_split_data_frame, function_to_be_applied)
+# THIS CODE MERGES EACH INVOICE AND CONCATS THE PRODUCTS
+transactionData <- ddply(retail,c("FaturaNo"),
+                       function(df1)paste(df1$Urun,
+                       collapse = ","))
+#The R function paste() concatenates vectors to character and separated results using collapse=[any optional charcater string ]. Here ',' is used
+transactionData
+```
+
+
+# Removing Unecessary Columns
+
+After removal, data will be in the form of *market basket format* and can be readable by `arule`  market basket analysis library.
+
+```{r}
+colnames(transactionData) <- c("items")
+transactionData$items <- NULL
+transactionData
+```
+
+```{r}
+write.csv(transactionData,"suatmarket_basket_transactions.csv", quote = FALSE, row.names = FALSE)
+```
+
+# Read Data in Arule Format
+
+```{r}
+tr <- read.transactions('suatmarket_basket_transactions.csv', format = 'basket', sep=',')
+tr
+```
+
+# Showing Descriptive Stats
+
+```{r}
+summary(tr)
+```
+
+# Most Frequent Sales
+
+```{r}
+# Create an item frequency plot for the top 20 items
+if (!require("RColorBrewer")) {
+  # install color package of R
+install.packages("RColorBrewer")
+#include library RColorBrewer
+library(RColorBrewer)
+}
+itemFrequencyPlot(tr,topN=20,type="absolute",col=brewer.pal(8,'Pastel2'), main="Absolute Item Frequency Plot")
+```
+
+# Generating Rules
+
+
+```{r}
+# Min Support as 0.001, confidence as 0.8.
+association.rules <- apriori(tr, parameter = list(supp=0.001, conf=0.8,maxlen=10))
+```
+
+```{r}
+summary(association.rules)
+```
+# Results
+
+Let's show most clear rules. If the confidence is 1 it means "%100 of customers". For instance %100 of users buys *bal * with the *tereyagi*. 
+
+```{r}
+inspect(association.rules[1:50])
+```
+
+# Finding Rules related to given items
+
+```{r}
+bebekbezi.association.rules <- apriori(tr, parameter = list(supp=0.001, conf=0.8),appearance = list(default="lhs",rhs="bebekbezi"))
+```
+```{r}
+inspect(bebekbezi.association.rules)
+```
+
+# Visualize
+
+```{r}
+# Filter rules with confidence greater than 0.4 or 90%
+subRules<-association.rules[quality(association.rules)$confidence>0.9]
+#Plot SubRules
+plot(subRules)
+```
+
+```{r}
+plot(subRules,method="two-key plot")
+```
+
+# Interactive
+
+```{r}
+plotly_arules(subRules)
+```
+
+# Network Analysis
+
+```{r}
+top10subRules <- head(subRules, n = 10, by = "confidence")
+plot(top10subRules, method = "graph",  engine = "htmlwidget")
+```
+
