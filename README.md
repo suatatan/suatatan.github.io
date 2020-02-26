@@ -1,6 +1,6 @@
-Zolan - Modern & Minimal Theme for Jekyll
+Suat ATAN WebPage with Jekyll 
 ======
-Zolan is a minimal blog theme for Jekyll.
+
 
 * * *
 
@@ -44,17 +44,6 @@ Table of Contents
 
 * * *
 
-### Demo
-
-Check the theme in action [Demo](https://artemsheludko.github.io/zolan/)
-
-![Main page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-main-page.png?raw=true)
-
-The post page would look like this:
-
-![Post page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-post.png?raw=true)
-
-* * *
 
 ### Deployment
 
