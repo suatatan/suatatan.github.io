@@ -1,1 +1,0 @@
-Dr. Suat ATAN Personal Web Page
