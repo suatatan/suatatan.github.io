@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright </copyright>
-    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2020 05:05:00 +0300</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>learn</title>
+      <link>/tags/learn/</link>
+      <pubDate>Tue, 03 Mar 2020 05:05:00 +0300</pubDate>
+      
+      <guid>/tags/learn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network_analysis</title>
+      <link>/tags/network_analysis/</link>
+      <pubDate>Tue, 03 Mar 2020 05:05:00 +0300</pubDate>
+      
+      <guid>/tags/network_analysis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>machine_learning</title>

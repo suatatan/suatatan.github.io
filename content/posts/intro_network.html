@@ -1,0 +1,86 @@
+---
+title: "Introduction to Network Analysis with R"
+description: Here is how a basic ML algorithm classify the novel texts.
+author: "Dr. Suat ATAN"
+output: html_document
+date: "2020-03-03 05:05:00 +0300"
+tags:
+- network_analysis
+- learn
+categories:
+- R
+- English
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="quick-start" class="section level1">
+<h1>Quick Start</h1>
+<p>Instead of theoretical explanations let’s just think about this scenario. You are monitoring e-mails between these persons A, B, C, D, E, F, G, H without details of the e-mails. Just the traffic of the emails. You have this table:</p>
+<table>
+<thead>
+<tr class="header">
+<th>From</th>
+<th>To</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>A</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>E</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>G</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>H</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>H</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>H</td>
+</tr>
+</tbody>
+</table>
+<p>We say <strong>directed</strong> because there is an arrow from A to B. This reflects there is a movement or directed relation like sending an e-mail or sending money or calling someone. Keep this in the mind, if there is “sending” this requires a “directed” graph. Of course, two things sometimes do not require direction in their relation. Think about friendship. There is no direction, you and your friend are just connected. This kind of relation is <strong>undirected</strong>.</p>
+<pre class="r"><code>#directed
+library(igraph)
+g &lt;- graph_from_literal(A-+B)
+plot(g)</code></pre>
+<p><img src="/posts/intro_network_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>#undirected
+library(igraph)
+g &lt;- graph_from_literal(A--B)
+plot(g)</code></pre>
+<p><img src="/posts/intro_network_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Now, let’s try to show all relations. Of course, we are doing it <em>literally</em>. If you have this table you can use <code>graph_from_data_frame()</code> function. We are using <code>graph_from_literal()</code> function with a special notation. In directed graphs, edges will be created only if the edge operator includes a arrow head (‘+’) at the end of the edge:</p>
+<pre class="r"><code>g &lt;- graph_from_literal(A-+B,
+                        A-+C,
+                        D-+E,
+                        D-+F,
+                        E-+G,
+                        E-+H,
+                        A-+H,
+                        B-+H)
+plot(g)</code></pre>
+<p><img src="/posts/intro_network_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>To be continued</p>
+</div>

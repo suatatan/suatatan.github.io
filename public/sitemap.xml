@@ -28,22 +28,37 @@
   </url>
   
   <url>
+    <loc>/posts/intro_network/</loc>
+    <lastmod>2020-03-03T05:05:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/learn/</loc>
+    <lastmod>2020-03-03T05:05:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/network_analysis/</loc>
+    <lastmod>2020-03-03T05:05:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-03-03T05:05:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-03T05:05:00+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/machine_learning/</loc>
     <lastmod>2020-02-02T00:00:00+03:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/post-3/</loc>
-    <lastmod>2020-02-02T00:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-02-02T00:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-02-02T00:00:00+03:00</lastmod>
   </url>
   
