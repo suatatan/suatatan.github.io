@@ -6,7 +6,7 @@ paginate = 5
 
 copyright = "© Copyright "
 
-pygmentsstyle = "vs"
+pygmentsstyle = "tango"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -28,7 +28,15 @@ disqusShortname = "suatatan"
 	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
 	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
 	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+	
+	highlightjsVersion = "9.12.0"
+  highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+  highlightjsLang = ["r", "yaml"]
+  highlightjsTheme = "github"
 
+  MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+  MathJaxVersion = "2.7.5"
+	
 
 # Nav.
 [[menu.main]]

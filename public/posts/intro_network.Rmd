@@ -2,8 +2,7 @@
 title: "Introduction to Network Analysis with R"
 description: Here is how a basic ML algorithm classify the novel texts.
 author: "Dr. Suat ATAN"
-output: html_document
-date: "2020-03-03 05:05:00 +0300"
+date: "2020-05-03 05:05:00 +0300"
 tags:
 - network_analysis
 - learn
@@ -12,9 +11,6 @@ categories:
 - English
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 # Quick Start
 
@@ -51,6 +47,10 @@ plot(g)
 Now, let's try to show all relations. Of course, we are doing it *literally*. If you have this table you can use `graph_from_data_frame()` function. We are using `graph_from_literal()` function with a special notation. In directed graphs, edges will be created only if the edge operator includes a arrow head (‘+’) at the end of the edge:
 
 ```{r}
+# the line which starts the # are comment not code, computers isn't so smart and cannot understand us
+# except lines below: :)
+
+# g is our graph object
 g <- graph_from_literal(A-+B,
                         A-+C,
                         D-+E,
@@ -59,7 +59,16 @@ g <- graph_from_literal(A-+B,
                         E-+H,
                         A-+H,
                         B-+H)
+# we are plotting it
 plot(g)
 ```
 
-To be continued
+# Who is who? Understanding Network Metrics
+
+OK. We have visualized our first network diagram. Before any calculation, the diagram is pretty self-explanatory.  For instance, A looks like has never received any e-mail. C and F look like just 'getter' they didn't send any e-mail. For this kind of easy network visualization simply works and maybe there is no need for any computation. However, when things are messy we should calculate the **importance** of each node. Of course, there are more metrics. But let's keep things simple and go. Are you ready? We will calculate the **degree metric** of each person (or let's remember nomenclature: node) 
+
+```{r}
+degree(g)
+```
+
+That's all. Each person has a number and each number reflects how many numbers the node has. As you know, the bigger number reflects a bigger interaction. Persons like F and G is not so "active". Let's fire them :)

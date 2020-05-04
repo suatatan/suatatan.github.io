@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Introduction to Network Analysis with R - Dr. Suat ATAN</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta itemprop="name" content="Introduction to Network Analysis with R">
 <meta itemprop="description" content="Here is how a basic ML algorithm classify the novel texts.">
-<meta itemprop="datePublished" content="2020-03-03T05:05:00&#43;03:00" />
-<meta itemprop="dateModified" content="2020-03-03T05:05:00&#43;03:00" />
-<meta itemprop="wordCount" content="219">
+<meta itemprop="datePublished" content="2020-05-03T05:05:00&#43;03:00" />
+<meta itemprop="dateModified" content="2020-05-03T05:05:00&#43;03:00" />
+<meta itemprop="wordCount" content="415">
 
 
 
@@ -15,8 +15,8 @@
 <meta property="og:description" content="Here is how a basic ML algorithm classify the novel texts." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/intro_network/" />
-<meta property="article:published_time" content="2020-03-03T05:05:00+03:00" />
-<meta property="article:modified_time" content="2020-03-03T05:05:00+03:00" />
+<meta property="article:published_time" content="2020-05-03T05:05:00+03:00" />
+<meta property="article:modified_time" content="2020-05-03T05:05:00+03:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Introduction to Network Analysis with R"/>
 <meta name="twitter:description" content="Here is how a basic ML algorithm classify the novel texts."/>
@@ -83,7 +83,7 @@
 					<div class="meta">
 						<div class="date">
 							<span class="day">03</span>
-							<span class="rest">Mar 2020</span>
+							<span class="rest">May 2020</span>
 						</div>
 					</div>
 				
@@ -154,7 +154,11 @@ g &lt;- graph_from_literal(A--B)
 plot(g)</code></pre>
 <p><img src="/posts/intro_network_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>Now, let’s try to show all relations. Of course, we are doing it <em>literally</em>. If you have this table you can use <code>graph_from_data_frame()</code> function. We are using <code>graph_from_literal()</code> function with a special notation. In directed graphs, edges will be created only if the edge operator includes a arrow head (‘+’) at the end of the edge:</p>
-<pre class="r"><code>g &lt;- graph_from_literal(A-+B,
+<pre class="r"><code># the line which starts the # are comment not code, computers isn&#39;t so smart and cannot understand us
+# except lines below: :)
+
+# g is our graph object
+g &lt;- graph_from_literal(A-+B,
                         A-+C,
                         D-+E,
                         D-+F,
@@ -162,9 +166,17 @@ plot(g)</code></pre>
                         E-+H,
                         A-+H,
                         B-+H)
+# we are plotting it
 plot(g)</code></pre>
 <p><img src="/posts/intro_network_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>To be continued</p>
+</div>
+<div id="who-is-who-understanding-network-metrics" class="section level1">
+<h1>Who is who? Understanding Network Metrics</h1>
+<p>OK. We have visualized our first network diagram. Before any calculation, the diagram is pretty self-explanatory. For instance, A looks like has never received any e-mail. C and F look like just ‘getter’ they didn’t send any e-mail. For this kind of easy network visualization simply works and maybe there is no need for any computation. However, when things are messy we should calculate the <strong>importance</strong> of each node. Of course, there are more metrics. But let’s keep things simple and go. Are you ready? We will calculate the <strong>degree metric</strong> of each person (or let’s remember nomenclature: node)</p>
+<pre class="r"><code>degree(g)</code></pre>
+<pre><code>## A B C D E F G H 
+## 3 2 1 2 3 1 1 3</code></pre>
+<p>That’s all. Each person has a number and each number reflects how many numbers the node has. As you know, the bigger number reflects a bigger interaction. Persons like F and G is not so “active”. Let’s fire them :)</p>
 </div>
 
 			</div>
