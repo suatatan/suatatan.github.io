@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Network Analysis with R"
-description: Here is how a basic ML algorithm classify the novel texts.
+description: Things are connected. Let's discover.
 author: "Dr. Suat ATAN"
 date: "2020-05-03 05:05:00 +0300"
 tags:
@@ -47,10 +47,11 @@ plot(g)
 Now, let's try to show all relations. Of course, we are doing it *literally*. If you have this table you can use `graph_from_data_frame()` function. We are using `graph_from_literal()` function with a special notation. In directed graphs, edges will be created only if the edge operator includes a arrow head (‘+’) at the end of the edge:
 
 ```{r}
-# the line which starts the # are comment not code, computers isn't so smart and cannot understand us
-# except lines below: :)
-
+# the line which starts the # are comment not code
+# computers isn't so smart and cannot understand us
+# except lines below :)
 # g is our graph object
+
 g <- graph_from_literal(A-+B,
                         A-+C,
                         D-+E,

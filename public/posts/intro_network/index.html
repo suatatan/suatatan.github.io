@@ -4,22 +4,22 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Introduction to Network Analysis with R - Dr. Suat ATAN</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta itemprop="name" content="Introduction to Network Analysis with R">
-<meta itemprop="description" content="Here is how a basic ML algorithm classify the novel texts.">
+<meta itemprop="description" content="Things are connected. Let&#39;s discover.">
 <meta itemprop="datePublished" content="2020-05-03T05:05:00&#43;03:00" />
 <meta itemprop="dateModified" content="2020-05-03T05:05:00&#43;03:00" />
-<meta itemprop="wordCount" content="415">
+<meta itemprop="wordCount" content="416">
 
 
 
 <meta itemprop="keywords" content="network_analysis,learn," /><meta property="og:title" content="Introduction to Network Analysis with R" />
-<meta property="og:description" content="Here is how a basic ML algorithm classify the novel texts." />
+<meta property="og:description" content="Things are connected. Let&#39;s discover." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/intro_network/" />
 <meta property="article:published_time" content="2020-05-03T05:05:00+03:00" />
 <meta property="article:modified_time" content="2020-05-03T05:05:00+03:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Introduction to Network Analysis with R"/>
-<meta name="twitter:description" content="Here is how a basic ML algorithm classify the novel texts."/>
+<meta name="twitter:description" content="Things are connected. Let&#39;s discover."/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
@@ -154,10 +154,11 @@ g &lt;- graph_from_literal(A--B)
 plot(g)</code></pre>
 <p><img src="/posts/intro_network_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>Now, let’s try to show all relations. Of course, we are doing it <em>literally</em>. If you have this table you can use <code>graph_from_data_frame()</code> function. We are using <code>graph_from_literal()</code> function with a special notation. In directed graphs, edges will be created only if the edge operator includes a arrow head (‘+’) at the end of the edge:</p>
-<pre class="r"><code># the line which starts the # are comment not code, computers isn&#39;t so smart and cannot understand us
-# except lines below: :)
-
+<pre class="r"><code># the line which starts the # are comment not code
+# computers isn&#39;t so smart and cannot understand us
+# except lines below :)
 # g is our graph object
+
 g &lt;- graph_from_literal(A-+B,
                         A-+C,
                         D-+E,
