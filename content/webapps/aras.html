@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aras'ın Oyunu P Bul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aras'ın Oyunu Sitesi">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <style>
+    .cevap{
+      height: 70px;
+      margin: 20px;
+      font-size: 2em;
+      border: solid 3px white;
+    }
+    .cevap:hover{
+      border: solid 3px red;
+    }
+    #puanblok{
+      font-size: 2em;
+      background-color: chocolate;
+    }
+    #cevaplar{
+      background-color: lightgray;
+    }
+    #soru{
+      background-color: wheat;
+      font-size: 2em;
+    }
+    #sifirlaholder{
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Tingas'ın Oyunu</h2>
+    </div>
+    <div class="col-md-6">
+      <p>Bu oyun p, d ve b harfleri gibi harfleri karıştıran çocuklar için geliştirilmiştir. Dr. Suat ATAN </p>
+    </div>
+  </div>
+  <div id="puanblok" class="row">Puanın:
+    <i class="fa fa-star"></i>
+    <span id="puan"></span>
+    &nbsp; Sanki görmedim:
+    <span id="pirt"></span>
+  </div>
+  <div id="soru" class="row">Soru</div>
+  <div id="cevaplar" class="row">
+  </div>
+  <div id="sifirlaholder" class="row">
+    <!--<button class="btn btn-primary" id="sifirla"> Sıfırla </button>-->
+  </div>
+</div>
+
+<audio id="gulme" src="/sounds/gulme.mp3"></audio>
+<audio id="fart" src="/sounds/fart.mp3"></audio>
+<audio id="arkaplan_muzik" src="/sounds/gametheme.mp3"></audio>
+
+<script type="text/javascript">
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+  $(document).ready(function(){
+    document.getElementById("arkaplan_muzik").play();
+    var q = `{
+      "soru": "P harfi bul",
+      "cevap": "ip",
+      "secenekler": ["ip","as","ar","oy","he","de","be","ge","de",
+                     "ad","iz","eb","ed","ag","ig","id","ed","iz","in",
+                     "ag","hi","di","mi","öl","öç","iz","ey","un","su","at",
+                     "og","ho","jö","ön","ör","öv","kü","em","en","ez"]
+    }`;
+    var obj = JSON.parse(q);
+    console.log(obj.secenekler);
+    //yerleştir
+    $("#soru").html(obj.soru);
+    function sorulari_diz(){
+      var secenekler_rastgele = shuffle(obj.secenekler);
+      $("#cevaplar").html("");
+      var colors = ['red','green','yellow','cyan','orange','gold','wheat','lightblue','BurlyWood','Chartreuse','Brown','BlueViolet'];
+      secenekler_rastgele.forEach(function(secenek) {
+        var new_color = colors[Math.floor(Math.random()*colors.length)];
+        $("#cevaplar").append("<div class='cevap col' style='background-color:"+new_color+"'>"+secenek+"</div>");
+      });
+
+    }
+    sorulari_diz();
+    //Sonraki
+    $("#sifirla").click(function(){
+      localStorage.setItem("puan",0);
+      localStorage.setItem("pirt",0);
+    });
+    //puanlama
+    if(localStorage.getItem("puan") == null){
+      localStorage.setItem("puan",0);
+    }
+    if(localStorage.getItem("pirt") == null){
+      localStorage.setItem("pirt",0);
+    }
+    $("#puan").html(localStorage.getItem("puan"));
+    $("#pirt").html(localStorage.getItem("pirt"));
+    //kontrol
+    $("#cevaplar").on("click",".cevap",function(){
+      console.log("---cevap tiklandi---");
+      var cevap = $(this).html();
+      if(cevap == obj.cevap){
+        document.getElementById("gulme").play();
+        console.log("Harikasın");
+        localStorage.setItem("puan",parseInt(localStorage.getItem("puan"))+1);
+        $("#puan").html(localStorage.getItem("puan"));
+        sorulari_diz();
+
+      }
+      else{
+        console.log("Olmadı");
+        document.getElementById("fart").play();
+        //pirt arttir
+        localStorage.setItem("pirt",parseInt(localStorage.getItem("pirt"))+1);
+        $("#pirt").html(localStorage.getItem("pirt"));
+        sorulari_diz();
+
+      }
+    });
+
+  });
+</script>
+
+</body>
+</html>
