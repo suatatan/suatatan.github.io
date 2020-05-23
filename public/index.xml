@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright </copyright>
-    <lastBuildDate>Sun, 03 May 2020 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2020 17:32:00 +0300</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Text Classification with XGBoost Machine Learning Algorithm</title>
+      <link>/posts/sklearn_xgboost_tc/</link>
+      <pubDate>Sat, 23 May 2020 17:32:00 +0300</pubDate>
+      
+      <guid>/posts/sklearn_xgboost_tc/</guid>
+      <description>What is XGBoost ? XGBoost is the name of a machine learning method. It can help you to predict any kind of data if you have already predicted data before. You can classify any kind of data. It can be used for text classification too.
+Like Random Forest (another decision tree algorithm), Gradient Boosting is another way for executing supervised machine learning tasks, like classification (male, female) and regression (expected value).</description>
+    </item>
     
     <item>
       <title>Dr. Suat Notebooks</title>
@@ -83,10 +93,10 @@ Selected Academic Works   Baskici, C., Atan, S., &amp;amp; Ecil, Y. (2018). Auth
     
     <item>
       <title></title>
-      <link>/webapps/aras/</link>
+      <link>/webapps/tingasaras/aras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/webapps/aras/</guid>
+      <guid>/webapps/tingasaras/aras/</guid>
       <description>Aras&#39;ın Oyunu P Bul.cevap{height: 70px;margin: 20px;font-size: 2em;border: solid 3px white;}.cevap:hover{border: solid 3px red;}#puanblok{font-size: 2em;background-color: chocolate;}#cevaplar{background-color: lightgray;}#soru{background-color: wheat;font-size: 2em;}#sifirlaholder{padding-top: 20px;}Tingas&#39;ın OyunuDr. Suat ATAN AnasayfaPuanın:&amp;nbsp; | &amp;nbsp;Sanki görmedim:SoruSıfırla --Oyun Bitti!</description>
     </item>
     

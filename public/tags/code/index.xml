@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>learn on Dr. Suat ATAN</title>
-    <link>/tags/learn/</link>
-    <description>Recent content in learn on Dr. Suat ATAN</description>
+    <title>code on Dr. Suat ATAN</title>
+    <link>/tags/code/</link>
+    <description>Recent content in code on Dr. Suat ATAN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright </copyright>
     <lastBuildDate>Sat, 23 May 2020 17:32:00 +0300</lastBuildDate>
     
-	<atom:link href="/tags/learn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>/posts/sklearn_xgboost_tc/</guid>
       <description>What is XGBoost ? XGBoost is the name of a machine learning method. It can help you to predict any kind of data if you have already predicted data before. You can classify any kind of data. It can be used for text classification too.
 Like Random Forest (another decision tree algorithm), Gradient Boosting is another way for executing supervised machine learning tasks, like classification (male, female) and regression (expected value).</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Network Analysis with R</title>
-      <link>/posts/intro_network/</link>
-      <pubDate>Sun, 03 May 2020 05:05:00 +0300</pubDate>
-      
-      <guid>/posts/intro_network/</guid>
-      <description>Quick StartInstead of theoretical explanations let’s just think about this scenario. You are monitoring e-mails between these persons A, B, C, D, E, F, G, H without details of the e-mails. Just the traffic of the emails. You have this table:
-FromToABACDEDFEGEHAHBHWe say directed because there is an arrow from A to B.</description>
     </item>
     
   </channel>

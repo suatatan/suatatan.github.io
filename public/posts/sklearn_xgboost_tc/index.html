@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Text Classification with XGBoost Machine Learning Algorithm - Dr. Suat ATAN</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="Text Classification with XGBoost Machine Learning Algorithm">
+<meta itemprop="description" content="Let&#39;s build a simple machine learning algorithm.">
+<meta itemprop="datePublished" content="2020-05-23T17:32:00&#43;03:00" />
+<meta itemprop="dateModified" content="2020-05-23T17:32:00&#43;03:00" />
+<meta itemprop="wordCount" content="627">
+
+
+
+<meta itemprop="keywords" content="machine_learning,learn,code," /><meta property="og:title" content="Text Classification with XGBoost Machine Learning Algorithm" />
+<meta property="og:description" content="Let&#39;s build a simple machine learning algorithm." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/sklearn_xgboost_tc/" />
+<meta property="article:published_time" content="2020-05-23T17:32:00+03:00" />
+<meta property="article:modified_time" content="2020-05-23T17:32:00+03:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Text Classification with XGBoost Machine Learning Algorithm"/>
+<meta name="twitter:description" content="Let&#39;s build a simple machine learning algorithm."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="/">
+				<img src="https://suatatan.files.wordpress.com/2019/11/suat.png" alt="Dr. Suat ATAN" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="/">Dr. Suat ATAN</a></h1>
+	<div class="site-description"><p>Experiments on R, Python and Data Science</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/suatatan" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li></ul>
+		</nav><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/academic">Academic</a>
+			</li>
+			
+			<li>
+				<a href="/books">My Books</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+					<div class="meta">
+						<div class="date">
+							<span class="day">23</span>
+							<span class="rest">May 2020</span>
+						</div>
+					</div>
+				
+				<div class="matter">
+					<h1 class="title">Text Classification with XGBoost Machine Learning Algorithm</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<h2 id="what-is-xgboost-">What is XGBoost ?</h2>
+<p>XGBoost is the name of a machine learning method. It can help you to predict any kind of data if you have already predicted data before. You can classify any kind of data. It can be used for text classification too.</p>
+<p>Like Random Forest (another decision tree algorithm), Gradient Boosting is another way for executing supervised machine learning tasks, like classification (male, female) and regression (expected value). The implementations of this method can have different names, the most common name is Gradient Boosting machines (abbreviated GBM) and XGBoost. XGBoost is especially widespread because it has been the winning algorithm in a number of recent Kaggle competitions (open data science competitions for prediction or any other kind of task).</p>
+<p>Gradient Boosting is an ensemble learner like Random Forest algorithm. This means it will generate a final model based on a combination of individual models. The predictive capability of these single different models is inadequate and likely to overfitting but coupling many such weak single models in an ensemble will lead to a better result. In Gradient Boosting machines, the most popular type of weak model used is decision trees - another parallel to Random Forests.</p>
+<h2 id="what-we-will-do">What we will do?</h2>
+<p>I always start with baby steps. The training data is a few rows of sentences that are written in Turkish. Some of them contain words about &ldquo;kill&rdquo; and these are labeled 1, others about &ldquo;love&rdquo; and they are labeled with &ldquo;0&rdquo;.  To the making mind of algorithm confused :) some rows intentionally mislabeled.</p>
+<p>Test data is part of training data but it includes some of the rows are written in a totally different language (Kurdish). I did that to show how machine learning algorithms are docile. They never say I don't know. Of course, if they are not trained about different things (like another language) it cannot perform accurate prediction but for just for these stranger ones.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">sklearn.model_selection</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">train_test_split</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">sklearn.metrics</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">accuracy_score</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">sklearn.feature_extraction.text</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">CountVectorizer</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">xgboost</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">XGBClassifier</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">pandas</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">pd</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">os</span>
+<span style="color:#000">os</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">chdir</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">F:</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">03-github</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">turnusol</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">turnusol</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">experiments</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pd</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">read_csv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">F:</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">open_data_sets</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">fake_news</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">simple_train.csv</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">dropna</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">cv</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">CountVectorizer</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">max_features</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">5000</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">encoding</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">utf-8</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">,</span>  
+      <span style="color:#000">ngram_range</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span>  
+      <span style="color:#000">token_pattern</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06"></span><span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">[A-Za-z_][A-Za-z</span><span style="color:#4e9a06">\</span><span style="color:#4e9a06">d_]*</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">X</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cv</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">fit_transform</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">title</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">toarray</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">y</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">label</span><span style="color:#4e9a06">&#39;</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000">X_train</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">X_test</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y_train</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y_test</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">train_test_split</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">X</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y</span><span style="color:#000;font-weight:bold">,</span> 
+      <span style="color:#000">test_size</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0.33</span><span style="color:#000;font-weight:bold">,</span> 
+      <span style="color:#000">random_state</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">count_df</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pd</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">DataFrame</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">X_train</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">columns</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">cv</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get_feature_names</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#000">count_df</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">etiket</span><span style="color:#4e9a06">&#39;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">y_train</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">sample</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th align="right">no</th>
+<th align="right">title</th>
+<th>label</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">6</td>
+<td align="right">bu dayi oldur</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td align="right">her zaman insan sev</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="right">bu 25 adami oldur</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="right">kadin sev</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="right">o 2 adami oldur</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">count_df</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">iloc</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">]</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th align="right">doc</th>
+<th align="right">adam sev</th>
+<th align="right">adam vur</th>
+<th align="right">adama</th>
+<th align="right">adama saygi</th>
+<th align="right">adama saygi duyma</th>
+<th align="right">adami</th>
+<th align="right">adami oldur</th>
+<th align="right">adami vur</th>
+<th>amca</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic"># fit model no training data</span>
+<span style="color:#000">model</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">XGBClassifier</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">model</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">fit</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">X_train</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y_train</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic"># make predictions for test data</span>
+<span style="color:#000">y_pred</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">model</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">predict</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">X_test</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">predictions</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#204a87">round</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">value</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">value</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">y_pred</span><span style="color:#000;font-weight:bold">]</span>
+
+<span style="color:#8f5902;font-style:italic"># evaluate predictions</span>
+<span style="color:#000">accuracy</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">accuracy_score</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">y_test</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">predictions</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">Accuracy: </span><span style="color:#4e9a06">%.2f</span><span style="color:#4e9a06">%%</span><span style="color:#4e9a06">&#34;</span> <span style="color:#ce5c00;font-weight:bold">%</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">accuracy</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#0000cf;font-weight:bold">100.0</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><!-- raw HTML omitted -->
+<h2 id="predictions-with-totally-new-data">Predictions with totally new data</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">simple_test</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pd</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">read_csv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06"></span><span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">F:</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">open_data_sets</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">fake_news</span><span style="color:#4e9a06">\\</span><span style="color:#4e9a06">simple_test.csv</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">cv_test</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">CountVectorizer</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">vocabulary</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">cv</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">get_feature_names</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">X_test_gercek</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">cv_test</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">fit_transform</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">simple_test</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">title</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000">ongoruler</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pd</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">DataFrame</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">model</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">predict</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">X_test_gercek</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">pd</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">simple_test</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ongoruler</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">axis</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th align="right">doc</th>
+<th align="right">title</th>
+<th>predicted_label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="right">kuslari oldur</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">cicekleri oldur</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">bu 25 adami oldur</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">bu 10 kadini oldur</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">daima doga sev</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">daima insan sev</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">dayak ye</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">mer bikuje</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="right">hercar mirov hez bike</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="right">hevalen xwe bizane</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+			</div>
+
+			<div class="tags">
+				
+					
+						<ul class="flat">
+							
+							<li><a href="/tags/machine_learning">machine_learning</a></li>
+							
+							<li><a href="/tags/learn">learn</a></li>
+							
+							<li><a href="/tags/code">code</a></li>
+							
+						</ul>
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'suatatan';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2020  © Copyright  |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>
