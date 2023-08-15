@@ -1,4 +1,4 @@
-I am a data scientist. ⬇️
+My name is Suat ATAN or Satan 😈 I am a data scientist. 
 
 I analyze and visualize data with Python and R and publish it as a web app. Machine Learning Models, dealing with big datasets, and reporting and interpreting the data is the part of the job. 
 
