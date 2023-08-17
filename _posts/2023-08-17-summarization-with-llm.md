@@ -30,11 +30,11 @@ faiss_index = FAISS.from_documents(pages, OpenAIEmbeddings())
 
 🔍 **Seeking the Golden Nuggets**
 
-Ever wished for a magical magnifying glass that finds the juiciest bits of information in the blink of an eye? Our FAISS index can do just that! 🕵️‍♀️ Let's summon it to search for a specific incantation, "Is overheat included?", and retrieve the top 5 results!
+Ever wished for a magical magnifying glass that finds the juiciest bits of information in the blink of an eye? Our FAISS index can do just that! 🕵️‍♀️ Let's summon it to search for a specific incantation, "What about CEOs?", and retrieve the top 5 results!
 
 ```python
 # %% MR Search
-docs = faiss_index.similarity_search("Is overheat included?", k=5)
+docs = faiss_index.similarity_search("What about CEOs?", k=5)
 for doc in docs:
     print(str(doc.metadata["page"]) + ":", doc.page_content[:300])
     print("----")
