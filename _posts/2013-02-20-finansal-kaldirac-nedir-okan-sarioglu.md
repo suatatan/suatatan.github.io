@@ -4,7 +4,7 @@ categories:
 date: 2013-02-20
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Finansal Kaldıraç Nedir? « OKAN SARIOĞLU

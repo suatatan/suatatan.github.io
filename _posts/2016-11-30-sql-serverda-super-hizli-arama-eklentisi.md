@@ -5,7 +5,7 @@ categories:
 date: 2016-11-30
 layout: post
 tags:
-- english
+- turkish
 - longread
 - sqlserver
 - technology

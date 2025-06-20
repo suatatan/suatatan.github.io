@@ -2,7 +2,7 @@
 date: 2008-12-29
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: TRT 6 FREKANSLARI
 ---

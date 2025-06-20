@@ -4,7 +4,7 @@ categories:
 date: 2012-05-15
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: HalkBank'ın Halk Düşmanı İnternet Bankacılığı Üzerine

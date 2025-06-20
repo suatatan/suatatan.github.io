@@ -5,7 +5,7 @@ categories:
 date: 2014-05-30
 layout: post
 tags:
-- english
+- turkish
 - finans
 - isletme
 - istatistik

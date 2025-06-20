@@ -5,8 +5,8 @@ categories:
 date: 2013-08-31
 layout: post
 tags:
+- turkish
 - booklab
-- english
 - longread
 - technology
 title: Google Calendar (takvim) kullanımı

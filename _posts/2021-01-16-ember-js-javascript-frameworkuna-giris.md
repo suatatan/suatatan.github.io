@@ -2,7 +2,7 @@
 date: 2021-01-16
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Ember.js Javascript Framework'una Giriş

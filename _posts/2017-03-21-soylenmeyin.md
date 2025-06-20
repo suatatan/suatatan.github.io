@@ -5,7 +5,7 @@ categories:
 date: 2017-03-21
 layout: post
 tags:
-- english
+- turkish
 - featured
 - longread
 - opinion

@@ -4,7 +4,7 @@ categories:
 date: 2019-11-12
 layout: post
 tags:
-- english
+- turkish
 - featured
 - longread
 - opinion

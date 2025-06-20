@@ -5,8 +5,8 @@ categories:
 date: 2014-05-21
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - latex
 - quickread
 - technology

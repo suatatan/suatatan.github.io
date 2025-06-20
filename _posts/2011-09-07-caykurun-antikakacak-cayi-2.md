@@ -4,7 +4,7 @@ categories:
 date: 2011-09-07
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Çaykur'un antikakaçak çayı

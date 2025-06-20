@@ -5,7 +5,7 @@ categories:
 date: 2007-02-16
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Atatürk ile Kokoreç yemek
 ---

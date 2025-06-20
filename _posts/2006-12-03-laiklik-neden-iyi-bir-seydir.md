@@ -4,12 +4,9 @@ categories:
 date: 2006-12-03
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
-- technology
-- yazilarim
-- yeni-ufuk-gazetesi
 title: LAİKLİK NEDEN İYİ BİR ŞEYDİR?
 ---
 
@@ -17,11 +14,11 @@ Bu ülkede adının arkasına sığınılarak, arkasına sığınılan kavrama e
 
 Bugüne değin Laik=La-din (dinsiz) eşitlemesini yapanlar hem laikliğin hem de din mefhumunun en büyük düşmanı olmuşlardır. Bir bakıma din kavramı ile alıp veremediği olup da tam da ateist olamayanlar bulundukları noktanın laiklik olduğunu zannetmişlerdir.
 
-Laikliğin din ve devlet işlerinin ayrılması prensibi olduğunu bir daha hatırlatmaya gerek yok. Laiklik bu ise Türkiye’nin laik olmadığı da bir gerçektir. Çünkü Diyanet İşleri Başkanlığı din ve devlet işlerinin en çok birbirine karıştığı kurumdur. Evet, tabiatı itibarı ile diyanet işleri başkanlığının yasama eyleminde fonksiyonu yoktur yani dini temsil eden bir kurum olarak kanunların diniliğini denetleyemez ve yorumlayamaz. Oysa kanunların diyanet işleri hatta yanlızca diyanet işleri değil, patrikhaneler, cem evleri ve diğer dinsel cemiyetler üzerinde tahakküm gücü vardır. Yani devlet din işlerine karışır. Şimdi bizim meşhur laiklik tanımını tekrar hatırlayalım. _“din ve devlet işlerinin birbirine karşımaması”_ peki pratikte ne oluyor; dinin devlet işlerine karışmaması devletin ise dine karışması, hutbelerin konusunu belirleyebilmesi, patriklerin ekümen diye hitap edilmesine karşı çıkması, cem evlerine selam bile vermemesi…
+Laikliğin din ve devlet işlerinin ayrılması prensibi olduğunu bir daha hatırlatmaya gerek yok. Laiklik bu ise Türkiye’nin laik olmadığı da bir gerçektir. Çünkü Diyanet İşleri Başkanlığı din ve devlet işlerinin en çok birbirine karıştığı kurumdur. Evet, tabiatı itibarı ile diyanet işleri başkanlığının yasama eyleminde fonksiyonu yoktur yani dini temsil eden bir kurum olarak kanunların diniliğini denetleyemez ve yorumlayamaz. Oysa kanunların diyanet işleri hatta yalnızca diyanet işleri değil, patrikhaneler, cem evleri ve diğer dinsel cemiyetler üzerinde tahakküm gücü vardır. Yani devlet din işlerine karışır. Şimdi bizim meşhur laiklik tanımını tekrar hatırlayalım. _“din ve devlet işlerinin birbirine karışmaması”_ peki pratikte ne oluyor; dinin devlet işlerine karışmaması devletin ise dine karışması, hutbelerin konusunu belirleyebilmesi, patriklerin ekümen diye hitap edilmesine karşı çıkması, cem evlerine selam bile vermemesi…
 
 Laikliliğin “din ve devlet işlerinin birbirinden _soyutlanması_ “ olarak algılamanın; ne derece sağlıklı olacağı hususu her zaman tartışılır. Yukarıdaki zihin jimnastiğimize göre din işlerini kendi haline bırakıp din ve devlet işlerini birbirinden _soyutlanmadığı_ için Türkiye’nin tam laik olmadığını öngörmüştük. Oysa iyi biliyoruz ki bunun da sağlıklı bir şey olmadığı açık. Nitekim din özü itibari ile gönüllü içtimaileşmenin en güçlü katalizörüdür. Din kavramı çatısı altında buluşan cemiyet ve cemaatler elbette belirli hukuki mevzuata tabi olmadıklarında kontrol dışı olurlar. Bu durum ise devletin laik olayım derken farkında olmadan; _kurtarılmış bölgelerin_ ortaya çıkmasına neden olur.
 
-Papa 16. Benedikt’in Türkiye ziyareti, laiklik, din-devlet ilişkileri gibi konularda herkesin kafasında çeşitli soru işaretlerinin ortaya çıkmasına neden olmuşur.
+Papa 16. Benedikt’in Türkiye ziyareti, laiklik, din-devlet ilişkileri gibi konularda herkesin kafasında çeşitli soru işaretlerinin ortaya çıkmasına neden olmuştur.
 
 Bunlardan en önemlisi; Papa ile Diyanet işleri başkanı Bardakoğlunun ortak basın açıklaması yaparken ortaya çıkardıkları ve daha çok tartışılacak karede ortaya çıkıyor.
 

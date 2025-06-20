@@ -4,7 +4,7 @@ categories:
 date: 2008-04-25
 layout: post
 tags:
-- english
+- turkish
 - java
 - longread
 - technology

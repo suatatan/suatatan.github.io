@@ -4,7 +4,7 @@ categories:
 date: 2012-06-10
 layout: post
 tags:
-- english
+- turkish
 - excel
 - excel-vba
 - google-app-script

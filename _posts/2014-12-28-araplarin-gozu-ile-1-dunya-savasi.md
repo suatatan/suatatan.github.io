@@ -4,7 +4,7 @@ categories:
 date: 2014-12-28
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 - yazilarim

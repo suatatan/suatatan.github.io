@@ -4,7 +4,7 @@ categories:
 date: 2014-11-13
 layout: post
 tags:
-- english
+- turkish
 - isletme
 - longread
 - muhasebe

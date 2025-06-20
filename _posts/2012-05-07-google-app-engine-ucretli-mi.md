@@ -5,7 +5,7 @@ categories:
 date: 2012-05-07
 layout: post
 tags:
-- english
+- turkish
 - google-app-engine
 - opinion
 - quickread

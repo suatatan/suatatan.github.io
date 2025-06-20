@@ -4,7 +4,7 @@ categories:
 date: 2014-11-24
 layout: post
 tags:
-- english
+- turkish
 - finans
 - index
 - isletme

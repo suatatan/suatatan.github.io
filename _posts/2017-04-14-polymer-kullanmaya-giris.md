@@ -4,7 +4,7 @@ categories:
 date: 2017-04-14
 layout: post
 tags:
-- english
+- turkish
 - javascript
 - longread
 - polymer

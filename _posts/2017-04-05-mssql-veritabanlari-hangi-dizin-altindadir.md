@@ -2,7 +2,7 @@
 date: 2017-04-05
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: MSSQL veritabanları hangi dizin altındadır

@@ -4,7 +4,7 @@ categories:
 date: 2021-11-11
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Türkiye'de faaliyet gösteren veri odaklı önemli sosyal girişimler

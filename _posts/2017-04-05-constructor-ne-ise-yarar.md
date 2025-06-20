@@ -4,8 +4,8 @@ categories:
 date: 2017-04-05
 layout: post
 tags:
+- turkish
 - c
-- english
 - longread
 - oop
 - technology

@@ -4,7 +4,7 @@ categories:
 date: 2008-05-19
 layout: post
 tags:
-- english
+- turkish
 - iktibas
 - inceleme
 - longread

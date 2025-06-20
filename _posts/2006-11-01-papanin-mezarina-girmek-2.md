@@ -5,7 +5,7 @@ categories:
 date: 2006-11-01
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Papanın Mezarına Girmek
 ---

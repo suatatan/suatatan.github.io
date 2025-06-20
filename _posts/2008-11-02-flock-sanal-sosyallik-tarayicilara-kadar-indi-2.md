@@ -5,7 +5,7 @@ categories:
 date: 2008-11-02
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - technology

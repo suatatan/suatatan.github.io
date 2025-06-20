@@ -1,3 +1,12 @@
+---
+date: 2023-08-18
+tags:
+- english
+- longread
+- technology
+title: Using VertexAI Instead of OpenAI in LangChain
+---
+
 ## Using VertexAI Instead of OpenAI in LangChain
 
 So far, using VertexAI was nightmare for me due to setting the credientals. Finally, I found how it works. Just to remember and help users who are in the same situation.

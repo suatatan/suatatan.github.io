@@ -4,7 +4,7 @@ categories:
 date: 2020-09-15
 layout: post
 tags:
-- english
+- turkish
 - longread
 - makine-ogrenmesi
 - python

@@ -4,7 +4,7 @@ categories:
 date: 2008-05-18
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: İşte size gayrı-organik lakin fevkalade "naturel" tarım

@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Tag: {{ page.tag }}"
+---
+
+<h2>Etiket: {{ page.tag }}</h2>
+<ul>
+  {% for post in site.tags[page.tag] %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%d.%m.%Y" }}</small></li>
+  {% endfor %}
+</ul>
+<a href="/">← Ana sayfaya dön</a>

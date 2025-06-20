@@ -5,7 +5,7 @@ categories:
 date: 2013-01-12
 layout: post
 tags:
-- english
+- turkish
 - python
 - quickread
 - technology

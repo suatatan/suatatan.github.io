@@ -4,7 +4,7 @@ categories:
 date: 2008-08-01
 layout: post
 tags:
-- english
+- turkish
 - kamu-yonetimi
 - longread
 - technology

@@ -2,10 +2,10 @@
 date: 2024-12-26
 layout: post
 tags:
+- turkish
 - azure
 - bulut-bilisim
 - cloud
-- english
 - longread
 - technology
 title: Azure Veri Ambarı Çalışma Notları

@@ -4,7 +4,7 @@ categories:
 date: 2007-02-25
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - yeni-ufuk-gazetesi

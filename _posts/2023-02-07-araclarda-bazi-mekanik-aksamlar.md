@@ -2,7 +2,7 @@
 date: 2023-02-07
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Araçlarda Bazı mekanik aksamlar

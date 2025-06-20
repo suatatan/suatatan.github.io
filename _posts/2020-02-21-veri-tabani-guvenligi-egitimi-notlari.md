@@ -2,7 +2,7 @@
 date: 2020-02-21
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Veri Tabanı Güvenliği Eğitimi Notları

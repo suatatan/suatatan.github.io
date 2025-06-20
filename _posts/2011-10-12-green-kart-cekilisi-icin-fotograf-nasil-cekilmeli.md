@@ -2,7 +2,7 @@
 date: 2011-10-12
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Green Kart çekilişi için fotoğraf nasıl çekilmeli?

@@ -4,7 +4,7 @@ categories:
 date: 2011-11-19
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Van depreminde teolojik ve jeolojik yorumlar

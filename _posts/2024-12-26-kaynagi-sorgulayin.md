@@ -2,7 +2,7 @@
 date: 2024-12-26
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Kaynağı sorgulayın!

@@ -5,7 +5,7 @@ categories:
 date: 2020-01-02
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - veri-madenciligi

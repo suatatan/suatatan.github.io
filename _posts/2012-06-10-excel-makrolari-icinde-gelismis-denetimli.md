@@ -5,8 +5,8 @@ categories:
 date: 2012-06-10
 layout: post
 tags:
+- turkish
 - ekonomi
-- english
 - excel
 - excel-vba
 - isletme

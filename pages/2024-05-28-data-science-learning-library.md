@@ -1,6 +1,7 @@
 ---
 title: "Data Science Learning Library"
 date: 2024-05-28
+layout: post
 ---
 
 I will add the resources I picked for data science and sometimes about data engineering.
@@ -86,7 +87,7 @@ Deploying LLMs: Top Learning & Educational Resources to Get Started
 
 AutoGluon (Written by Amazon)
 
-[![](/images/image.png)](https://suatatan.wordpress.com/wp-content/uploads/2024/06/image.png)
+
 
 [https://auto.gluon.ai/stable/index.html](https://auto.gluon.ai/stable/index.html)
 

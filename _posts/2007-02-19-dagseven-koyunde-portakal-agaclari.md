@@ -4,7 +4,7 @@ categories:
 date: 2007-02-19
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Dağseven Köyünde Portakal Ağaçları

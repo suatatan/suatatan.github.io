@@ -5,7 +5,7 @@ categories:
 date: 2012-10-23
 layout: post
 tags:
-- english
+- turkish
 - google-app-script
 - longread
 - technology

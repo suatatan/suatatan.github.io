@@ -2,7 +2,7 @@
 date: 2020-06-30
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Nano Editörü Kısa Yolları

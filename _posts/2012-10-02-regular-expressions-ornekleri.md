@@ -5,7 +5,7 @@ categories:
 date: 2012-10-02
 layout: post
 tags:
-- english
+- turkish
 - pastebin
 - python
 - quickread

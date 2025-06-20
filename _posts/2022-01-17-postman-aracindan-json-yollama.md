@@ -4,7 +4,7 @@ categories:
 date: 2022-01-17
 layout: post
 tags:
-- english
+- turkish
 - longread
 - postman
 - python

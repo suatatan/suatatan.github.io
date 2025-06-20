@@ -4,8 +4,8 @@ categories:
 date: 2015-04-14
 layout: post
 tags:
+- turkish
 - altini-cizdiklerim
-- english
 - quickread
 - technology
 title: Yüksek zekayı heba etmek

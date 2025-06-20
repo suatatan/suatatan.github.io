@@ -4,12 +4,9 @@ categories:
 date: 2006-12-18
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
-- technology
-- yazilarim
-- yeni-ufuk-gazetesi
 title: MÜSTEHCENLİĞİ SANSÜR ÜZERİNE
 ---
 

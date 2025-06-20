@@ -4,7 +4,7 @@ categories:
 date: 2012-11-02
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Mutually exclusive'nin Türkçesi  nedir?

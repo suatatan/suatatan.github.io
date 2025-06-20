@@ -4,7 +4,7 @@ categories:
 date: 2016-11-26
 layout: post
 tags:
-- english
+- turkish
 - listeler
 - longread
 - ogrenirken

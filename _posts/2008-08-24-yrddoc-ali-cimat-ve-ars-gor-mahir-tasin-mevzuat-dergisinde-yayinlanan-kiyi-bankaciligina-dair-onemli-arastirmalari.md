@@ -4,8 +4,8 @@ categories:
 date: 2008-08-24
 layout: post
 tags:
+- turkish
 - ekonomi
-- english
 - longread
 - opinion
 - technology

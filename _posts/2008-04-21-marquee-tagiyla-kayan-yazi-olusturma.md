@@ -4,7 +4,7 @@ categories:
 date: 2008-04-21
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - web-programlama

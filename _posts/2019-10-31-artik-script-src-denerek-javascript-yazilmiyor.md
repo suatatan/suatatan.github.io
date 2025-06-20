@@ -4,7 +4,7 @@ categories:
 date: 2019-10-31
 layout: post
 tags:
-- english
+- turkish
 - javascript
 - longread
 - technology

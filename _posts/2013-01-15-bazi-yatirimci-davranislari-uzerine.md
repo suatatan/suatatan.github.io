@@ -4,8 +4,8 @@ categories:
 date: 2013-01-15
 layout: post
 tags:
+- turkish
 - ekonomi
-- english
 - isletme
 - longread
 - okuma-notlari

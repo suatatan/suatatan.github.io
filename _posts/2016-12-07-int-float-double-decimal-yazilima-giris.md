@@ -5,8 +5,8 @@ categories:
 date: 2016-12-07
 layout: post
 tags:
+- turkish
 - aspmvc
-- english
 - longread
 - technology
 title: Int, Float, Double, Decimal... Yazılım’a giriş dersi neden önemlidir.

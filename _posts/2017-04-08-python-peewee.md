@@ -4,7 +4,7 @@ categories:
 date: 2017-04-08
 layout: post
 tags:
-- english
+- turkish
 - longread
 - python
 - technology

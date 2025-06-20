@@ -4,7 +4,7 @@ categories:
 date: 2015-01-04
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Arapların gözü ile 2. Dünya Savaş'ı (Osmanlı'lar )

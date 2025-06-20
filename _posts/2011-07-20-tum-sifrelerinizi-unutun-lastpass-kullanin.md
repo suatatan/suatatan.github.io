@@ -4,7 +4,7 @@ categories:
 date: 2011-07-20
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Tüm şifrelerinizi unutun Lastpass kullanın

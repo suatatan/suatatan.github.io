@@ -4,8 +4,8 @@ categories:
 date: 2012-11-24
 layout: post
 tags:
+- turkish
 - aforizmalar
-- english
 - opinion
 - quickread
 - technology

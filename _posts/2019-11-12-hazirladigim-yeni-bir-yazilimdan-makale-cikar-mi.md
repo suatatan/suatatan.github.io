@@ -4,7 +4,7 @@ categories:
 date: 2019-11-12
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Hazırladığım yeni bir yazılımdan "makale" çıkar mı?

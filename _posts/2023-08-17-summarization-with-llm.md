@@ -1,3 +1,12 @@
+---
+date: 2023-08-17
+tags:
+- english
+- longread
+- technology
+title: Text Summarization with LangChain
+---
+
 ## Text Summarization with LangChain
 
 So far I have used the HuggingFace models to summarize long text. But after discovering LangChain's extraction capabilities I tried to do an pipeline to summarize long text.

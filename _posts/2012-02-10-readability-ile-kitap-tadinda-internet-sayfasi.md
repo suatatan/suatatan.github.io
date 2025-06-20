@@ -5,7 +5,7 @@ categories:
 date: 2012-02-10
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Readability ile kitap tadında internet sayfası okumak

@@ -4,7 +4,7 @@ categories:
 date: 2013-08-13
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Fotoğrafik görsellik hibrit algılama biçimlerinin düşmanıdır

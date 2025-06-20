@@ -5,7 +5,7 @@ categories:
 date: 2012-11-29
 layout: post
 tags:
-- english
+- turkish
 - google-app-engine
 - quickread
 - technology

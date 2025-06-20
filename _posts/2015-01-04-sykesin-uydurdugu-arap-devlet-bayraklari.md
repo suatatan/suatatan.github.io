@@ -4,8 +4,8 @@ categories:
 date: 2015-01-04
 layout: post
 tags:
+- turkish
 - belgesel
-- english
 - longread
 - technology
 title: Sykes'in uydurduğu Arap Devlet Bayrakları

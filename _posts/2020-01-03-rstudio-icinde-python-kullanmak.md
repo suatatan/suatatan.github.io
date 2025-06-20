@@ -4,7 +4,7 @@ categories:
 date: 2020-01-03
 layout: post
 tags:
-- english
+- turkish
 - longread
 - python
 - rstudio

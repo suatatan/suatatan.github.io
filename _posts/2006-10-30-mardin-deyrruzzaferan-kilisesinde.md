@@ -4,7 +4,7 @@ categories:
 date: 2006-10-30
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Mardin Deyrrüzzaferan Kilisesinde
 ---

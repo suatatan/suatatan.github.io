@@ -4,7 +4,7 @@ categories:
 date: 2019-09-18
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Web Sayfalarınız için Stres Testi Aracı

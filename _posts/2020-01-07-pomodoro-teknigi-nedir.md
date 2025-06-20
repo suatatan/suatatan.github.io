@@ -4,7 +4,7 @@ categories:
 date: 2020-01-07
 layout: post
 tags:
-- english
+- turkish
 - featured
 - longread
 - opinion

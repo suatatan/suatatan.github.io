@@ -2,7 +2,7 @@
 date: 2011-07-22
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - yazilarim

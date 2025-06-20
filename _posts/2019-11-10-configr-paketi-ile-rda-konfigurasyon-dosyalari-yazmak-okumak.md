@@ -4,7 +4,7 @@ categories:
 date: 2019-11-10
 layout: post
 tags:
-- english
+- turkish
 - longread
 - r
 - technology

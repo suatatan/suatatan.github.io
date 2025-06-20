@@ -4,7 +4,7 @@ categories:
 date: 2016-01-28
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Ingilizce m pek iyi değil acaba istatistik ile ilgili paylasimlarinizda kendi
   aciklamalarinizla anlatabilirsin iz.

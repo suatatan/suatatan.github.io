@@ -4,7 +4,7 @@ categories:
 date: 2014-03-21
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - tarifler

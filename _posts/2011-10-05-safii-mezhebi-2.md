@@ -4,8 +4,8 @@ categories:
 date: 2011-10-05
 layout: post
 tags:
+- turkish
 - din
-- english
 - longread
 - technology
 title: Şafii Mezhebi

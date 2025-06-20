@@ -4,7 +4,7 @@ categories:
 date: 2015-07-15
 layout: post
 tags:
-- english
+- turkish
 - kitap-alintilari
 - kitaplar
 - longread

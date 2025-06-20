@@ -4,7 +4,7 @@ categories:
 date: 2015-01-06
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Bakmıyorum değil, bakmayacaksın!

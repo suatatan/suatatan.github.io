@@ -4,7 +4,7 @@ categories:
 date: 2021-03-09
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Google'ın tüm datası elimin altında ama!

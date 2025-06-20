@@ -5,7 +5,7 @@ categories:
 date: 2017-03-03
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Çocuklar için Fransızca Öğrenme Siteleri

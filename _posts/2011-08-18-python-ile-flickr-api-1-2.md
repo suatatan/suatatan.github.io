@@ -5,7 +5,7 @@ categories:
 date: 2011-08-18
 layout: post
 tags:
-- english
+- turkish
 - longread
 - python
 - technology

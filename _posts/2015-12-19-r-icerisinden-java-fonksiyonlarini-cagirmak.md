@@ -4,7 +4,7 @@ categories:
 date: 2015-12-19
 layout: post
 tags:
-- english
+- turkish
 - istatistik
 - java
 - longread

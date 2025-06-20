@@ -2,7 +2,7 @@
 date: 2011-11-09
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Van'da 5.7 şiddetinde artçı deprem

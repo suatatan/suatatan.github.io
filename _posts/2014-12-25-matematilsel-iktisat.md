@@ -4,7 +4,7 @@ categories:
 date: 2014-12-25
 layout: post
 tags:
-- english
+- turkish
 - longread
 title: Matematilsel İktisat
 ---

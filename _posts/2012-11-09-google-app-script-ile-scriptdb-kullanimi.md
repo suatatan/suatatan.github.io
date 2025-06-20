@@ -4,7 +4,7 @@ categories:
 date: 2012-11-09
 layout: post
 tags:
-- english
+- turkish
 - google-app-script
 - quickread
 - technology

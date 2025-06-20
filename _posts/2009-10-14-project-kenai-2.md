@@ -5,7 +5,7 @@ categories:
 date: 2009-10-14
 layout: post
 tags:
-- english
+- turkish
 - inceleme
 - quickread
 - technology

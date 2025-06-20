@@ -4,7 +4,7 @@ categories:
 date: 2012-09-14
 layout: post
 tags:
-- english
+- turkish
 - longread
 - tasavvuf
 - technology

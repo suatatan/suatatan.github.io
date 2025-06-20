@@ -4,8 +4,8 @@ categories:
 date: 2013-03-12
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - iktibas
 - inceleme
 - isletme

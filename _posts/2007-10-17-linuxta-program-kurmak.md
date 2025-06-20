@@ -5,7 +5,7 @@ categories:
 date: 2007-10-17
 layout: post
 tags:
-- english
+- turkish
 - linux
 - quickread
 - technology

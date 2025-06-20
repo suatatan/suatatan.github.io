@@ -4,7 +4,7 @@ categories:
 date: 2022-02-25
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: En yavaş çalışan sorguları bulmak

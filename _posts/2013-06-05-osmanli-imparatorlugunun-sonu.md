@@ -4,7 +4,7 @@ categories:
 date: 2013-06-05
 layout: post
 tags:
-- english
+- turkish
 - longread
 - okuma-notlari
 - opinion

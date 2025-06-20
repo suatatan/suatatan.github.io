@@ -4,7 +4,7 @@ categories:
 date: 2016-09-27
 layout: post
 tags:
-- english
+- turkish
 - featured
 - longread
 - okumanotlari

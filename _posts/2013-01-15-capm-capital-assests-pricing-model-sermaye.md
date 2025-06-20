@@ -4,7 +4,7 @@ categories:
 date: 2013-01-15
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: CAPM (Capital Assests Pricing Model) Sermaye Varlıkları Değerleme Modeli Nedir?

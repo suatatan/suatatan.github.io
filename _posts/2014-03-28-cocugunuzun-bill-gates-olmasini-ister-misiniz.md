@@ -6,7 +6,7 @@ categories:
 date: 2014-03-28
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - technology

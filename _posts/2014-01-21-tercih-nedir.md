@@ -4,7 +4,7 @@ categories:
 date: 2014-01-21
 layout: post
 tags:
-- english
+- turkish
 - longread
 title: Tercih nedir?
 ---

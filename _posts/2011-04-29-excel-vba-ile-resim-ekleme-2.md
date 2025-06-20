@@ -5,7 +5,7 @@ categories:
 date: 2011-04-29
 layout: post
 tags:
-- english
+- turkish
 - excel
 - excel-vba
 - longread

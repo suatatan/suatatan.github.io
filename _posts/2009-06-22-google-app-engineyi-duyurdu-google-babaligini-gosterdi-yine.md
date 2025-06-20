@@ -2,7 +2,7 @@
 date: 2009-06-22
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - web-programlama

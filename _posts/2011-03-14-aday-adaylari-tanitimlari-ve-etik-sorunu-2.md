@@ -2,7 +2,7 @@
 date: 2011-03-14
 layout: post
 tags:
-- english
+- turkish
 - longread
 - sehrivan-gazetesi
 - technology

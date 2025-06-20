@@ -4,7 +4,7 @@ categories:
 date: 2011-03-08
 layout: post
 tags:
-- english
+- turkish
 - insaat-muhendisligi
 - longread
 - opinion

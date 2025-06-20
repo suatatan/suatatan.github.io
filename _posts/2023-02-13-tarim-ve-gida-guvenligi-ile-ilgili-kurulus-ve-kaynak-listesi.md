@@ -2,7 +2,7 @@
 date: 2023-02-13
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Tarım ve Gıda Güvenliği ile ilgili Kuruluş ve Kaynak Listesi

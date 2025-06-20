@@ -5,8 +5,8 @@ categories:
 date: 2014-09-17
 layout: post
 tags:
+- turkish
 - cocuklar
-- english
 - longread
 - opinion
 - technology

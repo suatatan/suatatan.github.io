@@ -4,7 +4,7 @@ categories:
 date: 2012-01-29
 layout: post
 tags:
-- english
+- turkish
 - opinion
 - quickread
 - sehrivan-gazetesi

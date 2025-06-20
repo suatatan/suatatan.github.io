@@ -2,7 +2,7 @@
 date: 2022-05-17
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: WordCluster Python paketi ne işe yarar

@@ -4,7 +4,7 @@ categories:
 date: 2016-02-13
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Tatsız olanın didaktikliği üzerine

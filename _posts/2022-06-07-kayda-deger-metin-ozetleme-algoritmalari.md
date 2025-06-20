@@ -4,8 +4,8 @@ categories:
 date: 2022-06-07
 layout: post
 tags:
+- turkish
 - dogal-dil-isleme
-- english
 - longread
 - metin-madenciligi
 - python

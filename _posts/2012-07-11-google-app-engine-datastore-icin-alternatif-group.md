@@ -4,7 +4,7 @@ categories:
 date: 2012-07-11
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Google App Engine Datastore için alternatif Group By Fonksiyonu

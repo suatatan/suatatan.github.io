@@ -4,7 +4,7 @@ categories:
 date: 2018-04-17
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Kaba İnşaat Taşeron Sözleşmelerinde Ödeme İhtilaflarını Önlemek için sözleşmeye

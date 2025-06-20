@@ -5,7 +5,7 @@ categories:
 date: 2012-02-25
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Google App Engine Pratik Memcache Kullanımı

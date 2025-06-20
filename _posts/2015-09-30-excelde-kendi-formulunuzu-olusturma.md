@@ -4,7 +4,7 @@ categories:
 date: 2015-09-30
 layout: post
 tags:
-- english
+- turkish
 - excel-vba
 - quickread
 - technology

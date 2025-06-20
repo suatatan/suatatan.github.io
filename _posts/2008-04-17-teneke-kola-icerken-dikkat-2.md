@@ -4,7 +4,7 @@ categories:
 date: 2008-04-17
 layout: post
 tags:
-- english
+- turkish
 - opinion
 - quickread
 - technology

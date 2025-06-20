@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {%- seo -%}
+    {% include head.html %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minima@latest/minima.css">
+    <link rel="stylesheet" href="{{ '/css/override.css' | relative_url }}">
+    <style>
+      body { max-width: 700px; margin: 2rem auto; font-family: system-ui, sans-serif; }
+      header, footer { text-align: center; margin: 2rem 0; }
+      a { color: #0366d6; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/index-en.html" title="Go to homepage">Suat ATAN's Blog</a></h1>
+      <p>
+        Suat ATAN's Blog offers original articles on philosophy, science, technology, personal development, and current topics. 
+  With an archive accumulated since 2006, it is a rich source of content for readers who value thought and knowledge. 
+  Book recommendations, essays, aphorisms, and notes on the digital world appeal to readers of all ages. 
+  A sincere and original blog experience from the pen of Suat ATAN. Content is available in both Turkish and English.
+      </p>
+
+      {% include navlinks.html %}
+    </header>
+    <main>
+      <h2>Posts (English)</h2>
+      <ul>
+        {% for post in site.posts %}
+          {% if post.tags contains 'english' %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%d.%m.%Y" }}</small>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      {% include sharelinks.html %}
+    </main>
+    <footer>
+      <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
+    </footer>
+  </body>
+</html>

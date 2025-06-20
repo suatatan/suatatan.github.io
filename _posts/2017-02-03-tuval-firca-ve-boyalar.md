@@ -4,7 +4,7 @@ categories:
 date: 2017-02-03
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Tuval, fırça ve boyalar

@@ -4,7 +4,7 @@ categories:
 date: 2020-12-12
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Sunumlarda kullanılabilecek uygulamalar listesi

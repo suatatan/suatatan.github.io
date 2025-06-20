@@ -4,8 +4,8 @@ categories:
 date: 2013-06-03
 layout: post
 tags:
+- turkish
 - aforizmalar
-- english
 - longread
 - opinion
 - technology

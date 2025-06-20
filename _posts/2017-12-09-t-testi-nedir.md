@@ -2,7 +2,7 @@
 date: 2017-12-09
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: T-Testi nedir?

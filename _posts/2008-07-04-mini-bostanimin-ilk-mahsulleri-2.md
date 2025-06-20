@@ -4,7 +4,7 @@ categories:
 date: 2008-07-04
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Mini-Bostanımın ilk mahsülleri

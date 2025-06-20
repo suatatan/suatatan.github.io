@@ -4,8 +4,8 @@ categories:
 date: 2013-06-20
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - isletme
 - longread
 - technology

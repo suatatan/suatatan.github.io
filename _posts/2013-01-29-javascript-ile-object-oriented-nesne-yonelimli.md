@@ -4,7 +4,7 @@ categories:
 date: 2013-01-29
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Javascript ile Object Oriented (Nesne yönelimli) programlama

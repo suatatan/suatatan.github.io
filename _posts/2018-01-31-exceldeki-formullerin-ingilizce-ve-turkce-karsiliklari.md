@@ -4,7 +4,7 @@ categories:
 date: 2018-01-31
 layout: post
 tags:
-- english
+- turkish
 - excel
 - quickread
 - technology

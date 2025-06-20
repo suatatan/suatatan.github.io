@@ -4,7 +4,7 @@ categories:
 date: 2012-06-11
 layout: post
 tags:
-- english
+- turkish
 - google-app-engine
 - longread
 - sorucevap

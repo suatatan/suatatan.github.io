@@ -4,7 +4,7 @@ categories:
 date: 2013-07-10
 layout: post
 tags:
-- english
+- turkish
 - kurtce
 - longread
 - referanskaynaklar

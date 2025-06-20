@@ -4,7 +4,7 @@ categories:
 date: 2013-12-30
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Jquery proxy() kullanımı

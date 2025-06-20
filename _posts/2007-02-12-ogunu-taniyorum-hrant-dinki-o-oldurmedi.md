@@ -2,7 +2,7 @@
 date: 2007-02-12
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - yazilarim

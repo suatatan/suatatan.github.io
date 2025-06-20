@@ -5,7 +5,7 @@ categories:
 date: 2014-12-08
 layout: post
 tags:
-- english
+- turkish
 - longread
 - ofis
 - technology

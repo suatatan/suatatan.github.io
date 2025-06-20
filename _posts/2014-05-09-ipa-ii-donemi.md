@@ -4,7 +4,7 @@ categories:
 date: 2014-05-09
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: IPA-II dönemi

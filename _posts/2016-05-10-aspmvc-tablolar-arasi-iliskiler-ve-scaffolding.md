@@ -5,8 +5,8 @@ categories:
 date: 2016-05-10
 layout: post
 tags:
+- turkish
 - asp-mvc
-- english
 - humanfriendlyaspmvc
 - longread
 - technology

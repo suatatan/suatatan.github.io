@@ -4,7 +4,7 @@ categories:
 date: 2012-05-05
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Sayfanızı başka adrese taşıdığınızda arama motorlarına yardımcı olmak için

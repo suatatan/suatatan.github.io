@@ -2,7 +2,7 @@
 date: 2015-05-10
 layout: post
 tags:
-- english
+- turkish
 - opinion
 - quickread
 - technology

@@ -2,7 +2,7 @@
 date: 2017-12-03
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Ücretsiz Veri Setleri

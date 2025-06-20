@@ -4,7 +4,7 @@ categories:
 date: 2020-10-15
 layout: post
 tags:
-- english
+- turkish
 - longread
 - metin-madenciligi
 - technology

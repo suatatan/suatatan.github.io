@@ -2,7 +2,7 @@
 date: 2020-03-05
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: 90 Yaşında Ceviz Ağacı Diker Misiniz?

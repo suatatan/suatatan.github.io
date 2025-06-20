@@ -4,7 +4,7 @@ categories:
 date: 2016-03-18
 layout: post
 tags:
-- english
+- turkish
 - kitap
 - longread
 - okuma-notlari

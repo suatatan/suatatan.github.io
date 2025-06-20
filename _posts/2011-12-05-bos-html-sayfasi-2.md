@@ -4,8 +4,8 @@ categories:
 date: 2011-12-05
 layout: post
 tags:
+- turkish
 - bilgisayar
-- english
 - longread
 - technology
 title: Boş HTML sayfası

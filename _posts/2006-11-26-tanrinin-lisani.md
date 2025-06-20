@@ -4,7 +4,7 @@ categories:
 date: 2006-11-26
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - yazilarim
 - yeni-ufuk-gazetesi

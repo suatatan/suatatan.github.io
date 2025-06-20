@@ -4,7 +4,7 @@ categories:
 date: 2013-07-26
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Kara Arşiv 12 Eylül'ün Karanlık Yüzü

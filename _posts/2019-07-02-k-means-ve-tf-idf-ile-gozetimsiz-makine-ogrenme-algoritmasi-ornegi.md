@@ -4,7 +4,7 @@ categories:
 date: 2019-07-02
 layout: post
 tags:
-- english
+- turkish
 - longread
 - makine-ogrenmesi
 - technology

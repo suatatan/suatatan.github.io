@@ -4,7 +4,7 @@ categories:
 date: 2014-11-06
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Bu kayıttan bir önceki kayıttan itibaren Tumblr'a geçtim
 ---

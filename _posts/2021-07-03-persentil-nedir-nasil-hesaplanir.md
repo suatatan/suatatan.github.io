@@ -4,7 +4,7 @@ categories:
 date: 2021-07-03
 layout: post
 tags:
-- english
+- turkish
 - istatistik
 - longread
 - technology

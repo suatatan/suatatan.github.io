@@ -4,7 +4,7 @@ categories:
 date: 2012-04-25
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Örnek bir Finansal Analiz Tablosu

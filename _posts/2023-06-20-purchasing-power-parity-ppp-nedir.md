@@ -2,7 +2,7 @@
 date: 2023-06-20
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Purchasing Power Parity (PPP) nedir?

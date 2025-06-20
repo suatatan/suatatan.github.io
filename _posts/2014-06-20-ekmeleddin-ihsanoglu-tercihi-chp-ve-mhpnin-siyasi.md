@@ -4,7 +4,7 @@ categories:
 date: 2014-06-20
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - politika

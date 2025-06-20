@@ -4,7 +4,7 @@ categories:
 date: 2015-11-08
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - sayisalyontemler
 - technology

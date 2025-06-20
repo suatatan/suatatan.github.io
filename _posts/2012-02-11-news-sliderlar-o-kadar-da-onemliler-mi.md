@@ -5,7 +5,7 @@ categories:
 date: 2012-02-11
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: News Sliderlar. O kadar da önemliler mi?

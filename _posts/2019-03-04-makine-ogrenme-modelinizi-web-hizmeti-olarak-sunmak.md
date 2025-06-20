@@ -4,8 +4,8 @@ categories:
 date: 2019-03-04
 layout: post
 tags:
+- turkish
 - bulut
-- english
 - quickread
 - technology
 title: Makine Öğrenme Modelinizi Web Hizmeti Olarak Sunmak

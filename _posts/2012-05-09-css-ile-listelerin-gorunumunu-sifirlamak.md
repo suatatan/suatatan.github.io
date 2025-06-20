@@ -5,7 +5,7 @@ categories:
 date: 2012-05-09
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: CSS ile listelerin görünümünü sıfırlamak

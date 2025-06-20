@@ -4,7 +4,7 @@ categories:
 date: 2016-06-20
 layout: post
 tags:
-- english
+- turkish
 - opinion
 - quickread
 title: Windows’da full text arama

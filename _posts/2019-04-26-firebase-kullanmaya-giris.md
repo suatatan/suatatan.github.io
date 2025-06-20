@@ -4,7 +4,7 @@ categories:
 date: 2019-04-26
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Firebase Kullanmaya Giriş

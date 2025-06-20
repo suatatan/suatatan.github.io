@@ -4,7 +4,7 @@ categories:
 date: 2015-08-03
 layout: post
 tags:
-- english
+- turkish
 - longread
 ---
 

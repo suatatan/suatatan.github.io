@@ -5,7 +5,7 @@ categories:
 date: 2014-05-03
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Neyle çalışıyorum?  Akademisyenler, Programcılar ve Verimli İnsanlar için Alet

@@ -4,7 +4,7 @@ categories:
 date: 2013-09-22
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Erkenciliğe övgü

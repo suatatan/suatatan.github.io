@@ -4,7 +4,7 @@ categories:
 date: 2013-05-31
 layout: post
 tags:
-- english
+- turkish
 - longread
 - okuma-notlari
 - technology

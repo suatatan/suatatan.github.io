@@ -4,7 +4,7 @@ categories:
 date: 2023-02-13
 layout: post
 tags:
-- english
+- turkish
 - longread
 - python
 - technology

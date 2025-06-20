@@ -2,7 +2,7 @@
 date: 2019-03-28
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Dosya transferinde upload zamanından kurtulmak

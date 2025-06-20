@@ -5,7 +5,7 @@ categories:
 date: 2012-12-14
 layout: post
 tags:
-- english
+- turkish
 - jquery
 - quickread
 - technology

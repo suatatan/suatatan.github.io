@@ -4,8 +4,8 @@ categories:
 date: 2016-11-25
 layout: post
 tags:
+- turkish
 - data-science
-- english
 - longread
 - technology
 - veribilim

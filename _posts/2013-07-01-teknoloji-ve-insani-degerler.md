@@ -4,8 +4,8 @@ categories:
 date: 2013-07-01
 layout: post
 tags:
+- turkish
 - edebiyat
-- english
 - longread
 - opinion
 - technology

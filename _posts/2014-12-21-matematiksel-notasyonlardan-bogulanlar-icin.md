@@ -4,7 +4,7 @@ categories:
 date: 2014-12-21
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Matematiksel notasyonlardan boğulanlar için

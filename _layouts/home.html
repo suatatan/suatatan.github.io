@@ -22,6 +22,22 @@
       {% include navlinks.html %}
     </header>
     <main>
+      <h2>Sayfalar</h2>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.path contains 'pages/' and page.title %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <h2>Etiketler</h2>
+      <ul>
+        <li style="display:inline; margin-right:10px;"><a target="_blank" href="/index-en.html">#english</a></li>
+        <li style="display:inline; margin-right:10px;"><a href="/tag/turkish.html">#turkish</a></li>
+        <li style="display:inline; margin-right:10px;"><a href="/tag/technology.html">#technology</a></li>
+        <li style="display:inline; margin-right:10px;"><a href="/tag/opinion.html">#opinion</a></li>
+        <li style="display:inline; margin-right:10px;"><a href="/tag/cite.html">#cite</a></li>
+      </ul>
       <h2>Yazılar</h2>
       <ul>
         {% for post in site.posts %}

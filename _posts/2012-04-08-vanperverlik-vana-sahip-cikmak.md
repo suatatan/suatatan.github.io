@@ -4,7 +4,7 @@ categories:
 date: 2012-04-08
 layout: post
 tags:
-- english
+- turkish
 - longread
 - sehrivan-gazetesi
 - technology

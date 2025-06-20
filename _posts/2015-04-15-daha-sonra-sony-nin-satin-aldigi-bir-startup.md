@@ -4,8 +4,8 @@ categories:
 date: 2015-04-15
 layout: post
 tags:
+- turkish
 - altini-cizdiklerim
-- english
 - longread
 - okuma-notlari
 - opinion

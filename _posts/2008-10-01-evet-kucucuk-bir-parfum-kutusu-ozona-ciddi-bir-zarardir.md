@@ -4,7 +4,7 @@ categories:
 date: 2008-10-01
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Evet..! Küçücük bir parfüm kutusu Ozon'a ciddi bir zarardır.

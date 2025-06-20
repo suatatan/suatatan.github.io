@@ -4,7 +4,7 @@ categories:
 date: 2007-03-29
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Konuşma Bitti

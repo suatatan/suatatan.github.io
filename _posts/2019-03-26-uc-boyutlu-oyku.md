@@ -2,7 +2,7 @@
 date: 2019-03-26
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 title: Üç Boyutlu Öykü

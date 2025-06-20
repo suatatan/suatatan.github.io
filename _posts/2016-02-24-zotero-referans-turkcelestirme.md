@@ -4,8 +4,8 @@ categories:
 date: 2016-02-24
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - longread
 title: Zotero Referans Türkçeleştirme
 ---

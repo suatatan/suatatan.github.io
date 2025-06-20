@@ -4,7 +4,7 @@ categories:
 date: 2015-03-12
 layout: post
 tags:
-- english
+- turkish
 - longread
 - matematik
 - sayisalyontemler

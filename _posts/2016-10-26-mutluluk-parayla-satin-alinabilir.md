@@ -4,7 +4,7 @@ categories:
 date: 2016-10-26
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - yazilarim

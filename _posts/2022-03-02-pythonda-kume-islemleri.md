@@ -4,7 +4,7 @@ categories:
 date: 2022-03-02
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: PYTHON'da küme işlemleri

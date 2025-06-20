@@ -2,7 +2,7 @@
 date: 2015-07-03
 layout: post
 tags:
-- english
+- turkish
 - quickread
 ---
 

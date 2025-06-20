@@ -4,7 +4,7 @@ categories:
 date: 2008-07-10
 layout: post
 tags:
-- english
+- turkish
 - longread
 - okuma-notlari
 - technology

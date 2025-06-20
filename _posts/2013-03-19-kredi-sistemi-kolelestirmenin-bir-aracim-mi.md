@@ -4,8 +4,8 @@ categories:
 date: 2013-03-19
 layout: post
 tags:
+- turkish
 - aforizmalar
-- english
 - isletme
 - quickread
 title: Kredi sistemi köleleştirmenin bir aracım mı?

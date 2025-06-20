@@ -4,7 +4,7 @@ categories:
 date: 2013-05-18
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: How to Choose a Dictionary to Use on an Amazon Kindle Device

@@ -2,7 +2,7 @@
 date: 2023-04-18
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Vide.js ve Howler.js kütüphaneleri ne işe yarar?

@@ -4,7 +4,7 @@ categories:
 date: 2012-04-22
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Gözüme kestirdiklerim.

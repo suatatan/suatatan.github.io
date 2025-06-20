@@ -5,7 +5,7 @@ categories:
 date: 2014-04-07
 layout: post
 tags:
-- english
+- turkish
 - latex
 - longread
 - technology

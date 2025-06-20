@@ -2,7 +2,7 @@
 date: 2011-09-17
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: '"Bir haftadır bilmem ne yemedim" türünden lafızların künh-ü hakikisi hakkında

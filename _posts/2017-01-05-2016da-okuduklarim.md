@@ -4,7 +4,7 @@ categories:
 date: 2017-01-05
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: 2016'da okuduklarım

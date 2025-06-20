@@ -2,7 +2,7 @@
 date: 2022-02-25
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: SUNUCuya upload edilmeden dosya yollama

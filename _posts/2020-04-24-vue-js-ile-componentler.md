@@ -4,7 +4,7 @@ categories:
 date: 2020-04-24
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Vue.js ile Component'ler

@@ -5,7 +5,7 @@ categories:
 date: 2012-12-19
 layout: post
 tags:
-- english
+- turkish
 - google-app-engine
 - python
 - quickread

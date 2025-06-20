@@ -4,7 +4,7 @@ categories:
 date: 2008-07-25
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Office 2007 işgüzarlığına ve diğer format sıkıntılarına çözümler

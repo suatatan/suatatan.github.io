@@ -22,7 +22,7 @@ title: Suat ATAN Blogu
 email: suatatan@gmail.com
 description: >-
   Suat ATAN Blogu, felsefe, bilim, teknoloji, kişisel gelişim ve güncel konular üzerine özgün yazılar sunar. 
-  2006'dan bu yana birikmiş arşiviyle, düşünceye ve bilgiye değer veren okurlar için zengin bir içerik kaynağıdır. 
+  2006'dan bu yana birikmiş arşiviyle, düşünceye ve bilgiye değer veren okurlar için 600'den fazla yazıyla zengin bir içerik kaynağıdır. 
   Kitap önerileri, denemeler, aforizmalar ve dijital dünyaya dair notlar ile her yaştan okura hitap eder. 
   Suat ATAN'ın kaleminden, samimi ve özgün bir blog deneyimi. Türkçe ve İngilizce içerikler mevcuttur.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -34,6 +34,7 @@ github_username:  suatatan
 theme: minima
 plugins:
   - jekyll-feed
+future: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -6,7 +6,7 @@ categories:
 date: 2017-05-06
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - ortadogu

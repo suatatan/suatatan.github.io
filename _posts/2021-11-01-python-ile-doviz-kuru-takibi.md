@@ -4,9 +4,9 @@ categories:
 date: 2021-11-01
 layout: post
 tags:
+- turkish
 - bot
 - doviz
-- english
 - finans
 - longread
 - piyasa-takibi

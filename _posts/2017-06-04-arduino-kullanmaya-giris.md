@@ -5,8 +5,8 @@ categories:
 date: 2017-06-04
 layout: post
 tags:
+- turkish
 - arduino
-- english
 - longread
 - technology
 title: Arduino Kullanmaya Giriş

@@ -4,7 +4,7 @@ categories:
 date: 2015-03-09
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Windowsta çok fazla sayıda dosya ile uğraşıyorsanız bu arama komutları size
   göre

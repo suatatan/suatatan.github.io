@@ -4,11 +4,10 @@ categories:
 date: 2006-09-12
 layout: post
 tags:
-- english
+- turkish
+- cite
 - longread
-- technology
-- yazilarim
-- yeni-ufuk-gazetesi
+- opinion
 title: AKTÜEL AFORİZMALAR
 ---
 

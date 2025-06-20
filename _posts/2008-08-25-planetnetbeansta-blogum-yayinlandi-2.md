@@ -5,7 +5,7 @@ categories:
 date: 2008-08-25
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: PlanetNetBeans'ta Blogum Yayınlandı

@@ -5,7 +5,7 @@ categories:
 date: 2011-09-20
 layout: post
 tags:
-- english
+- turkish
 - jquery
 - longread
 - technology

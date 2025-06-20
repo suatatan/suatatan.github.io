@@ -2,8 +2,8 @@
 date: 2007-04-24
 layout: post
 tags:
+- turkish
 - bilgisayar
-- english
 - quickread
 - technology
 - web-programlama

@@ -4,7 +4,7 @@ categories:
 date: 2011-10-06
 layout: post
 tags:
-- english
+- turkish
 - inceleme
 - longread
 - technology

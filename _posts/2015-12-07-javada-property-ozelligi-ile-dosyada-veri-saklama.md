@@ -5,7 +5,7 @@ categories:
 date: 2015-12-07
 layout: post
 tags:
-- english
+- turkish
 - java
 - longread
 - technology

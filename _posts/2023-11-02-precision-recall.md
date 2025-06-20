@@ -1,3 +1,12 @@
+---
+date: 2023-11-02
+tags:
+- english
+- longread
+- technology
+title: 'How to Catch Shoplifters Like a Pro: A Guide to Precision and Recall'
+---
+
 # How to Catch Shoplifters Like a Pro: A Guide to Precision and Recall 🕵️‍♂️
 
 Hey, you! Yes, you! Are you a security guard at a mall? Do you want to catch more shoplifters and impress your boss? Do you want to learn some cool machine learning concepts along the way? If you answered yes to any of these questions, then this blog post is for you! 😎

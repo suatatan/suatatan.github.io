@@ -2,7 +2,7 @@
 date: 2020-02-28
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Kaynak Kod Analizi Notları

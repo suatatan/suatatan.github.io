@@ -2,7 +2,7 @@
 date: 2007-03-18
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - technology

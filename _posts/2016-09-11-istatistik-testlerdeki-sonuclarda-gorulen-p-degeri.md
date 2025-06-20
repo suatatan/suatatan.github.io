@@ -4,8 +4,8 @@ categories:
 date: 2016-09-11
 layout: post
 tags:
+- turkish
 - ekonometri
-- english
 - istatistik
 - longread
 - technology

@@ -4,7 +4,7 @@ categories:
 date: 2015-11-27
 layout: post
 tags:
-- english
+- turkish
 - longread
 - okumanotlari
 - technology

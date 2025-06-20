@@ -2,7 +2,7 @@
 date: 2023-03-16
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Symbolic Python kütüphanesi ile kolay cebir

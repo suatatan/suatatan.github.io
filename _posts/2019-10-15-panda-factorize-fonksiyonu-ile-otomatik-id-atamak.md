@@ -2,7 +2,7 @@
 date: 2019-10-15
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Panda Factorize Fonksiyonu ile Otomatik ID atamak

@@ -4,7 +4,7 @@ categories:
 date: 2012-02-14
 layout: post
 tags:
-- english
+- turkish
 - okuma-notlari
 - quickread
 - technology

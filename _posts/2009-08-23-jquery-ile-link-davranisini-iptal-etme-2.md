@@ -5,7 +5,7 @@ categories:
 date: 2009-08-23
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 - web-programlama

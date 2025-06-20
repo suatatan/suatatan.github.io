@@ -5,7 +5,7 @@ categories:
 date: 2012-12-15
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Blogger'de CSS ile kişisel stiller oluşturmak

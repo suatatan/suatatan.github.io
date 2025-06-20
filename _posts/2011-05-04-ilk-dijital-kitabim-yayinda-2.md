@@ -5,7 +5,7 @@ categories:
 date: 2011-05-04
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: İlk dijital kitabım yayında

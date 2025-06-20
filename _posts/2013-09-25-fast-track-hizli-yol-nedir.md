@@ -4,7 +4,7 @@ categories:
 date: 2013-09-25
 layout: post
 tags:
-- english
+- turkish
 - insaat-muhendisligi
 - quickread
 - technology

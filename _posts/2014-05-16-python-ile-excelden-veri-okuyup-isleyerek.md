@@ -4,7 +4,7 @@ categories:
 date: 2014-05-16
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Python ile Excel'den veri okuyup işleyerek sonuçları Excel dosyasına yazdırma

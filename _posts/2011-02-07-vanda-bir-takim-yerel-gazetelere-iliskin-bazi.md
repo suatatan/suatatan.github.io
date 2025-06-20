@@ -4,7 +4,7 @@ categories:
 date: 2011-02-07
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - technology

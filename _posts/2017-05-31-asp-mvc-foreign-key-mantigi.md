@@ -2,7 +2,7 @@
 date: 2017-05-31
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: ASP.MVC Foreign Key Mantığı

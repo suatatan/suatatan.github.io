@@ -2,7 +2,7 @@
 date: 2019-11-08
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Hangi Veri Tipine Hangi Grafik Uygundur

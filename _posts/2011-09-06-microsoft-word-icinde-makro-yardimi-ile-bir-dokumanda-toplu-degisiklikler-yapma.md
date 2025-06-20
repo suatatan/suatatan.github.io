@@ -4,7 +4,7 @@ categories:
 date: 2011-09-06
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Microsoft Word içinde makro yardımı ile bir dökümanda toplu değişiklikler yapma

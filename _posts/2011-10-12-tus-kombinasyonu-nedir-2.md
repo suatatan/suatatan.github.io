@@ -2,8 +2,8 @@
 date: 2011-10-12
 layout: post
 tags:
+- turkish
 - bilgisayar
-- english
 - excel
 - longread
 - technology

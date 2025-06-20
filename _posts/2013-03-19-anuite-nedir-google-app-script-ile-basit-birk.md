@@ -4,8 +4,8 @@ categories:
 date: 2013-03-19
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - google-app-script
 - isletme
 - longread

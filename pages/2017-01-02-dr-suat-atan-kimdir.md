@@ -1,9 +1,10 @@
 ---
 title: "Dr. Suat ATAN Kimdir?"
 date: 2017-01-02
+layout: post
 ---
 
-![suat](/images/suat.png)
+![suat](images/suat.png)
 
 Mühendislik ve işletme lisansından sonra, işletme bölümünde Lisansüstü öğrenimime devam edip Ankara Üniversitesi Siyasal Bilgiler Fakültesi’nde “**Metin Madenciliği ile Sentiment Analizi ve Borsa İstanbul üzerinde bir Uygulama**” konulu doktora tezi ile doktoramı tamamladım. Ayrıca Stanford Üniversitesince Andrew Ng tarafından sunulan yapay zeka ile ilgili olan online kurs olan **Machine Learning** programını tamamladım. Yerli ve yabancı yayınlanmış akademik çalışmalarım bulunmaktadır. Bunun yanında, birçok kitap evinde halen satılan “**[Google App Engine altında Python ile web tasarım](https://www.amazon.com/Google-App-Engine-Suat-Atan/dp/6054205811/ref=sr_1_1?ie=UTF8&qid=1501056311&sr=8-1&keywords=suat+atan)** kitabının ve **[İktisat ve İşletmeciler için R ile Veri Analizi](https://www.seckin.com.tr/kitap/878575616#)** adlı kitapların yazarıyım. [Ağ analizi, Teori ve Uygulamalar a](https://www.seckin.com.tr/kitap/653978417)dlı kitabın ise editörlerinden biriyim.
 

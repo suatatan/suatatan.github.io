@@ -4,8 +4,8 @@ categories:
 date: 2012-02-02
 layout: post
 tags:
+- turkish
 - din
-- english
 - longread
 - opinion
 - technology

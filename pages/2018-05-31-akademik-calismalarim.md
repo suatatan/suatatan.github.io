@@ -1,6 +1,7 @@
 ---
 title: "Akademik Çalışmalarım"
 date: 2018-05-31
+layout: post
 ---
 
 **Kitaplar** :

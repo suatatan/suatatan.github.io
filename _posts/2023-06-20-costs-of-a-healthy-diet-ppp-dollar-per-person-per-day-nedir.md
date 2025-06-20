@@ -2,7 +2,7 @@
 date: 2023-06-20
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: ‘Costs of a healthy diet (PPP dollar per person per day) nedir?

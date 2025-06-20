@@ -4,8 +4,8 @@ categories:
 date: 2015-05-30
 layout: post
 tags:
+- turkish
 - cocuk
-- english
 - quickread
 - technology
 ---

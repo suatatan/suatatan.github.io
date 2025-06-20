@@ -4,7 +4,7 @@ categories:
 date: 2011-06-12
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Nokia Qt Creator ile hem Masaüstünde hem cep telefonunda çalışabilen Sqlite

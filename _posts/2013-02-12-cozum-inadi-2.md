@@ -4,7 +4,7 @@ categories:
 date: 2013-02-12
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - radikal-iki
 - technology

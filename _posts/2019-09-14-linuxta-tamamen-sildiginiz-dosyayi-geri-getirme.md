@@ -4,7 +4,7 @@ categories:
 date: 2019-09-14
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Linux'ta Tamamen Sildiğiniz Dosyayı Geri Getirme

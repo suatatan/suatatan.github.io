@@ -4,7 +4,7 @@ categories:
 date: 2014-03-24
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: TexWork Kullanırken Türkçe Yazım Denetimi Yapılandırma
 ---

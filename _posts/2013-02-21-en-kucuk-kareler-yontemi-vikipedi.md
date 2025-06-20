@@ -4,7 +4,7 @@ categories:
 date: 2013-02-21
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: En küçük kareler yöntemi - Vikipedi

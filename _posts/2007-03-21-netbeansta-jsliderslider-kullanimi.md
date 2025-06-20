@@ -5,7 +5,7 @@ categories:
 date: 2007-03-21
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - web-programlama

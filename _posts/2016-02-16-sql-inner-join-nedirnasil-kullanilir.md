@@ -5,8 +5,8 @@ categories:
 date: 2016-02-16
 layout: post
 tags:
+- turkish
 - asp
-- english
 - longread
 - mvc
 - sql

@@ -4,7 +4,7 @@ categories:
 date: 2011-10-27
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - sehrivan-gazetesi
 - technology

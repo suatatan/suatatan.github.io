@@ -2,7 +2,7 @@
 date: 2023-01-30
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 title: Zaman kaydı yoksa yönetmiyorsunuz! Pomodoro 2

@@ -4,7 +4,7 @@ categories:
 date: 2023-02-10
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Flexxi ile toplu resim küçültme

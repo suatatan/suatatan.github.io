@@ -4,7 +4,7 @@ categories:
 date: 2007-05-01
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Netbeans Visual Web Pack ile veritabanı işlemlerinde sıkça karşılaşılan bir

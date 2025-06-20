@@ -4,7 +4,7 @@ categories:
 date: 2017-01-04
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: SQLSERVER'da tüm veritabanı içinde arama yapmak

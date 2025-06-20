@@ -5,7 +5,7 @@ categories:
 date: 2011-07-08
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - web-programlama
 title: CSS ile bir div içinde div'i ortalama

@@ -4,7 +4,7 @@ categories:
 date: 2014-01-13
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Diyarbakır'ın insan silueti Xeriye Ana.

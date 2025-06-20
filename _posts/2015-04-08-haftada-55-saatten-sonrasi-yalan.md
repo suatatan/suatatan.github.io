@@ -4,7 +4,7 @@ categories:
 date: 2015-04-08
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Haftada 55 saatten sonrası yalan
 ---

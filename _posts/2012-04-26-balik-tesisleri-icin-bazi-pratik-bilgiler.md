@@ -4,7 +4,7 @@ categories:
 date: 2012-04-26
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Balık tesisleri için bazı pratik bilgiler

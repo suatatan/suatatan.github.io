@@ -4,7 +4,7 @@ categories:
 date: 2012-04-15
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Bitliste büryan nerede yenir?
 ---

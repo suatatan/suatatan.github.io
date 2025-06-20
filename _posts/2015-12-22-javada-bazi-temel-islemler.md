@@ -5,7 +5,7 @@ categories:
 date: 2015-12-22
 layout: post
 tags:
-- english
+- turkish
 - java
 - longread
 title: Java’da bazı temel işlemler

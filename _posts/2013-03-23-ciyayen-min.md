@@ -4,7 +4,7 @@ categories:
 date: 2013-03-23
 layout: post
 tags:
-- english
+- turkish
 - kurdi
 - longread
 title: Çîyayên  min

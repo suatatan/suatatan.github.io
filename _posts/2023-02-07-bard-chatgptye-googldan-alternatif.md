@@ -4,7 +4,7 @@ categories:
 date: 2023-02-07
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - yapay-zeka

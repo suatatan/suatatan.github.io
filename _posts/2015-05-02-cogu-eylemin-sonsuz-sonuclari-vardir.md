@@ -4,8 +4,8 @@ categories:
 date: 2015-05-02
 layout: post
 tags:
+- turkish
 - altini-cizdiklerim
-- english
 - quickread
 ---
 

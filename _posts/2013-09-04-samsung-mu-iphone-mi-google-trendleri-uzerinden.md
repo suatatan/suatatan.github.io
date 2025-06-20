@@ -5,7 +5,7 @@ categories:
 date: 2013-09-04
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 - yazilarim

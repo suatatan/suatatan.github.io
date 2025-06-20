@@ -5,8 +5,8 @@ categories:
 date: 2015-06-23
 layout: post
 tags:
+- turkish
 - akademi
-- english
 - ingilizce
 - longread
 - technology

@@ -4,7 +4,7 @@ categories:
 date: 2013-05-05
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: 'Milli saçmalığımız: Futbol Sevinci'

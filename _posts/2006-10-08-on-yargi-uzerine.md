@@ -4,7 +4,7 @@ categories:
 date: 2006-10-08
 layout: post
 tags:
-- english
+- turkish
 - opinion
 - quickread
 - yazilarim

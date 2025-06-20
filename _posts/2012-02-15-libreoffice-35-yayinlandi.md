@@ -5,7 +5,7 @@ categories:
 date: 2012-02-15
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: LibreOffice 3.5 yayınlandı

@@ -4,9 +4,9 @@ categories:
 date: 2014-06-15
 layout: post
 tags:
+- turkish
 - ekonometri
 - ekonomi
-- english
 - isletme
 - istatistik
 - longread

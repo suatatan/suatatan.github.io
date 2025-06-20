@@ -5,8 +5,8 @@ categories:
 date: 2016-05-10
 layout: post
 tags:
+- turkish
 - asp-mvc
-- english
 - longread
 - technology
 title: ASP.MVC Code First Many-to-Many (Çok-Çok) Tablo ilişkisi Kurma

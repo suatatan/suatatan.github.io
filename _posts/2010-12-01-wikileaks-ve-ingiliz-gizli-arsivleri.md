@@ -4,7 +4,7 @@ categories:
 date: 2010-12-01
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Wikileaks ve İngiliz gizli arşivleri

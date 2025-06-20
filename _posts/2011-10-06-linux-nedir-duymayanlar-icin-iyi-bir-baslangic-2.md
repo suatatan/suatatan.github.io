@@ -5,7 +5,7 @@ categories:
 date: 2011-10-06
 layout: post
 tags:
-- english
+- turkish
 - linux
 - longread
 - technology

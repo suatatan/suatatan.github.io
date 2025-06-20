@@ -4,8 +4,8 @@ categories:
 date: 2021-07-23
 layout: post
 tags:
+- turkish
 - disleksi
-- english
 - longread
 - opinion
 - technology

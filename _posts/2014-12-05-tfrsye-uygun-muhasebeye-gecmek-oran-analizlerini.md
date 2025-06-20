@@ -4,8 +4,8 @@ categories:
 date: 2014-12-05
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - finans
 - isletme
 - makaletakip

@@ -4,7 +4,7 @@ categories:
 date: 2019-09-20
 layout: post
 tags:
-- english
+- turkish
 - longread
 - sqlserver
 title: SQL Server Manager'de Tüm Tabloları ve Tablo Adlarını Arama Motoru

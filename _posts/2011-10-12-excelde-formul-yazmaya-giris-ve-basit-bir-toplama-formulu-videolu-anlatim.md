@@ -4,7 +4,7 @@ categories:
 date: 2011-10-12
 layout: post
 tags:
-- english
+- turkish
 - excel
 - quickread
 title: Excel'de formül yazmaya giriş ve basit bir toplama formülü (Videolu anlatım)

@@ -4,7 +4,7 @@ categories:
 date: 2014-02-20
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Excel VBA ile muhasebe uygulamaları

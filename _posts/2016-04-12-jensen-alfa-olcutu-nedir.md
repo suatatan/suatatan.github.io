@@ -4,7 +4,7 @@ categories:
 date: 2016-04-12
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Jensen Alfa Ölçütü Nedir

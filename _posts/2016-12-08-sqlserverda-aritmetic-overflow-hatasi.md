@@ -5,8 +5,8 @@ categories:
 date: 2016-12-08
 layout: post
 tags:
+- turkish
 - aspmvc
-- english
 - longread
 - sqlserver
 - technology

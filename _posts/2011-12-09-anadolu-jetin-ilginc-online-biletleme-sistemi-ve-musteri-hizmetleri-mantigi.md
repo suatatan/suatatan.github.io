@@ -2,7 +2,7 @@
 date: 2011-12-09
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Anadolu Jet'in ilginç online biletleme sistemi ve müşteri hizmetleri mantığı

@@ -4,7 +4,7 @@ categories:
 date: 2008-05-19
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Fiyat Endeksleri ne demektir? Fiyat Endeksleri Nasıl Kullanılır?

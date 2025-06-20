@@ -4,7 +4,7 @@ categories:
 date: 2011-02-24
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Şafii Mezhebine göre Namaz Kılınışı ve Dualar

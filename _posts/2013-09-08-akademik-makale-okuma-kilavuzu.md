@@ -4,8 +4,8 @@ categories:
 date: 2013-09-08
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - longread
 - technology
 - yazilarim

@@ -5,7 +5,7 @@ categories:
 date: 2011-10-12
 layout: post
 tags:
-- english
+- turkish
 - excel
 - quickread
 - technology

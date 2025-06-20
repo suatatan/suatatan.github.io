@@ -4,7 +4,7 @@ categories:
 date: 2013-06-13
 layout: post
 tags:
-- english
+- turkish
 - insaat-muhendisligi
 - longread
 - technology

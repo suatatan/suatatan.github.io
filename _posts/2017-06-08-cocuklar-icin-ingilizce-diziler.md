@@ -4,7 +4,7 @@ categories:
 date: 2017-06-08
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Çocuklar için İngilizce Diziler

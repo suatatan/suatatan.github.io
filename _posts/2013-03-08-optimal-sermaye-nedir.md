@@ -4,7 +4,7 @@ categories:
 date: 2013-03-08
 layout: post
 tags:
-- english
+- turkish
 - isletme
 - quickread
 title: Optimal sermaye nedir?

@@ -5,7 +5,7 @@ categories:
 date: 2017-04-19
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Sosyal Network Analizi ile ilgili kitaplar

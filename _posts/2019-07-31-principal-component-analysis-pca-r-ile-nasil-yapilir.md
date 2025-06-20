@@ -6,7 +6,7 @@ categories:
 date: 2019-07-31
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Principal Component Analysis (PCA) R ile nasıl yapılır?

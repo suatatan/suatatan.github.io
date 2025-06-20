@@ -5,7 +5,7 @@ categories:
 date: 2014-12-30
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Windows 7'de Recent Places ve Recent Items Farkı

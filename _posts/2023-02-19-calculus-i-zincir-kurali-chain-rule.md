@@ -2,7 +2,7 @@
 date: 2023-02-19
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: '"Calculus-I : Zincir Kuralı (Chain Rule)'
 ---

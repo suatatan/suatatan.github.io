@@ -2,7 +2,7 @@
 date: 2022-03-09
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: SQL'de farklı yerlerde ancak aynı iki tablonun içeriğinin aynı olup olmadığın

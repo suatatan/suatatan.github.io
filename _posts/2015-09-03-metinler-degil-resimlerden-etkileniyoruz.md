@@ -4,7 +4,7 @@ categories:
 date: 2015-09-03
 layout: post
 tags:
-- english
+- turkish
 - quickread
 title: Metinler değil resimlerden etkileniyoruz
 ---

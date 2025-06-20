@@ -4,7 +4,7 @@ categories:
 date: 2017-04-19
 layout: post
 tags:
-- english
+- turkish
 - longread
 title: Estimate mi, guess mi? Collocation Sözlükleri
 ---

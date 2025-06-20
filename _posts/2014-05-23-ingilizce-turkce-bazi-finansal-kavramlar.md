@@ -4,7 +4,7 @@ categories:
 date: 2014-05-23
 layout: post
 tags:
-- english
+- turkish
 - finans
 - isletme
 - longread

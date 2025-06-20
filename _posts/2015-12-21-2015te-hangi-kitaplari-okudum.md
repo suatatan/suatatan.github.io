@@ -4,7 +4,7 @@ categories:
 date: 2015-12-21
 layout: post
 tags:
-- english
+- turkish
 - kitaplar
 - longread
 - opinion

@@ -4,7 +4,7 @@ categories:
 date: 2014-06-03
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: Genişletilmiş Dickey Fuller Testi

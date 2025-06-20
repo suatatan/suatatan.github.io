@@ -5,7 +5,7 @@ categories:
 date: 2011-09-08
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: GPS Kooordinatları arası dönüşüm

@@ -5,7 +5,7 @@ categories:
 date: 2010-10-24
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - tasavvuf

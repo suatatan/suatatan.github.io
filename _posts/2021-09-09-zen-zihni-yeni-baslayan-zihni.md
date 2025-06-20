@@ -4,7 +4,7 @@ categories:
 date: 2021-09-09
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - technology

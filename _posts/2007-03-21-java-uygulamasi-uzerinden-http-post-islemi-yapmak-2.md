@@ -2,8 +2,8 @@
 date: 2007-03-21
 layout: post
 tags:
+- turkish
 - bilgisayar
-- english
 - quickread
 - technology
 - yeni-ufuk-gazetesi

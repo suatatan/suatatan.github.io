@@ -4,7 +4,7 @@ categories:
 date: 2016-07-11
 layout: post
 tags:
-- english
+- turkish
 - kitap
 - longread
 - technology

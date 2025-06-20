@@ -5,8 +5,8 @@ categories:
 date: 2014-02-09
 layout: post
 tags:
+- turkish
 - akademik
-- english
 - quickread
 - technology
 title: Türkçe yazımda LateX kullanımı için güvenli bir yol

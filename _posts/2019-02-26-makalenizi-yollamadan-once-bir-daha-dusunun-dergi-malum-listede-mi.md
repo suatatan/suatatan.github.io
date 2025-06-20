@@ -2,7 +2,7 @@
 date: 2019-02-26
 layout: post
 tags:
-- english
+- turkish
 - longread
 title: Makalenizi Yollamadan Önce Bir Daha Düşünün. Dergi "malum" Listede mi?
 ---

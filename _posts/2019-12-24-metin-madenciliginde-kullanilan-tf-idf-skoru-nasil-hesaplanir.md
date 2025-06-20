@@ -4,7 +4,7 @@ categories:
 date: 2019-12-24
 layout: post
 tags:
-- english
+- turkish
 - metin-madenciligi
 - quickread
 - r

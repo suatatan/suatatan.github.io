@@ -4,7 +4,7 @@ categories:
 date: 2013-06-10
 layout: post
 tags:
-- english
+- turkish
 - isletme
 - quickread
 - technology

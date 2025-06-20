@@ -2,7 +2,7 @@
 date: 2018-12-02
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - technology

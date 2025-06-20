@@ -4,7 +4,7 @@ categories:
 date: 2015-06-05
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Kölelik bitti sanıyorsanız bu belgeseli izleyin

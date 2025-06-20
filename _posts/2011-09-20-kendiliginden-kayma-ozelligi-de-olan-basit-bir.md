@@ -2,8 +2,8 @@
 date: 2011-09-20
 layout: post
 tags:
+- turkish
 - bilgisayar
-- english
 - jquery
 - longread
 - technology

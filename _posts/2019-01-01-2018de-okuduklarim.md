@@ -2,7 +2,7 @@
 date: 2019-01-01
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 title: 2018'de okuduklarım

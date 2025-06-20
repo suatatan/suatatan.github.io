@@ -2,7 +2,7 @@
 date: 2017-05-04
 layout: post
 tags:
-- english
+- turkish
 - longread
 title: SQL Server'da metinden tarihe dönüşüm
 ---

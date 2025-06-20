@@ -4,7 +4,7 @@ categories:
 date: 2013-04-02
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - radikal-iki

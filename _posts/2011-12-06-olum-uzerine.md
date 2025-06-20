@@ -5,7 +5,7 @@ categories:
 date: 2011-12-06
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Ölüm üzerine

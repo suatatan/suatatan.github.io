@@ -2,8 +2,8 @@
 date: 2023-05-02
 layout: post
 tags:
+- turkish
 - bilgisayar
-- english
 - longread
 - python
 - technology

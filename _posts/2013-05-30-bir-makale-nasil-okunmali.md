@@ -4,7 +4,7 @@ categories:
 date: 2013-05-30
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Bir Makale Nasıl Okunmalı?

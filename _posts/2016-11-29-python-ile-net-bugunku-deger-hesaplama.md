@@ -4,7 +4,7 @@ categories:
 date: 2016-11-29
 layout: post
 tags:
-- english
+- turkish
 - isletme
 - longread
 - python

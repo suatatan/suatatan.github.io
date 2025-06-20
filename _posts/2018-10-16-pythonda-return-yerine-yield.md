@@ -2,7 +2,7 @@
 date: 2018-10-16
 layout: post
 tags:
-- english
+- turkish
 - longread
 title: Python'da return yerine yield
 ---

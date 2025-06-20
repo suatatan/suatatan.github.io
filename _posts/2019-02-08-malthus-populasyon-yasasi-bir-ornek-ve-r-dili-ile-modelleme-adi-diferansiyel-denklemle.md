@@ -4,7 +4,7 @@ categories:
 date: 2019-02-08
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Malthus Popülasyon Yasası Bir Örnek ve R Dili ile Modelleme (Adi Diferansiyel

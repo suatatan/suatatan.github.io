@@ -4,7 +4,7 @@ categories:
 date: 2014-01-03
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: İyi bir ekonometrik modelin özellikleri

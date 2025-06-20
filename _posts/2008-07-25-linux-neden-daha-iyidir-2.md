@@ -5,7 +5,7 @@ categories:
 date: 2008-07-25
 layout: post
 tags:
-- english
+- turkish
 - linux
 - quickread
 title: Linux Neden Daha İyidir

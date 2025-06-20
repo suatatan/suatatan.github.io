@@ -4,8 +4,8 @@ categories:
 date: 2010-03-21
 layout: post
 tags:
+- turkish
 - ekonomi
-- english
 - iktibas
 - longread
 title: İşletme ve iktisat öğrencileri / meraklıları için Vadeli Opsiyon Borsası ile

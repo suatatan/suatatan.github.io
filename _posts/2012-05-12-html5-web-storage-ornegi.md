@@ -5,7 +5,7 @@ categories:
 date: 2012-05-12
 layout: post
 tags:
-- english
+- turkish
 - quickread
 - technology
 title: HTML5 Web Storage Örneği

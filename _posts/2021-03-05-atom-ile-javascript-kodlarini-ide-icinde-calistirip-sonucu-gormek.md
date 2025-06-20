@@ -4,7 +4,7 @@ categories:
 date: 2021-03-05
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Atom ile Javascript Kodlarını IDE içinde çalıştırıp sonucu görmek

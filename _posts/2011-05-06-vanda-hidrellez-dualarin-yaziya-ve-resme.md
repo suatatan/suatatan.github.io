@@ -4,7 +4,7 @@ categories:
 date: 2011-05-06
 layout: post
 tags:
-- english
+- turkish
 - longread
 - opinion
 - sehrivan-gazetesi

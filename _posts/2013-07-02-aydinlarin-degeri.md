@@ -4,8 +4,8 @@ categories:
 date: 2013-07-02
 layout: post
 tags:
+- turkish
 - edebiyat
-- english
 - longread
 - technology
 title: Aydınların değeri

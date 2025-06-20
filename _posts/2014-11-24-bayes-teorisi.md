@@ -4,8 +4,8 @@ categories:
 date: 2014-11-24
 layout: post
 tags:
+- turkish
 - elyazisi
-- english
 - isletme
 - longread
 - opinion

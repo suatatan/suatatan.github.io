@@ -4,7 +4,7 @@ categories:
 date: 2010-12-21
 layout: post
 tags:
-- english
+- turkish
 - longread
 - technology
 title: Mecliste Türkçe'den başka dil tartışması :)
