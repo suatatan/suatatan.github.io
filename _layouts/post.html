@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {%- seo -%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minima@latest/minima.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    </header>
+    <main>
+      <article>
+        <h2>{{ page.title }}</h2>
+        <p><small>{{ page.date | date: "%d.%m.%Y" }}</small></p>
+        {{ content }}
+      </article>
+      <a href="{{ site.baseurl }}/">&larr; Tüm Yazılar</a>
+    </main>
+    <footer>
+      <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
+    </footer>
+  </body>
+</html>

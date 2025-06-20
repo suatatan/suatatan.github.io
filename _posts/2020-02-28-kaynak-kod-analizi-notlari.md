@@ -1,0 +1,56 @@
+---
+title: "Kaynak Kod Analizi Notları"
+date: 2020-02-28
+---
+
+- **Zeroday saldırıları**: İleri düzey salsıdrganların standart saldırgtan araçlarını kullanmadan, özellikle herkesin çok kullandığı antivirüs, SQL yönetimi gibi araçlara daha kimse farketmeden açıklarını bulurlar. Daha sonra bu araçlar üzerinden backdoorlar açıp istismar ederler.
+- cve.mitre.org, nvd.nist.gov us-cert.gov, packetstorm security , gibi sitelerde güncel zafiyetler yayınlanır. Buraya bazı hackerlar ve uzmanlar kaynak kodlardan buldukları problemleri paylaşırlar. Örneğin Pandora FMS adlı network izleme aracında bulunan bir zaafiyet bir arkadaşım tarafından mitre'de paylaşıldı.
+- Kahynak kod analizi eğitiminde ilk adım programın ne işe yaradığına dair kılavuzları okumaktır. İlk problemler buradan bulunur.
+- Daha sonra kaynak koda erişim sağlanır. Kodlar okunurken notlar alınmalıdır. Aksi takdirde kodun içerisinde kaybolmak mümkün olabilir. Daha sonra bu kodlardan önemli olanlar kritiklik ölçeğine göre sınıflandırılır.
+- Örneğin BirbSuite gibi uygulamalarla yönlendirmelere dayalı yetkilerle çalışan sitelerde 301'i durdurarak sitelerin admin panellerine erişilebiliyor.
+- Ücretsiz web uygulama zaafiyet tarama aracı: [https://subgraph.com/vega/](https://subgraph.com/vega/)
+- Shodan'dan uygulamaların zafiyetleri de aratılabiliyor.
+- **Kontrol Listesi**:
+    - Kimlik doğrulama kontrolleri
+    - Yetki kontrolleri
+    - Veri tabanı erişim kontrolleri
+    - Sistem fonksiyonlarının kullanım kontrolleri
+    - Üçüncü parti uygulama ve kütüpnalelerin sıkıntıları
+- **Tehdit Modelleme**:
+    - Uygulamayı kimler kullanacak
+    - Uygılama nerelerde kullanılacak
+    - Uygulama mali işlemler içeriyor mu?
+- **Kod Analizi**
+    - Kodlar istenen bir IDE'de açılır.
+    - Kimlik doğrulama get ve post istekleri kullanılır.
+    - Kimlik doğrulama sırasında HTTPS kullanıldığından emin olunmalı.
+    - Tanımlı yetkilerle koddakiler uyumlu
+    - Dikey ve yatay yetki yükselme sebebiyet verebilecek durumlar kontrol edilmeli.
+- **Girdiği doğrulamaları**:
+    - Girdiler sorguları olduğu gibi SQL'in içerisine ekleniyor mu?
+    - Girdiler ekrana yazdırılıyor mu? (Muhakkak encode edilmeli ya da regex ile whitelist şeklinde temizlenmeli)
+    - Frontend satırlarında kritik bilgi var mı?
+- SQL Injection'dan korunmak için PHP'de mysql\_real\_escape fonksiyonu kullanılabilir. Ancak eğer SQL içerisinde sorguda parametre alırken tırnak kullanılmazsa o zaman yine zaafiyet vardır.
+- **XSS**
+- Tarayıcı üzerinde Javascript kodu çalıştırmaktır.
+    - Özel karakterleri engellemek gerekir. PHP için htmlspecialcharts var.
+    - Bir önceki önlem alınsa bile, echo ile yazdırılan şey kesinlikle script tagı arasında olmamlı yoksa yine çalışır.
+    - Kullanıcı "şunları giremesin" doğru bir mantık değildir. Kullanıcı "sadece şunları girebilsin" diye düşünülmelidir. Örneğin <script> tagı engellenebilir ama hackerlar <sCript> diye bunu aşabilirler.
+    - Script tagı dışında <body onload = alert()> diyerek de XSS yapabilir.
+- **LFI / Directory Traversal**
+    - Bu zaafiyet sunucudaki dosyanın görüntülenmesi durumudur. "Local File Inclusion"
+- RFI denilen bir metot daha var. Tam anlamadım. Öğrenirsem yazarım. URL'den parametrre gönderip config.php'yi base64 formatında alıp daha sonrasında okumaya yarıyor
+- **File Upload**
+    - Dosyanın uzantı, boyut ve tipi muhakkak kontrol edilmelidir.
+    - Kaynak kod analizi yaparken $\_FILES aratılarak gözden geçirilebilir.
+- **Remote Code Execution**:
+    - Sisteme herhangi bir şey yüklemeksizin sistemde komut çalıştırma eylemidir.
+    - Güvenlik yazılımlarında, ağ izleme araçlarında vs. kullanılamktadır.
+    - Örneğin bir sunucuya erişimde, `ls` komutundan sonra `;` ya da \` gibi işaretlerden sonra gelen komutlar kullanılabiliyorsa bu sunucuaya ciddi bir erişim söz konusu olur.
+    - Bu tür zaafiyetler pek paylaşılmaz.
+    - PHP için `shell....args` diye bir fonksiyon var komut satırına sadece belirli bilgilerin girilebilmesini sağlar.
+    - Bir kez bu açık bulunduktan sonra örneğin ilgili uygulamanın web arayüzündeki inputa girip `bash` komutu üzerinden kendi IP'mize bu kurban makinadaki konsolu yönlendirip bu makineyi kendi makinamızda tam erişimle kullanabiliriz.
+    - Bu zaafiyetleri örneğin ağ izleme araçlarının PHP kodlarından eval, exec gibi komut satırınd çalışan kodları aratıp daha sonra bu fonksiyonlara erişimi olan inputları bulup saldırabiliriz.
+- RIPS adlı araçla kaynak kod analizi yapmak mümkündür. Bu araçlar bazen aslında güvenli olan yerleri de yakalar. Bu araçlar genellikle sadece inputları arar.
+- Python için Bandit var.
+- .NET için .NET Security Guard : [https://marketplace.visualstudio.com/items?itemName=JaroslavLobacevski.SecurityCodeScan](https://marketplace.visualstudio.com/items?itemName=JaroslavLobacevski.SecurityCodeScan)

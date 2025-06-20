@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {%- seo -%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minima@latest/minima.css">
+    <style>
+      body { max-width: 700px; margin: 2rem auto; font-family: system-ui, sans-serif; }
+      header, footer { text-align: center; margin: 2rem 0; }
+      a { color: #0366d6; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+      <p>{{ site.description }}</p>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
+    </footer>
+  </body>
+</html>
