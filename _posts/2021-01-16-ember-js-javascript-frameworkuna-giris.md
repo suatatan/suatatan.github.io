@@ -73,9 +73,11 @@ Yani bir maskeleme yaptık.
 
 Normalde sayfaları `<a href=''></a>` etiketi ile birbirine bağlarız. Ancak bunu yaptığımızda sayfa 'full refresh' olur yani suncuya gidip yeni sayfayı getirir. Oysa Ember.js kullanıyorsak buna gerek yoktur. Bunun yerine sayfaları şöyle bağlarız:
 
+{% raw %}
 ```
 <LinkTo @route="hakkinda" class="button">Hakkımızda</LinkTo>
 ```
+{% endraw %}
 
 ## Otomatize Testler Yapma
 
@@ -192,16 +194,20 @@ Sonra template dosyamızı app/components/magaza/resim.hbs
 
 konumundan açalım:
 
+{% raw %}
 ```
 <div class="image">  
 <img ...attributes></div>{{#if this.isLarge}}  
-<div class="image large">   
- <img ...attributes>    
-<small>Kücült</small>  
+<div class="image large"> 
+ <img ...attributes> 
+<small>Küçült</small>  
 </div>{{else}}  
 
-<div class="image">    <img ...attributes>    <small>Buyut</small>  </div>{{/if}}
+<div class="image"> 
+  <img ...attributes> 
+  <small>Buyut</small>  </div>{{/if}}
 ```
+{% endraw %}
 
 Gördüğünüz gibi template dosyamızın içeriine özel if ve elselerle `isLarge` parametresine eriştirip onun durumuna göre css sınıfı vererek büyütmek ve küçültmek mümkün. Şu hali ile henüz tam çalışmaz çünkü tıklama davranışı tanımlamadık bunun için şuradan devam edebilirsiniz:
 
@@ -223,11 +229,13 @@ Bu şekilde _view_ a yollanan veri _view_ içinden `@model` denmek suretiyle ça
 
 Birden fazla satır halinde olan (genelde veriler böyledir) veriler için ise şu yapı kullanılır (.hbs) dosyası içinde:
 
+{% raw %}
 ```
-{{#each @model as |property|}}      
+{{#each @model as |property|}}   
 <li><Rental @rental={{property}} /></li>
 {{/each}}
 ```
+{% endraw %}
 
 Burada @model seri halindedir property nesnesi tekil item halindedir. o da direkt olarak component içine yollanmakta orada alt kırılımları açılmaktadır.
 
