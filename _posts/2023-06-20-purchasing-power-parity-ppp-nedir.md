@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Purchasing Power Parity (PPP) nedir?"
 date: 2023-06-20
 ---

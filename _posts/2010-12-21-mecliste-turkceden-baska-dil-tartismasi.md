@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mecliste Türkçe'den başka dil tartışması :)"
 date: 2010-12-21
 ---

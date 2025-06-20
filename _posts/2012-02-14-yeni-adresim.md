@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yeni Adresim"
 date: 2012-02-14
 ---

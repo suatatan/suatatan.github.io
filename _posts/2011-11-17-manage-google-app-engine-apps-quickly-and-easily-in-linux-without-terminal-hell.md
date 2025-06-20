@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Manage Google App Engine Apps quickly and easily in linux without terminal-hell"
 date: 2011-11-17
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "BUS-CIA'NIN KULLANDIĞI SOSYAL MEDYA MÜHENDİSLİĞİNE GİRİŞ: ÇİNLİLER
 DOĞMAMIŞ BEBEKLERİ YİYORLAR"
 date: 2013-08-04

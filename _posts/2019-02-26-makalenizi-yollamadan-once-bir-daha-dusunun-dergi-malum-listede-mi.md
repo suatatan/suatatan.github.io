@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Makalenizi Yollamadan Önce Bir Daha Düşünün. Dergi \"malum\" Listede mi?"
 date: 2019-02-26
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Time waster proof appointment guide"
 date: 2013-06-27
 categories: 

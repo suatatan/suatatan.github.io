@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bu iddialar doğru mu?"
 date: 2014-11-24
 categories: 

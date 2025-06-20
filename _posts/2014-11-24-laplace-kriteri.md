@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Laplace Kriteri"
 date: 2014-11-24
 categories: 

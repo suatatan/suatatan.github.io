@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İyi bir ekonometrik modelin özellikleri"
 date: 2014-01-03
 categories: 

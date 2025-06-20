@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kapasite Türleri"
 date: 2014-11-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Java Uygulaması Üzerinden HTTP POST işlemi yapmak"
 date: 2007-03-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ödeme modellerine göre inşaat sözleşme tipleri: Lump Sum, Global Price,Unit Price"
 date: 2013-09-26
 categories: 

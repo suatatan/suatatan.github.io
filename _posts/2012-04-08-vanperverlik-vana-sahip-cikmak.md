@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "VANPERVERLİK: VAN’A SAHİP ÇIKMAK"
 date: 2012-04-08
 categories: 

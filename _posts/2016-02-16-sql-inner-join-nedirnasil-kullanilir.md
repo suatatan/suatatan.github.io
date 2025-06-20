@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQL Inner Join nedir,nasıl kullanılır?"
 date: 2016-02-16
 categories: 

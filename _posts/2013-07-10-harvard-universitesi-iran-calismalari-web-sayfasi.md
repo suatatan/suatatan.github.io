@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Harvard Üniversitesi İran Çalışmaları Web Sayfası"
 date: 2013-07-10
 categories: 

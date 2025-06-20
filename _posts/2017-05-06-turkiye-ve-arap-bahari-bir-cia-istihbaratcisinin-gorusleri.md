@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Türkiye ve Arap Baharı: Bir CIA istihbaratçısının görüşleri"
 date: 2017-05-06
 categories: 

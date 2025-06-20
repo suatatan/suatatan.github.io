@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile Excel'den veri okuyup işleyerek sonuçları Excel dosyasına yazdırma"
 date: 2014-05-16
 categories: 

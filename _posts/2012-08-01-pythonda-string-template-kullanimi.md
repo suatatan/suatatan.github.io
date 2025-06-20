@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python'da String Template kullanımı"
 date: 2012-08-01
 categories: 

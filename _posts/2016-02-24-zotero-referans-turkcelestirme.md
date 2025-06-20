@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Zotero Referans Türkçeleştirme"
 date: 2016-02-24
 categories: 

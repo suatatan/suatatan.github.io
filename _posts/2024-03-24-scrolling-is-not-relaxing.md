@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Scrolling is not relaxing"
 date: 2024-03-24
 ---

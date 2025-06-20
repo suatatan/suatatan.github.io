@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine'de SQL Group By Fonksiyonu yerine özel bir metodoloji"
 date: 2012-07-11
 categories: 

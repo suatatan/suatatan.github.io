@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "A new version of Python template maker"
 date: 2011-07-27
 categories: 

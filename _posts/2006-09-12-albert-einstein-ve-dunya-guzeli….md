@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ALBERT EINSTEIN VE DÜNYA GÜZELİ…"
 date: 2006-09-12
 categories: 

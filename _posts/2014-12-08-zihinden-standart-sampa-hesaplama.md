@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Zihinden Standart Sampa Hesaplama"
 date: 2014-12-08
 categories: 

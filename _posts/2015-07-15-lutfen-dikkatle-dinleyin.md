@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Lütfen ‘dikkatle’ dinleyin."
 date: 2015-07-15
 categories: 

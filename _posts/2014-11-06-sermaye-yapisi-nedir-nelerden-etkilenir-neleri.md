@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sermaye yapısı nedir? Nelerden etkilenir, neleri etkiler?"
 date: 2014-11-06
 categories: 

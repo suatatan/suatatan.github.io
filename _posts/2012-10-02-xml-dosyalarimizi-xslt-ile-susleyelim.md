@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "XML dosyalarımızı XSLT ile süsleyelim"
 date: 2012-10-02
 categories: 

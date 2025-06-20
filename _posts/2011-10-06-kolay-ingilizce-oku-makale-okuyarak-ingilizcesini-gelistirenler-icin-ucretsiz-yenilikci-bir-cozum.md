@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Makale okuyarak İngilizcesini geliştirenler için ücretsiz yenilikçi bir çözüm."
 date: 2011-10-06
 categories: 

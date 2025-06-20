@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "GAYRI RESMİ SANSÜRCÜLÜK ÜZERİNE"
 date: 2007-01-15
 categories: 

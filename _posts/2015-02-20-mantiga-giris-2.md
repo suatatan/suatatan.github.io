@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mantığa Giriş"
 date: 2015-02-20
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "NumPy Matrix Opeartions"
 date: 2015-03-24
 categories: 

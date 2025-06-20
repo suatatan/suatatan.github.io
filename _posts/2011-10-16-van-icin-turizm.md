@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "VAN İÇİN TURİZM"
 date: 2011-10-16
 categories: 

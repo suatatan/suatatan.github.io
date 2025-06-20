@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel VBA ile resim ekleme"
 date: 2011-04-29
 categories: 

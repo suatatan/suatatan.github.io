@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kamu İhalelerinde Fiyat Farkı Verilmesi Hususunda Bakanlar Kurulunun
 Yetkileri Genişletildi"
 date: 2008-08-01

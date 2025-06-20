@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Int, Float, Double, Decimal... Yazılım’a giriş dersi neden önemlidir."
 date: 2016-12-07
 categories: 

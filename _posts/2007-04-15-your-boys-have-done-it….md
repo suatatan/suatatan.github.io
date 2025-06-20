@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "YOUR BOYS HAVE DONE IT…"
 date: 2007-04-15
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Defining multiple valued dictionaries in python."
 date: 2015-03-19
 categories: 

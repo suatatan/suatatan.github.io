@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel içinde makro yazarak herhangi bir internet sitesini açmak"
 date: 2011-05-13
 categories: 

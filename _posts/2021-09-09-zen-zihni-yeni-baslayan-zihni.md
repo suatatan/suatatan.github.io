@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Zen Zihni, Yeni Başlayan Zihni"
 date: 2021-09-09
 categories: 

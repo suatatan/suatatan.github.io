@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "90 Yaşında Ceviz Ağacı Diker Misiniz?"
 date: 2020-03-05
 ---

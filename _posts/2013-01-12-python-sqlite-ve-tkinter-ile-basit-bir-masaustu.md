@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ,Sqlite ve Tkinter ile basit bir masaüstü veri ekleme formu"
 date: 2013-01-12
 categories: 

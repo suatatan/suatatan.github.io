@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ödünleşme Teorisi Nedir?"
 date: 2014-12-06
 categories: 

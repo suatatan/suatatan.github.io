@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Web Sayfalarınız için Stres Testi Aracı"
 date: 2019-09-18
 categories: 

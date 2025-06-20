@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yöneticiler için bilişim"
 date: 2011-10-11
 categories: 

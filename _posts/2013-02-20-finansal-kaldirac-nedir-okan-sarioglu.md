@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Finansal Kaldıraç Nedir? « OKAN SARIOĞLU"
 date: 2013-02-20
 categories: 

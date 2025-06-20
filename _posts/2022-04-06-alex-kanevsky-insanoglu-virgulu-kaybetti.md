@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ALEX KANEVSKY / İNSANOĞLU VİRGÜLÜ KAYBETTİ"
 date: 2022-04-06
 ---

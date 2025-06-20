@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Firebase Kullanmaya Giriş"
 date: 2019-04-26
 categories: 

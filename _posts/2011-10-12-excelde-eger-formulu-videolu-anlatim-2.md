@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel'de \"eğer\" formülü (Videolu anlatım)"
 date: 2011-10-12
 categories: 

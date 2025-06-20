@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Milli saçmalığımız: Futbol Sevinci"
 date: 2013-05-05
 categories: 

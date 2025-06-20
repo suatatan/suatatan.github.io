@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Veri Tabanı Güvenliği Eğitimi Notları"
 date: 2020-02-21
 ---

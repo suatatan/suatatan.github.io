@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Korelasyon ve nedensellik"
 date: 2014-12-08
 categories: 

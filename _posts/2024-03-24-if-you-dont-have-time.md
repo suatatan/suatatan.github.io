@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "If you don't have time"
 date: 2024-03-24
 ---

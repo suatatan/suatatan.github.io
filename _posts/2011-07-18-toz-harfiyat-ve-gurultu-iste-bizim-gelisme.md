@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TOZ, HARFİYAT VE GÜRÜLTÜ: İŞTE BİZİM “GELİŞME” ŞEKLİMİZ [VAN]"
 date: 2011-07-18
 categories: 

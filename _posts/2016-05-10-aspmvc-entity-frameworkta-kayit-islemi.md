@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ASP.MVC Entity Framework’ta kayıt işlemi"
 date: 2016-05-10
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Twitter'da bir dizi anahtar terim hakkında zaman aralığıan göre twit çekme"
 date: 2020-12-12
 categories: 

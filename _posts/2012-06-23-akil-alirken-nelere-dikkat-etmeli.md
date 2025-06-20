@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Akıl alırken nelere dikkat etmeli."
 date: 2012-06-23
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ayinesi iştir kişinin evet, fakat lafa da bakılır, bakılmalıdır !"
 date: 2011-10-13
 categories: 

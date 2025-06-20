@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Never be Alone"
 date: 2012-04-19
 categories: 

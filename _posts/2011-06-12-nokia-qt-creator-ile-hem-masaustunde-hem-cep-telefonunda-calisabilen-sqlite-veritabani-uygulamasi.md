@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Nokia Qt Creator ile hem Masaüstünde hem cep telefonunda çalışabilen Sqlite veritabanı uygulaması"
 date: 2011-06-12
 categories: 

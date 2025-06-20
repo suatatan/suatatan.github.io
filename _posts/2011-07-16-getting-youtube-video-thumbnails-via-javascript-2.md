@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Getting Youtube Video Thumbnails via Javascript"
 date: 2011-07-16
 categories: 

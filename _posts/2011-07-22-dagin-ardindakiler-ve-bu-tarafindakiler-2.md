@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Dağın ardındakiler ve bu tarafındakiler"
 date: 2011-07-22
 tags: 

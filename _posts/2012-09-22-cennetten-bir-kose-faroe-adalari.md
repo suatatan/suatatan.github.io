@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Cennetten bir köşe: Faroe Adaları"
 date: 2012-09-22
 categories: 

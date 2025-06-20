@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Fixing Error of Metronic Theme PagedList component"
 date: 2016-06-20
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "The Psychology of Time and the Paradox of How Impulsivity and Self-Control Mediate Our Capacity for Presence - Brain Pickings"
 date: 2016-05-06
 categories: 

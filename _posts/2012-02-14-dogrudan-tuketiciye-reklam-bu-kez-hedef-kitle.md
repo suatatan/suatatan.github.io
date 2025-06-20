@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Doğrudan tüketiciye reklam. Bu kez hedef kitle köpekler"
 date: 2012-02-14
 categories: 

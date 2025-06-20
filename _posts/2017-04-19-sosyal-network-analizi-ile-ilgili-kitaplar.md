@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sosyal Network Analizi ile ilgili kitaplar"
 date: 2017-04-19
 categories: 

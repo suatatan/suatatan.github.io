@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Forward ve Futures İşlemleri"
 date: 2014-11-12
 categories: 

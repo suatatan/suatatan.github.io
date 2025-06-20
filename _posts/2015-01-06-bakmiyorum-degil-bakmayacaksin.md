@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bakmıyorum değil, bakmayacaksın!"
 date: 2015-01-06
 categories: 
@@ -13,7 +14,7 @@ Küçükken, Diyarbekir'in Dağkapı havalisinde, bir “ruznamefüruş” (gaze
 
 Ben “Abe yox abe baxmiyam vala alacaxtım” dediğimde (diyende) adam basitlik kisvesine hulul etmiş ancak hikmetengiz cümle-i azamını ciger ve qaşha ile yanık mahrecinin tüm kuvvesi ile şöyle dedi:
 
-“Baxmiyorum degıl baxmayacaxsan”
+“Baxmıyorum degıl baxmayacaxsan”
 
 Bu cümlenin hangi hikmetini anlatsam. Evvala; **Nemo censetur ignorare legem (**Kanunu bilmemek mazeret olamaz.) dedim içimden, adı Şeyxmus yahut Qedri olma ihtimali yüksek bu dayımız ne dese odur. Saniyen hikmet ise benim fiilimi inkardır. Oysa abe fiilimi inkarı tekzib ile emri ihtar etti. Salisen: Jurnal denilen meretin iktisadi anlamda “beğenmeli mal” kategorisinde olamayacağı hatta o da değil belki Giffen malı  olduğu hikmetine vakıf oldum. La yal'emul ğaybi illa-Allah.
 

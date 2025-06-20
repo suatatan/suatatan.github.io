@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "JQuery ile liste halindeki XML verisinin teker teker okunup yazılması"
 date: 2011-07-04
 categories: 

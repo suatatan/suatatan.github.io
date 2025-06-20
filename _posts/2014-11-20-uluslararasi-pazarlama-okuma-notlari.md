@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Uluslararası Pazarlama Okuma Notları"
 date: 2014-11-20
 categories: 

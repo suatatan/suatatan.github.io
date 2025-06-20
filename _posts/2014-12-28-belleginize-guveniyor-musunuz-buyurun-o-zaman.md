@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Belleğinize güveniyor musunuz?  Buyurun o zaman!"
 date: 2014-12-28
 categories: 

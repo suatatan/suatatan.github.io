@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yıllık faiz oranları ile aylık faiz oranları nasıl mukayese edilebilir?"
 date: 2013-06-10
 categories: 

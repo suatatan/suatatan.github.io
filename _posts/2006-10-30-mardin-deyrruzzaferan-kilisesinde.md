@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mardin Deyrrüzzaferan Kilisesinde"
 date: 2006-10-30
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "MÜSTEHCENLİĞİ SANSÜR ÜZERİNE"
 date: 2006-12-18
 categories: 

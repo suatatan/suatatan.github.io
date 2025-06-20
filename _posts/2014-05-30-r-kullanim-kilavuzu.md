@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "R Kullanım Kılavuzu"
 date: 2014-05-30
 categories: 

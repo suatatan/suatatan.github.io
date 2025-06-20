@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kolerasyon ile Lineer Regresyon arasındaki fark nedir"
 date: 2013-04-21
 categories: 

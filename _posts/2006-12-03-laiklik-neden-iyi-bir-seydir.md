@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "LAİKLİK NEDEN İYİ BİR ŞEYDİR?"
 date: 2006-12-03
 categories: 

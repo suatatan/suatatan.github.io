@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Dikkat çeken kitaplar"
 date: 2012-05-27
 categories: 

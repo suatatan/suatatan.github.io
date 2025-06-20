@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Are you frustrated with unfinishing Latex Errors and Poor-looking Markdown?"
 date: 2015-05-02
 categories: 

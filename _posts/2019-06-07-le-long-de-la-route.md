@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Le long de la route"
 date: 2019-06-07
 ---

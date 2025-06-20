@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Osmanlı İmparatorluğu'nun Sonu"
 date: 2013-06-05
 categories: 

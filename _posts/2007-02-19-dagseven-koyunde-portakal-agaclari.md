@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Dağseven Köyünde Portakal Ağaçları"
 date: 2007-02-19
 categories: 

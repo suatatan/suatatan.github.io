@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yeni Kitabımız Yayınlandı: Ağ Analizi"
 date: 2020-03-18
 tags: 

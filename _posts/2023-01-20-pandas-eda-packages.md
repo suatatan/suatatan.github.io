@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Pandas EDA Packages"
 date: 2023-01-20
 categories: 

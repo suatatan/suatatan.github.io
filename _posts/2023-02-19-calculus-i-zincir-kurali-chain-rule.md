@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "\"Calculus-I : Zincir Kuralı (Chain Rule)"
 date: 2023-02-19
 ---

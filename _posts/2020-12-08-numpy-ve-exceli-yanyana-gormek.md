@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "NumPy ve Excel'i yanyana görmek"
 date: 2020-12-08
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ÖN YARGI ÜZERİNE"
 date: 2006-10-08
 categories: 

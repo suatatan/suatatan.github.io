@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQLSERVER'da tüm veritabanı içinde arama yapmak"
 date: 2017-01-04
 categories: 

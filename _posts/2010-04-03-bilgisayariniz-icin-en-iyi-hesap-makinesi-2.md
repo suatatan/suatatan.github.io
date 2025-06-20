@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bilgisayarınız için en iyi hesap makinesi"
 date: 2010-04-03
 categories: 

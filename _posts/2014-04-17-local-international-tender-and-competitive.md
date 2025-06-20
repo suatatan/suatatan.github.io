@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Local international tender and competitive negotiated procedure in
 suppy contract under PRAG"
 date: 2014-04-17

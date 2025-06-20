@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile döviz kuru takibi"
 date: 2021-11-01
 categories: 

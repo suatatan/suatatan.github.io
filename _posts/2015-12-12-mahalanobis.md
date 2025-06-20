@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çok değişkenli verilerde outlier (dışadüşen) verileri bulmak için R ile Mahalanobis Uzaklığı Metodu Kullanımı"
 date: 2015-12-12
 categories: 

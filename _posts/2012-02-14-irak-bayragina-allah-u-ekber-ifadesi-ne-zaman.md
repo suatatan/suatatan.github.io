@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Irak Bayrağına \"Allah-u ekber\" ifadesi ne zaman girdi?"
 date: 2012-02-14
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google Calendar (takvim) kullanımı"
 date: 2013-08-31
 categories: 

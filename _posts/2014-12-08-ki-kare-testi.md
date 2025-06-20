@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ki-Kare testi"
 date: 2014-12-08
 categories: 

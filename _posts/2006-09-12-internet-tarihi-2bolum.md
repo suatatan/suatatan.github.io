@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İNTERNET TARİHİ (2.BÖLÜM)"
 date: 2006-09-12
 categories: 

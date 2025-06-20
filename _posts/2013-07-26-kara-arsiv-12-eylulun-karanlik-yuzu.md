@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kara Arşiv 12 Eylül'ün Karanlık Yüzü"
 date: 2013-07-26
 categories: 

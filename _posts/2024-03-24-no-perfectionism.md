@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "No perfectionism"
 date: 2024-03-24
 ---

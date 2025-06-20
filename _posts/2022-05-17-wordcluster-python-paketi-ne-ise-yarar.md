@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "WordCluster Python paketi ne işe yarar"
 date: 2022-05-17
 ---

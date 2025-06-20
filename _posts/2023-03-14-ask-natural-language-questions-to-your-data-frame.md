@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ask natural language questions to your data frame"
 date: 2023-03-14
 categories: 

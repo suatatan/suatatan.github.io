@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "BİRİ BİZİ (G)ÖZETLİYOR…"
 date: 2006-09-12
 categories: 

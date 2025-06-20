@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SUNUCuya upload edilmeden dosya yollama"
 date: 2022-02-25
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çocuklar için Fransızca Öğrenme Siteleri"
 date: 2017-03-03
 categories: 

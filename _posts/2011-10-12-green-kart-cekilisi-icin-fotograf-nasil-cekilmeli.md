@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Green Kart çekilişi için fotoğraf nasıl çekilmeli?"
 date: 2011-10-12
 ---

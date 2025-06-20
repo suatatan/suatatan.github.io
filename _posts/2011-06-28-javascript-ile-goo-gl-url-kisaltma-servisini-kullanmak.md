@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Javascript ile Goo.gl url kısaltma servisini kullanmak"
 date: 2011-06-28
 categories: 

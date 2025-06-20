@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bir suç aleti olarak poşu"
 date: 2012-05-15
 categories: 

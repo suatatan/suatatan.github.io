@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Latex dosyasını Word'a çevirme"
 date: 2014-05-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Are you still using pip &gt; freeze"
 date: 2023-04-03
 ---

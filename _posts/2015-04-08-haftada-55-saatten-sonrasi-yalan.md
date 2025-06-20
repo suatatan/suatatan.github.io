@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Haftada 55 saatten sonrası yalan"
 date: 2015-04-08
 categories: 

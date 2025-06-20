@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Turn your business ideas into reality with these 5 AI tools Draw to App"
 date: 2024-03-24
 ---

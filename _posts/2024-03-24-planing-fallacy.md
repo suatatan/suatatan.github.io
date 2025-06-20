@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Planing fallacy"
 date: 2024-03-24
 ---

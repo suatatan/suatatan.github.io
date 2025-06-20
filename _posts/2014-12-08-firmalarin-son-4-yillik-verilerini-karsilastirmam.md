@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Firmaların son 4 yıllık verilerini karşılaştırmam gerekiyor, nereden bulabilirim acaba?"
 date: 2014-12-08
 categories: 

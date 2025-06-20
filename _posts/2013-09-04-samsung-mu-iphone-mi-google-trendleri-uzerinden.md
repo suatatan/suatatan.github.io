@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Samsung mu Iphone mi? Google Trendleri üzerinden inceleme"
 date: 2013-09-04
 categories: 

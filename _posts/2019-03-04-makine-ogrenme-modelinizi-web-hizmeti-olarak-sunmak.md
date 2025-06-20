@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Makine Öğrenme Modelinizi Web Hizmeti Olarak Sunmak"
 date: 2019-03-04
 categories: 

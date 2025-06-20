@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sermaye Maliyeti Nedir?"
 date: 2013-03-07
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Doğrusal Programlama Nedir?"
 date: 2014-11-21
 categories: 

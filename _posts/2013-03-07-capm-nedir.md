@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CAPM nedir?"
 date: 2013-03-07
 categories: 

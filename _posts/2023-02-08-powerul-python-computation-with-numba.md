@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Powerul Python Computation with Numba"
 date: 2023-02-08
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hurwicz Kriteri Nedir?"
 date: 2014-11-24
 categories: 

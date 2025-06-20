@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Flexxi ile toplu resim küçültme"
 date: 2023-02-10
 categories: 

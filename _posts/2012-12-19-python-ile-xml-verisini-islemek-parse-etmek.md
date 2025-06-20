@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile XML verisini işlemek (parse etmek)"
 date: 2012-12-19
 categories: 

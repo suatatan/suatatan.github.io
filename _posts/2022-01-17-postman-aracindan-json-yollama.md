@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Postman aracından json yollama"
 date: 2022-01-17
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "WARP nedir"
 date: 2015-03-19
 categories: 

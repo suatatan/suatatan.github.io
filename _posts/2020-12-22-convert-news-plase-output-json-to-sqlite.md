@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Convert news-plase output json to sqlite"
 date: 2020-12-22
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "batch file - In Windows cmd, how do I prompt for user input and use the result in another command? - Stack Overflow"
 date: 2013-02-08
 categories: 

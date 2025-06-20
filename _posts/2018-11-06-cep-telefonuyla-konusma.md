@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Cep Telefonuyla Konuşma !"
 date: 2018-11-06
 ---

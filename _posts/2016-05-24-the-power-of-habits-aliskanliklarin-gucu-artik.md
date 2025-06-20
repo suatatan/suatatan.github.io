@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "The Power of Habits: Alışkanlıkların Gücü- Artık dişlerinizi her fırçaladığınızda bu yazı aklınıza gelecek"
 date: 2016-05-24
 categories: 

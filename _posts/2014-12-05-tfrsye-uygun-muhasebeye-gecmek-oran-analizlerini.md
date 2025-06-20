@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TFRS'ye uygun muhasebeye geçmek oran analizlerini etkiler mi?"
 date: 2014-12-05
 categories: 

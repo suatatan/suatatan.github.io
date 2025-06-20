@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Akademik Makale Okuma Kılavuzu"
 date: 2013-09-08
 categories: 

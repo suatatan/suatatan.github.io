@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Muhasebe Dönem Sonu İşlemlerini Daha İyi Anlamak için Kolay Bir Çerçeve"
 date: 2014-11-13
 categories: 

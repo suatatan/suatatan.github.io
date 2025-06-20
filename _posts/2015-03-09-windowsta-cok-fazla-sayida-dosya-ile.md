@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Windowsta çok fazla sayıda dosya ile uğraşıyorsanız bu arama komutları size göre"
 date: 2015-03-09
 categories: 

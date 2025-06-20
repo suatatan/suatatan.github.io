@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bulk replacing Turkish characters in R"
 date: 2017-10-07
 categories: 

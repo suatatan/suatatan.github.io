@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kürtçe TV'ler neden tam anlaşılmıyor?"
 date: 2012-08-15
 categories: 

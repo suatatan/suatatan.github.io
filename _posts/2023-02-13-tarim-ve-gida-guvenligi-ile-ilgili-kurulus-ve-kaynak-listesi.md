@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tarım ve Gıda Güvenliği ile ilgili Kuruluş ve Kaynak Listesi"
 date: 2023-02-13
 ---

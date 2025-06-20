@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Koordinat dönüşüm programı"
 date: 2012-06-11
 categories: 

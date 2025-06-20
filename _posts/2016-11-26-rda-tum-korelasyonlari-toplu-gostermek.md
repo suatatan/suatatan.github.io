@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "R’da tüm korelasyonları toplu göstermek"
 date: 2016-11-26
 categories: 

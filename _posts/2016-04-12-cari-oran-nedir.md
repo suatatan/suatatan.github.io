@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Cari oran nedir?"
 date: 2016-04-12
 categories: 

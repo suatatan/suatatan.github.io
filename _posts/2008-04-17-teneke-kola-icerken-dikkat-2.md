@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Teneke Kola İçerken Dikkat..."
 date: 2008-04-17
 categories: 

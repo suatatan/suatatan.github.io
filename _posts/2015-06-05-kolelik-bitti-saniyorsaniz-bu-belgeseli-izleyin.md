@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kölelik bitti sanıyorsanız bu belgeseli izleyin"
 date: 2015-06-05
 categories: 

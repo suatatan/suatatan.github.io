@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Java’da bazı temel işlemler"
 date: 2015-12-22
 categories: 

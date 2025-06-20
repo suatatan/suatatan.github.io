@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Deep questions"
 date: 2024-03-11
 ---

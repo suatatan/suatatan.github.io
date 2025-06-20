@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Greiner'in Büyüme Modeli"
 date: 2014-11-30
 categories: 

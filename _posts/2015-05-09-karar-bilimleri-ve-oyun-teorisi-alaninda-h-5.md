@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Karar Bilimleri ve Oyun Teorisi alanında h-5 indeksi en yüksek İngilizce dergiler"
 date: 2015-05-09
 categories: 

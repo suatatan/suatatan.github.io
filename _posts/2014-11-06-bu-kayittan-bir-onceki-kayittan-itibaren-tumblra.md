@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bu kayıttan bir önceki kayıttan itibaren Tumblr'a geçtim"
 date: 2014-11-06
 categories: 

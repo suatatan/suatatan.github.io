@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hangi Veri Tipine Hangi Grafik Uygundur"
 date: 2019-11-08
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CountVectorizer'in Çalışma Şekli"
 date: 2019-03-07
 ---

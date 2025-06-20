@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Project Kenai"
 date: 2009-10-14
 categories: 

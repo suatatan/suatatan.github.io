@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQL’de INNER, LEFT ve OUTER JOIN farkı"
 date: 2016-05-16
 categories: 

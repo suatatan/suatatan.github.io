@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TPOT: Genetic Algoritms for Better Machine Learning Models."
 date: 2023-04-02
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Öykü yazmazının, öykü yazanlar için önerilerden aldığı notlar"
 date: 2013-01-21
 categories: 

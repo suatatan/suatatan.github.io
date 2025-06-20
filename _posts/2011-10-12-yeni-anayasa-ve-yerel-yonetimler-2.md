@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yeni anayasa ve yerel yönetimler"
 date: 2011-10-12
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "1960'ta Kürt ilinde okur-yazar oranı neydi?"
 date: 2012-02-14
 categories: 

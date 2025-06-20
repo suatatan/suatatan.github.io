@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "'Omma Kilauea' ve Ontolojide Bilimsel Kesinlik Arayışı"
 date: 2018-03-25
 ---

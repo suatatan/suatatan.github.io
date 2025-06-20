@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Data Binding to DropDownList from ViewModel in ASP.MVC 5"
 date: 2016-04-18
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Örnek bir Finansal Analiz Tablosu"
 date: 2012-04-25
 categories: 

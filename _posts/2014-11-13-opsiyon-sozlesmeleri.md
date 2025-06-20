@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Opsiyon Sözleşmeleri"
 date: 2014-11-13
 categories: 

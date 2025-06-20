@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "MSSQL veritabanları hangi dizin altındadır"
 date: 2017-04-05
 ---

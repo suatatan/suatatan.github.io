@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "A tool for getting rid of SQLServer chore"
 date: 2017-03-16
 categories: 

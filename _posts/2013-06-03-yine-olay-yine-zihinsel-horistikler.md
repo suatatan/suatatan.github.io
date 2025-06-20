@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yine 'olay' yine zihinsel höristikler"
 date: 2013-06-03
 categories: 

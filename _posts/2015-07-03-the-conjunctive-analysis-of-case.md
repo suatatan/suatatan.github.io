@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "The Conjunctive Analysis of Case Configurations:
 an Exploratory Method for Discrete Multivariate
 Analyses of Crime Data"

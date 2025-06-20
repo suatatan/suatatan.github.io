@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İşletme Finansı Index"
 date: 2014-11-18
 categories: 

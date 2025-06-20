@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Vide.js ve Howler.js kütüphaneleri ne işe yarar?"
 date: 2023-04-18
 ---

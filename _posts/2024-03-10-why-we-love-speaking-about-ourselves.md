@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Why we love speaking about ourselves"
 date: 2024-03-10
 ---

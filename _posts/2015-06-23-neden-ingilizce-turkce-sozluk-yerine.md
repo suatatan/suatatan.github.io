@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Neden İngilizce-Türkçe Sözlük Yerine İngilizce-İngilizce Sözlük Kullanmalısınız"
 date: 2015-06-23
 categories: 

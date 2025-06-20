@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Van'da 5.7 şiddetinde artçı deprem"
 date: 2011-11-10
 categories: 

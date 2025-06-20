@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Symbolic Python kütüphanesi ile kolay cebir"
 date: 2023-03-16
 ---

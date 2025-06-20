@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "HTML5 Web Storage Örneği"
 date: 2012-05-12
 categories: 

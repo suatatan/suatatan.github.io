@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ask questions instead of telling your stories"
 date: 2024-03-11
 ---

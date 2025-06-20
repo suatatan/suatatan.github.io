@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sermaye Piyasalar ve Türev Piyasalar"
 date: 2014-11-12
 categories: 

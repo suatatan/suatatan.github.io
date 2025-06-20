@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google'ın tüm datası elimin altında ama!"
 date: 2021-03-09
 categories: 

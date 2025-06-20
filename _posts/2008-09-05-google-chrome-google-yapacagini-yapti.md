@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google Chrome: Google Yapacağını Yaptı"
 date: 2008-09-05
 tags: 

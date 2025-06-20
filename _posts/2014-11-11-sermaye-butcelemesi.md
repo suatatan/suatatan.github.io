@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sermaye Bütçelemesi"
 date: 2014-11-11
 categories: 

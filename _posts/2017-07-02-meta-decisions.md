@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Meta-decisions"
 date: 2017-07-02
 categories: 

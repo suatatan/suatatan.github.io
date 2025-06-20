@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çocuğunuzun Bill Gates olmasını ister misiniz?"
 date: 2014-03-28
 categories: 

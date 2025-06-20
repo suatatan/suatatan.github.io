@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Open Office 3.1 yayınlandı"
 date: 2009-06-22
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Van depreminde teolojik ve jeolojik yorumlar"
 date: 2011-11-19
 categories: 

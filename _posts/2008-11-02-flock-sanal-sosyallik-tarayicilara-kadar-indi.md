@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "FLOCK: SANAL SOSYALLİK TARAYICILARA KADAR İNDİ"
 date: 2008-11-02
 categories: 

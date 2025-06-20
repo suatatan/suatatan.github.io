@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Using StringListProperty efficently in Google App Engine"
 date: 2011-07-30
 categories: 

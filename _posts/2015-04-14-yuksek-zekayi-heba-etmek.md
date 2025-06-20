@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yüksek zekayı heba etmek"
 date: 2015-04-14
 categories: 

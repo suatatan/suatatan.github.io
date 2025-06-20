@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Improve speaking in foreign language"
 date: 2024-03-23
 ---

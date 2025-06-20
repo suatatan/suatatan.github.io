@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Rating (Kredi derecelendirmesi) nedir?"
 date: 2013-03-19
 categories: 

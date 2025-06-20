@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Parcel.js ile modern frontend geliştirme"
 date: 2021-09-29
 categories: 

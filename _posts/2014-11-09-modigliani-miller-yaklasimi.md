@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Modigliani-Miller Yaklaşımı (Geleneksel Yaklaşımlardan)"
 date: 2014-11-09
 categories: 

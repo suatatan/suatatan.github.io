@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Noel Baba Efsanesi ve Coca-cola \"Gerçeği\""
 date: 2013-03-03
 categories: 

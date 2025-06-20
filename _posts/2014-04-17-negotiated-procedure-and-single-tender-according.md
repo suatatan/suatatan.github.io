@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Negotiated procedure and single tender according to PRAG Rules"
 date: 2014-04-17
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ASP.MVC Yüklenmiş Bir Dosyayı Silmek"
 date: 2016-05-11
 categories: 

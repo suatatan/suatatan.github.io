@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ücretsiz Veri Setleri"
 date: 2017-12-03
 ---

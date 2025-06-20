@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "OGÜNÜ TANIYORUM, HRANT DİNK’İ O ÖLDÜRMEDİ"
 date: 2007-02-12
 tags: 

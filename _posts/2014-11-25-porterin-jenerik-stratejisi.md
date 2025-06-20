@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Porter'in Jenerik Stratejisi"
 date: 2014-11-25
 categories: 

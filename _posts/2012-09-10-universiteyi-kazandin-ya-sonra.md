@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ÜNİVERSİTEYİ KAZANDIN YA SONRA?"
 date: 2012-09-10
 categories: 

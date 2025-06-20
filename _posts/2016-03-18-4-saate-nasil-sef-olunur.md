@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "4 Saate Nasıl Şef Olunur?"
 date: 2016-03-18
 categories: 

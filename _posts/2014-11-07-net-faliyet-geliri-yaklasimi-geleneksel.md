@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Net Faliyet Geliri Yaklaşımı (Geleneksel Yaklaşımlardan)"
 date: 2014-11-07
 categories: 

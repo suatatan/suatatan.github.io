@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "T-Testi nedir?"
 date: 2017-12-09
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel'de hücre nedir?"
 date: 2011-10-12
 categories: 

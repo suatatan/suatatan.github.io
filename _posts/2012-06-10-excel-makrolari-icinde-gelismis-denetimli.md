@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel makroları içinde gelişmiş denetimli formüller yazma"
 date: 2012-06-10
 categories: 

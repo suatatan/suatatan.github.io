@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Suat ATAN'ın okuma notları neden var? Neden sayfasından yayınlanır?"
 date: 2013-05-31
 categories: 

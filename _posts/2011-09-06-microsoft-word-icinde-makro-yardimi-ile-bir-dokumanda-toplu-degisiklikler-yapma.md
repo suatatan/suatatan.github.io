@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Microsoft Word içinde makro yardımı ile bir dökümanda toplu değişiklikler yapma"
 date: 2011-09-06
 categories: 

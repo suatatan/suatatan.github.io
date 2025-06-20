@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Zaman kaydı yoksa yönetmiyorsunuz! Pomodoro 2"
 date: 2023-01-30
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "YAMYAM HÜMANİZMİ"
 date: 2006-09-12
 categories: 

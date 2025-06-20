@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Gazali'ye göre tekamül"
 date: 2014-06-15
 categories: 

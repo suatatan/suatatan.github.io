@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Disleksili Çocuklar için Ebeveyn Desteği Rehberi"
 date: 2021-07-23
 categories: 

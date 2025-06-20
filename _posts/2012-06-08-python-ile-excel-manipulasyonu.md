@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile Excel Manipülasyonu"
 date: 2012-06-08
 categories: 

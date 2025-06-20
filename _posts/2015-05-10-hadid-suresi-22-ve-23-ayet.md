@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hadid Suresi  22. ve 23. ayet"
 date: 2015-05-10
 ---

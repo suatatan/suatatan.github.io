@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Eşyanın tabiatı"
 date: 2012-09-14
 categories: 

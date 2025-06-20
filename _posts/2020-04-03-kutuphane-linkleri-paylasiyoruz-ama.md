@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kütüphane Linkleri Paylaşıyoruz Ama?"
 date: 2020-04-03
 ---

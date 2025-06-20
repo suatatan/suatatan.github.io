@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "IPA-II dönemi"
 date: 2014-05-09
 categories: 

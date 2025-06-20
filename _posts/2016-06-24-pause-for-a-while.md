@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Pause for a while"
 date: 2016-06-24
 categories: 

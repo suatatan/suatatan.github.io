@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hızlı PIP paketi oluşturma"
 date: 2022-05-17
 ---

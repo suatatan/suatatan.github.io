@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Defining decision tables in an easy way under Python"
 date: 2015-03-19
 categories: 

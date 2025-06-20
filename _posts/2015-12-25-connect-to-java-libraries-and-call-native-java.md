@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Connect to Java Libraries and call native Java functions from R"
 date: 2015-12-25
 categories: 

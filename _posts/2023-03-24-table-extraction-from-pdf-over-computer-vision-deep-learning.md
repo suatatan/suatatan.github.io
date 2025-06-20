@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Table Extraction from PDF over Computer Vision + Deep Learning"
 date: 2023-03-24
 categories: 

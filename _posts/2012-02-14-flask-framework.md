@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Flask framework"
 date: 2012-02-14
 categories: 

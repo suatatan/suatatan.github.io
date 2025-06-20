@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Pomodoro Tekniği Nedir"
 date: 2020-01-07
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sermaye Yapısı Üzerine Yaklaşımlar ve Teoriler"
 date: 2014-11-07
 categories: 

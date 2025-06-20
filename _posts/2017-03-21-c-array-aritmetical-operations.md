@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Array Arithmetical Operations in C#"
 date: 2017-03-21
 ---

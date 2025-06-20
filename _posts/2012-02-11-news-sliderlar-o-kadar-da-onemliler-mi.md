@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "News Sliderlar. O kadar da önemliler mi?"
 date: 2012-02-11
 categories: 

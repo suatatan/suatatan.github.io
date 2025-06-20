@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Belirsizlik Altında Nasıl Karar Verilir?"
 date: 2014-11-21
 categories: 

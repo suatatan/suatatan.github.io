@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SADDAMA RAHMET OKUMAK."
 date: 2007-01-07
 categories: 

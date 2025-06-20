@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çocuklar için tüm dünya dillerinde ücretsiz online kitaplar"
 date: 2017-03-03
 ---

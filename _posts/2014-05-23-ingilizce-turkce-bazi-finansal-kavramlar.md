@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İngilizce-Türkçe Bazı Finansal Kavramlar"
 date: 2014-05-23
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İşletmelerin Çevreleri ve İşletmelerle İlgili Bazı Ölçütler"
 date: 2014-11-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ubuntu 11.04'te dosya geçmişini silmek"
 date: 2011-05-21
 categories: 

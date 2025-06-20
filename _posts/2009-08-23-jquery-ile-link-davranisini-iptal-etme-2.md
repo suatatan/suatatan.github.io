@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "JQuery ile Link davranışını iptal etme"
 date: 2009-08-23
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tasavvufu Raflardan İndirmek"
 date: 2012-02-02
 categories: 

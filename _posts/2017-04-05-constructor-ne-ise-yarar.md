@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Constructor ne işe yarar?"
 date: 2017-04-05
 categories: 

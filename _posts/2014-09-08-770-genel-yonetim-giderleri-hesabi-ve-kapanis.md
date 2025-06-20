@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "770 Genel Yönetim Giderleri Hesabı ve kapanış işlemleri"
 date: 2014-09-08
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Highlights from transport sector from Indicative Strategy Paper for Turkey 2014-2020"
 date: 2014-10-01
 categories: 

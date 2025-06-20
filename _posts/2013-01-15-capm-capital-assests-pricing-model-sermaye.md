@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CAPM (Capital Assests Pricing Model) Sermaye Varlıkları Değerleme Modeli Nedir?"
 date: 2013-01-15
 categories: 

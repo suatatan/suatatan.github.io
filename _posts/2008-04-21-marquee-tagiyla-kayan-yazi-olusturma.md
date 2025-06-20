@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Marquee Tag'ıyla kayan yazı oluşturma"
 date: 2008-04-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Fast Track  (Hızlı Yol) nedir?"
 date: 2013-09-25
 categories: 

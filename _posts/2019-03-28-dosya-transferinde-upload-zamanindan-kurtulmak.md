@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Dosya transferinde upload zamanından kurtulmak"
 date: 2019-03-28
 ---

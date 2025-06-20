@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bazen bilmemek iyidir. Tanıma höristiği (recognition heuristic)."
 date: 2015-08-24
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Azure Veri Ambarı Çalışma Notları"
 date: 2024-12-26
 tags: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Java’da property özelliği ile dosyada veri saklama"
 date: 2015-12-07
 categories: 

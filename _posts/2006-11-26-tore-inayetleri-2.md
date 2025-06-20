@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TÖRE İNAYETLERİ"
 date: 2006-11-26
 tags: 

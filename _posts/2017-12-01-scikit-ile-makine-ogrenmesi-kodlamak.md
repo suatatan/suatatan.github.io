@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Scikit ile Makine Öğrenmesi Kodlamak"
 date: 2017-12-01
 categories: 

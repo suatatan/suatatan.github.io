@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Post hoc non est propter hoc: Bundan sonra ama bundan ötürü değil"
 date: 2017-01-04
 categories: 

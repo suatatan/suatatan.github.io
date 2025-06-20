@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Prepare your speech like professionals"
 date: 2016-01-01
 categories: 

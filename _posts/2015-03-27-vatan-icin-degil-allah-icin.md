@@ -1,4 +1,5 @@
 ---
+layout: post
 date: 2015-03-27
 ---
 

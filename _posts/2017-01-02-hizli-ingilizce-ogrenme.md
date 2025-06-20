@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İngilizceyi hızlı ve etkili olarak öğrenme yolu"
 date: 2017-01-02
 categories: 

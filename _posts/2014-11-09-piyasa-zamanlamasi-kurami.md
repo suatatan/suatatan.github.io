@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Piyasa zamanlaması kuramı"
 date: 2014-11-09
 categories: 

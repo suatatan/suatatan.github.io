@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Faizlerin Vade Yapısını Açıklamaya Yarayan Teoriler"
 date: 2014-12-10
 categories: 

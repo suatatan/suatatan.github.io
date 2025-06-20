@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CSS liste tagları"
 date: 2009-08-22
 categories: 

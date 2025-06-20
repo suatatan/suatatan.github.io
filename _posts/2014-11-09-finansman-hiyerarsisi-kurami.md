@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Finansman Hiyerarşisi Kuramı (Pecking Order Theory)"
 date: 2014-11-09
 categories: 

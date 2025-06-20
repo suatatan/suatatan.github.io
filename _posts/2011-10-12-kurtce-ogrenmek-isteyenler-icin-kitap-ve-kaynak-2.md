@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kürtçe öğrenmek isteyenler için kitap ve kaynak önerileri"
 date: 2011-10-12
 categories: 

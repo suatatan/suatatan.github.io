@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "KİMLİĞİMİZ ALTÜST MÜ OLUYOR?"
 date: 2006-09-12
 categories: 

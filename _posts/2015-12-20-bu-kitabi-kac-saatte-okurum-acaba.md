@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bu kitabı kaç saatte okurum acaba?"
 date: 2015-12-20
 categories: 

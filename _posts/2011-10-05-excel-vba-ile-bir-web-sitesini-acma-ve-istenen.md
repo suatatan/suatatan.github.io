@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel VBA ile bir web sitesini açma ve istenen verileri forma gire"
 date: 2011-10-05
 categories: 

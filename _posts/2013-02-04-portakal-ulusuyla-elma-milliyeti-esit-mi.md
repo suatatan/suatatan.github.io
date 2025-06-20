@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "PORTAKAL ULUSUYLA, ELMA MİLLİYETİ EŞİT Mİ?"
 date: 2013-02-04
 categories: 

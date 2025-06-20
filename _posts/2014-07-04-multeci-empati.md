@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "MÜLTECİ EMPATİ"
 date: 2014-07-04
 categories: 

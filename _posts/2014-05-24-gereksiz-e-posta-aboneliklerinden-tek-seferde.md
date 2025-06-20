@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Gereksiz e-posta aboneliklerinden tek seferde kurtulun"
 date: 2014-05-24
 categories: 

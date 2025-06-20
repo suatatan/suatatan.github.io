@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "R ve Regex Yardımıyla düzensiz bir metin içinden yılı yakalamak"
 date: 2019-03-27
 categories: 

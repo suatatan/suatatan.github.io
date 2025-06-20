@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kaba İnşaat Taşeron Sözleşmelerinde Ödeme İhtilaflarını Önlemek için sözleşmeye konabilecek kontrol listesi"
 date: 2018-04-17
 categories: 

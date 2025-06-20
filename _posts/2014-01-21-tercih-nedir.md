@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tercih nedir?"
 date: 2014-01-21
 categories: 

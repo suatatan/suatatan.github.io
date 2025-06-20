@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çaykur'un antikakaçak çayı"
 date: 2011-09-07
 categories: 

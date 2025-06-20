@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sunumlarda kullanılabilecek uygulamalar listesi"
 date: 2020-12-12
 categories: 

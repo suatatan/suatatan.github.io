@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Atatürk ile Kokoreç yemek"
 date: 2007-02-16
 categories: 

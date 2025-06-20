@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Script ile basit bir mesaj formu uygulaması"
 date: 2012-10-23
 categories: 

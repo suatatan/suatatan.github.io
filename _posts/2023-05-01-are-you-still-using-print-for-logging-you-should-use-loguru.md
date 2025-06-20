@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Are you still using \"print\" for logging? You should use Loguru"
 date: 2023-05-01
 tags: 

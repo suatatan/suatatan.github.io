@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "RCrawler ile Web Crawling İşlemi"
 date: 2019-11-01
 categories: 

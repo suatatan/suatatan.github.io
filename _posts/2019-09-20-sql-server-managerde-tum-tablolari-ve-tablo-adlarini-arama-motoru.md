@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQL Server Manager'de Tüm Tabloları ve Tablo Adlarını Arama Motoru"
 date: 2019-09-20
 categories: 

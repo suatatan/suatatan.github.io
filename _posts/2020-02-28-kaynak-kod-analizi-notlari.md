@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kaynak Kod Analizi Notları"
 date: 2020-02-28
 ---

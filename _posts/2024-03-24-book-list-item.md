@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Book list item"
 date: 2024-03-24
 ---

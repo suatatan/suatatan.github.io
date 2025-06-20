@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "PYTHON'da küme işlemleri"
 date: 2022-03-02
 categories: 

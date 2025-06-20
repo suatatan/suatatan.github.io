@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel'de bir sütundaki boş hücreleri silme"
 date: 2012-10-02
 categories: 

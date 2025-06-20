@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "An Open Source Alternative to MS SQLServer"
 date: 2017-03-20
 categories: 

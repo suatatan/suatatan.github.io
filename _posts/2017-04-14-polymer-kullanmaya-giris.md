@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kendi HTML Taglarınızı Oluşturun: Polymer Kullanmaya Giriş"
 date: 2017-04-14
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tchebysheff (Çebişev) teorisi"
 date: 2014-06-15
 categories: 

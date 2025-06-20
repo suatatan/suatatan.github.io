@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "DEVLETİN DERİNİ VE SIĞ OLANI"
 date: 2007-02-12
 tags: 

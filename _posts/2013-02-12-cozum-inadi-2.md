@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çözüm İnadı"
 date: 2013-02-12
 categories: 

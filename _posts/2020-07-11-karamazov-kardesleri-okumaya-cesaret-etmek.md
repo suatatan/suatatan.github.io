@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Karamazov Kardeşleri Okumaya Cesaret Etmek"
 date: 2020-07-11
 categories: 

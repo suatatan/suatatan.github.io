@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Labelstud.io: Open Source Data Annotation Tool"
 date: 2023-02-07
 categories: 

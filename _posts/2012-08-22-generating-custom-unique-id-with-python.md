@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Generating custom unique id with python:"
 date: 2012-08-22
 categories: 

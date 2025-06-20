@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Araçlarda Bazı mekanik aksamlar"
 date: 2023-02-07
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kaynağı sorgulayın!"
 date: 2024-12-26
 ---

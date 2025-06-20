@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "“Örgütsel Strateji, yapı ve süreç” adlı  Miles, Snow ve diğerlerinin (1978) makalesine bakış;"
 date: 2013-03-12
 categories: 

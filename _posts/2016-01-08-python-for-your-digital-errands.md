@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python for your digital errands"
 date: 2016-01-08
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Slm for translations"
 date: 2024-02-18
 tags: 

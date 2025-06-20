@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Predictive AI vs. Generative AI"
 date: 2024-03-20
 ---

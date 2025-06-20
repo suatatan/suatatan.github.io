@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Müşteri Kavramı Üzerine"
 date: 2010-12-30
 categories: 

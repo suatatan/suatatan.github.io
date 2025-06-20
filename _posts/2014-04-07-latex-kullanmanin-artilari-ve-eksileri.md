@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Latex kullanmanın artıları ve eksileri"
 date: 2014-04-07
 categories: 

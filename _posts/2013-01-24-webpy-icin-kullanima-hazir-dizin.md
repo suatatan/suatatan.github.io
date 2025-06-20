@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Web.Py için kullanıma hazır dizin"
 date: 2013-01-24
 categories: 

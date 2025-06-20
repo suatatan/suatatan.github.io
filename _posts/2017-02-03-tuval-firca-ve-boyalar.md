@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tuval, fırça ve boyalar"
 date: 2017-02-03
 categories: 

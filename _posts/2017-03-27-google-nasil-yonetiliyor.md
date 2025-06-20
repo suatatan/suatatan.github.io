@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google Nasıl Yönetiliyor"
 date: 2017-03-27
 categories: 

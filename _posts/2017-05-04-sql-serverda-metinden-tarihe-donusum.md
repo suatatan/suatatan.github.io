@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQL Server'da metinden tarihe dönüşüm"
 date: 2017-05-04
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Estimate mi, guess mi? Collocation Sözlükleri"
 date: 2017-04-19
 categories: 

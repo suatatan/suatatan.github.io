@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel'deki formüllerin İngilizce ve Türkçe Karşılıkları"
 date: 2018-01-31
 categories: 

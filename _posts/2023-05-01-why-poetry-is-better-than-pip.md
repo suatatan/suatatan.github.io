@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Why Poetry is better than Pip"
 date: 2023-05-01
 tags: 

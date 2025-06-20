@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Elektronik imza ve zaman damgasının hukukiliği"
 date: 2025-03-18
 tags: 

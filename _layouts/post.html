@@ -1,10 +1,29 @@
----
-layout: default
----
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minima@latest/minima.css">
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {%- seo -%}
+    {% include head.html %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minima@latest/minima.css">
     <link rel="stylesheet" href="{{ '/css/override.css' | relative_url }}">
+    <style>
+      body { max-width: 700px; margin: 2rem auto; font-family: system-ui, sans-serif; background: #f9f9fb; color: #222; }
+      header, footer { text-align: center; margin: 2rem 0; }
+      a { color: #0366d6; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .post-header { border-bottom: 1px solid #e0e0e0; padding-bottom: 1rem; margin-bottom: 2rem; }
+      .post-title { font-size: 2.2rem; margin-bottom: 0.5rem; }
+      .post-meta { color: #888; font-size: 1rem; }
+      .author-block { font-size: 1.1rem; color: #444; margin-bottom: 1.5rem; background: #f1f1f7; padding: 0.7rem 1rem; border-radius: 6px; display: inline-block; }
+      .share-links { margin: 1.5rem 0; }
+      .post-content { font-size: 1.15rem; line-height: 1.7; }
+      footer { color: #888; font-size: 0.95rem; border-top: 1px solid #e0e0e0; padding-top: 1.2rem; margin-top: 3rem; }
+    </style>
+  </head>
+  <body>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -15,17 +34,21 @@ layout: default
       {% assign author = page.author | default: site.author %}
       {%- if author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+    </p>
+    <div class="author-block">Author: Dr. Suat ATAN</div>
   </header>
-
   <div class="share-links">
     {% include sharelinks.html %}
   </div>
-
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
     {% include navlinks.html %}
   </div>
-
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+  <footer>
+    © {{ site.time | date: '%Y' }} {{ site.title }} · Tüm hakları saklıdır.
+  </footer>
+  </body>
+</html>

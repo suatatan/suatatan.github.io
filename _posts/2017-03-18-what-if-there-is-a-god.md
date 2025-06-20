@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "What if there is a god?"
 date: 2017-03-18
 ---

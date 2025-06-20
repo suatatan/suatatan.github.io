@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Stratejik Yönetim Okumaları-Kısa Notlar-Yorumlar"
 date: 2014-11-20
 categories: 

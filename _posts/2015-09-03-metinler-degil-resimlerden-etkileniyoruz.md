@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Metinler değil resimlerden etkileniyoruz"
 date: 2015-09-03
 categories: 

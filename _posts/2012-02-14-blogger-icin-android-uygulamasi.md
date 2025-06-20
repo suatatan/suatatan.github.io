@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Blogger için Android uygulaması"
 date: 2012-02-14
 categories: 

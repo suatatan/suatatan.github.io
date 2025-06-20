@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SymPy ile python’da sembolik cebir"
 date: 2015-03-12
 categories: 

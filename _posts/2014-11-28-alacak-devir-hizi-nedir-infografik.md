@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Alacak Devir Hızı Nedir? [İnfografik]"
 date: 2014-11-28
 categories: 

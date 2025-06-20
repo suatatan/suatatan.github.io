@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Understanding TF.IDF"
 date: 2016-02-08
 categories: 

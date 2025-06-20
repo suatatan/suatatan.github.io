@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "R içerisinden Java fonksiyonlarını çağırmak"
 date: 2015-12-19
 categories: 

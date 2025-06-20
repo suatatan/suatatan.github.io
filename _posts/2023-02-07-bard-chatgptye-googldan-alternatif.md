@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "BARD: ChatGPT'ye Google'dan alternatif"
 date: 2023-02-07
 categories: 

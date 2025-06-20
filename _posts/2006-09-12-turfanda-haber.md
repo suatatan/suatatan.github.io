@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TURFANDA HABER:"
 date: 2006-09-12
 categories: 

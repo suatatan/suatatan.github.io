@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "configR paketi ile R'da konfigürasyon dosyaları yazmak, okumak"
 date: 2019-11-10
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Arapların gözü ile 2. Dünya Savaş'ı (Osmanlı'lar )"
 date: 2015-01-04
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Smart HTML Lorem Ipsum Selecting with Regular Expression"
 date: 2012-03-08
 categories: 

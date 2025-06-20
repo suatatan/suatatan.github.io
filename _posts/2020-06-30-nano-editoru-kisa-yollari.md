@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Nano Editörü Kısa Yolları"
 date: 2020-06-30
 ---

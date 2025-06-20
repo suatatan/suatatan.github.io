@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İlk dijital kitabım yayında"
 date: 2011-05-04
 categories: 

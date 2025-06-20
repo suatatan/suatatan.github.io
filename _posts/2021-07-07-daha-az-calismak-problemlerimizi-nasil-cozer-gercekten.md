@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Daha az çalışmak problemlerimizi nasıl çözer? Gerçekten!"
 date: 2021-07-07
 categories: 

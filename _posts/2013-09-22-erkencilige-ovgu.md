@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Erkenciliğe övgü"
 date: 2013-09-22
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Set operations with CRAN-R"
 date: 2015-05-15
 categories: 

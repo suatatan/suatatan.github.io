@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Extractive QA vs. Abstractive QA"
 date: 2024-03-20
 ---

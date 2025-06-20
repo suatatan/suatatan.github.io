@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İşsiz olmak ya da olmamak işte bütün mesele bu"
 date: 2012-02-26
 categories: 

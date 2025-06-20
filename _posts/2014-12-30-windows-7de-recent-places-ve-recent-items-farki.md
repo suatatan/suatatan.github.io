@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Windows 7'de Recent Places ve Recent Items Farkı"
 date: 2014-12-30
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Using MS Access as Data Annotation Tool"
 date: 2023-02-07
 categories: 

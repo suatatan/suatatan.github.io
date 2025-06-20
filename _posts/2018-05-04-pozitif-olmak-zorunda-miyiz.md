@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Pozitif olmak zorunda mıyız? Manson'un kitabından notlar ve çıkarımlar"
 date: 2018-05-04
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Van'da altın çilek yetiştirmek"
 date: 2011-10-05
 categories: 

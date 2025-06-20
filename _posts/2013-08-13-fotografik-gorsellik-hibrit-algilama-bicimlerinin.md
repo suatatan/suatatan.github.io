@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Fotoğrafik görsellik hibrit algılama biçimlerinin düşmanıdır"
 date: 2013-08-13
 categories: 

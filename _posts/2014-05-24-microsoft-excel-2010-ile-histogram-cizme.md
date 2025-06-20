@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Microsoft Excel 2010 ile Histogram Çizme"
 date: 2014-05-24
 categories: 

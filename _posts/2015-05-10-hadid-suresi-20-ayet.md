@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hadid suresi 20. ayet"
 date: 2015-05-10
 ---

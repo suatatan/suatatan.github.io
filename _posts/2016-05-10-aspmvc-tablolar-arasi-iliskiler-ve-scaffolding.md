@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ASP.MVC Tablolar Arası İlişkiler ve Scaffolding"
 date: 2016-05-10
 categories: 

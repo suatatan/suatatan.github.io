@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel VBA Makroları ile toplu alt sayfalar oluşturma ve çalışma sayfaları maniplasyonu"
 date: 2011-03-24
 categories: 

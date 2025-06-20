@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sykes'in uydurduğu Arap Devlet Bayrakları"
 date: 2015-01-04
 categories: 

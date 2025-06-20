@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Windows’da full text arama"
 date: 2016-06-20
 categories: 

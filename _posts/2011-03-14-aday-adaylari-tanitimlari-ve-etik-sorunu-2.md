@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ADAY ADAYLARI TANITIMLARI VE 'ETİK' SORUNU"
 date: 2011-03-14
 tags: 

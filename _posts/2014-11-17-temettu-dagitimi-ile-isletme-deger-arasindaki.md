@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Temettü dağıtımı ile işletme değer arasındaki ilişkiler üzerine teoriler"
 date: 2014-11-17
 categories: 

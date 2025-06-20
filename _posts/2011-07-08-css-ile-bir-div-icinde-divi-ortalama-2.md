@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CSS ile bir div içinde div'i ortalama"
 date: 2011-07-08
 categories: 

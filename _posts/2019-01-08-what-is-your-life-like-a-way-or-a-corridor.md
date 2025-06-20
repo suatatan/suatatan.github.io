@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "What is Your Life Like A Way or A Corridor?"
 date: 2019-01-08
 categories: 

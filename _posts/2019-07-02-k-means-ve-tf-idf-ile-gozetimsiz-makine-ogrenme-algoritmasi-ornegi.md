@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "K-Means ve TF.IDF ile gözetimsiz makine öğrenme algoritması örneği"
 date: 2019-07-02
 categories: 

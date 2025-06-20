@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sayfanızı başka adrese taşıdığınızda arama motorlarına yardımcı olmak için ne yapmalısınız?"
 date: 2012-05-05
 categories: 

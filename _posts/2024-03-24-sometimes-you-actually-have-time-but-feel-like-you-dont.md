@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sometimes you actually have time but feel like you don't"
 date: 2024-03-24
 ---

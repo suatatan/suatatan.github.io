@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "A Good Example Source for BeatifulSoup Library"
 date: 2011-07-27
 categories: 

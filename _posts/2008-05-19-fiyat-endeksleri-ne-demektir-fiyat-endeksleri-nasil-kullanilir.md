@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Fiyat Endeksleri ne demektir? Fiyat Endeksleri Nasıl Kullanılır?"
 date: 2008-05-19
 categories: 

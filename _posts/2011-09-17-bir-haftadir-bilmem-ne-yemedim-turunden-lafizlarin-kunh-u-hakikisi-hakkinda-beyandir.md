@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "\"Bir haftadır bilmem ne yemedim\" türünden lafızların künh-ü hakikisi hakkında beyandır"
 date: 2011-09-17
 ---

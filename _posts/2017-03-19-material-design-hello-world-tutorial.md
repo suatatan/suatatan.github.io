@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Material Design Hello World Tutorial"
 date: 2017-03-19
 ---

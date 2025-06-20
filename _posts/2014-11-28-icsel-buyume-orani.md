@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İçsel büyüme oranı nedir? (Internal Growt Rate)"
 date: 2014-11-28
 categories: 

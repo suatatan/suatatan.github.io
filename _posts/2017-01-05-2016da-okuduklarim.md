@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "2016'da okuduklarım"
 date: 2017-01-05
 categories: 

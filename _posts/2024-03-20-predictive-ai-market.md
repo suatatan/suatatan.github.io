@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Predictive AI market"
 date: 2024-03-20
 ---

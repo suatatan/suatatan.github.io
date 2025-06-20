@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Genişletilmiş Dickey Fuller Testi"
 date: 2014-06-03
 categories: 

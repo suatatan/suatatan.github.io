@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sermaye Yapısı İşletme Değeri İlişkisini Açıklamada Geleneksel Yaklaşım"
 date: 2014-11-09
 categories: 

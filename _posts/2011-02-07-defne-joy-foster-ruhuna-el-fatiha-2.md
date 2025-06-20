@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Defne Joy Foster: Ruhuna El Fatiha"
 date: 2011-02-07
 categories: 

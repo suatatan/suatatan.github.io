@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sayısal Yöntemler Index:"
 date: 2014-11-24
 categories: 

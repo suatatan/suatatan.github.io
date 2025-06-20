@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Selenium with Python"
 date: 2017-04-04
 categories: 

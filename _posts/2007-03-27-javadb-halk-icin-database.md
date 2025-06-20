@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "JavaDB: Halk için Database"
 date: 2007-03-27
 categories: 

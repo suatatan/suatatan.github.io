@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Anüite nedir? Google App Script ile basit birk kredi taksit (anüite) hesap makinesi denemem"
 date: 2013-03-19
 categories: 

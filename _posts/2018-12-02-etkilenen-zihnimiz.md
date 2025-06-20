@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Etkilenen Zihnimiz"
 date: 2018-12-02
 ---

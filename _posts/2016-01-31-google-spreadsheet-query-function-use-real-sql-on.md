@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google Spreadsheet Query Function: Use real SQL on your spreadsheets"
 date: 2016-01-31
 categories: 

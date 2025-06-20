@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine kitabımda bazı okurlarımızın 7. bölümde karşılaştıkları hata hakkında"
 date: 2012-12-15
 categories: 

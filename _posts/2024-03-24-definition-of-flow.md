@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Definition of flow"
 date: 2024-03-24
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Principal Component Analysis (PCA) R ile nasıl yapılır?"
 date: 2019-07-31
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Convert String to Google App Engine Date"
 date: 2012-07-16
 categories: 

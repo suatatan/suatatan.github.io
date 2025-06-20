@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Thompson testi ile veriler içerisinde “sapkın” olanlarını bulun"
 date: 2015-12-07
 categories: 

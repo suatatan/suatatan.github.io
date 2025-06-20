@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Van’da Hıdrellez: Dua’ların yazıya ve resme döküldüğü zaman"
 date: 2011-05-06
 categories: 

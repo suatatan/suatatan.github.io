@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ekmeleddin İhsanoğlu Tercihi CHP ve MHP'nin siyasi hidayeti mi?"
 date: 2014-06-20
 categories: 

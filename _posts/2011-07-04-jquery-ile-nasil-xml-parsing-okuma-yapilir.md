@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Jquery ile Nasıl XML parsing (okuma) yapılır"
 date: 2011-07-04
 categories: 

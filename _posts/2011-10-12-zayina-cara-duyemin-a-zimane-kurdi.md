@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Zayîna cara duyemîn a zimanê Kurdî"
 date: 2011-10-12
 categories: 

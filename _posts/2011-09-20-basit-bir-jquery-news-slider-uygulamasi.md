@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Basit bir Jquery news slider uygulaması"
 date: 2011-09-20
 categories: 

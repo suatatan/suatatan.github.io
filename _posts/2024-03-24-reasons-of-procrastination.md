@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Reasons of procrastination"
 date: 2024-03-24
 ---

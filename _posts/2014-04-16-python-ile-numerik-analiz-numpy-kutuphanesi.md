@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile nümerik analiz, numpy kütüphanesi denemeleri"
 date: 2014-04-16
 categories: 

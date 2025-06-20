@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "What’s Yandex must do for dissemination of Yandex.Mail service?"
 date: 2013-09-10
 categories: 

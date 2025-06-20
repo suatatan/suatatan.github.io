@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Productive break"
 date: 2024-03-24
 ---

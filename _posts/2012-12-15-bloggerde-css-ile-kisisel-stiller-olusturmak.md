@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Blogger'de CSS ile kişisel stiller oluşturmak"
 date: 2012-12-15
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yapılandırılmamış Veriler için Kaynak ve Araçlar"
 date: 2021-03-09
 categories: 

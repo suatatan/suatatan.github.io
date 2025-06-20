@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "2018'de okuduklarım"
 date: 2019-01-01
 ---

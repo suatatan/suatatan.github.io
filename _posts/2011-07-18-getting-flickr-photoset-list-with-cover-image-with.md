@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Getting Flickr Photoset List with cover image with Jquery"
 date: 2011-07-18
 categories: 

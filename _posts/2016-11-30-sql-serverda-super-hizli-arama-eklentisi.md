@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQL Server’da süper hızlı arama eklentisi"
 date: 2016-11-30
 categories: 

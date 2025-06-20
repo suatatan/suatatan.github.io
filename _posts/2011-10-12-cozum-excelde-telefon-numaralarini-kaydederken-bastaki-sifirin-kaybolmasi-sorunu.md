@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çözüm: Excel'de telefon numaralarını kaydederken baştaki sıfırın kaybolması sorunu"
 date: 2011-10-12
 categories: 

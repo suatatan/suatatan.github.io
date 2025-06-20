@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Print as json format in Google App Engine"
 date: 2011-07-21
 categories: 

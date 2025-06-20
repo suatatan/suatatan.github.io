@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Panda Factorize Fonksiyonu ile Otomatik ID atamak"
 date: 2019-10-15
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Zamanınız yoksa bu yazıyı okumayın!"
 date: 2015-03-15
 categories: 

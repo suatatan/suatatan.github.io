@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "500 yıldır anlayamadığım kısmi türevi 3 dakikada anlatmışlar"
 date: 2023-02-19
 ---

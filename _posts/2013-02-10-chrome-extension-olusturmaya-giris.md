@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Chrome Extension Oluşturmaya Giriş"
 date: 2013-02-10
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TANRININ LİSANI"
 date: 2006-11-26
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Script ile ScriptDB kullanımı"
 date: 2012-11-09
 categories: 

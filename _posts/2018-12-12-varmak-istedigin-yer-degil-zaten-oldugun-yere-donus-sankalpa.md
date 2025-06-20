@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Varmak İstediğin Yer Değil Zaten Olduğun Yere Dönüş: Sankalpa"
 date: 2018-12-12
 categories: 

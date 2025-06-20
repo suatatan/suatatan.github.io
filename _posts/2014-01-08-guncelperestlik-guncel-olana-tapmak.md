@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Güncelperestlik: Güncel olana tapmak"
 date: 2014-01-08
 categories: 

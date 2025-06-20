@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Akademik not alma teknikleri"
 date: 2013-11-26
 categories: 

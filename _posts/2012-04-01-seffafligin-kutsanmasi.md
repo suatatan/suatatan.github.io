@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Şeffaflığın kutsanması"
 date: 2012-04-01
 categories: 

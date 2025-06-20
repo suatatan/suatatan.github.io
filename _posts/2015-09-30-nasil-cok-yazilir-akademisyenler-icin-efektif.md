@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Nasıl çok yazılır? Akademisyenler için efektif yazı yazma rehberi"
 date: 2015-09-30
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Make your dirty PDF searchable"
 date: 2015-06-05
 categories: 

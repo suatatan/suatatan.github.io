@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine Datastore için alternatif Group By Fonksiyonu"
 date: 2012-07-11
 categories: 

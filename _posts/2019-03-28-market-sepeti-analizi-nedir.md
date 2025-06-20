@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Market Sepeti Analizi Nedir?"
 date: 2019-03-28
 categories: 

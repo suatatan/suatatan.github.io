@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Blueprint typography class"
 date: 2011-07-22
 categories: 

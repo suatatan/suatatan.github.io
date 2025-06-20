@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Şafii Mezhebine göre Namaz Kılınışı ve Dualar"
 date: 2011-02-24
 categories: 

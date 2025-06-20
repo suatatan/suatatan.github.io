@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "The mind does not require be free !"
 date: 2016-02-29
 categories: 

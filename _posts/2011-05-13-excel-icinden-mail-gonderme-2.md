@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel içinden mail gönderme"
 date: 2011-05-13
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "MAHRUM YEREL YÖNETİM SORUNLARI:"
 date: 2006-09-12
 categories: 

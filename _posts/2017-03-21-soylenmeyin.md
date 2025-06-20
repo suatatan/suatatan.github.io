@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Söylenmeyin!"
 date: 2017-03-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İz bırakmak mı istiyorsunuz, o zaman yürüyün. Durduğunuz yerde iz bırakamazsınız."
 date: 2012-11-24
 categories: 

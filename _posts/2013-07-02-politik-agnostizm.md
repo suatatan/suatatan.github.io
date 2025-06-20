@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Politik Agnostizm"
 date: 2013-07-02
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Trendsoloji: Web'de Kim kimi, nerede, ne zaman ve ne kadar aramış?"
 date: 2011-01-05
 categories: 

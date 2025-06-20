@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ücretsiz ziyaretçi istatistik uygulamaları"
 date: 2011-01-05
 categories: 

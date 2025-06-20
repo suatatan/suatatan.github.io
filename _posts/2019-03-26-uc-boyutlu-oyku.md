@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Üç Boyutlu Öykü"
 date: 2019-03-26
 ---

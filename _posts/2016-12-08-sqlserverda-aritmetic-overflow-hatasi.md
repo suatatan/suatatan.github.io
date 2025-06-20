@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQLServer’da “aritmetic overflow” hatası"
 date: 2016-12-08
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "PlanetNetBeans'ta Blogum Yayınlandı"
 date: 2008-08-25
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Check a word documents for a multiple keywords sequentially in a smart way"
 date: 2015-04-28
 categories: 

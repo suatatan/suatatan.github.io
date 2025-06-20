@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İNTERNET TARİHİ–3"
 date: 2006-09-12
 tags: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google'nin Code Playground Hizmeti ile artık api testi daha kolay"
 date: 2009-10-14
 categories: 

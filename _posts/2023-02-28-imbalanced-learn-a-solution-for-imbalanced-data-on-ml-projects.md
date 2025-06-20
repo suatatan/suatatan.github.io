@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Imbalanced-learn: A solution for imbalanced data on ML projects"
 date: 2023-02-28
 ---

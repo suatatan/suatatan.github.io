@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Using Decorators in Google App Engine"
 date: 2012-07-09
 categories: 

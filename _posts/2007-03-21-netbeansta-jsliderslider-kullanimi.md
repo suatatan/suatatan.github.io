@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Netbeans'ta JSlider(Slider) Kullanımı"
 date: 2007-03-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python Peewee"
 date: 2017-04-08
 categories: 

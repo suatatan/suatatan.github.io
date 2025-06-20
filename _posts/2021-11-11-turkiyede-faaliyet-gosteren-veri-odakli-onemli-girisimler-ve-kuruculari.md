@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Türkiye'de faaliyet gösteren veri odaklı önemli sosyal girişimler"
 date: 2021-11-11
 categories: 

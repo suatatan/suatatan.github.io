@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Deep learning tools that you may know"
 date: 2023-02-22
 ---

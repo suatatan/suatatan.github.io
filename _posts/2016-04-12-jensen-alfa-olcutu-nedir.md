@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Jensen Alfa Ölçütü Nedir"
 date: 2016-04-12
 categories: 

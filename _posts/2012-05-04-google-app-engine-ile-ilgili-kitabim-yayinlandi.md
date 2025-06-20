@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine ile ilgili kitabım yayınlandı."
 date: 2012-05-04
 categories: 

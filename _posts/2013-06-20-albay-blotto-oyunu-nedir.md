@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Albay Blotto Oyunu Nedir?"
 date: 2013-06-20
 categories: 

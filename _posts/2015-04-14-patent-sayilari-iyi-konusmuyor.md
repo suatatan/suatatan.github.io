@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Patent sayıları iyi konuşmuyor"
 date: 2015-04-14
 categories: 

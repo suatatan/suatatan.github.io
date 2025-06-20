@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Vue.js ile Component'ler"
 date: 2020-04-24
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Uçak firmalarından kazık yememe rehberi"
 date: 2011-12-14
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Genel Muhasebe ile ilgili Kısa Bilgiler"
 date: 2014-11-14
 categories: 

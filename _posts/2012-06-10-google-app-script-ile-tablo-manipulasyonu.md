@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Script ile tablo manipülasyonu"
 date: 2012-06-10
 categories: 

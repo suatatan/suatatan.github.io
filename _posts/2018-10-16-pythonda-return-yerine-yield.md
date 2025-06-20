@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python'da return yerine yield"
 date: 2018-10-16
 ---

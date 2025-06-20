@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel'de hücre içinde alt satıra nasıl geçilir?"
 date: 2011-10-12
 categories: 

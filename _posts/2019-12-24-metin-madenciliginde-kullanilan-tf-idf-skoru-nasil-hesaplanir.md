@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Metin Madenciliğinde Kullanılan TF.IDF skoru nasıl hesaplanır"
 date: 2019-12-24
 categories: 

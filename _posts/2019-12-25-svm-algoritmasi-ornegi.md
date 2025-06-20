@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SVM Algoritması Örneği"
 date: 2019-12-25
 categories: 

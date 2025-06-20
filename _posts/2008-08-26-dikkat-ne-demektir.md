@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "DİKKAT NE DEMEKTİR?"
 date: 2008-08-26
 categories: 

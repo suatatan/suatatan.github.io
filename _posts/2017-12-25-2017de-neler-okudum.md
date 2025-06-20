@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "2017'de neler okudum (24 kitap)"
 date: 2017-12-25
 ---

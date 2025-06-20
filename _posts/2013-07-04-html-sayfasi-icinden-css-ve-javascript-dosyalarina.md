@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "HTML sayfası içinden CSS ve Javascript dosyalarına nasıl link verilir?"
 date: 2013-07-04
 categories: 

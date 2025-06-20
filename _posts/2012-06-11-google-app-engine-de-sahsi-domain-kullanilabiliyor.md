@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine de şahsi domain kullanılabiliyor mu?"
 date: 2012-06-11
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Pardon! Kullandığınız yapay zeka yapay mı gerçek mi ?"
 date: 2020-12-05
 tags: 

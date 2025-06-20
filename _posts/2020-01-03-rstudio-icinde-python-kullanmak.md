@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "RStudio içinde Python Kullanmak"
 date: 2020-01-03
 categories: 

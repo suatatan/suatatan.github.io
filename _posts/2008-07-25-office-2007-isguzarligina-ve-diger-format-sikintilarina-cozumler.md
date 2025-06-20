@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Office 2007 işgüzarlığına ve diğer format sıkıntılarına çözümler"
 date: 2008-07-25
 categories: 

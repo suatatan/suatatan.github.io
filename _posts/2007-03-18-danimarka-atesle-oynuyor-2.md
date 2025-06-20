@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "DANİMARKA ATEŞLE OYNUYOR"
 date: 2007-03-18
 tags: 

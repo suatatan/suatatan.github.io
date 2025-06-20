@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TexWork Kullanırken Türkçe Yazım Denetimi Yapılandırma"
 date: 2014-03-24
 categories: 

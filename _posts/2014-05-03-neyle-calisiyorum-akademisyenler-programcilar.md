@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Neyle çalışıyorum?  Akademisyenler, Programcılar ve Verimli İnsanlar için Alet Çantası"
 date: 2014-05-03
 categories: 

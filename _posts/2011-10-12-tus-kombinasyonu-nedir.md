@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tuş kombinasyonu nedir"
 date: 2011-10-12
 categories: 

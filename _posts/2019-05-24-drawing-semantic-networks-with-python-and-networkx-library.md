@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Drawing Semantic Networks with Python and NetworkX library"
 date: 2019-05-24
 categories: 

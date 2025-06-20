@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kayda değer metin özetleme paketleri algoritmaları ve içerikleri"
 date: 2022-06-07
 categories: 

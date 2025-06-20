@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Linux nedir? Duymayanlar için iyi bir başlangıç"
 date: 2011-10-06
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google Spreadsheet Query Function Makes your Spreadsheets DB which SQL-ready"
 date: 2016-01-01
 categories: 

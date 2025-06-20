@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excelde kendi formülünüzü oluşturma"
 date: 2015-09-30
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "YRD.DOÇ. ALİ CİMAT VE ARŞ. GÖR. MAHİR TAŞ'IN MEVZUAT DERGİSİNDE YAYINLANAN KIYI BANKACILIĞINA DAİR ÖNEMLİ ARAŞTIRMALARI"
 date: 2008-08-24
 categories: 

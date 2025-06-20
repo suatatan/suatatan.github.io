@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ne mutlu tarafım diyene!"
 date: 2012-02-25
 categories: 

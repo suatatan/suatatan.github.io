@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Netbeans: O da ne?"
 date: 2008-08-25
 categories: 

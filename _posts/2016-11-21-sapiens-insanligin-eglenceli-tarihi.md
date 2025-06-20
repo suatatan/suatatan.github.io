@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sapiens: İnsanlığın eğlenceli tarihi"
 date: 2016-11-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Veysi Kurt, Erken Deprem Bildirimleri Sitesi Hakkında"
 date: 2011-12-14
 categories: 

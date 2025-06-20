@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İşletmelerde Yönetim Düşüncesinin Gelişimi"
 date: 2014-11-21
 categories: 

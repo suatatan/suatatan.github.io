@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "GPS Kooordinatları arası dönüşüm"
 date: 2011-09-08
 categories: 

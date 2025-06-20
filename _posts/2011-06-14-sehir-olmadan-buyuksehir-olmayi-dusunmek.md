@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Şehir olmadan Büyükşehir olmayı düşünmek"
 date: 2011-06-14
 categories: 

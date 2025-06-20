@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yaklaşırken Hızlı, Uzaklaşırken Yavaşız"
 date: 2018-12-12
 categories: 

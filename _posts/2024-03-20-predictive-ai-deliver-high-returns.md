@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Predictive AI deliver high returns"
 date: 2024-03-20
 ---

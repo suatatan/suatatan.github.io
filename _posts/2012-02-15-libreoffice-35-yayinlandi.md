@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "LibreOffice 3.5 yayınlandı"
 date: 2012-02-15
 categories: 

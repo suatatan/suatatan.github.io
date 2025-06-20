@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Javascript ile Object Oriented (Nesne yönelimli) programlama"
 date: 2013-01-29
 categories: 

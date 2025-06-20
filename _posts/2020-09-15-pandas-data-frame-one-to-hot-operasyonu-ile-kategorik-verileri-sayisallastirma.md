@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Pandas Data Frame One-to-Hot Operasyonu ile kategorik verileri sayısallaştırma"
 date: 2020-09-15
 categories: 

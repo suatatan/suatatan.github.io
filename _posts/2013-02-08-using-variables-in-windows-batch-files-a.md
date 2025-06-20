@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Using Variables in Windows Batch Files | a Tech-Recipes Tutorial"
 date: 2013-02-08
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "DİJİTAL FOTOĞRAF MAKİNESİ"
 date: 2006-09-12
 categories: 

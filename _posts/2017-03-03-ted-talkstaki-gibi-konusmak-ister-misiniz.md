@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "TED Talks'taki gibi konuşmak ister misiniz?"
 date: 2017-03-03
 ---

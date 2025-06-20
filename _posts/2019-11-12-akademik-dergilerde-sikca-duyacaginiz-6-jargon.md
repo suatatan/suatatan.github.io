@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Akademik Dergiler'de Sıkça Duyacağınız  jargonlar"
 date: 2019-11-12
 categories: 

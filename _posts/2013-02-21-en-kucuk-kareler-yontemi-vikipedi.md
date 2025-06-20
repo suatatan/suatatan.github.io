@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "En küçük kareler yöntemi - Vikipedi"
 date: 2013-02-21
 categories: 

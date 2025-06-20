@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python Synthetic Data Generators"
 date: 2023-02-14
 ---

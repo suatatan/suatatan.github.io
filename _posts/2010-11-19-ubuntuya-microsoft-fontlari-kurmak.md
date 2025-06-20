@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ubuntu'ya Microsoft fontları kurmak"
 date: 2010-11-19
 categories: 

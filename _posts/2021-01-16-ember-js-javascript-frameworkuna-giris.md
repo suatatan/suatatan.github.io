@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ember.js Javascript Framework'una Giriş"
 date: 2021-01-16
 ---

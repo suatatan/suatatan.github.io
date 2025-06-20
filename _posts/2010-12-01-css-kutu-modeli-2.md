@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CSS Kutu Modeli"
 date: 2010-12-01
 categories: 

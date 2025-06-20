@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile Url Post kullanarak web sayfalarına konsol üzerinden veri
 yollamak"
 date: 2010-12-03

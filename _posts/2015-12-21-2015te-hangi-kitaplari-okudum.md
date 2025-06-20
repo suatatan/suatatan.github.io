@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "2015′te hangi kitapları okudum?"
 date: 2015-12-21
 categories: 

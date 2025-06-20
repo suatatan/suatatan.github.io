@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ekonomik Performans Göstergelerini inceleyelim"
 date: 2008-05-19
 categories: 

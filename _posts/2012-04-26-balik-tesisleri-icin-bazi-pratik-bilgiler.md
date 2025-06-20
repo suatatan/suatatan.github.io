@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Balık tesisleri için bazı pratik bilgiler"
 date: 2012-04-26
 categories: 

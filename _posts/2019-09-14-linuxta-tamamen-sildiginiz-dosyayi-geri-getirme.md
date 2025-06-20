@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Linux'ta Tamamen Sildiğiniz Dosyayı Geri Getirme"
 date: 2019-09-14
 categories: 

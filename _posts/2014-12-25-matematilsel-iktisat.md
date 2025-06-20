@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Matematilsel İktisat"
 date: 2014-12-25
 categories: 

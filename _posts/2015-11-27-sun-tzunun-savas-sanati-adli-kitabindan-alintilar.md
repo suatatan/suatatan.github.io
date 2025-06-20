@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sun Tzu’nun Savaş Sanatı adlı kitabından alıntılar"
 date: 2015-11-27
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ekonometriyi anlamak"
 date: 2014-06-15
 categories: 

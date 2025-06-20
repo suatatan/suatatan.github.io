@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excelden makro yazarak herhangi bir internet sitesini otomatik olarak
 açmak"
 date: 2011-10-12

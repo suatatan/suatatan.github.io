@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ASP.MVC Entity Framework silme işlemi"
 date: 2016-05-11
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Dreamweaver-like html template dressing in Aptana with Python"
 date: 2011-07-27
 categories: 

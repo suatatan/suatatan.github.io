@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile Net Bugünkü Değer Hesaplama"
 date: 2016-11-29
 categories: 

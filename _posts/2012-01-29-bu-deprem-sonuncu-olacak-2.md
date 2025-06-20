@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "BU DEPREM SONUNCU OLACAK"
 date: 2012-01-29
 categories: 

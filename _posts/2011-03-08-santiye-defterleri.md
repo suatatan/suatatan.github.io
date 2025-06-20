@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Şantiye defterleri"
 date: 2011-03-08
 categories: 

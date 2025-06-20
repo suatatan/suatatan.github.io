@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Güzel Sözler"
 date: 2012-08-09
 categories: 

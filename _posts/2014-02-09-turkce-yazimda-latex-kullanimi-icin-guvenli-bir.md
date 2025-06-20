@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Türkçe yazımda LateX kullanımı için güvenli bir yol"
 date: 2014-02-09
 categories: 

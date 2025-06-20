@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "‘Costs of a healthy diet (PPP dollar per person per day) nedir?"
 date: 2023-06-20
 ---

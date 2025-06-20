@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "NOLI IRE FAC VENIRE*"
 date: 2006-09-12
 tags: 

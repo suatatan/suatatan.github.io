@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hadar Shemesh'in Dil Pratikleri ile ilgili önerileri"
 date: 2023-02-09
 categories: 

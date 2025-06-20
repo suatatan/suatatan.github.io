@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Her şey ABD'nin elinde!"
 date: 2013-04-02
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile Flickr API-1"
 date: 2011-08-18
 categories: 

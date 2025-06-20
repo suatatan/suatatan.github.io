@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQL'de farklı yerlerde ancak aynı iki tablonun içeriğinin aynı olup olmadığın kontrol etmek gerekirse senkronize etmek"
 date: 2022-03-09
 ---

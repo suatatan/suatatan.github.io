@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile Twitter'dan topluca Veri Çekme (API'siz)"
 date: 2020-12-12
 categories: 

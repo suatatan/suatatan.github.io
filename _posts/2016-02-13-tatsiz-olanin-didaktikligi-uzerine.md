@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tatsız olanın didaktikliği üzerine"
 date: 2016-02-13
 categories: 

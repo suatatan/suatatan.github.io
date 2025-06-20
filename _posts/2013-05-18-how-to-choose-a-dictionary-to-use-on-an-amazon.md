@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "How to Choose a Dictionary to Use on an Amazon Kindle Device"
 date: 2013-05-18
 categories: 

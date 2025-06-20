@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Create.js ile dokun-düzelt web sayfaları"
 date: 2012-02-14
 categories: 

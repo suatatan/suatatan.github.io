@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Script ile e-tablo (spreadsheet) ile entegre zengin form oluşturma"
 date: 2012-06-10
 categories: 

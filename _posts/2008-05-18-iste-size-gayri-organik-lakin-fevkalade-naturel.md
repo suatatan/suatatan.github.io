@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İşte size gayrı-organik lakin fevkalade \"naturel\" tarım"
 date: 2008-05-18
 categories: 

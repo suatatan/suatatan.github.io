@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Human Friendly ASP.MVC Serie"
 date: 2016-03-04
 categories: 

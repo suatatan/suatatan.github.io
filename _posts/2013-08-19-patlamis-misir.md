@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "PATLAMIŞ MISIR !"
 date: 2013-08-19
 categories: 

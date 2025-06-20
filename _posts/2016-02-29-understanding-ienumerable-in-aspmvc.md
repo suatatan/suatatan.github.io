@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Understanding IEnumerable in ASP.MVC"
 date: 2016-02-29
 categories: 

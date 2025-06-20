@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Genetative or predictive AI"
 date: 2024-03-18
 ---

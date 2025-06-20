@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Outlook Aramaları İçin Özel Filtreler"
 date: 2014-12-08
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Data Wrangling Cases: Case #1: Emre's Language Score Problem"
 date: 2019-05-19
 categories: 

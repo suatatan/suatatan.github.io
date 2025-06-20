@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yeni Akademik Makale: Haberler ve Gerçeklik İlişkisi: Bir Kamu Kurumu Hakkındaki Haberler Üzerine İnceleme"
 date: 2020-01-02
 categories: 

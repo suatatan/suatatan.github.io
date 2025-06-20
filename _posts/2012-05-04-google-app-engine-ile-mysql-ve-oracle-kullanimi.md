@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine ile MySQL ve Oracle kullanımı mümkün mü?"
 date: 2012-05-04
 categories: 

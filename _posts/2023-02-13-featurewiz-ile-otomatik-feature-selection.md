@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Featurewiz ile otomatik 'feature selection'"
 date: 2023-02-13
 categories: 

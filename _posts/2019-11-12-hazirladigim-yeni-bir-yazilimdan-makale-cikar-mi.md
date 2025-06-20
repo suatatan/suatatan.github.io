@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hazırladığım yeni bir yazılımdan \"makale\" çıkar mı?"
 date: 2019-11-12
 categories: 

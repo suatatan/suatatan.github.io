@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ubuntu üzerinde PHP,Mysql ve Apache kurmak"
 date: 2010-10-13
 categories: 

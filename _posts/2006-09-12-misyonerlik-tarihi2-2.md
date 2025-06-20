@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "MİSYONERLİK TARİHİ–2"
 date: 2006-09-12
 categories: 

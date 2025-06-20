@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Opsiyon Sözleşmelerinde 'Delta Nötr' nedir"
 date: 2013-12-18
 categories: 

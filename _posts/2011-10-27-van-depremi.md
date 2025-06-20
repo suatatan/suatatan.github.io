@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Van depremi"
 date: 2011-10-27
 categories: 

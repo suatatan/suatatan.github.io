@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Malthus Popülasyon Yasası Bir Örnek ve R Dili ile Modelleme (Adi Diferansiyel Denklemle)"
 date: 2019-02-08
 categories: 

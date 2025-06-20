@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tüm şifrelerinizi unutun Lastpass kullanın"
 date: 2011-07-20
 categories: 

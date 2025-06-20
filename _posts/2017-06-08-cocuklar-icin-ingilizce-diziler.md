@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çocuklar için İngilizce Diziler"
 date: 2017-06-08
 categories: 

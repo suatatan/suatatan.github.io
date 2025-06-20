@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mutluluk parayla satın alınabilir!"
 date: 2016-10-26
 categories: 

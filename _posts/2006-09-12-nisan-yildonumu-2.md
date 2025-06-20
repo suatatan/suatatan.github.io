@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "NİŞAN YILDÖNÜMÜ"
 date: 2006-09-12
 tags: 

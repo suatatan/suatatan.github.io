@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CSS ile listelerin görünümünü sıfırlamak"
 date: 2012-05-09
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İnönü TBMM hükümetinin aynı zamanda Kürtlerin hükümeti olduğunu söyledi mi?"
 date: 2012-02-14
 categories: 

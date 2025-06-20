@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Windows'ta 'PİP' kullanımı"
 date: 2017-04-01
 categories: 

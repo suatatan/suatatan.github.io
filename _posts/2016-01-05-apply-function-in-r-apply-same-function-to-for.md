@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Apply Function in R: Apply same function to for each cell of a matrix"
 date: 2016-01-05
 categories: 

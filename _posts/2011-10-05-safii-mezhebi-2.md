@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Şafii Mezhebi"
 date: 2011-10-05
 categories: 

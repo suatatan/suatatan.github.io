@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Retrieve videos from a spesific Youtube user with Python"
 date: 2011-07-17
 categories: 

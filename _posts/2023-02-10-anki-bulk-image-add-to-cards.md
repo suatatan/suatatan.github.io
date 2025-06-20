@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Anki bulk image add to cards"
 date: 2023-02-10
 ---

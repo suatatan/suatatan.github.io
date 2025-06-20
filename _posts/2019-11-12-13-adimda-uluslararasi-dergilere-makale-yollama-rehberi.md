@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "13 Adımda Uluslararası Dergilere Makale Yollama Rehberi"
 date: 2019-11-12
 tags: 

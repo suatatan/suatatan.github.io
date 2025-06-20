@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python PDF Parsing Tools"
 date: 2023-03-08
 tags: 

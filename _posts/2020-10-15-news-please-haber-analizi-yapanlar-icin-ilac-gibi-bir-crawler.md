@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "News Please!: Haber analizi yapanlar için ilaç gibi bir Crawler"
 date: 2020-10-15
 categories: 

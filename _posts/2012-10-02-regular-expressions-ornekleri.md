@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Regular Expressions Örnekleri"
 date: 2012-10-02
 categories: 

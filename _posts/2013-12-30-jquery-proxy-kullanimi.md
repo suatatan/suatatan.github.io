@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Jquery proxy() kullanımı"
 date: 2013-12-30
 categories: 

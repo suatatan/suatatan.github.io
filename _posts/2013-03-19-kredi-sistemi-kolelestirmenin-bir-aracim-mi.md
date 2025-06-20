@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kredi sistemi köleleştirmenin bir aracım mı?"
 date: 2013-03-19
 categories: 

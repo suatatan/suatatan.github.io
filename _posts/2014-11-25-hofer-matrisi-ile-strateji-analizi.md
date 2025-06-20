@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hofer Matrisi ile Strateji Analizi"
 date: 2014-11-25
 categories: 

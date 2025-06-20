@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Diyarbakır'ın insan silueti Xeriye Ana."
 date: 2014-01-13
 ---

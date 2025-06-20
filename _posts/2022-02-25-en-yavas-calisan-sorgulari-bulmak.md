@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "En yavaş çalışan sorguları bulmak"
 date: 2022-02-25
 categories: 

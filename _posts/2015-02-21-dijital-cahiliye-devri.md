@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Dijital Cahiliye Devri"
 date: 2015-02-21
 categories: 

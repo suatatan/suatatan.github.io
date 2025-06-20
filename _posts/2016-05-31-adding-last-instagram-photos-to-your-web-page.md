@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Adding Last Instagram Photos to Your Web Page"
 date: 2016-05-31
 categories: 

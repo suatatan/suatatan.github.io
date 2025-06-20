@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "One tool can'tbe Jack of all"
 date: 2015-05-05
 categories: 

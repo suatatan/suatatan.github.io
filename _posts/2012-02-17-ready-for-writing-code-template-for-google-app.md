@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ready for writing code template for Google App Engine"
 date: 2012-02-17
 categories: 

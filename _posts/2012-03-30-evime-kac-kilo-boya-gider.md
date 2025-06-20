@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Evime kaç kilo boya gider?"
 date: 2012-03-30
 categories: 

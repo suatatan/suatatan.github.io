@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Arapların Gözü ile 1. Dünya Savaşı"
 date: 2014-12-28
 categories: 

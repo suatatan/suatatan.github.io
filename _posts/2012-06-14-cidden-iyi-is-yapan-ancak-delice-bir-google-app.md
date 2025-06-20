@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Cidden iyi iş yapan ancak delice bir Google App Script"
 date: 2012-06-14
 categories: 

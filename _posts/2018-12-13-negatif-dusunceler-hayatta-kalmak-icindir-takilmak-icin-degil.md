@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Negatif Düşünceler Hayatta Kalmak içindir Takılmak için Değil !"
 date: 2018-12-13
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine ile birden fazla sayfaya aynı şablonu uygulama"
 date: 2012-04-13
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Anadolu Jet'in ilginç online biletleme sistemi ve müşteri hizmetleri mantığı"
 date: 2011-12-09
 ---

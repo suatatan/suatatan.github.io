@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Doctus cum libro"
 date: 2011-10-12
 ---

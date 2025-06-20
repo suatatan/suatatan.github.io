@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Wikileaks ve İngiliz gizli arşivleri"
 date: 2010-12-01
 categories: 

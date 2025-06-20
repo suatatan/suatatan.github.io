@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Rüşvet üzerine akademik inceleme"
 date: 2012-04-18
 categories: 

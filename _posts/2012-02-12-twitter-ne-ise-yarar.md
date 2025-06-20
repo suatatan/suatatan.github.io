@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Twitter ne işe yarar?"
 date: 2012-02-12
 categories: 

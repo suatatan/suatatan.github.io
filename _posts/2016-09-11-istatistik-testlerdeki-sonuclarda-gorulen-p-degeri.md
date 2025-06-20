@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İstatistik testlerdeki sonuçlarda görülen p değeri nasıl yorumlanır?"
 date: 2016-09-11
 categories: 

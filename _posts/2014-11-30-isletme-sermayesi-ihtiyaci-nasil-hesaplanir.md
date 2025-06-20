@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İşletme Sermayesi İhtiyacı Nasıl Hesaplanır?"
 date: 2014-11-30
 categories: 

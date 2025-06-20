@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ATANın sözü"
 date: 2018-04-19
 categories: 

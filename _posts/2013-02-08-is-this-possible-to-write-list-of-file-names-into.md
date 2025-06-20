@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Is this possible to write list of file names into a text file using batch file Windows Xp? - Stack Overflow"
 date: 2013-02-08
 categories: 

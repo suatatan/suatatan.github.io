@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Speeding LLMs"
 date: 2024-03-24
 ---

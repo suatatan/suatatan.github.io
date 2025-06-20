@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine'de dosya upload etme"
 date: 2012-11-29
 categories: 

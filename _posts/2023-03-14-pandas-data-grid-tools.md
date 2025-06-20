@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Pandas Data Grid Tools"
 date: 2023-03-14
 ---

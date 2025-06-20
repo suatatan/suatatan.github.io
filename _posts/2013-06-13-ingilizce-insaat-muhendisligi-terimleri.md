@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İngilizce inşaat mühendisliği terimleri"
 date: 2013-06-13
 categories: 

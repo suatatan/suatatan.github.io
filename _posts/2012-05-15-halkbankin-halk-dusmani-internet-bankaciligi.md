@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "HalkBank'ın Halk Düşmanı İnternet Bankacılığı Üzerine"
 date: 2012-05-15
 categories: 

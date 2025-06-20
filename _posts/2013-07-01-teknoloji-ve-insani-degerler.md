@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Teknoloji ve insani değerler"
 date: 2013-07-01
 categories: 

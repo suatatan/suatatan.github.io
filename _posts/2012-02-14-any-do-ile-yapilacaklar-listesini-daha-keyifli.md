@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Any-Do ile yapılacaklar listesini daha keyifli hale getirin."
 date: 2012-02-14
 categories: 

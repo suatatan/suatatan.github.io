@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "HALLAC-I MANSUR’DAN NIETZSCHE’YE"
 date: 2006-09-12
 tags: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Digital Gods"
 date: 2013-11-17
 categories: 

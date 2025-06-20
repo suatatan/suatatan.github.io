@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Simple CRUD (Create,Update Delete) App in Google App Script"
 date: 2012-06-17
 categories: 

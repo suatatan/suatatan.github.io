@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ölüm üzerine"
 date: 2011-12-06
 categories: 

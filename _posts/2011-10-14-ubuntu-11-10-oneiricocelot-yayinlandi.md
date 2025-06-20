@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ubuntu 11.10 OneiricOcelot Yayınlandı"
 date: 2011-10-14
 categories: 

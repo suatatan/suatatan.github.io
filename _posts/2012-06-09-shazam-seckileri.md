@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Shazam seçkileri"
 date: 2012-06-09
 categories: 

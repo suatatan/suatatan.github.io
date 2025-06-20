@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "AJAX ile veri çekerken veriyi salt veya HTML'nin okunmuş hali olarak alma"
 date: 2008-11-03
 categories: 

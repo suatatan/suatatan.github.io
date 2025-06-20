@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "BIC Instead of Elbow for Clustering"
 date: 2023-02-08
 ---

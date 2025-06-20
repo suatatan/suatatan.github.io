@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Get your answers in markdown format with ChatGPT"
 date: 2023-05-01
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Boş HTML sayfası"
 date: 2011-12-05
 ---

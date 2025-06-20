@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Gözüme kestirdiklerim."
 date: 2012-04-22
 categories: 

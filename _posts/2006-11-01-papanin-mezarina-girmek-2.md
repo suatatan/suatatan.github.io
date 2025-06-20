@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Papanın Mezarına Girmek"
 date: 2006-11-01
 categories: 

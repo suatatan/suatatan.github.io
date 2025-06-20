@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CSS ile tüm tarayıcılarda çalışan kutu gölge efekti"
 date: 2011-07-08
 categories: 

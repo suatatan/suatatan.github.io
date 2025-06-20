@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "T-Test in Statistics"
 date: 2014-12-09
 categories: 

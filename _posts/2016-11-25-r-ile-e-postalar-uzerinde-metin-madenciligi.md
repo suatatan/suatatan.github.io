@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "R ile e-postalar üzerinde metin madenciliği"
 date: 2016-11-25
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "paint() metodu ile ilgili spotlar"
 date: 2007-03-21
 categories: 

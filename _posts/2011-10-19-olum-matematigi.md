@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ölüm matematiği"
 date: 2011-10-19
 categories: 

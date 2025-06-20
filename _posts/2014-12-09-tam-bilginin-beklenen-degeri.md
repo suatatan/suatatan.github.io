@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Tam Bilginin Beklenen Değeri"
 date: 2014-12-09
 categories: 

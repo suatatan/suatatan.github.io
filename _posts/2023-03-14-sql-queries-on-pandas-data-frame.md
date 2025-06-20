@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SQL queries on pandas data frame"
 date: 2023-03-14
 categories: 

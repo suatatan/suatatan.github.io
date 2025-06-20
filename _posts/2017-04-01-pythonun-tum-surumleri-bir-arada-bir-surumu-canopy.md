@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python'un tüm sürümleri bir arada bir sürümü: Canopy"
 date: 2017-04-01
 categories: 

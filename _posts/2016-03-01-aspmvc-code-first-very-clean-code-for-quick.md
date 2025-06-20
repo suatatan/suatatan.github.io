@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ASP.MVC Code First; Very Clean Code for Quick Start"
 date: 2016-03-01
 categories: 

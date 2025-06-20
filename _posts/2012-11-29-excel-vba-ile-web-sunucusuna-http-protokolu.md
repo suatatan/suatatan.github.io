@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel VBA ile web sunucusuna HTTP protokolü üzerinden data yollamak (post etmek)"
 date: 2012-11-29
 categories: 

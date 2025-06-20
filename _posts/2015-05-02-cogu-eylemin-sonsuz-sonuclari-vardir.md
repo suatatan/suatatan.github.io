@@ -1,4 +1,5 @@
 ---
+layout: post
 date: 2015-05-02
 categories: 
   - "genel"

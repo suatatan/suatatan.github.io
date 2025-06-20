@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "MySQL'de Türkçe Karakter Sorunu Yaşamamak İçin."
 date: 2007-04-24
 tags: 

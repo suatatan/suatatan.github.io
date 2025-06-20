@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ağırlıklı Ortalama Sermaye Maliyeti"
 date: 2014-11-06
 categories: 

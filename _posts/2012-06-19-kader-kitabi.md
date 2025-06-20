@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kader kitabı"
 date: 2012-06-19
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Arduino Kullanmaya Giriş"
 date: 2017-06-04
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Netbeans'de Persistence Kullanımı ve önemli ipuçları"
 date: 2008-04-25
 categories: 

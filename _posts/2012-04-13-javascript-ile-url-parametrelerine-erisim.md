@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Javascript ile Url Parametrelerine Erişim"
 date: 2012-04-13
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İnce Memed'den sonra"
 date: 2022-08-14
 categories: 

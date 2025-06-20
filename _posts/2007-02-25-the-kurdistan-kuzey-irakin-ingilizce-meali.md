@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "THE KURDISTAN: KUZEY IRAK’IN İNGİLİZCE MEALİ"
 date: 2007-02-25
 categories: 

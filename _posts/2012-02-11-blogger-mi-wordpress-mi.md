@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Blogger mi Wordpress mi?"
 date: 2012-02-11
 categories: 

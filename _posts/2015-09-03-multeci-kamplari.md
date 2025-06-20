@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mülteci kampları"
 date: 2015-09-03
 categories: 

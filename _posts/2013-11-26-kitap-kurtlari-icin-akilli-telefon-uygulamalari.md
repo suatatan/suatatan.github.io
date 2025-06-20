@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kitap kurtları için akıllı telefon uygulamaları"
 date: 2013-11-26
 categories: 

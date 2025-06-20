@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Consumer Behaviour-Study Notes"
 date: 2014-11-26
 categories: 

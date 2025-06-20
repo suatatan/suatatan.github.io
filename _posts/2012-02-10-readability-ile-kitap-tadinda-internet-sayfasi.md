@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Readability ile kitap tadında internet sayfası okumak"
 date: 2012-02-10
 categories: 

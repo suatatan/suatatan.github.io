@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Optimal sermaye nedir?"
 date: 2013-03-08
 categories: 

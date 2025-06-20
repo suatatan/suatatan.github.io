@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çîyayên  min"
 date: 2013-03-23
 categories: 

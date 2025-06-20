@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel'de formül yazmaya giriş ve basit bir toplama formülü (Videolu anlatım)"
 date: 2011-10-12
 categories: 

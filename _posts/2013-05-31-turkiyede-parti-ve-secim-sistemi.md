@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Türkiye'de Parti ve Seçim Sistemi"
 date: 2013-05-31
 categories: 

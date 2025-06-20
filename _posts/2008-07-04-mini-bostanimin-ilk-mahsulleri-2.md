@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mini-Bostanımın ilk mahsülleri"
 date: 2008-07-04
 categories: 

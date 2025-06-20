@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Konuşma Bitti"
 date: 2007-03-29
 categories: 

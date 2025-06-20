@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Demokrasi bir sayı rejimi midir?"
 date: 2008-04-18
 categories: 

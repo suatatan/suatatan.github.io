@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bitliste büryan nerede yenir?"
 date: 2012-04-15
 categories: 

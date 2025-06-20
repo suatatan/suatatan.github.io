@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Çocuklar için ücretsiz İngilizce öğrenme siteleri"
 date: 2014-09-17
 categories: 

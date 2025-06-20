@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine Uygulamanızı kendi domain adresiniz üzerinden yayınlamak"
 date: 2010-12-01
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Simulations of job interview for software developers"
 date: 2016-01-01
 categories: 

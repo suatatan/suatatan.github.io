@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hatasız düşünme sanatı kitabından; Fransız sömürge valisinin sıçanla imtahanı"
 date: 2013-09-13
 categories: 

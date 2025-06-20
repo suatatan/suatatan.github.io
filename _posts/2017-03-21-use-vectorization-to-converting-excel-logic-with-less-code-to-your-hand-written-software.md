@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Use Vectorization to Converting Excel Logic with less Code to Your hand-written software"
 date: 2017-03-21
 ---

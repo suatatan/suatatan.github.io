@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Getting url variables quickly in Google App Engine"
 date: 2011-07-22
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kalabalıkları Anlamak"
 date: 2011-02-23
 categories: 

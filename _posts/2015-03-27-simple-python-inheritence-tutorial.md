@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Simple Python Inheritence Tutorial"
 date: 2015-03-27
 categories: 

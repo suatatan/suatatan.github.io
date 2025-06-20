@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Interpreting Linear Model(lm) in R"
 date: 2015-12-26
 categories: 

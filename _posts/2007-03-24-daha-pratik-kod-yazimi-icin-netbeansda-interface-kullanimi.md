@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Daha pratik kod yazımı için; Netbeans'da Interface Kullanımı"
 date: 2007-03-24
 categories: 

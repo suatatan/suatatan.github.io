@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Doktrinler sihirli değnekler değildir!"
 date: 2016-06-25
 categories: 

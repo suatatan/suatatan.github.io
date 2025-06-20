@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel VBA ile hızlı veri işleme"
 date: 2011-10-12
 categories: 

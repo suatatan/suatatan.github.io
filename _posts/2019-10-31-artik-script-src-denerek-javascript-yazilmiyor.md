@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Artık Script Src denerek Javascript Yazılmıyor"
 date: 2019-10-31
 categories: 

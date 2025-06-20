@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine ücretli mi?"
 date: 2012-05-07
 categories: 

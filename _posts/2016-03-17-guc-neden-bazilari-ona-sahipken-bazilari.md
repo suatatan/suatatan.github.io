@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Güç. Neden bazıları ona sahipken bazıları değildir?"
 date: 2016-03-17
 categories: 

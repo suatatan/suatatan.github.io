@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Daha akıllı, daha hızlı ve daha iyi olmanın kitabı!"
 date: 2016-07-11
 categories: 

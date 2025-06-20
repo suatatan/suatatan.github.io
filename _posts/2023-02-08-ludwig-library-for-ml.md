@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ludwig Library for ML"
 date: 2023-02-08
 categories: 

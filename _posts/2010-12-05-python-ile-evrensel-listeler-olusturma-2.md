@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Python ile evrensel listeler oluşturma"
 date: 2010-12-05
 categories: 

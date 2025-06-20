@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mindware: Beyniniz bir akıllı telefon uygulaması olsaydı?"
 date: 2016-09-27
 categories: 

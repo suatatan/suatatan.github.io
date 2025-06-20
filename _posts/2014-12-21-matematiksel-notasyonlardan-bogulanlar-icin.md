@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Matematiksel notasyonlardan boğulanlar için"
 date: 2014-12-21
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine'yi duyurdu. (Google Babalığını gösterdi yine)"
 date: 2009-06-22
 tags: 

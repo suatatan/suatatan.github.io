@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Axaftina axê"
 date: 2011-12-22
 categories: 

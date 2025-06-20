@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Arapça dindarlığın dili midir?"
 date: 2012-02-12
 categories: 

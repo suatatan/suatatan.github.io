@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google App Engine Pratik Memcache Kullanımı"
 date: 2012-02-25
 categories: 

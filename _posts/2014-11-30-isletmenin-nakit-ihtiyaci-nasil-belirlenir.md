@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İşletmenin nakit ihtiyacı nasıl belirlenir?"
 date: 2014-11-30
 categories: 

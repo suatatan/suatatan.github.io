@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ASP.MVC Code First Many-to-Many (Çok-Çok) Tablo ilişkisi Kurma"
 date: 2016-05-10
 categories: 

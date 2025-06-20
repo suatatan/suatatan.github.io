@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Excel VBA ile muhasebe uygulamaları"
 date: 2014-02-20
 categories: 

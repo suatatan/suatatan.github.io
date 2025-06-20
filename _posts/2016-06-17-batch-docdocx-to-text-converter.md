@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Batch DOC/DOCX to Text Converter"
 date: 2016-06-17
 categories: 

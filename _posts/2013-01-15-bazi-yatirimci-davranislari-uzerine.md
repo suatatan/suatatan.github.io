@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bazı yatırımcı davranışları üzerine"
 date: 2013-01-15
 categories: 

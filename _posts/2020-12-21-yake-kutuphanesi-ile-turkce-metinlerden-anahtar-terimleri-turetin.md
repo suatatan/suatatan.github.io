@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "YAKE kütüphanesi ile Türkçe Metinlerden Anahtar Terimleri Türetin"
 date: 2020-12-21
 categories: 

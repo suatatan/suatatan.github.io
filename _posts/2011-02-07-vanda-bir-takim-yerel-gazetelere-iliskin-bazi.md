@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Van'da bir takım yerel gazetelere ilişkin bazı gerçekler"
 date: 2011-02-07
 categories: 

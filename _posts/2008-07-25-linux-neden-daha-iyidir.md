@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Linux Neden Daha İyidir"
 date: 2008-07-25
 categories: 

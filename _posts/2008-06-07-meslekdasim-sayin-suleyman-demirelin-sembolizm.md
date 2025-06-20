@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Meslekdaşım Sayın Süleyman Demirel'in sembolizm ustalığı"
 date: 2008-06-07
 categories: 

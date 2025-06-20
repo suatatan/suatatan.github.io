@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Muhammed Musaddık Kimdir? (Bir dönemin aşikar emperyalizmi)"
 date: 2008-07-10
 categories: 

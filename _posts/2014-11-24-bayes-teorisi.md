@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Bayes Teorisi"
 date: 2014-11-24
 categories: 

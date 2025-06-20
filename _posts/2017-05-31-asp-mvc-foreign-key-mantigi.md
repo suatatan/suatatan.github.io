@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "ASP.MVC Foreign Key Mantığı"
 date: 2017-05-31
 ---

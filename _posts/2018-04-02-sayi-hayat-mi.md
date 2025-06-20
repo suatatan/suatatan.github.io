@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Sayı = Hayat mı?"
 date: 2018-04-02
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Yeoman ne işe yarar?"
 date: 2022-05-17
 ---

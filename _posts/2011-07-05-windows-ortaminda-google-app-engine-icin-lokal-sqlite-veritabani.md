@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Windows ortamında Google App Engine için lokal sqlite veritabanı"
 date: 2011-07-05
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Jquery ile Json üzerinden Flickr API'den Photoset listesini çekme"
 date: 2011-07-06
 categories: 

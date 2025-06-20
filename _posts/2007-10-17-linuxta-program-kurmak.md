@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Linuxta program kurmak"
 date: 2007-10-17
 categories: 

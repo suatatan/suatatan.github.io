@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Kendiliğinden kayma özelliği de olan basit bir Jquery content slider"
 date: 2011-09-20
 tags: 

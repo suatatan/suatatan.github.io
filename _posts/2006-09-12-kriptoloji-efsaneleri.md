@@ -1,6 +1,7 @@
 ---
 title: "KRİPTOLOJİ EFSANELERİ"
 date: 2006-09-12
+layout: post
 categories: 
   - "genel"
 tags: 

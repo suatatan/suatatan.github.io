@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "İlk Google App Script Uygulamam"
 date: 2012-06-10
 categories: 

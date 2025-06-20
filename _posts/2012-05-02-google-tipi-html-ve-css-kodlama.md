@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Google tipi html ve css kodlama"
 date: 2012-05-02
 categories: 

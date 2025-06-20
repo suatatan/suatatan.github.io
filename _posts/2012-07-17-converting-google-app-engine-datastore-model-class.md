@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Converting Google App Engine Datastore Model Class to XML"
 date: 2012-07-17
 categories: 

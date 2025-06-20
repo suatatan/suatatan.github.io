@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mutually exclusive'nin Türkçesi  nedir?"
 date: 2012-11-02
 categories: 

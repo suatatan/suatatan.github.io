@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "C++ ile yazdığınız programı her yerden compile edin"
 date: 2014-12-07
 categories: 

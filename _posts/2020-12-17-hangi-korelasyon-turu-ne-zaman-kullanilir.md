@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hangi Korelasyon Türü Ne Zaman Kullanılır?"
 date: 2020-12-17
 ---
