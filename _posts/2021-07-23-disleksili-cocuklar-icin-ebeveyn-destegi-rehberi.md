@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Disleksili Çocuklar için Ebeveyn Desteği Rehberi"
+categories:
+- cocuklar
 date: 2021-07-23
-categories: 
-  - "cocuklar"
-tags: 
-  - "disleksi"
+layout: post
+tags:
+- disleksi
+- english
+- longread
+- opinion
+- technology
+title: Disleksili Çocuklar için Ebeveyn Desteği Rehberi
 ---
 
 Türkiye'de disleksi henüz yeni yeni anlaşılan bir durum (rahatsızlık veya hastalık demediğime dikkat edin). Ancak çocuklar hızla büyüyor ve bu çocukların bekleyecek zamanı yok. Disleksi için uzman teşhisi ve profesyonel destek önemlidir. Bir kere teşhis konduktan sonra ebeveynleri uzman görüşlerine göre izlemek, destek olmaya sıra gelir. Ancak ebeveynlerin ne yapması gerektiği konusunda Türkçe materyal bulmak çok zordur. Bu amaçla bu konuda yaptığım okumaları ve aldığım notları ve en önemlisi kendi tecrübelerimi burada açıkça paylaşmak istiyorum. Aşağıdaki notları her okumamdan sonra fırsat buldukça güncelleyeceğim. Lütfen soru ve görüşlerinizi yorum kısmına eklemekten çekinmeyin.

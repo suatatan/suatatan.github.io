@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Dikkat çeken kitaplar"
+categories:
+- genel
 date: 2012-05-27
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: Dikkat çeken kitaplar
 ---
 
 Yine kitapçılar, yine okumaya niteleyenilenler

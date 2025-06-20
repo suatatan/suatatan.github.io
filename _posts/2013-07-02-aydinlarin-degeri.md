@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Aydınların değeri"
+categories:
+- genel
 date: 2013-07-02
-categories: 
-  - "genel"
-tags: 
-  - "edebiyat"
+layout: post
+tags:
+- edebiyat
+- english
+- longread
+- technology
+title: Aydınların değeri
 ---
 
 [![](/images/582134_218573914910480_404151736_n.jpg)](https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/p480x480/582134_218573914910480_404151736_n.jpg)

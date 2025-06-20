@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Mardin Deyrrüzzaferan Kilisesinde"
+categories:
+- gordugum-ruyalar
 date: 2006-10-30
-categories: 
-  - "gordugum-ruyalar"
+layout: post
+tags:
+- english
+- quickread
+title: Mardin Deyrrüzzaferan Kilisesinde
 ---
 
 Rüya Tarihi: 28.Ekim.2006  

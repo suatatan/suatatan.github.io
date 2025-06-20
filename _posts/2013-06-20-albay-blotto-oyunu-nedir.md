@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Albay Blotto Oyunu Nedir?"
+categories:
+- genel
 date: 2013-06-20
-categories: 
-  - "genel"
-tags: 
-  - "akademik"
-  - "isletme"
+layout: post
+tags:
+- akademik
+- english
+- isletme
+- longread
+- technology
+title: Albay Blotto Oyunu Nedir?
 ---
 
   

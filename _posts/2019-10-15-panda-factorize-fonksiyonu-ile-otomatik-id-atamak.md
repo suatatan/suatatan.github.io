@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Panda Factorize Fonksiyonu ile Otomatik ID atamak"
 date: 2019-10-15
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Panda Factorize Fonksiyonu ile Otomatik ID atamak
 ---
 
 Bazen elinize uzun bir liste gelir ve bu listede her bir kategorik değere sayısal bir değer atamanız icap eder. Mesela data frame (df) nesnemiz şöyle olsun:

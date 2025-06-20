@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "2016'da okuduklarım"
+categories:
+- okuma-notlari
 date: 2017-01-05
-categories: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: 2016'da okuduklarım
 ---
 
 2016'da okuduğum kitaplar aşağıdaki gibi. [Neden paylaşıyorum?](http://suatatan.com/blog/2013/05/31/suat-atanin-okuma-notlari-neden-var-neden/)

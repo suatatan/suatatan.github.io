@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "İşte size gayrı-organik lakin fevkalade \"naturel\" tarım"
+categories:
+- genel
 date: 2008-05-18
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: İşte size gayrı-organik lakin fevkalade "naturel" tarım
 ---
 
 [![](/images/orgtarim1.jpg)](http://suatatan.wordpress.com/wp-content/uploads/2008/05/orgtarim1.jpg)  

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Google App Engine ile birden fazla sayfaya aynı şablonu uygulama"
+categories:
+- bilgisayar
+- genel
 date: 2012-04-13
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-engine"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- technology
+title: Google App Engine ile birden fazla sayfaya aynı şablonu uygulama
 ---
 
 Hazırladığınız bir web sayfasının şablonunu tüm sayfalara uygulamak web tasarımın vazgeçilmez süreçlerindendir. Bunun için sıklıkla Dreamweaver kullanılır. Ancak Dreamweaver'i kullanmıyor  veya kullanmak istemiyorsanız Python ile Google App Engine'da  bunun için profesyonel başka bir çözüm var. Anlatayım:

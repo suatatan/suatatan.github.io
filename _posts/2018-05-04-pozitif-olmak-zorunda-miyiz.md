@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Pozitif olmak zorunda mıyız? Manson'un kitabından notlar ve çıkarımlar"
+categories:
+- okuma-notlari
 date: 2018-05-04
-categories: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Pozitif olmak zorunda mıyız? Manson'un kitabından notlar ve çıkarımlar
 ---
 
 Psikologlar, iş arkadaşları, anneler, babalar, gurular, CEO'lar ya da çevremizdeki herkesin pozitif olmamız gerektiğine dair önerileri içimize su serpse de bunu yapmak zorunda olup olmadığımızı hiç sorguluyor muyuz?

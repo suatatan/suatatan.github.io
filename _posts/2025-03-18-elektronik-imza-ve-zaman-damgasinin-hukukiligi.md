@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Elektronik imza ve zaman damgasının hukukiliği"
 date: 2025-03-18
-tags: 
-  - "deepresearch"
+layout: post
+tags:
+- deepresearch
+- english
+- longread
+- opinion
+- technology
+title: Elektronik imza ve zaman damgasının hukukiliği
 ---
 
 **Kriptografik Hash ve Diğer Doğrulama Yöntemleri:** Elektronik imza teknolojisi, kriptografi bilimine dayanır. İmzalanacak bir belgenin önce **kriptografik özeti (hash değeri)** çıkarılır; bu, belge içeriğinin benzersiz bir dijital parmak izi gibidir. Ardından bu özet, imza sahibinin özel anahtarı ile şifrelenerek elektronik imza oluşturulur. Karşı tarafta, imza sahibinin **açık anahtarı** kullanılarak bu özet çözülür ve orijinal belge özetiyle karşılaştırılır. Eğer doğrulama başarılıysa, belgenin imza sahibinden geldiği ve sonradan değiştirilmediği anlaşılır​

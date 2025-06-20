@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Matematilsel İktisat"
+categories:
+- genel
 date: 2014-12-25
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+title: Matematilsel İktisat
 ---
 
 Güzel bir açık, el altı kitabı:

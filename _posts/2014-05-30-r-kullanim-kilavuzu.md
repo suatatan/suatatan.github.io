@@ -1,15 +1,18 @@
 ---
-layout: post
-title: "R Kullanım Kılavuzu"
+categories:
+- bilgisayar
+- genel
 date: 2014-05-30
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "finans"
-  - "istatistik"
-  - "r"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- istatistik
+- quickread
+- r
+- technology
+title: R Kullanım Kılavuzu
 ---
 
 [![](/images/hpgraphic.png)](http://www.r-project.org/hpgraphic.png)

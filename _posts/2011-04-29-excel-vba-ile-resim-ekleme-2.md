@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Excel VBA ile resim ekleme"
+categories:
+- bilgisayar
+- genel
 date: 2011-04-29
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel"
-  - "excel-vba"
+layout: post
+tags:
+- english
+- excel
+- excel-vba
+- longread
+- technology
+title: Excel VBA ile resim ekleme
 ---
 
 Excel'de makro kaydederek resim eklemek sorunlu bir iştir. Bunun yerine makroyu elle yazarak resmin eklenmesini sağlayabilirsiniz.  

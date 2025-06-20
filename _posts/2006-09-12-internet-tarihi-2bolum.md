@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "İNTERNET TARİHİ (2.BÖLÜM)"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: İNTERNET TARİHİ (2.BÖLÜM)
 ---
 
 Artık internetin bile tarihinin yavaş yavaş teşekkül etmeye başladığını varsayan yönelimimizle internet tarihi üzerine incelememize devam ediyoruz:

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "PATLAMIŞ MISIR !"
+categories:
+- genel
 date: 2013-08-19
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- yazilarim
+title: PATLAMIŞ MISIR !
 ---
 
   

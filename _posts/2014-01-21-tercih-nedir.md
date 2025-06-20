@@ -1,14 +1,16 @@
 ---
-layout: post
-title: "Tercih nedir?"
+categories:
+- genel
 date: 2014-01-21
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+title: Tercih nedir?
 ---
 
 Ekonomi bilimindeki anlamıyla:  
   
-
 _“Ekonomi ve diğer sosyal bilimlerde tercih bir dizi varsayıma dayanır. Bu varsayımlar bazı alternatifler arasında, tatmin, mutluluk, haz, zevk ve fayda bakımından, alternatiflerin sundukları imkanlara göre optimal seçim ile sonuçlanan bir sürece dayanır.  Ekonomistler genellikle fayda ve seçim konusunun bizatihi kendisine bakmamalarına rağmen, amprik anlamda talep analizi yapabilmek için tercih konusuna odaklanırlar.”_
 
   

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Anki bulk image add to cards"
 date: 2023-02-10
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Anki bulk image add to cards
 ---
 
 This way for developers

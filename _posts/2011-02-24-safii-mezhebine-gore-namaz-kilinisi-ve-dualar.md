@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Şafii Mezhebine göre Namaz Kılınışı ve Dualar"
+categories:
+- din
 date: 2011-02-24
-categories: 
-  - "din"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Şafii Mezhebine göre Namaz Kılınışı ve Dualar
 ---
 
 ![](/images/Salat_positions.jpg) Bir blogda namazın nasıl kılındığı hakkındaki yazıya şaşıranlar için:Bir dostum (4 hak mezhepten Şafii mezhebine mensup) nasıl namaz kılınacağını sordu. Aslında mezhepler arasında kılınış farkı yok. Sadece bazı dualar farklı. Bu blogun amacı da tek kişiye yapılmış her türlü bilgisel faydayı çoklamak olduğundan bu 'temel' ama internette genellikle Hanefilere göre anlatım olduğundan dolayı aslında bir boşluğu dolduracak olan bu blog girdisini paylaşıyorum. Budizme göre nasıl ibadet yapılır diye soru sorulmadığından bu blogda ayrıca yayınlamadım. Neticde her türlü bilgisel ihtiyaca cevap vermeyi görev biliyorum.

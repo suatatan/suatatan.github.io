@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "News Please!: Haber analizi yapanlar için ilaç gibi bir Crawler"
+categories:
+- bilgisayar
 date: 2020-10-15
-categories: 
-  - "bilgisayar"
-tags: 
-  - "metin-madenciligi"
+layout: post
+tags:
+- english
+- longread
+- metin-madenciligi
+- technology
+title: 'News Please!: Haber analizi yapanlar için ilaç gibi bir Crawler'
 ---
 
 Kendi küçük crawler'ınızı oluşturmak ister misiniz? Ben haber analitiği ile ilgili çalışmalarımı yaparken eksteriyetle çok miktarda habere ihtiyaç duyuyorum. Şu ana kadar scra.py, newspaper3k gibi bir çok kütüphane kullandım Python'da. R'da ise Rvest. Ancak bu kütüphaneler bir yere kadar işe yarıyor. Çekebildiğim en fazla miktar 50.000 civarında haber idi. Burada suç bu kütüphanelerin değil, daha teknik ayrıntıda.

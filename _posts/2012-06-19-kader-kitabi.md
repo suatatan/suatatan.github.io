@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Kader kitabı"
+categories:
+- genel
 date: 2012-06-19
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- technology
+title: Kader kitabı
 ---
 
 Hayat kader kitabının kenarlarına kendimizce aldığımız nottan ibaret. Şerh edebildiğimiz kadar yaşarız.  

@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Her şey ABD'nin elinde!"
+categories:
+- genel
 date: 2013-04-02
-categories: 
-  - "genel"
-tags: 
-  - "radikal-iki"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- radikal-iki
+- technology
+- yazilarim
+title: Her şey ABD'nin elinde!
 ---
 
 [![](/images/bahceli-bursa.jpg)](http://4.bp.blogspot.com/-NO-vwYO6-EI/UVqb3SOfe9I/AAAAAAAAGDk/uxVq-7yo39c/s1600/bahceli-bursa.jpg)

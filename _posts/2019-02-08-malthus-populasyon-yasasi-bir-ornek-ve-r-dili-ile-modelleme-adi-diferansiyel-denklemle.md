@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Malthus Popülasyon Yasası Bir Örnek ve R Dili ile Modelleme (Adi Diferansiyel Denklemle)"
+categories:
+- r-dili
 date: 2019-02-08
-categories: 
-  - "r-dili"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Malthus Popülasyon Yasası Bir Örnek ve R Dili ile Modelleme (Adi Diferansiyel
+  Denklemle)
 ---
 
 Sistem dinamiklerinde ‘stocks’ olarak anılan her bir düğüm artış ve azalışa hazir olan bir olgudan başka bir şey değildir. Örneğin stock nüfus olduğunda nüfus için ‘inflow’ doğumlar, ‘outflow’ ölümlerdir. Amaç diyelim ki bugün nüfusunu bildiğimiz bir yerde 10 sene sonraki nüfusu hesaplamaktır. Bu hesaplama yapılırken elbette elimizde nüfusun nasıl artacağına dair bir fonksiyon olmalıdır. Bu fonksiyon literatürden veya uzmanlıktan gelen bir fonksiyon olabilir.

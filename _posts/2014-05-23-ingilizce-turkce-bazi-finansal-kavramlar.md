@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "İngilizce-Türkçe Bazı Finansal Kavramlar"
+categories:
+- genel
 date: 2014-05-23
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: İngilizce-Türkçe Bazı Finansal Kavramlar
 ---
 
   

@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Pandas Data Frame One-to-Hot Operasyonu ile kategorik verileri sayısallaştırma"
+categories:
+- bilgisayar
 date: 2020-09-15
-categories: 
-  - "bilgisayar"
-tags: 
-  - "makine-ogrenmesi"
-  - "python"
-  - "yapay-zeka"
+layout: post
+tags:
+- english
+- longread
+- makine-ogrenmesi
+- python
+- technology
+- yapay-zeka
+title: Pandas Data Frame One-to-Hot Operasyonu ile kategorik verileri sayısallaştırma
 ---
 
 Değerli okurlar,

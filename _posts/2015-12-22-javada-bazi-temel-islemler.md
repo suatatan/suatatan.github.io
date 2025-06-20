@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Java’da bazı temel işlemler"
+categories:
+- bilgisayar
+- genel
 date: 2015-12-22
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "java"
+layout: post
+tags:
+- english
+- java
+- longread
+title: Java’da bazı temel işlemler
 ---
 
 Java’da sıkça yazmadığım için sıkça unuttuğum ve unutulan bazı temel işlevlerle ilgili el altı linkleri ve snippetleri

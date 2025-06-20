@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "Varmak İstediğin Yer Değil Zaten Olduğun Yere Dönüş: Sankalpa"
+categories:
+- din
+- yazilarim
 date: 2018-12-12
-categories: 
-  - "din"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: 'Varmak İstediğin Yer Değil Zaten Olduğun Yere Dönüş: Sankalpa'
 ---
 
 <figure>

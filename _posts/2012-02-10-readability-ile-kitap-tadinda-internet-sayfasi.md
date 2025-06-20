@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Readability ile kitap tadında internet sayfası okumak"
+categories:
+- bilgisayar
+- genel
 date: 2012-02-10
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Readability ile kitap tadında internet sayfası okumak
 ---
 
 [![](/images/array-devices.png)](http://du3itj18e4z0b.cloudfront.net/b516b0/images/array-devices.png)İnternette “bilgi” amaçlı dolaşırken, girdiğiniz sayfalarda bir ordan bir buradan zıplayan reklamlar, rahatsız edici görseller, bozuk puntolar ve küçük harflerden dolayı sinirlerinizin bozulduğu olmuştur.  

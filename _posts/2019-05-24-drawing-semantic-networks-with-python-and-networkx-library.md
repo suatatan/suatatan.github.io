@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Drawing Semantic Networks with Python and NetworkX library"
+categories:
+- bilgisayar
 date: 2019-05-24
-categories: 
-  - "bilgisayar"
-tags: 
-  - "data-science"
-  - "python"
+layout: post
+tags:
+- data-science
+- english
+- longread
+- python
+- technology
+title: Drawing Semantic Networks with Python and NetworkX library
 ---
 
 ```

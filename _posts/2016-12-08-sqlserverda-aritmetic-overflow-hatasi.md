@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "SQLServer’da “aritmetic overflow” hatası"
+categories:
+- bilgisayar
+- genel
 date: 2016-12-08
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "aspmvc"
-  - "sqlserver"
-  - "yazilim"
+layout: post
+tags:
+- aspmvc
+- english
+- longread
+- sqlserver
+- technology
+- yazilim
+title: SQLServer’da “aritmetic overflow” hatası
 ---
 
 SQLServer'da decimal sayı tanımlamalarında zaman zaman bu hatayla karşılaşılır. Rahat olun suçlu microsofttur. DECIMAL(10,2) demek virgülden **ÖNCE** 10-2=8 hane demek oluyor. Yani cins adamlar onlarca yazılım dilinde bu iş için daha kolay tanım varken neden yazılımcıya eziyet edersin:)

@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Fotoğrafik görsellik hibrit algılama biçimlerinin düşmanıdır"
+categories:
+- genel
 date: 2013-08-13
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Fotoğrafik görsellik hibrit algılama biçimlerinin düşmanıdır
 ---
 
   

@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "PlanetNetBeans'ta Blogum Yayınlandı"
+categories:
+- bilgisayar
+- genel
 date: 2008-08-25
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: PlanetNetBeans'ta Blogum Yayınlandı
 ---
 
 ![](/images/planet-logo-1.png)  

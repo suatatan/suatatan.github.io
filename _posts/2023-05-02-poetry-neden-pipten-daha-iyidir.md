@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "Poetry Neden Pip'ten Daha İyidir"
 date: 2023-05-02
-tags: 
-  - "bilgisayar"
-  - "python"
+layout: post
+tags:
+- bilgisayar
+- english
+- longread
+- python
+- technology
+title: Poetry Neden Pip'ten Daha İyidir
 ---
 
 Bir Python geliştiricisiyseniz, muhtemelen projelerinizde bağımlılıklarını yönetmek için Pip kullandınız. Ancak, Pip'in daha büyük projeler veya daha karmaşık ortamlar için ideal olmayan bazı sınırlamaları var. İşte bu noktada devreye Poetry giriyor - Python için modern bir paket yöneticisi olan Poetry, Pip'e kıyasla birkaç avantaj sunar.

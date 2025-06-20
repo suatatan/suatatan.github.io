@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "DEVLETİN DERİNİ VE SIĞ OLANI"
 date: 2007-02-12
-tags: 
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yeni-ufuk-gazetesi
+title: DEVLETİN DERİNİ VE SIĞ OLANI
 ---
 
 Fransız kralı XIV Loui’nin **L’état moi** (Ben devletim) dediğini öğrendiğimden beridir; eski Yunan filozoflarına göre epeyce geç de olsa ben de sordum kendime:

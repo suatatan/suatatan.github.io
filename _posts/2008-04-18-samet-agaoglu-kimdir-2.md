@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Samet Ağaoğlu Kimdir?"
+categories:
+- genel
 date: 2008-04-18
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- okuma-notlari
+- quickread
+- technology
+- yazilarim
+title: Samet Ağaoğlu Kimdir?
 ---
 
 Menderes Döneminde Başbakan Yardımcılığı yapmıştır.  

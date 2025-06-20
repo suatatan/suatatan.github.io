@@ -1,7 +1,10 @@
 ---
-layout: post
-title: "Hangi Korelasyon Türü Ne Zaman Kullanılır?"
 date: 2020-12-17
+layout: post
+tags:
+- english
+- longread
+title: Hangi Korelasyon Türü Ne Zaman Kullanılır?
 ---
 
 Ben ezberimde tutamıyorum, tutamayan herkes için buraya not:

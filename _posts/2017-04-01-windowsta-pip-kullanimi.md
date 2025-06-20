@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Windows'ta 'PİP' kullanımı"
+categories:
+- bilgisayar
 date: 2017-04-01
-categories: 
-  - "bilgisayar"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- longread
+- python
+- technology
+title: Windows'ta 'PİP' kullanımı
 ---
 
 Python'un otomatik ve pratik kütüphane indiricisi pip uygulamasını windows'ta kullanmak için komut satırınına (cmd.exe) pip yazdığınızda windows tanımayacaktır. Bunun için pip.exe dosyasının yol adresini vermeniz gerekir. Bunu şöyle yapabilirsiniz:

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "90 Yaşında Ceviz Ağacı Diker Misiniz?"
 date: 2020-03-05
+layout: post
+tags:
+- english
+- longread
+- technology
+title: 90 Yaşında Ceviz Ağacı Diker Misiniz?
 ---
 
 Dün okuduğum Farsça bir kitapta, eski Sasani Hükümdarı Anuşirevan ile ilgili okuduğum hikayeye bayıldım:

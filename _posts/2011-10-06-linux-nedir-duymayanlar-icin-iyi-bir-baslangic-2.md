@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Linux nedir? Duymayanlar için iyi bir başlangıç"
+categories:
+- bilgisayar
+- genel
 date: 2011-10-06
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "linux"
+layout: post
+tags:
+- english
+- linux
+- longread
+- technology
+title: Linux nedir? Duymayanlar için iyi bir başlangıç
 ---
 
 [![](/images/linux-logo.jpg "linux logo")](http://suatatan.wordpress.com/wp-content/uploads/2011/10/linux-logo.jpg)  

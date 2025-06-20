@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Bir suç aleti olarak poşu"
+categories:
+- genel
 date: 2012-05-15
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+title: Bir suç aleti olarak poşu
 ---
 
 [![](/images/8f068-fft5_mf23034.jpeg)](https://suatatan.wordpress.com/wp-content/uploads/2012/05/8f068-fft5_mf23034.jpeg)

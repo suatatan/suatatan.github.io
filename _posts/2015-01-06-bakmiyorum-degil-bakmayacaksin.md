@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Bakmıyorum değil, bakmayacaksın!"
+categories:
+- genel
 date: 2015-01-06
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Bakmıyorum değil, bakmayacaksın!
 ---
 
 İlm-u hukuk  ve muhtelif diğer ulumda, üstazımız olan bir ağabeyimiz şehr-i Diyarbekir'de belki de “kırık” ya da “şeher çocuği” olarak tesmiye edilen bir şahsın deruni suali olan (aslında sual o kırığın değil daha ali makamlarda müsebbib-ül esbabın yahut esas gizli elin sualidir)  "Abé niye eyle oli" üzerine telif ettiği makaleyi kıraat etmekle yine aynı şehr-i mukaddesin, sarhoşlarından bile duyulabilecek hikmetlerden bir vakıa hatıra geldi.

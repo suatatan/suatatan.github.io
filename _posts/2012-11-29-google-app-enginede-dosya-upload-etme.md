@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Google App Engine'de dosya upload etme"
+categories:
+- bilgisayar
+- genel
 date: 2012-11-29
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-engine"
+layout: post
+tags:
+- english
+- google-app-engine
+- quickread
+- technology
+title: Google App Engine'de dosya upload etme
 ---
 
 Google App Engine ile dosya upload etmek için aşağıdaki kodları kullanabilirsiniz. Bu kodları test ettiğinizde önce dosya ekleme arayüzü açılır sonra dosyanız yüklendikten sonra “dosya yüklendi” diye ifade çıkar. Ayrıca bir link çıkar bu linke tıklayınca dosyanızın sunucadaki halini geri indirebiilirsiniz.  

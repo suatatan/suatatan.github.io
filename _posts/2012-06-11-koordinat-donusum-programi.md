@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Koordinat dönüşüm programı"
+categories:
+- genel
 date: 2012-06-11
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Koordinat dönüşüm programı
 ---
 
 Çeşitli koordinat sistemleri arasında dönüşüm için aşağıdaki programı kullanabilirsiniz:  

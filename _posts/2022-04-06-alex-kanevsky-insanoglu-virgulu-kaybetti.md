@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "ALEX KANEVSKY / İNSANOĞLU VİRGÜLÜ KAYBETTİ"
 date: 2022-04-06
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: ALEX KANEVSKY / İNSANOĞLU VİRGÜLÜ KAYBETTİ
 ---
 
 ######   

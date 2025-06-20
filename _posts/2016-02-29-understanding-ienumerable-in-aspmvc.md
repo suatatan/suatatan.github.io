@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Understanding IEnumerable in ASP.MVC"
+categories:
+- genel
 date: 2016-02-29
-categories: 
-  - "genel"
-tags: 
-  - "asp-mvc"
-  - "computer"
+layout: post
+tags:
+- asp-mvc
+- computer
+- english
+- quickread
+title: Understanding IEnumerable in ASP.MVC
 ---
 
 Here is gist:

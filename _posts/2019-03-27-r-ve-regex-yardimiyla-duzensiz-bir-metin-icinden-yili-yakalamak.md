@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "R ve Regex Yardımıyla düzensiz bir metin içinden yılı yakalamak"
+categories:
+- bilgisayar
 date: 2019-03-27
-categories: 
-  - "bilgisayar"
-tags: 
-  - "r"
-  - "veribilim"
-  - "yazilim"
+layout: post
+tags:
+- english
+- longread
+- r
+- technology
+- veribilim
+- yazilim
+title: R ve Regex Yardımıyla düzensiz bir metin içinden yılı yakalamak
 ---
 
 Bir projemde aşağıdaki gibi iki tür metin vardı:

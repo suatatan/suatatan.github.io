@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Defining decision tables in an easy way under Python"
+categories:
+- genel
 date: 2015-03-19
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+title: Defining decision tables in an easy way under Python
 ---
 
 Definition:

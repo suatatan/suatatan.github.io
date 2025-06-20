@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Veri Tabanı Güvenliği Eğitimi Notları"
 date: 2020-02-21
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Veri Tabanı Güvenliği Eğitimi Notları
 ---
 
 - [https://www.exploit-db.com/ghdb/4924](https://www.exploit-db.com/ghdb/4924) SQL yedeklerini internette unutan siteleri bulup bu dosyaalarından veri tabanı şifreleri bujlunabilir.

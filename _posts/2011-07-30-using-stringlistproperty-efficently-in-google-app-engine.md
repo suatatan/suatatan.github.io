@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Using StringListProperty efficently in Google App Engine"
+categories:
+- bilgisayar
+- english
 date: 2011-07-30
-categories: 
-  - "bilgisayar"
-  - "english"
-tags: 
-  - "google-app-engine"
-  - "python"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- opinion
+- python
+- technology
+- web-programlama
+title: Using StringListProperty efficently in Google App Engine
 ---
 
 StringListProperty is a datastore value type that stores list items. Using StringListProperty is very easy:

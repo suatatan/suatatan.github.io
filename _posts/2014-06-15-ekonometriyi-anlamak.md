@@ -1,15 +1,18 @@
 ---
-layout: post
-title: "Ekonometriyi anlamak"
+categories:
+- genel
 date: 2014-06-15
-categories: 
-  - "genel"
-tags: 
-  - "ekonometri"
-  - "ekonomi"
-  - "istatistik"
-  - "okuma-notlari"
-  - "isletme"
+layout: post
+tags:
+- ekonometri
+- ekonomi
+- english
+- isletme
+- istatistik
+- longread
+- okuma-notlari
+- technology
+title: Ekonometriyi anlamak
 ---
 
   

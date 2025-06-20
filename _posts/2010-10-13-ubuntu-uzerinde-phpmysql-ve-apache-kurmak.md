@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Ubuntu üzerinde PHP,Mysql ve Apache kurmak"
 date: 2010-10-13
-tags: 
-  - "linux"
-  - "ubuntu"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- linux
+- longread
+- technology
+- ubuntu
+- web-programlama
+title: Ubuntu üzerinde PHP,Mysql ve Apache kurmak
 ---
 
 Ubuntu üzerinde PHP ile web programlama yapacaklar için en kısa yoldan kurulum:

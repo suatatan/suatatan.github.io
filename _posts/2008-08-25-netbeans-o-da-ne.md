@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Netbeans: O da ne?"
+categories:
+- bilgisayar
 date: 2008-08-25
-categories: 
-  - "bilgisayar"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- longread
+- technology
+title: 'Netbeans: O da ne?'
 ---
 
 ![](/images/nb-logo2.gif) Netbeans da ne oluyor? Adın sıkça duyuyor, kerametlerini işitiyorsunuz. Ancak Netbeans nedir diye soramıyorsunuz? Netbeans ile ilgili binlerce yazının yazılıp çizildiği Google Cehenneminde eminim kimse size Netbeans'ın tam olarak ne olduğunu açıklamıyor. Sanki herkes sırrı saklamak için paylaşmış gibi. İşte sırların cevabı:

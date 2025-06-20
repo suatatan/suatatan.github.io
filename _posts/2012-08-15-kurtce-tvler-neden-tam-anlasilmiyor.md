@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Kürtçe TV'ler neden tam anlaşılmıyor?"
+categories:
+- genel
 date: 2012-08-15
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- sehrivan-gazetesi
+- technology
+- van-yazilari
+- yazilarim
+title: Kürtçe TV'ler neden tam anlaşılmıyor?
 ---
 
 [![](/images/resim.jpg)](http://static.haberdesin.com/sites/default/files/styles/large/public/resim.jpg)

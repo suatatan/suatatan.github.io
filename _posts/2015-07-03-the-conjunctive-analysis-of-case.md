@@ -1,14 +1,15 @@
 ---
-layout: post
-title: "The Conjunctive Analysis of Case Configurations:
-an Exploratory Method for Discrete Multivariate
-Analyses of Crime Data"
+categories:
+- genel
 date: 2015-07-03
-categories: 
-  - "genel"
-tags: 
-  - "academic"
-  - "papers"
+layout: post
+tags:
+- academic
+- english
+- papers
+- quickread
+title: 'The Conjunctive Analysis of Case Configurations: an Exploratory Method for
+  Discrete Multivariate Analyses of Crime Data'
 ---
 
 The analysis of crime risk over properties. 

@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Basit bir Jquery news slider uygulaması"
+categories:
+- bilgisayar
+- genel
 date: 2011-09-20
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "jquery"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- jquery
+- quickread
+- technology
+- web-programlama
+title: Basit bir Jquery news slider uygulaması
 ---
 
 İnternette bulunan yüzlerce karmaşık news slider ya da content slider scriptinden sıkıldıysanız, aşağıda “kendi ellerimle” hazırladığım Jquery news slideri tam size göre.  

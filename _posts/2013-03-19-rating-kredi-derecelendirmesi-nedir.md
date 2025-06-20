@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Rating (Kredi derecelendirmesi) nedir?"
+categories:
+- genel
 date: 2013-03-19
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+title: Rating (Kredi derecelendirmesi) nedir?
 ---
 
 | [![](/images/09fca-704px-rating_sp27s_europa_06-2011-svg.png)](https://suatatan.wordpress.com/wp-content/uploads/2013/03/09fca-704px-rating_sp27s_europa_06-2011-svg.png) |

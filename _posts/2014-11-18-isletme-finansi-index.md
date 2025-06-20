@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "İşletme Finansı Index"
+categories:
+- genel
 date: 2014-11-18
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "index"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- index
+- isletme
+- quickread
+- technology
+title: İşletme Finansı Index
 ---
 
 İşletme Finans üzerine hazırlamış olduğum farklı tarihlerdeki farklı yazılara ulaşmak için indekslemeye karar verdim. Aşağıda finans hakkında yazdığım konuları mantıksal sıraya göre sıraladım. Ulaşmak istediğiniz başlığa tıklayabilirsiniz:

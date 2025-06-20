@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "RCrawler ile Web Crawling İşlemi"
+categories:
+- bilgisayar
 date: 2019-11-01
-categories: 
-  - "bilgisayar"
-tags: 
-  - "metin-madenciligi"
-  - "veri-madenciligi"
+layout: post
+tags:
+- english
+- longread
+- metin-madenciligi
+- technology
+- veri-madenciligi
+title: RCrawler ile Web Crawling İşlemi
 ---
 
 Metin madenciliği yapabilmek için elde büyük miktarda verinin olması gereklidir. Bu miktardaki veriyi ancak ya hazır bulmak ya da web scraping adını verdiğimiz yöntemlerle web sayfalarından derlemek durumundayız. Bu durumda ise Python için kullanılacak scrapy, ve python selenium gibi kütüphanelerin yanında R için Rvest ve scrapeR gibi kütüphaneler bulunmaktadır.

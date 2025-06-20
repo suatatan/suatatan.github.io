@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Sosyal Network Analizi ile ilgili kitaplar"
+categories:
+- ekonomi
+- isletme
 date: 2017-04-19
-categories: 
-  - "ekonomi"
-  - "isletme"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Sosyal Network Analizi ile ilgili kitaplar
 ---
 
 Sosyal ağ analizi ile ilgili UCINET uygulamasına alternatif açık kaynaklı bir uygulama ararken [Gephi'yi](https://gephi.org/) keşfettim. Daha sonra Gephi'ye ait bir Facebook grubunu buldum. Gruptan sosyal network analizi ile ilgili kitap tavsiyesi istediğimde gruptan aşağıdaki kitap listesi tavsiyesini aldım. Kendilerine teşekkürler:

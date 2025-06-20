@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Mantığa Giriş"
+categories:
+- genel
 date: 2015-02-20
-categories: 
-  - "genel"
-tags: 
-  - "kitap"
-  - "okumanotlari"
+layout: post
+tags:
+- english
+- kitap
+- longread
+- okumanotlari
+- opinion
+- technology
+title: Mantığa Giriş
 ---
 
 ![](/images/tumblr_inline_nk39m9Hirp1r4exmc.jpg)

@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Mecliste Türkçe'den başka dil tartışması :)"
+categories:
+- genel
 date: 2010-12-21
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Mecliste Türkçe'den başka dil tartışması :)
 ---
 
 Bahçeli Kürtçe, Demirtaş da Göktürkçe konuşuyor…

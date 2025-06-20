@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Excel içinde makro yazarak herhangi bir internet sitesini açmak"
+categories:
+- bilgisayar
 date: 2011-05-13
-categories: 
-  - "bilgisayar"
-tags: 
-  - "excel"
-  - "excel-vba"
+layout: post
+tags:
+- english
+- excel
+- excel-vba
+- longread
+- technology
+title: Excel içinde makro yazarak herhangi bir internet sitesini açmak
 ---
 
 Excel makroları ile ya da diğer adı ile VBA ile yapılamaycak şey yok gibi. Şimdi diyelim ki bir excel tablosu ile çalışırken, döviz kurları ve benzeri bir veriyi almak için sürekli ve sıkça aynı web sitesini açıp bakmanız gerekiyor. Bunu elle yapmak yerine excel içerisine bir makro yazarak, makroya ister kısayol eklemek suretiyle ister bir butona atamak suretiyle  otomatik olarak internet sitesini excel içinde açabilirsiniz.

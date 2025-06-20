@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Van'da bir takım yerel gazetelere ilişkin bazı gerçekler"
+categories:
+- genel
 date: 2011-02-07
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Van'da bir takım yerel gazetelere ilişkin bazı gerçekler
 ---
 
 Ispatla mükellef olduğumu biliyorum ancak isim ve kuruluşları burada yayınlamaya gerek yok nitekim şikayetini yazacağım kuruluş ve isimler ola ki yine ‘mailleri görmemiş’ olsunlar.

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Linuxta program kurmak"
+categories:
+- bilgisayar
+- genel
 date: 2007-10-17
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "linux"
+layout: post
+tags:
+- english
+- linux
+- quickread
+- technology
+title: Linuxta program kurmak
 ---
 
 Yeni Pardus kullananların en büyük derdidir linux'a program kurmak;  

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Python'un tüm sürümleri bir arada bir sürümü: Canopy"
+categories:
+- bilgisayar
 date: 2017-04-01
-categories: 
-  - "bilgisayar"
-tags: 
-  - "programming"
-  - "python"
+layout: post
+tags:
+- english
+- programming
+- python
+- quickread
+- technology
+title: 'Python''un tüm sürümleri bir arada bir sürümü: Canopy'
 ---
 
 Python'u Windows'ta kullanırken projelerinizde kullanacağanız ve pip ya da easy\_install komutları ile indirebileceğiniz ek kütüphaneleri indirmek Linux'taki kadar kolay olmaz. Ayrıca tek tek indirmek pratik gelmeyebilir. Bu durum için daha önce doktora tezimi yazarken kullandığım ve içinde scipy, numpy, beautifulsoup gibi bir çok kütüphaneyi hazır bulundururan Canopy adlı bir Python sürümü var. Buradan [indirebilirsiniz](https://www.enthought.com/products/canopy/package-index/).

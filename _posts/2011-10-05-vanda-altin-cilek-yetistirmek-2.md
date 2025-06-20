@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Van'da altın çilek yetiştirmek"
+categories:
+- genel
 date: 2011-10-05
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- technology
+title: Van'da altın çilek yetiştirmek
 ---
 
 ![image](/images/wpid-2011-09-24-10-11-05.jpg)  

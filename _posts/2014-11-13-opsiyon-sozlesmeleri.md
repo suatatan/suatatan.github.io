@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Opsiyon Sözleşmeleri"
+categories:
+- genel
 date: 2014-11-13
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "turev-piyasalar"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+- turev-piyasalar
+title: Opsiyon Sözleşmeleri
 ---
 
 Opsiyon Sözleşmelerinin [Borsa İstanbul web sayfasındaki tanımı](http://www.borsaistanbul.com/urunler-ve-piyasalar/urunler/opsiyon-sozlesmeleri) şudur:

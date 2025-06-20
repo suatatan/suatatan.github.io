@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "K-Means ve TF.IDF ile gözetimsiz makine öğrenme algoritması örneği"
+categories:
+- bilgisayar
 date: 2019-07-02
-categories: 
-  - "bilgisayar"
-tags: 
-  - "makine-ogrenmesi"
+layout: post
+tags:
+- english
+- longread
+- makine-ogrenmesi
+- technology
+title: K-Means ve TF.IDF ile gözetimsiz makine öğrenme algoritması örneği
 ---
 
 Metin madenciliğinde sınıflandırma için kullanılacak algoritmalarda eğer gözetimli algoritma (supervised) kullanırsak dışarıdan eğitim verisine ihtiyaç duyarız. Dışarıdan gözetim gerektirmeyen (unsupervized) algoritmalarda ise metin içinde yapılar "cluster" adı verilen yapılara göre otomatik olarak algılanabilir.

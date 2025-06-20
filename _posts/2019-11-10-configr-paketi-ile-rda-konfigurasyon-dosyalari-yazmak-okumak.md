@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "configR paketi ile R'da konfigürasyon dosyaları yazmak, okumak"
+categories:
+- bilgisayar
 date: 2019-11-10
-categories: 
-  - "bilgisayar"
-tags: 
-  - "r"
-  - "veri-madenciligi"
-  - "veribilim"
+layout: post
+tags:
+- english
+- longread
+- r
+- technology
+- veri-madenciligi
+- veribilim
+title: configR paketi ile R'da konfigürasyon dosyaları yazmak, okumak
 ---
 
 Şöyle bir config dosyamız olsun, iki parametremiz var:

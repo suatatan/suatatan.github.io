@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Python ,Sqlite ve Tkinter ile basit bir masaüstü veri ekleme formu"
+categories:
+- bilgisayar
+- genel
 date: 2013-01-12
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- python
+- quickread
+- technology
+title: Python ,Sqlite ve Tkinter ile basit bir masaüstü veri ekleme formu
 ---
 
 | [![](/images/d1696-ekrengoruntusu-1.png)](https://suatatan.wordpress.com/wp-content/uploads/2013/01/d1696-ekrengoruntusu-1.png) |

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Kolerasyon ile Lineer Regresyon arasındaki fark nedir"
+categories:
+- genel
 date: 2013-04-21
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+title: Kolerasyon ile Lineer Regresyon arasındaki fark nedir
 ---
 
 [![](/images/sevenday-correlation.png)](http://www.comfsm.fm/~dleeling/health/sevenday-correlation.png)

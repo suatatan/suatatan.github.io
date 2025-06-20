@@ -1,15 +1,17 @@
 ---
-layout: post
-title: "Google Spreadsheet Query Function Makes your Spreadsheets DB which SQL-ready"
+categories:
+- genel
 date: 2016-01-01
-categories: 
-  - "genel"
-tags: 
-  - "computer"
-  - "excel"
-  - "googleapp"
-  - "googledocs"
-  - "googledrive"
+layout: post
+tags:
+- computer
+- english
+- excel
+- googleapp
+- googledocs
+- googledrive
+- longread
+title: Google Spreadsheet Query Function Makes your Spreadsheets DB which SQL-ready
 ---
 
 When you want to make complex queries over Excel sheet that is almost impossible. Yet by Google Docs Spreadsheet Query() function you  can write SQL and retrieve whatever you want.

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "MSSQL veritabanları hangi dizin altındadır"
 date: 2017-04-05
+layout: post
+tags:
+- english
+- longread
+- technology
+title: MSSQL veritabanları hangi dizin altındadır
 ---
 
 MSSQL veritabanlarına SQL Server Manager'den erişiriz. Ancak bu veri tabanları fiziksel olarak da bir yerde tutulmaktadır. Bu yer genellikle şu adrestedir:

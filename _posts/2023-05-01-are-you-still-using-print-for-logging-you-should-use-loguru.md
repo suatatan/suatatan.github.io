@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Are you still using \"print\" for logging? You should use Loguru"
 date: 2023-05-01
-tags: 
-  - "bilgisayar"
-  - "english"
-  - "python"
+layout: post
+tags:
+- bilgisayar
+- english
+- longread
+- python
+- technology
+title: Are you still using "print" for logging? You should use Loguru
 ---
 
 Logging is a crucial aspect of software development. It helps developers debug and understand the behaviour of their applications by capturing useful information at runtime. In Python, the standard logging module provides a basic framework for logging, but it can be cumbersome to use and lacks some essential features. This is where Loguru comes in.

@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Kendiliğinden kayma özelliği de olan basit bir Jquery content slider"
+categories:
+- bilgisayar
+- genel
 date: 2011-09-20
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "jquery"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- jquery
+- longread
+- technology
+- web-programlama
+title: Kendiliğinden kayma özelliği de olan basit bir Jquery content slider
 ---
 
 Bundan önceki [yazımızda](http://suatatan.wordpress.com/2011/09/20/basit-bir-jquery-news-slider-uygulamasi/) kendiliğinden kaymayan yanlızca kullanıcı sayıların üzerine gelince kayan bir "kayar haber" scripti hazırlamıştık. Şimdi ise sitesini hazırladığım bir arkadaşımızın talebi üzerine, çoğu haber sitesinde olduğu gibi kullanıcı karışmasa dahi kendiliğinden kayma efekti veriyoruz.

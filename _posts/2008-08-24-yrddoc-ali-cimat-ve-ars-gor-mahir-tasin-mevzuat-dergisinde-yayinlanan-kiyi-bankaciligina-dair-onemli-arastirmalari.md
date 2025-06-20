@@ -1,11 +1,16 @@
 ---
-layout: post
-title: "YRD.DOÇ. ALİ CİMAT VE ARŞ. GÖR. MAHİR TAŞ'IN MEVZUAT DERGİSİNDE YAYINLANAN KIYI BANKACILIĞINA DAİR ÖNEMLİ ARAŞTIRMALARI"
+categories:
+- sosyal-bilimler
 date: 2008-08-24
-categories: 
-  - "sosyal-bilimler"
-tags: 
-  - "ekonomi"
+layout: post
+tags:
+- ekonomi
+- english
+- longread
+- opinion
+- technology
+title: YRD.DOÇ. ALİ CİMAT VE ARŞ. GÖR. MAHİR TAŞ'IN MEVZUAT DERGİSİNDE YAYINLANAN
+  KIYI BANKACILIĞINA DAİR ÖNEMLİ ARAŞTIRMALARI
 ---
 
 Dikkat: bu yazının telif hakları yazarlarına ait olup, bu blog içerisinde kayda alınmak ve paylaşım için yayınlanmıştır.  Yazının orjinal adresi: http://www.mevzuatdergisi.com/2004/08a/02.htm olup yazının telif haklarını elinde bulunduranlarca talebi halinde yazı bu siteden kaldırılabilir. Yazarlarına saygılarımızla.

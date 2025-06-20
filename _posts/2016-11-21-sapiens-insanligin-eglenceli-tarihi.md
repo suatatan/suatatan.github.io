@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Sapiens: İnsanlığın eğlenceli tarihi"
+categories:
+- genel
 date: 2016-11-21
-categories: 
-  - "genel"
-tags: 
-  - "okumanotlari"
+layout: post
+tags:
+- english
+- longread
+- okumanotlari
+- opinion
+- technology
+title: 'Sapiens: İnsanlığın eğlenceli tarihi'
 ---
 
 ![](/images/tumblr_inline_ogzmtlh2LJ1r4exmc_540.jpg)

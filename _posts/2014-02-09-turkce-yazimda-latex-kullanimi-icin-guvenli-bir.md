@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Türkçe yazımda LateX kullanımı için güvenli bir yol"
+categories:
+- bilgisayar
+- genel
 date: 2014-02-09
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "akademik"
+layout: post
+tags:
+- akademik
+- english
+- quickread
+- technology
+title: Türkçe yazımda LateX kullanımı için güvenli bir yol
 ---
 
 Türkçe olarak Latex kullanma işine girdiyseniz sinirlerinizin çevik olması gerekir. Latex ile ilgili alternatif programların, kütüphanelerin çoğu iş Türkçe'ye gelince arıza çıkarmaktadır. Gerek windows altında gerekse ubuntu altında onlarca denemeden sonra, sinir bozmayacak şekilde Türkçe yazım için Latex kullanmak için bir yol buldum. Siz de istifade edebilirsiniz:  

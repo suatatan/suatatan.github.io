@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Gereksiz e-posta aboneliklerinden tek seferde kurtulun"
+categories:
+- genel
 date: 2014-05-24
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- technology
+title: Gereksiz e-posta aboneliklerinden tek seferde kurtulun
 ---
 
 [![](/images/69197-unroll.png)](https://suatatan.wordpress.com/wp-content/uploads/2014/05/69197-unroll.png)

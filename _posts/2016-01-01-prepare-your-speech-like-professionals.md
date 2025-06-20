@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Prepare your speech like professionals"
+categories:
+- genel
 date: 2016-01-01
-categories: 
-  - "genel"
-tags: 
-  - "apps"
-  - "productivity"
+layout: post
+tags:
+- apps
+- english
+- productivity
+- quickread
+- technology
+title: Prepare your speech like professionals
 ---
 
 There is a good app which provide more than indexcards for speech. I have not tried yet. But i shall tray it. 

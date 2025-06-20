@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Doktrinler sihirli değnekler değildir!"
+categories:
+- genel
 date: 2016-06-25
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- technology
+- yazilarim
+title: Doktrinler sihirli değnekler değildir!
 ---
 
 Sürekli olarak daha fazlasını istemek, kutsanıyor, destekleniyor hatta mecbur bırakılıyor. Herkesin her şeye sahip olduğu ve kimsenin mutsuz olmadığı ütopik bir dünya hayal ediyoruz. Oysa iktisadın ilk kuralı ‘kaynakların sınırlı olduğudur’.  

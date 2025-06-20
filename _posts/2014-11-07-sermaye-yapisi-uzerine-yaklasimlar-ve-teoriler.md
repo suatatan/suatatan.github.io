@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Sermaye Yapısı Üzerine Yaklaşımlar ve Teoriler"
+categories:
+- genel
 date: 2014-11-07
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Sermaye Yapısı Üzerine Yaklaşımlar ve Teoriler
 ---
 
 Sermaye yapısını etkikeyen faktörlerin en önemlisinin borç ve özkaynak olduğunu [önceki yazımızda](http://acikbellek.tumblr.com/post/101927606340/sermaye-yap-s-nedir-nelerden-etkilenir-neleri) belirtmiştik. Sermaye yapısının işletme değerine etkileri nelerdir? Ya da gerçekten işletme değerini etkiler mi sorusunun cevabını bu konudaki **yaklaşımlar** vermektedir. Sermaye yapısının işletme değeri üzerine teoriler genel olarak **geleneksel** ve **modern** yaklaşımlar olarak ikiye ayrılmaktadır. Bu teoriler şunlardır:

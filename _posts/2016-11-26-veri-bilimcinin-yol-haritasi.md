@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Veri Bilimcinin Yol Haritası"
+categories:
+- genel
 date: 2016-11-26
-categories: 
-  - "genel"
-tags: 
-  - "listeler"
-  - "ogrenirken"
-  - "veribilim"
+layout: post
+tags:
+- english
+- listeler
+- longread
+- ogrenirken
+- technology
+- veribilim
+title: Veri Bilimcinin Yol Haritası
 ---
 
 Öğrenilecek şeyler çok olunca sadece onların listesini bile düzenli bir yerde tutmak gerekiyor. Yüzlerce farklı kaynaktan, röportajdan ve listeden derlediğim bir kısmını da daha önceden kullandığım ‘şeyler’. İşte veri bilimciliğinde öğrenilmesi gereken şeylerin 'canlı’ ve yapılandırılmış listesi:

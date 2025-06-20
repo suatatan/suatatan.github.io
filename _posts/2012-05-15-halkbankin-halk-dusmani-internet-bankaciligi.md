@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "HalkBank'ın Halk Düşmanı İnternet Bankacılığı Üzerine"
+categories:
+- genel
 date: 2012-05-15
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: HalkBank'ın Halk Düşmanı İnternet Bankacılığı Üzerine
 ---
 
 _HalkBankasının internet ve mobil bankacılık serüveni ile ilgili yaşayan bir yazı olarak bu yazıyla ilgili gelişmeleri tarih ile versiyonlayarak yazıyorum:_  

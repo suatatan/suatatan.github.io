@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "SADDAMA RAHMET OKUMAK."
+categories:
+- genel
 date: 2007-01-07
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: SADDAMA RAHMET OKUMAK.
 ---
 
 Bush yönetimi kendisi ile gurur duymalıdır. Nitekim (Devlet Başkanı) Saddam Hüseyin gibi birini (Devlet Başkanı ibaresini tırnak içinde yazıyorum çünkü idam görüntülerini yayınlayan bir Irak televizyonu bu ibareyi kullandığı için kapatıldı); yaptığı katliamlara, halkına çektirdiği eziyetlere rağmen hakikaten acınacak bir duruma düşürmüştür. Öyle ki; bugün Saddam düşmanları dahi idam görüntülerini görünce; Saddam’a rahmet okudular.

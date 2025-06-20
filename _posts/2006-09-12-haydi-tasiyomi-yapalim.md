@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "HAYDİ, TAŞİYOMİ YAPALIM!"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: HAYDİ, TAŞİYOMİ YAPALIM!
 ---
 
 **(Lütfen bu yazıyı ayaktayken okuyun)**

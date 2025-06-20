@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "NumPy ve Excel'i yanyana görmek"
+categories:
+- bilgisayar
 date: 2020-12-08
-categories: 
-  - "bilgisayar"
-tags: 
-  - "veri-madenciligi"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- technology
+- veri-madenciligi
+title: NumPy ve Excel'i yanyana görmek
 ---
 
 Sanırım hazırladığım şu grafik bir veri setini Excel ile Python'da analiz etmek hususunda basit bir fikir verir.

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Hurwicz Kriteri Nedir?"
+categories:
+- genel
 date: 2014-11-24
-categories: 
-  - "genel"
-tags: 
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- sayisalyontemler
+- technology
+title: Hurwicz Kriteri Nedir?
 ---
 
 [Şu yazımızda](http://blog.suatatan.com/post/103205724775/belirsizlik-alt-nda-nas-l-karar-verilir) Agah Gayrımenlkul Limited Şirketi'nin 3 yatırım projesinden söz etmiştik:

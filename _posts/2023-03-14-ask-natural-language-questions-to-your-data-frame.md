@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ask natural language questions to your data frame"
+categories:
+- bilgisayar
 date: 2023-03-14
-categories: 
-  - "bilgisayar"
-tags: 
-  - "dataframe"
-  - "python"
+layout: post
+tags:
+- dataframe
+- english
+- longread
+- python
+- technology
+title: Ask natural language questions to your data frame
 ---
 
 Is this possible?

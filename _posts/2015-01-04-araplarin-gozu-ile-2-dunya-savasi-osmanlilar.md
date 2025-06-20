@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Arapların gözü ile 2. Dünya Savaş'ı (Osmanlı'lar )"
+categories:
+- genel
 date: 2015-01-04
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Arapların gözü ile 2. Dünya Savaş'ı (Osmanlı'lar )
 ---
 
 Belgesel: Arapların Gözünden Birinci Dünya Savaşı - 2. Bölüm

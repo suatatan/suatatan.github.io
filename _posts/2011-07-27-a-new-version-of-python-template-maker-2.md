@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "A new version of Python template maker"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2011-07-27
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "python"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- python
+- technology
+- web-programlama
+title: A new version of Python template maker
 ---
 
 I developed a [script](http://suatatan.wordpress.com/2011/07/27/dreamweaver-like-html-template-dressing-in-aptana-with-python/) early for dressing pages with demanded template here is newer version:  

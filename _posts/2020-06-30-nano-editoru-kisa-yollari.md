@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Nano Editörü Kısa Yolları"
 date: 2020-06-30
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Nano Editörü Kısa Yolları
 ---
 
 Linux'da konsolda çalışıtken konsol üzerinde dosyaları açıp düzenlemek için Notepad'ı aratmayan bir editör var: Nano. Bilenler bilir, hızı, pratikliği ve kolaylığı ile alışkanlık yaratan bir editördür. Ancak düğme yoktur, kısayollar vardır.

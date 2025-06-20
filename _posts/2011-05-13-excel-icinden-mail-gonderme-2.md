@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Excel içinden mail gönderme"
+categories:
+- bilgisayar
+- genel
 date: 2011-05-13
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel-vba"
+layout: post
+tags:
+- english
+- excel-vba
+- quickread
+- technology
+title: Excel içinden mail gönderme
 ---
 
 Excel içerisinden makro ile direkt olarak outlook mesaj gönderme panelinin açılmasını sağlayabilirsiniz.  

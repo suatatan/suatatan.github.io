@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Örnek bir Finansal Analiz Tablosu"
+categories:
+- genel
 date: 2012-04-25
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Örnek bir Finansal Analiz Tablosu
 ---
 
 Finansal analizde kullanılan cari oran, asit test gibi değerlerin nasıl hesaplandığı ve değerlendirildiğine dair açıklama çok ise de bunun excel'de nasıl kullanılacağına dair örnekler pek bulunmamaktadır. Aşağıdaki ekte bizzat hazırladığım mali analiz tablosu ile bilanço ve gelir tablosundaki değerleri nasıl formülize edebileceğinize dair örnek bulunmaktadır.  

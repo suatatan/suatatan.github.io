@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Öykü yazmazının, öykü yazanlar için önerilerden aldığı notlar"
+categories:
+- genel
 date: 2013-01-21
-categories: 
-  - "genel"
-tags: 
-  - "edebiyat"
+layout: post
+tags:
+- edebiyat
+- english
+- longread
+- opinion
+- technology
+title: Öykü yazmazının, öykü yazanlar için önerilerden aldığı notlar
 ---
 
 [![](/images/dae1c-398550.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/01/dae1c-398550.jpg)

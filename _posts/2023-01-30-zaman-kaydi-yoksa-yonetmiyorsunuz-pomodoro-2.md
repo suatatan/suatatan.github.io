@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Zaman kaydı yoksa yönetmiyorsunuz! Pomodoro 2"
 date: 2023-01-30
+layout: post
+tags:
+- english
+- longread
+- opinion
+title: Zaman kaydı yoksa yönetmiyorsunuz! Pomodoro 2
 ---
 
 [https://anchor.fm/s/c7b4c568/podcast/rss](https://anchor.fm/s/c7b4c568/podcast/rss)

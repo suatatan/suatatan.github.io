@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "İlk dijital kitabım yayında"
+categories:
+- bilgisayar
+- genel
 date: 2011-05-04
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: İlk dijital kitabım yayında
 ---
 
 ![](/images/41%2BFGl6DzEL._SL500_AA266_PIkin3,BottomRight,-16,34_AA300_SH20_OU01_.jpg)  

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Sermaye Maliyeti Nedir?"
+categories:
+- genel
 date: 2013-03-07
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+title: Sermaye Maliyeti Nedir?
 ---
 
 [![image](/images/9b2b7-5_graph.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/03/9b2b7-5_graph.jpg)

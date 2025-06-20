@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Greyfurt reçeli tarifi (Van usülü)"
+categories:
+- genel
 date: 2014-03-21
-categories: 
-  - "genel"
-tags: 
-  - "tarifler"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- tarifler
+- technology
+title: Greyfurt reçeli tarifi (Van usülü)
 ---
 
   

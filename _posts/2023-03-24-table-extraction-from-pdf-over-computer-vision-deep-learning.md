@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Table Extraction from PDF over Computer Vision + Deep Learning"
+categories:
+- bilgisayar
+- english
 date: 2023-03-24
-categories: 
-  - "bilgisayar"
-  - "english"
-tags: 
-  - "computer-vision"
-  - "deep-learning"
-  - "python"
+layout: post
+tags:
+- computer-vision
+- deep-learning
+- english
+- longread
+- python
+- technology
+title: Table Extraction from PDF over Computer Vision + Deep Learning
 ---
 
 \- There are two types of PDF files. One is you cannot copy and paste text from there they are kind of pictures. Another is a  document like a word you can copy and paste.

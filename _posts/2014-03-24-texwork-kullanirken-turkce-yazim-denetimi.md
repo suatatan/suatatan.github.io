@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "TexWork Kullanırken Türkçe Yazım Denetimi Yapılandırma"
+categories:
+- genel
 date: 2014-03-24
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: TexWork Kullanırken Türkçe Yazım Denetimi Yapılandırma
 ---
 
   

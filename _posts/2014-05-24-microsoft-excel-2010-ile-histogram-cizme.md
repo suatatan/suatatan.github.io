@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Microsoft Excel 2010 ile Histogram Çizme"
+categories:
+- bilgisayar
+- genel
 date: 2014-05-24
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel-vba"
+layout: post
+tags:
+- english
+- excel-vba
+- longread
+- technology
+title: Microsoft Excel 2010 ile Histogram Çizme
 ---
 
   

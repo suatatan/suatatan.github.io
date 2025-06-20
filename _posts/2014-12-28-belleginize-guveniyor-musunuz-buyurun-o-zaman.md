@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Belleğinize güveniyor musunuz?  Buyurun o zaman!"
+categories:
+- genel
 date: 2014-12-28
-categories: 
-  - "genel"
-tags: 
-  - "kitap"
-  - "okuma-notlari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- kitap
+- longread
+- okuma-notlari
+- technology
+- yazilarim
+title: Belleğinize güveniyor musunuz?  Buyurun o zaman!
 ---
 
 ![image](/images/tumblr_inline_nhb8s04Qlt1r4exmc.jpg)

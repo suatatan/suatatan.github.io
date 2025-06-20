@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Make your dirty PDF searchable"
+categories:
+- genel
 date: 2015-06-05
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: Make your dirty PDF searchable
 ---
 
 Some PDFs due to scanning from physical paper is unsearchable.

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Data Wrangling Cases: Case #1: Emre's Language Score Problem"
+categories:
+- bilgisayar
 date: 2019-05-19
-categories: 
-  - "bilgisayar"
-tags: 
-  - "data-science"
-  - "python"
+layout: post
+tags:
+- data-science
+- english
+- longread
+- python
+- technology
+title: 'Data Wrangling Cases: Case #1: Emre''s Language Score Problem'
 ---
 
 ![](/images/ekran-gc3b6rc3bcntc3bcsc3bc-2019-05-19-15-55-15.png)

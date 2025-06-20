@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Gözüme kestirdiklerim."
+categories:
+- genel
 date: 2012-04-22
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Gözüme kestirdiklerim.
 ---
 
 Bazen kitapçılarda sorti yapmak iyi oluyor. Elimdekileri hatim ettikten sonra gözüme kestirdiğim ve iştahla okuyacağımı düşündüğüm kitaplar.  

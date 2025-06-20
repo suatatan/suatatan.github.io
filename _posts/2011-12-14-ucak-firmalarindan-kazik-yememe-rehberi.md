@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Uçak firmalarından kazık yememe rehberi"
+categories:
+- genel
 date: 2011-12-14
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Uçak firmalarından kazık yememe rehberi
 ---
 
 1. Uçak firmaları sizin “Aaa anne bak 29.99 TL'ye Çemişgezek'e uçuyorum” heyecanınızı ticari anlamda kullanmak isterler. Bu yüzden reklamlarına bunu öyle bir yazarlar ki siz sanki abi “Çemişgezek'e bi bilet ver” diyip cebinizden 29.99 TL vereceğinizi zannedersiniz. Oysa size bi bir bileti 29.99 TL'ye vermek için meşhur kampanyalarında onlarca şart koyarlar. Şu tarihlerle şu tarihler arası, şu kadar zaman önce alınmak kaydı ile, iptalinde geri ödeme yapılmaksızın, X tipi biletlerde, bilmem hangi hava meydanından kalkışlarda diye uzar gider… Bir yere kesin olarak gideceğiniz tarih belli değilse kesinlikle bu promosyonlara **inanmayın!**

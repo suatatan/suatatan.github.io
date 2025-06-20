@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Sykes'in uydurduğu Arap Devlet Bayrakları"
+categories:
+- genel
 date: 2015-01-04
-categories: 
-  - "genel"
-tags: 
-  - "belgesel"
+layout: post
+tags:
+- belgesel
+- english
+- longread
+- technology
+title: Sykes'in uydurduğu Arap Devlet Bayrakları
 ---
 
 Sykes'in uydurduğu Arap devlet bayrakları

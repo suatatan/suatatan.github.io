@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "SQL’de INNER, LEFT ve OUTER JOIN farkı"
+categories:
+- bilgisayar
+- genel
 date: 2016-05-16
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "asp-mvc"
-  - "humanfriendlyaspmvc"
+layout: post
+tags:
+- asp-mvc
+- english
+- humanfriendlyaspmvc
+- longread
+- technology
+title: SQL’de INNER, LEFT ve OUTER JOIN farkı
 ---
 
 Bu farkı anlamak için şu senaryo üzerinden gidelim (senaryoyu ilk yazan kişi BradC’dir, stackoverflowdan bakmak için [tıklayın](http://stackoverflow.com/a/448080/607230)) .

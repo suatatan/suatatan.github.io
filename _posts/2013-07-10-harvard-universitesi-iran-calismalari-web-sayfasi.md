@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Harvard Üniversitesi İran Çalışmaları Web Sayfası"
+categories:
+- genel
 date: 2013-07-10
-categories: 
-  - "genel"
-tags: 
-  - "kurtce"
-  - "referanskaynaklar"
+layout: post
+tags:
+- english
+- kurtce
+- longread
+- referanskaynaklar
+- technology
+title: Harvard Üniversitesi İran Çalışmaları Web Sayfası
 ---
 
 [![](/images/is.jpg)](http://www.fas.harvard.edu/~iranian/is.jpg)

@@ -1,16 +1,19 @@
 ---
-layout: post
-title: "Are you frustrated with unfinishing Latex Errors and Poor-looking Markdown?"
+categories:
+- english
+- genel
 date: 2015-05-02
-categories: 
-  - "english"
-  - "genel"
-tags: 
-  - "computers"
-  - "latex"
-  - "markdown"
-  - "phd-student"
-  - "rmarkdown"
+layout: post
+tags:
+- computers
+- english
+- latex
+- longread
+- markdown
+- phd-student
+- rmarkdown
+- technology
+title: Are you frustrated with unfinishing Latex Errors and Poor-looking Markdown?
 ---
 
 As a Ph.D. scholar, oftentimes I’m frustrating with Latex caprices with bad boxes,errors, and warnings. As for, basic markdown doesn’t provide a citation option. MSWord is horrible for working long times on the same file because of style and content are as clear as mud.

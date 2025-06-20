@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Featurewiz ile otomatik 'feature selection'"
+categories:
+- bilgisayar
 date: 2023-02-13
-categories: 
-  - "bilgisayar"
-tags: 
-  - "python"
-  - "tools"
+layout: post
+tags:
+- english
+- longread
+- python
+- technology
+- tools
+title: Featurewiz ile otomatik 'feature selection'
 ---
 
 Çok sayıda eğitim verisi toplamak faydalıdır, ancak çoğu zaman bunun çoğu gürültüdür ve belirli özellikler (veri kümesindeki sütunlar) **modelin performansı için gereksizdir.**

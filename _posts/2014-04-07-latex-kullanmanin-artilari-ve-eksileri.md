@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Latex kullanmanın artıları ve eksileri"
+categories:
+- bilgisayar
+- genel
 date: 2014-04-07
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "latex"
+layout: post
+tags:
+- english
+- latex
+- longread
+- technology
+title: Latex kullanmanın artıları ve eksileri
 ---
 
   

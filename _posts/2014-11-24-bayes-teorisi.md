@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Bayes Teorisi"
+categories:
+- genel
 date: 2014-11-24
-categories: 
-  - "genel"
-tags: 
-  - "elyazisi"
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- elyazisi
+- english
+- isletme
+- longread
+- opinion
+- sayisalyontemler
+- technology
+title: Bayes Teorisi
 ---
 
 [![image](/images/tumblr_inline_nfjljed67Y1r4exmc.jpg)](https://lh3.googleusercontent.com/-5hx2sKs2OBA/VHMe_bHGkiI/AAAAAAABRJo/ClMGDqrDObo/w958-h719-no/Photo%2B%281%29.jpg "Resmi Büyütün")

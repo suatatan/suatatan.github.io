@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Negatif Düşünceler Hayatta Kalmak içindir Takılmak için Değil !"
+categories:
+- meditasyon
+- okuma-notlari
 date: 2018-12-13
-categories: 
-  - "meditasyon"
-  - "okuma-notlari"
-tags: 
-  - "featured"
+layout: post
+tags:
+- english
+- featured
+- longread
+- opinion
+- technology
+title: Negatif Düşünceler Hayatta Kalmak içindir Takılmak için Değil !
 ---
 
 ![](/images/image-1.png)

@@ -1,15 +1,18 @@
 ---
-layout: post
-title: "Print as json format in Google App Engine"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2011-07-21
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "python"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- python
+- technology
+- web-programlama
+title: Print as json format in Google App Engine
 ---
 
 When you want print a content you using “self.response.out.write()”. But this function can’t print json format. But you can print a some changes in this function:  

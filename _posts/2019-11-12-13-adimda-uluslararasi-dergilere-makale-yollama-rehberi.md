@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "13 Adımda Uluslararası Dergilere Makale Yollama Rehberi"
 date: 2019-11-12
-tags: 
-  - "rehberler"
+layout: post
+tags:
+- english
+- longread
+- rehberler
+- technology
+title: 13 Adımda Uluslararası Dergilere Makale Yollama Rehberi
 ---
 
 ![academic journals ile ilgili görsel sonucu"](/images/images)

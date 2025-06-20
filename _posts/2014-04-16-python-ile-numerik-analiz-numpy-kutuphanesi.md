@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Python ile nümerik analiz, numpy kütüphanesi denemeleri"
+categories:
+- genel
 date: 2014-04-16
-categories: 
-  - "genel"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- python
+- quickread
+- technology
+title: Python ile nümerik analiz, numpy kütüphanesi denemeleri
 ---
 
 [Numpy](http://www.numpy.org/) Python ile nümerik analize imkan veren bir kütüphanedir.  

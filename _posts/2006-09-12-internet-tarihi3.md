@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "İNTERNET TARİHİ–3"
 date: 2006-09-12
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: İNTERNET TARİHİ–3
 ---
 
 **İnternet nereye gidiyor?**

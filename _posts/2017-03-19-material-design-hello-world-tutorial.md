@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Material Design Hello World Tutorial"
 date: 2017-03-19
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Material Design Hello World Tutorial
 ---
 
 ![materialdesign](/images/materialdesign.png)

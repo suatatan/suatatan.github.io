@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Defining multiple valued dictionaries in python."
+categories:
+- genel
 date: 2015-03-19
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+title: Defining multiple valued dictionaries in python.
 ---
 
 Definition:

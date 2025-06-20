@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "'Omma Kilauea' ve Ontolojide Bilimsel Kesinlik Arayışı"
 date: 2018-03-25
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: '''Omma Kilauea'' ve Ontolojide Bilimsel Kesinlik Arayışı'
 ---
 
 Hawaii adalarında volkanik Kamakou dağı yakınlarında patlamalardan sonra oluşan lav akıntılarının ulaşabildiği bir nokta keşfedilen bir tarihi tapınaktaki yapı çok ilginç tartışmalara neden olmuştur. Burada bir kahve fincanına benzer oyuk taşların kendisine tapılan çeşitli ikonların üzerine koruyucu olarak konduğu, daha sonra bunların kasıtlı olarak lav akıntıların olduğu yerlere taşınarak alt kısmının da lavlar tarafından kaplandığı ve taşlaştığı böylece ikonanın korunduğu kanaatine varılmıştır. Bu yapılara 'Omma Kilauea' adı verilemktedir. Bu kanaat o güne kadarki bilimsel çalışmalar ve okunan yazıtlara göre ortaya konmuştur. Ancak kırıp içine bakılmış tek 'Omma Kilauea' içinden kum ve cüruftan başka bir şey çıkmaıştır. Bunun nedeninin içerideki ikonaların hava ile teması sonucunda parçalanması olduğu düşünülmüştür. Bazı 'Omma Kilauea'lar ise tamamen boş çıkmıştır. 'Omma Kilauea' yapısı X ışınlarını soğurduğundan içeride ikona figürünün var olup olmadığını 'Omma Kilauea'yı kırmadan anlayabilecek bir yöntem henüz mevcut değildir.

@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "DANİMARKA ATEŞLE OYNUYOR"
 date: 2007-03-18
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: DANİMARKA ATEŞLE OYNUYOR
 ---
 
 Türkiye ve Müslüman dünyasında hala tasvip eden kaldıysa bu yazını başlığı biraz tehditkâr olarak gözükebilir. Ancak her halde bu yazı yazılırken Danimarka’nın ve beraberine tüm devletlerin iyiliğini belki de Danimarkalıların kendisinden daha çok istenildiği önceden vurgulanması gereken bir noktadır.

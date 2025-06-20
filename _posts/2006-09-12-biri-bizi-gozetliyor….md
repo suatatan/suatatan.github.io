@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "BİRİ BİZİ (G)ÖZETLİYOR…"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: BİRİ BİZİ (G)ÖZETLİYOR…
 ---
 
 Biri bizi gözetliyor, kadının sesi, biz evleniyoruz gibi hep “biz” ile ilgili olan programlar toplumsal ürünlerini yavaş yavaş vermeye başladı. Bu programlar ve bu programların ortaya çıkardığı( belki de bu programları ortaya çıkaran) nesil de yüzünü göstermeye başlıyor. Bir zamanlar ‘saklambaç’ gibi programlarla temeli atılan ‘bu değerli?’ programlar şimdinin birçok dizinin de işlenen değişmez bıktırıcı konularıyla devam ediyor.

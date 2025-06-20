@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Linux Neden Daha İyidir"
+categories:
+- bilgisayar
 date: 2008-07-25
-categories: 
-  - "bilgisayar"
-tags: 
-  - "linux"
+layout: post
+tags:
+- english
+- linux
+- longread
+title: Linux Neden Daha İyidir
 ---
 
 ![](/images/business_news.png)

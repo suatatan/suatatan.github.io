@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Akıl alırken nelere dikkat etmeli."
+categories:
+- genel
 date: 2012-06-23
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Akıl alırken nelere dikkat etmeli.
 ---
 
 Çoğu kez doğru işlerin kaynağı başkalarının aklı ile hareket etmek ise de en az bir o kadar yanlışın kaynağı da yine başkasının aklı ile hareket etmektir. Ancak  

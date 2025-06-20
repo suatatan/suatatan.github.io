@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Ölüm matematiği"
+categories:
+- genel
 date: 2011-10-19
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- yazilarim
+title: Ölüm matematiği
 ---
 
 Stalin'e atfedilen bir söz vardır : bir kişinin ölümü trajedi, bin kişinin ölümü istatistiktir. Stalin'in niyetini bilmiyoruz ancak insan hafızası için bir noktadan sonra ölümün, ölü adedinin matematiksel bir ifadeye dönüşmeye başladığını bu söz, belki de sahibinden habersiz en iyi şekilde açıklıyor. Eğer o eve ateş düşmemiş, düştüğü yeri yakmamış ise…  

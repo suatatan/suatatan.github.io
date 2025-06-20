@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Sermaye Bütçelemesi"
+categories:
+- genel
 date: 2014-11-11
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Sermaye Bütçelemesi
 ---
 
 **![](/images/tumblr_inline_netuznADIK1r4exmc.jpg)**

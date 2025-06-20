@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "CAPM nedir?"
+categories:
+- genel
 date: 2013-03-07
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+title: CAPM nedir?
 ---
 
 [![](/images/89c24-capm-model.png)](https://suatatan.wordpress.com/wp-content/uploads/2013/03/89c24-capm-model.png)

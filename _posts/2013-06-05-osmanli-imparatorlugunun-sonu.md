@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Osmanlı İmparatorluğu'nun Sonu"
+categories:
+- genel
 date: 2013-06-05
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- opinion
+- technology
+title: Osmanlı İmparatorluğu'nun Sonu
 ---
 
 [![](/images/356531)](http://static.idefix.com/cache/0/270/356531)

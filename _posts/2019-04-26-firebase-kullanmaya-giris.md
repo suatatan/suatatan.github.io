@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Firebase Kullanmaya Giriş"
+categories:
+- bilgisayar
 date: 2019-04-26
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Firebase Kullanmaya Giriş
 ---
 
 ![](/images/image.png)

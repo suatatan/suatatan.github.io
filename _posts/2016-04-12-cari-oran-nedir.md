@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Cari oran nedir?"
+categories:
+- genel
 date: 2016-04-12
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "muhasebe"
+layout: post
+tags:
+- english
+- finans
+- longread
+- muhasebe
+- technology
+title: Cari oran nedir?
 ---
 
 Biliyorum. Siz de bazen formülünü unutup kendinize kızıyorsunuz. Oysa bu normal. Her gün kullanılmadığı için beyin sistemden iki de bir siliyor.

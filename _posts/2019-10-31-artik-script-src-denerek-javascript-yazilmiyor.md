@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Artık Script Src denerek Javascript Yazılmıyor"
+categories:
+- bilgisayar
 date: 2019-10-31
-categories: 
-  - "bilgisayar"
-tags: 
-  - "javascript"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- javascript
+- longread
+- technology
+- web-programlama
+title: Artık Script Src denerek Javascript Yazılmıyor
 ---
 
 ![npm ile ilgili görsel sonucu"](/images/images)

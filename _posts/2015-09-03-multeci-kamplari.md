@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Mülteci kampları"
+categories:
+- genel
 date: 2015-09-03
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- okuma-notlari
+- quickread
+title: Mülteci kampları
 ---
 
 Zengin Avrupa ülkeleri mülteci kotalarını binlere, bilemediniz on binlere çıkarmayı tartışırken, 2 milyona yakın Suriyeli mülteci Türkiye’de barınıyor.

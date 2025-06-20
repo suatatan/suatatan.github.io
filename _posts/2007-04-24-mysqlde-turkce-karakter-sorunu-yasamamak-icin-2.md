@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "MySQL'de Türkçe Karakter Sorunu Yaşamamak İçin."
 date: 2007-04-24
-tags: 
-  - "bilgisayar"
-  - "web-programlama"
+layout: post
+tags:
+- bilgisayar
+- english
+- quickread
+- technology
+- web-programlama
+title: MySQL'de Türkçe Karakter Sorunu Yaşamamak İçin.
 ---
 
 Şimdiye Kadar Java'ka kod yazarken MySQL veri girişlerinde Türkçe karakter problemi yaşamamış da olabilirsiniz. Ancak her seferinde veritabanı bağlantı URL'sini yazarken aşağıdaki kodları da eklerseniz Türkçe karakter problemi yaşamazsınız.  

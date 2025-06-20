@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Python ile XML verisini işlemek (parse etmek)"
+categories:
+- bilgisayar
+- genel
 date: 2012-12-19
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "python"
+layout: post
+tags:
+- english
+- google-app-engine
+- python
+- quickread
+- technology
+title: Python ile XML verisini işlemek (parse etmek)
 ---
 
 Aşağıda bir projemde kullandığım ve işinize yarayabilecek bir örnek var. İteratif XML verilerini ayıklamak işinizi görecektir  

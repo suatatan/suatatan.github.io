@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Scrolling is not relaxing"
 date: 2024-03-24
+layout: post
+tags:
+- cite
+- english
+- quickread
+- technology
+title: Scrolling is not relaxing
 ---
 
 "That's when you need a break.

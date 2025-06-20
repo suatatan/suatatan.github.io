@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Finansman Hiyerarşisi Kuramı (Pecking Order Theory)"
+categories:
+- genel
 date: 2014-11-09
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- quickread
+- technology
+title: Finansman Hiyerarşisi Kuramı (Pecking Order Theory)
 ---
 
 Bu teoriye göre işletmeler sermaye yapılarını belirleme sürecinde, kaynak ihtiyaçlarını belirli bir sıraya göre yaparlar. Bu teoriye göre işletmeler aşağıdaki sırayı tercih edeceklerdir.

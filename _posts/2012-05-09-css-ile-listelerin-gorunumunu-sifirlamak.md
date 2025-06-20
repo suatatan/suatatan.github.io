@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "CSS ile listelerin görünümünü sıfırlamak"
+categories:
+- bilgisayar
+- genel
 date: 2012-05-09
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: CSS ile listelerin görünümünü sıfırlamak
 ---
 
 HTML liste tagı olan

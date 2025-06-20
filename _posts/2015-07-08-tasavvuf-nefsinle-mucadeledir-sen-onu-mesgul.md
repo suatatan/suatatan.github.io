@@ -1,6 +1,9 @@
 ---
-layout: post
 date: 2015-07-08
+layout: post
+tags:
+- english
+- longread
 ---
 
 ![](/images/tumblr_nr58agegcu1u3gx2to1_500.jpg)

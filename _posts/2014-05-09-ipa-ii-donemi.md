@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "IPA-II dönemi"
+categories:
+- genel
 date: 2014-05-09
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: IPA-II dönemi
 ---
 
 Katılım Öncesi Yardım Aracı – IPA I’in 2007-2013 yıllarını kapsayan ilk döneminde mali yardımların çerçevesini oluşturan beş bileşeni korunarakmali yardımlara yön verecekbeş politika alanına dönüştürülmüştür. Bu beş politika alanı içinde ise çeşitli başlıklar altında sektörler ve alt-sektörler belirlenerek Avrupa Birliği Bakanlığı ile birlikte konuyla ilgili Bakanlıkların sorumluluğuna verilmiştir. İlgili sektör ve alt-sektörler altında yer alan proje faaliyetleri sektör sorumlusu kurumlar (lead institutions) tarafından koordine edilecektir.([http://www.diab.gov.tr/isbirligi-20-ipa-ii-donemi–2014-2020-.html](http://www.diab.gov.tr/isbirligi-20-ipa-ii-donemi--2014-2020-.html))

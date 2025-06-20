@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Faizlerin Vade Yapısını Açıklamaya Yarayan Teoriler"
+categories:
+- genel
 date: 2014-12-10
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Faizlerin Vade Yapısını Açıklamaya Yarayan Teoriler
 ---
 
 ![](/images/tumblr_inline_ngdc2vuj1J1r4exmc.jpg)

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Python ile Twitter'dan topluca Veri Çekme (API'siz)"
+categories:
+- bilgisayar
 date: 2020-12-12
-categories: 
-  - "bilgisayar"
-tags: 
-  - "veri-madenciligi"
+layout: post
+tags:
+- english
+- longread
+- technology
+- veri-madenciligi
+title: Python ile Twitter'dan topluca Veri Çekme (API'siz)
 ---
 
 Twitter API'si olmadan aşağıdaki kodlar yardımı ile örneğin içeriğinde "umutsuz" ifadesi geçen ve 11 Mart 2020 ile 1 Nisan 2020 arasındaki twitleri çekip excele kaydedebilirsiniz:

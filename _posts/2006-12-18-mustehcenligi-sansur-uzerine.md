@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "MÜSTEHCENLİĞİ SANSÜR ÜZERİNE"
+categories:
+- genel
 date: 2006-12-18
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: MÜSTEHCENLİĞİ SANSÜR ÜZERİNE
 ---
 
 Müstehcenliğin büyük paradokslardan biri olduğu bir toplumda yaşıyoruz. Müstehcenlik aslında bizatihi müstehcenlik kavramından rahatsız olanların ortaya çıkardığı ve şiddetle kaçındığı bir kavramdır.

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Mini-Bostanımın ilk mahsülleri"
 date: 2008-07-04
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Mini-Bostanımın ilk mahsülleri
 ---
 
 [![](/images/salatalik_2.jpg)](http://suatatan.wordpress.com/wp-content/uploads/2008/07/salatalik_2.jpg)

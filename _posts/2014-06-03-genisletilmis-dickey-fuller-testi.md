@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Genişletilmiş Dickey Fuller Testi"
+categories:
+- genel
 date: 2014-06-03
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Genişletilmiş Dickey Fuller Testi
 ---
 
 Augmented Dickey Fuller Testi ile ilgili olarak aldım bazı notlar:  

@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Opsiyon Sözleşmelerinde 'Delta Nötr' nedir"
+categories:
+- genel
 date: 2013-12-18
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- quickread
+title: Opsiyon Sözleşmelerinde 'Delta Nötr' nedir
 ---
 
 Değerli ve nadide yazısı için [Okan Sarıoğlu](http://www.okansarioglu.com/hakkimda)‘na teşekkür ediyoruz.  

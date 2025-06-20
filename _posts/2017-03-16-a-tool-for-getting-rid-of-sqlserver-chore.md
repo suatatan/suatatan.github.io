@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "A tool for getting rid of SQLServer chore"
+categories:
+- bilgisayar
 date: 2017-03-16
-categories: 
-  - "bilgisayar"
-tags: 
-  - "r"
-  - "sqlserver"
+layout: post
+tags:
+- english
+- longread
+- r
+- sqlserver
+title: A tool for getting rid of SQLServer chore
 ---
 
 ![Capture](/images/capture.png)

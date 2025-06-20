@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Python for your digital errands"
+categories:
+- genel
 date: 2016-01-08
-categories: 
-  - "genel"
-tags: 
-  - "books"
-  - "englis"
-  - "python"
+layout: post
+tags:
+- books
+- englis
+- english
+- longread
+- python
+- technology
+title: Python for your digital errands
 ---
 
 A programming language mostly considering as highly holy and celestial. No programmers want to do a trivial task with a programming language. For instance, there is no Java developer which resizes his photos with Java.

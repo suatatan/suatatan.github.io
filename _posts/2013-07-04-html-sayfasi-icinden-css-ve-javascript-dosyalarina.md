@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "HTML sayfası içinden CSS ve Javascript dosyalarına nasıl link verilir?"
+categories:
+- genel
 date: 2013-07-04
-categories: 
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "sorucevap"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- sorucevap
+- technology
+- web-programlama
+title: HTML sayfası içinden CSS ve Javascript dosyalarına nasıl link verilir?
 ---
 
 Basit bir HTML dosyasını dışarıdan stilize etmek için CSS kullanırız. Aynı şekilde sayfamıza etkileşim katmak için ise Javascript kullanırız. Her ikisi de mevcut html dosyası içerisinde dışarıdan linkle ithal edilmeksizin direkt olarak tanımlanabilmektedir. Ancak bu kod okunabilirliği ve modülerlik bakımından tercih edilen bir yöntem sayılmaz.

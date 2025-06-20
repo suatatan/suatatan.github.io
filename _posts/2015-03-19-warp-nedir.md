@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "WARP nedir"
+categories:
+- genel
 date: 2015-03-19
-categories: 
-  - "genel"
-tags: 
-  - "iktisat"
-  - "mikroiktisat"
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- english
+- iktisat
+- isletme
+- longread
+- mikroiktisat
+- opinion
+- sayisalyontemler
+- technology
+title: WARP nedir
 ---
 
 Mikroiktisatta matematiksel gösterimler saçlarınızın dokülmesine, baş dönmesine, mide kramplarına neden olabilir. WARP’ı aklıselim anlama sürecimde bu semptopmların hepsi oldu.Aynısı yaşanmasın diye ölümlülerin anlayabileceği bir dille kutsal matematiksel metinleriyorumluyorum:

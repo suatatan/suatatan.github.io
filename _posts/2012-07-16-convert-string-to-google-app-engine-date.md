@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Convert String to Google App Engine Date"
+categories:
+- english
+- genel
 date: 2012-07-16
-categories: 
-  - "english"
-  - "genel"
-tags: 
-  - "google-app-script"
+layout: post
+tags:
+- english
+- google-app-script
+- quickread
+- technology
+title: Convert String to Google App Engine Date
 ---
 
 When you print from Google App Engine datastore which have DateTimeProperty you see such as this:  

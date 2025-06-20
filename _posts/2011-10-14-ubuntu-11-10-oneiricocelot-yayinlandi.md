@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Ubuntu 11.10 OneiricOcelot Yayınlandı"
+categories:
+- bilgisayar
 date: 2011-10-14
-categories: 
-  - "bilgisayar"
-tags: 
-  - "linux"
+layout: post
+tags:
+- english
+- linux
+- longread
+- technology
+title: Ubuntu 11.10 OneiricOcelot Yayınlandı
 ---
 
 ![](/images/frontpage-laptop_l1.jpg "Ubuntu kurulu bir laptop")

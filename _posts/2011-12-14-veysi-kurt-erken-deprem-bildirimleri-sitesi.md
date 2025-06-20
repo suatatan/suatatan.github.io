@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Veysi Kurt, Erken Deprem Bildirimleri Sitesi Hakkında"
+categories:
+- genel
 date: 2011-12-14
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Veysi Kurt, Erken Deprem Bildirimleri Sitesi Hakkında
 ---
 
 Türkiye'de bugün ne oluyor diye düşünmektense yarın ne olacak diye tahmin yürütmek hep daha çekici gelmiştir. Van depreminden sonra da yine deprem tahminleme konusunda internette **“kirli bilgiler”** havada uçuşuyor. Hemen topu deprem tahmincisi Veysi Kurt'a atmıyoruz elbette… Ondan evvel maalesef “bilim adamları” da şu kadar aya kadar kesin şöyle olur. Filanca fay kırılmadı, filanca zamana değin kesin kırılır gibi bilimsel?! yorumlar yaparak insanların kafasını karıştırdılar. Bugün bu deprem kahinleri yüz depremden birini bilseler, Türkiye ayağı kalkıyor. Oysa depremi önceden bilmeyi başarabilseniz dahi, her tahmininizin gerçek olacağına dair doğrulanmış bir metot yok. Van'da yaşayan biri olarak aşağıdaki deprem tahmin metnini (Veysi Kurt sitesinden) paylaşıyorum:

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Net Faliyet Geliri Yaklaşımı (Geleneksel Yaklaşımlardan)"
+categories:
+- genel
 date: 2014-11-07
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Net Faliyet Geliri Yaklaşımı (Geleneksel Yaklaşımlardan)
 ---
 
 _Net faaliyet geliri yaklaşımı_ işletmenin borç özkaynak yapısı ne olursa olsun işletme değerinin **sabit** kalacağını öngörür. Bunu ise şöyle açıklar; İşletme borçlanmak suretiyle **[net gelir yaklaşımında](http://acikbellek.tumblr.com/post/102011492850/sermaye-yap-s-uzerine-yaklas-mlar-ve-teoriler)** ifade edildiği gibi _ağırlıklı ortalama sermaye maliyetini(AOSM)_ düşürse ve gerçekten de aynı yaklaşımda dendiği gibi borçverenlerin beklentisi değişmese dahi, bu kez ortakların beklentisi ek ödeme yapmadıkları halde değişecek, borçlandığı için daha fazla riskli hale gelen işletmeden daha fazla temettü geliri beklentisine gireceklerdir. Dolayısıyla borçlanmanın sağladığı faydayı, hissedarların beklentileri yine aşağı çekecek ve nötrleyecektir. Dolayısıyla borçlanmayı arttırmanın sermaye maliyetine ve sonuç olarak işletme değerine etkisi olmayacaktır.

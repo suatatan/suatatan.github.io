@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Post hoc non est propter hoc: Bundan sonra ama bundan ötürü değil"
+categories:
+- genel
 date: 2017-01-04
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: 'Post hoc non est propter hoc: Bundan sonra ama bundan ötürü değil'
 ---
 
 ![](/images/logic-300x203.png)

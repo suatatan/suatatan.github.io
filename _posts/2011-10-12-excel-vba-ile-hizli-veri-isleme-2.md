@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Excel VBA ile hızlı veri işleme"
+categories:
+- bilgisayar
+- genel
 date: 2011-10-12
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel"
-  - "excel-vba"
+layout: post
+tags:
+- english
+- excel
+- excel-vba
+- longread
+- technology
+title: Excel VBA ile hızlı veri işleme
 ---
 
 Excel'de bir hücreye yazı yazmak için çift tıklanıp girildiği, yazının bitiminde ise başka hücreye geçmek için ilgili hücreye tıklanarak veri girildiği bilinmektedir.  

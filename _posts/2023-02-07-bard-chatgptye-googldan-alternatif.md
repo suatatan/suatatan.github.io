@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "BARD: ChatGPT'ye Google'dan alternatif"
+categories:
+- bilgisayar
 date: 2023-02-07
-categories: 
-  - "bilgisayar"
-tags: 
-  - "yapay-zeka"
+layout: post
+tags:
+- english
+- longread
+- technology
+- yapay-zeka
+title: 'BARD: ChatGPT''ye Google''dan alternatif'
 ---
 
 Google CEO'su Sundar Pichai [açıkladı](https://blog.google/technology/ai/bard-google-ai-search-updates/amp/). BARD diye bir araç çıkarıyorlar. Malum şu sıralar herkes ChatGPT'yi konuşuyor. Bu ise tartışmayı daha da alevlendirecek sanırım.

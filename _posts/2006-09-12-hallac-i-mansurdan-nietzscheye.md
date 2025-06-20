@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "HALLAC-I MANSUR’DAN NIETZSCHE’YE"
 date: 2006-09-12
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: HALLAC-I MANSUR’DAN NIETZSCHE’YE
 ---
 
 Hallac-ı Mansur’un Ene’l-Hak (Ben Hakk’ım) demesinin zahiri ve tehlikeli manasını bir tarafa bırakıp batini yönünü algılayan bir bilinç acaba Nietzsche’nin “Tanrı Öldü” tümcesini de aynı sağduyu ve derin görüşlülük ile algılayabilir mi?

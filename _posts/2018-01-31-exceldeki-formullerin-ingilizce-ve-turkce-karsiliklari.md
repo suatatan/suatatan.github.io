@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Excel'deki formüllerin İngilizce ve Türkçe Karşılıkları"
+categories:
+- bilgisayar
 date: 2018-01-31
-categories: 
-  - "bilgisayar"
-tags: 
-  - "excel"
+layout: post
+tags:
+- english
+- excel
+- quickread
+- technology
+title: Excel'deki formüllerin İngilizce ve Türkçe Karşılıkları
 ---
 
 Bilgisayarınızdaki işletim sistemi ve ön tanımlı dile göre excel kullanırken yazacağınız foksiyonların adları da değişmektedir. Bunun için aşağıdaki tablodan faydalanabilirsiniz.

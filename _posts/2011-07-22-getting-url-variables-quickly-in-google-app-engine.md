@@ -1,15 +1,18 @@
 ---
-layout: post
-title: "Getting url variables quickly in Google App Engine"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2011-07-22
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "python"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- google-app-engine
+- python
+- quickread
+- technology
+- web-programlama
+title: Getting url variables quickly in Google App Engine
 ---
 
 Normally, getting url variables in Google App Engine Python is a line of code:  

@@ -1,7 +1,10 @@
 ---
-layout: post
-title: "Yeni Adresim"
 date: 2012-02-14
+layout: post
+tags:
+- longread
+- turkish
+title: Yeni Adresim
 ---
 
 Muhtelif nedenlerden ötürü wordpress blogumu, blogger'a taşıdım:

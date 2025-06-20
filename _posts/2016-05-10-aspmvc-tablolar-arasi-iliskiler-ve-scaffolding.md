@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "ASP.MVC Tablolar Arası İlişkiler ve Scaffolding"
+categories:
+- bilgisayar
+- genel
 date: 2016-05-10
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "asp-mvc"
-  - "humanfriendlyaspmvc"
+layout: post
+tags:
+- asp-mvc
+- english
+- humanfriendlyaspmvc
+- longread
+- technology
+title: ASP.MVC Tablolar Arası İlişkiler ve Scaffolding
 ---
 
 Bir blogumuz olsun bu blogda BlogPost'lar blogumuzdaki kayıtlar olsun. Her kayda ait sadece bir kategori olabilir. Bu durumda bir kategoride her zaman birden fazla içerik olabilir. Bu durumda istediğimiz formda blogun başlığı yanında kategori seçmemiz için bir dropdown gerekecektir. Bunu ASP.MVC ile en hızlı şekilde nasıl yapabiliriz?

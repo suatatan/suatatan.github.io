@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Definition of flow"
 date: 2024-03-24
+layout: post
+tags:
+- cite
+- english
+- quickread
+- technology
+title: Definition of flow
 ---
 
 "Flow was first identified and studied by the pioneering psychological scientist Mihaly Csikszentmihalyi,” said Kounios. “He defined it as ‘a state in which people are so involved in an activity that nothing else seems to matter; the experience is so enjoyable that people will continue to do it even at great cost, for the sheer sake of doing it.’”

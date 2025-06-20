@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Retrieve videos from a spesific Youtube user with Python"
+categories:
+- bilgisayar
+- genel
 date: 2011-07-17
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Retrieve videos from a spesific Youtube user with Python
 ---
 
   

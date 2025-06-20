@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Web.Py için kullanıma hazır dizin"
+categories:
+- bilgisayar
+- genel
 date: 2013-01-24
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "python"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- python
+- technology
+title: Web.Py için kullanıma hazır dizin
 ---
 
 [![](/images/ce938-webpy.gif)](https://suatatan.wordpress.com/wp-content/uploads/2013/01/ce938-webpy.gif)

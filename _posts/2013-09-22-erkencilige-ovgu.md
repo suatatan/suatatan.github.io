@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Erkenciliğe övgü"
+categories:
+- genel
 date: 2013-09-22
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Erkenciliğe övgü
 ---
 
   

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "SVM Algoritması Örneği"
+categories:
+- bilgisayar
 date: 2019-12-25
-categories: 
-  - "bilgisayar"
-tags: 
-  - "makine-ogrenmesi"
-  - "yapay-zeka"
+layout: post
+tags:
+- english
+- longread
+- makine-ogrenmesi
+- technology
+- yapay-zeka
+title: SVM Algoritması Örneği
 ---
 
 Aşağıda SVM (Support Vector Machine) adlı makine öğrenmesi modeli ile yapay zeka adlı arkadaşa, mütevazı bir tahmin işlemi yaptıracağız. Bunun için Python ve SkLearn kütüphanesi ile aşağıda gördüğünüz şekildeki bir veri seti kullanıyoruz.

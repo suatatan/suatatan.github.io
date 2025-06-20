@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Suat ATAN'ın okuma notları neden var? Neden sayfasından yayınlanır?"
+categories:
+- genel
 date: 2013-05-31
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- okuma-notlari
+- opinion
+- quickread
+title: Suat ATAN'ın okuma notları neden var? Neden sayfasından yayınlanır?
 ---
 
   

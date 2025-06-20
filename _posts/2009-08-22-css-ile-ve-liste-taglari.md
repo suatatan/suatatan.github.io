@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "CSS liste tagları"
+categories:
+- bilgisayar
 date: 2009-08-22
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: CSS liste tagları
 ---
 
 Aşağıdaki gibi bir listenin olduğunu varsayalım:

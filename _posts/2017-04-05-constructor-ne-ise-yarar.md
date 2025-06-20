@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Constructor ne işe yarar?"
+categories:
+- bilgisayar
 date: 2017-04-05
-categories: 
-  - "bilgisayar"
-tags: 
-  - "c"
-  - "oop"
+layout: post
+tags:
+- c
+- english
+- longread
+- oop
+- technology
+title: Constructor ne işe yarar?
 ---
 
 Modern tüm programlama dillerinde constructor yapısı mevcuttur. Onu daha önce kullanma ihtiyacı duymamış olabilirsiniz.  Ancak bu yapıyı öğrenmek işinize çok yarayacaktır.  Constructor yapısını anlayabilmek için class (sınıf)  yapısını anlamak gerekir.

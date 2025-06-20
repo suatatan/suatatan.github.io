@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "T-Test in Statistics"
+categories:
+- english
+- genel
 date: 2014-12-09
-categories: 
-  - "english"
-  - "genel"
-tags: 
-  - "statistic"
+layout: post
+tags:
+- english
+- quickread
+- statistic
+title: T-Test in Statistics
 ---
 
 A bottle filling machine is set to fill bottles with soft drink to a volume of 500 ml. The actual volume is known to follow a normal distribution. The manufacturer believes the machine is under-filling bottles. A sample of 20 bottles is taken and the volume of liquid inside is measured.

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Windows ortamında Google App Engine için lokal sqlite veritabanı"
+categories:
+- bilgisayar
 date: 2011-07-05
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Windows ortamında Google App Engine için lokal sqlite veritabanı
 ---
 
 Google App Engine launcher'e yapacağımız küçük ayarlama ile Google App Engine uygulamalarımızda kaydettiğimiz verileri gerçek Sqlite veritabanına kaydetmeyi sağlayabiliriz. Böylelikle test aşamasında her seferinde veri girme zorunluluğu kalmadığı gibi sonradan gerçek sunucuya yüklerken de kolaylık olacaktır.

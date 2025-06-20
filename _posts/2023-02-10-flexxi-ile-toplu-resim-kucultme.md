@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Flexxi ile toplu resim küçültme"
+categories:
+- bilgisayar
 date: 2023-02-10
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Flexxi ile toplu resim küçültme
 ---
 
 [![](/images/image-18.png)](https://suatatan.wordpress.com/wp-content/uploads/2023/02/image-18.png)

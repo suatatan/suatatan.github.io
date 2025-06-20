@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Wikileaks ve İngiliz gizli arşivleri"
+categories:
+- yazilarim
 date: 2010-12-01
-categories: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Wikileaks ve İngiliz gizli arşivleri
 ---
 
 Wikileaks sitesi son bombası ile yeni kurulmuş izlenimini verse de 2006'dan beri yayında olan bir site. Wikileaks.org üzerinden yayın yapan (gerçi çok yaşatmayabilirler) bu sayfada Türkiye ilgili diplomatik yazışmalar 'bomba' tesiri yapsa da bir hafta önce okuduğum Sayın Jan Devletoğlu'na ait "İngiliz Gizli Arşivlerinde 12 Eylül Darbesinin Ayak Sesleri" adlı kitapta, İngilizlerin resmi arşiv süresi geçtiği için wikileaks'tan önce kendilerinin güzel güzel kamuoyuna açtığı belgeleri (bazıları İngiliz dışişlerince sansürlenmiş de olsa) okuyunca wikileaks'ın bomba tesirinin pek de olmadığını gördüm.

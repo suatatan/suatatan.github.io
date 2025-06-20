@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Evime kaç kilo boya gider?"
+categories:
+- genel
 date: 2012-03-30
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Evime kaç kilo boya gider?
 ---
 
 **Boya Badana fiyatı nasıl hesaplanır?**  

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Persentil Nedir, Nasıl Hesaplanır?"
+categories:
+- bilgisayar
 date: 2021-07-03
-categories: 
-  - "bilgisayar"
-tags: 
-  - "istatistik"
+layout: post
+tags:
+- english
+- istatistik
+- longread
+- technology
+title: Persentil Nedir, Nasıl Hesaplanır?
 ---
 
 Niye yalan söyleyeyim. Her seferinde bakıp unutuyor zor hatırlıyorum, o yüzden buraya yazıyorum. Persentil neydi? Nasıl hesaplanırdı? Python'da hesaplayabiliyorum normalde ancak ne anlama geldiğini hatırla ki geelsin. İşte şimdi hepsini anlatıyorum.

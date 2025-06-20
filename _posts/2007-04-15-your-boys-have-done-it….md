@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "YOUR BOYS HAVE DONE IT…"
+categories:
+- genel
 date: 2007-04-15
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: YOUR BOYS HAVE DONE IT…
 ---
 
 12 Eylül 1980 darbesini görmek nasip olmadı nitekim o zamanlar henüz dünyada değildim. Yaşananları okudukça bazen keşke ben de o zaman yaşasaydım derken bazen de şükürler olsun o zamanlar yoktum diyorum. Evet, şükürler olsun ki o zamanlar yoktum çünkü her halde o zamanlar şimdiki yaşımda olsam şu ana kadar okuduğunuz satırlar bile başıma çok iş açabilirdi.

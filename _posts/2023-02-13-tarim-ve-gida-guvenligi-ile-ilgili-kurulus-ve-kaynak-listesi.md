@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Tarım ve Gıda Güvenliği ile ilgili Kuruluş ve Kaynak Listesi"
 date: 2023-02-13
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Tarım ve Gıda Güvenliği ile ilgili Kuruluş ve Kaynak Listesi
 ---
 
 | **Global Partnership for Sustainable Development Data** |  |

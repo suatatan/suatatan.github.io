@@ -1,10 +1,13 @@
 ---
-layout: post
+categories:
+- genel
 date: 2015-11-08
-categories: 
-  - "genel"
-tags: 
-  - "sayisalyontemler"
+layout: post
+tags:
+- english
+- quickread
+- sayisalyontemler
+- technology
 ---
 
 ![](/images/tumblr_nxi90kydh31u2h8puo1_400.png)

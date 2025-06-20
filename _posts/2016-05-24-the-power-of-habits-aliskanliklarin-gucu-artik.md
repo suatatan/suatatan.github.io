@@ -1,12 +1,17 @@
 ---
-layout: post
-title: "The Power of Habits: Alışkanlıkların Gücü- Artık dişlerinizi her fırçaladığınızda bu yazı aklınıza gelecek"
+categories:
+- genel
 date: 2016-05-24
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- opinion
+- technology
+- yazilarim
+title: 'The Power of Habits: Alışkanlıkların Gücü- Artık dişlerinizi her fırçaladığınızda
+  bu yazı aklınıza gelecek'
 ---
 
  ![poh](/images/poh.jpg)

@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Using MS Access as Data Annotation Tool"
+categories:
+- bilgisayar
 date: 2023-02-07
-categories: 
-  - "bilgisayar"
-tags: 
-  - "english"
-  - "machine-learning"
+layout: post
+tags:
+- english
+- longread
+- machine-learning
+- technology
+title: Using MS Access as Data Annotation Tool
 ---
 
 If you have data and need to annotate it one by one, you can use MS Access as a data annotation tool. Well, how?

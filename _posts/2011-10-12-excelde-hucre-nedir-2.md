@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Excel'de hücre nedir?"
+categories:
+- bilgisayar
+- genel
 date: 2011-10-12
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel"
+layout: post
+tags:
+- english
+- excel
+- longread
+- technology
+title: Excel'de hücre nedir?
 ---
 
 Excel ile ilgili yapılan açıklamalarda, yardım menülerinde ve konuşmalarda sıkça “hücre” ifadesini duyarsınız. Hücre ifadesi, excel tablosunda boş sayfada görünen ızgarada yazı yazılabilir her bir kutucuk için verilen genel isimdir. Mesela A1 hücresi, C3 hücresi gibi.

@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Van depremi"
+categories:
+- genel
 date: 2011-10-27
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- quickread
+- sehrivan-gazetesi
+- technology
+- van-yazilari
+- yazilarim
+title: Van depremi
 ---
 
 ![](/images/509120111025062550404.jpg)  

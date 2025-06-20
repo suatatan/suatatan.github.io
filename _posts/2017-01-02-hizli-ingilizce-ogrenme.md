@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "İngilizceyi hızlı ve etkili olarak öğrenme yolu"
+categories:
+- okuma-notlari
 date: 2017-01-02
-categories: 
-  - "okuma-notlari"
-tags: 
-  - "featured"
+layout: post
+tags:
+- english
+- featured
+- longread
+- opinion
+- technology
+title: İngilizceyi hızlı ve etkili olarak öğrenme yolu
 ---
 
 Aşağıdaki yazı YDS puanı 20 küsur puan olan biri tarafından yazılmıştır. Tabii ki bu eski puanım. Son sınavımda 86 aldım. Nasıl aldığımı ben de bilmiyorum. YDS kitabı yerine bol bol okuma ve İngilizce dinleme ile bunlar oldu galiba. YDS’nin dili ölçmediğini söyleyebilirim. Ancak istediğim İngilizce kitabı sözcüksüz veya sözlüğe çok az bakarak okuyan biri olarak "bildiğim miktarın işimi gördüğünü söylemeliyim. Hatta doktoramda bu özellik “hayatımı kurtardı”.

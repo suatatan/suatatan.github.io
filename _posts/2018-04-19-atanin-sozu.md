@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "ATANın sözü"
+categories:
+- yazilarim
 date: 2018-04-19
-categories: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: ATANın sözü
 ---
 
 ![atalariflas](/images/atalariflas.jpg)

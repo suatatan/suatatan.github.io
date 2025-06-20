@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Python ile Excel'den veri okuyup işleyerek sonuçları Excel dosyasına yazdırma"
+categories:
+- genel
 date: 2014-05-16
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Python ile Excel'den veri okuyup işleyerek sonuçları Excel dosyasına yazdırma
 ---
 
 Python dili ile Excel dosyalarına erişim sağlayarak verileri almak ve işlemek mümkündür. Aşağıda parasal değerleri alıp her biri için risk değerlemesi yaptıktan sonra sonuçları output-risk.xls dosyasına yazdıran bir kod betiği var. Bizzat yazdım. Excel'de  normalde excel fonksiyonları ile yazılamayacak karmaşıklıktaki veri işleme operasyonları için Excel'e pythondan dışarıdan müdahale etmek iyi bir çözüm olabilir.  

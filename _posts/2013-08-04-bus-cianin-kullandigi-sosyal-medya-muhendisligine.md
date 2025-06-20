@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "BUS-CIA'NIN KULLANDIĞI SOSYAL MEDYA MÜHENDİSLİĞİNE GİRİŞ: ÇİNLİLER
-DOĞMAMIŞ BEBEKLERİ YİYORLAR"
+categories:
+- genel
 date: 2013-08-04
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: 'BUS-CIA''NIN KULLANDIĞI SOSYAL MEDYA MÜHENDİSLİĞİNE GİRİŞ: ÇİNLİLER DOĞMAMIŞ
+  BEBEKLERİ YİYORLAR'
 ---
 
 Çoğu kez peşin hükümlü olmanın size kazandıracağı bir şey yoktur. 

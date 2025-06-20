@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Zamanınız yoksa bu yazıyı okumayın!"
+categories:
+- genel
 date: 2015-03-15
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+title: Zamanınız yoksa bu yazıyı okumayın!
 ---
 
 ![tt](/images/tt.jpg)

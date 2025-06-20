@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "2018'de okuduklarım"
 date: 2019-01-01
+layout: post
+tags:
+- english
+- longread
+- opinion
+title: 2018'de okuduklarım
 ---
 
 ![](/images/image-2.png)

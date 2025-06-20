@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Excel VBA Makroları ile toplu alt sayfalar oluşturma ve çalışma sayfaları maniplasyonu"
+categories:
+- bilgisayar
 date: 2011-03-24
-categories: 
-  - "bilgisayar"
-tags: 
-  - "excel"
-  - "excel-vba"
+layout: post
+tags:
+- english
+- excel
+- excel-vba
+- longread
+- technology
+title: Excel VBA Makroları ile toplu alt sayfalar oluşturma ve çalışma sayfaları maniplasyonu
 ---
 
 Bugün çoktandır merak edip araştırdığım Excel Makroları veya VBA denilen hizmeti öğrendim. Bir kaç saat içinde bundan sonraki toplu işlemleri tek kalemde yapmayı sağlayacak 'ilaç' gibi metotları öğrendim. (Daha önce programcılık yaptıysanız bir kaç saatte VBA'yı sökersiniz)

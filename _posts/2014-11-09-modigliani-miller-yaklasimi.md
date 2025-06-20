@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Modigliani-Miller Yaklaşımı (Geleneksel Yaklaşımlardan)"
+categories:
+- genel
 date: 2014-11-09
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Modigliani-Miller Yaklaşımı (Geleneksel Yaklaşımlardan)
 ---
 
 Modigliani ve Miller 1950 yılında sermaye yapısı üzerine çalışmış iki profesördür. Temel olarak şunu ifade etmektedirler: mükemmel piyasalarda sermaye yapısının şirket değeri için hiç bir önemi bulunmamaktadır. Bu haliyle net faliyet gelir yaklaşımı ile aynı önermeye sahiptir. Modigliani-Miller Yaklaşımı firmanın değerinin faliyet gelirleri ve varlıklarına bağlı riskleri ile ilgili olduğunu ileri sürer.

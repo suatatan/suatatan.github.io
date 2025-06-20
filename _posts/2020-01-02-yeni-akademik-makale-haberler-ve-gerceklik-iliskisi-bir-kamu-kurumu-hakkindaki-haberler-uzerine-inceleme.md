@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Yeni Akademik Makale: Haberler ve Gerçeklik İlişkisi: Bir Kamu Kurumu Hakkındaki Haberler Üzerine İnceleme"
+categories:
+- akademik
+- r-dili
 date: 2020-01-02
-categories: 
-  - "akademik"
-  - "r-dili"
-tags: 
-  - "veri-madenciligi"
+layout: post
+tags:
+- english
+- longread
+- technology
+- veri-madenciligi
+title: 'Yeni Akademik Makale: Haberler ve Gerçeklik İlişkisi: Bir Kamu Kurumu Hakkındaki
+  Haberler Üzerine İnceleme'
 ---
 
 Karadeniz Teknik Üniversitesi dergisinde çıkan bu makalemizde, algoritmik haber analitiği metotları ile TKDK hakkında farklı kaynaklarda çıkan haberleri analiz ettik. Bu yöntemler haberleri bir nevi "bilgisayarların okuyarak değerlendirmesine" olanak veren metotlar olarak kabul edilebilir. İşin içerisinde bilgisayarlar olunca yanlılık mevcut olmadığı gibi, milyonlarca haber bile olsa bunları hızla okuyacak bir güç söz konusu oluyor.

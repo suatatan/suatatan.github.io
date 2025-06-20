@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Evet..! Küçücük bir parfüm kutusu Ozon'a ciddi bir zarardır."
+categories:
+- yazilarim
 date: 2008-10-01
-categories: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Evet..! Küçücük bir parfüm kutusu Ozon'a ciddi bir zarardır.
 ---
 
 > "Bilim adamları 1960 yılında Kuzey Kutbundaki Penguenlerin dokularında o sıralar meşhur olan Tarım ilacı DDT'den bulduklarında tüm dünya buna şaşırmıştı..."

@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Python ile Excel Manipülasyonu"
+categories:
+- bilgisayar
+- genel
 date: 2012-06-08
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "python"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- python
+- quickread
+- technology
+- web-programlama
+title: Python ile Excel Manipülasyonu
 ---
 
 [![](/images/65558-python_excel_logos.png)](https://suatatan.wordpress.com/wp-content/uploads/2012/06/65558-python_excel_logos.png)

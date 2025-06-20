@@ -1,14 +1,16 @@
 ---
-layout: post
-title: "Google Spreadsheet Query Function: Use real SQL on your spreadsheets"
+categories:
+- genel
 date: 2016-01-31
-categories: 
-  - "genel"
-tags: 
-  - "excel"
-  - "google-apps"
-  - "google-docs"
-  - "sql"
+layout: post
+tags:
+- english
+- excel
+- google-apps
+- google-docs
+- longread
+- sql
+title: 'Google Spreadsheet Query Function: Use real SQL on your spreadsheets'
 ---
 
 Just like this:

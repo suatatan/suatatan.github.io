@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Diyarbakır'ın insan silueti Xeriye Ana."
 date: 2014-01-13
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Diyarbakır'ın insan silueti Xeriye Ana.
 ---
 
 Diyarbakır havasıyla, ruhuyla, şivesiyle insana dönüşse o ve ona benzeyen ama Diyarbakır çınarından yaprak yaprak dökülen yaşlı analara benzerdi. Xeriye Ana, Aba, Anneanem onlardan biriydi. Diyarbakır'da doğmasam da, Diyarbakır'ı ve Diyarbakırlı olma oryantasyonunu ondan aldım. Diyarbakır'ın en ince esprilerinden beddualarına, hatta küfürlerine kadar. Çok güldürsek **“Qeşmerlıx”** yapma derdi. Sevdiği, efendi insanlara **Henun**….

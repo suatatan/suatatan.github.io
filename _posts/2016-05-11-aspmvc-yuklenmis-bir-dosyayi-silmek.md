@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "ASP.MVC Yüklenmiş Bir Dosyayı Silmek"
+categories:
+- genel
 date: 2016-05-11
-categories: 
-  - "genel"
-tags: 
-  - "aspmvc"
-  - "humanfriendlyaspmvc"
+layout: post
+tags:
+- aspmvc
+- english
+- humanfriendlyaspmvc
+- longread
+- technology
+title: ASP.MVC Yüklenmiş Bir Dosyayı Silmek
 ---
 
 public ActionResult TutanakSil(int id)

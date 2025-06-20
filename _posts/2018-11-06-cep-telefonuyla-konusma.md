@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Cep Telefonuyla Konuşma !"
 date: 2018-11-06
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Cep Telefonuyla Konuşma !
 ---
 
 ![mobile-phone-import-witnesses-an-increase-of-48-percent-in-july](/images/mobile-phone-import-witnesses-an-increase-of-48-percent-in-july.jpg)

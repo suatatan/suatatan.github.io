@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "THE KURDISTAN: KUZEY IRAK’IN İNGİLİZCE MEALİ"
+categories:
+- yazilarim
 date: 2007-02-25
-categories: 
-  - "yazilarim"
-tags: 
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yeni-ufuk-gazetesi
+title: 'THE KURDISTAN: KUZEY IRAK’IN İNGİLİZCE MEALİ'
 ---
 
 Bizler; Türkiye’ye vatandaşlık bağı ile bağlı olan her bireyi “Türk” kabul eden anayasamıza göre Türk olarak (ırksal olarak değil) “Kuzey Irak”, “Kuzey Iraklı” gibi kavramlar yaratıp bu bölge üzerine duygusal davranmaktan öte herhangi bir politikaya hiç biz zaman sahip olmadık.

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "YAKE kütüphanesi ile Türkçe Metinlerden Anahtar Terimleri Türetin"
+categories:
+- bilgisayar
 date: 2020-12-21
-categories: 
-  - "bilgisayar"
-tags: 
-  - "metin-madenciligi"
+layout: post
+tags:
+- english
+- longread
+- metin-madenciligi
+- technology
+title: YAKE kütüphanesi ile Türkçe Metinlerden Anahtar Terimleri Türetin
 ---
 
 ![Big Data (Büyük Veri) Nedir?. Günümüzün popüler kavramlarından biri… | by Big  Data Turkey | Düşünen Beyinler | Medium](/images/0*4hO1nX2M9wazKcP_)

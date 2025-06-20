@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "ÖN YARGI ÜZERİNE"
+categories:
+- genel
 date: 2006-10-08
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- yazilarim
+- yeni-ufuk-gazetesi
+title: ÖN YARGI ÜZERİNE
 ---
 
 _Genlerinizin o bilmediğiniz saflığı size “öteki” olanlara yani sizin “olmadığınızı sandığınız” ve sizden sonrakilerin “olmayacağını temenni ettiklerinize” kin kusma hakkını veriyor mu? Öz be öz …. olmak, öz be öz ….. olamama talihsizliğine sahip olanlara nefret hakkı için yeterli bir sebep midir?_  

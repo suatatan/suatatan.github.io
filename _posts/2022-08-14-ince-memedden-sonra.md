@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "İnce Memed'den sonra"
+categories:
+- okuma-notlari
 date: 2022-08-14
-categories: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- quickread
+title: İnce Memed'den sonra
 ---
 
 Karakterleri unutmak istemedim. Bu dev eserin en sevdiğim karakterlerinden kısa notlar.

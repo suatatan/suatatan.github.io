@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Söylenmeyin!"
+categories:
+- din
+- yazilarim
 date: 2017-03-21
-categories: 
-  - "din"
-  - "yazilarim"
-tags: 
-  - "featured"
+layout: post
+tags:
+- english
+- featured
+- longread
+- opinion
+- technology
+title: Söylenmeyin!
 ---
 
 ![soylenmeyin](/images/soylenmeyin.png)

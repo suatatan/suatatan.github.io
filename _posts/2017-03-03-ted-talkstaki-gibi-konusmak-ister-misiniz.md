@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "TED Talks'taki gibi konuşmak ister misiniz?"
 date: 2017-03-03
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: TED Talks'taki gibi konuşmak ister misiniz?
 ---
 
 ![ted](/images/ted.png)

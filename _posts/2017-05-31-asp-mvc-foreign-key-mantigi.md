@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "ASP.MVC Foreign Key Mantığı"
 date: 2017-05-31
+layout: post
+tags:
+- english
+- longread
+- technology
+title: ASP.MVC Foreign Key Mantığı
 ---
 
 Yorumsuz:) Aşağıdaki eşleşmeler mantığın anlaşılması için yeterlidir.

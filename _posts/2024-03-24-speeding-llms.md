@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Speeding LLMs"
 date: 2024-03-24
+layout: post
+tags:
+- cite
+- english
+- quickread
+- technology
+title: Speeding LLMs
 ---
 
 "points:

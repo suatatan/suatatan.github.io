@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Excel'de \"eğer\" formülü (Videolu anlatım)"
+categories:
+- bilgisayar
+- genel
 date: 2011-10-12
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel"
+layout: post
+tags:
+- english
+- excel
+- quickread
+- technology
+title: Excel'de "eğer" formülü (Videolu anlatım)
 ---
 
 \[youtube=http://www.youtube.com/watch?v=O2s1CTsyeIw&w=425&h=350\]  

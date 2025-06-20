@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Yüksek zekayı heba etmek"
+categories:
+- genel
 date: 2015-04-14
-categories: 
-  - "genel"
-tags: 
-  - "altini-cizdiklerim"
+layout: post
+tags:
+- altini-cizdiklerim
+- english
+- quickread
+- technology
+title: Yüksek zekayı heba etmek
 ---
 
 Bir toplumdaki ileri zekâlı çocuk oranı zaten ortalama yüzde 5 civarındadır. Biz bu grubu 15 yaşına gelene kadar yüzde 2,2’ye indiriyoruz. Bizim işte böyle bir eğitim sistemimiz var. Bu oran İsrail’de 8,8’e çıkıyor, Güney Kore’de yüzde ise 28

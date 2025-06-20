@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Kayda değer metin özetleme paketleri algoritmaları ve içerikleri"
+categories:
+- bilgisayar
 date: 2022-06-07
-categories: 
-  - "bilgisayar"
-tags: 
-  - "dogal-dil-isleme"
-  - "metin-madenciligi"
-  - "python"
+layout: post
+tags:
+- dogal-dil-isleme
+- english
+- longread
+- metin-madenciligi
+- python
+- technology
+title: Kayda değer metin özetleme paketleri algoritmaları ve içerikleri
 ---
 
 Özel vakit ayırıp PİP ortamındaki çok dilli metin özetleme algoritmalarını unutmayayım diye buraya yazıyorum. Bu paketleri sıklıkla kendi projelerimde kullanıyorum. Sizin de önerdiğiniz paketler varsa yorum kısmına yazabilirsinz.

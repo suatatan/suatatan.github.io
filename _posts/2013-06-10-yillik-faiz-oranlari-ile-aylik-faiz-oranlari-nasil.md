@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Yıllık faiz oranları ile aylık faiz oranları nasıl mukayese edilebilir?"
+categories:
+- genel
 date: 2013-06-10
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- quickread
+- technology
+title: Yıllık faiz oranları ile aylık faiz oranları nasıl mukayese edilebilir?
 ---
 
 [![](/images/f5bb9-ffaz.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/06/f5bb9-ffaz.jpg)

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Muhammed Musaddık Kimdir? (Bir dönemin aşikar emperyalizmi)"
+categories:
+- genel
 date: 2008-07-10
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- okuma-notlari
+- quickread
+- technology
+- yazilarim
+title: Muhammed Musaddık Kimdir? (Bir dönemin aşikar emperyalizmi)
 ---
 
 [![](/images/3194730_mossadeq203.jpg)](http://suatatan.wordpress.com/wp-content/uploads/2008/07/3194730_mossadeq203.jpg)  

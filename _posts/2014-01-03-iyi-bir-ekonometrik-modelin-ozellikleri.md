@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "İyi bir ekonometrik modelin özellikleri"
+categories:
+- genel
 date: 2014-01-03
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: İyi bir ekonometrik modelin özellikleri
 ---
 
 Dr. Aydoğan Durmuş tarafından hazırlanan  

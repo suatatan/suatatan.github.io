@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Google App Engine Uygulamanızı kendi domain adresiniz üzerinden yayınlamak"
+categories:
+- bilgisayar
 date: 2010-12-01
-categories: 
-  - "bilgisayar"
-tags: 
-  - "google-app-engine"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- technology
+- web-programlama
+title: Google App Engine Uygulamanızı kendi domain adresiniz üzerinden yayınlamak
 ---
 
 [![](/images/gae_custom_url.jpg "GAE_CUSTOM_URL")](http://suatatan.wordpress.com/wp-content/uploads/2010/12/gae_custom_url.jpg)

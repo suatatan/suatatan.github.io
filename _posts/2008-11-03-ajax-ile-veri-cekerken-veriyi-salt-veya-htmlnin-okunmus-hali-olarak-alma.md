@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "AJAX ile veri çekerken veriyi salt veya HTML'nin okunmuş hali olarak alma"
+categories:
+- bilgisayar
 date: 2008-11-03
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: AJAX ile veri çekerken veriyi salt veya HTML'nin okunmuş hali olarak alma
 ---
 
 Aşağıda göreceğiniz fonksiyon kendisine gelen parametreye bağlanarak içerğini okur ve çalıştığı dökümanın güncellenmesini gerektirmeksizin (Zaten Ajax ile uğraştığımıza göre amaç bu) içeriğini ekrana yazar.

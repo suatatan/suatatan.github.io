@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Bazı yatırımcı davranışları üzerine"
+categories:
+- genel
 date: 2013-01-15
-categories: 
-  - "genel"
-tags: 
-  - "ekonomi"
-  - "okuma-notlari"
-  - "isletme"
+layout: post
+tags:
+- ekonomi
+- english
+- isletme
+- longread
+- okuma-notlari
+- technology
+title: Bazı yatırımcı davranışları üzerine
 ---
 
   

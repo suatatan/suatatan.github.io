@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "PORTAKAL ULUSUYLA, ELMA MİLLİYETİ EŞİT Mİ?"
+categories:
+- genel
 date: 2013-02-04
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: PORTAKAL ULUSUYLA, ELMA MİLLİYETİ EŞİT Mİ?
 ---
 
  

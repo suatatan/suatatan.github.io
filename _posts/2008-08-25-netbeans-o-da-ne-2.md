@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Netbeans: O da ne?"
+categories:
+- bilgisayar
+- genel
 date: 2008-08-25
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- longread
+- technology
+title: 'Netbeans: O da ne?'
 ---
 
 ![](/images/nb-logo2.gif)  

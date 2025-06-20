@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Food balance sheet has problems"
 date: 2023-01-15
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Food balance sheet has problems
 ---
 
 "Conceptually, food balance sheets measure the food supply of the population. In reality, they are often unable to match practice with theory and, as a consequence, the statistics are often criticized for not meeting the expectations of data users. Food balance sheets measure food consumption from a food supply perspective. They do not give any indication of the differences that may exist in the diet consumed by different population groups, e.g. people of different socio-economic groups, ecological zones or geographical areas within a country."

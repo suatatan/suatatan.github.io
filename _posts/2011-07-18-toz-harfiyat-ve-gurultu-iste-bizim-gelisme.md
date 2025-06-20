@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "TOZ, HARFİYAT VE GÜRÜLTÜ: İŞTE BİZİM “GELİŞME” ŞEKLİMİZ [VAN]"
+categories:
+- genel
 date: 2011-07-18
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- sehrivan-gazetesi
+- technology
+- van-yazilari
+- yazilarim
+title: 'TOZ, HARFİYAT VE GÜRÜLTÜ: İŞTE BİZİM “GELİŞME” ŞEKLİMİZ [VAN]'
 ---
 
 (Dikkat: bu yazı politik değildir, ama anlatılanlar da hayal ürünü değildir)  

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "SymPy ile python’da sembolik cebir"
+categories:
+- genel
 date: 2015-03-12
-categories: 
-  - "genel"
-tags: 
-  - "matematik"
-  - "sayisalyontemler"
+layout: post
+tags:
+- english
+- longread
+- matematik
+- sayisalyontemler
+- technology
+title: SymPy ile python’da sembolik cebir
 ---
 
 ![](/images/tumblr_inline_nl30cgNfjH1r4exmc.png)

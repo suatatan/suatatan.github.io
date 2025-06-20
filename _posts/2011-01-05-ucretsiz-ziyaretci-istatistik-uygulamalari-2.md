@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ücretsiz ziyaretçi istatistik uygulamaları"
+categories:
+- bilgisayar
+- genel
 date: 2011-01-05
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- longread
+- technology
+title: Ücretsiz ziyaretçi istatistik uygulamaları
 ---
 
 Web sayfalarına giren kaç kişi olduğunu ilkel sayaçlarla saydığımız günlerin üzerinden epey zaman geçti. Eski sayaçlardan bazıları IP'ye göre bazıları Cookie ile ziyaretçi sayardı. Ne hikmetse bazıları da sayfaya her girildiğinde sayardı.  

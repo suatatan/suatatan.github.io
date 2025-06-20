@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Google App Engine'yi duyurdu. (Google Babalığını gösterdi yine)"
 date: 2009-06-22
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Google App Engine'yi duyurdu. (Google Babalığını gösterdi yine)
 ---
 
 ![](/images/appengine_lowres.gif "Google App Engine")

@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Pomodoro Tekniği Nedir"
+categories:
+- yazilarim
 date: 2020-01-07
-categories: 
-  - "yazilarim"
-tags: 
-  - "featured"
-  - "verimlilik"
+layout: post
+tags:
+- english
+- featured
+- longread
+- opinion
+- technology
+- verimlilik
+title: Pomodoro Tekniği Nedir
 ---
 
 ### _Pomodoro Tekniğinin 5 yıllık Sağlam Uygulayıcısından Notlar_

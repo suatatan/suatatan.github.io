@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Use Vectorization to Converting Excel Logic with less Code to Your hand-written software"
 date: 2017-03-21
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Use Vectorization to Converting Excel Logic with less Code to Your hand-written
+  software
 ---
 
 I think it is kind of logical error of when you try to calculate values in waterfall style like below:

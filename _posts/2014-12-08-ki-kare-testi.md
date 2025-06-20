@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Ki-Kare testi"
+categories:
+- genel
 date: 2014-12-08
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "istatistik"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- istatistik
+- longread
+- technology
+title: Ki-Kare testi
 ---
 
 Agah Bey'in babası paparazi izlettirmem, cahil adam işidir diyerek Bloomberg TV'de küresel finans haberlerini açtı. Agah Bey ise zor bir soru sordu: Efendim, eğitim düzeyi ile izlenen programlar arasında ilişki var mı?

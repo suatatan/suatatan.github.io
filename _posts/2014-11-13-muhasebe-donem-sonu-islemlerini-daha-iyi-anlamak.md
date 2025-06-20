@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Muhasebe Dönem Sonu İşlemlerini Daha İyi Anlamak için Kolay Bir Çerçeve"
+categories:
+- genel
 date: 2014-11-13
-categories: 
-  - "genel"
-tags: 
-  - "muhasebe"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- muhasebe
+- technology
+title: Muhasebe Dönem Sonu İşlemlerini Daha İyi Anlamak için Kolay Bir Çerçeve
 ---
 
 Yıl boyunca yapılan muhasebe kayıtları arasından bazı hesaplar dönem sonunda genellikle kafa karıştırıcı bir takım işlemlerden sonra **bilanço** ve **gelir tablosuna** aktarılır. Aynı değerin bilanço ile gelir tablosu arasında zigzag yapmasından ötürü kafa karışıklığı ortaya çıkar. Ancak bunun üstesinden gelmek için basit bir çerçeve oluşturdum. Bu çerçeveye giremden önce [şu yazımı](http://blog.suatatan.com/post/101746833180/770-genel-yonetim-giderleri-hesab-ve-kapan-s-islemleri) incelerseniz bu çerçevenin daha faydalı olacağını söyleyebilirim.

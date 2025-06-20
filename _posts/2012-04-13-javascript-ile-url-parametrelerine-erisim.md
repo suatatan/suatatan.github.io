@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Javascript ile Url Parametrelerine Erişim"
+categories:
+- bilgisayar
+- genel
 date: 2012-04-13
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "jquery"
+layout: post
+tags:
+- english
+- jquery
+- longread
+- technology
+title: Javascript ile Url Parametrelerine Erişim
 ---
 
 [http://suatatan.com](http://suatatan.com)?git=iletisim&referans=facebook şeklindeki bir adresteki git ve referans parametre değerlerine javascript üzerinen erişim sağlamak için şu fonksiyonu kullanabilirsiniz:  

@@ -1,8 +1,11 @@
 ---
-layout: post
+categories:
+- genel
 date: 2015-08-03
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
 ---
 
 ![](/images/tumblr_nsii7vywor1u2h8puo1_500.jpg)

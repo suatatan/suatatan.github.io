@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "2017'de neler okudum (24 kitap)"
 date: 2017-12-25
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: 2017'de neler okudum (24 kitap)
 ---
 
 Her yıl okuduğum kitapları listelemek artık bir "yıl sonu işlemi" haline geldi. Bu sayede "ne okuyorsun" sorusunun cevabını arşivlemiş oluyorum. Yoksa zinhar narsist bir eğilimden mütevellit değildir bu yazı. Göz atmalık...

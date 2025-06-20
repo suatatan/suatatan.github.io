@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Parcel.js ile modern frontend geliştirme"
+categories:
+- bilgisayar
 date: 2021-09-29
-categories: 
-  - "bilgisayar"
-tags: 
-  - "javascript"
+layout: post
+tags:
+- english
+- javascript
+- longread
+- technology
+title: Parcel.js ile modern frontend geliştirme
 ---
 
 Daha önce npm kullanımını anlatmış, Javascript için dinazor tanımında kalan biz eskilerin alışkanlarını değiştirecek şu yazıyı yazmıştım:

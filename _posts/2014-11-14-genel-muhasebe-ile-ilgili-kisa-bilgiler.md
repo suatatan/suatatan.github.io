@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Genel Muhasebe ile ilgili Kısa Bilgiler"
+categories:
+- genel
 date: 2014-11-14
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "muhasebe"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- muhasebe
+- opinion
+- technology
+title: Genel Muhasebe ile ilgili Kısa Bilgiler
 ---
 
 Aşağıdaki kısa notları online basit bir quiz formatında da görüntüleyebilir, kendinizi deneyebilirsiniz. Quiz linki için burayı [tıklayın](http://ankara.notesuat.appspot.com/opennote/2581001).

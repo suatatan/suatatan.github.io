@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Stratejik Yönetim Okumaları-Kısa Notlar-Yorumlar"
+categories:
+- genel
 date: 2014-11-20
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "yonetim"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- opinion
+- quickread
+- technology
+- yonetim
+title: Stratejik Yönetim Okumaları-Kısa Notlar-Yorumlar
 ---
 
 - İşletmeler çocuk gibidirler. Doğar, büyür, gelişir ve bazen ölürler. buna göre işletmenin her evresinde aynı strateji uygulanmaz. Bir strateji ilgili işletmeye ne dar ne bol gelmelidir.

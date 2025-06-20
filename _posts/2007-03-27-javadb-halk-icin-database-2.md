@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "JavaDB: Halk için Database"
 date: 2007-03-27
-tags: 
-  - "bilgisayar"
-  - "web-programlama"
+layout: post
+tags:
+- bilgisayar
+- english
+- quickread
+- technology
+- web-programlama
+title: 'JavaDB: Halk için Database'
 ---
 
 Dürüst konuşmak gerekirse veritabanı programcılığı ile uğraşmış hemen hemen herkes veritabanların taşınabilirliği sorununu yaşamıştır:  

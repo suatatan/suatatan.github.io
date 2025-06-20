@@ -1,7 +1,10 @@
 ---
-layout: post
-title: "TRT 6 FREKANSLARI"
 date: 2008-12-29
+layout: post
+tags:
+- english
+- quickread
+title: TRT 6 FREKANSLARI
 ---
 
 ![](/images/trt.JPG)**KURDÎ**  

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Karar Bilimleri ve Oyun Teorisi alanında h-5 indeksi en yüksek İngilizce dergiler"
+categories:
+- genel
 date: 2015-05-09
-categories: 
-  - "genel"
-tags: 
-  - "akademi"
+layout: post
+tags:
+- akademi
+- english
+- longread
+- technology
+title: Karar Bilimleri ve Oyun Teorisi alanında h-5 indeksi en yüksek İngilizce dergiler
 ---
 
 Karar bilimleri ve oyun teorisi ile ilgili en yüksek h-indeksli dergiler şunlardır. (Google Scholar raporuna göre)

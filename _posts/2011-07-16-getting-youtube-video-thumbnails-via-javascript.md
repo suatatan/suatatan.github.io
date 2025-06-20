@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Getting Youtube Video Thumbnails via Javascript"
+categories:
+- bilgisayar
+- english
 date: 2011-07-16
-categories: 
-  - "bilgisayar"
-  - "english"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Getting Youtube Video Thumbnails via Javascript
 ---
 
 When you embedding youtube videos to your page, may be you want displaying video thumbnails for introduction. You don't need getting thumbnail images manually. You can get it with youtube videos key via javascript.

@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "PYTHON'da küme işlemleri"
+categories:
+- bilgisayar
 date: 2022-03-02
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: PYTHON'da küme işlemleri
 ---
 
 Matematikteki küme teorisini hatırlarsınız. Python'da bunun birebir karşılıkları var.

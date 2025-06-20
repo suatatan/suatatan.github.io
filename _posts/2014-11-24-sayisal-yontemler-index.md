@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Sayısal Yöntemler Index:"
+categories:
+- genel
 date: 2014-11-24
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "index"
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- index
+- isletme
+- quickread
+- sayisalyontemler
+- technology
+title: 'Sayısal Yöntemler Index:'
 ---
 
 Sayısal Yöntemlerle  ilgili olarak bu blogda yazdıklarımın derli toplu olması için indeksledim. Emrinizde:

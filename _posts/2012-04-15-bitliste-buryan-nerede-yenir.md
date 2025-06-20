@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Bitliste büryan nerede yenir?"
+categories:
+- genel
 date: 2012-04-15
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: Bitliste büryan nerede yenir?
 ---
 
 Büryancı Muhitin Usta. Tavsiye edilir.  

@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "YAMYAM HÜMANİZMİ"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- yazilarim
+- yeni-ufuk-gazetesi
+title: YAMYAM HÜMANİZMİ
 ---
 
 At gözlüğü işle görebilecek kadar da olsa görmeye” hasret, bir kör gibi de olsa duymaya helak edici bir özlem duyan ve yakalayabildiği “kut-la yemut” ışığı da yaymaya çalışırken bir mum gibi eriyen sonra da lambanın icadıyla bir kenara atılan. garipler de- isteye istemeye söylüyorum- dahil olmak üzere yerküre(ve bilgiküre) üzerindeki her “yerli”, hatta globalizmi daha hiç duymamış olan köydeki çobanını da dahil etmek gerekir herkes satranç tahtası kadar dar da olsa milyonlarca manevra imkanı var gibi gözüken “varoluşun anlamı” hikayesinin kulaklarımıza milyonlarca kez haykırarak söylendiği şu dünyada ayağına pranga bağlanmış bir güvercin gibi özgürlük zannıyla fakat mahkum olarak, kendine verilen rolleri ve kutsal kitaplardan ve mistik itaat ettirme yöntemlerinden çalınmış metaforik vicdani vazifeleri yeni bir din gibi seve seve uygularken yine de bu dinde adı hiç geçmeyen küçük şeytanın işidir herhalde: yalnızlaştırılmış birey kendini kaybediyor ve bilinçaltındaki kadim gnostik dualizm geleneğini terk edip, evet bu dini monoteistleştirerek bir tek ilaha inan(dır)ılıyor ve yine o ilahın mabetlerine istese de istemese de kendi ayağı ile gidiyor ibadetini yapıyor kalbi kirlerden, cüzdanı ve kredi kartıysa paradan arındırılmış olarak evine dönüyor, mükafat olarak aldığı nesne çoğu kez hatta bilgi de olsa, sevgilisine armağan edeceği kırmızı bir gül de olsa nihayet “piyasa için seri ve özensiz” üretilmişliğin o kötü kokusunu üzerinden atamıyor, “mal” statüsünde olmayı koruyor ve hikaye yine kelimeleri sık sık değiştirilse de hiç değişmiyor; Arz-talep, topluma hizmet vs. vs. derken dünyanın unutulmuş kenarlarında okuma-yazmayı hala sihirli bir güç olarak görüp de öğrenemeyen insanlar aynı kalıyor. Antropologlara araştırma malzemesi olmalarını saymazsak tabi...

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "İşletmelerin Çevreleri ve İşletmelerle İlgili Bazı Ölçütler"
+categories:
+- genel
 date: 2014-11-21
-categories: 
-  - "genel"
-tags: 
-  - "yonetim"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+- yonetim
+title: İşletmelerin Çevreleri ve İşletmelerle İlgili Bazı Ölçütler
 ---
 
 ## İşletme ve Çevre Faktörleri

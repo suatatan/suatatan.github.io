@@ -1,8 +1,12 @@
 ---
-layout: post
+categories:
+- genel
 date: 2013-06-10
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
 ---
 
 İki bankanın aşağıdaki reklamı ile karşı karşıyasınız:

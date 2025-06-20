@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Tüm şifrelerinizi unutun Lastpass kullanın"
+categories:
+- bilgisayar
+- genel
 date: 2011-07-20
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Tüm şifrelerinizi unutun Lastpass kullanın
 ---
 
 İnternette kullanıcı adı ve parola kullanarak giriş yaptığımız web sayfalarının sayısı arttıkça bunlarla ilgili şifreleri akılda tutmak zorlaşıyor. Klasik yöntem olan tüm web siteleri için aynı kullanıcı adı ve şifreyi kullanmak güvenli değil. Ayrıca güçlü bir şifre belirlemek için şeytanca yöntemler (absürt karakterler kullanma gibi) zaman alıyor. Tüm bunları sizin adınıza yapan, tüm şifrelerinizi merkezi olarak bir yerde tutan [LastPass](https://lastpass.com/) adlı eklenti var.  

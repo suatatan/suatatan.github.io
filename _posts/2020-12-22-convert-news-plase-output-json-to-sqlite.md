@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Convert news-plase output json to sqlite"
+categories:
+- bilgisayar
+- english
 date: 2020-12-22
-categories: 
-  - "bilgisayar"
-  - "english"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Convert news-plase output json to sqlite
 ---
 
 [News-please](https://github.com/fhamborg/news-please) is a great crawling tool for gathering data over the web. However, its output is JSON. Although it has a method for saving data to the PostgreSQL database I usually prefer SQLite. Therefore I wrote a script for this purpose:

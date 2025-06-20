@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Outlook Aramaları İçin Özel Filtreler"
+categories:
+- bilgisayar
+- genel
 date: 2014-12-08
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "ofis"
-  - "verimlilik"
+layout: post
+tags:
+- english
+- longread
+- ofis
+- technology
+- verimlilik
+title: Outlook Aramaları İçin Özel Filtreler
 ---
 
 **İki tarih arasındaki mailleri arama:** 

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Kaynak Kod Analizi Notları"
 date: 2020-02-28
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Kaynak Kod Analizi Notları
 ---
 
 - **Zeroday saldırıları**: İleri düzey salsıdrganların standart saldırgtan araçlarını kullanmadan, özellikle herkesin çok kullandığı antivirüs, SQL yönetimi gibi araçlara daha kimse farketmeden açıklarını bulurlar. Daha sonra bu araçlar üzerinden backdoorlar açıp istismar ederler.

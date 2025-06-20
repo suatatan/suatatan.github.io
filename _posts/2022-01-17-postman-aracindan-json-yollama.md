@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Postman aracından json yollama"
+categories:
+- bilgisayar
 date: 2022-01-17
-categories: 
-  - "bilgisayar"
-tags: 
-  - "postman"
-  - "python"
+layout: post
+tags:
+- english
+- longread
+- postman
+- python
+- technology
+title: Postman aracından json yollama
 ---
 
 Python Flask kullanırken istemciden gelen JSON formundaki verileri aşağıdaki gibi alırız

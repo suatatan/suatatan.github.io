@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Etkilenen Zihnimiz"
 date: 2018-12-02
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Etkilenen Zihnimiz
 ---
 
 ![](/images/170419131801_1_540x360.jpg)

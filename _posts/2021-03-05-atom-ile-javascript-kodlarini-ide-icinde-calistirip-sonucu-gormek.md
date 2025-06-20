@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Atom ile Javascript Kodlarını IDE içinde çalıştırıp sonucu görmek"
+categories:
+- bilgisayar
 date: 2021-03-05
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Atom ile Javascript Kodlarını IDE içinde çalıştırıp sonucu görmek
 ---
 
 Bir kodun nasıl çalıştığını görmek için derlemek veya çalıştırmak gerekir. Javascript için de o sayfayı açmak gerekir. Ancak bir şey olsa ve o satırdaki çalıştırıp kod nasıl işliyor diye bakmak istediğiniz oldu mu? Ama araç yoktu değil mi? Var!

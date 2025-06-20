@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Apply Function in R: Apply same function to for each cell of a matrix"
+categories:
+- english
+- genel
 date: 2016-01-05
-categories: 
-  - "english"
-  - "genel"
-tags: 
-  - "r"
-  - "statistic"
+layout: post
+tags:
+- english
+- longread
+- r
+- statistic
+- technology
+title: 'Apply Function in R: Apply same function to for each cell of a matrix'
 ---
 
 R provides powerful functions. Apply function is one of them. It keeps you from writing boring loops(while and for). For insance:

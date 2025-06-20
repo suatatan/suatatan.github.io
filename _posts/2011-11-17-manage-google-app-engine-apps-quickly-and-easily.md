@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Manage Google App Engine Apps quickly and easily in linux withoutterminal-hell"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2011-11-17
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "linux"
-  - "ubuntu"
+layout: post
+tags:
+- english
+- linux
+- quickread
+- technology
+- ubuntu
+title: Manage Google App Engine Apps quickly and easily in linux withoutterminal-hell
 ---
 
 [![](/images/ekrangoruntusu-2011-11-17-122346.png "EkranGoruntusu - 2011-11-17 12:23:46")](http://suatatan.wordpress.com/wp-content/uploads/2011/11/ekrangoruntusu-2011-11-17-122346.png)  

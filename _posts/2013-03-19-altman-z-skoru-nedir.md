@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Altman Z-skoru nedir?"
+categories:
+- genel
 date: 2013-03-19
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- opinion
+- quickread
+- technology
+title: Altman Z-skoru nedir?
 ---
 
 | [![](/images/image003.jpg)](http://people.stern.nyu.edu/ealtman/index_files/image003.jpg) |

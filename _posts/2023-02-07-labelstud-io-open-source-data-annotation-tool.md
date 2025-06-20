@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Labelstud.io: Open Source Data Annotation Tool"
+categories:
+- bilgisayar
 date: 2023-02-07
-categories: 
-  - "bilgisayar"
-tags: 
-  - "machine-learning"
-  - "text-mining"
-  - "tools"
+layout: post
+tags:
+- english
+- longread
+- machine-learning
+- technology
+- text-mining
+- tools
+title: 'Labelstud.io: Open Source Data Annotation Tool'
 ---
 
 An open source data labeling tool for investigating and classifying various sorts of data is called Label Studio. With several different data formats, you can execute various labeling operations.

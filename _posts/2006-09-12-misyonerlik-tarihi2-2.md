@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "MİSYONERLİK TARİHİ–2"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: MİSYONERLİK TARİHİ–2
 ---
 
 Misyonerlik faaliyetlerinin sürdürüldüğü bölgeler tesadüfî olarak seçilmemekte çalışma alanları özel olarak belirlenmektedir. 20. yüzyılın son çeyreğine kadar bu alanlar; Latin Amerika, Doğu Avrupa bloğu ülkeleri ve Afrika’yı kapsamaktaydı. Misyonerliğin hedef kitlesi yalnızca Yahudiler, Müslümanlar, diğer dine mensup insanlar veya dinsizler olmadığından bu bölgelerdeki Hıristiyanlar da muhatap alınmaktaydı. Bu durumun kendisi bile misyonerlik faaliyetlerinin teorik yanlışlığını açıklar. Zaten Hıristiyan olanlara yapılan Hıristiyanlık propagandası “sizinki yanlış bizimki doğru” anlayışından çok, üniform ve politize bir Hıristiyan toplumu yaratma amacını taşıyordu. Bu amaç çoğu kez gerçekleşti de.

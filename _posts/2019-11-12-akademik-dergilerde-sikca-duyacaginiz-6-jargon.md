@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Akademik Dergiler'de Sıkça Duyacağınız  jargonlar"
+categories:
+- akademik
 date: 2019-11-12
-categories: 
-  - "akademik"
-tags: 
-  - "featured"
+layout: post
+tags:
+- english
+- featured
+- longread
+- opinion
+- technology
+title: Akademik Dergiler'de Sıkça Duyacağınız  jargonlar
 ---
 
 ![](/images/cite.png)

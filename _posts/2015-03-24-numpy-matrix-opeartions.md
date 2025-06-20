@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "NumPy Matrix Opeartions"
+categories:
+- genel
 date: 2015-03-24
-categories: 
-  - "genel"
-tags: 
-  - "numpy"
-  - "python"
+layout: post
+tags:
+- english
+- longread
+- numpy
+- python
+- technology
+title: NumPy Matrix Opeartions
 ---
 
 NumPy is a kind a untangible yet powerful model of excel in Python. Excel provides easy environment for seeing a matrix but doesn’t provide functions for batch operation. For instance for getting sum of all columns you have to write sum() function in excel then drag the function cell to right up to reach matrix x-axis end. However NumPy gives more; an matrix can be define as just a variable “f” or another variable, then getting sum of columns is: f.sum(axis=0)

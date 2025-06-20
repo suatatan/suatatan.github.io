@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "İşletme Sermayesi İhtiyacı Nasıl Hesaplanır?"
+categories:
+- genel
 date: 2014-11-30
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: İşletme Sermayesi İhtiyacı Nasıl Hesaplanır?
 ---
 
 ![Greyfurt Reçeli](/images/b2c71-6.jpg)

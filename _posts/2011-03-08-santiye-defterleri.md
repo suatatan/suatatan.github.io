@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Şantiye defterleri"
+categories:
+- muhendislik
 date: 2011-03-08
-categories: 
-  - "muhendislik"
-tags: 
-  - "insaat-muhendisligi"
+layout: post
+tags:
+- english
+- insaat-muhendisligi
+- longread
+- opinion
+- technology
+title: Şantiye defterleri
 ---
 
 İNŞAAT İŞLETMELERİNİN TUTACAĞI DEFTERLER

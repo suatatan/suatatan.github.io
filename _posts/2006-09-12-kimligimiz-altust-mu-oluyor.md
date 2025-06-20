@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "KİMLİĞİMİZ ALTÜST MÜ OLUYOR?"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: KİMLİĞİMİZ ALTÜST MÜ OLUYOR?
 ---
 
 **_Alt kimlik, üst kimlik tartışmaları arasında gün-deme küçük dem vuruşlar._**

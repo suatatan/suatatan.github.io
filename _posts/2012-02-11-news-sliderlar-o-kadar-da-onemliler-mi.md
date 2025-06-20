@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "News Sliderlar. O kadar da önemliler mi?"
+categories:
+- bilgisayar
+- genel
 date: 2012-02-11
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: News Sliderlar. O kadar da önemliler mi?
 ---
 
 [![](/images/featured_news_slider_panel.jpg)](http://www.izmirtocbirsen.com/dosyalar/fusion7/featured_news_slider_panel.jpg)

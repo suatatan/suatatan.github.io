@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Kitapçı gezintileri"
+categories:
+- genel
 date: 2012-09-23
-categories: 
-  - "genel"
+layout: post
+tags:
+- quickread
+- turkish
+title: Kitapçı gezintileri
 ---
 
   

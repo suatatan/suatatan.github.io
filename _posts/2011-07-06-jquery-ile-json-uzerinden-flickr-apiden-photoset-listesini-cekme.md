@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Jquery ile Json üzerinden Flickr API'den Photoset listesini çekme"
+categories:
+- bilgisayar
 date: 2011-07-06
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Jquery ile Json üzerinden Flickr API'den Photoset listesini çekme
 ---
 
 Jquery ile Json üzerinden Flickr'dan Photoset listesini çekme.

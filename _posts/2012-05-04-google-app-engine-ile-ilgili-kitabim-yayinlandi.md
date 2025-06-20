@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Google App Engine ile ilgili kitabım yayınlandı."
+categories:
+- genel
 date: 2012-05-04
-categories: 
-  - "genel"
-tags: 
-  - "google-app-engine"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- opinion
+- technology
+title: Google App Engine ile ilgili kitabım yayınlandı.
 ---
 
 [![image](/images/dad40-google_app_suat_atan.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2012/05/dad40-google_app_suat_atan.jpg)

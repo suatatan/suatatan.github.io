@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "What is Your Life Like A Way or A Corridor?"
+categories:
+- english
+- meditasyon
 date: 2019-01-08
-categories: 
-  - "english"
-  - "meditasyon"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: What is Your Life Like A Way or A Corridor?
 ---
 
 ![corridor image ile ilgili gÃ¶rsel sonucu](/images/corridor-3744201__340.jpg)

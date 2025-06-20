@@ -1,14 +1,16 @@
 ---
-layout: post
-title: "Interpreting Linear Model(lm) in R"
+categories:
+- genel
 date: 2015-12-26
-categories: 
-  - "genel"
-tags: 
-  - "computer"
-  - "r"
-  - "rstudio"
-  - "statistic"
+layout: post
+tags:
+- computer
+- english
+- longread
+- r
+- rstudio
+- statistic
+title: Interpreting Linear Model(lm) in R
 ---
 
 In R as you know, when it have been written: **summary(lm(x~y))**, the command gives  a lot of different ‘mystic’ values. I have found a good manual for interpreting the result. It is [here](http://blog.yhathq.com/posts/r-lm-summary.html)

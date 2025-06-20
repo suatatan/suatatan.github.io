@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "JQuery ile Link davranışını iptal etme"
+categories:
+- bilgisayar
+- genel
 date: 2009-08-23
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- web-programlama
+title: JQuery ile Link davranışını iptal etme
 ---
 
 Ajax'lı uygulamalar yaparken, tıklanan bir linkin direkt olarak  

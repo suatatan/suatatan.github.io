@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Finansal Kaldıraç Nedir? « OKAN SARIOĞLU"
+categories:
+- genel
 date: 2013-02-20
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Finansal Kaldıraç Nedir? « OKAN SARIOĞLU
 ---
 
 [Finansal Kaldıraç Nedir? « OKAN SARIOĞLU](http://www.okansarioglu.com/finansal-kaldirac-nedir):  

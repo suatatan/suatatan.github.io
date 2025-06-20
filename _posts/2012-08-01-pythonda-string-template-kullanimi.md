@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Python'da String Template kullanımı"
+categories:
+- genel
 date: 2012-08-01
-categories: 
-  - "genel"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- python
+- quickread
+- technology
+title: Python'da String Template kullanımı
 ---
 
 Python ile yazılım yaparken bugün öğrendiğim hızlı ve pratik bir şablonlama yöntemini paylaşayım:  

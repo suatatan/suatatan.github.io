@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "WordCluster Python paketi ne işe yarar"
 date: 2022-05-17
+layout: post
+tags:
+- english
+- longread
+- technology
+title: WordCluster Python paketi ne işe yarar
 ---
 
 Metin madenciliği ile uğraşırken insanın önüne ilginç problemler çıkıyor.

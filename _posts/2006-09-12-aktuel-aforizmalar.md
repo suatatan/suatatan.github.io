@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "AKTÜEL AFORİZMALAR"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: AKTÜEL AFORİZMALAR
 ---
 
 **Lübnan’a asker**

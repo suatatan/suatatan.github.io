@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Google App Script ile e-tablo (spreadsheet) ile entegre zengin form oluşturma"
+categories:
+- bilgisayar
+- genel
 date: 2012-06-10
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel"
-  - "excel-vba"
-  - "google-app-script"
+layout: post
+tags:
+- english
+- excel
+- excel-vba
+- google-app-script
+- longread
+- technology
+title: Google App Script ile e-tablo (spreadsheet) ile entegre zengin form oluşturma
 ---
 
 Google App ile excel tablolarının Google dökümanlardaki muadili olan Google e-tablolara entegre formlar yazabiliriz:  

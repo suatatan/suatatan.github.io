@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Blogger mi Wordpress mi?"
+categories:
+- bilgisayar
+- genel
 date: 2012-02-11
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Blogger mi Wordpress mi?
 ---
 
 [![](/images/561db-blogger-to-wordpress-converter-hit-kaybetmedenpng.png)](https://suatatan.wordpress.com/wp-content/uploads/2012/02/561db-blogger-to-wordpress-converter-hit-kaybetmedenpng.png)

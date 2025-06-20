@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Sermaye Yapısı İşletme Değeri İlişkisini Açıklamada Geleneksel Yaklaşım"
+categories:
+- genel
 date: 2014-11-09
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Sermaye Yapısı İşletme Değeri İlişkisini Açıklamada Geleneksel Yaklaşım
 ---
 
 Sermaye yapısı ile şirket değeri ilişkisini açıklamak için en geçerli yaklaşım **geleneksel yaklaşımdır** geleneksel yaklaşıma göre her şirket yapısı için farklı olan bir optimal sermaye yapısı (borç özkaynak dağılımı) vardır. Bu optimal sermaye yapısına kadar borçlanma, _ağırlıklı ortalama sermaye maliyetini (AOSM)_ düşürür bu noktaya kadar da şirket değeri artar. Ancak bu _optimal sermaye noktasına_ erişildikten sonra artık borçlanma AOSM'i düşürmez.

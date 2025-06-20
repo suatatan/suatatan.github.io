@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Kapasite Türleri"
+categories:
+- genel
 date: 2014-11-21
-categories: 
-  - "genel"
-tags: 
-  - "yoneti"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- quickread
+- technology
+- yoneti
+title: Kapasite Türleri
 ---
 
 ![Temsili resim](/images/manufacturing.jpg)

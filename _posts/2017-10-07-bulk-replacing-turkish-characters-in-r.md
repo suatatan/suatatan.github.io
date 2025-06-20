@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Bulk replacing Turkish characters in R"
+categories:
+- bilgisayar
 date: 2017-10-07
-categories: 
-  - "bilgisayar"
-tags: 
-  - "data-science"
-  - "r"
+layout: post
+tags:
+- data-science
+- english
+- longread
+- r
+- technology
+title: Bulk replacing Turkish characters in R
 ---
 
 Turkish character sometimes became the menace for the data scientist. To avoid the risks you may want to change it with safe characters. To do that you can use this code:

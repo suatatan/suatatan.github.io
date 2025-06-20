@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "TANRININ LİSANI"
+categories:
+- genel
 date: 2006-11-26
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- quickread
+- yazilarim
+- yeni-ufuk-gazetesi
+title: TANRININ LİSANI
 ---
 
 Sessizliğin bir keramet olduğunu bilmek gerek;  

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Cidden iyi iş yapan ancak delice bir Google App Script"
+categories:
+- genel
 date: 2012-06-14
-categories: 
-  - "genel"
-tags: 
-  - "google-app-script"
+layout: post
+tags:
+- english
+- google-app-script
+- quickread
+- technology
+title: Cidden iyi iş yapan ancak delice bir Google App Script
 ---
 
 Google App Script ile kaynak tablo içinde(0) başka bir tablo içindeki(1) liste halindeki her bir veriyi alıp kaynak tablodan arayarak bulduğu takdirde,bulduğu satırdaki başka bir hücre verisini alıp, 1. tablodaki listenin yanındaki satırlara yazdıran acaibül garaip suat atan hayratı scipt.  

@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Simple Python Inheritence Tutorial"
+categories:
+- bilgisayar
+- genel
 date: 2015-03-27
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- longread
+- python
+title: Simple Python Inheritence Tutorial
 ---
 
 ```

@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Google App Engine Datastore için alternatif Group By Fonksiyonu"
+categories:
+- genel
 date: 2012-07-11
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Google App Engine Datastore için alternatif Group By Fonksiyonu
 ---
 
 Google App Engine datastore SQL'deki Group By fonksiyonunu kabul etmiyor. Bunun yerine geliştirdiğim şey aşağıda:  

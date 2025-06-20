@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Makale okuyarak İngilizcesini geliştirenler için ücretsiz yenilikçi bir çözüm."
+categories:
+- bilgisayar
 date: 2011-10-06
-categories: 
-  - "bilgisayar"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- longread
+- technology
+title: Makale okuyarak İngilizcesini geliştirenler için ücretsiz yenilikçi bir çözüm.
 ---
 
 [![](/images/kolayingilizceoku.jpg "kolayingilizceoku")](http://kolay-ingilizce-oku.appspot.com)

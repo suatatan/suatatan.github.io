@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Data Binding to DropDownList from ViewModel in ASP.MVC 5"
+categories:
+- genel
 date: 2016-04-18
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Data Binding to DropDownList from ViewModel in ASP.MVC 5
 ---
 
 Let’s be clear, doing some task in overhelmingly tough in ASP.MVC comparing to the Python-Django. That is the recent one with I am deal with. Here is how:

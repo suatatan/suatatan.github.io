@@ -1,7 +1,10 @@
 ---
-layout: post
-title: "SQL Server'da metinden tarihe dönüşüm"
 date: 2017-05-04
+layout: post
+tags:
+- english
+- longread
+title: SQL Server'da metinden tarihe dönüşüm
 ---
 
 SQL Server'la uğraşan tüm sinir stres sahiplerine selam olsun. Kod yazmayı eziyete çeviren SQL Server'da metinden tarihe dönüşüm yaparken yine kırk fırın dökümana bakmak gerekiyor:)

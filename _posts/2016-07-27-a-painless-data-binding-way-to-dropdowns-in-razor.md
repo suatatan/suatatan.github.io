@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "A Painless data binding way to Dropdowns in Razor"
+categories:
+- genel
 date: 2016-07-27
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: A Painless data binding way to Dropdowns in Razor
 ---
 
 Method is here:

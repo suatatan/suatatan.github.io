@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Milli saçmalığımız: Futbol Sevinci"
+categories:
+- genel
 date: 2013-05-05
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: 'Milli saçmalığımız: Futbol Sevinci'
 ---
 
 [![](/images/cf8ab-kriket.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/05/cf8ab-kriket.jpg)

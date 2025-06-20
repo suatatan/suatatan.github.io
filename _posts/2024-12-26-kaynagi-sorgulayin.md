@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Kaynağı sorgulayın!"
 date: 2024-12-26
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Kaynağı sorgulayın!
 ---
 
 ![](/images/images)

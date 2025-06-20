@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Int, Float, Double, Decimal... Yazılım’a giriş dersi neden önemlidir."
+categories:
+- bilgisayar
+- genel
 date: 2016-12-07
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "aspmvc"
+layout: post
+tags:
+- aspmvc
+- english
+- longread
+- technology
+title: Int, Float, Double, Decimal... Yazılım’a giriş dersi neden önemlidir.
 ---
 
 Yazılım'a giriş derslerinde her nedese ‘String'den önce hep sayısal değerler öğretilir. Hep de hızla geçilir. Integer akılda kalır, float ve decimal farkı hatırlanmaz. Ama gün gelir, parayla pulla ilgili bir uygulamayı yazar/geliştirsiniz işte orada küsüratlar kuruşlar değerli hale geldiğinde ilk derslerde duyduğunuz/okuduğunz şeyler durumu değiştirir.

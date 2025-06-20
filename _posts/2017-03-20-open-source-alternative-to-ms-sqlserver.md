@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "An Open Source Alternative to MS SQLServer"
+categories:
+- bilgisayar
 date: 2017-03-20
-categories: 
-  - "bilgisayar"
-tags: 
-  - "sqlserver"
+layout: post
+tags:
+- english
+- longread
+- sqlserver
+- technology
+title: An Open Source Alternative to MS SQLServer
 ---
 
 ![database](/images/database.png)

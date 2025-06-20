@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "MİSYONERLİK TARİHİ:"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: 'MİSYONERLİK TARİHİ:'
 ---
 
 Bu yazımızda kamuoyunun gündemini sıkça meşgul eden ve çoğu kez aslından çok gölgesinden korkulan misyonerlik faaliyetleri ile ilgili incelemelerimizi sizlerle paylaşmak istiyorum. Ancak şu hususu da hatırlatmakta fayda olacaktır: Bu yazı takdiri okuyucuya bırakmaktadır. Kamuoyumuzca Misyonerlik kurumuna yüklenecek her yeni özel misyon gereksiz gerginlikler yaratacağı gibi, bu kurumu “bırakınız yapsınlar”cı anlayışla ele almak kültürümüzün kanı ile oynamak anlamına gelecektir.

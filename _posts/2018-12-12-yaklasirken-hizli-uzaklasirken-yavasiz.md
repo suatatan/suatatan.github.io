@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Yaklaşırken Hızlı, Uzaklaşırken Yavaşız"
+categories:
+- okuma-notlari
 date: 2018-12-12
-categories: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Yaklaşırken Hızlı, Uzaklaşırken Yavaşız
 ---
 
 <figure>

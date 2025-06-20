@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Are you still using pip &gt; freeze"
 date: 2023-04-03
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Are you still using pip &gt; freeze
 ---
 
 Imagine you have a project and you've used dozens of different libraries. However, you accidentally deleted the virtual environment (.venv) or you need to run the project on another machine. You would have to do the installation ten times in the console to run the project. Is that necessary? No! Let Pipreqs do it for you."

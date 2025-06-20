@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "ADAY ADAYLARI TANITIMLARI VE 'ETİK' SORUNU"
 date: 2011-03-14
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- sehrivan-gazetesi
+- technology
+- van-yazilari
+- yazilarim
+title: ADAY ADAYLARI TANITIMLARI VE 'ETİK' SORUNU
 ---
 
 Hiçbir aday adayı herhalde ‘yalancı’ konumuna düşmek istemez. Hiçbir seçmen de reklamını gördüğü aday adayı hemşerisinin 'yalan beyanları’ karşısında, sözkonusu adaya karşı güven duygusu tesis edemez. 'Güven’ tesisinin gerekliği tüm taraflar için zaruri ise artık 'etik’ reklamın zamanı gelmiştir.  

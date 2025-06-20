@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Google Jsapi ile JQuery üzerinden AJAX post işlemi"
+categories:
+- bilgisayar
+- genel
 date: 2012-12-14
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "jquery"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- jquery
+- quickread
+- technology
+- web-programlama
+title: Google Jsapi ile JQuery üzerinden AJAX post işlemi
 ---
 
 Aşağıda yazdığım hazır şablon AJAX post işlemlerinizi kolayca yapabilmeniz içindir. Form elementlerini ve formun post edileceği kısmı değiştirdikten sonra sayfa yenilemesi olmadan form yollama ve sonucu sonuç alanına yazdırma için kolayca kullanabilirsiniz.  

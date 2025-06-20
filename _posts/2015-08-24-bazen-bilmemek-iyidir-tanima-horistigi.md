@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Bazen bilmemek iyidir. Tanıma höristiği (recognition heuristic)."
+categories:
+- genel
 date: 2015-08-24
-categories: 
-  - "genel"
-tags: 
-  - "kitap"
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- kitap
+- okuma-notlari
+- quickread
+title: Bazen bilmemek iyidir. Tanıma höristiği (recognition heuristic).
 ---
 
 ![](/images/tumblr_inline_ntkuhqQiAv1r4exmc_540.jpg)

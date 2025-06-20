@@ -1,14 +1,16 @@
 ---
-layout: post
-title: "Get complementary set of an set with CRAN-R"
+categories:
+- english
+- genel
 date: 2015-05-20
-categories: 
-  - "english"
-  - "genel"
-tags: 
-  - "computer"
-  - "cran-r"
-  - "rstudio"
+layout: post
+tags:
+- computer
+- cran-r
+- longread
+- rstudio
+- turkish
+title: Get complementary set of an set with CRAN-R
 ---
 
 library(sets)

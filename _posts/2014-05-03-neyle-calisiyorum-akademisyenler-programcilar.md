@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "Neyle çalışıyorum?  Akademisyenler, Programcılar ve Verimli İnsanlar için Alet Çantası"
+categories:
+- bilgisayar
+- genel
 date: 2014-05-03
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Neyle çalışıyorum?  Akademisyenler, Programcılar ve Verimli İnsanlar için Alet
+  Çantası
 ---
 
 Bilgisayarda ciddi bir şeyler yapıyorsanız alet çantanız çok önemlidir. Serbest programcılık, Doktora öğrenciliği, kitapseverlik gibi birden fazla “gözlüğünüz” varsa aşağıdaki listem size göre:  

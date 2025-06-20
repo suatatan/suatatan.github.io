@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Excel'de bir sütundaki boş hücreleri silme"
+categories:
+- bilgisayar
+- genel
 date: 2012-10-02
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel"
+layout: post
+tags:
+- english
+- excel
+- quickread
+- technology
+title: Excel'de bir sütundaki boş hücreleri silme
 ---
 
   

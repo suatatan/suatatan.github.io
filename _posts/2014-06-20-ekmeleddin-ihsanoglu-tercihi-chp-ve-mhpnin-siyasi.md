@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Ekmeleddin İhsanoğlu Tercihi CHP ve MHP'nin siyasi hidayeti mi?"
+categories:
+- genel
 date: 2014-06-20
-categories: 
-  - "genel"
-tags: 
-  - "politika"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- politika
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: Ekmeleddin İhsanoğlu Tercihi CHP ve MHP'nin siyasi hidayeti mi?
 ---
 
 İhsanoğlu'nun ismi açıklanana değin CHP ve MHP'nin geçmiş performansına bakıp bir tahmin yapacak olsaydınız, yine, kazanmak bakımından umut vadetmeyen bir aday ismini ortaya koyacaklarını ya da daha başından yenilgiyi kabul ederek Anayasa Mahkmesinin kapısının aşındırmak için çalışmalara başlayacaklarını düşünürdünüz. 2007 Cumhurbaşkanlığı seçiminde MHP'nin Sabahattin Çakmakoğlu'nu aday göstermesi (70 oy almıştı), CHP'nin ise 367 meselesinin arkasına sığınarak fiilen sadece sonucu ertelemesi, üzerine de _iflah olmaz militarist gizli elin_ e-muhtırası ile yakın dönem Türkiye siyasetinin bir klasiği yaşandı. Elbette o zaman Cumhurbaşkanını halk seçmediği için mecis aritmetiği hayati öneme sahipti ve o gün ile bugünü karşılaştırmak belki isabetli olmayacaktır. Ancak ister seçim, ister referandum ister başka bir siyasi yarış olsun gelinen son nokta itibariyle bu iki partinin Eklmeleddin İhsaoğlu ismini ortaya çıkarması aslında daha derin anlamlar ifade etmektedir. Bunun bir zihniyet değişimi olduğunu düşünmek iyimserlik için erken davranmak olabilir ancak şu hali ile bir kabulün, hatta bir _siyasi hidayetin_ var olduğu söylenebilir.

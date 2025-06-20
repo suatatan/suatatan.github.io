@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Excel'de formül yazmaya giriş ve basit bir toplama formülü (Videolu anlatım)"
+categories:
+- bilgisayar
 date: 2011-10-12
-categories: 
-  - "bilgisayar"
-tags: 
-  - "excel"
+layout: post
+tags:
+- english
+- excel
+- quickread
+title: Excel'de formül yazmaya giriş ve basit bir toplama formülü (Videolu anlatım)
 ---
 
 Excel'de formül yazmak çok basittir. Yukarıdaki (sessiz) videodaki örneği dikkatle inceleyelim. Sayı1 ve Sayı2'yi toplamak için Toplamın görünmesini istediğimiz yere gelip '=' eşittir işaretine bastıktan sonra önce 1. sayımızı seçiyoruz, sonra + işaretini koyup 2. sayımızı seçiyoruz. Sonra Enter'a basınca toplam görünüyor. Video'da da görüleceği üzere, sayılarımızı değiştirdiğimizde toplam da otomatik olarak değişiyor. Ne kadar kolay değil mi?

@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Sayfanızı başka adrese taşıdığınızda arama motorlarına yardımcı olmak için ne yapmalısınız?"
+categories:
+- genel
 date: 2012-05-05
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Sayfanızı başka adrese taşıdığınızda arama motorlarına yardımcı olmak için
+  ne yapmalısınız?
 ---
 
 [![](/images/gse_multipart40542.png)](http://photos1.blogger.com/x/blogger2/6495/3914/1600/z/104716/gse_multipart40542.png)

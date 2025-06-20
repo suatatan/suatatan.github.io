@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Nasıl çok yazılır? Akademisyenler için efektif yazı yazma rehberi"
+categories:
+- genel
 date: 2015-09-30
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- technology
+title: Nasıl çok yazılır? Akademisyenler için efektif yazı yazma rehberi
 ---
 
 ![](/images/tumblr_inline_nvhtsvf5oZ1r4exmc_540.jpg)

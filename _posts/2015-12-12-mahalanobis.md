@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Çok değişkenli verilerde outlier (dışadüşen) verileri bulmak için R ile Mahalanobis Uzaklığı Metodu Kullanımı"
+categories:
+- genel
 date: 2015-12-12
-categories: 
-  - "genel"
-tags: 
-  - "istatistik"
-  - "rstudio"
+layout: post
+tags:
+- english
+- istatistik
+- quickread
+- rstudio
+- technology
+title: Çok değişkenli verilerde outlier (dışadüşen) verileri bulmak için R ile Mahalanobis
+  Uzaklığı Metodu Kullanımı
 ---
 
 ![image](/images/tumblr_inline_nz9h55qnuG1r4exmc_540.png)

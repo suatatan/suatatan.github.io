@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Van'da 5.7 şiddetinde artçı deprem"
+categories:
+- genel
 date: 2011-11-10
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Van'da 5.7 şiddetinde artçı deprem
 ---
 
 Van ve Ercişte büyük hasara neden olan 7.2 siddetindeki depremden sonra bugün 5.6 şiddetinde deprem meydana geldi. Bu depremin merkez üssü kandilli tarafından Edremit olarak bildirilirken Amerika tarafından Gürpınar olarak bildirildi.  

@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Generating custom unique id with python:"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2012-08-22
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "python"
+layout: post
+tags:
+- english
+- google-app-engine
+- python
+- quickread
+- technology
+title: 'Generating custom unique id with python:'
 ---
 
 You can generate custom unique key for databases in python  

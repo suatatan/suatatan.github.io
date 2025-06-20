@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Türkiye ve Arap Baharı: Bir CIA istihbaratçısının görüşleri"
+categories:
+- okuma-notlari
+- politika
+- yazilarim
 date: 2017-05-06
-categories: 
-  - "okuma-notlari"
-  - "politika"
-  - "yazilarim"
-tags: 
-  - "ortadogu"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- ortadogu
+- technology
+title: 'Türkiye ve Arap Baharı: Bir CIA istihbaratçısının görüşleri'
 ---
 
 Amerikan RAND Corporation düşünce kuruluşunun daimi politik danışmanı, ABD Merkezi Haberlama Teşkilatı'nın (CIA) Milli Haberlama Konseyi (İngilizce:National Intelligence Council) eski başkan yardımcısı, yazar, ABD'li devlet görevlisi (Wikipedia) [Graham Fuller](https://tr.wikipedia.org/wiki/Graham_Fuller)'in yazdığı "Türkiye ve Arap Baharı" adlo kitabı okudum. Kitap çok derin analizleri içeriyor. Graham Fuller Türkiye kamuoyunda çokça tartışılmış bir isim.  Ancak görüşlerinin faydalı ve ufuk açıcı olduğunu söyleyebilirim. Komplo teorisi üretmeyi seven zihnim Fuller'in analizlerinin 'manipülatif' olduğunu ara sıra söylese de, önermeleri üzerine düşünülmeye değer.  Kitaptan ilginç bulduğum bir kısım:

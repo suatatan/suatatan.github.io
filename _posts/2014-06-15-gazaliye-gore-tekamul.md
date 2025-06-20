@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Gazali'ye göre tekamül"
+categories:
+- genel
 date: 2014-06-15
-categories: 
-  - "genel"
-tags: 
-  - "din"
-  - "edebiyat"
-  - "gazali"
-  - "okuma-notlari"
+layout: post
+tags:
+- din
+- edebiyat
+- english
+- gazali
+- longread
+- okuma-notlari
+- technology
+title: Gazali'ye göre tekamül
 ---
 
 | [![](/images/235744_buyuk.jpg)](http://www.kitapkirtasiyem.com/images/products/23/57/44/235744_buyuk.jpg) |

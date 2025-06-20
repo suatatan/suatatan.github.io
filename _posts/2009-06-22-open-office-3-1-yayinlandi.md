@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Open Office 3.1 yayınlandı"
+categories:
+- bilgisayar
 date: 2009-06-22
-categories: 
-  - "bilgisayar"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- longread
+- technology
+title: Open Office 3.1 yayınlandı
 ---
 
 ![](/images/ooo31.jpg "Open Offiice 3.1")

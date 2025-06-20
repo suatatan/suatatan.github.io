@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "Kitap kurtları için akıllı telefon uygulamaları"
+categories:
+- bilgisayar
+- genel
 date: 2013-11-26
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Kitap kurtları için akıllı telefon uygulamaları
 ---
 
 Akıllı telefonların yalnızca oyun bağımlılarına değil kitap kurtlarına da hitap eden  gayet iyi özellikleri olduğunu biliyor muydunuz? Kitap kurdunun temel rutini olan kitap bulup okuma, altını çizme, not alma ve kenara koyma klasiği üstünden çok sular geçti. Artık yeni yöntemler mevcut. Kitap kurtlarının çok seveceği okuma etkinliğini zenginleştirecek, farklı deneyimler ve kolaylıklar sağlayacak uygulamaları paylaşmak istiyorum:

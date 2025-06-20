@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Üç Boyutlu Öykü"
 date: 2019-03-26
+layout: post
+tags:
+- english
+- longread
+- opinion
+title: Üç Boyutlu Öykü
 ---
 
 ![](/images/img_20190326_2124387107588572740422644.jpg)

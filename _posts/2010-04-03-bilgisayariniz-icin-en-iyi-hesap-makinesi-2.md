@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Bilgisayarınız için en iyi hesap makinesi"
+categories:
+- bilgisayar
+- genel
 date: 2010-04-03
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- quickread
+- technology
+title: Bilgisayarınız için en iyi hesap makinesi
 ---
 
 ![](/images/osx-all.png "SpeedChrunch ekrna görüntüsü")  

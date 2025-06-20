@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Balık tesisleri için bazı pratik bilgiler"
+categories:
+- genel
 date: 2012-04-26
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Balık tesisleri için bazı pratik bilgiler
 ---
 
 Direkt kaynağından, bir balık çiftliğinde çalışan yetkili birinden aldığımız temel alabalık yetiştiriciliği ile ilgili ‘el yazısı’ notlar.  

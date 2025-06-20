@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "Chrome Extension Oluşturmaya Giriş"
+categories:
+- bilgisayar
+- genel
 date: 2013-02-10
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Chrome Extension Oluşturmaya Giriş
 ---
 
 #   

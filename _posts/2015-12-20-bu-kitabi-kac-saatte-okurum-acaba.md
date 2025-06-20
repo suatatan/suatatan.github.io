@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Bu kitabı kaç saatte okurum acaba?"
+categories:
+- genel
 date: 2015-12-20
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Bu kitabı kaç saatte okurum acaba?
 ---
 
 Kitap okuma kültürünün nerelere vardığı konusunda, Amazon’un kitap satış departmanında her kitap için yapılan onlarca ciddi ve değerli yorum fikir verir. Özetle: Adamlar okuyor, paylaşıyor ve düşüyor…

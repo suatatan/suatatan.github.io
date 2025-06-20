@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "İstatistik testlerdeki sonuçlarda görülen p değeri nasıl yorumlanır?"
+categories:
+- genel
 date: 2016-09-11
-categories: 
-  - "genel"
-tags: 
-  - "ekonometri"
-  - "istatistik"
-  - "zaman-serileri"
+layout: post
+tags:
+- ekonometri
+- english
+- istatistik
+- longread
+- technology
+- zaman-serileri
+title: İstatistik testlerdeki sonuçlarda görülen p değeri nasıl yorumlanır?
 ---
 
 Bunu anlatmadan önce “sıfır hipotezi (null hypothesis”) kavramını anlatmalıyım:

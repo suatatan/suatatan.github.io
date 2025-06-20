@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "The Psychology of Time and the Paradox of How Impulsivity and Self-Control Mediate Our Capacity for Presence - Brain Pickings"
+categories:
+- genel
 date: 2016-05-06
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: The Psychology of Time and the Paradox of How Impulsivity and Self-Control
+  Mediate Our Capacity for Presence - Brain Pickings
 ---
 
 Danish philosopher wrote, “the most ridiculous seems to me, to be busy.” —  

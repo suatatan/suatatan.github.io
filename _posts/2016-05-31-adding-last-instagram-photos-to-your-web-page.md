@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Adding Last Instagram Photos to Your Web Page"
+categories:
+- bilgisayar
+- genel
 date: 2016-05-31
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "api"
-  - "computer"
-  - "jquery"
+layout: post
+tags:
+- api
+- computer
+- english
+- jquery
+- quickread
+- technology
+title: Adding Last Instagram Photos to Your Web Page
 ---
 
 After changing his API policy embedding instagram widget to your web page is overhelming task. You should use API and access\_token.  There is a lot of plugin to do that. However, I am enjoying doing it by myself. Here plain jquery code to get your last photos over api. 

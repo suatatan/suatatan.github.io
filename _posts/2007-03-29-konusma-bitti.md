@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Konuşma Bitti"
+categories:
+- gordugum-ruyalar
 date: 2007-03-29
-categories: 
-  - "gordugum-ruyalar"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Konuşma Bitti
 ---
 
 Rüyamda öldüğümü görüyordum; Daha doğrusu öldüğüm söyleniyordu. Öldüğümü farkettiğimden sonra bir ses; Artık konuşman bitti, şimdi nefsin konuşmaya başlayacak. Artık ben konuşacağım dedi.

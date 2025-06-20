@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "İlk Google App Script Uygulamam"
+categories:
+- genel
 date: 2012-06-10
-categories: 
-  - "genel"
-tags: 
-  - "excel"
-  - "excel-vba"
-  - "google-app-script"
+layout: post
+tags:
+- english
+- excel
+- excel-vba
+- google-app-script
+- quickread
+- technology
+title: İlk Google App Script Uygulamam
 ---
 
 Google Drive (Docs) kullanıyorsanız excel makroları muadili olarak kullanılan ve saf Javascriptle yazılan “Google App Script” kodlamayla üstün ve karmaşık işlemler yapabilirsiniz. Buna mail gönderimi, google data servislerine erişim de dahildir. Bu yönüyle excel makrolarından daha fazla şey vadediyor. Ve daha kolay…  

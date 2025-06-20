@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Netbeans Visual Web Pack ile veritabanı işlemlerinde sıkça karşılaşılan bir sorun hakkında"
+categories:
+- bilgisayar
 date: 2007-05-01
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Netbeans Visual Web Pack ile veritabanı işlemlerinde sıkça karşılaşılan bir
+  sorun hakkında
 ---
 
 Netbeans Visual Web Pack ile Veritabanı işlemlerinde; herhangi bir veritabanını kullanmak için malum olduğu üzere önce veritabanı bağlantısı Runtime penceresi altından kurulup istenen tablo sürükle-bırak yöntemi ile sayfa içine çekilir.  

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ödünleşme Teorisi Nedir?"
+categories:
+- genel
 date: 2014-12-06
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Ödünleşme Teorisi Nedir?
 ---
 
 Ödünleşme Teorisine göre işletmeler, optimal sermaye yapılarını belirlerken, borç kullanıp kullanmama kararında borcun marjinal maliyeti ile marjinal faydasını dikkate almaktadır. Borcun marjinal faydasının marjinal maliyetine eşit olduğu noktada borç kullanmaktadırlar. Borcun maliyetinden kastedilen iflas ve temsilci maliyetidir. Borcun faydası ile de borçlanmadan kaynaklanan faiz giderlerinin vergi matrahından düşürülmesine imkân tanıyan vergi kalkanı etkisi ifade edilmektedir.(Gülşen. A.Z, Ülkütaş Ö. [Link](http://asosindex.com/journal-article-fulltext?id=18322&part=1))

@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "BU DEPREM SONUNCU OLACAK"
+categories:
+- genel
 date: 2012-01-29
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- sehrivan-gazetesi
+- van-yazilari
+- yazilarim
+title: BU DEPREM SONUNCU OLACAK
 ---
 
 Türkiye’de depremler olur, ölenler ölür, tüm millet seferber olur, devlet elinden geleni yapar. Yardımlar gelir, dağıtılır, depremin yaraları sarılınca demeyeceğim, kalanlar için deprem fikri artık bezginlik vermeye başlayınca, insanlar imkanlar ölçüsünde yavaş yavaş eski hayatlarına geri dönmeye başlarlar. Tabii ki bulabildikleri kadar… Nitekim kiminin evi yıkılmış, kimi işinden olmuştur.  

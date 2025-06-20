@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Netbeans'ta JSlider(Slider) Kullanımı"
+categories:
+- bilgisayar
+- genel
 date: 2007-03-21
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Netbeans'ta JSlider(Slider) Kullanımı
 ---
 
 [![](/images/SliderDemo.png)](http://java.sun.com/docs/books/tutorial/figures/uiswing/components/SliderDemo.png)  

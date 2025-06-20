@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Arduino Kullanmaya Giriş"
+categories:
+- cocuklar
+- bilgisayar
 date: 2017-06-04
-categories: 
-  - "cocuklar"
-  - "bilgisayar"
-tags: 
-  - "arduino"
+layout: post
+tags:
+- arduino
+- english
+- longread
+- technology
+title: Arduino Kullanmaya Giriş
 ---
 
 ![ar2](/images/ar21.jpg)

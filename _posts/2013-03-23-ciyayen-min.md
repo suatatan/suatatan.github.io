@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Çîyayên  min"
+categories:
+- genel
 date: 2013-03-23
-categories: 
-  - "genel"
-tags: 
-  - "kurdi"
+layout: post
+tags:
+- english
+- kurdi
+- longread
+title: Çîyayên  min
 ---
 
 | [![](/images/862ef-579121_10200371267818593_172285951_n.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/03/862ef-579121_10200371267818593_172285951_n.jpg) |

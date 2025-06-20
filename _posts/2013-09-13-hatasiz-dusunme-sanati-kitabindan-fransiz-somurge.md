@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Hatasız düşünme sanatı kitabından; Fransız sömürge valisinin sıçanla imtahanı"
+categories:
+- genel
 date: 2013-09-13
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- opinion
+- technology
+- yazilarim
+title: Hatasız düşünme sanatı kitabından; Fransız sömürge valisinin sıçanla imtahanı
 ---
 
 [![](/images/1bda4-dorbelli.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/09/1bda4-dorbelli.jpg)

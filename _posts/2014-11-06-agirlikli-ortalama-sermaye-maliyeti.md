@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ağırlıklı Ortalama Sermaye Maliyeti"
+categories:
+- genel
 date: 2014-11-06
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Ağırlıklı Ortalama Sermaye Maliyeti
 ---
 
 İşletmeler için sermaye de üretim faktörlerinden biridir bu nedenle sermayenin de bir maliyeti vardır. İşletmeler yatırım ve normal işletme faliyetleri için ihtiyaç duydukları sermayeyi ya _borçlanarak_ ya da _hisse ihraç etmek_ suretiyle temin ederler. Borçlanmanın maliyeti ödenecek olan faiz iken hisse ihraç etmenin maliyeti ortakların bekledikleri temettü olmaktadır. Ağırlıklı ortalama sermaye maliyeti ise tüm sermaye kaynaklarının maliyetlerinin ağırlıklı ortalamasıdır. Ağırlıklandırma ilgili sermaye kaynağının tüm sermaye içindeki oranına göre yapılmaktadır. Ağırlıklı ortlama sermaye maliyeti şöyle hesaplanır.

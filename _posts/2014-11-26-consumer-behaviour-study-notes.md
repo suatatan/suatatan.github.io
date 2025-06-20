@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Consumer Behaviour-Study Notes"
+categories:
+- english
+- genel
 date: 2014-11-26
-categories: 
-  - "english"
-  - "genel"
-tags: 
-  - "marketing"
+layout: post
+tags:
+- english
+- longread
+- marketing
+- technology
+title: Consumer Behaviour-Study Notes
 ---
 
 ## ![image](/images/tumblr_inline_nfnkd3JaTQ1r4exmc.jpg)

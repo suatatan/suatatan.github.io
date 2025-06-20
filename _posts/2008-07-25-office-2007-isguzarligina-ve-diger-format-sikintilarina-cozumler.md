@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Office 2007 işgüzarlığına ve diğer format sıkıntılarına çözümler"
+categories:
+- bilgisayar
 date: 2008-07-25
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Office 2007 işgüzarlığına ve diğer format sıkıntılarına çözümler
 ---
 
 ![](/images/zamzar-logo.jpg)

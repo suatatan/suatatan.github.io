@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Teneke Kola İçerken Dikkat..."
+categories:
+- genel
 date: 2008-04-17
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- technology
+title: Teneke Kola İçerken Dikkat...
 ---
 
 ![Teneke Kutu](/images/donence_coke.jpg)  

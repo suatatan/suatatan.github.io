@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Android Nedir?"
+categories:
+- genel
 date: 2011-12-14
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Android Nedir?
 ---
 
 [![](/images/8a6ff-androidvsiphone.png)](https://suatatan.wordpress.com/wp-content/uploads/2011/12/8a6ff-androidvsiphone.png)

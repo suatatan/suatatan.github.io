@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Cennetten bir köşe: Faroe Adaları"
+categories:
+- genel
 date: 2012-09-22
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: 'Cennetten bir köşe: Faroe Adaları'
 ---
 
 İngiltere'nin kuzeyine gidince, Gröland'a varmadan:) İzlanda'nın üstü, Faroe Adaları diye bir yer var.

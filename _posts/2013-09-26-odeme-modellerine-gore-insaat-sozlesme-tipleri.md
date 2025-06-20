@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Ödeme modellerine göre inşaat sözleşme tipleri: Lump Sum, Global Price,Unit Price"
+categories:
+- genel
 date: 2013-09-26
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
-  - "insaat-muhendisligi"
-  - "isletme"
+layout: post
+tags:
+- english
+- insaat-muhendisligi
+- isletme
+- longread
+- okuma-notlari
+- technology
+title: 'Ödeme modellerine göre inşaat sözleşme tipleri: Lump Sum, Global Price,Unit
+  Price'
 ---
 
 ![](/images/MTAxNDY2MD-kat-karsiligi-insaat-sozlesmesi.jpg)

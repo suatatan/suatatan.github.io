@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "İşletmenin nakit ihtiyacı nasıl belirlenir?"
+categories:
+- genel
 date: 2014-11-30
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: İşletmenin nakit ihtiyacı nasıl belirlenir?
 ---
 
 ![image](/images/tumblr_inline_nfus1fmFuX1r4exmc.jpg)

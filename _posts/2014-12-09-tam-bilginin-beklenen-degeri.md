@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Tam Bilginin Beklenen Değeri"
+categories:
+- genel
 date: 2014-12-09
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- sayisalyontemler
+- technology
+title: Tam Bilginin Beklenen Değeri
 ---
 
 Önceki Sayısal Yöntemler yazılarımızda naçizane, Agah Gayrımenkul Limited Şirketi adlı parlak firmanın gayrımenkul yatırım kararı üzerine konuşmuştuk.

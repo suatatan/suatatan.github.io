@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Google App Engine de şahsi domain kullanılabiliyor mu?"
+categories:
+- genel
 date: 2012-06-11
-categories: 
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "sorucevap"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- sorucevap
+- technology
+title: Google App Engine de şahsi domain kullanılabiliyor mu?
 ---
 
 **Soru**:  

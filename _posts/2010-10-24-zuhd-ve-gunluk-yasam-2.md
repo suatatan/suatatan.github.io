@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "ZÜHD VE GÜNLÜK YAŞAM"
+categories:
+- din
+- yazilarim
 date: 2010-10-24
-categories: 
-  - "din"
-  - "yazilarim"
-tags: 
-  - "tasavvuf"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- tasavvuf
+- technology
+title: ZÜHD VE GÜNLÜK YAŞAM
 ---
 
 Mevlana Hz. Farsçası ile:

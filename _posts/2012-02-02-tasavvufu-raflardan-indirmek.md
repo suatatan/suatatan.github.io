@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "Tasavvufu Raflardan İndirmek"
+categories:
+- din
+- yazilarim
 date: 2012-02-02
-categories: 
-  - "din"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Tasavvufu Raflardan İndirmek
 ---
 
        [![](/images/used-books.jpg "used-books")](http://suatatan.wordpress.com/wp-content/uploads/2012/02/used-books.jpg)       Tasavvufun ne olduğuna dair teorik yorumlara girmeksizin, bu uçsuz bucaksız denizin kendisinin ve mahsüllerinin günlük hayatımıza ne kadar girdiği sorgulanması gereken bir konudur. Nitekim tasavvuf da toplumsal belleğimizin tozlu raflarında en ulaşılmaz raflara yerleşmiş, adeta bulutlara ulaşmıştır. Evet paha biçilmez bir hazine olarak tasavvufi eserler kitaplıkların en yüksek raflarını hak ediyor. Ancak elimiz o eserlere yetişmiyorsa , o eserlere ulaşmaya çabalamak yerine mistifike etmeki eserlere yapılacak en büyük haksızlık bu olur. Çünkü o kalın kalın kitaplar biz 'okuyalım' diye yazılmıştır. Raflarımızda, ne kadar engin bir kültüre sahip olduğumuzu kitap kalınlığı ile ıspatlayalım diye değil...

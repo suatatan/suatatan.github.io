@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "R ile e-postalar üzerinde metin madenciliği"
+categories:
+- genel
 date: 2016-11-25
-categories: 
-  - "genel"
-tags: 
-  - "data-science"
-  - "veribilim"
+layout: post
+tags:
+- data-science
+- english
+- longread
+- technology
+- veribilim
+title: R ile e-postalar üzerinde metin madenciliği
 ---
 
 `tm` kütüphanesine ait bir plugin mailleri de R ile alıp onları korpusa çevirerek metin madenciliği yapabilmenizi sağlıyor:

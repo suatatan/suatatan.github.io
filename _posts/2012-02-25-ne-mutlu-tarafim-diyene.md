@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Ne mutlu tarafım diyene!"
+categories:
+- genel
 date: 2012-02-25
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: Ne mutlu tarafım diyene!
 ---
 
  

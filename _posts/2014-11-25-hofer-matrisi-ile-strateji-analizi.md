@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Hofer Matrisi ile Strateji Analizi"
+categories:
+- genel
 date: 2014-11-25
-categories: 
-  - "genel"
-tags: 
-  - "yonetim"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+- yonetim
+title: Hofer Matrisi ile Strateji Analizi
 ---
 
 Hofer Matrisi, Hofer tarafından geliştirilen ve işletmelerin strateji seçiminde kullanabilecekleri bir **araçtır**. Hofer Matrisi 5x3=15 kareden oluşur.(dış tanımlayıcı kareler hariç) Dikey eksene bir ürünün **5 gelişme evresi**, yatay eksende ise **rekabet posizyonu** bulunmaktadır. Karelerin içerisinde daireler yer alır. Her bir daire bir **şirket** demektir. Bu şirketleri bir holding'e bağlı veya ayrı şirketler ya da _stratejik iş birimleri_ olarak ele alabilirsiniz. Her bir daire içinde eğer pay şeklinde dilim gösterilmiş ise bu, o şirketin pazar payı demektir. Aşağıda örnek bir Hofer Matrisi bulunuyor;

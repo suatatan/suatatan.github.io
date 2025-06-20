@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Twitter ne işe yarar?"
+categories:
+- bilgisayar
+- genel
 date: 2012-02-12
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Twitter ne işe yarar?
 ---
 
 [![](/images/685f3-twitter.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2012/02/685f3-twitter.jpg)

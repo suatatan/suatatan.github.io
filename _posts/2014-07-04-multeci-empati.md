@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "MÜLTECİ EMPATİ"
+categories:
+- genel
 date: 2014-07-04
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: MÜLTECİ EMPATİ
 ---
 
 Bir gün mülteci olursanız sadece bir haber malzemesi olmaktan öteye geçemezsiniz  

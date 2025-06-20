@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ludwig Library for ML"
+categories:
+- bilgisayar
 date: 2023-02-08
-categories: 
-  - "bilgisayar"
-tags: 
-  - "machine-learning"
-  - "python"
+layout: post
+tags:
+- english
+- longread
+- machine-learning
+- python
+- technology
+title: Ludwig Library for ML
 ---
 
 Ludwig is a deep learning toolbox that allows users to train and test deep learning models on a variety of applications, including many natural language processing ones like sentiment analysis.

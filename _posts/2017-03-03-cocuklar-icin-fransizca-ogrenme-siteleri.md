@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Çocuklar için Fransızca Öğrenme Siteleri"
+categories:
+- cocuklar
+- diller
 date: 2017-03-03
-categories: 
-  - "cocuklar"
-  - "diller"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Çocuklar için Fransızca Öğrenme Siteleri
 ---
 
 Çocuklarınıza Fransızca öğretiyorsanız. Şu siteler işinize yarayabilir:

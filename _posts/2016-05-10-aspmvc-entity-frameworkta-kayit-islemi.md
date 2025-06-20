@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "ASP.MVC Entity Framework’ta kayıt işlemi"
+categories:
+- genel
 date: 2016-05-10
-categories: 
-  - "genel"
-tags: 
-  - "asp-mvc"
-  - "humanfriendlyaspmvc"
+layout: post
+tags:
+- asp-mvc
+- english
+- humanfriendlyaspmvc
+- longread
+- technology
+title: ASP.MVC Entity Framework’ta kayıt işlemi
 ---
 
 ASP.MVC'de Entity Framework'ta bir veri aşağıdaki gibi tabloya işlenir.

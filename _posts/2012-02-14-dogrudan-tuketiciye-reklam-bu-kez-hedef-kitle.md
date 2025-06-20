@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Doğrudan tüketiciye reklam. Bu kez hedef kitle köpekler"
+categories:
+- genel
 date: 2012-02-14
-categories: 
-  - "genel"
-tags: 
-  - "sosyal-bilimler"
-  - "iktibas"
+layout: post
+tags:
+- english
+- iktibas
+- longread
+- sosyal-bilimler
+- technology
+title: Doğrudan tüketiciye reklam. Bu kez hedef kitle köpekler
 ---
 
 https://dailymotion.com/video/xolssi

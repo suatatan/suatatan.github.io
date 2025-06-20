@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Dağseven Köyünde Portakal Ağaçları"
+categories:
+- gordugum-ruyalar
 date: 2007-02-19
-categories: 
-  - "gordugum-ruyalar"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Dağseven Köyünde Portakal Ağaçları
 ---
 
 Bizim Gürpınar'ın Dağseven (Şivreş) adlı köyüne  

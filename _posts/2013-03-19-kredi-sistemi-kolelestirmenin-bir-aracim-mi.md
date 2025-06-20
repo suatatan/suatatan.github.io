@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Kredi sistemi köleleştirmenin bir aracım mı?"
+categories:
+- genel
 date: 2013-03-19
-categories: 
-  - "genel"
-tags: 
-  - "aforizmalar"
-  - "isletme"
+layout: post
+tags:
+- aforizmalar
+- english
+- isletme
+- quickread
+title: Kredi sistemi köleleştirmenin bir aracım mı?
 ---
 
 Kapitalizm hakkında şöyle bir yorum da vardır:  

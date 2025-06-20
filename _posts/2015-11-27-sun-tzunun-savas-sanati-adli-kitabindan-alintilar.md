@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Sun Tzu’nun Savaş Sanatı adlı kitabından alıntılar"
+categories:
+- genel
 date: 2015-11-27
-categories: 
-  - "genel"
-tags: 
-  - "okumanotlari"
+layout: post
+tags:
+- english
+- longread
+- okumanotlari
+- technology
+title: Sun Tzu’nun Savaş Sanatı adlı kitabından alıntılar
 ---
 
 Stratejisi olmayanları sadece yenilgi bekler.

@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Javascript ile Object Oriented (Nesne yönelimli) programlama"
+categories:
+- genel
 date: 2013-01-29
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Javascript ile Object Oriented (Nesne yönelimli) programlama
 ---
 
 [![](/images/c79e5-manycars.gif)](https://suatatan.wordpress.com/wp-content/uploads/2013/01/c79e5-manycars.gif)

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Marquee Tag'ıyla kayan yazı oluşturma"
+categories:
+- genel
 date: 2008-04-21
-categories: 
-  - "genel"
-tags: 
-  - "sosyal-bilimler"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- sosyal-bilimler
+- technology
+- web-programlama
+title: Marquee Tag'ıyla kayan yazı oluşturma
 ---
 
 # ![](/images/chinese_hat_entrance_marquee.jpg)

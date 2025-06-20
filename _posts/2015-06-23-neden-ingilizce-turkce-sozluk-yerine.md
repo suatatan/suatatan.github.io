@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Neden İngilizce-Türkçe Sözlük Yerine İngilizce-İngilizce Sözlük Kullanmalısınız"
+categories:
+- bilgisayar
+- genel
 date: 2015-06-23
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "akademi"
-  - "ingilizce"
+layout: post
+tags:
+- akademi
+- english
+- ingilizce
+- longread
+- technology
+title: Neden İngilizce-Türkçe Sözlük Yerine İngilizce-İngilizce Sözlük Kullanmalısınız
 ---
 
 Makale okurken aşağıdaki durumla karılaşmıştım. Birlikte bakalım:

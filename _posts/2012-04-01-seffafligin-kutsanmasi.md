@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Şeffaflığın kutsanması"
+categories:
+- genel
 date: 2012-04-01
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- van-yazilari
+- yazilarim
+title: Şeffaflığın kutsanması
 ---
 
 [![](/images/iso9001.jpg)](http://www.artibel.com.tr/artibel%20resim/iso9001.jpg)

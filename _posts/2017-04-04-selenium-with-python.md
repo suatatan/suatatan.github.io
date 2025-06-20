@@ -1,15 +1,18 @@
 ---
-layout: post
-title: "Selenium with Python"
+categories:
+- bilgisayar
+- english
 date: 2017-04-04
-categories: 
-  - "bilgisayar"
-  - "english"
-tags: 
-  - "python"
-  - "selenium"
-  - "test"
-  - "webscraping"
+layout: post
+tags:
+- english
+- longread
+- python
+- selenium
+- technology
+- test
+- webscraping
+title: Selenium with Python
 ---
 
 [Selenium](http://www.seleniumhq.org/) is the popular testing package. It has library for Java, C#, nd Python. It is not only for testing  but also very good choice for web scraping task. I have used it during my PhD Thesis for scraping news from Google News.

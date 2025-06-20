@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Pardon! Kullandığınız yapay zeka yapay mı gerçek mi ?"
 date: 2020-12-05
-tags: 
-  - "yapay-zeka"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yapay-zeka
+title: Pardon! Kullandığınız yapay zeka yapay mı gerçek mi ?
 ---
 
 Neredeyse kod yazan herkesin **yapay zeka kullanıyoruz** dediği bir çağdayız. Bu durum organik sertifikası almadığı halde pazarlarda organik elma armut vs. etiketi yapıştıranlarla aynı ticari stratejiye dayanan bir oyun: Satma.

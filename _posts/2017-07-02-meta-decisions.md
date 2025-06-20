@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Meta-decisions"
+categories:
+- english
 date: 2017-07-02
-categories: 
-  - "english"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Meta-decisions
 ---
 
 You want to make a decision about an important thing. You getting advises of a lot of people as it should be. However, your mind is wandering. The state of mind falls into a mode of 'pendulum'. Today you decide to go, tomorrow you decide to remain. In that state of mind, you should review your 'modus operandi' for decisions.

@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "ALBERT EINSTEIN VE DÜNYA GÜZELİ…"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: ALBERT EINSTEIN VE DÜNYA GÜZELİ…
 ---
 
 Albert Einstein ile zamanının dünya güzeli arasında geçtiği söylenen bir diyalog vardır: Güya zamanın dünya güzeli Einstein’a:

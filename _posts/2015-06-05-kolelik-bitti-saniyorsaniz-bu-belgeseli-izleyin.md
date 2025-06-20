@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Kölelik bitti sanıyorsanız bu belgeseli izleyin"
+categories:
+- genel
 date: 2015-06-05
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Kölelik bitti sanıyorsanız bu belgeseli izleyin
 ---
 
 ![](/images/slavery.jpg)

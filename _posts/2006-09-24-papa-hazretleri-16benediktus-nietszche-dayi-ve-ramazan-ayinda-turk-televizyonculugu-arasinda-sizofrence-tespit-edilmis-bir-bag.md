@@ -1,11 +1,16 @@
 ---
-layout: post
-title: "PAPA HAZRETLERİ 16.BENEDİKTUS, NİETSZCHE DAYI VE RAMAZAN AYINDA TÜRK TELEVİZYONCULUĞU ARASINDA ŞİZOFRENCE TESPİT EDİLMİŞ BİR BAĞ:"
+categories:
+- yazilarim
 date: 2006-09-24
-categories: 
-  - "yazilarim"
-tags: 
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yeni-ufuk-gazetesi
+title: 'PAPA HAZRETLERİ 16.BENEDİKTUS, NİETSZCHE DAYI VE RAMAZAN AYINDA TÜRK TELEVİZYONCULUĞU
+  ARASINDA ŞİZOFRENCE TESPİT EDİLMİŞ BİR BAĞ:'
 ---
 
 Toprağı bol olsun **Frederich Nietszche** **Dayı** yaşasaydı her halde kendi bile kâhin olduğunu düşünmeye başlardı değerli okurum. Kahvehane arkadaşı gibi kendisinden bahsetmeme kızmamalı… Kendi yaşasa bana hak verirdi, eski bir düşünür kendisinde dayı, amca dedirtecek kadar kendini sevdirebiliyor, inanın buna. Siz de sevdiğiniz yazarlara dayı, amca gibi hitaplar kullanabilirsiniz. Benim gibi genç olanlara ise (eğer yazar sayıyorsanız gerçekten) yeğenim diyebilirsiniz. Yeter ki eski mütefekkirlerin bahsettiklerine bir baba nasihati kadar değer verin. Emin olun ki birçoğu babalarımızdan daha bilge…

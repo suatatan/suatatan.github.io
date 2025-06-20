@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Google App Engine Pratik Memcache Kullanımı"
+categories:
+- bilgisayar
+- genel
 date: 2012-02-25
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Google App Engine Pratik Memcache Kullanımı
 ---
 
 Google App Engine ile pratik memcache kullanımına dair örneğim:  

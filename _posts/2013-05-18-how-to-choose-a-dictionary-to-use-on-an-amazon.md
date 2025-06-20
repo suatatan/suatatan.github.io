@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "How to Choose a Dictionary to Use on an Amazon Kindle Device"
+categories:
+- genel
 date: 2013-05-18
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: How to Choose a Dictionary to Use on an Amazon Kindle Device
 ---
 
 Kindle kullanırken İngilizce-ingilizce sözlük yerine yüklemiş olduğunuz yeni Türkçe-İngilizce veya başka dilde dile sözlüğü yüklediktan sonra nasıl varsayılan yapacağınızı anlatan güzel bir yazı:  

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "TPOT: Genetic Algoritms for Better Machine Learning Models."
 date: 2023-04-02
+layout: post
+tags:
+- english
+- longread
+- technology
+title: 'TPOT: Genetic Algoritms for Better Machine Learning Models.'
 ---
 
 Automated Machine Learning (AutoML) has become a popular trend in recent years, as more organizations are looking for ways to quickly and efficiently build accurate machine learning models without requiring a lot of expertise in data science or machine learning. TPOT is one of the most popular AutoML libraries that can help automate the process of building machine learning models.

@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "HTML5 Web Storage Örneği"
+categories:
+- bilgisayar
+- genel
 date: 2012-05-12
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: HTML5 Web Storage Örneği
 ---
 
 HTML5 ile gelen güzel özelliklerden biri de web storage ya da local storagedir. Bu özellik ile kullanıcının bilgisayarında cookielere göre daha geniş ve kolay bilgi saklayabilirsiniz. Kullanıcı bilgisayarında HTML5'i destekleyen son sürüm tarayıcı olması lazımdır. Ayrıca kullanıcı bilgisayarına veri kaydedileceği zaman kullanıcıdan izin istenir. Aşağıdaki örnek üzerinden giderek anlatalım:  

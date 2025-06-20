@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "DİJİTAL FOTOĞRAF MAKİNESİ"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: DİJİTAL FOTOĞRAF MAKİNESİ
 ---
 
 Sabahları geç kalkmayı unutursun bu memlekette. Gece ne kadar yorgun olarak uyursan uyu sabahın dört buçuğundan sonra açık olan camından içeri giren serin havaya bir de akasyalar ile iğdelerin kokusu karıştı mı uyanmamak için zor tutarsın kendini. Burası doğu memleketi, güneş erken doğar, erken batar. Sen İstanbul’da sabahın yedisinde işe gitmek için uyandığında bey efendi daha yeni yüzünü gösterir o dumanlı şehre. Bir de kurbağa sesleri yok mu işte onlar mutluluğun sesidir. Sulak mı sulak bir tarlaya yakın evin varsa sabahın o erken saatlerinde kaçak çayını demleyip içerken o sesleri de bir dinledin mi artık sana o gün bunlardan daha iyi moral olmaz. Bir de tozun toprağın yere yapışmış olduğu sonsuz berraklıkta fotoğraf çekmek için makinen elinde bayırlara çıkmışsan…

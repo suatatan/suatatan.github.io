@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Forward ve Futures İşlemleri"
+categories:
+- genel
 date: 2014-11-12
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "turev-piyasalar"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+- turev-piyasalar
+title: Forward ve Futures İşlemleri
 ---
 
 ![image](/images/tumblr_inline_nev6pxzc9n1r4exmc.jpg)

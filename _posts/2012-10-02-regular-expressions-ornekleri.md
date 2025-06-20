@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Regular Expressions Örnekleri"
+categories:
+- bilgisayar
+- genel
 date: 2012-10-02
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "pastebin"
-  - "python"
+layout: post
+tags:
+- english
+- pastebin
+- python
+- quickread
+- technology
+title: Regular Expressions Örnekleri
 ---
 
 Aşağıdaki ifade tagları arasındaki tüm ifadeleri seçer:  

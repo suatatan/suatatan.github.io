@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Zihinden Standart Sampa Hesaplama"
+categories:
+- genel
 date: 2014-12-08
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "istatistik"
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- istatistik
+- longread
+- sayisalyontemler
+- technology
+title: Zihinden Standart Sampa Hesaplama
 ---
 
 Courtney Taylor'un bir [yazısı](http://statistics.about.com/od/Descriptive-Statistics/a/Range-Rule-For-Standard-Deviation.htm) standart sapmayı zihinden hesaplama için ilginç bir formül veriyor. Bu formülle  bir serinin standart sapmasını hızlıca hesaplayabilirsiniz. Formül şu: (Serinin en büyük değeri-En küçük değeri)/4

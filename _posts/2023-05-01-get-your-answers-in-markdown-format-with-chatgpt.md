@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Get your answers in markdown format with ChatGPT"
 date: 2023-05-01
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Get your answers in markdown format with ChatGPT
 ---
 
 If you want to turn your ChaGPT results more structured way you can prefer get the result with this prompt:

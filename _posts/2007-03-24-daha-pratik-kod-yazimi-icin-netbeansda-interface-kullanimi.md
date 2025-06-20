@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Daha pratik kod yazımı için; Netbeans'da Interface Kullanımı"
+categories:
+- bilgisayar
+- genel
 date: 2007-03-24
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- web-programlama
+title: Daha pratik kod yazımı için; Netbeans'da Interface Kullanımı
 ---
 
 Yazdığınız program içinde tüm değişkenleri bir class içine yazıp bunları program içinden çağırmak pratik bir iş olacaktır ancak bunun için her seferinde:  

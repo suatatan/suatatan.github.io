@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Meslekdaşım Sayın Süleyman Demirel'in sembolizm ustalığı"
+categories:
+- yazilarim
 date: 2008-06-07
-categories: 
-  - "yazilarim"
-tags: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- technology
+title: Meslekdaşım Sayın Süleyman Demirel'in sembolizm ustalığı
 ---
 
 ![](/images/27402d1178655497t-suleyman-demirel-12-jpg)

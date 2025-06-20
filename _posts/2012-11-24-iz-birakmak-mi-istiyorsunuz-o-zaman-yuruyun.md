@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "İz bırakmak mı istiyorsunuz, o zaman yürüyün. Durduğunuz yerde iz bırakamazsınız."
+categories:
+- genel
 date: 2012-11-24
-categories: 
-  - "genel"
-tags: 
-  - "aforizmalar"
+layout: post
+tags:
+- aforizmalar
+- english
+- opinion
+- quickread
+- technology
+title: İz bırakmak mı istiyorsunuz, o zaman yürüyün. Durduğunuz yerde iz bırakamazsınız.
 ---
 
 Öğrendikçe, ne kadar az şey bildiğimizi hatırlıyor, unuttukça ne kadar çok şey bildiğimizi düşünüyoruz. Oysa bir okyanusta katreden ibaret tüm hayatımız ve tüm bildiklerimiz. O zaman bu ‘kibir’ neden? Yahut neden engin denizleri keşfe çıkmıyoruz, insanları ve onların yazdıklarını anlamayı denemiyoruz? Çünkü aynı hastalığa yakalanıyoruz hep; artık büyüdük diyoruz…  

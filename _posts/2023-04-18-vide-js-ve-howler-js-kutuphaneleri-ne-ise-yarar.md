@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Vide.js ve Howler.js kütüphaneleri ne işe yarar?"
 date: 2023-04-18
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Vide.js ve Howler.js kütüphaneleri ne işe yarar?
 ---
 
 Vide.js ve Howler.js, web geliştiricilerin video ve ses öğeleriyle çalışmayı kolaylaştırmak için kullanabilecekleri JavaScript kütüphaneleridir.

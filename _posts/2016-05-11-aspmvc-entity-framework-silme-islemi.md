@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "ASP.MVC Entity Framework silme işlemi"
+categories:
+- genel
 date: 2016-05-11
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+title: ASP.MVC Entity Framework silme işlemi
 ---
 
 `public ActionResult TutanakSil(int id)`

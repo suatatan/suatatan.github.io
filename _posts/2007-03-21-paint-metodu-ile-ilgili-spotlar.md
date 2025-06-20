@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "paint() metodu ile ilgili spotlar"
+categories:
+- bilgisayar
+- genel
 date: 2007-03-21
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: paint() metodu ile ilgili spotlar
 ---
 
 [![](/images/koord_java.jpg)](http://bp0.blogger.com/_Ie5YRBfqBlQ/RgEqL_-2n8I/AAAAAAAAAAM/5iyyFh3NudU/s1600-h/koord_java.jpg)

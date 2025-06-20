@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "What’s Yandex must do for dissemination of Yandex.Mail service?"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2013-09-10
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: What’s Yandex must do for dissemination of Yandex.Mail service?
 ---
 
 [![](/images/Yandex-labs.jpg)](http://russiatime.ru/wp-content/uploads/2013/04/Yandex-labs.jpg)

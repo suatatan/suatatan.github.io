@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Çocuklar için İngilizce Diziler"
+categories:
+- cocuklar
 date: 2017-06-08
-categories: 
-  - "cocuklar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Çocuklar için İngilizce Diziler
 ---
 
 ![2017-06-08 12_06_29-Best TV for Kids _ Common Sense Media.png](/images/2017-06-08-12_06_29-best-tv-for-kids-_-common-sense-media.png)

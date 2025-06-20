@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Digital Gods"
+categories:
+- genel
 date: 2013-11-17
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Digital Gods
 ---
 
 As the prey of technology, son of contemporary man should know everything in everytime.  Look at mottos of Evernote, Any.do, Google Drive and other applications. They has it “forget nothing”, or “like a boss”… Is this kind of trying omniscience? Our ancestry used rope for retention an important thing. Yes might be they have one or two important thing required to retention. How i know that; because surfeit to-do lists of us caused to inventiıon of “priority level”. Important or less-important or red,yellow and green category.  

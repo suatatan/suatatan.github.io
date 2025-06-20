@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Vue.js ile Component'ler"
+categories:
+- bilgisayar
 date: 2020-04-24
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Vue.js ile Component'ler
 ---
 
 Vue Js kendi kişisel HTML elemenlerinizi tanımlamanıza olanak verir. Sadece bununla kalmaz bu elementler özel property tanımlayabilir daha sonra bu komponentlere veri yollayabilirsiniz.

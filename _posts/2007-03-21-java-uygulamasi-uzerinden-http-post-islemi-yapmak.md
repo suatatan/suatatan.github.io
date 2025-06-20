@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Java Uygulaması Üzerinden HTTP POST işlemi yapmak"
+categories:
+- bilgisayar
+- genel
 date: 2007-03-21
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- yeni-ufuk-gazetesi
+title: Java Uygulaması Üzerinden HTTP POST işlemi yapmak
 ---
 
 Diyelim ki web sayfanızı php veya başka bir dil ile hazıladırnız. yazdığınız bir Java programından tıpkı html formlarından post yapar gibi veri yollamak istiyorsunuz. Bunun için aşağıdaki kodlar tam size göre. Aşağıdaki postdata metodu DATA\_1 DATA\_2 VE DATA\_3 şeklindeki 3 datayı ALICI\_URL'ye gönderiyor.  

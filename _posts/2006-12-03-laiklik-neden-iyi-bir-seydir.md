@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "LAİKLİK NEDEN İYİ BİR ŞEYDİR?"
+categories:
+- genel
 date: 2006-12-03
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: LAİKLİK NEDEN İYİ BİR ŞEYDİR?
 ---
 
 Bu ülkede adının arkasına sığınılarak, arkasına sığınılan kavrama en büyük hakareti yapanların acımadan kalkan diye kullandıkları Vatan, Millet, Din, Ulus, Bayrak gibi kavramlara laikliği eklemek gerekir.

@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "2015′te hangi kitapları okudum?"
+categories:
+- genel
 date: 2015-12-21
-categories: 
-  - "genel"
-tags: 
-  - "kitaplar"
+layout: post
+tags:
+- english
+- kitaplar
+- longread
+- opinion
+- technology
+title: 2015′te hangi kitapları okudum?
 ---
 
 2015 biterken okuduğum ve gerçekten sevdiğim kitaplar. Bazıları için blogumda kısa özetler yazmıştım. Ancak şu sıralar zaman darlığından tek tek anlatamayacağım. Ancak en sevdiğim ilk 3 (hayat değiştirici) :

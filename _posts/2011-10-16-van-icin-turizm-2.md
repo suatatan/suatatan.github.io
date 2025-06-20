@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "VAN İÇİN TURİZM"
+categories:
+- genel
 date: 2011-10-16
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- technology
+- van-yazilari
+- yazilarim
+title: VAN İÇİN TURİZM
 ---
 
 **Van'ın turizmi için neler yapılmayabilir?**

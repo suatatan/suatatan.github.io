@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "R içerisinden Java fonksiyonlarını çağırmak"
+categories:
+- genel
 date: 2015-12-19
-categories: 
-  - "genel"
-tags: 
-  - "istatistik"
-  - "java"
-  - "r"
+layout: post
+tags:
+- english
+- istatistik
+- java
+- longread
+- r
+- technology
+title: R içerisinden Java fonksiyonlarını çağırmak
 ---
 
 Yazdığınız Java kodlarını jar’a dönüştürün. R’ı çalıştırdığınız proje dizini içine koyun ve aşağıdaki gibi çağırın:

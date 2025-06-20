@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "Why Poetry is better than Pip"
 date: 2023-05-01
-tags: 
-  - "bilgisayar"
-  - "python"
+layout: post
+tags:
+- bilgisayar
+- english
+- longread
+- python
+- technology
+title: Why Poetry is better than Pip
 ---
 
 If you're a Python developer, you've probably used Pip at some point to manage your project dependencies. However, Pip has some limitations that make it less than ideal for larger projects or more complex environments. That's where Poetry comes in - a modern package manager for Python that offers several benefits over Pip.

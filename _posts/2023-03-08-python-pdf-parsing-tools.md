@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Python PDF Parsing Tools"
 date: 2023-03-08
-tags: 
-  - "listeler"
+layout: post
+tags:
+- english
+- listeler
+- longread
+- technology
+title: Python PDF Parsing Tools
 ---
 
 - Tika: [https://www.geeksforgeeks.org/parsing-pdfs-in-python-with-tika/](https://www.geeksforgeeks.org/parsing-pdfs-in-python-with-tika/)

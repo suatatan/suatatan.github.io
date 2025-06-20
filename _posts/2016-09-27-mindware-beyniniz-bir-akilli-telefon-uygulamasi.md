@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Mindware: Beyniniz bir akıllı telefon uygulaması olsaydı?"
+categories:
+- okuma-notlari
 date: 2016-09-27
-categories: 
-  - "okuma-notlari"
-tags: 
-  - "featured"
-  - "okumanotlari"
+layout: post
+tags:
+- english
+- featured
+- longread
+- okumanotlari
+- opinion
+- technology
+title: 'Mindware: Beyniniz bir akıllı telefon uygulaması olsaydı?'
 ---
 
 ![](/images/tumblr_inline_oe5qulx8LK1r4exmc_540.jpg)

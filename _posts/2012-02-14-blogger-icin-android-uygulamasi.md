@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Blogger için Android uygulaması"
+categories:
+- bilgisayar
+- genel
 date: 2012-02-14
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Blogger için Android uygulaması
 ---
 
 [![](/images/c827e-j96thatxdhizckbqvkgqtbpm5bkbkmyu6udk3oq-yxcbmbevmhh1vitwup-i9n-y-w.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2012/02/c827e-j96thatxdhizckbqvkgqtbpm5bkbkmyu6udk3oq-yxcbmbevmhh1vitwup-i9n-y-w.jpg)

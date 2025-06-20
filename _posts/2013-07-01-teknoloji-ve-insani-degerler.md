@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Teknoloji ve insani değerler"
+categories:
+- genel
 date: 2013-07-01
-categories: 
-  - "genel"
-tags: 
-  - "edebiyat"
+layout: post
+tags:
+- edebiyat
+- english
+- longread
+- opinion
+- technology
+title: Teknoloji ve insani değerler
 ---
 
 [![](/images/4125851671_man_vs_machine_500px_xlarge.jpeg)](http://images.sodahead.com/polls/002275357/4125851671_man_vs_machine_500px_xlarge.jpeg)

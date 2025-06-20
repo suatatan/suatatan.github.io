@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Page Update Controller with Python"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2012-09-10
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- python
+- quickread
+- technology
+title: Page Update Controller with Python
 ---
 
 Are you bored with controlling updates from any  page? Perhaps you are waiting exam or interview results:  

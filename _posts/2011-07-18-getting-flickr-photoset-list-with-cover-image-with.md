@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Getting Flickr Photoset List with cover image with Jquery"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2011-07-18
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "python"
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- python
+- technology
+- web-programlama
+title: Getting Flickr Photoset List with cover image with Jquery
 ---
 
 Flickr API offers getting photoset list with simple API calling but response isn’t include the photoset cover image. For resolving this problem, i have wrote a javascript block:  

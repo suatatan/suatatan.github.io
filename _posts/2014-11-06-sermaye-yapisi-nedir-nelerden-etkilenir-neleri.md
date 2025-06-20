@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Sermaye yapısı nedir? Nelerden etkilenir, neleri etkiler?"
+categories:
+- genel
 date: 2014-11-06
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Sermaye yapısı nedir? Nelerden etkilenir, neleri etkiler?
 ---
 
 Bir bilançoyu önünüze koyduğunuzda sol tarafta aktifler(varlıklar), sağ tarafta pasifleri (kaynaklar) göreceksiniz. Bunu zihninizde tam olarak canlandırmakta sorun yaşıyorsanız öncelikle şu [videoyu](http://www.investopedia.com/video/play/introduction-balance-sheet/) izleyin. Bilanço'nun sağında yer alan (video'da iki sütun, gerçek bir bilançoda tek sütun) kaynaklar, sol taraftaki varlıkların nasıl finanse edildiğini göstermektedir. Bilançonun sağ tarafındanki kaynaklar ise iki parçadan oluşur (Videoda Liabilities ve Equity diye gösterilmişti):

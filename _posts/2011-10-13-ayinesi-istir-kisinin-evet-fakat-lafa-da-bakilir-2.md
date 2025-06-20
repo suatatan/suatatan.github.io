@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ayinesi iştir kişinin evet, fakat lafa da bakılır, bakılmalıdır !"
+categories:
+- genel
 date: 2011-10-13
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: Ayinesi iştir kişinin evet, fakat lafa da bakılır, bakılmalıdır !
 ---
 
 Ayinesi iştir kişinin lafa bakılmaz demiş Ziya Paşa. Sanki hep ticaret yapıyoruz da. Kişinin işi olmadığında aynası da olmayacak demek. Ama yalan da değil. Kişinin kendisini göremeyenler için aynadan bakmak iyi bir yöntem. Atasözlerimizin ardında yatan mantığa benzer bir biçimde kişi olgusu yine pragmatik, yine toptancı ve yine sadece günübirlik algılanmış bu veciz sözün ardında.  Kişi ya da birey, bir değer olarak kabul edilmediğinden iş üretmiyorsa, ya da kötü iş üretiyorsa, “iş bitmiş oluyor”.

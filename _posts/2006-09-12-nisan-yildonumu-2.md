@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "NİŞAN YILDÖNÜMÜ"
 date: 2006-09-12
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: NİŞAN YILDÖNÜMÜ
 ---
 
 3 Ekim Avrupa Birliği ile Türkiye’nin nişan yıldönümü olarak tarihe geçti. Dışişleri bakanı Abdullah GÜL’ün Lüksemburg’a gidişi öncesine kadar Lüksemburg’da tartışılanlar üzerinde ayrı ayrı durulması gereken konulardı. Özellikle Avusturya’nın alanında Fransa’yı geride bırakan inatçı tutumu gözden kaçmadı. Avusturya’nın bu tutumunu direkt olarak Avusturya’ya bağlamak doğru olmayacaktır. Avusturya aslında Avrupa içerisine dağılmış Türkiye karşıtlarının bilinçli veya bilinçsiz sözcüsü olarak görülmelidir. Sonuçta nüfusunun her 7 kişisinden biri Türk olan Avusturya’nın o zamanki muhalif duruşu aleyhimize de olsa normaldir.

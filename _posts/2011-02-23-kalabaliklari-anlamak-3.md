@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Kalabalıkları Anlamak"
+categories:
+- genel
 date: 2011-02-23
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- yazilarim
+title: Kalabalıkları Anlamak
 ---
 
 Bu yazının başlığı “ötekini anlamak” ya da “bizim gibi düşünmeyenleri” anlamak olarak da değiştirilebilir. Nitekim kalabalık olan bir kitle bizim gibi düşünüyorsa veya “bizden” ise o kitleyi zaten haklı görmekteyiz. Bunun dışında olanlar ise sayıca bizden kat kat da fazla olsa haksızdır.  

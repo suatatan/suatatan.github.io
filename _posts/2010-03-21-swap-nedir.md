@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "Swap Nedir"
 date: 2010-03-21
-tags: 
-  - "ekonomi"
-  - "iktibas"
+layout: post
+tags:
+- ekonomi
+- english
+- iktibas
+- longread
+- technology
+title: Swap Nedir
 ---
 
 Bir zamanlar TSKB (Türkiye Sınai Kalkınma Bankası) sitesindeki Faydalı Finans Sözlüğü Uygulamasındaki açıklama

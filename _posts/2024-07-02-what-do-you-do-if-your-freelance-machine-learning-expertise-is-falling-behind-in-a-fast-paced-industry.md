@@ -1,7 +1,13 @@
 ---
-layout: post
-title: "What do you do if your freelance machine learning expertise is falling behind in a fast-paced industry?"
 date: 2024-07-02
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: What do you do if your freelance machine learning expertise is falling behind
+  in a fast-paced industry?
 ---
 
 Ask this question before.  

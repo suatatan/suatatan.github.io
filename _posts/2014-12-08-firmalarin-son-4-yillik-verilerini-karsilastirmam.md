@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Firmaların son 4 yıllık verilerini karşılaştırmam gerekiyor, nereden bulabilirim acaba?"
+categories:
+- genel
 date: 2014-12-08
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "sorucevap"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- quickread
+- sorucevap
+title: Firmaların son 4 yıllık verilerini karşılaştırmam gerekiyor, nereden bulabilirim
+  acaba?
 ---
 
 ### El-Cevap:

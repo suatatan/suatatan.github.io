@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "BIC Instead of Elbow for Clustering"
 date: 2023-02-08
+layout: post
+tags:
+- english
+- longread
+- technology
+title: BIC Instead of Elbow for Clustering
 ---
 
 Despite its popularity, **the Elbow method is pretty much the worst choice one can do when setting the number of clusters for a dataset**. 

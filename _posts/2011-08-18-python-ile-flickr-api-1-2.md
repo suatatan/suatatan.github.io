@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Python ile Flickr API-1"
+categories:
+- bilgisayar
+- genel
 date: 2011-08-18
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- longread
+- python
+- technology
+title: Python ile Flickr API-1
 ---
 
 ## Flickr Hesabınızdaki photoset isimlerini listeleme:

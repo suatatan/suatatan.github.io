@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "TÖRE İNAYETLERİ"
 date: 2006-11-26
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: TÖRE İNAYETLERİ
 ---
 
 Töre kelimesinin kökeni İbranice ‘Torah’ (kanun) kelimesine kadar gider. Tevrat sözcüğünün de kökeni “torah”tır.

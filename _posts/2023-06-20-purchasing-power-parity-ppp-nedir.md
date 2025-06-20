@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Purchasing Power Parity (PPP) nedir?"
 date: 2023-06-20
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Purchasing Power Parity (PPP) nedir?
 ---
 
 Purchasing Power Parity (PPP) Türkçe'de "Satın Alma Gücü Paritesi" olarak ifade edilir. PPP, farklı ülkelerin para birimlerinin satın alma gücünü karşılaştırmak için kullanılan bir ekonomik kavramdır. Satın alma gücü paritesi, bir ülkenin para biriminin diğer ülkelerdeki para birimleriyle karşılaştırılmasında fiyat düzeylerini dikkate alır. **Tek başına değil GDP gibi mevcut değerlerle birlikte kullanılır.**

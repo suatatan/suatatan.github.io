@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Project Kenai"
+categories:
+- bilgisayar
+- genel
 date: 2009-10-14
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- quickread
+- technology
+title: Project Kenai
 ---
 
 Project Kenai, Sun firmasının geliştirdiği bir kod barındırma hizmetidir. Bu site ile yeni projeler açıp kaydedebilir, projenizin kodlarına her yerden erişebilirsiniz.  

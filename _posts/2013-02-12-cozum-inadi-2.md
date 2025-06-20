@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Çözüm İnadı"
+categories:
+- genel
 date: 2013-02-12
-categories: 
-  - "genel"
-tags: 
-  - "radikal-iki"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- quickread
+- radikal-iki
+- technology
+- yazilarim
+title: Çözüm İnadı
 ---
 
 [![](/images/20130212_235631.png)](http://www.sehrivangazetesi.com/resimler/20130212_235631.png)

@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Sunumlarda kullanılabilecek uygulamalar listesi"
+categories:
+- acik-listeler
 date: 2020-12-12
-categories: 
-  - "acik-listeler"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Sunumlarda kullanılabilecek uygulamalar listesi
 ---
 
 [![](/images/image-1.png)](https://suatatan.wordpress.com/wp-content/uploads/2020/12/image-1.png)

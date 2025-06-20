@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Productive break"
 date: 2024-03-24
+layout: post
+tags:
+- cite
+- english
+- longread
+title: Productive break
 ---
 
 "Reading something you enjoy, listening to music, closing your eyes for a few minutes, or even watching short movie clips were all associated with increased recovery and performance.

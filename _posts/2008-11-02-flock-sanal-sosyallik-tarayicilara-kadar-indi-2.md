@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "FLOCK: SANAL SOSYALLİK TARAYICILARA KADAR İNDİ"
+categories:
+- bilgisayar
+- genel
 date: 2008-11-02
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: 'FLOCK: SANAL SOSYALLİK TARAYICILARA KADAR İNDİ'
 ---
 
 [](http://www.flickr.com/photos/30625549@N02/2867605447/ "FLOCKSTARflockART")[](http://www.flickr.com/photos/88349564@N00/329016250/ "Flock Web Browser")[![http://www.advesti.ru/img/1132780533_mozilla.jpg](/images/1132780533_mozilla.jpg)](http://www.advesti.ru/img/1132780533_mozilla.jpg "http://www.advesti.ru/img/1132780533_mozilla.jpg")[![logo.gif](/images/logo.gif)](http://flock.com/images/template/logo.gif "logo.gif")  

@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "batch file - In Windows cmd, how do I prompt for user input and use the result in another command? - Stack Overflow"
+categories:
+- genel
 date: 2013-02-08
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: batch file - In Windows cmd, how do I prompt for user input and use the result
+  in another command? - Stack Overflow
 ---
 
 [In Windows cmd, how do I prompt for user input and use the result in another command? - Stack Overflow](http://stackoverflow.com/questions/1223721/in-windows-cmd-how-do-i-prompt-for-user-input-and-use-the-result-in-another-com): “  

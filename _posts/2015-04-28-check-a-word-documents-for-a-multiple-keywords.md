@@ -1,13 +1,15 @@
 ---
-layout: post
-title: "Check a word documents for a multiple keywords sequentially in a smart way"
+categories:
+- bilgisayar
+- genel
 date: 2015-04-28
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "computer"
-  - "excelvba"
+layout: post
+tags:
+- computer
+- english
+- excelvba
+- longread
+title: Check a word documents for a multiple keywords sequentially in a smart way
 ---
 
 Let’s consider your boss requested check documents more than 100+ item is include key word like “draft” and “temporary” etc. Doing this manually is exhausitive work. But there are another method for smart workers:) which avoids iterative tasks.

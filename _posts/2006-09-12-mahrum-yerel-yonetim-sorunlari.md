@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "MAHRUM YEREL YÖNETİM SORUNLARI:"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- yazilarim
+- yeni-ufuk-gazetesi
+title: 'MAHRUM YEREL YÖNETİM SORUNLARI:'
 ---
 
 _Yerel Yönetimler üzerine trajikomik bir inceleme yahut ağlanacak halimize gülünen yerde yarı tebessümle ağlama…_

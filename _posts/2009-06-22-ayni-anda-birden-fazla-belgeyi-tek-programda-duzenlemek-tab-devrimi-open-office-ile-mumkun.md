@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Aynı anda birden fazla belgeyi tek programda düzenlemek. Tab devrimi Open Office ile mümkün"
+categories:
+- bilgisayar
 date: 2009-06-22
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Aynı anda birden fazla belgeyi tek programda düzenlemek. Tab devrimi Open Office
+  ile mümkün
 ---
 
 ![](/images/Tabbed_Windows.PNG)

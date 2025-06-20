@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Çocuklar için ücretsiz İngilizce öğrenme siteleri"
+categories:
+- diller
+- genel
 date: 2014-09-17
-categories: 
-  - "diller"
-  - "genel"
-tags: 
-  - "cocuklar"
+layout: post
+tags:
+- cocuklar
+- english
+- longread
+- opinion
+- technology
+title: Çocuklar için ücretsiz İngilizce öğrenme siteleri
 ---
 
 [![](/images/bfe4d-jake-photo.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2014/09/bfe4d-jake-photo.jpg)

@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Yeni Kitabımız Yayınlandı: Ağ Analizi"
 date: 2020-03-18
-tags: 
-  - "featured"
+layout: post
+tags:
+- english
+- featured
+- longread
+- technology
+title: 'Yeni Kitabımız Yayınlandı: Ağ Analizi'
 ---
 
 ![](/images/222534513_400_wm.jpg)

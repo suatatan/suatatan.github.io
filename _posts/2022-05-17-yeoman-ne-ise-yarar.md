@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Yeoman ne işe yarar?"
 date: 2022-05-17
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Yeoman ne işe yarar?
 ---
 
 Bir chrome eklentisi, django projesi, vue projesi veya python paketi, yahut npm paketi her biri için ayrı dosya yapısı gerekir. Hele ki diyelim django-rest, vue ve GraphQL yapısına bir de ek Redis eklemek isterseniz uzun tutoriallerin içinde cinnet geçirirsiniz.

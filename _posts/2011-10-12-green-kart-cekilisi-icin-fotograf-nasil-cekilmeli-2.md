@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Green Kart çekilişi için fotoğraf nasıl çekilmeli?"
+categories:
+- genel
 date: 2011-10-12
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Green Kart çekilişi için fotoğraf nasıl çekilmeli?
 ---
 
 Green kart için fotoğraf çekmek o kadar da zor değil. Green kart çekilişleri için online başvuru formunda kullanılacak fotoğrafların çekimi biraz karışık gözüküyor ancak kullanıcı kılavuzunu incelediğimde zor olmadığın anlaşılacaktır. Green kart çekilişlerinde kullanılacak fotoğrafların belirli ebatlarda olması ve bu ebat dışında fotoğrafta insan yüzünün belirli bir orana göre yerleşmiş olması isteniyor. Önce bu oranları anlatalım daha sonra diğer teknik ayrıntılara gireceğiz:

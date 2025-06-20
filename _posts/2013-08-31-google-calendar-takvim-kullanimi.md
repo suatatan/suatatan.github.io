@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Google Calendar (takvim) kullanımı"
+categories:
+- bilgisayar
+- genel
 date: 2013-08-31
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "booklab"
+layout: post
+tags:
+- booklab
+- english
+- longread
+- technology
+title: Google Calendar (takvim) kullanımı
 ---
 
 Konsantrasyon düşmanı olan teknolojiyi ehlileştirmeyi bilirseniz konsantrasyonunuza katkıda bulunabilir.

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Türkiye'de Parti ve Seçim Sistemi"
+categories:
+- genel
 date: 2013-05-31
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- technology
+title: Türkiye'de Parti ve Seçim Sistemi
 ---
 
 [![](/images/374667)](http://static.idefix.com/cache/0/270/374667)

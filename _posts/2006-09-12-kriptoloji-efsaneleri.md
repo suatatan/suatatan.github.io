@@ -1,12 +1,14 @@
 ---
-title: "KRİPTOLOJİ EFSANELERİ"
+categories:
+- genel
 date: 2006-09-12
 layout: post
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+tags:
+- english
+- longread
+- yazilarim
+- yeni-ufuk-gazetesi
+title: KRİPTOLOJİ EFSANELERİ
 ---
 
 **KRİPTOLOJİ EFSANELERİ**

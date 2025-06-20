@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Uluslararası Pazarlama Okuma Notları"
+categories:
+- genel
 date: 2014-11-20
-categories: 
-  - "genel"
-tags: 
-  - "pazarlama"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- opinion
+- pazarlama
+- technology
+title: Uluslararası Pazarlama Okuma Notları
 ---
 
 **![image](/images/tumblr_inline_nfnkkbJ6XW1r4exmc.jpg)**

@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "GPS Kooordinatları arası dönüşüm"
+categories:
+- bilgisayar
+- genel
 date: 2011-09-08
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: GPS Kooordinatları arası dönüşüm
 ---
 
 Ne hikmetse çeşit çeşit koordinat sistemleri arasında dönüşümün gerektiği durumlar vardır. Bunun için harita genel komutanlığının bir applet (webde çalışan java uygulaması var) bunu da yer imlerime kaydedip buluyorum.  

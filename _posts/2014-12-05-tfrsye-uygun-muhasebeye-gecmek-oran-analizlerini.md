@@ -1,15 +1,18 @@
 ---
-layout: post
-title: "TFRS'ye uygun muhasebeye geçmek oran analizlerini etkiler mi?"
+categories:
+- genel
 date: 2014-12-05
-categories: 
-  - "genel"
-tags: 
-  - "akademik"
-  - "finans"
-  - "makaletakip"
-  - "muhasebe"
-  - "isletme"
+layout: post
+tags:
+- akademik
+- english
+- finans
+- isletme
+- makaletakip
+- muhasebe
+- quickread
+- technology
+title: TFRS'ye uygun muhasebeye geçmek oran analizlerini etkiler mi?
 ---
 
 Yaşar Üniversitesinden Yrd.Doç.Dr. Baki Rıza Balcı'nın çalışmasına göre muhasebe strandardını değiştirmek oran analizlerinde farklı sonuçları çıkmasına neden olmakta. Çalışma dahilinde yapılan örnek uygulamada Tekdüzen hesap planına göre kârlı gözüken finansal tablolar, TFRS’ye dönüştürüldüklerinde aslında zarar edildiğini ortaya koymaktadırlar. TFRS’ye dönüşüm genelde likidite ve kârlılık oranlarının düşmesi, finansal yapı ve faaliyet oranlarının ise yükselmesi ile sonuçlanmakta.

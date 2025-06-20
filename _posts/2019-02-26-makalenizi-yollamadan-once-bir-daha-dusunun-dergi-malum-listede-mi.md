@@ -1,7 +1,10 @@
 ---
-layout: post
-title: "Makalenizi Yollamadan Önce Bir Daha Düşünün. Dergi \"malum\" Listede mi?"
 date: 2019-02-26
+layout: post
+tags:
+- english
+- longread
+title: Makalenizi Yollamadan Önce Bir Daha Düşünün. Dergi "malum" Listede mi?
 ---
 
 Belki de en olmaması gereken yer olan akademide bile bir takım dergilerin çevirdiği "karanlık" işler var. Bunu öğrenmek için şu yazıyı öneriyorum: [http://uvt.ulakbim.gov.tr/tip/sempozyum11/Sayfa-47-49.pdf](http://uvt.ulakbim.gov.tr/tip/sempozyum11/Sayfa-47-49.pdf)

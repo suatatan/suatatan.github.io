@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Twitter'da bir dizi anahtar terim hakkında zaman aralığıan göre twit çekme"
+categories:
+- bilgisayar
 date: 2020-12-12
-categories: 
-  - "bilgisayar"
-tags: 
-  - "python"
-  - "veri-madenciligi"
+layout: post
+tags:
+- english
+- longread
+- python
+- technology
+- veri-madenciligi
+title: Twitter'da bir dizi anahtar terim hakkında zaman aralığıan göre twit çekme
 ---
 
 Böyle bir amacınız varsa yazdığım şu fonksiyonu kullanabilirsiniz:

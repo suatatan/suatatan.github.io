@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Matematiksel notasyonlardan boğulanlar için"
+categories:
+- genel
 date: 2014-12-21
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Matematiksel notasyonlardan boğulanlar için
 ---
 
 Mühendis kökenli olmak, iktisat veya işletme literatüründeki ezoterik matematiksel yazımı anlamayı temin etmiyor. Bunu aşmak için aşağıdaki açık kursu inceleyebilirsiniz.

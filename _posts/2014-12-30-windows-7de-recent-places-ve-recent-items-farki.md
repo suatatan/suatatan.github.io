@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Windows 7'de Recent Places ve Recent Items Farkı"
+categories:
+- bilgisayar
+- genel
 date: 2014-12-30
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Windows 7'de Recent Places ve Recent Items Farkı
 ---
 
 Windows 7'de Recent **Places** sadece son girilen klasörleri gösterir.  Varsayılan kısayol olarak gelir zaten.

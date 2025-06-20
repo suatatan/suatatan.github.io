@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Zotero Referans Türkçeleştirme"
+categories:
+- genel
 date: 2016-02-24
-categories: 
-  - "genel"
-tags: 
-  - "akademik"
+layout: post
+tags:
+- akademik
+- english
+- longread
+title: Zotero Referans Türkçeleştirme
 ---
 
 1\. Şu linkten APA formatının türkçeleştirilmiş halini [indirin](https://www.zotero.org/styles/apa-tr).

@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "Atatürk ile Kokoreç yemek"
+categories:
+- gordugum-ruyalar
+- genel
 date: 2007-02-16
-categories: 
-  - "gordugum-ruyalar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: Atatürk ile Kokoreç yemek
 ---
 
 Rüyalara zeval olmaz;  

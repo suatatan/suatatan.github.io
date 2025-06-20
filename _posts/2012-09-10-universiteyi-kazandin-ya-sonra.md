@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "ÜNİVERSİTEYİ KAZANDIN YA SONRA?"
+categories:
+- genel
 date: 2012-09-10
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+title: ÜNİVERSİTEYİ KAZANDIN YA SONRA?
 ---
 
   

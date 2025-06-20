@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "CSS ile tüm tarayıcılarda çalışan kutu gölge efekti"
+categories:
+- bilgisayar
 date: 2011-07-08
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: CSS ile tüm tarayıcılarda çalışan kutu gölge efekti
 ---
 
 İstediğiniz div elementine aşağıdaki classı atayarak gölge verebilirsiniz

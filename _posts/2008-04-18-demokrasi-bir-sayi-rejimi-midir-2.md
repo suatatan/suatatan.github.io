@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Demokrasi bir sayı rejimi midir?"
+categories:
+- genel
 date: 2008-04-18
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- yazilarim
+title: Demokrasi bir sayı rejimi midir?
 ---
 
 Menderes iktidarında Başbakan Yardımcılığı yapmış olan Samet Ağaoğlu'nu şunu söylediği söylenir: (İktibas: Faroz AHMAD, Demokrasi Sürecinde Türkiye-HİL Yayınevi)  

@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "İşsiz olmak ya da olmamak işte bütün mesele bu"
+categories:
+- genel
 date: 2012-02-26
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: İşsiz olmak ya da olmamak işte bütün mesele bu
 ---
 
 | [![](/images/LiveImages%5CFoto%20Haber%5C693%5CKocaeli'de%20i%C5%9Fsiz%20%C3%BCniversiteliler%5C01.jpg)](http://imggaleri.hurriyet.com.tr/LiveImages%5CFoto%20Haber%5C693%5CKocaeli'de%20i%C5%9Fsiz%20%C3%BCniversiteliler%5C01.jpg) |

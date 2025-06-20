@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Excel VBA ile muhasebe uygulamaları"
+categories:
+- genel
 date: 2014-02-20
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Excel VBA ile muhasebe uygulamaları
 ---
 
 Excel VBA ile bir çok işlem otomatikleştirilebilir. Aşağıda yazdığım makro şu işi yapıyor:  

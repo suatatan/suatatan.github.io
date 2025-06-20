@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Jquery proxy() kullanımı"
+categories:
+- genel
 date: 2013-12-30
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Jquery proxy() kullanımı
 ---
 
 Jquery eventleri(click vb.) kullanılırken event içinden harici değişken this ile çağrılınca hata vermektedir. Nitekim Jquery event içinde this ifadesi ilgili DOM objesini çağırır. Bu baş ağrıtıcı sorun OOP ile program yazarken berbattır. Bunu aşmak için aşağıdaki sayfadaki çözümün yaradığı tecrübe edilmiştir:  

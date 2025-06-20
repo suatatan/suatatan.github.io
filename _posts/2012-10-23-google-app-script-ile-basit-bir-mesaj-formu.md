@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Google App Script ile basit bir mesaj formu uygulaması"
+categories:
+- bilgisayar
+- genel
 date: 2012-10-23
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-script"
+layout: post
+tags:
+- english
+- google-app-script
+- longread
+- technology
+title: Google App Script ile basit bir mesaj formu uygulaması
 ---
 
 [![](/images/e2f73-gascript_ornek1.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2012/10/e2f73-gascript_ornek1.jpg)

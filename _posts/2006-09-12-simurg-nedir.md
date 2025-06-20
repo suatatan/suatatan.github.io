@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "SİMURG NEDİR?"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- yazilarim
+- yeni-ufuk-gazetesi
+title: SİMURG NEDİR?
 ---
 
 _Can Simurg’u gördüğünde Musa bile dehşete düşer, üveyik kuşuna döner…_

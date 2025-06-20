@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Dosya transferinde upload zamanından kurtulmak"
 date: 2019-03-28
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Dosya transferinde upload zamanından kurtulmak
 ---
 
 ![](/images/image.png)

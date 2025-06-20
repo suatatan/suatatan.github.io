@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Google'ın tüm datası elimin altında ama!"
+categories:
+- bilgisayar
 date: 2021-03-09
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Google'ın tüm datası elimin altında ama!
 ---
 
 Commom Crawl (Bundan böyle CC yazacağım [https://commoncrawl.org/](https://commoncrawl.org/) sitesinden yayın yapan) kar amacı gütmeyen bir kuruluştur. Bir nevi Google gibi tüm webi tarar ancak verileri kendine saklamaz. Bunun yerine düzenli olarak yayınlar. Şimdi hemen heyecanlanmayın gidip alayım diye. Devasa büyüklükte verilerdir. Öyle açıp bakamazsınız. Bir takım özel yetenekler gerekir. Bunları bu kısa yazıda anlatmamız mümkün değil. Ama bazı kavramlara kısaca bakalım. Not: Ben kısmen de olsa bu verilere erişebiliyorum :) Parmaklarımdan yıldırımlar çakıyor :)

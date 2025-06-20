@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Bu iddialar doğru mu?"
+categories:
+- genel
 date: 2014-11-24
-categories: 
-  - "genel"
-tags: 
-  - "radikal"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- radikal
+- technology
+- yazilarim
+title: Bu iddialar doğru mu?
 ---
 
 ![](/images/tumblr_inline_nfnkhoXLEp1r4exmc.jpg)

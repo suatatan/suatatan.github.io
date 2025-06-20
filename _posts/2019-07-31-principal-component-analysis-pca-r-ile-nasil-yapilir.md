@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Principal Component Analysis (PCA) R ile nasıl yapılır?"
+categories:
+- bilgisayar
+- r-dili
+- isletme
 date: 2019-07-31
-categories: 
-  - "bilgisayar"
-  - "r-dili"
-  - "isletme"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Principal Component Analysis (PCA) R ile nasıl yapılır?
 ---
 
 # Egzersiz

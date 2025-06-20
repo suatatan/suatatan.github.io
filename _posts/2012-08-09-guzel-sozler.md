@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Güzel Sözler"
+categories:
+- genel
 date: 2012-08-09
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Güzel Sözler
 ---
 
 Kısmet gelecek olursa yün iplik  bile  getirir;  kısmet  gidecek  olursa,  demir  zincirle  dahi  

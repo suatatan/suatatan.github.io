@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Greiner'in Büyüme Modeli"
+categories:
+- genel
 date: 2014-11-30
-categories: 
-  - "genel"
-tags: 
-  - "yonetim"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+- yonetim
+title: Greiner'in Büyüme Modeli
 ---
 
 ![](/images/tumblr_inline_nfui33sPcs1r4exmc.jpg)

@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Set operations with CRAN-R"
+categories:
+- english
+- genel
 date: 2015-05-15
-categories: 
-  - "english"
-  - "genel"
-tags: 
-  - "computer"
-  - "cran"
-  - "rstudio"
+layout: post
+tags:
+- computer
+- cran
+- english
+- longread
+- opinion
+- rstudio
+title: Set operations with CRAN-R
 ---
 
 A discovered life-saving library for computing set theory relevant issues. Name of library is set.

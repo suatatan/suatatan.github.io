@@ -1,7 +1,10 @@
 ---
-layout: post
-title: "Python'da return yerine yield"
 date: 2018-10-16
+layout: post
+tags:
+- english
+- longread
+title: Python'da return yerine yield
 ---
 
 Bir fonksiyon içinde döngü yaptırıp döngü sonucunu listeye atayıp fonksiyondan return ettirdiğimiz durumlar olur. Burada fonksiyon içinde liste tanımlayıp içine tekrar elemanları eklemek icap eder. Bunun yerine daha hızlı bir yol vardır:

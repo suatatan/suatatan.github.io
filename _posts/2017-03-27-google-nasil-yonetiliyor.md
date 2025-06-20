@@ -1,15 +1,19 @@
 ---
-layout: post
-title: "Google Nasıl Yönetiliyor"
+categories:
+- bilgisayar
+- google-app-engine
+- okuma-notlari
+- yazilarim
+- yazilim
 date: 2017-03-27
-categories: 
-  - "bilgisayar"
-  - "google-app-engine"
-  - "okuma-notlari"
-  - "yazilarim"
-  - "yazilim"
-tags: 
-  - "featured"
+layout: post
+tags:
+- english
+- featured
+- longread
+- opinion
+- technology
+title: Google Nasıl Yönetiliyor
 ---
 
 Google kurucularının yazdığı 'Google Nasıl Yönetiliyor' adlı kitabı okudum.

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Hızlı PIP paketi oluşturma"
 date: 2022-05-17
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Hızlı PIP paketi oluşturma
 ---
 
 Python'da sık kullandığınız kodları pakete çevirmek için şu adımları izleyim.

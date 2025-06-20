@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "T-Testi nedir?"
 date: 2017-12-09
+layout: post
+tags:
+- english
+- longread
+- technology
+title: T-Testi nedir?
 ---
 
 ![maxresdefault.jpg](/images/maxresdefault.jpg)

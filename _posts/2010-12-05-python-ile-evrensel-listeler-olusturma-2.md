@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Python ile evrensel listeler oluşturma"
+categories:
+- bilgisayar
+- genel
 date: 2010-12-05
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- web-programlama
+title: Python ile evrensel listeler oluşturma
 ---
 
 [![](/images/passlist.png "PASSLIST")](http://suatatan.wordpress.com/wp-content/uploads/2010/12/passlist.png)  

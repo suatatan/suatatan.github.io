@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "JQuery ile liste halindeki XML verisinin teker teker okunup yazılması"
+categories:
+- bilgisayar
+- genel
 date: 2011-07-04
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- web-programlama
+title: JQuery ile liste halindeki XML verisinin teker teker okunup yazılması
 ---
 
 Bu kez Jquery ile mesela RSS yayınındaki haberler gibi liste halindeki verilerinn ekrana yazdırılmasını öğreniyoruz. Önceki yazımızda XML'yi ajax fonksiyonu ile get etmeyi öğrendik. Şimdi ise aldığımız XML verisindeki item düğümü altındaki title değerlerini each fonksiyonu ile tek tek bastırıyoruz.  

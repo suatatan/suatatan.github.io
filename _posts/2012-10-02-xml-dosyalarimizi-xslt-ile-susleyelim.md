@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "XML dosyalarımızı XSLT ile süsleyelim"
+categories:
+- bilgisayar
+- genel
 date: 2012-10-02
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: XML dosyalarımızı XSLT ile süsleyelim
 ---
 
 Diyelim ki aşağıdakine benzer renksiz, tatsız bir XML dosyanız var:  

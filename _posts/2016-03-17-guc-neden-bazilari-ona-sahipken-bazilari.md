@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Güç. Neden bazıları ona sahipken bazıları değildir?"
+categories:
+- genel
 date: 2016-03-17
-categories: 
-  - "genel"
-tags: 
-  - "kitap"
+layout: post
+tags:
+- english
+- kitap
+- longread
+- technology
+title: Güç. Neden bazıları ona sahipken bazıları değildir?
 ---
 
 ![image](/images/tumblr_inline_o46xk6NUd01r4exmc_540.jpg)

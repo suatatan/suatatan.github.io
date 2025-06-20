@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Hazırladığım yeni bir yazılımdan \"makale\" çıkar mı?"
+categories:
+- akademik
 date: 2019-11-12
-categories: 
-  - "akademik"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Hazırladığım yeni bir yazılımdan "makale" çıkar mı?
 ---
 
 Bu sorunun eski cevabı "hayır" idi. Nitekim, akademi bir yazılımı arkasında kuramsal bir geçmiş olan, hipotez sorusu mevcut ve bir soruya çözüm bulan bir konu olarak görmüyordu, kısmen haklıydı da.

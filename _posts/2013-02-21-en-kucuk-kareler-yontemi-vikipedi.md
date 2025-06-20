@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "En küçük kareler yöntemi - Vikipedi"
+categories:
+- genel
 date: 2013-02-21
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: En küçük kareler yöntemi - Vikipedi
 ---
 
 [En küçük kareler yöntemi - Vikipedi](http://tr.wikipedia.org/wiki/En_k%C3%BC%C3%A7%C3%BCk_kareler_y%C3%B6ntemi):  

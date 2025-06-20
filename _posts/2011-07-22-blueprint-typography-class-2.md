@@ -1,13 +1,15 @@
 ---
-layout: post
-title: "Blueprint typography class"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2011-07-22
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- quickread
+- web-programlama
+title: Blueprint typography class
 ---
 
 Blueprint css framework also have the typography classes for quick and stable styling texts:  

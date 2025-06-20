@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Doğrusal Programlama Nedir?"
+categories:
+- genel
 date: 2014-11-21
-categories: 
-  - "genel"
-tags: 
-  - "sayisalyontemler"
-  - "yoneylem"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- opinion
+- sayisalyontemler
+- technology
+- yoneylem
+title: Doğrusal Programlama Nedir?
 ---
 
 ![image](/images/tumblr_inline_nfe5weU4yL1r4exmc.jpg)

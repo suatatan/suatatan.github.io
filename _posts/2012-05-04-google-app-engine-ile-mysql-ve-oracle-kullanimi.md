@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Google App Engine ile MySQL ve Oracle kullanımı mümkün mü?"
+categories:
+- bilgisayar
+- genel
 date: 2012-05-04
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "sorucevap"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- sorucevap
+- technology
+title: Google App Engine ile MySQL ve Oracle kullanımı mümkün mü?
 ---
 
 **Soru (Yunus Santur):**

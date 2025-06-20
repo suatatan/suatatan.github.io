@@ -1,17 +1,20 @@
 ---
-layout: post
-title: "Excel makroları içinde gelişmiş denetimli formüller yazma"
+categories:
+- bilgisayar
+- genel
 date: 2012-06-10
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "ekonomi"
-  - "excel"
-  - "excel-vba"
-  - "muhendislik"
-  - "web-programlama"
-  - "isletme"
+layout: post
+tags:
+- ekonomi
+- english
+- excel
+- excel-vba
+- isletme
+- muhendislik
+- quickread
+- technology
+- web-programlama
+title: Excel makroları içinde gelişmiş denetimli formüller yazma
 ---
 
 Bazen excel'deki formüllerin yetmediği durumlar olabilir. Mesela içiçe 5 eğer fonksiyonu veya karmaşık matematiksel hesaplamalar gibi. Bu durumlarda excel makrolarını kullanabilirsiniz.  

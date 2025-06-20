@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "Sayı = Hayat mı?"
 date: 2018-04-02
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Sayı = Hayat mı?
 ---
 
 Oğlum, sıfır derecedeki hava sıcaklığının iki katı sıcaklık kaç derecedir diye sordunda 0x2=0 demiştim. O da güldü. Nitekim sıcaklığın iki katı yine sıfır olamazdı. Yani düşünün 20 derece için aynı hesabı yapsak 40 derece yapacak sıfırın suçu ne? Peki nasıl hesaplarız dediğimde oğlum şöyle dedi: Sıfır dereceyi fahrenhayta çevir sonra da 2 ile çarpım celcius'a yeniden çevir dedi. Yani 0 derece = 32 F, 32\*2=64 F, 64 F=17.78 derece eder.

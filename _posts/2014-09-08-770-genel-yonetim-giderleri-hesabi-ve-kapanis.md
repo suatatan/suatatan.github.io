@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "770 Genel Yönetim Giderleri Hesabı ve kapanış işlemleri"
+categories:
+- genel
 date: 2014-09-08
-categories: 
-  - "genel"
-tags: 
-  - "muhasebe"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- muhasebe
+- technology
+title: 770 Genel Yönetim Giderleri Hesabı ve kapanış işlemleri
 ---
 
 Muhasebede en kafa karıştırıcı kısımlardan biri dönem sonu işlemleridir. Dönem sonu işlemleri dönem içinde oluşan bazı hareketlerin, gelir tablosuna aktarılması ve kapatılması işlemlerini içerir. 770 Genel Yönetim Giderleri  hesabı da dönem sonunda gelir tablosuna aktarılarak kapatılan hesaplardan biridir. Şimdi adım adım  inceleyelim:

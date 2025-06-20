@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Fast Track  (Hızlı Yol) nedir?"
+categories:
+- genel
 date: 2013-09-25
-categories: 
-  - "genel"
-tags: 
-  - "insaat-muhendisligi"
+layout: post
+tags:
+- english
+- insaat-muhendisligi
+- quickread
+- technology
+title: Fast Track  (Hızlı Yol) nedir?
 ---
 
 Fast Track (Hızlı Yol), İnşaat sözleşmeleri için işin farklı zamanlarda yapılacak parçalarının önceden planlanıp ayrı ayrı yüklenicilere (taşeronlara) verilmek suretiyle hızlandırılmasıdır. Çok dikkatli bir planlama ve sözleşme yönetimini gerektirir.

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Alacak Devir Hızı Nedir? [İnfografik]"
+categories:
+- genel
 date: 2014-11-28
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- technology
+title: Alacak Devir Hızı Nedir? [İnfografik]
 ---
 
 [![image](/images/tumblr_inline_nfr4xmQ4U01r4exmc.png)](https://lh3.googleusercontent.com/-jvQuT8rdNeE/VHh8_w0VohI/AAAAAAABRK8/J2PaiwguIIA/w763-h526-no/Alacak%2BDevir%2BH%C4%B1z%C4%B1.png)

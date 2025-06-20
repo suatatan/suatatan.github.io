@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Daha az çalışmak problemlerimizi nasıl çözer? Gerçekten!"
+categories:
+- ceviri
 date: 2021-07-07
-categories: 
-  - "ceviri"
-tags: 
-  - "featured"
+layout: post
+tags:
+- english
+- featured
+- longread
+- opinion
+- technology
+title: Daha az çalışmak problemlerimizi nasıl çözer? Gerçekten!
 ---
 
 Tarihçi ve yazar Rutger Bregman, daha kısa çalışma haftalarının kazaları azaltmaya, iklim değişikliğiyle mücadeleye, cinsiyetleri daha eşit hale getirmeye ve daha fazlasına yardımcı olabileceğini iddia ediyor

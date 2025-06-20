@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "İngilizce inşaat mühendisliği terimleri"
+categories:
+- genel
 date: 2013-06-13
-categories: 
-  - "genel"
-tags: 
-  - "insaat-muhendisligi"
+layout: post
+tags:
+- english
+- insaat-muhendisligi
+- longread
+- technology
+title: İngilizce inşaat mühendisliği terimleri
 ---
 
 [![](/images/images)](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ7gz2gCCWWcpwHg7UOk6N9aHug5IPywFi1OooodFnsLbcMZG8btg)

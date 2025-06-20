@@ -1,15 +1,19 @@
 ---
-layout: post
-title: "“Örgütsel Strateji, yapı ve süreç” adlı  Miles, Snow ve diğerlerinin (1978) makalesine bakış;"
+categories:
+- genel
 date: 2013-03-12
-categories: 
-  - "genel"
-tags: 
-  - "akademik"
-  - "okuma-notlari"
-  - "iktibas"
-  - "inceleme"
-  - "isletme"
+layout: post
+tags:
+- akademik
+- english
+- iktibas
+- inceleme
+- isletme
+- longread
+- okuma-notlari
+- technology
+title: “Örgütsel Strateji, yapı ve süreç” adlı  Miles, Snow ve diğerlerinin (1978)
+  makalesine bakış;
 ---
 
   

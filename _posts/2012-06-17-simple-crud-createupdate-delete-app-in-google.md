@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Simple CRUD (Create,Update Delete) App in Google App Script"
+categories:
+- bilgisayar
+- genel
 date: 2012-06-17
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-script"
+layout: post
+tags:
+- english
+- google-app-script
+- quickread
+- technology
+title: Simple CRUD (Create,Update Delete) App in Google App Script
 ---
 
 I want to use Google Spreadsheet as database-like. Normally, this is isn’t posibble at all. But not impossible. I coded a simple CRUD script for spreadsheet. You can use it for developing row-by-row logging apps.  

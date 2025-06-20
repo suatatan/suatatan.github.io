@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Web Sayfalarınız için Stres Testi Aracı"
+categories:
+- bilgisayar
 date: 2019-09-18
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Web Sayfalarınız için Stres Testi Aracı
 ---
 
 Web sayfanıza aynı anda çok fazla sayıda kullanıcı girdiğinde ne olacağını simüle mi etmek istiyorsunuz? Buyrun buradan: [Locust](https://locust.io/).

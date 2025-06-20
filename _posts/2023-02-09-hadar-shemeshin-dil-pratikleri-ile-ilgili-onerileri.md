@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Hadar Shemesh'in Dil Pratikleri ile ilgili önerileri"
+categories:
+- diller
 date: 2023-02-09
-categories: 
-  - "diller"
-tags: 
-  - "podcast"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- podcast
+- technology
+title: Hadar Shemesh'in Dil Pratikleri ile ilgili önerileri
 ---
 
 Hadar Shemesh İsrailli bir hoca, İsrail'de büyüdüğü halde Amerikan aksanı ile İngilizce konuşuyor. Dil ile ilgli InFluency podcast'ını severek dinliyorum. Ayrıca sitesi şurada: [Hadar Shemesh | The Accent's Way](https://hadarshemesh.com)

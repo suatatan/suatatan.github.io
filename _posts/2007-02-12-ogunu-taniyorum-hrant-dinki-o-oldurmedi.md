@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "OGÜNÜ TANIYORUM, HRANT DİNK’İ O ÖLDÜRMEDİ"
 date: 2007-02-12
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: OGÜNÜ TANIYORUM, HRANT DİNK’İ O ÖLDÜRMEDİ
 ---
 
 Ogün Samast; 19 Ocak’ta İstanbul’da Agos Gazetesi genel yayın yönetmeni Hrant DİNK’i, öldüren 17 yaşındaki Trabzonlu genç. Ogün’ü siz de tanıyor olmalısınız. Güya kişisel olarak milliyetçi duygularından ötürü kin duyduğu adamı kendisi dahi çok iyi tanımayan bir genç. Bu profil yabancı gelmemeli.

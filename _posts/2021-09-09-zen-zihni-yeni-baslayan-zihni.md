@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Zen Zihni, Yeni Başlayan Zihni"
+categories:
+- okuma-notlari
 date: 2021-09-09
-categories: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Zen Zihni, Yeni Başlayan Zihni
 ---
 
 Japonya'da "yeni başlayanların zihni" anlamına gelen _shoshin_ deyimi vardır. Meditasyon veya benzeri tüm pratiklerin amacı her zaman yeni başlayanların aklını tutmaktır. Herhangi bir şeyi öğrenmeye yeni başladığınız zamanı hatırlıyor musunuz? Ya da bir şehri keşfe yeni başladığınız zamanı? Yeni işyeri, yeni evinizin bulunduğu yeni bir muhit? Her şey sıfırdandır, zihnin otopilot modu dediğimiz bir durum yerine neredeyse her anın "farkında" olursunuz. Bazılarımıza bu farkındalık stresli gelse de çoğumuza iyi gelir. Her halükarda tam bu "shoshin" halinde aslında öğrenme modundayız. Ancak bir şeye alıştıkça bu zihin yerini otomatik pilota bağlar ve artık daha az keyifli, hatta sıkıcı olur. Bugünkü bilimsel araştırmalar zihnin bu halinin öğrenme halinde olan haline göre daha az efor harcadığını gösteriyor. Bu kötü bir durum değil beynimizin bir nevi enerji tasarrufu. Ancak bu enerji tasarrufu modu tıpkı telefonlarımzda açtığımız zamanlarda performansı düşüren "pil tasarruf modu" gibi. Belki de zaman zaman bundan kurtulmak gerekiyor. Yaşamızın her anında da sudoku veya karmaşık matematiksel problemler çözemeyeceğimize göre zihnin o steril "yeni başlayan" halini korumak için bir şeyler yapmamız gerekir. Bu amaçla alanında "kanonik" eser sayılan "Zen Mind, Beginner's Mind" adlı kitabı okudum ve sizlerle paylaşmak istiyorum.

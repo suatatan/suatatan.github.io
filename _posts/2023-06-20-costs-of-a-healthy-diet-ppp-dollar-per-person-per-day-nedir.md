@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "‘Costs of a healthy diet (PPP dollar per person per day) nedir?"
 date: 2023-06-20
+layout: post
+tags:
+- english
+- longread
+- technology
+title: ‘Costs of a healthy diet (PPP dollar per person per day) nedir?
 ---
 
 Bir kişinin belirli bir ülkede sağlık için beslenme gereksinimlerini karşılayan bir sepet yiyecek satın almak için harcaması gereken paradır.

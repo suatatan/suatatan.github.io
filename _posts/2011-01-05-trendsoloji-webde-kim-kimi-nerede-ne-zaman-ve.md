@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Trendsoloji: Web'de Kim kimi, nerede, ne zaman ve ne kadar aramış?"
+categories:
+- bilgisayar
+- genel
 date: 2011-01-05
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- longread
+- technology
+title: 'Trendsoloji: Web''de Kim kimi, nerede, ne zaman ve ne kadar aramış?'
 ---
 
 Google Trendlerinde ilginç sonuçlar var ve bir çok anlamda üzerine araştırma yapmaya değer. Google'de en fazla aranan ifadeleri tararken ilginç sonuçlar çıkıyor.  

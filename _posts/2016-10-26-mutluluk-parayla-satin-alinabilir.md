@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Mutluluk parayla satın alınabilir!"
+categories:
+- genel
 date: 2016-10-26
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- technology
+- yazilarim
+title: Mutluluk parayla satın alınabilir!
 ---
 
 Mutluluğun parayla satın alınamayacağını düşünenler onun nerede satıldığını bilmeyenlerdir. Evet, mutluluğun satıldığı, parayla satıldığı yerler vardır. Eğer ayakkabı ve çanta ikilisini satın almak size mutluluk veriyorsa siz mutluluğu satın alabiliyorsunuz demektir. Birileri ise eğer herhangi bir şey satın almaktan ötürü mutlu olamıyorsa gerçtekten de neyin satın alarak mutlu olacağını henüz bulmamış demektir. Tabii bol bol AVM gezerek örneğin cupcake almanın veya pahalı kahveler içmenin mutluluğu gibi daha sofistike mutluluklar keşfedebilir.

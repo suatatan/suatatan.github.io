@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "SUNUCuya upload edilmeden dosya yollama"
 date: 2022-02-25
+layout: post
+tags:
+- english
+- longread
+- technology
+title: SUNUCuya upload edilmeden dosya yollama
 ---
 
 Normalde birbirimize dosya yollarken wetransfer veya dropbox türü şeyler kullanırız. Ancak bu araçların handikapı şu: Dosyayı önce sunucuya yüklüyor sonra indirtiyoruz. Ancak daha iyi yollar var. Eskiden [reepl.io](http://reepl.io/) vardı. Ancak artık yok.Alternatif olarak şu site vardır.

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Thompson testi ile veriler içerisinde “sapkın” olanlarını bulun"
+categories:
+- genel
 date: 2015-12-07
-categories: 
-  - "genel"
-tags: 
-  - "excel"
-  - "istatistik"
+layout: post
+tags:
+- english
+- excel
+- istatistik
+- longread
+- technology
+title: Thompson testi ile veriler içerisinde “sapkın” olanlarını bulun
 ---
 
 Veri setinizde sapkın (**outlier**) verileri bulmak için Thompson metodu kullanabilirsiniz. Şu video çok güzel [anlatıyor](https://www.youtube.com/watch?v=vJq65t7rsBE&list=FLc11YyK__RLCzRrNWfkhBjQ&index=1).

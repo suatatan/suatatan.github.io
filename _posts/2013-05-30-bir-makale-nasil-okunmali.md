@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Bir Makale Nasıl Okunmalı?"
+categories:
+- genel
 date: 2013-05-30
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Bir Makale Nasıl Okunmalı?
 ---
 
 [![](/images/images)](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTA72wXkVa1wM1bg1cbsUofFFBXz8US-gzbMIhntNfJ7u9ZcEQ0)

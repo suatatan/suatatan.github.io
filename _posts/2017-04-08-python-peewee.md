@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Python Peewee"
+categories:
+- bilgisayar
 date: 2017-04-08
-categories: 
-  - "bilgisayar"
-tags: 
-  - "python"
+layout: post
+tags:
+- english
+- longread
+- python
+- technology
+title: Python Peewee
 ---
 
 ![2017-04-08 19_52_35-peewee — peewee 2.9.2 documentation](/images/2017-04-08-19_52_35-peewee-e28094-peewee-2-9-2-documentation.png)

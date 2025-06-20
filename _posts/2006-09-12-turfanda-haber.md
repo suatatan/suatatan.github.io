@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "TURFANDA HABER:"
+categories:
+- genel
 date: 2006-09-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: 'TURFANDA HABER:'
 ---
 
 (Bu kavramı dünya medya tarihine hediye ediyorum.)

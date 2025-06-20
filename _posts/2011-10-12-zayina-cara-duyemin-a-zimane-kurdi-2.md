@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Zayîna cara duyemîn a zimanê Kurdî"
+categories:
+- genel
 date: 2011-10-12
-categories: 
-  - "genel"
-tags: 
-  - "kurdi"
+layout: post
+tags:
+- english
+- kurdi
+- longread
+- technology
+title: Zayîna cara duyemîn a zimanê Kurdî
 ---
 
 # Wextekê nezîk, salên 90'a, tevahîya ’_zimanzanên Kurdînezan_’ ê **zanîngeh**ên rojavayê bi yêk deng, berê xwe da bûn **peytandin**a ev yêkê kû: “Kurdî ne ziman e”

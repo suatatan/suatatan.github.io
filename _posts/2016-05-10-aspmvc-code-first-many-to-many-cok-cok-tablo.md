@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "ASP.MVC Code First Many-to-Many (Çok-Çok) Tablo ilişkisi Kurma"
+categories:
+- bilgisayar
+- genel
 date: 2016-05-10
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "asp-mvc"
+layout: post
+tags:
+- asp-mvc
+- english
+- longread
+- technology
+title: ASP.MVC Code First Many-to-Many (Çok-Çok) Tablo ilişkisi Kurma
 ---
 
 İki tablomuz var: Projects ve Employee (çalışan). Bir çalışan birden fazla projede yer alabilir, bir projede birden fazla çalışan yer alabilir. Dolayısıyla tablolar araası ilişki many-to-many (çok-çok) ilişkisi.

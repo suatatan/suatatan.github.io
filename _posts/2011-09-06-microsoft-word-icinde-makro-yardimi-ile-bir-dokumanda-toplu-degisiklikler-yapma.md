@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Microsoft Word içinde makro yardımı ile bir dökümanda toplu değişiklikler yapma"
+categories:
+- bilgisayar
 date: 2011-09-06
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Microsoft Word içinde makro yardımı ile bir dökümanda toplu değişiklikler yapma
 ---
 
 Onlar hatta yüzlerce sayfadan oluşan ve her birinde yapacağınız değişiklikler aynı olan dosyalarınız varsa her birini teker teker açıp Ctrl+F ile örneğin 5 değişikliğin 5'i için aynı işlem yapmaya gerek duyarsınız. Sizi bu "hammallıkltan" kurtarmak için "sırtımın ağrıdığı" anda bulduğum bir çözüm var:

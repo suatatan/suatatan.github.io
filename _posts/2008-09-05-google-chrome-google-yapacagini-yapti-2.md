@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Google Chrome: Google Yapacağını Yaptı"
+categories:
+- genel
 date: 2008-09-05
-categories: 
-  - "genel"
-tags: 
-  - "inceleme"
+layout: post
+tags:
+- english
+- inceleme
+- quickread
+- technology
+title: 'Google Chrome: Google Yapacağını Yaptı'
 ---
 
 [![](/images/chrome-205_noshadow.png "chrome-205_noshadow")](http://suatatan.wordpress.com/wp-content/uploads/2008/09/chrome-205_noshadow.png)  

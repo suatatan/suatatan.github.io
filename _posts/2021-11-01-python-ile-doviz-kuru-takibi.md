@@ -1,15 +1,18 @@
 ---
-layout: post
-title: "Python ile döviz kuru takibi"
+categories:
+- bilgisayar
 date: 2021-11-01
-categories: 
-  - "bilgisayar"
-tags: 
-  - "bot"
-  - "doviz"
-  - "finans"
-  - "piyasa-takibi"
-  - "python"
+layout: post
+tags:
+- bot
+- doviz
+- english
+- finans
+- longread
+- piyasa-takibi
+- python
+- technology
+title: Python ile döviz kuru takibi
 ---
 
 Döviz kurları sürekli değiştiğinden her dakika takip etmek insanı yorabiliyor. Bunun için ufak bir script yazdım. Bu scriptte TEPE ve DIP parametrelerini ayarlayıp kur belirttiğiniz değerlerin üstüne veya altına geçtiğinde ekranda hatırlatma yapabiliyor.

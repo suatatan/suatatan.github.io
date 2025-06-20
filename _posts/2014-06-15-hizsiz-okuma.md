@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "HIZSIZ OKUMA"
+categories:
+- genel
 date: 2014-06-15
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+title: HIZSIZ OKUMA
 ---
 
 [![](/images/d427c-tortoise-on-a-bible.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2014/06/d427c-tortoise-on-a-bible.jpg)

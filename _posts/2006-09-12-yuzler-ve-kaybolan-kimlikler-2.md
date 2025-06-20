@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "YÜZLER VE KAYBOLAN KİMLİKLER:"
 date: 2006-09-12
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: 'YÜZLER VE KAYBOLAN KİMLİKLER:'
 ---
 
 Çıplaklık olgusuna yüz kadar dayanıksız başka bir organ yoktur nitekim hiçbir zaman kendi haliyle yani çıplak gözükmez illa giydiği, kendince açıklarını kapattığı bir poza girer. Kimi yüzler sertlik giyitsisi ile ardını örterken, kimi yüzler yumuşaklık kıyafetini giyer. Siyah veya beyaz bir elbise giyer gibi. Elbette karmakarışık, siluetler de vardır ve bunlar da belirli yüz kıyafetleridirler. Hele vesikalık fotoğraflarda çıplak yüz dediğimiz kavramı bulmak imkânsızdır. Elbette bir marifet değildir çıplak yüzlü olmak veya hiçbir çehreye bürünmemek, ancak kolay da değildir.

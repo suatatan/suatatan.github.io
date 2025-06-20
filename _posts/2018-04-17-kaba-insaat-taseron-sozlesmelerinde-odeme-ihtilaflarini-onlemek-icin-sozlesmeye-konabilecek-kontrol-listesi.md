@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Kaba İnşaat Taşeron Sözleşmelerinde Ödeme İhtilaflarını Önlemek için sözleşmeye konabilecek kontrol listesi"
+categories:
+- insaat-muhendisligi
 date: 2018-04-17
-categories: 
-  - "insaat-muhendisligi"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Kaba İnşaat Taşeron Sözleşmelerinde Ödeme İhtilaflarını Önlemek için sözleşmeye
+  konabilecek kontrol listesi
 ---
 
 ![indir](/images/indir.jpg)

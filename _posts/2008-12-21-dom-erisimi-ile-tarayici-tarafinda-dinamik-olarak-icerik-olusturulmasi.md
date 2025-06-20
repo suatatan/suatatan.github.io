@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "DOM erişimi ile Tarayıcı Tarafında Dinamik Olarak İçerik oluşturulması"
+categories:
+- bilgisayar
 date: 2008-12-21
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: DOM erişimi ile Tarayıcı Tarafında Dinamik Olarak İçerik oluşturulması
 ---
 
 Bazı web sayfalarında görmüşsünüzdür belli bir yere tıkladığınızda anında arama çubuğu oluşuverir.  Bu işlem Javascript ile HTML dökümanının düğümlerine erişim ile olur. İşi yapan Javascriptteki **createElement**, **appendChild** ve **removeChild** metotlarıdır.

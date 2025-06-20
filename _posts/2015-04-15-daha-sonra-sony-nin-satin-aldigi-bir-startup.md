@@ -1,11 +1,15 @@
 ---
-layout: post
+categories:
+- genel
 date: 2015-04-15
-categories: 
-  - "genel"
-tags: 
-  - "altini-cizdiklerim"
-  - "okuma-notlari"
+layout: post
+tags:
+- altini-cizdiklerim
+- english
+- longread
+- okuma-notlari
+- opinion
+- technology
 ---
 
 ![](/images/tumblr_nmu3rzxte31u2h8puo1_500.jpg)

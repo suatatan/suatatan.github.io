@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Daha akıllı, daha hızlı ve daha iyi olmanın kitabı!"
+categories:
+- genel
 date: 2016-07-11
-categories: 
-  - "genel"
-tags: 
-  - "kitap"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- kitap
+- longread
+- technology
+- yazilarim
+title: Daha akıllı, daha hızlı ve daha iyi olmanın kitabı!
 ---
 
 ![sbf](/images/sbf.jpg)

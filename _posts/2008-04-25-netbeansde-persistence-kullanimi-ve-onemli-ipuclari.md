@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Netbeans'de Persistence Kullanımı ve önemli ipuçları"
+categories:
+- bilgisayar
 date: 2008-04-25
-categories: 
-  - "bilgisayar"
-tags: 
-  - "java"
+layout: post
+tags:
+- english
+- java
+- longread
+- technology
+title: Netbeans'de Persistence Kullanımı ve önemli ipuçları
 ---
 
 ![Java Netbeans Desktop Database App.](/images/running-app.png) (Resim:1 Netbeans resmi sitesinden persistence uygulaması örneği)

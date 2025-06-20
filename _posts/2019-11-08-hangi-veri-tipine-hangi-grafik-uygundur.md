@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Hangi Veri Tipine Hangi Grafik Uygundur"
 date: 2019-11-08
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Hangi Veri Tipine Hangi Grafik Uygundur
 ---
 
 ![](/images/2019-11-08-14_38_40-from-data-to-viz-_-find-the-graphic-you-need.png)

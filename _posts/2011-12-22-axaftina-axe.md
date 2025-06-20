@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Axaftina axê"
+categories:
+- kurdi
+- yazilarim
 date: 2011-12-22
-categories: 
-  - "kurdi"
-  - "yazilarim"
-tags: 
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- sehrivan-gazetesi
+title: Axaftina axê
 ---
 
 Ey welat, Wanê min,wûsa xwîyaye, li kûrahîyê dilên te

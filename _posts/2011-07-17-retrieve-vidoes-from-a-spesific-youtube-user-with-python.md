@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Retrieve videos from a spesific Youtube user with Python"
+categories:
+- bilgisayar
 date: 2011-07-17
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Retrieve videos from a spesific Youtube user with Python
 ---
 
 1. Download Gdata Python client libraries from: [http://code.google.com/p/gdata-python-client/downloads/list](http://code.google.com/p/gdata-python-client/downloads/list)

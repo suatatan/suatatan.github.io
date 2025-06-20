@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Çocuğunuzun Bill Gates olmasını ister misiniz?"
+categories:
+- cocuklar
+- bilgisayar
+- genel
 date: 2014-03-28
-categories: 
-  - "cocuklar"
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+title: Çocuğunuzun Bill Gates olmasını ister misiniz?
 ---
 
 Kabul edelim, oyunlar, çizgifilmler ve çocuk kitapları içerisine çocuklara iyi davranışları salık verecek nüanslar yerleştirmeyi yeni öğreniyoruz. Bu anlamda Pepee ve ardılı Niloya çizgifilmleri gerçekten diş fırçalama, tuvalet alışkanlıkları, kardeşler arası iletişim gibi konularda başarılı şeyler yapıyor. Pepe ile diş fırçalamayı alışkanlık edinen bir çok çocuk tanıyorum.

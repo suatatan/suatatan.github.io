@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Linux'ta Tamamen Sildiğiniz Dosyayı Geri Getirme"
+categories:
+- bilgisayar
 date: 2019-09-14
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Linux'ta Tamamen Sildiğiniz Dosyayı Geri Getirme
 ---
 
 Adli bilişimcilik sadece uzmanlarına yarar sağlamaz. Bu bilim özellikle kötü günlerinizde de işe yarayabilir. Diyelim ki tezinizi yanlışlıkla sildiniz. Çöp kutusunda da yok. Bu durumda debian tabanlı linux sürümlerinde (Ubuntu, ElementaryOS gibi) aşağıdaki komutu kullanarak silinmiş dosyayı komut satırında geri getirebilirsiniz. Tabii bu text dosyaları için işe yarıyor. Eğer diğer dosyalar için de tam bir araştırma yapmak isterseniz "photoscan" adlı komutu kullanın.

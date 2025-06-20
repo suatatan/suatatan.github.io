@@ -1,10 +1,15 @@
 ---
-layout: post
-title: "Any-Do ile yapılacaklar listesini daha keyifli hale getirin."
+categories:
+- bilgisayar
+- genel
 date: 2012-02-14
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Any-Do ile yapılacaklar listesini daha keyifli hale getirin.
 ---
 
 [![](/images/a3dfe-phone-logo.png)](https://suatatan.wordpress.com/wp-content/uploads/2012/02/a3dfe-phone-logo.png)

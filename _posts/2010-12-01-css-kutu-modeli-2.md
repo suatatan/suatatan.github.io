@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "CSS Kutu Modeli"
+categories:
+- bilgisayar
+- genel
 date: 2010-12-01
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- web-programlama
+title: CSS Kutu Modeli
 ---
 
 [![](/images/box-model.gif "box-model")](http://suatatan.wordpress.com/wp-content/uploads/2010/12/box-model.gif)  

@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Eurobond nedir?"
+categories:
+- genel
 date: 2013-03-19
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+title: Eurobond nedir?
 ---
 
 [![](/images/784df-eurobond-market-370.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/03/784df-eurobond-market-370.jpg)

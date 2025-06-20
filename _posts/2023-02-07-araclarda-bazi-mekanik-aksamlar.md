@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Araçlarda Bazı mekanik aksamlar"
 date: 2023-02-07
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Araçlarda Bazı mekanik aksamlar
 ---
 
 Yaptığım bir araştırma gereği hiç anlamasam da bazı yaygın ifadelerin ingilizcelerine dair notlarım şurada:

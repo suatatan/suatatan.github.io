@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "Scikit ile Makine Öğrenmesi Kodlamak"
+categories:
+- bilgisayar
 date: 2017-12-01
-categories: 
-  - "bilgisayar"
-tags: 
-  - "data-science"
-  - "machine-learning"
-  - "python"
-  - "scikit"
+layout: post
+tags:
+- data-science
+- english
+- longread
+- machine-learning
+- python
+- scikit
+- technology
+title: Scikit ile Makine Öğrenmesi Kodlamak
 ---
 
 Makine öğrenmesi çalışmalarında şimdiye kadar hep R kullanmıştım. [Scikit](http://scikit-learn.org/) ve [Tensorflow](https://www.tensorflow.org/) hakkında [kaggle'daki](https://www.kaggle.com/) istatistikleri görünce biraz da Python'a dair eğilimle, Scikit kullanmaya karar verdim. Direkt Scikit öğrenmek R'dan sonra karmaşık geldiği için, [Numpy](http://www.numpy.org/) ve [Pandas](https://pandas.pydata.org/) dokümantasyonları inceleyip bir kaç deneden sonra "Hands-On Machine Learing" kitabını keşfettim. Kitap kitap değil hazine mübarek. Anlatım güzel olmakla birlikte yazarının derin bilgisi yüzünden resmen bilgi pompalıyor. Bu yüzden biraz zorluyor.

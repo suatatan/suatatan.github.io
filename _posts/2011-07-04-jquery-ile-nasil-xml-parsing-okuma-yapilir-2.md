@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Jquery ile Nasıl XML parsing (okuma) yapılır"
+categories:
+- bilgisayar
+- genel
 date: 2011-07-04
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- web-programlama
+title: Jquery ile Nasıl XML parsing (okuma) yapılır
 ---
 
 Zaman gazetesi RSS yayınının channel düğümü içindeki title değerini çekmek için ömce Jquery ajax fonksiyonu ile get edip sonra xml'i standart dom hiyerarşisi içinde okuyup ekrana alert ediyoruz.  

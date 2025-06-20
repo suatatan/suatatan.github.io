@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Politik Agnostizm"
+categories:
+- genel
 date: 2013-07-02
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: Politik Agnostizm
 ---
 
 [![](/images/images)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8UeoIc1jJ29OiHJBkCIMUZJH4CaZzbJB9Jv-cFTLlTMriRdMRAw)

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Python ile Net Bugünkü Değer Hesaplama"
+categories:
+- genel
 date: 2016-11-29
-categories: 
-  - "genel"
-tags: 
-  - "python"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- python
+- technology
+title: Python ile Net Bugünkü Değer Hesaplama
 ---
 
 Agah A.Ş. tesislerinde kullanmayı düşündüğü bir makine için dönem başında 11.000 TL yatırım yapmayı düşünmektedir. İskonto oranı %10 olarak kabul edilmiştir. Makinenin yıllar itibariyle sağlayacağı nakit girişleri aşağıda gösterilmektedir.

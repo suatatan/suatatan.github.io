@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "R’da tüm korelasyonları toplu göstermek"
+categories:
+- genel
 date: 2016-11-26
-categories: 
-  - "genel"
-tags: 
-  - "r"
-  - "veribilim"
+layout: post
+tags:
+- english
+- longread
+- r
+- technology
+- veribilim
+title: R’da tüm korelasyonları toplu göstermek
 ---
 
 Verisetiniz içerisinde kaç parametre varsa bunların birbirleri ile ilişkisi için teker teker korelasyonlara bakmanıza gerek yok. R'da bu işlemi topluca yaparak zaman kazanabilirsiniz.

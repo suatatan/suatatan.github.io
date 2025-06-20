@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Converting Google App Engine Datastore Model Class to XML"
+categories:
+- genel
 date: 2012-07-17
-categories: 
-  - "genel"
-tags: 
-  - "google-app-engine"
+layout: post
+tags:
+- english
+- google-app-engine
+- quickread
+- technology
+title: Converting Google App Engine Datastore Model Class to XML
 ---
 
 Model class actually have to\_xml() function but this xml schema not customizable and entity based. You can export your model as xml with bit of code:  

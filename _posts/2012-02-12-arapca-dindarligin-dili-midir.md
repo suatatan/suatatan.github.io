@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Arapça dindarlığın dili midir?"
+categories:
+- genel
 date: 2012-02-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: Arapça dindarlığın dili midir?
 ---
 
   

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Laplace Kriteri"
+categories:
+- genel
 date: 2014-11-24
-categories: 
-  - "genel"
-tags: 
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- sayisalyontemler
+- technology
+title: Laplace Kriteri
 ---
 
 ![image](/images/tumblr_inline_nfj725RYwA1r4exmc.jpg)

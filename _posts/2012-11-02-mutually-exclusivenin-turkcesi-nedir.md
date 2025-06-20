@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Mutually exclusive'nin Türkçesi  nedir?"
+categories:
+- genel
 date: 2012-11-02
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Mutually exclusive'nin Türkçesi  nedir?
 ---
 
 [![](/images/11818.jpg)](http://yalanhaberajansi.files.wordpress.com/2010/03/11818.jpg)

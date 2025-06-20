@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Kamu İhalelerinde Fiyat Farkı Verilmesi Hususunda Bakanlar Kurulunun
-Yetkileri Genişletildi"
+categories:
+- genel
 date: 2008-08-01
-categories: 
-  - "genel"
-tags: 
-  - "kamu-yonetimi"
-  - "sosyal-bilimler"
+layout: post
+tags:
+- english
+- kamu-yonetimi
+- quickread
+- sosyal-bilimler
+- technology
+title: Kamu İhalelerinde Fiyat Farkı Verilmesi Hususunda Bakanlar Kurulunun Yetkileri
+  Genişletildi
 ---
 
 **KAMU İHALE SÖZLEŞMELERİ KANUNUNDA DEĞİŞİKLİK YAPILMASINA DAİR KANUN**  

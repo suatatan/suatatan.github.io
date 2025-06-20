@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Azure Veri Ambarı Çalışma Notları"
 date: 2024-12-26
-tags: 
-  - "azure"
-  - "bulut-bilisim"
-  - "cloud"
+layout: post
+tags:
+- azure
+- bulut-bilisim
+- cloud
+- english
+- longread
+- technology
+title: Azure Veri Ambarı Çalışma Notları
 ---
 
 Azure Veri Ambarı normalde on-premise yani lokalde bildiğimiz gelenekel sunucular üzerinde veri işleme projelerinde yaptığınız işlemleri bulut üzerinde yapmanıza yardımcı olur. Bunu yaparken bir çok konuda alışkanlıklarımızdan vaz geçmek zorunda kalırız.

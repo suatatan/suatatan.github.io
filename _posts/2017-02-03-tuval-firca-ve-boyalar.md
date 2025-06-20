@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Tuval, fırça ve boyalar"
+categories:
+- genel
 date: 2017-02-03
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Tuval, fırça ve boyalar
 ---
 
 Masallarla büyür, hikayelerle yaşarız. İyiler ve kötüler vardır, bir de onların gideceği yerler. İkisiyle de özleşleşebilir ancak bunu iyi ve kötü olmadan yaparız. Çünkü ikisi de sıradan olmaktan vazgeçmeyi gerektir. Bir İstatistikçi demişti: Kafası fırında ayakları buzdolabında olan bir adamın ortalama sıcaklığı kabul edilebilir bir düzeydedir. Kabul edilebilir düzeyde yaşarız. İyi olduğumuzu varsayar, kötü olanı dışarıda ararız. Merak etmeyin, kötü olan da aynı şeyi yapmaya devam eder. Bu yüzden kötüler de yaşamaya devam eder, üzülmeden. İyi olanlar kimdir? Gözleri iyi görmeyenler. Gözleri iyi görse hemcinsleri gibi kötü olmaları kaçınılmazdır nitekim. Onlar hikayelere inanmaya devam ederler. Birileri iyidir. Efsanevi düzeyde iyi... Kitaplar böyle söylemiştir…

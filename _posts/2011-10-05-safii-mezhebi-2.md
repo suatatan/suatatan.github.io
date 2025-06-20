@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Şafii Mezhebi"
+categories:
+- genel
 date: 2011-10-05
-categories: 
-  - "genel"
-tags: 
-  - "din"
+layout: post
+tags:
+- din
+- english
+- longread
+- technology
+title: Şafii Mezhebi
 ---
 
 Şafii mezhebi, 4 hak mezhep olan Hanefi, Maliki, Hanbeli ve Şafii mezheplerinden biridir. Sünni inanca bağlıdır. İmamı-Şafi tarafından kurulmuştur. İmam-ı Şafii M.S 767 yılında Gazze'de doğmuştur.  Türkiye'nin doğusunda yaygın bir mezheptir. Dini konulara vakıf olmayanlar Şafii mezhebini Alevilik veya Şiilik ile karıştırmaktadır. Kimisi ise sadece Kürt kökenlilerin mensubu olduğu bir mezhep zannetmektedir. Bu kanaatler yanlıştır. Şafii mezhebi ile Türkiye'deki en yaygın mezhep olan Hanefilik ile arasında keskin farklılıklar yoktur. Farklar fıkhi konulardadır. En bilinen farklar:

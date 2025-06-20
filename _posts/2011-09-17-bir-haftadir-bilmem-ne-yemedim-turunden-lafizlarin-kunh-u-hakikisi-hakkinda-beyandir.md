@@ -1,7 +1,12 @@
 ---
-layout: post
-title: "\"Bir haftadır bilmem ne yemedim\" türünden lafızların künh-ü hakikisi hakkında beyandır"
 date: 2011-09-17
+layout: post
+tags:
+- english
+- longread
+- technology
+title: '"Bir haftadır bilmem ne yemedim" türünden lafızların künh-ü hakikisi hakkında
+  beyandır'
 ---
 
 Facebook'ta yakın zamanda dolaşan "bir haftadır kebap yemedim", bir aydır avokado dip soslu ördek kızartması yemedim kabilinden yazılan ve ilk duyanları, "herhalde bunları yazanlar akıllı, biz de geri zekalıyız diye düşündürten" icad-ı nisa, alamet-i kıyamet, iştigali ise malayani olan bu tuhaf ebcedamiz şifreleri açıklıyorum.

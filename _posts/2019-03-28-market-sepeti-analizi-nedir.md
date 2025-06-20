@@ -1,16 +1,19 @@
 ---
-layout: post
-title: "Market Sepeti Analizi Nedir?"
+categories:
+- bilgisayar
+- ekonomi
+- muhendislik
+- yazilim
 date: 2019-03-28
-categories: 
-  - "bilgisayar"
-  - "ekonomi"
-  - "muhendislik"
-  - "yazilim"
-tags: 
-  - "python"
-  - "r"
-  - "veribilim"
+layout: post
+tags:
+- english
+- longread
+- python
+- r
+- technology
+- veribilim
+title: Market Sepeti Analizi Nedir?
 ---
 
 ![market card ile ilgili görsel sonucu"](/images/verve-500x330.jpg)

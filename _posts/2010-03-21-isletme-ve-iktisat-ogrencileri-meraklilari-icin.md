@@ -1,14 +1,16 @@
 ---
-layout: post
-title: "İşletme ve iktisat öğrencileri / meraklıları için Vadeli Opsiyon
-Borsası ile ilgili kaynağından bilgiler"
+categories:
+- genel
 date: 2010-03-21
-categories: 
-  - "genel"
-tags: 
-  - "ekonomi"
-  - "sosyal-bilimler"
-  - "iktibas"
+layout: post
+tags:
+- ekonomi
+- english
+- iktibas
+- quickread
+- sosyal-bilimler
+title: İşletme ve iktisat öğrencileri / meraklıları için Vadeli Opsiyon Borsası ile
+  ilgili kaynağından bilgiler
 ---
 
 ![](/images/BannerTurkish.jpg)  

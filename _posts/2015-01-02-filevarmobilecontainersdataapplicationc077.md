@@ -1,6 +1,10 @@
 ---
-layout: post
 date: 2015-01-02
+layout: post
+tags:
+- english
+- quickread
+- technology
 ---
 
 ![](/images/tumblr_nhkjhj7sie1u3gx2to1_1280.jpg)

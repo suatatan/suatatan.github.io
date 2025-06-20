@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Flask framework"
+categories:
+- bilgisayar
+- genel
 date: 2012-02-14
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Flask framework
 ---
 
 [![](/images/logo.png)](http://flask.pocoo.org/static/logo.png)

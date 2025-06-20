@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Create.js ile dokun-düzelt web sayfaları"
+categories:
+- genel
 date: 2012-02-14
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Create.js ile dokun-düzelt web sayfaları
 ---
 
 [![](/images/create.png)](http://createjs.org/create.png)

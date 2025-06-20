@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Adobe Spark ile ücretsiz logo tasarımı"
 date: 2021-10-25
+layout: post
+tags:
+- quickread
+- technology
+- turkish
+title: Adobe Spark ile ücretsiz logo tasarımı
 ---
 
 Öneririm:

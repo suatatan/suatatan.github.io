@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "Papanın Mezarına Girmek"
+categories:
+- gordugum-ruyalar
+- genel
 date: 2006-11-01
-categories: 
-  - "gordugum-ruyalar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+title: Papanın Mezarına Girmek
 ---
 
 Rüya Tarihi: 29.Ekim.2006  

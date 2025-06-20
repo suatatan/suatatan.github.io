@@ -1,14 +1,17 @@
 ---
-layout: post
-title: "SQL Inner Join nedir,nasıl kullanılır?"
+categories:
+- bilgisayar
+- genel
 date: 2016-02-16
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "asp"
-  - "mvc"
-  - "sql"
+layout: post
+tags:
+- asp
+- english
+- longread
+- mvc
+- sql
+- technology
+title: SQL Inner Join nedir,nasıl kullanılır?
 ---
 
 Tablo 1:  

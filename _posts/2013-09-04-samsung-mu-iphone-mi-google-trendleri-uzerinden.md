@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Samsung mu Iphone mi? Google Trendleri üzerinden inceleme"
+categories:
+- bilgisayar
+- genel
 date: 2013-09-04
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- technology
+- yazilarim
+title: Samsung mu Iphone mi? Google Trendleri üzerinden inceleme
 ---
 
   

@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Google App Script ile tablo manipülasyonu"
+categories:
+- bilgisayar
+- genel
 date: 2012-06-10
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "excel-vba"
-  - "google-app-script"
+layout: post
+tags:
+- english
+- excel-vba
+- google-app-script
+- quickread
+- technology
+title: Google App Script ile tablo manipülasyonu
 ---
 
 Google App Script ile aşağıda yazdığım fonksiyonlarla A sütununda sıralanmış parasal tutarların risk değerleri için 1 ila 5 arası değerleme yapılıp B sütununa otomatik olarak yazdırılır.  

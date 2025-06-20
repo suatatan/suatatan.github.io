@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "İNTERNET TARİHİ"
 date: 2006-09-12
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: İNTERNET TARİHİ
 ---
 
 İnternet çıkalı ne kadar oldu ki, tarihi olsun denilebilir. Tarihilerin malumudur, bazı tarih uzmanlarına göre bir dönemin üzerinden 50 yıl geçtikten sonra o dönem artık tarih olarak incelebilir. 1962’den beri İnternet sürecinin üzerinden tam 43 yıl geçti!

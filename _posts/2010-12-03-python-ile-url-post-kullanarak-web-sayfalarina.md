@@ -1,13 +1,15 @@
 ---
-layout: post
-title: "Python ile Url Post kullanarak web sayfalarına konsol üzerinden veri
-yollamak"
+categories:
+- bilgisayar
+- genel
 date: 2010-12-03
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Python ile Url Post kullanarak web sayfalarına konsol üzerinden veri yollamak
 ---
 
 ```

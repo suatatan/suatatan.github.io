@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "VANPERVERLİK: VAN’A SAHİP ÇIKMAK"
+categories:
+- genel
 date: 2012-04-08
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- sehrivan-gazetesi
+- technology
+- van-yazilari
+- yazilarim
+title: 'VANPERVERLİK: VAN’A SAHİP ÇIKMAK'
 ---
 
   

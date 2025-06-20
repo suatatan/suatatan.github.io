@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Akademik Makale Okuma Kılavuzu"
+categories:
+- genel
 date: 2013-09-08
-categories: 
-  - "genel"
-tags: 
-  - "akademik"
-  - "yazilarim"
+layout: post
+tags:
+- akademik
+- english
+- longread
+- technology
+- yazilarim
+title: Akademik Makale Okuma Kılavuzu
 ---
 
 [](https://suatatan.wordpress.com/wp-content/uploads/2013/09/f0924-literatur-tarama-metodu.jpg) 

@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Güncelperestlik: Güncel olana tapmak"
+categories:
+- genel
 date: 2014-01-08
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: 'Güncelperestlik: Güncel olana tapmak'
 ---
 
 [![](/images/0a5ee-kafa.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2014/01/0a5ee-kafa.jpg)

@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Google App Engine ücretli mi?"
+categories:
+- bilgisayar
+- genel
 date: 2012-05-07
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "google-app-engine"
-  - "sorucevap"
+layout: post
+tags:
+- english
+- google-app-engine
+- opinion
+- quickread
+- sorucevap
+- technology
+title: Google App Engine ücretli mi?
 ---
 
 **Soru:**  

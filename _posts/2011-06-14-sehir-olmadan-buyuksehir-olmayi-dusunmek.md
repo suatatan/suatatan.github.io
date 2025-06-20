@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Şehir olmadan Büyükşehir olmayı düşünmek"
+categories:
+- genel
 date: 2011-06-14
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- opinion
+- quickread
+- technology
+- van-yazilari
+- yazilarim
+title: Şehir olmadan Büyükşehir olmayı düşünmek
 ---
 
 İyi niyetli bir girişim olarak, Van’da zaman zaman büyükşehir olmak için imza kampanyalarının yanında kamuoyunda büyükşehir olma taleplerinin farklı kesimlerce dillendirildiğini görüyoruz.  

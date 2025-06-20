@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Porter'in Jenerik Stratejisi"
+categories:
+- genel
 date: 2014-11-25
-categories: 
-  - "genel"
-tags: 
-  - "yonetim"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+- yonetim
+title: Porter'in Jenerik Stratejisi
 ---
 
 [![Porter](/images/220px-Michael_Porter.jpg)](http://tr.wikipedia.org/wiki/Michael_Porter)

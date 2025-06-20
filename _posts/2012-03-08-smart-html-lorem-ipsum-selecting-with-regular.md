@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Smart HTML Lorem Ipsum Selecting with Regular Expression"
+categories:
+- bilgisayar
+- english
+- genel
 date: 2012-03-08
-categories: 
-  - "bilgisayar"
-  - "english"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Smart HTML Lorem Ipsum Selecting with Regular Expression
 ---
 
 [![](/images/3a12a-loremipsum.png)](https://suatatan.wordpress.com/wp-content/uploads/2012/03/3a12a-loremipsum.png)

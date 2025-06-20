@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Belirsizlik Altında Nasıl Karar Verilir?"
+categories:
+- genel
 date: 2014-11-21
-categories: 
-  - "genel"
-tags: 
-  - "kararanalizi"
-  - "sayisalyontemler"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- kararanalizi
+- longread
+- sayisalyontemler
+- technology
+title: Belirsizlik Altında Nasıl Karar Verilir?
 ---
 
 ![](/images/tumblr_inline_nfebkqdglr1r4exmc.jpg)

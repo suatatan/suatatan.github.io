@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Eşyanın tabiatı"
+categories:
+- genel
 date: 2012-09-14
-categories: 
-  - "genel"
-tags: 
-  - "tasavvuf"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- tasavvuf
+- technology
+- yazilarim
+title: Eşyanın tabiatı
 ---
 
   

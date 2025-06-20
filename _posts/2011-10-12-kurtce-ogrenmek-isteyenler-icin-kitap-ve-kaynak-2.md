@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Kürtçe öğrenmek isteyenler için kitap ve kaynak önerileri"
+categories:
+- genel
 date: 2011-10-12
-categories: 
-  - "genel"
-tags: 
-  - "kurtce"
+layout: post
+tags:
+- english
+- kurtce
+- longread
+- technology
+title: Kürtçe öğrenmek isteyenler için kitap ve kaynak önerileri
 ---
 
 Kürtçe öğrenmek istiyorsanız, açıkçası Türkçe literatürden daha fazla İngilizce kaynak mevcut. Ancak son zamanlarda Kürtçe ile ilgili de doyurucu çalışmalar yapıldı. Anadili Kürtçe olması gereken bir coğrafyada doğmuş olmama rağmen, Kürtçe ile Türkçeyi birlikte öğrenmiş biri olarak (Bilingualizm; ki yanlız değilim) Kürtçe'ye yanlızca pratik olarak değil, kitabi anlamda da çalıştım. Aşağıda bir çoğuna birebir çalıştığım kitaplar var. Öğrenmek isteyenler yönelebilirler.

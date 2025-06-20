@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "GAYRI RESMİ SANSÜRCÜLÜK ÜZERİNE"
+categories:
+- genel
 date: 2007-01-15
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+- yeni-ufuk-gazetesi
+title: GAYRI RESMİ SANSÜRCÜLÜK ÜZERİNE
 ---
 
 **Düşüncelerinize katılmıyorum,**

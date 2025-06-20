@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Defne Joy Foster: Ruhuna El Fatiha"
+categories:
+- genel
 date: 2011-02-07
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: 'Defne Joy Foster: Ruhuna El Fatiha'
 ---
 
 Hiç izlemeyen değil ama fazla televizyon izlemeyen biri olarak, televizyondan uzak insanların sokakta, iş yerine hatta evinde ne kadar ‘fransız’ kaldığını bu ölüm haberi ile öğrendim. Her tarafta bir sansasyondur konuşukuyor. Defne ölmüş… Aaa niye… Ben biliyordum…  

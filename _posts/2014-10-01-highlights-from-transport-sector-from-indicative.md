@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Highlights from transport sector from Indicative Strategy Paper for Turkey 2014-2020"
+categories:
+- genel
 date: 2014-10-01
-categories: 
-  - "genel"
-tags: 
-  - "ekonomi"
-  - "ipa"
-  - "kamu-yonetimi"
+layout: post
+tags:
+- ekonomi
+- english
+- ipa
+- kamu-yonetimi
+- longread
+- technology
+title: Highlights from transport sector from Indicative Strategy Paper for Turkey
+  2014-2020
 ---
 
 > The main objective of IPA II assistance between  2014  and 2020 for Turkey’s transport sector is to facilitate  Turkey’s  connection with the TEN-T rail network  and  develop sustainable, low-carbon, intelligent and safe transport in line with EU standards.  

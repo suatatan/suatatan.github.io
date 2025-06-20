@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Asit-Test nedir?"
+categories:
+- genel
 date: 2016-04-12
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+title: Asit-Test nedir?
 ---
 
 En kısa ve kaba tanımı ile [cari oranın](http://blog.suatatan.com/post/142674013920/cari-oran-nedir) “**stoksuz**” halidir. Daha doğrusu cari oran formülünde payda yer alan dönen varlıklar yerine dönen varlıkların en hızlı nakde dönüştürülebilecek olan kalemleri olan 10:Hazır değerler, 11: Menkul Kıymetler ve 12: Ticari alacaklar kalemlerinin yazılmasıdır. Başka bir deyimle:

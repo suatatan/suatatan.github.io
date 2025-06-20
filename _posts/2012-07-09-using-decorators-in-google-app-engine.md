@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Using Decorators in Google App Engine"
+categories:
+- genel
 date: 2012-07-09
-categories: 
-  - "genel"
-tags: 
-  - "google-app-engine"
+layout: post
+tags:
+- english
+- google-app-engine
+- longread
+- technology
+title: Using Decorators in Google App Engine
 ---
 
 If you can use **python decorator** in your app engine project, there is tiny and smart example below which you can use it:  

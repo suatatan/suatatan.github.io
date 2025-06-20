@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "Dağın ardındakiler ve bu tarafındakiler"
 date: 2011-07-22
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- technology
+- yazilarim
+title: Dağın ardındakiler ve bu tarafındakiler
 ---
 
 _**Bejan Matur'un son kitabı hakkında**_

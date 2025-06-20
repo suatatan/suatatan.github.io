@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Çözüm: Excel'de telefon numaralarını kaydederken baştaki sıfırın kaybolması sorunu"
+categories:
+- bilgisayar
 date: 2011-10-12
-categories: 
-  - "bilgisayar"
-tags: 
-  - "excel"
+layout: post
+tags:
+- english
+- excel
+- longread
+- technology
+title: 'Çözüm: Excel''de telefon numaralarını kaydederken baştaki sıfırın kaybolması
+  sorunu'
 ---
 
 Excel'de hücrelere telefon numarası yazdığınızda enter dedikten sonra baştaki sıfırın silindiğini görmüşsünüzdür. Normalde sinir bozucu olan bu durumun çözümü:

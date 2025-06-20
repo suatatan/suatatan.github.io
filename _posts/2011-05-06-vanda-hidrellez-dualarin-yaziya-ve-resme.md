@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Van’da Hıdrellez: Dua’ların yazıya ve resme döküldüğü zaman"
+categories:
+- genel
 date: 2011-05-06
-categories: 
-  - "genel"
-tags: 
-  - "van-yazilari"
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- technology
+- van-yazilari
+- yazilarim
+title: 'Van’da Hıdrellez: Dua’ların yazıya ve resme döküldüğü zaman'
 ---
 
   

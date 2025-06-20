@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Akademik not alma teknikleri"
+categories:
+- genel
 date: 2013-11-26
-categories: 
-  - "genel"
-tags: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- okuma-notlari
+- opinion
+- technology
+title: Akademik not alma teknikleri
 ---
 
 [![](/images/99386-notetaking.jpg)](https://suatatan.wordpress.com/wp-content/uploads/2013/11/99386-notetaking.jpg)

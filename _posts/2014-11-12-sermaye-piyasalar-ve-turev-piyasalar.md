@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "Sermaye Piyasalar ve Türev Piyasalar"
+categories:
+- genel
 date: 2014-11-12
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- opinion
+- technology
+title: Sermaye Piyasalar ve Türev Piyasalar
 ---
 
 ![image](/images/tumblr_inline_nev4nrGkIG1r4exmc.png)

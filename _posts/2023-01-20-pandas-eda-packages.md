@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Pandas EDA Packages"
+categories:
+- bilgisayar
 date: 2023-01-20
-categories: 
-  - "bilgisayar"
-tags: 
-  - "data-science"
+layout: post
+tags:
+- data-science
+- english
+- longread
+- technology
+title: Pandas EDA Packages
 ---
 
 Favorites

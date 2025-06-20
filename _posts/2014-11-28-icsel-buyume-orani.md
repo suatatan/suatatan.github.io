@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "İçsel büyüme oranı nedir? (Internal Growt Rate)"
+categories:
+- genel
 date: 2014-11-28
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- opinion
+- technology
+title: İçsel büyüme oranı nedir? (Internal Growt Rate)
 ---
 
 Bir firma **sermaye arttırımına gitmeksizin(yani ortaklarına hadi biraz daha para verin demeksizin)** gitmeden kendi yağında % kaç **büyüyebilir**. Burada büyümeden kasıt firmanın piyasa değeri yani borsadaki hisse senetlerinin toplam değeri olarak ele alınırsa sözgelimi piyasa değeri 100 TL olan firma gelecek yıllarda hangi piyasa değerine erişebilecektir. Bu sorunun cevabını **kesin** vermek mümkün değilse de, içsel büyüme oranı\* fikir verebilmektedir.

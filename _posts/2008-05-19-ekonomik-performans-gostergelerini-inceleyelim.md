@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ekonomik Performans Göstergelerini inceleyelim"
+categories:
+- sosyal-bilimler
 date: 2008-05-19
-categories: 
-  - "sosyal-bilimler"
-tags: 
-  - "iktibas"
-  - "inceleme"
+layout: post
+tags:
+- english
+- iktibas
+- inceleme
+- longread
+- technology
+title: Ekonomik Performans Göstergelerini inceleyelim
 ---
 
 ![](/images/para.jpg)

@@ -1,14 +1,18 @@
 ---
-layout: post
-title: "Lütfen ‘dikkatle’ dinleyin."
+categories:
+- genel
 date: 2015-07-15
-categories: 
-  - "genel"
-tags: 
-  - "kitap-alintilari"
-  - "kitaplar"
-  - "okumanotlari"
-  - "yazilarim"
+layout: post
+tags:
+- english
+- kitap-alintilari
+- kitaplar
+- longread
+- okumanotlari
+- opinion
+- technology
+- yazilarim
+title: Lütfen ‘dikkatle’ dinleyin.
 ---
 
 ![Dinleyin](/images/FEB15_06_152405120.jpg)

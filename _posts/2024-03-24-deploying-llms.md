@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Deploying LLMs"
 date: 2024-03-24
+layout: post
+tags:
+- cite
+- english
+- quickread
+title: Deploying LLMs
 ---
 
 "Despite the abundance of frameworks for LLMs inference, each serves its specific purpose. Here are some key points to consider:

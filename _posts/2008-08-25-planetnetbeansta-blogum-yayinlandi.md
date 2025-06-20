@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "PlanetNetBeans'ta Blogum Yayınlandı"
+categories:
+- bilgisayar
 date: 2008-08-25
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: PlanetNetBeans'ta Blogum Yayınlandı
 ---
 
 ![](/images/planet-logo-1.png)

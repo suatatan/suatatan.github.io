@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Arapların Gözü ile 1. Dünya Savaşı"
+categories:
+- genel
 date: 2014-12-28
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- quickread
+- technology
+- yazilarim
+title: Arapların Gözü ile 1. Dünya Savaşı
 ---
 
 \[youtube https://www.youtube.com/watch?v=vHmYvO0aqtY\]

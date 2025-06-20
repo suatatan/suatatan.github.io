@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Türkiye'de faaliyet gösteren veri odaklı önemli sosyal girişimler"
+categories:
+- acik-listeler
 date: 2021-11-11
-categories: 
-  - "acik-listeler"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Türkiye'de faaliyet gösteren veri odaklı önemli sosyal girişimler
 ---
 
 Öğrendikçe unutmamak, hatırlamak ve paylaşmak için tanıştığım, etkileştiğim, keşfettiğim birbirinden değerli bu tür girişimleri burada listeleyceğim. Bazılarının kurucu, eş-kurucu veya üyeleri de burada.

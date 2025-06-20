@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Çaykur'un antikakaçak çayı"
+categories:
+- genel
 date: 2011-09-07
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Çaykur'un antikakaçak çayı
 ---
 
 ![image](/images/wpid-2011-09-07-07-20-20.jpg)  

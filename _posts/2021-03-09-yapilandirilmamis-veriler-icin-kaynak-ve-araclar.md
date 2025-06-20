@@ -1,9 +1,13 @@
 ---
-layout: post
-title: "Yapılandırılmamış Veriler için Kaynak ve Araçlar"
+categories:
+- bilgisayar
 date: 2021-03-09
-categories: 
-  - "bilgisayar"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Yapılandırılmamış Veriler için Kaynak ve Araçlar
 ---
 
 ## CommonCrawl (Data)

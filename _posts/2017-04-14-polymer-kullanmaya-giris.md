@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Kendi HTML Taglarınızı Oluşturun: Polymer Kullanmaya Giriş"
+categories:
+- bilgisayar
 date: 2017-04-14
-categories: 
-  - "bilgisayar"
-tags: 
-  - "javascript"
-  - "polymer"
+layout: post
+tags:
+- english
+- javascript
+- longread
+- polymer
+- technology
+title: 'Kendi HTML Taglarınızı Oluşturun: Polymer Kullanmaya Giriş'
 ---
 
 ![polymer_logo](/images/polymer_logo.png)

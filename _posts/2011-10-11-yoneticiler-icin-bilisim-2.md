@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Yöneticiler için bilişim"
+categories:
+- bilgisayar
+- genel
 date: 2011-10-11
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- technology
+- yazilarim
+title: Yöneticiler için bilişim
 ---
 
 **_Yüksek teknolojiye kendini uzak hisseden taşra ve KOBİ yöneticileri için basit bir başlangıç:_**

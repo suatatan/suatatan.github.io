@@ -1,10 +1,13 @@
 ---
-layout: post
-title: "NOLI IRE FAC VENIRE*"
 date: 2006-09-12
-tags: 
-  - "yazilarim"
-  - "yeni-ufuk-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- yazilarim
+- yeni-ufuk-gazetesi
+title: NOLI IRE FAC VENIRE*
 ---
 
 Beyinsel ölüm çoğu kez fiziksel ölümden çok sonra gerçekleşir, yani solunum sistemi veya dolaşım sistemi durduğu an beyin faaliyetleri de hemen durmaz bir müddet devam eder. Dolayısıyla ölmüş sayılan bir çok kişinin ölüm anından sonraki 20-25 dakika boyunca teorik olarak zihinsel faaliyetleri devam etmektedir.

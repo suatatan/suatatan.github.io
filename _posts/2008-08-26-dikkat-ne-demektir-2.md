@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "DİKKAT NE DEMEKTİR?"
+categories:
+- genel
 date: 2008-08-26
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+- yazilarim
+title: DİKKAT NE DEMEKTİR?
 ---
 
 DİKKAT

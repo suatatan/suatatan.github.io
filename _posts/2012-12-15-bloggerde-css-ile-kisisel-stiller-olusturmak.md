@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Blogger'de CSS ile kişisel stiller oluşturmak"
+categories:
+- bilgisayar
+- genel
 date: 2012-12-15
-categories: 
-  - "bilgisayar"
-  - "genel"
+layout: post
+tags:
+- english
+- quickread
+- technology
+title: Blogger'de CSS ile kişisel stiller oluşturmak
 ---
 
 [![](/images/blogger.png)](http://www.varol.us/wp-content/uploads/2008/10/blogger.png)

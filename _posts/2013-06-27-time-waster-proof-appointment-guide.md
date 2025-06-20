@@ -1,10 +1,14 @@
 ---
-layout: post
-title: "Time waster proof appointment guide"
+categories:
+- english
+- genel
 date: 2013-06-27
-categories: 
-  - "english"
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- technology
+title: Time waster proof appointment guide
 ---
 
 Sometimes communication accidents causes angry, time wasting even de conflicts or breaking affairs up. 

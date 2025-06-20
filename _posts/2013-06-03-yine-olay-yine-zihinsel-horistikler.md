@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Yine 'olay' yine zihinsel höristikler"
+categories:
+- genel
 date: 2013-06-03
-categories: 
-  - "genel"
-tags: 
-  - "aforizmalar"
+layout: post
+tags:
+- aforizmalar
+- english
+- longread
+- opinion
+- technology
+title: Yine 'olay' yine zihinsel höristikler
 ---
 
   

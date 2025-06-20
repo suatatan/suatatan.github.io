@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Optimal sermaye nedir?"
+categories:
+- genel
 date: 2013-03-08
-categories: 
-  - "genel"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- quickread
+title: Optimal sermaye nedir?
 ---
 
 İşletmenin [sermaye maliyetini](http://blog.suatatan.com/2013/03/sermaye-maliyeti-nedir_7.html) minimum ve işletme değerini maksimum yapan sermaye yapısı optimal sermaye yapısıdır.

@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "4 Saate Nasıl Şef Olunur?"
+categories:
+- genel
 date: 2016-03-18
-categories: 
-  - "genel"
-tags: 
-  - "kitap"
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- kitap
+- longread
+- okuma-notlari
+- technology
+title: 4 Saate Nasıl Şef Olunur?
 ---
 
 ![](/images/tumblr_inline_o48sfq0Z9d1r4exmc_540.jpg)

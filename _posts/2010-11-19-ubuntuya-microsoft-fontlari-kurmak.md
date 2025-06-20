@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Ubuntu'ya Microsoft fontları kurmak"
+categories:
+- bilgisayar
 date: 2010-11-19
-categories: 
-  - "bilgisayar"
-tags: 
-  - "linux"
-  - "ubuntu"
+layout: post
+tags:
+- english
+- linux
+- longread
+- technology
+- ubuntu
+title: Ubuntu'ya Microsoft fontları kurmak
 ---
 
 Ubuntu kullanıcıları özellikle web sayfalarına girdiklerinde ya da Windows ortamında hazırlanmış belgelere baktıklarında fontların olduğundan biraz farklı bazen ise kötü göründüklerini farketmiştlerdir.  Bunun nedeni Windows altında bulunan ve Windows'a has bazı fontların Ubuntu'da tanınmamasıdır ki (ubuntu bunu yapmak zorunda değildir).

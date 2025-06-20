@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Korelasyon ve nedensellik"
+categories:
+- genel
 date: 2014-12-08
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "okumanotlari"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- okumanotlari
+- technology
+title: Korelasyon ve nedensellik
 ---
 
 Vikipedia'da sıkıcı gözüken bir çok makale içinde gerçekten güzel süprizler çıkabiliyor. İşte biri:

@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Karamazov Kardeşleri Okumaya Cesaret Etmek"
+categories:
+- okuma-notlari
 date: 2020-07-11
-categories: 
-  - "okuma-notlari"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Karamazov Kardeşleri Okumaya Cesaret Etmek
 ---
 
 ![](/images/bf52795093ecdd5c6d9b5ea224f660cf.jpeg)

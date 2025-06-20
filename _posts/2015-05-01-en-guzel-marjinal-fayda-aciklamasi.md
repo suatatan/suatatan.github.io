@@ -1,10 +1,12 @@
 ---
-layout: post
+categories:
+- genel
 date: 2015-05-01
-categories: 
-  - "genel"
-tags: 
-  - "altini-cizdiklerim"
+layout: post
+tags:
+- altini-cizdiklerim
+- english
+- quickread
 ---
 
 ![](/images/tumblr_nno4ug86rt1u2h8puo1_1280.jpg)

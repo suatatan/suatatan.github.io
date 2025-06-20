@@ -1,13 +1,16 @@
 ---
-layout: post
-title: "Java’da property özelliği ile dosyada veri saklama"
+categories:
+- bilgisayar
+- genel
 date: 2015-12-07
-categories: 
-  - "bilgisayar"
-  - "genel"
-tags: 
-  - "java"
-  - "yazilim"
+layout: post
+tags:
+- english
+- java
+- longread
+- technology
+- yazilim
+title: Java’da property özelliği ile dosyada veri saklama
 ---
 
 Java’daki bu özellik sayesinde daha sonra değiştirebileceğiniz verileri kodun içerisine değil property dosyasında saklayıp oradan çağırarak okuyabilirsiniz. Bir nevi kofigürasyon dosyası yani.

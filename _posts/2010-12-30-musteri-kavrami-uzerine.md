@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Müşteri Kavramı Üzerine"
+categories:
+- yazilarim
 date: 2010-12-30
-categories: 
-  - "yazilarim"
-tags: 
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- longread
+- technology
+title: Müşteri Kavramı Üzerine
 ---
 
 _**Müşteri Kimdir?**_

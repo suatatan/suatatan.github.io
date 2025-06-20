@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Javascript ile Goo.gl url kısaltma servisini kullanmak"
+categories:
+- bilgisayar
 date: 2011-06-28
-categories: 
-  - "bilgisayar"
-tags: 
-  - "web-programlama"
+layout: post
+tags:
+- english
+- longread
+- technology
+- web-programlama
+title: Javascript ile Goo.gl url kısaltma servisini kullanmak
 ---
 
 Goo.gl ve benzeri binlerce API'nin internette hizmet verdiğini biliyoruz. API'ler JSON veya XML veri ile gönderilen taleplere aynı dillerle cevap veren güzel web uygulamalarıdır. API'ler yardımı ile siteniz içinden başka sitelerin verdiği hizmetleri sunabiliyorsunuz. Ancak API'leri kullanmak bazen sorun olabiliyor. Aşağıda, uzun çabalardan sonra [jsonlib.js](http://call.jsonlib.com/ "Jsonlib kütüphanesinin sayfası") adlı javascript kütüphanesini kullanarak goog.gl servisi üzerinden istediğimiz url'yi kısaltıp ekrana yazıyoruz.

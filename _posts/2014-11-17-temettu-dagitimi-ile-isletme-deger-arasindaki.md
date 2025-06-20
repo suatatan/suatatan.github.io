@@ -1,13 +1,17 @@
 ---
-layout: post
-title: "Temettü dağıtımı ile işletme değer arasındaki ilişkiler üzerine teoriler"
+categories:
+- genel
 date: 2014-11-17
-categories: 
-  - "genel"
-tags: 
-  - "finans"
-  - "muhasebe"
-  - "isletme"
+layout: post
+tags:
+- english
+- finans
+- isletme
+- longread
+- muhasebe
+- opinion
+- technology
+title: Temettü dağıtımı ile işletme değer arasındaki ilişkiler üzerine teoriler
 ---
 
 İşletmeler faaliyetleri sonunda elde ettikleri karları ya yeni yatırımlara dönüştürmek amacıyla işletede tutmak ya da ortaklarına kar payı olarak dağıtmak(temettü) arasında karar vermek durumundadırlar. Bu iki tercihten her biri işletme için farklı sonuçlar doğuracaktır. İşletme kar payı dağıttığında ya da dağıtmadığında ortakların yaklaşımları ne olacaktır? Bu yaklaşımlar sonucu nasıl hareket edeceklerdir. Ortakların alacakları pozisyon işletme değerini nasıl etkileyecektir. İşte tüm bunlar hakkında literatürde farklı görüşler mevcuttur. Bu görüşleri genel olarak ikiye ayırabiliriz.

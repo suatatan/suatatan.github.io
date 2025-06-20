@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "Yeni anayasa ve yerel yönetimler"
+categories:
+- genel
 date: 2011-10-12
-categories: 
-  - "genel"
-tags: 
-  - "yazilarim"
-  - "sehrivan-gazetesi"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- sehrivan-gazetesi
+- yazilarim
+title: Yeni anayasa ve yerel yönetimler
 ---
 
 ![](/images/themis.jpg "Themis (Adalet Tanrıçası Figürü)")

@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "CountVectorizer'in Çalışma Şekli"
 date: 2019-03-07
+layout: post
+tags:
+- english
+- longread
+- technology
+title: CountVectorizer'in Çalışma Şekli
 ---
 
 Python'da Metin Madenciliğine dayalı makine öğrenme modelleri kullanırken doküman külliyatınızı (corpus) kelime kelime sayılara (numpy.array formatında) çevirmek için CountVectorizer nesnesini kullanabiliyorsunuz. Çalışma şekli aşağıda:In \[43\]:

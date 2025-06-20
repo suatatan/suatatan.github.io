@@ -1,12 +1,16 @@
 ---
-layout: post
-title: "İşletmelerde Yönetim Düşüncesinin Gelişimi"
+categories:
+- genel
 date: 2014-11-21
-categories: 
-  - "genel"
-tags: 
-  - "yonetim"
-  - "isletme"
+layout: post
+tags:
+- english
+- isletme
+- opinion
+- quickread
+- technology
+- yonetim
+title: İşletmelerde Yönetim Düşüncesinin Gelişimi
 ---
 
 ![image](/images/tumblr_inline_nfe1ctumXK1r4exmc.jpg)

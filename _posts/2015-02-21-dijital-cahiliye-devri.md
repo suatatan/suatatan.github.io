@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Dijital Cahiliye Devri"
+categories:
+- genel
 date: 2015-02-21
-categories: 
-  - "genel"
+layout: post
+tags:
+- english
+- longread
+- opinion
+- technology
+title: Dijital Cahiliye Devri
 ---
 
 (Ekranlara tapan bir kavmin helaki için suların yükselmesine gerek yoktur.)

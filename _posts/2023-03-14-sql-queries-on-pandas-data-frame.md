@@ -1,12 +1,15 @@
 ---
-layout: post
-title: "SQL queries on pandas data frame"
+categories:
+- bilgisayar
 date: 2023-03-14
-categories: 
-  - "bilgisayar"
-tags: 
-  - "data-frame"
-  - "python"
+layout: post
+tags:
+- data-frame
+- english
+- longread
+- python
+- technology
+title: SQL queries on pandas data frame
 ---
 
 Is this possible?

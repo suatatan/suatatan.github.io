@@ -1,7 +1,11 @@
 ---
-layout: post
-title: "Ask questions instead of telling your stories"
 date: 2024-03-11
+layout: post
+tags:
+- cite
+- english
+- longread
+title: Ask questions instead of telling your stories
 ---
 
 "A Harvard study published in the Journal of Personality and Social Psychology found that asking two follow-up questions dramatically increases how likable other people perceive you to be.
