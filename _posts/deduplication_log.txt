@@ -2,3 +2,287 @@ Deleted: 2006-09-12-koydes-projelerinin-dusundurdukleri.md
 Kept: 2006-09-12-8.md
 Similarity: 0.9975
 ---
+Deleted: 2006-09-12-ey-baba.md
+Kept: 2006-09-12-ey-baba-2.md
+Similarity: 0.9976
+---
+Deleted: 2006-09-12-hallac-i-mansur’dan-nietzsche’ye.md
+Kept: 2006-09-12-hallac-i-mansurdan-nietzscheye.md
+Similarity: 0.9974
+---
+Deleted: 2006-09-12-internet-tarihi.md
+Kept: 2006-09-12-internet-tarihi-2.md
+Similarity: 0.9982
+---
+Deleted: 2006-09-12-internet-tarihi–3.md
+Kept: 2006-09-12-internet-tarihi3.md
+Similarity: 0.9984
+---
+Deleted: 2006-09-12-misyonerlik-tarihi2.md
+Kept: 2006-09-12-misyonerlik-tarihi2-2.md
+Similarity: 0.9992
+---
+Deleted: 2006-09-12-nisan-yildonumu.md
+Kept: 2006-09-12-nisan-yildonumu-2.md
+Similarity: 0.9987
+---
+Deleted: 2006-09-12-noli-ire-fac-venire.md
+Kept: 2006-09-12-noli-ire-fac-venire-2.md
+Similarity: 0.9977
+---
+Deleted: 2006-09-12-yuzler-ve-kaybolan-kimlikler.md
+Kept: 2006-09-12-yuzler-ve-kaybolan-kimlikler-2.md
+Similarity: 0.9982
+---
+Deleted: 2006-09-24-papa-hazretleri-16benediktus-nietszche-dayi-ve.md
+Kept: 2006-09-24-papa-hazretleri-16benediktus-nietszche-dayi-ve-ramazan-ayinda-turk-televizyonculugu-arasinda-sizofrence-tespit-edilmis-bir-bag.md
+Similarity: 0.9959
+---
+Deleted: 2006-11-01-papanin-mezarina-girmek.md
+Kept: 2006-11-01-papanin-mezarina-girmek-2.md
+Similarity: 0.9953
+---
+Deleted: 2006-11-26-tore-inayetleri.md
+Kept: 2006-11-26-tore-inayetleri-2.md
+Similarity: 0.9975
+---
+Deleted: 2007-02-12-devletin-derini-ve-sig-olani.md
+Kept: 2007-02-12-devletin-derini-ve-sig-olani-2.md
+Similarity: 0.9908
+---
+Deleted: 2007-03-18-danimarka-atesle-oynuyor.md
+Kept: 2007-03-18-danimarka-atesle-oynuyor-2.md
+Similarity: 0.9966
+---
+Deleted: 2007-03-24-daha-pratik-kod-yazimi-icin-netbeansda-interface.md
+Kept: 2007-03-24-daha-pratik-kod-yazimi-icin-netbeansda-interface-kullanimi.md
+Similarity: 0.9889
+---
+Deleted: 2007-04-24-mysqlde-turkce-karakter-sorunu-yasamamak-icin.md
+Kept: 2007-04-24-mysqlde-turkce-karakter-sorunu-yasamamak-icin-2.md
+Similarity: 0.9801
+---
+Deleted: 2007-05-01-netbeans-visual-web-pack-ile-veritabani.md
+Kept: 2007-05-01-netbeans-visual-web-pack-ile-veritabani-islemlerinde-sikca-karsilasilan-bir-sorun-hakkinda.md
+Similarity: 0.9790
+---
+Deleted: 2008-05-18-iste-size-organik-tarim.md
+Kept: 2008-05-18-iste-size-gayri-organik-lakin-fevkalade-naturel.md
+Similarity: 0.9843
+---
+Deleted: 2008-05-19-fiyat-endeksleri-ne-demektir-fiyat-endeksleri.md
+Kept: 2008-05-19-fiyat-endeksleri-ne-demektir-fiyat-endeksleri-nasil-kullanilir.md
+Similarity: 0.9778
+---
+Deleted: 2008-07-25-office-2007-isguzarligina-ve-diger-format.md
+Kept: 2008-07-25-office-2007-isguzarligina-ve-diger-format-sikintilarina-cozumler.md
+Similarity: 0.9805
+---
+Deleted: 2008-08-24-yrddoc-ali-cimat-ve-ars-gor-mahir-tasin.md
+Kept: 2008-08-24-yrddoc-ali-cimat-ve-ars-gor-mahir-tasin-mevzuat-dergisinde-yayinlanan-kiyi-bankaciligina-dair-onemli-arastirmalari.md
+Similarity: 0.9862
+---
+Deleted: 2009-06-22-ayni-anda-birden-fazla-belgeyi-tek-programda.md
+Kept: 2009-06-22-ayni-anda-birden-fazla-belgeyi-tek-programda-duzenlemek-tab-devrimi-open-office-ile-mumkun.md
+Similarity: 0.9720
+---
+Deleted: 2009-06-22-google-app-engineyi-duyurdu-google-babaligini.md
+Kept: 2009-06-22-google-app-engineyi-duyurdu-google-babaligini-gosterdi-yine.md
+Similarity: 0.9751
+---
+Deleted: 2009-08-23-jquery-ile-link-davranisini-iptal-etme.md
+Kept: 2009-08-23-jquery-ile-link-davranisini-iptal-etme-2.md
+Similarity: 0.9798
+---
+Deleted: 2009-10-14-googlenin-code-playground-hizmeti-ile-artik-api.md
+Kept: 2009-10-14-googlenin-code-playground-hizmeti-ile-artik-api-testi-daha-kolay.md
+Similarity: 0.9806
+---
+Deleted: 2009-10-14-project-kenai.md
+Kept: 2009-10-14-project-kenai-2.md
+Similarity: 0.9820
+---
+Deleted: 2010-04-03-bilgisayariniz-icin-en-iyi-hesap-makinesi.md
+Kept: 2010-04-03-bilgisayariniz-icin-en-iyi-hesap-makinesi-2.md
+Similarity: 0.9709
+---
+Deleted: 2010-12-01-css-kutu-modeli.md
+Kept: 2010-12-01-css-kutu-modeli-2.md
+Similarity: 0.9759
+---
+Deleted: 2010-12-01-google-app-engine-uygulamanizi-kendi-domain.md
+Kept: 2010-12-01-google-app-engine-uygulamanizi-kendi-domain-adresiniz-uzerinden-yayinlamak.md
+Similarity: 0.9705
+---
+Deleted: 2011-01-05-ucretsiz-ziyaretci-istatistik-uygulamalari.md
+Kept: 2011-01-05-ucretsiz-ziyaretci-istatistik-uygulamalari-2.md
+Similarity: 0.9792
+---
+Deleted: 2011-02-23-kalabaliklari-anlamak.md
+Kept: 2011-02-23-kalabaliklari-anlamak-3.md
+Similarity: 0.9853
+---
+Deleted: 2011-03-14-aday-adaylari-tanitimlari-ve-etik-sorunu-3.md
+Kept: 2011-03-14-aday-adaylari-tanitimlari-ve-etik-sorunu-2.md
+Similarity: 0.9985
+---
+Deleted: 2011-03-24-excel-vba-makrolari-ile-toplu-alt-sayfalar.md
+Kept: 2011-03-24-excel-vba-makrolari-ile-toplu-alt-sayfalar-olusturma-ve-calisma-sayfalari-maniplasyonu.md
+Similarity: 0.9804
+---
+Deleted: 2011-04-29-excel-vba-ile-resim-ekleme.md
+Kept: 2011-04-29-excel-vba-ile-resim-ekleme-2.md
+Similarity: 0.9783
+---
+Deleted: 2011-05-04-ilk-dijital-kitabim-yayinda.md
+Kept: 2011-05-04-ilk-dijital-kitabim-yayinda-2.md
+Similarity: 0.9737
+---
+Deleted: 2011-05-06-van’da-hidrellez-dua’larin-yaziya-ve-resme-dokuldugu-zaman.md
+Kept: 2011-05-06-vanda-hidrellez-dualarin-yaziya-ve-resme.md
+Similarity: 0.9858
+---
+Deleted: 2011-05-13-excel-icinde-makro-yazarak-herhangi-bir-internet.md
+Kept: 2011-05-13-excel-icinde-makro-yazarak-herhangi-bir-internet-sitesini-acmak.md
+Similarity: 0.9766
+---
+Deleted: 2011-05-13-excel-icinden-mail-gonderme.md
+Kept: 2011-05-13-excel-icinden-mail-gonderme-2.md
+Similarity: 0.9732
+---
+Deleted: 2011-06-14-van-sehir-olmadan-buyuksehir-olmayi-dusunmek.md
+Kept: 2011-06-14-sehir-olmadan-buyuksehir-olmayi-dusunmek.md
+Similarity: 0.9924
+---
+Deleted: 2011-07-05-windows-ortaminda-google-app-engine-icin-lokal.md
+Kept: 2011-07-05-windows-ortaminda-google-app-engine-icin-lokal-sqlite-veritabani.md
+Similarity: 0.9783
+---
+Deleted: 2011-07-08-css-ile-bir-div-icinde-divi-ortalama.md
+Kept: 2011-07-08-css-ile-bir-div-icinde-divi-ortalama-2.md
+Similarity: 0.9792
+---
+Deleted: 2011-07-08-css-ile-tum-tarayicilarda-calisan-kutu-golge.md
+Kept: 2011-07-08-css-ile-tum-tarayicilarda-calisan-kutu-golge-efekti.md
+Similarity: 0.9763
+---
+Deleted: 2011-07-18-toz-harfiyat-ve-gurultu-iste-bizim-“gelisme”-seklimiz-van.md
+Kept: 2011-07-18-toz-harfiyat-ve-gurultu-iste-bizim-gelisme.md
+Similarity: 0.9900
+---
+Deleted: 2011-07-21-print-as-json-format-in-google-app-engine.md
+Kept: 2011-07-21-print-as-json-format-in-google-app-engine-2.md
+Similarity: 0.9758
+---
+Deleted: 2011-07-22-dagin-ardindakiler-ve-bu-tarafindakiler-3.md
+Kept: 2011-07-22-dagin-ardindakiler-ve-bu-tarafindakiler-2.md
+Similarity: 0.9952
+---
+Deleted: 2011-07-22-dagin-ardindakiler-ve-bu-tarafindakiler.md
+Kept: 2011-07-22-dagin-ardindakiler-ve-bu-tarafindakiler-2.md
+Similarity: 0.9916
+---
+Deleted: 2011-07-27-a-good-example-source-for-beatifulsoup-library.md
+Kept: 2011-07-27-a-good-example-source-for-beatifulsoup-library-2.md
+Similarity: 0.9859
+---
+Deleted: 2011-07-27-dreamweaver-like-html-template-dressing-in-aptana.md
+Kept: 2011-07-27-dreamweaver-like-html-template-dressing-in-aptana-with-python.md
+Similarity: 0.9863
+---
+Deleted: 2011-09-06-microsoft-word-icinde-makro-yardimi-ile-bir.md
+Kept: 2011-09-06-microsoft-word-icinde-makro-yardimi-ile-bir-dokumanda-toplu-degisiklikler-yapma.md
+Similarity: 0.9815
+---
+Deleted: 2011-09-07-caykurun-antikakacak-cayi.md
+Kept: 2011-09-07-caykurun-antikakacak-cayi-2.md
+Similarity: 0.9827
+---
+Deleted: 2011-09-08-gps-kooordinatlari-arasi-donusum.md
+Kept: 2011-09-08-gps-kooordinatlari-arasi-donusum-2.md
+Similarity: 0.9740
+---
+Deleted: 2011-10-05-safii-mezhebi.md
+Kept: 2011-10-05-safii-mezhebi-2.md
+Similarity: 0.9938
+---
+Deleted: 2011-10-05-vanda-altin-cilek-yetistirmek.md
+Kept: 2011-10-05-vanda-altin-cilek-yetistirmek-2.md
+Similarity: 0.9818
+---
+Deleted: 2011-10-06-makale-okuyarak-ingilizcesini-gelistirenler-icin.md
+Kept: 2011-10-06-kolay-ingilizce-oku-makale-okuyarak-ingilizcesini-gelistirenler-icin-ucretsiz-yenilikci-bir-cozum.md
+Similarity: 0.9866
+---
+Deleted: 2011-10-06-linux-nedir-duymayanlar-icin-iyi-bir-baslangic.md
+Kept: 2011-10-06-linux-nedir-duymayanlar-icin-iyi-bir-baslangic-2.md
+Similarity: 0.9868
+---
+Deleted: 2011-10-11-yoneticiler-icin-bilisim.md
+Kept: 2011-10-11-yoneticiler-icin-bilisim-2.md
+Similarity: 0.9876
+---
+Deleted: 2011-10-12-cozum-excelde-telefon-numaralarini-kaydederken.md
+Kept: 2011-10-12-cozum-excelde-telefon-numaralarini-kaydederken-bastaki-sifirin-kaybolmasi-sorunu.md
+Similarity: 0.9778
+---
+Deleted: 2011-10-12-excel-vba-ile-hizli-veri-isleme.md
+Kept: 2011-10-12-excel-vba-ile-hizli-veri-isleme-2.md
+Similarity: 0.9840
+---
+Deleted: 2011-10-12-excelde-formul-yazmaya-giris-ve-basit-bir-toplama.md
+Kept: 2011-10-12-excelde-formul-yazmaya-giris-ve-basit-bir-toplama-formulu-videolu-anlatim.md
+Similarity: 0.9822
+---
+Deleted: 2011-10-12-excelde-hucre-icinde-alt-satira-nasil-gecilir.md
+Kept: 2011-10-12-excelde-hucre-icinde-alt-satira-nasil-gecilir-2.md
+Similarity: 0.9864
+---
+Deleted: 2011-10-12-excelde-hucre-nedir.md
+Kept: 2011-10-12-excelde-hucre-nedir-2.md
+Similarity: 0.9808
+---
+Deleted: 2011-10-12-excelde-kdv-hesaplama-formulu-videolu-anlatim.md
+Kept: 2011-10-12-excelde-kdv-hesaplama-formulu-videolu-anlatim-2.md
+Similarity: 0.9845
+---
+Deleted: 2011-10-12-yeni-anayasa-ve-yerel-yonetimler.md
+Kept: 2011-10-12-yeni-anayasa-ve-yerel-yonetimler-2.md
+Similarity: 0.9857
+---
+Deleted: 2011-10-13-ayinesi-istir-kisinin-evet-fakat-lafa-da-bakilir.md
+Kept: 2011-10-13-ayinesi-istir-kisinin-evet-fakat-lafa-da-bakilir-2.md
+Similarity: 0.9820
+---
+Deleted: 2011-10-14-ubuntu-1110-oneiricocelot-yayinlandi.md
+Kept: 2011-10-14-ubuntu-11-10-oneiricocelot-yayinlandi.md
+Similarity: 0.9845
+---
+Deleted: 2011-11-20-van-depreminde-teolojik-ve-jeolojik-yorumlar-2.md
+Kept: 2011-11-19-van-depreminde-teolojik-ve-jeolojik-yorumlar.md
+Similarity: 0.9807
+---
+Deleted: 2011-11-28-72-yetmedi.md
+Kept: 2011-11-28-7-2-yetmedi.md
+Similarity: 0.9901
+---
+Deleted: 2011-12-07-olum-uzerine-2.md
+Kept: 2011-12-06-olum-uzerine.md
+Similarity: 0.9852
+---
+Deleted: 2011-12-09-anadolu-jetin-ilginc-online-biletleme-sistemi-ve.md
+Kept: 2011-12-09-anadolu-jetin-ilginc-online-biletleme-sistemi-ve-musteri-hizmetleri-mantigi.md
+Similarity: 0.9901
+---
+Deleted: 2012-01-29-bu-deprem-sonuncu-olacak.md
+Kept: 2012-01-29-bu-deprem-sonuncu-olacak-2.md
+Similarity: 0.9940
+---
+Deleted: 2012-02-14-inonu-tbmm-hukumetinin-ayni-zamanda-kurtlerin.md
+Kept: 2012-02-14-inonu-tbmm-hukumetinin-ayni-zamanda-kurtlerin-2.md
+Similarity: 0.9814
+---
+Deleted: 2013-02-12-cozum-inadi.md
+Kept: 2013-02-12-cozum-inadi-2.md
+Similarity: 0.9955
+---
