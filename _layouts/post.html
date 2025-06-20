@@ -1,27 +1,30 @@
+---
+layout: default
+---
+<link href="/css/override.css" rel="stylesheet" type="text/css">
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<!DOCTYPE html>
-<html lang="tr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    {%- seo -%}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minima@latest/minima.css">
-  </head>
-  <body>
-    <header>
-      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-    </header>
-    <main>
-      <article>
-        <h2>{{ page.title }}</h2>
-        <p><small>{{ page.date | date: "%d.%m.%Y" }}</small></p>
-        {{ content }}
-      </article>
-      <a href="{{ site.baseurl }}/">&larr; Tüm Yazılar</a>
-    </main>
-    <footer>
-      <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
-    </footer>
-  </body>
-</html>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {% assign author = page.author | default: site.author %}
+      {%- if author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+      {%- endif -%}</p>
+  </header>
+
+  <div class="share-links">
+    {% include sharelinks.html %}
+  </div>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+    {% include navlinks.html %}
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

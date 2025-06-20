@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }} | {{ site.title }}</title>
     {%- seo -%}
+    {% include head.html %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/minima@latest/minima.css">
     <style>
       body { max-width: 700px; margin: 2rem auto; font-family: system-ui, sans-serif; }
@@ -17,6 +18,7 @@
     <header>
       <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
       <p>{{ site.description }}</p>
+      {% include navlinks.html %}
     </header>
     <main>
       <h2>Yazılar</h2>
@@ -27,6 +29,7 @@
           </li>
         {% endfor %}
       </ul>
+      {% include sharelinks.html %}
     </main>
     <footer>
       <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
