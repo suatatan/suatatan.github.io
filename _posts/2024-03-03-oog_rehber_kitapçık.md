@@ -1,7 +1,7 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'oog_rehber_kitap��k'
+title: 'Özel Öğrenme Güçlüğü Rehber Kitapçık'
 tags:
   - opinion
   - disleksi

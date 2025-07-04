@@ -25,27 +25,22 @@ Hiç bir kursa gitmeden İngilizceyi öğrenmek hayatımın en eğlenceli işi o
 
 Bu yazıda anlatılanların çoğu kişisel deneyimlerime ve araştırmalarıma dayanıyor ancak hepsinin başlangıç noktası "Fluent Forever" adlı bir kitap. Yazarı bir düzineden fazla dil bilen bir *dilbilimci filan değil* sivil bir vatandaş... Kitabında kendisinin uzun süren ve bir türlü ilerlemeyen dil öğrenme sürecini ve sonra bulduğu ve sonunda başardığı onca dili öğreten metotları keyifli bir dille anlatmış. Bence az da olsa İngilizceniz varsa bu kitabı alıp ilk sayfasından itibaren -isterse tek sayfayı okumak bir gün sürsün- okumalısınız. Bugün bu işlem daha kolaydır, Google Lens adlı uygulamayı bile sayfaya tutup Türkçeleştirebilirsiniz. Benim zamanımda böyle olmadığı için bir elde sözlük bir elde kitap altını çize çize günde bir sayfa okuyarak başlamış sona doğru hızlanmış ve tüm kitabı bir yıla yakın sürede bitirmiştim. Bu arada Google Lens uygulamasını buradan indirebilirsiniz: [https://play.google.com/store/apps/details?id=com.google.ar.lens](https://play.google.com/store/apps/details?id=com.google.ar.lens) 
 
-<figure>
 
-![Google Lens kitap çeviri örneği](/images/google-lens-book-translate-example.jpg) TODO:GETIMG
 
-<figcaption>
+![Google Lens kitap çeviri örneği](/images/lens.png) 
+
 Google Lens ile kitap okurken anında çeviri yapma örneği (Görsel: Google Lens tanıtım materyali)
-</figcaption>
 
-</figure>
 
-<figure>
+----
 
-![fluent forever ile ilgili görsel sonucu](/images/image.jpeg)
+![fluent forever ile ilgili görsel sonucu](/images/fluent_forever.jpeg)
 
-<figcaption>
+
 
 Fluent Forever adlı kitap (Maalesef Türkçesi yok, ben okurken de epey zorlandım ama buna değer:)
 
-</figcaption>
-
-</figure>
+----
 
 ## Kürtçe'den İngilizceye
 
