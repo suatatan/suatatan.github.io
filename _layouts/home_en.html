@@ -28,6 +28,63 @@
       {% include navlinks.html %}
     </header>
     <main>
+      <!-- Applications Section -->
+      <section style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; text-align: center;">
+        <h2 style="color: white; margin: 0 0 1rem 0;">🚀 Applications</h2>
+        <p style="color: rgba(255,255,255,0.9); margin: 0 0 1.5rem 0;">Interactive tools and applications designed to improve your daily life</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+          <a href="/apps/breathing-exercise.html?lang=en" 
+             style="display: inline-block; background: rgba(255,255,255,0.2); color: white; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: bold; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease; min-width: 200px;">
+            🫁 Breathing Exercise<br>
+            <small style="opacity: 0.8;">4-4-4-4 Technique</small>
+          </a>
+        </div>
+        
+        <p style="color: rgba(255,255,255,0.7); margin: 1.5rem 0 0 0; font-size: 0.9rem;">
+          More applications coming soon...
+        </p>
+      </section>
+
+      <!-- About & Resources Section -->
+      <section style="margin: 2rem 0;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+          <a href="/pages/about-en.html" 
+             style="display: block; background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); color: white; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: white;">👨‍🎓 About Dr. Suat ATAN</h3>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">Academic background and professional journey</p>
+          </a>
+          
+          <a href="/pages/books-en.html" 
+             style="display: block; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: white;">📚 Published Books</h3>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">Collection of published works and writings</p>
+          </a>
+          
+          <a href="/pages/academic-en.html" 
+             style="display: block; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: #333;">🎓 Academic Studies</h3>
+            <p style="margin: 0; opacity: 0.8; font-size: 0.9rem;">Research papers and academic contributions</p>
+          </a>
+          
+          <a href="/pages/data-science-en.html" 
+             style="display: block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: white;">📊 Data Science Library</h3>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">Learning resources and tutorials</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Podcast Section -->
+      <section style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; text-align: center;">
+        <h2 style="color: white; margin: 0 0 1rem 0;">🎙️ Podcast</h2>
+        <p style="color: rgba(255,255,255,0.9); margin: 0 0 1.5rem 0;">Conversations on technology, data science, and artificial intelligence</p>
+        
+        <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem; margin: 1rem 0;">
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/1kHzXy8UROQ5hb4qZdJaDO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </section>
+
       <h2>Posts (English)</h2>
       <ul>
         {% for post in site.posts %}

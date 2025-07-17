@@ -12,7 +12,6 @@ tags:
 title: İngilizceyi hızlı ve etkili olarak öğrenme yolu
 ---
 
-
 - Yazının ilk yazım tarihi: 2 Ocak 2017
 - Yazının 1. güncellemesi:  2 Temmuz 2025
 

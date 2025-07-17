@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breathing Exercise | Suat Atan</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .header h1 {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      margin: 0 0 10px 0;
+      font-size: 2.5em;
+    }
+    
+    .header p {
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      font-size: 1.2em;
+      margin: 0 0 20px 0;
+    }
+    
+    .back-link {
+      color: #fff;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    
+    .back-link:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    #canvas-container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    #instructions {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      font-weight: bold;
+    }
+    
+    #timer {
+      margin-top: 15px;
+      font-size: 24px;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      font-family: 'Courier New', monospace;
+    }
+    
+    canvas {
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .description {
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      margin-top: 30px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+      .header h1 { font-size: 2em; }
+      .header p { font-size: 1em; }
+      #instructions { font-size: 24px; }
+      #timer { font-size: 20px; }
+      #canvas-container { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 id="app-title">🫁 Nefes Egzersizi</h1>
+    <p id="app-subtitle">Derin nefes alarak rahatlamaya odaklanın</p>
+    <a href="/" class="back-link" id="back-link">← Ana Sayfaya Dön</a>
+  </div>
+
+  <div id="canvas-container">
+    <div id="instructions">Nefes Alın</div>
+    <div id="timer">02:00</div>
+  </div>
+
+  <div class="description">
+    <p id="description-text">Bu egzersiz, 4-4-4-4 nefes tekniğini kullanır: 4 saniye nefes alın, 4 saniye tutun, 4 saniye verin, 4 saniye tutun. Dairenin büyümesini ve küçülmesini takip ederek nefes alıp verin.</p>
+    
+    <div style="margin-top: 25px; padding: 20px; background: rgba(255, 255, 255, 0.15); border-radius: 10px; backdrop-filter: blur(5px);">
+      <h3 style="margin: 0 0 10px 0; color: #fff;" id="more-info-title">📚 Daha Fazla Bilgi</h3>
+      <p style="margin: 0 0 15px 0; color: #fff;" id="more-info-text">Nefes egzersizlerinin bilimsel faydaları ve 4-4-4-4 tekniğinin detayları hakkında:</p>
+      <a href="/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html" 
+         style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: bold; transition: all 0.3s;"
+         id="blog-link">
+        🔬 Nefes Egzersizinin Bilimi
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Language detection and text translations
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'tr';
+    
+    const texts = {
+      tr: {
+        title: '🫁 Nefes Egzersizi',
+        subtitle: 'Derin nefes alarak rahatlamaya odaklanın',
+        backLink: '← Ana Sayfaya Dön',
+        inhale: 'Nefes Alın',
+        hold: 'Tutun',
+        exhale: 'Nefes Verin',
+        completed: 'Tamamlandı! 🎉',
+        description: 'Bu egzersiz, 4-4-4-4 nefes tekniğini kullanır: 4 saniye nefes alın, 4 saniye tutun, 4 saniye verin, 4 saniye tutun. Dairenin büyümesini ve küçülmesini takip ederek nefes alıp verin.',
+        moreInfoTitle: '📚 Daha Fazla Bilgi',
+        moreInfoText: 'Nefes egzersizlerinin bilimsel faydaları ve 4-4-4-4 tekniğinin detayları hakkında:',
+        moreInfoLink: '🔬 Nefes Egzersizinin Bilimi',
+        blogUrl: '/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html'
+      },
+      en: {
+        title: '🫁 Breathing Exercise',
+        subtitle: 'Focus on relaxation through deep breathing',
+        backLink: '← Back to Home',
+        inhale: 'Breathe In',
+        hold: 'Hold',
+        exhale: 'Breathe Out',
+        completed: 'Completed! 🎉',
+        description: 'This exercise uses the 4-4-4-4 breathing technique: breathe in for 4 seconds, hold for 4 seconds, breathe out for 4 seconds, hold for 4 seconds. Follow the circle\'s expansion and contraction to breathe in and out.',
+        moreInfoTitle: '📚 Learn More',
+        moreInfoText: 'About the scientific benefits of breathing exercises and details of the 4-4-4-4 technique:',
+        moreInfoLink: '🔬 The Science of Breathing',
+        blogUrl: '/2025/07/17/the-power-of-breathing-exercises-4-4-4-4-technique.html'
+      }
+    };
+    
+    const currentTexts = texts[lang];
+
+    let radius = 50;
+    let growing = true;
+    let phase = 'inhale';
+    let timer = 0;
+    let inhaleTime = 4 * 60; // 4 seconds at 60 FPS
+    let exhaleTime = 4 * 60; // 4 seconds at 60 FPS
+    let holdTime = 4 * 60;  // 4 seconds at 60 FPS
+    let totalTime = 120 * 60; // 2 minutes at 60 FPS
+    let timeLeft = totalTime;
+
+    function setup() {
+      // Update page content based on language
+      document.title = currentTexts.title.replace('🫁 ', '') + ' | Suat Atan';
+      document.getElementById('app-title').innerText = currentTexts.title;
+      document.getElementById('app-subtitle').innerText = currentTexts.subtitle;
+      document.getElementById('back-link').innerText = currentTexts.backLink;
+      document.getElementById('description-text').innerText = currentTexts.description;
+      document.getElementById('more-info-title').innerText = currentTexts.moreInfoTitle;
+      document.getElementById('more-info-text').innerText = currentTexts.moreInfoText;
+      document.getElementById('blog-link').innerText = currentTexts.moreInfoLink;
+      document.getElementById('blog-link').href = currentTexts.blogUrl;
+      document.getElementById('instructions').innerText = currentTexts.inhale;
+      
+      let canvas = createCanvas(400, 400);
+      canvas.parent('canvas-container');
+      frameRate(60);
+      textAlign(CENTER, CENTER);
+      textSize(20);
+    }
+
+    function draw() {
+      background(0, 0, 0, 0); // Transparent canvas to show background image
+      
+      // Update and display timer
+      timeLeft--;
+      let minutes = Math.floor(timeLeft / (60 * 60));
+      let seconds = Math.floor((timeLeft / 60) % 60);
+      let timeString = nf(minutes, 2) + ':' + nf(seconds, 2);
+      document.getElementById('timer').innerText = timeString;
+
+      // Stop game when time is up
+      if (timeLeft <= 0) {
+        document.getElementById('instructions').innerText = currentTexts.completed;
+        noLoop();
+        return;
+      }
+
+      // Create gradient for the circle (ocean theme)
+      let gradient = drawingContext.createRadialGradient(
+        width / 2, height / 2, radius * 0.3,
+        width / 2, height / 2, radius
+      );
+      gradient.addColorStop(0, 'rgba(0, 191, 255, 0.9)'); // Deep sky blue center
+      gradient.addColorStop(0.5, 'rgba(64, 224, 208, 0.7)'); // Turquoise
+      gradient.addColorStop(1, 'rgba(0, 105, 148, 0.5)'); // Darker blue edge
+
+      // Draw breathing circle with heartbeat-like pulse
+      drawingContext.fillStyle = gradient;
+      noStroke();
+      let pulse = sin(frameCount * 0.05) * 5; // Subtle heartbeat pulse
+      let currentRadius = radius + pulse;
+      ellipse(width / 2, height / 2, currentRadius * 2, currentRadius * 2);
+      
+      // Update radius and phase
+      if (phase === 'inhale') {
+        if (growing) radius += 0.5; // Slower growth for smoother animation
+        timer++;
+        if (timer >= inhaleTime) {
+          phase = 'hold1';
+          timer = 0;
+          growing = false;
+          document.getElementById('instructions').innerText = currentTexts.hold;
+        }
+      } else if (phase === 'hold1') {
+        timer++;
+        if (timer >= holdTime) {
+          phase = 'exhale';
+          timer = 0;
+          document.getElementById('instructions').innerText = currentTexts.exhale;
+        }
+      } else if (phase === 'exhale') {
+        radius -= 0.5; // Slower shrink for smoother animation
+        timer++;
+        if (timer >= exhaleTime) {
+          phase = 'hold2';
+          timer = 0;
+          document.getElementById('instructions').innerText = currentTexts.hold;
+        }
+      } else if (phase === 'hold2') {
+        timer++;
+        if (timer >= holdTime) {
+          phase = 'inhale';
+          timer = 0;
+          growing = true;
+          document.getElementById('instructions').innerText = currentTexts.inhale;
+        }
+      }
+
+      // Keep radius within bounds
+      radius = constrain(radius, 50, 150);
+    }
+  </script>
+</body>
+</html>

@@ -22,14 +22,64 @@
       {% include navlinks.html %}
     </header>
     <main>
-      <h2>Sayfalar</h2>
-      <ul>
-        {% for page in site.pages %}
-          {% if page.path contains 'pages/' and page.title %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+      <!-- Applications Section -->
+      <section style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; text-align: center;">
+        <h2 style="color: white; margin: 0 0 1rem 0;">🚀 Uygulamalar</h2>
+        <p style="color: rgba(255,255,255,0.9); margin: 0 0 1.5rem 0;">Günlük yaşamınızı iyileştirmek için tasarlanmış interaktif araçlar ve uygulamalar</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+          <a href="/apps/breathing-exercise.html" 
+             style="display: inline-block; background: rgba(255,255,255,0.2); color: white; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: bold; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease; min-width: 200px;">
+            🫁 Nefes Egzersizi<br>
+            <small style="opacity: 0.8;">4-4-4-4 Tekniği</small>
+          </a>
+        </div>
+        
+        <p style="color: rgba(255,255,255,0.7); margin: 1.5rem 0 0 0; font-size: 0.9rem;">
+          Yakında daha fazla uygulama...
+        </p>
+      </section>
+
+      <!-- Pages Section -->
+      <section style="margin: 2rem 0;">
+        <h2 style="margin: 0 0 1.5rem 0; text-align: center;">📖 Sayfalar</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+          <a href="/pages/2017-01-02-dr-suat-atan-kimdir.html" 
+             style="display: block; background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); color: white; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: white;">👨‍🎓 Dr. Suat ATAN Kimdir?</h3>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">Akademik geçmiş ve profesyonel yolculuk</p>
+          </a>
+          
+          <a href="/pages/2017-04-19-kitabim.html" 
+             style="display: block; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: white;">📚 Yayınlanmış Kitaplarım</h3>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">Yayınlanmış eserler ve yazılar koleksiyonu</p>
+          </a>
+          
+          <a href="/pages/2018-05-31-akademik-calismalarim.html" 
+             style="display: block; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: #333;">🎓 Akademik Çalışmalarım</h3>
+            <p style="margin: 0; opacity: 0.8; font-size: 0.9rem;">Araştırma makaleleri ve akademik katkılar</p>
+          </a>
+          
+          <a href="/pages/2024-05-28-data-science-learning-library.html" 
+             style="display: block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+            <h3 style="margin: 0 0 0.5rem 0; color: white;">📊 Data Science Öğrenme Kütüphanesi</h3>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">Öğrenme kaynakları ve rehberler</p>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Podcast Section -->
+      <section style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; text-align: center;">
+        <h2 style="color: white; margin: 0 0 1rem 0;">🎙️ Podcast</h2>
+        <p style="color: rgba(255,255,255,0.9); margin: 0 0 1.5rem 0;">Teknoloji, veri bilimi ve yapay zeka üzerine sohbetler</p>
+        
+        <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem; margin: 1rem 0;">
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/1kHzXy8UROQ5hb4qZdJaDO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </section>
+      
       <h2>Etiketler</h2>
       <ul>
         <li style="display:inline; margin-right:10px;"><a target="_blank" href="/index-en.html">#english</a></li>

@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "4f728623ca74d03f",
+    "type": "split",
+    "children": [
+      {
+        "id": "9954d9dec160b486",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b50459b1beb80c2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2017-01-02-hizli-ingilizce-ogrenme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2017-01-02-hizli-ingilizce-ogrenme"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4827f1fd35770d2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "b265ec0e610fa2f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa80f54d1b17cf9a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "fbdd69b2a0ec921a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8353a711c76adf3b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "41b93d70bf340713",
+    "type": "split",
+    "children": [
+      {
+        "id": "8751202545463a30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "544b891b9704ea54",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2017-01-02-hizli-ingilizce-ogrenme.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2017-01-02-hizli-ingilizce-ogrenme"
+            }
+          },
+          {
+            "id": "264fb276f504eaa2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2017-01-02-hizli-ingilizce-ogrenme.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2017-01-02-hizli-ingilizce-ogrenme"
+            }
+          },
+          {
+            "id": "37c53d64a5907c2f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1569b822c8075234",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2017-01-02-hizli-ingilizce-ogrenme.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2017-01-02-hizli-ingilizce-ogrenme"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fa80f54d1b17cf9a",
+  "lastOpenFiles": [
+    "_posts/_drafts/2010-12-01-rusyanin-kurtce-radyosu-internetten-yayina-basladi.md",
+    "_posts/2025-06-19-daily_academic_writing_journal_text.md"
+  ]
+}
