@@ -3,6 +3,101 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
+  
+  <!-- Enhanced Open Graph Meta Tags for Social Media -->
+  <meta property="og:site_name" content="Dr. Suat ATAN Blog">
+  <meta property="og:locale" content="tr_TR">
+  
+  {% if page.layout == 'post' %}
+    <!-- Blog post specific OG tags -->
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="Dr. Suat ATAN">
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    {% if page.tags %}
+      {% for tag in page.tags %}
+        <meta property="article:tag" content="{{ tag }}">
+      {% endfor %}
+    {% endif %}
+    
+    <!-- Special image for breathing exercise post -->
+    {% if page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise' %}
+      <meta property="og:image" content="{{ site.url }}/images/breathing-exercise-social.svg">
+      <meta property="og:image:alt" content="Nefes Egzersizi 4-4-4-4 Tekniği - Dr. Suat ATAN">
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}/images/social-preview-default.svg">
+      <meta property="og:image:alt" content="Dr. Suat ATAN Blog - Data Science ve Yaşam Bilimi">
+    {% endif %}
+  {% else %}
+    <!-- Homepage and other pages -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ site.url }}/images/social-preview-default.svg">
+    <meta property="og:image:alt" content="Dr. Suat ATAN Blog - Data Science, Yapay Zeka ve Yaşam Bilimi">
+  {% endif %}
+  
+  <!-- Image dimensions for better social media display -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/svg+xml">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@suatatan">
+  <meta name="twitter:site" content="@suatatan">
+  
+  {% if page.layout == 'post' and (page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise') %}
+    <meta name="twitter:image" content="{{ site.url }}/images/breathing-exercise-social.svg">
+    <meta name="twitter:image:alt" content="4-4-4-4 Nefes Egzersizi Tekniği">
+  {% else %}
+    <meta name="twitter:image" content="{{ site.url }}/images/social-preview-default.svg">
+    <meta name="twitter:image:alt" content="Dr. Suat ATAN Blog">
+  {% endif %}
+  
+  <!-- LinkedIn specific -->
+  <meta property="og:see_also" content="{{ site.url }}">
+  
+  <!-- WhatsApp and Telegram optimization -->
+  <meta property="og:rich_attachment" content="true">
+  
+  <!-- Additional meta for better preview -->
+  <meta name="author" content="Dr. Suat ATAN">
+  <meta name="robots" content="index, follow">
+  
+  {% if page.layout == 'post' %}
+    <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+  {% else %}
+    <meta name="description" content="Dr. Suat ATAN'ın data science, yapay zeka, teknoloji ve yaşam bilimi üzerine uzman görüşleri. 15+ yıllık deneyim, 700+ makale, podcast ve interaktif uygulamalar.">
+  {% endif %}
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": {% if page.layout == 'post' %}"BlogPosting"{% else %}"WebSite"{% endif %},
+    "headline": "{{ page.title | default: site.title }}",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Suat ATAN",
+      "jobTitle": "Data Scientist",
+      "description": "Data Scientist, AI Expert, Academic"
+    },
+    {% if page.layout == 'post' %}
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    {% endif %}
+    "publisher": {
+      "@type": "Person",
+      "name": "Dr. Suat ATAN"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "image": "{{ site.url }}{% if page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise' %}/images/breathing-exercise-social.svg{% else %}/images/social-preview-default.svg{% endif %}",
+    "url": "{{ site.url }}{{ page.url }}"
+  }
+  </script>
+  <!-- End Enhanced Open Graph Meta Tags -->
+
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/css/override.css" | relative_url }}">
   {%- feed_meta -%}
@@ -10,17 +105,37 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
 
-  <!-- highlight.js support -->
-  <link rel="stylesheet" href="{{ "/js/highlightjs/styles/github.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/js/highlightjs/styles/ssms.css" | relative_url }}" />
-
-  <script type="text/javascript" src="{{ "/js/highlightjs/highlight.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{ "/js/highlightjs/languages/plaintext.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{ "/js/highlightjs/languages/powershell.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{ "/js/highlightjs/languages/tsql.min.js" | relative_url }}"></script>
-
-  <script type="text/javascript"> hljs.highlightAll(); </script>
+  <!-- highlight.js support via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js"></script>
+  <script>hljs.highlightAll();</script>
   <!-- end highlight.js support -->
+
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+  <meta name="theme-color" content="#667eea">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Suat ATAN Blog">
+  <meta name="msapplication-TileColor" content="#667eea">
+  <meta name="msapplication-config" content="{{ "/browserconfig.xml" | relative_url }}">
+  
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="192x192" href="{{ "/images/icons/png/icon-192x192.png" | relative_url }}">
+  <link rel="apple-touch-icon" sizes="512x512" href="{{ "/images/icons/png/icon-512x512.png" | relative_url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/images/icons/png/icon-32x32.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ "/images/icons/png/icon-192x192.png" | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ "/images/icons/icon-32x32.svg" | relative_url }}">
+  
+  <!-- Microsoft tiles -->
+  <meta name="msapplication-TileImage" content="{{ "/images/icons/png/icon-192x192.png" | relative_url }}">
+  
+  <!-- PWA Script -->
+  <script src="{{ "/js/pwa-installer.js" | relative_url }}" defer></script>
+  <!-- End PWA Meta Tags -->
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >

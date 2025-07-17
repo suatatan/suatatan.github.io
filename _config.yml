@@ -26,9 +26,24 @@ description: >-
   Kitap önerileri, denemeler, aforizmalar ve dijital dünyaya dair notlar ile her yaştan okura hitap eder. 
   Suat ATAN'ın kaleminden, samimi ve özgün bir blog deneyimi. Türkçe ve İngilizce içerikler mevcuttur.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://suatatan.com" # the base hostname & protocol for your site
 twitter_username: suatatan
 github_username:  suatatan
+
+# Social media and SEO
+author:
+  name: "Dr. Suat ATAN"
+  email: "suatatan@gmail.com"
+  twitter: "suatatan"
+
+# SEO and social media defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Dr. Suat ATAN"
+      image: "/images/social-preview.svg"
 
 # Build settings
 theme: minima

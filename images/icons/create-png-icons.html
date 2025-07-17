@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG to PNG Converter</title>
+</head>
+<body>
+    <h2>SVG to PNG Icon Converter</h2>
+    <p>Bu sayfa SVG iconlarını PNG formatına çevirir. Tarayıcıda açın ve konsol çıktısını kontrol edin.</p>
+    
+    <canvas id="canvas" style="display: none;"></canvas>
+    
+    <script>
+        // SVG içeriği
+        const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#667eea">
+            <circle cx="256" cy="256" r="240" fill="#667eea" stroke="#fff" stroke-width="8"/>
+            <text x="256" y="280" font-family="Arial, sans-serif" font-size="180" font-weight="bold" text-anchor="middle" fill="white">SA</text>
+            <text x="256" y="350" font-family="Arial, sans-serif" font-size="48" text-anchor="middle" fill="white">BLOG</text>
+        </svg>`;
+        
+        function createPngFromSvg(svgString, size) {
+            return new Promise((resolve) => {
+                const canvas = document.getElementById('canvas');
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+                
+                canvas.width = size;
+                canvas.height = size;
+                
+                img.onload = function() {
+                    ctx.clearRect(0, 0, size, size);
+                    ctx.drawImage(img, 0, 0, size, size);
+                    
+                    canvas.toBlob(function(blob) {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `icon-${size}x${size}.png`;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                        resolve();
+                    }, 'image/png');
+                };
+                
+                const svgBlob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'});
+                const url = URL.createObjectURL(svgBlob);
+                img.src = url;
+            });
+        }
+        
+        // PNG iconları oluştur
+        async function createIcons() {
+            console.log('PNG iconlar oluşturuluyor...');
+            
+            await createPngFromSvg(svgContent, 32);
+            await createPngFromSvg(svgContent, 192);
+            await createPngFromSvg(svgContent, 512);
+            
+            console.log('Tüm PNG iconlar oluşturuldu! İndirilen dosyaları images/icons/png/ klasörüne koyun.');
+        }
+        
+        // Sayfa yüklendiğinde iconları oluştur
+        window.onload = createIcons;
+    </script>
+</body>
+</html>

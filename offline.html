@@ -1,0 +1,79 @@
+---
+layout: default
+title: Çevrimdışı - Offline
+permalink: /offline.html
+---
+
+<div style="text-align: center; padding: 2rem; max-width: 600px; margin: 0 auto;">
+  <div style="font-size: 4rem; margin-bottom: 1rem;">📶</div>
+  
+  <h1 style="color: #667eea; margin-bottom: 1rem;">İnternet Bağlantısı Yok</h1>
+  
+  <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+    Şu anda çevrimdışısınız. İnternet bağlantınızı kontrol edin ve tekrar deneyin.
+  </p>
+  
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 12px; color: white; margin-bottom: 2rem;">
+    <h3 style="margin: 0 0 1rem 0; color: white;">🫁 Çevrimdışıyken Nefes Egzersizi</h3>
+    <p style="margin: 0 0 1rem 0; opacity: 0.9;">İnternet olmasa da stres yönetimi devam eder!</p>
+    
+    <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+      <strong>4-4-4-4 Tekniği:</strong><br>
+      4 saniye nefes al → 4 saniye tut → 4 saniye ver → 4 saniye tut
+    </div>
+    
+    <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">
+      Bağlantı geldiğinde interaktif uygulamayı kullanabilirsiniz.
+    </p>
+  </div>
+  
+  <div style="margin-bottom: 2rem;">
+    <h3>Çevrimdışı Özellikler:</h3>
+    <ul style="text-align: left; display: inline-block;">
+      <li>📖 Önbelleğe alınmış sayfalar</li>
+      <li>🎯 Nefes egzersizi rehberi</li>
+      <li>📱 PWA özellikleri</li>
+      <li>🔄 Otomatik senkronizasyon</li>
+    </ul>
+  </div>
+  
+  <button onclick="window.location.reload()" 
+          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                 color: white; 
+                 border: none; 
+                 padding: 12px 24px; 
+                 border-radius: 8px; 
+                 font-size: 1rem; 
+                 cursor: pointer;
+                 transition: transform 0.2s ease;">
+    🔄 Tekrar Dene
+  </button>
+  
+  <p style="margin-top: 2rem; color: #999; font-size: 0.9rem;">
+    Bu sayfa çevrimdışı çalışacak şekilde tasarlanmıştır.<br>
+    <strong>Dr. Suat ATAN Blog</strong> - PWA Destekli
+  </p>
+</div>
+
+<script>
+// Check connection status
+function updateOnlineStatus() {
+  if (navigator.onLine) {
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 1000);
+  }
+}
+
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+// Animate button on hover
+document.querySelector('button').addEventListener('mouseenter', function() {
+  this.style.transform = 'scale(1.05)';
+});
+
+document.querySelector('button').addEventListener('mouseleave', function() {
+  this.style.transform = 'scale(1)';
+});
+</script>

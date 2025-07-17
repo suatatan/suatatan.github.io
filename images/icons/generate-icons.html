@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PWA Icon Generator - Suat ATAN Blog</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .preview { border: 1px solid #ccc; margin: 10px; display: inline-block; }
+        button { padding: 10px 20px; margin: 5px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #5a67d8; }
+    </style>
+</head>
+<body>
+    <h1>PWA Icon Generator - Suat ATAN Blog</h1>
+    <p>Bu araç blog için PWA iconları oluşturur. İkonları oluşturmak için aşağıdaki butona tıklayın.</p>
+    
+    <button onclick="generateAllIcons()">PNG İkonları Oluştur ve İndir</button>
+    
+    <div id="previews"></div>
+    
+    <script>
+        function createIcon(size) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = size;
+            canvas.height = size;
+            
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            // Background with rounded corners
+            const radius = Math.max(size * 0.125, 4);
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            
+            // Manual rounded rectangle for better browser support
+            ctx.moveTo(radius, 0);
+            ctx.lineTo(size - radius, 0);
+            ctx.quadraticCurveTo(size, 0, size, radius);
+            ctx.lineTo(size, size - radius);
+            ctx.quadraticCurveTo(size, size, size - radius, size);
+            ctx.lineTo(radius, size);
+            ctx.quadraticCurveTo(0, size, 0, size - radius);
+            ctx.lineTo(0, radius);
+            ctx.quadraticCurveTo(0, 0, radius, 0);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Semi-transparent circle overlay
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.15)';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size * 0.35, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Main text "SA"
+            ctx.fillStyle = 'white';
+            ctx.font = `bold ${Math.floor(size * 0.25)}px Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+            ctx.shadowBlur = 2;
+            ctx.shadowOffsetX = 1;
+            ctx.shadowOffsetY = 1;
+            ctx.fillText('SA', size/2, size/2 - size * 0.05);
+            
+            // Subtitle "BLOG" for larger icons
+            if (size >= 128) {
+                ctx.font = `${Math.floor(size * 0.08)}px Arial, sans-serif`;
+                ctx.shadowBlur = 1;
+                ctx.fillText('BLOG', size/2, size/2 + size * 0.15);
+            }
+            
+            // Remove shadow for border
+            ctx.shadowColor = 'transparent';
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            
+            return canvas;
+        }
+        
+        function downloadCanvas(canvas, filename) {
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.click();
+                URL.revokeObjectURL(url);
+            }, 'image/png', 1.0);
+        }
+        
+        function generateAllIcons() {
+            const sizes = [32, 192, 512];
+            const previewsDiv = document.getElementById('previews');
+            previewsDiv.innerHTML = '<h3>Oluşturulan İkonlar:</h3>';
+            
+            sizes.forEach(size => {
+                const canvas = createIcon(size);
+                const filename = `icon-${size}x${size}.png`;
+                
+                // Add preview
+                const preview = document.createElement('div');
+                preview.className = 'preview';
+                preview.innerHTML = `<p>${filename}</p>`;
+                preview.appendChild(canvas);
+                canvas.style.width = '64px';
+                canvas.style.height = '64px';
+                canvas.style.border = '1px solid #ddd';
+                previewsDiv.appendChild(preview);
+                
+                // Download
+                setTimeout(() => downloadCanvas(canvas, filename), size * 10);
+            });
+            
+            setTimeout(() => {
+                alert('Tüm PNG ikonları indirildi! Bu dosyaları images/icons/png/ klasörüne kopyalayın.');
+            }, 2000);
+        }
+        
+        // Auto-generate on page load for convenience
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if (confirm('PNG ikonları otomatik olarak oluşturulsun mu?')) {
+                    generateAllIcons();
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- Social Media Preview - Default -->
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Content container -->
+  <rect x="60" y="60" width="1080" height="510" fill="rgba(255,255,255,0.1)" rx="20"/>
+  
+  <!-- Logo/Icon area -->
+  <circle cx="300" cy="250" r="80" fill="rgba(255,255,255,0.2)"/>
+  <text x="300" y="275" font-family="Arial, sans-serif" font-size="60" text-anchor="middle">🧠</text>
+  
+  <!-- Main title -->
+  <text x="450" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="start">
+    Dr. Suat ATAN
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="450" y="240" font-family="Arial, sans-serif" font-size="32" fill="rgba(255,255,255,0.9)" text-anchor="start">
+    Data Scientist • AI Expert
+  </text>
+  
+  <!-- Description -->
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="start">
+    Yapay Zeka • Veri Bilimi • Yaşam Bilimi
+  </text>
+  
+  <!-- Stats box -->
+  <rect x="450" y="310" width="520" height="120" fill="rgba(255,255,255,0.15)" rx="10"/>
+  
+  <text x="470" y="340" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="start">
+    📊 15+ Yıl Deneyim
+  </text>
+  <text x="470" y="365" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="start">
+    📚 700+ Makale
+  </text>
+  <text x="470" y="390" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="start">
+    🎙️ Podcast Serisi
+  </text>
+  <text x="470" y="415" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="start">
+    📱 İnteraktif Uygulamalar
+  </text>
+  
+  <!-- Bottom section -->
+  <text x="600" y="500" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">
+    suatatan.com
+  </text>
+  
+  <text x="600" y="530" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.8)" text-anchor="middle">
+    Bilim • Teknoloji • İnsan • Gelişim
+  </text>
+</svg>
