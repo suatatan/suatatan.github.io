@@ -2,6 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Permissions-Policy" content="browsing-topics=()">
   {%- seo -%}
   
   <!-- Enhanced Open Graph Meta Tags for Social Media -->
@@ -138,7 +139,7 @@
   <!-- End PWA Meta Tags -->
 
   <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
+  <script type="text/javascript">
      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
      m[i].l=1*new Date();
      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -146,10 +147,13 @@
      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
      ym(98433671, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true,
-          webvisor:true
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true,
+          trackHash: true,
+          ecommerce: false,
+          defer: true
      });
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/98433671" style="position:absolute; left:-9999px;" alt="" /></div></noscript>

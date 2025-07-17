@@ -30,7 +30,7 @@ if (!fs.existsSync(iconsDir)) {
 }
 
 // Create placeholder PNG files
-const sizes = [32, 192, 512];
+const sizes = [32, 144, 192, 512];
 const placeholderPNG = createPlaceholderPNG();
 
 sizes.forEach(size => {
