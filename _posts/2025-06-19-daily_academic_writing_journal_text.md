@@ -1,12 +1,37 @@
 ---
-title: "Daily Academic Writing Journal"
-author: "Suat ATAN"
+title: "Daily Academic Writing Journal: Yapay Zeka ve Metin Madenciliği Araştırma Notları"
+description: "Dr. Suat ATAN'ın akademik araştırma günlüğü: LLM modelleri, BERT, GPT, text mining, machine learning ve veri analizi üzerine günlük notlar ve keşifler."
+keywords: "akademik araştırma, yapay zeka, LLM, BERT, GPT, text mining, machine learning, veri analizi, araştırma günlüğü, AI research"
+author: "Dr. Suat ATAN"
 date: 2025-06-19
 layout: post
-tags: [text mining, machine learning, local agenda, news analysis, clustering, classification]
+lang: tr
+image: "/images/social-preview.svg"
+categories:
+- araştırma
+- yapay-zeka
+tags: 
+  - turkish
+  - text-mining
+  - machine-learning
+  - local-agenda
+  - news-analysis
+  - clustering
+  - classification
+  - akademik-araştırma
+  - yapay-zeka
+  - LLM
+  - BERT
+  - GPT
 ---
 
-**Aşağıda eskiden akademik makale okudukça günlük tuttuğum notlar var**
+# Daily Academic Writing Journal: Yapay Zeka ve Metin Madenciliği Araştırma Notları
+
+**Bu günlük, akademik araştırmalarım sırasında okuduğum makalelerden, kitaplardan ve kaynaklardan aldığım notları içerir. [Yapay zeka](/tag/yapay-zeka), [metin madenciliği](/tag/text-mining) ve [machine learning](/tag/machine-learning) alanlarındaki güncel gelişmeleri takip etmek için düzenli tuttuğum notlar.**
+
+> **📚 Araştırma Metodu**: Bu notlar, **LLM modelleri**, **BERT**, **GPT** aileleri ve **text mining** teknikleri üzerine sürdürdüğüm akademik çalışmaların bir parçasıdır. Her entry, o günkü okuma ve araştırmalarımın özeti niteliğindedir.
+
+> **🔗 İlgili Yazılar**: [Teknoloji](/tag/teknoloji) ve [deepresearch](/tag/deepresearch) kategorilerindeki diğer makalelerimde bu konuları daha detaylı işliyorum.
 
 # 04.01.2024
 

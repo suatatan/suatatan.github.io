@@ -36,6 +36,23 @@ author:
   email: "suatatan@gmail.com"
   twitter: "suatatan"
 
+# SEO Settings
+lang: tr
+locale: tr_TR
+google_site_verification: "" # Google Search Console verification code buraya eklenecek
+bing_site_verification: "" # Bing verification code buraya eklenecek
+
+# Social Links
+social:
+  name: Dr. Suat ATAN
+  links:
+    - https://twitter.com/suatatan
+    - https://github.com/suatatan
+    - https://www.linkedin.com/in/suatatan
+
+# Google Analytics (production için)
+google_analytics: "" # Analytics ID buraya eklenecek
+
 # SEO and social media defaults
 defaults:
   - scope:
@@ -44,11 +61,20 @@ defaults:
     values:
       author: "Dr. Suat ATAN"
       image: "/images/social-preview.svg"
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      author: "Dr. Suat ATAN"
+      image: "/images/social-preview.svg"
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 future: false
 
 # Exclude from processing.

@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Disallow certain paths
+Disallow: /debug.log
+Disallow: /_site/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /vendor/
+
+# Allow important files
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+
+# Crawl delay for being nice to servers
+Crawl-delay: 1
+
+# Block specific bots if needed (examples commented out)
+# User-agent: BadBot
+# Disallow: /
+
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bingbot specific directives  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex specific directives
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1

@@ -1,7 +1,15 @@
 ---
 date: 2025-07-17
 layout: post
-title: "PODCAST Kaydı: Nefes Al, Stresi Yok Et"
+title: "PODCAST Kaydı: Nefes Al, Stresi Yok Et - 4-4-4-4 Tekniği Rehberi"
+description: "Dr. Suat ATAN'ın podcast kaydı: 4-4-4-4 nefes egzersizi tekniğiyle stres yönetimi, bilimsel temeller ve pratik uygulamalar. 15 dakikalık rehberli seans."
+keywords: "podcast, nefes egzersizi, 4-4-4-4 tekniği, Dr. Suat ATAN, stres yönetimi, meditasyon, wellness, rehberli seans, ses kaydı"
+author: "Dr. Suat ATAN"
+lang: tr
+image: "/images/podcast-social.svg"
+categories:
+- podcast
+- sağlık
 tags:
   - turkish
   - health
@@ -9,23 +17,34 @@ tags:
   - wellness
   - meditasyon
   - podcast
+  - nefes-egzersizi
+  - stres-yönetimi
+  - rehberli-seans
 ---
 
-Merhaba arkadaşlar! Ben Dr. Suat ATAN. 
+# PODCAST Kaydı: Nefes Al, Stresi Yok Et - 4-4-4-4 Tekniği Rehberi
 
-15 yıldır blog yazıyorum, bu blogda 700'den fazla makale yazdım, ama hiçbirinde bu kadar "nefes nefese" kalmamıştım 😃 Pardon kelime oyunu! Bugün nefes egzersizlerinde söz edeceğim o nedenle denemeler yaparken, nefes nefese kalmış olabilirim.😄 Şaka bir yana, bugün hayatınızı değiştirebilecek, bilimsel olarak kanıtlanmış, ücretsiz ve hiçbir ekipman gerektirmeyen bir teknikten bahsedeceğim. Adı: **4-4-4-4 Nefes Tekniği**.
+Merhaba arkadaşlar! Ben **Dr. Suat ATAN**. 
 
-## PROBLEMİ TANIMLAYALIM
+**15 yıldır** blog yazıyorum, bu blogda **700'den fazla makale** yazdım, ama hiçbirinde bu kadar "nefes nefese" kalmamıştım 😃 Pardon kelime oyunu! Bugün **nefes egzersizlerinden** söz edeceğim o nedenle denemeler yaparken, nefes nefese kalmış olabilirim.😄 
 
-Önce bir soru: Nefesinizin farkında mısınız?
+Şaka bir yana, bugün **hayatınızı değiştirebilecek**, **bilimsel olarak kanıtlanmış**, **ücretsiz** ve **hiçbir ekipman gerektirmeyen** bir teknikten bahsedeceğim. Adı: **4-4-4-4 Nefes Tekniği** (Box Breathing).
 
-Şu an kaç kişi Instagram'da scroll yaparken nefesini tutuyor? Zoom toplantısında omuzları çekilmiş vaziyette oturuyor? Ya da son 1 saatte kaç kere derin nefes aldığını hatırlıyor?
+> **🎧 Podcast Notu**: Bu yazı aynı zamanda [nefes egzersizi detaylı makalemizin](/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html) sesli versiyonudur. Yazılı rehber için makaleyi ziyaret edebilirsiniz.
 
-**İşte gerçek:** Modern hayat bizi kronik stres vampirlerine dönüştürdü. Ve bu vampirlik işte şöyle işliyor...
+## Problemi Tanımlayalım: Modern Yaşamın Stres Krizi
 
-Blog'umda 2017'de yazdığım bir makalede Stanford Üniversitesi'nin araştırmasını paylaşmıştım: Sürekli şikayet etmek, beynimizin hippokampus bölgesini daralıyor. Yani şikayet ettikçe, entelektüel kapasiteniz azalıyor. 
+Önce bir soru: **Nefesinizin farkında mısınız?**
 
-**Ama işin güzel yanı:** Nefes egzersizi tam tersi etkiyi yaratıyor!
+Şu an kaç kişi Instagram'da scroll yaparken **nefesini tutuyor**? Zoom toplantısında **omuzları çekilmiş** vaziyette oturuyor? Ya da son 1 saatte kaç kere **derin nefes** aldığını hatırlıyor?
+
+**İşte gerçek:** Modern hayat bizi **kronik stres vampirlerine** dönüştürdü. Ve bu vampirlik işte şöyle işliyor...
+
+> **🔗 İlgili Yazı**: [Wellness ve mindfulness](/tag/mindfulness) kategorisindeki diğer yazılarımda bu konuları daha detaylı işliyorum.
+
+Blog'umda **2017'de** yazdığım bir makalede **Stanford Üniversitesi'nin** araştırmasını paylaşmıştım: **Sürekli şikayet etmek**, beynimizin **hippokampus** bölgesini daralıyor. Yani şikayet ettikçe, **entelektüel kapasiteniz** azalıyor. 
+
+**Ama işin güzel yanı:** **Nefes egzersizi** tam tersi etkiyi yaratıyor!
 
 
 

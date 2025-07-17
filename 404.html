@@ -1,6 +1,9 @@
 ---
 permalink: /404.html
-layout: page
+layout: default
+title: "Sayfa Bulunamadı - 404 Hatası"
+description: "Aradığınız sayfa bulunamadı. Dr. Suat ATAN Blog ana sayfasına dönmek için linkleri kullanabilirsiniz."
+sitemap: false
 ---
 
 <style type="text/css" media="screen">
@@ -8,18 +11,88 @@ layout: page
     margin: 10px auto;
     max-width: 600px;
     text-align: center;
+    padding: 20px;
   }
   h1 {
     margin: 30px 0;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
+    color: #333;
+  }
+  .error-message {
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  .helpful-links {
+    margin: 30px 0;
+    text-align: left;
+    display: inline-block;
+  }
+  .helpful-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  .helpful-links li {
+    margin: 10px 0;
+    padding: 5px 0;
+  }
+  .helpful-links a {
+    text-decoration: none;
+    color: #667eea;
+    font-weight: bold;
+  }
+  .helpful-links a:hover {
+    text-decoration: underline;
+  }
+  .search-box {
+    margin: 20px 0;
+  }
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 100%;
   }
 </style>
 
 <div class="container">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <div class="error-message">
+    <p><strong>Sayfa Bulunamadı</strong></p>
+    <p>Aradığınız sayfa mevcut değil veya taşınmış olabilir.</p>
+  </div>
+
+  <div class="search-box">
+    <p>Aradığınızı bulmak için:</p>
+    <input type="search" class="search-input" placeholder="Site içinde arama yapın..." id="site-search">
+  </div>
+
+  <div class="helpful-links">
+    <p><strong>Yararlı Linkler:</strong></p>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">🏠 Ana Sayfa</a></li>
+      <li><a href="{{ '/index-en.html' | relative_url }}">🇬🇧 English Homepage</a></li>
+      <li><a href="{{ '/about' | relative_url }}">👨‍💼 Hakkımda</a></li>
+      <li><a href="{{ '/tag' | relative_url }}">🏷️ Etiketler</a></li>
+      <li><a href="{{ '/sitemap.xml' | relative_url }}">🗺️ Site Haritası</a></li>
+    </ul>
+  </div>
+
+  <p><em>Eğer bu sayfaya bir link aracılığıyla geldiseniz, lütfen bana <a href="mailto:{{ site.email }}">{{ site.email }}</a> adresinden bildirin.</em></p>
 </div>
+
+<script>
+document.getElementById('site-search').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    const query = e.target.value;
+    if (query) {
+      // Google site search
+      window.open('https://www.google.com/search?q=site:{{ site.url }} ' + encodeURIComponent(query), '_blank');
+    }
+  }
+});
+</script>

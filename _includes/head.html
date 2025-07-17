@@ -3,11 +3,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Permissions-Policy" content="browsing-topics=()">
+  
+  <!-- Jekyll SEO Tag -->
   {%- seo -%}
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
+  <!-- Language and locale -->
+  <meta http-equiv="content-language" content="tr">
+  <meta name="language" content="Turkish">
   
   <!-- Enhanced Open Graph Meta Tags for Social Media -->
   <meta property="og:site_name" content="Dr. Suat ATAN Blog">
   <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
   
   {% if page.layout == 'post' %}
     <!-- Blog post specific OG tags -->
@@ -61,7 +76,32 @@
   
   <!-- Additional meta for better preview -->
   <meta name="author" content="Dr. Suat ATAN">
-  <meta name="robots" content="index, follow">
+  
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//mc.yandex.ru">
+  
+  {% if page.layout == 'post' %}
+    <!-- Keywords for posts -->
+    {% if page.tags and page.tags.size > 0 %}
+      <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+    {% endif %}
+    
+    <!-- Article specific meta -->
+    <meta name="article:author" content="Dr. Suat ATAN">
+    <meta name="article:publisher" content="https://suatatan.com">
+    
+    <!-- Estimated reading time -->
+    {% assign words = page.content | number_of_words %}
+    {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+    <meta name="twitter:label1" content="Tahmini okuma süresi">
+    <meta name="twitter:data1" content="{{ reading_time }} dakika">
+    <meta name="twitter:label2" content="Yazar">
+    <meta name="twitter:data2" content="Dr. Suat ATAN">
+  {% else %}
+    <meta name="keywords" content="Dr. Suat ATAN, data science, yapay zeka, teknoloji, blog, artificial intelligence, machine learning, veri bilimi">
+  {% endif %}
   
   {% if page.layout == 'post' %}
     <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
@@ -74,29 +114,92 @@
   {
     "@context": "https://schema.org",
     "@type": {% if page.layout == 'post' %}"BlogPosting"{% else %}"WebSite"{% endif %},
+    "name": "{{ site.title }}",
     "headline": "{{ page.title | default: site.title }}",
+    "description": "{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}",
+    "url": "{{ site.url }}{{ page.url }}",
     "author": {
       "@type": "Person",
       "name": "Dr. Suat ATAN",
-      "jobTitle": "Data Scientist",
-      "description": "Data Scientist, AI Expert, Academic"
+      "jobTitle": "Data Scientist & AI Expert",
+      "description": "Data Scientist, AI Expert, Academic Researcher",
+      "url": "{{ site.url }}",
+      "sameAs": [
+        "https://twitter.com/suatatan",
+        "https://github.com/suatatan",
+        "https://www.linkedin.com/in/suatatan"
+      ]
     },
     {% if page.layout == 'post' %}
     "datePublished": "{{ page.date | date_to_xmlschema }}",
     "dateModified": "{{ page.date | date_to_xmlschema }}",
+    "wordCount": {{ page.content | number_of_words }},
+    {% assign reading_time = page.content | number_of_words | divided_by: 200 | plus: 1 %}
+    "timeRequired": "PT{{ reading_time }}M",
+    {% if page.tags and page.tags.size > 0 %}
+    "keywords": "{{ page.tags | join: ', ' }}",
+    {% endif %}
+    "articleSection": "{{ page.categories | first | default: 'Blog' }}",
+    "inLanguage": "tr-TR",
     {% endif %}
     "publisher": {
       "@type": "Person",
-      "name": "Dr. Suat ATAN"
+      "name": "Dr. Suat ATAN",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/images/social-preview-default.svg"
+      }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "{{ site.url }}{{ page.url }}"
     },
-    "image": "{{ site.url }}{% if page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise' %}/images/breathing-exercise-social.svg{% else %}/images/social-preview-default.svg{% endif %}",
-    "url": "{{ site.url }}{{ page.url }}"
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}{% if page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise' %}/images/breathing-exercise-social.svg{% else %}/images/social-preview-default.svg{% endif %}",
+      "width": 1200,
+      "height": 630
+    }{% if page.layout != 'post' %},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }{% endif %}
   }
   </script>
+  
+  {% if page.layout == 'post' %}
+  <!-- BreadcrumbList for blog posts -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "{{ site.url }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "{{ site.url }}/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ page.title }}",
+        "item": "{{ site.url }}{{ page.url }}"
+      }
+    ]
+  }
+  </script>
+  {% endif %}
   <!-- End Enhanced Open Graph Meta Tags -->
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
