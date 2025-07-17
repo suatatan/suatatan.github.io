@@ -303,3 +303,5 @@ Deneyimlerini paylaşmanın, bilgiyi yaymanın “kutsallığına” ve bereketi
 İzlediğinizde tüylerinizi diken diken edecek 18'inden küçük ama 20 küsür dil bilen çocuk: [https://www.youtube.com/watch?v=Km9-DiFaxpU](https://www.youtube.com/watch?v=Km9-DiFaxpU)
 
 Chris Lonsale'in konuşması: [https://www.youtube.com/watch?v=d0yGdNEWdn0&t=30s](https://www.youtube.com/watch?v=d0yGdNEWdn0&t=30s)
+
+[Hadar Shamesh'den aldığım notlar](diller/2023/02/09/hadar-shemeshin-dil-pratikleri-ile-ilgili-onerileri.html)
