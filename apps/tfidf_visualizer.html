@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TF-IDF Görselleştirici (Dr. Suat ATAN)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .dataset-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .dataset-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #6c757d;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .dataset-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .dataset-btn.active {
+            background: #007bff;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: #007bff;
+        }
+        
+        .calculate-btn {
+            padding: 12px 30px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .calculate-btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .texts-panel {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .text-item {
+            margin-bottom: 15px;
+        }
+        
+        .text-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+        
+        .text-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 60px;
+        }
+        
+        .results-panel {
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .heatmap-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        
+        .heatmap {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+        }
+        
+        .heatmap th {
+            background: #343a40;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+            border: 1px solid #495057;
+        }
+        
+        .heatmap td {
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            font-size: 11px;
+            min-width: 40px;
+        }
+        
+        .legend {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .legend-bar {
+            width: 200px;
+            height: 20px;
+            background: linear-gradient(to right, #0066cc, #ffffff, #ff4444);
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .dataset-selector {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TF-IDF Görselleştirici</h1>
+            <p>Metin analizi ve kelime önem skorlarını interaktif olarak keşfedin</p>
+        </div>
+        
+        <div class="controls">
+            <div class="dataset-selector">
+                <button class="dataset-btn active" onclick="loadDataset('teknoloji')">🔧 Teknoloji</button>
+                <button class="dataset-btn" onclick="loadDataset('doga')">🌿 Doğa</button>
+                <button class="dataset-btn" onclick="loadDataset('spor')">⚽ Spor</button>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Kelime ara veya filtrele..." id="wordFilter">
+                <button class="calculate-btn" onclick="calculateTFIDF()">📊 Hesapla</button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="texts-panel">
+                <h3 style="margin-bottom: 15px; color: #495057;">📝 Metin Koleksiyonu</h3>
+                <div id="textsContainer"></div>
+            </div>
+            
+            <div class="results-panel">
+                <h3 style="margin-bottom: 15px; color: #495057;">📈 TF-IDF Analiz Sonuçları</h3>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalWords">0</div>
+                        <div class="stat-label">Toplam Kelime</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="uniqueWords">0</div>
+                        <div class="stat-label">Benzersiz Kelime</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="avgTfidf">0.00</div>
+                        <div class="stat-label">Ort. TF-IDF</div>
+                    </div>
+                </div>
+                
+                <div class="heatmap-container">
+                    <table class="heatmap" id="heatmapTable">
+                        <thead>
+                            <tr>
+                                <th>Kelime</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                
+                <div class="legend">
+                    <span>Düşük</span>
+                    <div class="legend-bar"></div>
+                    <span>Yüksek</span>
+                    <span style="margin-left: 10px;">TF-IDF Skorları</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const datasets = {
+            teknoloji: [
+                "Yapay zeka ve makine öğrenmesi teknolojilerinin gelişimi hızla devam ediyor.",
+                "Yazılım geliştirme süreçlerinde DevOps metodolojileri yaygın olarak kullanılıyor.",
+                "Bulut bilişim hizmetleri işletmeler için kritik hale geldi.",
+                "Mobil uygulama geliştirme platformları sürekli yenileniyor.",
+                "Blockchain teknolojisi finans sektörünü dönüştürüyor.",
+                "Siber güvenlik uzmanlarına olan talep artıyor.",
+                "Nesnelerin interneti IoT cihazları evlerimize giriyor.",
+                "Büyük veri analizi işletme kararlarını etkiliyor.",
+                "Quantum bilgisayarlar gelecekte teknoloji dünyasını değiştirecek.",
+                "Sanal gerçeklik ve artırılmış gerçeklik uygulamaları yaygınlaşıyor."
+            ],
+            doga: [
+                "Ormanlar gezegenimizdeki en önemli ekosistemlerden biridir.",
+                "Deniz korumaya ihtiyaç duyuyor çünkü plastik kirliliği artıyor.",
+                "Kuşlar göç rotalarını iklim değişikliği nedeniyle değiştiriyor.",
+                "Arılar çiçek tozlaşmasında kritik rol oynuyor.",
+                "Dağ ekosistemleri benzersiz bitki ve hayvan türlerine ev sahipliği yapıyor.",
+                "Nehirler ve göller tatlı su kaynaklarımızın korunması gerekiyor.",
+                "Kelebek popülasyonları habitat kaybı nedeniyle azalıyor.",
+                "Ağaç dikimi karbon ayak izimizi azaltmaya yardımcı oluyor.",
+                "Yaban hayatı koruma alanları biyoçeşitlilik için hayati önem taşıyor.",
+                "Çevre bilinci artışı doğal yaşamı korumada umut veriyor."
+            ],
+            spor: [
+                "Futbol dünyada en popüler spor dallarından biridir.",
+                "Basketbol oyuncuları yüksek atletik performans sergiliyor.",
+                "Yüzme tüm vücut kaslarını çalıştıran mükemmel bir egzersiz.",
+                "Tenis oyuncuları hızlı refleksler geliştirmelidir.",
+                "Koşu dayanıklılık sporlarının temelidir.",
+                "Voleybol takım çalışması gerektiren dinamik bir spor.",
+                "Golf konsantrasyon ve hassasiyet gerektiren bir spor dalı.",
+                "Bisiklet sürmek hem eğlenceli hem sağlıklı bir aktivite.",
+                "Dağcılık cesaret ve fiziksel güç gerektiren ekstrem spor.",
+                "Yoga hem zihinsel hem fiziksel sağlık için faydalıdır."
+            ]
+        };
+
+        let currentTexts = [];
+        let tfidfResults = {};
+        let filteredWords = [];
+
+        function loadDataset(datasetName) {
+            // Update active button
+            document.querySelectorAll('.dataset-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            currentTexts = [...datasets[datasetName]];
+            renderTexts();
+            calculateTFIDF();
+        }
+
+        function renderTexts() {
+            const container = document.getElementById('textsContainer');
+            container.innerHTML = '';
+            
+            currentTexts.forEach((text, index) => {
+                const textItem = document.createElement('div');
+                textItem.className = 'text-item';
+                textItem.innerHTML = `
+                    <div class="text-label">Metin ${index + 1}</div>
+                    <textarea class="text-input" onchange="updateText(${index}, this.value)">${text}</textarea>
+                `;
+                container.appendChild(textItem);
+            });
+        }
+
+        function updateText(index, newText) {
+            currentTexts[index] = newText;
+        }
+
+        function preprocessText(text) {
+            return text.toLowerCase()
+                .replace(/[^\w\s]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim()
+                .split(' ')
+                .filter(word => word.length > 2);
+        }
+
+        function calculateTF(words) {
+            const tf = {};
+            const totalWords = words.length;
+            
+            for (const word of words) {
+                tf[word] = (tf[word] || 0) + 1;
+            }
+            
+            for (const word in tf) {
+                tf[word] = tf[word] / totalWords;
+            }
+            
+            return tf;
+        }
+
+        function calculateIDF(documents) {
+            const idf = {};
+            const totalDocuments = documents.length;
+            
+            // Get all unique words
+            const allWords = new Set();
+            documents.forEach(doc => {
+                const words = preprocessText(doc);
+                words.forEach(word => allWords.add(word));
+            });
+            
+            // Calculate IDF for each word
+            for (const word of allWords) {
+                let docsWithWord = 0;
+                documents.forEach(doc => {
+                    const words = preprocessText(doc);
+                    if (words.includes(word)) {
+                        docsWithWord++;
+                    }
+                });
+                idf[word] = Math.log(totalDocuments / docsWithWord);
+            }
+            
+            return idf;
+        }
+
+        function calculateTFIDF() {
+            if (currentTexts.length === 0) return;
+            
+            const idf = calculateIDF(currentTexts);
+            const tfidfMatrix = [];
+            const allWords = Object.keys(idf);
+            
+            // Calculate TF-IDF for each document
+            currentTexts.forEach((text, docIndex) => {
+                const words = preprocessText(text);
+                const tf = calculateTF(words);
+                const docTfidf = {};
+                
+                for (const word of allWords) {
+                    const tfValue = tf[word] || 0;
+                    const idfValue = idf[word] || 0;
+                    docTfidf[word] = tfValue * idfValue;
+                }
+                
+                tfidfMatrix.push(docTfidf);
+            });
+            
+            tfidfResults = { matrix: tfidfMatrix, words: allWords, idf: idf };
+            updateStats();
+            renderHeatmap();
+        }
+
+        function updateStats() {
+            const allWords = tfidfResults.words;
+            const matrix = tfidfResults.matrix;
+            
+            let totalWords = 0;
+            let totalTfidf = 0;
+            let count = 0;
+            
+            currentTexts.forEach(text => {
+                totalWords += preprocessText(text).length;
+            });
+            
+            matrix.forEach(doc => {
+                Object.values(doc).forEach(score => {
+                    totalTfidf += score;
+                    count++;
+                });
+            });
+            
+            document.getElementById('totalWords').textContent = totalWords;
+            document.getElementById('uniqueWords').textContent = allWords.length;
+            document.getElementById('avgTfidf').textContent = (totalTfidf / count).toFixed(3);
+        }
+
+        function getColorForScore(score, minScore, maxScore) {
+            if (maxScore === minScore) return '#ffffff';
+            
+            const normalized = (score - minScore) / (maxScore - minScore);
+            
+            if (normalized < 0.5) {
+                const intensity = Math.floor(255 * (1 - normalized * 2));
+                return `rgb(${intensity}, ${intensity}, 255)`;
+            } else {
+                const intensity = Math.floor(255 * (2 - normalized * 2));
+                return `rgb(255, ${intensity}, ${intensity})`;
+            }
+        }
+
+        function renderHeatmap() {
+            const filterValue = document.getElementById('wordFilter').value.toLowerCase();
+            const words = tfidfResults.words.filter(word => 
+                word.toLowerCase().includes(filterValue)
+            ).sort((a, b) => {
+                // Sort by average TF-IDF score
+                const avgA = tfidfResults.matrix.reduce((sum, doc) => sum + doc[a], 0) / tfidfResults.matrix.length;
+                const avgB = tfidfResults.matrix.reduce((sum, doc) => sum + doc[b], 0) / tfidfResults.matrix.length;
+                return avgB - avgA;
+            }).slice(0, 20); // Show top 20 words
+            
+            const table = document.getElementById('heatmapTable');
+            
+            // Clear existing content
+            table.innerHTML = '';
+            
+            // Create header
+            const header = table.createTHead();
+            const headerRow = header.insertRow();
+            headerRow.insertCell().innerHTML = '<strong>Kelime</strong>';
+            
+            for (let i = 0; i < currentTexts.length; i++) {
+                const cell = headerRow.insertCell();
+                cell.innerHTML = `<strong>Metin ${i + 1}</strong>`;
+            }
+            
+            // Calculate min and max scores for coloring
+            let minScore = Infinity;
+            let maxScore = -Infinity;
+            
+            words.forEach(word => {
+                tfidfResults.matrix.forEach(doc => {
+                    const score = doc[word] || 0;
+                    minScore = Math.min(minScore, score);
+                    maxScore = Math.max(maxScore, score);
+                });
+            });
+            
+            // Create body
+            const tbody = table.createTBody();
+            
+            words.forEach(word => {
+                const row = tbody.insertRow();
+                const wordCell = row.insertCell();
+                wordCell.innerHTML = `<strong>${word}</strong>`;
+                wordCell.style.backgroundColor = '#f8f9fa';
+                
+                tfidfResults.matrix.forEach(doc => {
+                    const score = doc[word] || 0;
+                    const cell = row.insertCell();
+                    cell.textContent = score.toFixed(3);
+                    cell.style.backgroundColor = getColorForScore(score, minScore, maxScore);
+                    cell.style.color = score > (maxScore - minScore) / 2 + minScore ? 'white' : 'black';
+                });
+            });
+        }
+
+        // Initialize with technology dataset
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDataset('teknoloji');
+            
+            // Add filter functionality
+            document.getElementById('wordFilter').addEventListener('input', function() {
+                if (tfidfResults.words) {
+                    renderHeatmap();
+                }
+            });
+        });
+    </script>
+
+    Dr. Suat ATAN tarafından geliştirildi. İzinsiz kullanılamaz.
+</body>
+</html>

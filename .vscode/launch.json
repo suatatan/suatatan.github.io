@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "🚀 Jekyll Blog Server",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/dummy.js",
+            "preLaunchTask": "🚀 Jekyll Server Başlat",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "key": "f5",
+        "command": "workbench.action.debug.start",
+        "when": "!inDebugMode && resourceExtname == '.html' || resourceExtname == '.md'"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "🚀 Jekyll Server Başlat"
+    }
+]
