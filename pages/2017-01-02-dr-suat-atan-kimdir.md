@@ -11,7 +11,7 @@ eyebrow: PROFESYONEL PROFİL · KIDEMLİ VE LİDER POZİSYONLAR
 
 <div class="profile-actions">
   <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Kariyer%20fırsatı">İletişime geçin</a>
-  <a class="button button-secondary" href="https://www.linkedin.com/in/suatatan" target="_blank" rel="me noopener">LinkedIn profili</a>
+  <a class="button button-secondary" href="https://www.linkedin.com/in/suat-atan/" target="_blank" rel="me noopener">LinkedIn profili</a>
   <a class="button button-secondary" href="https://github.com/suatatan" target="_blank" rel="noopener">Kod arşivi</a>
 </div>
 

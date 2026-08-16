@@ -46,9 +46,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .wordmark small { padding: 3px 6px 2px; border: 1px solid rgba(7,88,217,.28); border-radius: 999px; color: var(--blue); font-size: 9px; font-weight: 800; line-height: 1; letter-spacing: .12em; text-transform: uppercase; }
 .site-nav { display: flex; align-items: center; gap: clamp(26px, 3.5vw, 58px); }
 .site-nav a { font-weight: 500; text-decoration: none; padding-block: 8px; position: relative; }
-.site-nav a:not(.language-switch)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 3px; height: 1px; background: var(--blue); transition: right .2s ease; }
-.site-nav a:hover::after, .site-nav a:focus-visible::after { right: 0; }
-.language-switch { color: var(--blue); font-weight: 700 !important; }
+.site-nav > a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 3px; height: 1px; background: var(--blue); transition: right .2s ease; }
+.site-nav > a:hover::after, .site-nav > a:focus-visible::after { right: 0; }
+.language-menu { display: flex; align-items: center; gap: 3px; padding-left: 10px; border-left: 1px solid var(--line); }
+.language-menu a { min-width: 31px; padding: 6px 7px; border-radius: 999px; color: var(--muted); font-size: 12px; font-weight: 800; text-align: center; }
+.language-menu a[aria-current="page"] { color: var(--blue); background: #edf4ff; }
 .menu-button { display: none; border: 0; background: transparent; color: var(--ink); padding: 8px; }
 
 .hero { min-height: 560px; display: grid; grid-template-columns: 62% 38%; align-items: center; margin-block: 26px; padding: 58px 5.2%; position: relative; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(90deg, rgba(255,254,250,.99) 0%, rgba(255,254,250,.96) 48%, rgba(255,254,250,.48) 76%, rgba(255,254,250,.12) 100%), url('/images/hero-data-field.png') right center / auto 100% no-repeat; }
@@ -257,6 +259,8 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
   .site-nav { position: fixed; inset: 68px 0 auto 0; padding: 20px 18px 26px; flex-direction: column; align-items: flex-start; gap: 10px; border-bottom: 1px solid var(--line); background: var(--paper); transform: translateY(-140%); transition: transform .25s ease; z-index: -1; }
   .site-nav.is-open { transform: translateY(0); }
   .site-nav a { width: 100%; padding: 10px 0; }
+  .language-menu { width: 100%; gap: 8px; padding: 12px 0 0; border-top: 1px solid var(--line); border-left: 0; }
+  .language-menu a { width: auto; padding: 7px 12px; }
   .hero { min-height: auto; margin-block: 14px; padding: 52px 26px 46px; background: linear-gradient(90deg, rgba(255,254,250,.98), rgba(255,254,250,.86)), url('/images/hero-data-field.png') center / cover no-repeat; }
   h1 { font-size: clamp(45px, 13vw, 64px); }
   .hero-intro { font-size: 17px; }

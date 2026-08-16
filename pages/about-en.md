@@ -11,7 +11,7 @@ eyebrow: PROFESSIONAL PROFILE · OPEN TO SENIOR & LEAD ROLES
 
 <div class="profile-actions">
   <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Career%20opportunity">Contact me</a>
-  <a class="button button-secondary" href="https://www.linkedin.com/in/suatatan" target="_blank" rel="me noopener">LinkedIn profile</a>
+  <a class="button button-secondary" href="https://www.linkedin.com/in/suat-atan/" target="_blank" rel="me noopener">LinkedIn profile</a>
   <a class="button button-secondary" href="https://github.com/suatatan" target="_blank" rel="noopener">Code archive</a>
 </div>
 

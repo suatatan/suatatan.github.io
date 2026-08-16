@@ -165,3 +165,85 @@ tr:
   archive_label: "Açık arşiv"
   archive_text: "2006’dan bugüne teknoloji, veri, öğrenme ve hayat üzerine notlar."
   archive_cta: "Arşivi keşfet"
+
+fr:
+  lang_name: Français
+  nav:
+    - label: Expertise
+      url: "#expertise"
+    - label: Réalisations
+      url: "#work"
+    - label: Projets
+      url: "#ventures"
+    - label: Publications
+      url: "#insights"
+    - label: À propos
+      url: "#about"
+  eyebrow: "INTELLIGENCE ARTIFICIELLE • SCIENCE DES DONNÉES • TRANSFORMATION DES ORGANISATIONS"
+  headline: "Je transforme des idées complexes en systèmes d’IA qui fonctionnent."
+  intro: "Avec plus de 15 ans d’expérience, je conçois des solutions RAG, NLP et data pour les organisations, et j’aide leurs équipes à les adopter avec confiance."
+  primary_cta: "Travaillons ensemble"
+  secondary_cta: "Découvrir mes réalisations"
+  credibility: "Des solutions orientées production pour des banques, institutions publiques, universités et entreprises du secteur énergétique"
+  work_title: "Réalisations sélectionnées"
+  work:
+    - icon: forum
+      title: "Assistant RAG d’entreprise"
+      description: "Un assistant sécurisé et connecté aux documents internes pour retrouver et exploiter les connaissances de l’organisation."
+      detail: "Architecture, stratégie de recherche, évaluation et déploiement pour un accès fiable aux connaissances de l’entreprise."
+    - icon: school
+      title: "Formation Gemini & RAG"
+      description: "Une formation pratique qui permet aux équipes de passer des concepts d’IA générative à des applications fonctionnelles."
+      detail: "Ateliers fondés sur des cas réels : conception RAG, développement d’applications et adoption responsable."
+    - icon: monitoring
+      title: "Prévision de la demande énergétique"
+      description: "Des modèles de séries temporelles et de machine learning au service de la planification et des décisions opérationnelles."
+      detail: "De la qualité des données aux prévisions explicables et directement exploitables par les décideurs."
+  expertise_title: "De la stratégie à la production"
+  expertise_intro: "J’interviens à la rencontre de la profondeur technique, des réalités organisationnelles et d’une mise en œuvre mesurable."
+  expertise:
+    - title: "IA d’entreprise & RAG"
+      text: "Recherche d’information, recherche sémantique, intelligence documentaire et assistants d’IA prêts pour la production."
+    - title: "Systèmes data & NLP"
+      text: "Analyse de textes, prévision et produits data conçus autour de décisions opérationnelles concrètes."
+    - title: "Formation appliquée à l’IA"
+      text: "Des programmes pratiques pour développer les compétences IA des équipes techniques et métier."
+  ventures_label: "PRODUITS & INITIATIVES"
+  ventures_title: "Apprendre, construire et explorer"
+  ventures:
+    - icon: child_care
+      title: "FYLARK"
+      text: "Un programme technologique accessible où les enfants aux profils d’apprentissage différents découvrent le code et l’intelligence artificielle par petites étapes visuelles."
+      cta: "Découvrir FYLARK"
+      url: "https://fylark.com"
+    - icon: play_circle
+      title: "Cours Udemy"
+      text: "Des formations pratiques et accessibles qui transforment l’expérience en science des données et en IA en compétences utiles."
+      cta: "Voir les cours"
+      url: "https://www.udemy.com/user/suat-atan/"
+    - icon: menu_book
+      title: "Livres"
+      text: "Des ouvrages publiés sur l’analyse de données avec R, Google App Engine et l’analyse des réseaux."
+      cta: "Découvrir les livres"
+      url: "/pages/books-en.html"
+  newsletter_label: "VERİMLİLİK BÜLTENİ"
+  newsletter_text: "Des essais en turc sur l’intelligence artificielle, l’apprentissage et la réflexion."
+  newsletter_cta: "Voir la newsletter"
+  newsletter_secondary_label: "3000 DAYS"
+  newsletter_secondary_text: "Des réflexions en anglais sur la méditation, l’attention et la vie intérieure."
+  newsletter_secondary_cta: "Lire 3000 Days"
+  podcast_label: "PODCAST VERİMLİLİK BÜLTENİ"
+  podcast_text: "Des conversations et essais audio en turc sur l’apprentissage, la technologie et le travail."
+  podcast_cta: "Écouter sur Spotify"
+  about_title: "Ingénieur, data scientist, formateur et auteur"
+  about_text: "Titulaire d’un doctorat consacré au text mining, j’ai ensuite mené des recherches postdoctorales en NLP. Dans les institutions publiques, les secteurs réglementés et les projets internationaux, j’ai conduit des initiatives d’IA, de data et de logiciel, de l’idée à la production."
+  about_link: "Voir mon profil professionnel (EN)"
+  company_label: "Prestations professionnelles"
+  company_text: "Les missions de conseil et de formation sont réalisées par Ontario Bilişim ve Danışmanlık Ltd. Şti., fondée par le Dr Suat Atan."
+  company_cta: "Visiter Ontario Cloud"
+  contact_title: "Vous avez une initiative d’IA à concrétiser ?"
+  contact_text: "Expliquez-moi ce que vous souhaitez construire, améliorer ou transmettre. Je vous proposerai une prochaine étape concrète."
+  contact_cta: "Démarrer une conversation"
+  archive_label: "Archives ouvertes"
+  archive_text: "Des notes sur la technologie, la data, l’apprentissage et la vie depuis 2006."
+  archive_cta: "Explorer les archives"
