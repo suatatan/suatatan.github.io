@@ -1,6 +1,7 @@
 {% assign post_lang = page.lang | default: 'tr' %}
 {% if page.tags contains 'english' %}{% assign post_lang = 'en' %}{% endif %}
 {% assign post_description = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+{% assign share_image = page.image | default: '/images/social-preview-2026.png' %}
 <!doctype html>
 <html lang="{{ post_lang }}">
   <head>
@@ -15,13 +16,22 @@
     <meta property="og:title" content="{{ page.title | escape }}">
     <meta property="og:description" content="{{ post_description | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ page.image | default: '/images/social-preview.svg' | absolute_url }}">
+    <meta property="og:image" content="{{ share_image | absolute_url }}">
+    <meta property="og:image:secure_url" content="{{ share_image | absolute_url }}">
+    <meta property="og:image:alt" content="{{ page.title | escape }} — Dr. Suat Atan">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | escape }}">
+    <meta name="twitter:description" content="{{ post_description | escape }}">
+    <meta name="twitter:image" content="{{ share_image | absolute_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}?v=20260816-4">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/icons/png/icon-32x32.png' | relative_url }}">
+    <meta name="theme-color" content="#0758d9">
+    <link rel="icon" type="image/svg+xml" href="{{ '/images/icons/favicon-2026.svg' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/icons/png/favicon-32x32-2026.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/icons/png/apple-touch-icon-2026.png' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
   </head>
   <body>
     <a class="skip-link" href="#article">{% if post_lang == 'en' %}Skip to article{% else %}Yazıya geç{% endif %}</a>
