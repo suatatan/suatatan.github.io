@@ -92,6 +92,17 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
 .expertise-list h3 { margin: 3px 0 0; font-size: 18px; }
 .expertise-list p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
 
+.ventures-section { padding-block: 92px; border-top: 1px solid var(--line); background: #fff; }
+.ventures-heading { max-width: 760px; margin-bottom: 42px; }
+.ventures-heading h2 { margin: 0; font: 400 clamp(42px, 4vw, 62px)/1.05 "DM Serif Display", Georgia, serif; letter-spacing: -.025em; }
+.venture-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
+.venture-card { min-height: 310px; padding: 34px; display: flex; flex-direction: column; align-items: flex-start; }
+.venture-card + .venture-card { border-left: 1px solid var(--line); }
+.venture-icon { color: var(--blue); font-size: 34px; }
+.venture-card h3 { margin: 32px 0 10px; font: 400 31px/1.1 "DM Serif Display", Georgia, serif; }
+.venture-card p { margin: 0 0 28px; color: var(--muted); font-size: 15px; }
+.venture-card .text-link { margin-top: auto; }
+
 .insights-section { border-block: 1px solid #cddcf0; background: var(--soft); }
 .insight-row { min-height: 100px; display: grid; grid-template-columns: 46px 1fr auto; align-items: center; gap: 20px; }
 .insight-icon { color: var(--blue); font-size: 34px; }
@@ -120,6 +131,8 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
   .hero { grid-template-columns: 1fr; }
   .hero-art { display: none; }
   .work-grid, .expertise-section, .about-section { grid-template-columns: 1fr; gap: 42px; }
+  .venture-grid { grid-template-columns: 1fr; }
+  .venture-card + .venture-card { border-left: 0; border-top: 1px solid var(--line); }
   .work-item { grid-template-columns: 44px 1fr 40px; }
   .work-item > div { grid-template-columns: 210px 1fr; }
   .about-section { gap: 55px; }
@@ -144,7 +157,7 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
   .work-item > div { grid-column: 2; display: block; }
   .work-item > div p { margin-top: 8px; }
   .work-toggle { grid-column: 3; grid-row: 1; }
-  .expertise-section, .about-section { padding-block: 72px; }
+  .expertise-section, .ventures-section, .about-section { padding-block: 72px; }
   .expertise-list article { grid-template-columns: 42px 1fr; }
   .expertise-list article p { grid-column: 2; }
   .insight-row { padding-block: 24px; grid-template-columns: 36px 1fr; }
