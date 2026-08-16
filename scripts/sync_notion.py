@@ -166,7 +166,7 @@ def query_published() -> list[dict]:
     while True:
         payload: dict = {
             "page_size": 100,
-            "filter": {"property": "Status", "status": {"equals": "Published"}},
+            "filter": {"property": "Status", "select": {"equals": "Published"}},
             "sorts": [{"property": "Published", "direction": "descending"}],
         }
         if cursor:
