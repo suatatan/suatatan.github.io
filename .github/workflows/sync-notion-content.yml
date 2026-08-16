@@ -19,7 +19,7 @@ jobs:
       - name: Pull published pages from Notion
         env:
           NOTION_ACCESS_TOKEN: ${{ secrets.NOTION_ACCESS_TOKEN }}
-          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+          NOTION_DATA_SOURCE_ID: 53e576c2-7037-4888-82ea-4aa8b9e37f2d
         run: python3 scripts/sync_notion.py
       - name: Validate Jekyll build
         run: bundle exec jekyll build
