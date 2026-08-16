@@ -12,7 +12,10 @@ eyebrow: PROFESSIONAL PROFILE · OPEN TO SENIOR & LEAD ROLES
 <div class="profile-actions">
   <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Career%20opportunity">Contact me</a>
   <a class="button button-secondary" href="https://www.linkedin.com/in/suatatan" target="_blank" rel="me noopener">LinkedIn profile</a>
+  <a class="button button-secondary" href="https://github.com/suatatan" target="_blank" rel="noopener">Code archive</a>
 </div>
+
+<p class="profile-note">My GitHub contains earlier public projects and technical experiments; recent enterprise work is primarily in private repositories.</p>
 
 <div class="profile-facts">
   <div><strong>Experience</strong><span>15+ years in AI, data and enterprise software</span></div>
@@ -75,7 +78,7 @@ I also created [FYLARK](https://fylark.com), an accessible coding and AI-learnin
   <p>I am open to conversations about senior and lead roles in data science, machine learning, applied AI and AI platforms—particularly work that combines technical leadership with production delivery.</p>
   <div class="profile-actions">
     <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Senior%20AI%20or%20Data%20role">Email Suat</a>
-    <a class="text-link" href="https://github.com/suatatan" target="_blank" rel="noopener">Review GitHub</a>
+    <a class="text-link" href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub code archive</a>
   </div>
 </div>
 
