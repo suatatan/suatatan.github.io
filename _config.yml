@@ -18,13 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Suat ATAN Blogu
+title: Dr. Suat Atan — AI, RAG & Data Solutions
 email: suatatan@gmail.com
 description: >-
-  Suat ATAN Blogu, felsefe, bilim, teknoloji, kişisel gelişim ve güncel konular üzerine özgün yazılar sunar. 
-  2006'dan bu yana birikmiş arşiviyle, düşünceye ve bilgiye değer veren okurlar için 600'den fazla yazıyla zengin bir içerik kaynağıdır. 
-  Kitap önerileri, denemeler, aforizmalar ve dijital dünyaya dair notlar ile her yaştan okura hitap eder. 
-  Suat ATAN'ın kaleminden, samimi ve özgün bir blog deneyimi. Türkçe ve İngilizce içerikler mevcuttur.
+  Dr. Suat Atan builds enterprise RAG, NLP and data solutions and helps
+  organizations adopt artificial intelligence through practical training.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://suatatan.com" # the base hostname & protocol for your site
 twitter_username: suatatan
@@ -37,8 +35,8 @@ author:
   twitter: "suatatan"
 
 # SEO Settings
-lang: tr
-locale: tr_TR
+lang: en
+locale: en_US
 google_site_verification: "" # Google Search Console verification code buraya eklenecek
 bing_site_verification: "" # Bing verification code buraya eklenecek
 

@@ -1,7 +1,6 @@
 ---
-layout: home
-title: Dr. Suat ATAN Blog - Data Science, Yapay Zeka ve Teknoloji
-description: Dr. Suat ATAN'ın data science, yapay zeka, teknoloji ve yaşam bilimi üzerine uzman görüşleri. 15+ yıllık deneyim, 700+ makale, podcast ve interaktif uygulamalar ile zengin içerik.
-keywords: Dr. Suat ATAN, data science, yapay zeka, teknoloji, blog, artificial intelligence, machine learning, veri bilimi, akademik, uzman
-lang: tr
+layout: landing
+title: Dr. Suat Atan — AI, RAG & Data Solutions
+description: Dr. Suat Atan builds enterprise RAG, NLP and data solutions and helps organizations adopt artificial intelligence through practical training.
+lang: en
 ---
