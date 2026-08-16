@@ -7,6 +7,8 @@ en:
       url: "#expertise"
     - label: Work
       url: "#work"
+    - label: Ventures
+      url: "#ventures"
     - label: Insights
       url: "#insights"
     - label: About
@@ -40,6 +42,24 @@ en:
       text: "Text analytics, forecasting and data products designed around real operational decisions."
     - title: "Applied AI Training"
       text: "Practical programs that help technical and business teams build useful AI capability."
+  ventures_label: "PRODUCTS & VENTURES"
+  ventures_title: "Ways to learn, build and explore"
+  ventures:
+    - icon: child_care
+      title: "FYLARK"
+      text: "An accessible technology program where differently learning children explore coding and artificial intelligence through small, visual steps."
+      cta: "Explore FYLARK"
+      url: "https://fylark.com"
+    - icon: play_circle
+      title: "Udemy courses"
+      text: "Practical, accessible training that turns data science and artificial intelligence experience into useful skills."
+      cta: "View courses"
+      url: "https://www.udemy.com/user/suat-atan/"
+    - icon: menu_book
+      title: "Books"
+      text: "Published work on data analysis with R, Google App Engine and network analysis."
+      cta: "Browse the books"
+      url: "/pages/books-en.html"
   newsletter_label: "VERİMLİLİK BÜLTENİ"
   newsletter_text: "Turkish essays on artificial intelligence, learning and thinking."
   newsletter_cta: "Visit the newsletter"
@@ -65,6 +85,8 @@ tr:
       url: "#expertise"
     - label: Projeler
       url: "#work"
+    - label: Girişimler
+      url: "#ventures"
     - label: Yazılar
       url: "#insights"
     - label: Hakkımda
@@ -98,6 +120,24 @@ tr:
       text: "Gerçek operasyonel kararlara göre tasarlanmış metin analitiği, tahminleme ve veri ürünleri."
     - title: "Uygulamalı AI Eğitimi"
       text: "Teknik ve iş ekiplerinin kullanışlı yapay zekâ yetkinliği kazanmasını sağlayan programlar."
+  ventures_label: "ÜRÜNLER & GİRİŞİMLER"
+  ventures_title: "Öğrenmek, üretmek ve keşfetmek için"
+  ventures:
+    - icon: child_care
+      title: "FYLARK"
+      text: "Farklı öğrenen çocukların kodlama ve yapay zekâyı küçük, görsel adımlarla keşfettiği erişilebilir teknoloji programı."
+      cta: "FYLARK’ı keşfet"
+      url: "https://fylark.com"
+    - icon: play_circle
+      title: "Udemy eğitimleri"
+      text: "Veri bilimi ve yapay zekâ deneyimini anlaşılır, uygulanabilir becerilere dönüştüren eğitimler."
+      cta: "Eğitimleri incele"
+      url: "https://www.udemy.com/user/suat-atan/"
+    - icon: menu_book
+      title: "Kitaplar"
+      text: "R ile veri analizi, Google App Engine ve ağ analizi alanlarında yayımlanmış çalışmalar."
+      cta: "Kitaplara göz at"
+      url: "/pages/2017-04-19-kitabim.html"
   newsletter_label: "VERİMLİLİK BÜLTENİ"
   newsletter_text: "Yapay zekâ, öğrenme ve düşünme üzerine Türkçe denemeler."
   newsletter_cta: "Bültene git"
