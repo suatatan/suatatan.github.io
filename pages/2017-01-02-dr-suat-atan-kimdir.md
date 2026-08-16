@@ -12,7 +12,10 @@ eyebrow: PROFESYONEL PROFİL · KIDEMLİ VE LİDER POZİSYONLAR
 <div class="profile-actions">
   <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Kariyer%20fırsatı">İletişime geçin</a>
   <a class="button button-secondary" href="https://www.linkedin.com/in/suatatan" target="_blank" rel="me noopener">LinkedIn profili</a>
+  <a class="button button-secondary" href="https://github.com/suatatan" target="_blank" rel="noopener">Kod arşivi</a>
 </div>
+
+<p class="profile-note">GitHub hesabım önceki açık projeleri ve teknik denemeleri içeriyor; yakın dönem kurumsal çalışmalarımın büyük bölümü özel depolarda yürütülüyor.</p>
 
 <div class="profile-facts">
   <div><strong>Deneyim</strong><span>AI, veri ve kurumsal yazılımda 15+ yıl</span></div>
@@ -75,7 +78,7 @@ Disleksili gençlere yönelik erişilebilir kodlama ve yapay zekâ girişimi [FY
   <p>Teknik liderliği üretim deneyimiyle birleştiren kıdemli veri bilimi, makine öğrenmesi, uygulamalı yapay zekâ ve AI platform rollerini görüşmeye açığım.</p>
   <div class="profile-actions">
     <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Kıdemli%20AI%20veya%20veri%20rolü">Suat’a yazın</a>
-    <a class="text-link" href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub’ı inceleyin</a>
+    <a class="text-link" href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub kod arşivi</a>
   </div>
 </div>
 
