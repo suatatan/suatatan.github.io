@@ -34,23 +34,23 @@
     
     <!-- Special image for breathing exercise post -->
     {% if page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise' %}
-      <meta property="og:image" content="{{ site.url }}/images/breathing-exercise-social.svg">
+      <meta property="og:image" content="{{ site.url }}/images/breathing-exercise-social.png">
       <meta property="og:image:alt" content="Nefes Egzersizi 4-4-4-4 Tekniği - Dr. Suat ATAN">
     {% else %}
-      <meta property="og:image" content="{{ site.url }}/images/social-preview-default.svg">
+      <meta property="og:image" content="{{ site.url }}/images/social-preview-2026.png">
       <meta property="og:image:alt" content="Dr. Suat ATAN Blog - Data Science ve Yaşam Bilimi">
     {% endif %}
   {% else %}
     <!-- Homepage and other pages -->
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ site.url }}/images/social-preview-default.svg">
+    <meta property="og:image" content="{{ site.url }}/images/social-preview-2026.png">
     <meta property="og:image:alt" content="Dr. Suat ATAN Blog - Data Science, Yapay Zeka ve Yaşam Bilimi">
   {% endif %}
   
   <!-- Image dimensions for better social media display -->
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:type" content="image/png">
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -58,10 +58,10 @@
   <meta name="twitter:site" content="@suatatan">
   
   {% if page.layout == 'post' and (page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise') %}
-    <meta name="twitter:image" content="{{ site.url }}/images/breathing-exercise-social.svg">
+    <meta name="twitter:image" content="{{ site.url }}/images/breathing-exercise-social.png">
     <meta name="twitter:image:alt" content="4-4-4-4 Nefes Egzersizi Tekniği">
   {% else %}
-    <meta name="twitter:image" content="{{ site.url }}/images/social-preview-default.svg">
+    <meta name="twitter:image" content="{{ site.url }}/images/social-preview-2026.png">
     <meta name="twitter:image:alt" content="Dr. Suat ATAN Blog">
   {% endif %}
   
@@ -144,7 +144,7 @@
       "name": "Dr. Suat ATAN",
       "logo": {
         "@type": "ImageObject",
-        "url": "{{ site.url }}/images/social-preview-default.svg"
+        "url": "{{ site.url }}/images/social-preview-2026.png"
       }
     },
     "mainEntityOfPage": {
@@ -153,7 +153,7 @@
     },
     "image": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}{% if page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise' %}/images/breathing-exercise-social.svg{% else %}/images/social-preview-default.svg{% endif %}",
+      "url": "{{ site.url }}{% if page.url contains 'nefes-egzersizi' or page.url contains 'breathing-exercise' %}/images/breathing-exercise-social.png{% else %}/images/social-preview-2026.png{% endif %}",
       "width": 1200,
       "height": 630
     }{% if page.layout != 'post' %},
@@ -216,23 +216,22 @@
 
   <!-- PWA Meta Tags -->
   <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
-  <meta name="theme-color" content="#667eea">
+  <meta name="theme-color" content="#0758d9">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Suat ATAN Blog">
-  <meta name="msapplication-TileColor" content="#667eea">
+  <meta name="msapplication-TileColor" content="#0758d9">
   <meta name="msapplication-config" content="{{ "/browserconfig.xml" | relative_url }}">
   
   <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" sizes="192x192" href="{{ "/images/icons/png/icon-192x192.png" | relative_url }}">
-  <link rel="apple-touch-icon" sizes="512x512" href="{{ "/images/icons/png/icon-512x512.png" | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/images/icons/png/apple-touch-icon-2026.png" | relative_url }}">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/images/icons/png/icon-32x32.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ "/images/icons/png/icon-192x192.png" | relative_url }}">
-  <link rel="icon" type="image/svg+xml" href="{{ "/images/icons/icon-32x32.svg" | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ "/images/icons/favicon-2026.svg" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/images/icons/png/favicon-32x32-2026.png" | relative_url }}">
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}">
   
   <!-- Microsoft tiles -->
-  <meta name="msapplication-TileImage" content="{{ "/images/icons/png/icon-192x192.png" | relative_url }}">
+  <meta name="msapplication-TileImage" content="{{ "/images/icons/png/icon-192x192-2026.png" | relative_url }}">
   
   <!-- PWA Script -->
   <script src="{{ "/js/pwa-installer.js" | relative_url }}" defer></script>
