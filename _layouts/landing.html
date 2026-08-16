@@ -46,7 +46,7 @@
   <body class="landing-body">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" data-header>
-      <a class="wordmark" href="{% if page.lang == 'tr' %}/tr/{% else %}/{% endif %}" aria-label="Suat Atan home">Suat Atan</a>
+      <a class="wordmark" href="{% if page.lang == 'tr' %}/tr/{% else %}/{% endif %}" aria-label="Dr. Suat Atan home"><span>Dr. Suat Atan</span><small>PhD</small></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
         <span class="material-symbols-rounded" aria-hidden="true">menu</span>
         <span class="sr-only">Menu</span>
@@ -69,9 +69,7 @@
           </div>
           <p class="credibility"><span class="material-symbols-rounded" aria-hidden="true">account_balance</span>{{ t.credibility }}</p>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <img src="{{ '/images/hero-data-field.png' | relative_url }}" alt="" width="590" height="460">
-        </div>
+        <div class="hero-art" aria-hidden="true"></div>
       </section>
 
       <section class="work-section" id="work" aria-labelledby="work-title">
@@ -129,10 +127,17 @@
       </section>
 
       <section class="insights-section" id="insights" aria-label="{{ t.newsletter_label }}">
-        <div class="section-shell insight-row">
-          <span class="material-symbols-rounded insight-icon" aria-hidden="true">mail</span>
-          <p><strong>{{ t.newsletter_label }}</strong><span>{{ t.newsletter_text }}</span></p>
-          <a href="https://suatatan.substack.com" target="_blank" rel="noopener">{{ t.newsletter_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span></a>
+        <div class="section-shell newsletter-grid">
+          <article class="newsletter-item">
+            <span class="material-symbols-rounded insight-icon" aria-hidden="true">mail</span>
+            <p><strong>{{ t.newsletter_label }}</strong><span>{{ t.newsletter_text }}</span></p>
+            <a href="https://suatatan.substack.com" target="_blank" rel="noopener">{{ t.newsletter_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span></a>
+          </article>
+          <article class="newsletter-item">
+            <span class="material-symbols-rounded insight-icon" aria-hidden="true">self_improvement</span>
+            <p><strong>{{ t.newsletter_secondary_label }}</strong><span>{{ t.newsletter_secondary_text }}</span></p>
+            <a href="https://3000days.substack.com" target="_blank" rel="noopener">{{ t.newsletter_secondary_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span></a>
+          </article>
         </div>
       </section>
 
@@ -153,20 +158,20 @@
 
       <section class="archive-section section-shell" aria-labelledby="archive-title">
         <div><p class="eyebrow">{{ t.archive_label }}</p><h2 id="archive-title">{{ t.archive_text }}</h2></div>
-        <a class="button button-secondary" href="/archive.html">{{ t.archive_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+        <a class="button button-secondary" href="/archive/">{{ t.archive_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="section-shell contact-inner">
           <div><p class="eyebrow">CONTACT</p><h2 id="contact-title">{{ t.contact_title }}</h2><p>{{ t.contact_text }}</p></div>
-          <a class="button button-light" href="mailto:suatatan@gmail.com?subject={% if page.lang == 'tr' %}Danışmanlık görüşmesi{% else %}Consulting enquiry{% endif %}">{{ t.contact_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+          <a class="button button-light" href="mailto:suatatan+site@gmail.com?subject={% if page.lang == 'tr' %}Danışmanlık görüşmesi{% else %}Consulting enquiry{% endif %}">{{ t.contact_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer section-shell">
       <p>© {{ site.time | date: '%Y' }} Suat Atan</p>
-      <div><a href="https://ontariocloud.com" target="_blank" rel="noopener">Ontario Cloud</a><a href="https://www.linkedin.com/in/suatatan" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub</a></div>
+      <div><a href="https://ontariocloud.com" target="_blank" rel="noopener">Ontario Cloud</a><a href="https://www.linkedin.com/in/suatatan" target="_blank" rel="me noopener">Suat Atan · LinkedIn</a><a href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub</a></div>
     </footer>
     <script src="{{ '/js/landing.js' | relative_url }}" defer></script>
   </body>
