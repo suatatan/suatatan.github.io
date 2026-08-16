@@ -109,6 +109,25 @@
         </div>
       </section>
 
+      <section class="ventures-section" id="ventures" aria-labelledby="ventures-title">
+        <div class="section-shell">
+          <div class="ventures-heading">
+            <p class="eyebrow">{{ t.ventures_label }}</p>
+            <h2 id="ventures-title">{{ t.ventures_title }}</h2>
+          </div>
+          <div class="venture-grid">
+            {% for item in t.ventures %}
+              <article class="venture-card">
+                <span class="material-symbols-rounded venture-icon" aria-hidden="true">{{ item.icon }}</span>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.text }}</p>
+                <a class="text-link" href="{{ item.url }}"{% unless item.url contains '/pages/' %} target="_blank" rel="noopener"{% endunless %}>{{ item.cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span></a>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
       <section class="insights-section" id="insights" aria-label="{{ t.newsletter_label }}">
         <div class="section-shell insight-row">
           <span class="material-symbols-rounded insight-icon" aria-hidden="true">mail</span>
@@ -119,7 +138,7 @@
 
       <section class="about-section section-shell" id="about" aria-labelledby="about-title">
         <div class="about-copy">
-          <p class="eyebrow">{{ t.nav[3].label }}</p>
+          <p class="eyebrow">{{ t.nav[4].label }}</p>
           <h2 id="about-title">{{ t.about_title }}</h2>
           <p>{{ t.about_text }}</p>
           <a class="text-link" href="{% if page.lang == 'tr' %}/pages/2017-01-02-dr-suat-atan-kimdir.html{% else %}/pages/about-en.html{% endif %}">{{ t.about_link }} <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
