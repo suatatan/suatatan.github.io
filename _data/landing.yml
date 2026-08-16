@@ -1,0 +1,115 @@
+en:
+  lang_name: English
+  switch_label: TR
+  switch_url: /tr/
+  nav:
+    - label: Expertise
+      url: "#expertise"
+    - label: Work
+      url: "#work"
+    - label: Insights
+      url: "#insights"
+    - label: About
+      url: "#about"
+  eyebrow: "ARTIFICIAL INTELLIGENCE • DATA SCIENCE • ORGANIZATIONAL TRANSFORMATION"
+  headline: "I turn complex AI ideas into systems that work."
+  intro: "With 15+ years of experience, I build RAG, NLP and data solutions for organizations—and help teams adopt them with confidence."
+  primary_cta: "Let’s work together"
+  secondary_cta: "Explore selected work"
+  credibility: "Production-focused work with banks, public institutions, universities and energy companies"
+  work_title: "Selected work"
+  work:
+    - icon: forum
+      title: "Enterprise RAG Assistant"
+      description: "A secure, document-aware assistant that helps teams retrieve and use internal knowledge."
+      detail: "Architecture, retrieval strategy, evaluation and deployment for reliable enterprise knowledge access."
+    - icon: school
+      title: "Gemini & RAG Training"
+      description: "Hands-on training that moves teams from generative AI concepts to working applications."
+      detail: "Scenario-led workshops covering RAG design, application development and responsible adoption."
+    - icon: monitoring
+      title: "Energy Demand Forecasting"
+      description: "Time-series and machine-learning models that support planning and operational decisions."
+      detail: "From data quality and feature engineering to explainable forecasts and decision-ready outputs."
+  expertise_title: "From strategy to production"
+  expertise_intro: "I work at the point where technical depth, organizational reality and measurable delivery meet."
+  expertise:
+    - title: "Enterprise AI & RAG"
+      text: "Retrieval, semantic search, document intelligence and production-grade AI assistants."
+    - title: "Data & NLP Systems"
+      text: "Text analytics, forecasting and data products designed around real operational decisions."
+    - title: "Applied AI Training"
+      text: "Practical programs that help technical and business teams build useful AI capability."
+  newsletter_label: "VERİMLİLİK BÜLTENİ"
+  newsletter_text: "Turkish essays on artificial intelligence, learning and thinking."
+  newsletter_cta: "Visit the newsletter"
+  about_title: "Engineer, data scientist, educator and writer"
+  about_text: "I hold a PhD focused on text mining and completed postdoctoral research in NLP. Across public institutions, regulated industries and international projects, I have led and delivered AI, data and software initiatives from early idea to production."
+  about_link: "More about me"
+  company_label: "Commercial delivery"
+  company_text: "Consulting and training engagements are delivered through Ontario Bilişim ve Danışmanlık Ltd. Şti., founded by Dr. Suat Atan."
+  company_cta: "Visit Ontario Cloud"
+  contact_title: "Have an AI initiative that needs to become real?"
+  contact_text: "Tell me what you are trying to build, improve or teach. I will come back with a practical next step."
+  contact_cta: "Start a conversation"
+  archive_label: "Open archive"
+  archive_text: "Notes on technology, data, learning and life since 2006."
+  archive_cta: "Explore the archive"
+
+tr:
+  lang_name: Türkçe
+  switch_label: EN
+  switch_url: /
+  nav:
+    - label: Uzmanlık
+      url: "#expertise"
+    - label: Projeler
+      url: "#work"
+    - label: Yazılar
+      url: "#insights"
+    - label: Hakkımda
+      url: "#about"
+  eyebrow: "YAPAY ZEKÂ • VERİ BİLİMİ • KURUMSAL DÖNÜŞÜM"
+  headline: "Karmaşık yapay zekâ fikirlerini çalışan sistemlere dönüştürüyorum."
+  intro: "15+ yıllık deneyimle kurumlar için RAG, NLP ve veri çözümleri geliştiriyor; ekiplerin bu teknolojileri güvenle kullanmasına yardımcı oluyorum."
+  primary_cta: "Birlikte çalışalım"
+  secondary_cta: "Projeleri incele"
+  credibility: "Bankalar, kamu kurumları, üniversiteler ve enerji şirketleriyle üretim odaklı çalışmalar"
+  work_title: "Seçili çalışmalar"
+  work:
+    - icon: forum
+      title: "Kurumsal RAG Asistanı"
+      description: "Şirket içi bilgiye güvenli erişim sağlayan, belgelerinizle konuşan üretim odaklı asistan."
+      detail: "Güvenilir kurumsal bilgi erişimi için mimari, retrieval stratejisi, değerlendirme ve canlıya alma."
+    - icon: school
+      title: "Gemini & RAG Eğitimi"
+      description: "Ekiplerin üretken yapay zekâdan çalışan uygulamalara geçmesini sağlayan uygulamalı eğitim."
+      detail: "RAG tasarımı, uygulama geliştirme ve sorumlu kullanım üzerine gerçek senaryolu atölyeler."
+    - icon: monitoring
+      title: "Enerji Talep Tahmini"
+      description: "Planlama ve karar süreçlerini destekleyen zaman serisi ve makine öğrenimi modelleri."
+      detail: "Veri kalitesinden açıklanabilir tahminlere ve karar verilebilir çıktılara uzanan uçtan uca çalışma."
+  expertise_title: "Stratejiden üretime"
+  expertise_intro: "Teknik derinliğin, kurumsal gerçekliğin ve ölçülebilir teslimatın kesiştiği yerde çalışıyorum."
+  expertise:
+    - title: "Kurumsal AI & RAG"
+      text: "Retrieval, semantik arama, belge zekâsı ve üretim ortamına hazır yapay zekâ asistanları."
+    - title: "Veri & NLP Sistemleri"
+      text: "Gerçek operasyonel kararlara göre tasarlanmış metin analitiği, tahminleme ve veri ürünleri."
+    - title: "Uygulamalı AI Eğitimi"
+      text: "Teknik ve iş ekiplerinin kullanışlı yapay zekâ yetkinliği kazanmasını sağlayan programlar."
+  newsletter_label: "VERİMLİLİK BÜLTENİ"
+  newsletter_text: "Yapay zekâ, öğrenme ve düşünme üzerine Türkçe denemeler."
+  newsletter_cta: "Bültene git"
+  about_title: "Mühendis, veri bilimci, eğitmen ve yazar"
+  about_text: "Metin madenciliği odaklı doktoramın ardından NLP alanında postdoktora çalışmaları yaptım. Kamu kurumlarında, düzenlemeye tabi sektörlerde ve uluslararası projelerde yapay zekâ, veri ve yazılım girişimlerini fikirden üretime taşıdım."
+  about_link: "Hakkımda daha fazla"
+  company_label: "Ticari yürütme"
+  company_text: "Danışmanlık ve eğitim çalışmaları, Dr. Suat Atan tarafından kurulan Ontario Bilişim ve Danışmanlık Ltd. Şti. üzerinden yürütülür."
+  company_cta: "Ontario Cloud’u ziyaret et"
+  contact_title: "Gerçeğe dönüşmesi gereken bir yapay zekâ fikriniz mi var?"
+  contact_text: "Ne geliştirmek, iyileştirmek veya öğretmek istediğinizi anlatın. Uygulanabilir bir sonraki adımla dönüş yapayım."
+  contact_cta: "Görüşmeyi başlat"
+  archive_label: "Açık arşiv"
+  archive_text: "2006’dan bugüne teknoloji, veri, öğrenme ve hayat üzerine notlar."
+  archive_cta: "Arşivi keşfet"
