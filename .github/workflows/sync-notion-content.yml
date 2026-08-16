@@ -12,11 +12,14 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-          bundler-cache: true
+      - name: Install Jekyll dependencies
+        run: |
+          bundle lock --add-platform x86_64-linux
+          bundle install --jobs 4
       - name: Pull published pages from Notion
         env:
           NOTION_ACCESS_TOKEN: ${{ secrets.NOTION_ACCESS_TOKEN }}
