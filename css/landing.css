@@ -43,7 +43,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .wordmark { display: inline-flex; align-items: baseline; gap: 9px; text-decoration: none; }
 .wordmark span { font: 400 36px/1 "DM Serif Display", Georgia, serif; letter-spacing: -.5px; }
-.wordmark small { color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.wordmark small { padding: 3px 6px 2px; border: 1px solid rgba(7,88,217,.28); border-radius: 999px; color: var(--blue); font-size: 9px; font-weight: 800; line-height: 1; letter-spacing: .12em; text-transform: uppercase; }
 .site-nav { display: flex; align-items: center; gap: clamp(26px, 3.5vw, 58px); }
 .site-nav a { font-weight: 500; text-decoration: none; padding-block: 8px; position: relative; }
 .site-nav a:not(.language-switch)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 3px; height: 1px; background: var(--blue); transition: right .2s ease; }
@@ -149,6 +149,8 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
 .editorial-content ul { padding-left: 23px; }
 .editorial-content li { margin-bottom: 9px; }
 .editorial-lead { max-width: 780px; color: var(--muted); font-size: 22px; line-height: 1.6; }
+.profile-actions { margin: 34px 0 42px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.profile-actions .button { min-height: 50px; }
 .profile-facts { margin: 42px 0; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
 .profile-facts div { padding: 26px; }
 .profile-facts div + div { border-left: 1px solid var(--line); }
@@ -156,6 +158,21 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
 .profile-facts span { color: var(--ink); font-family: "DM Serif Display", Georgia, serif; font-size: 23px; line-height: 1.25; }
 .editorial-callout { margin-top: 56px; padding: 34px; border-left: 3px solid var(--blue); background: var(--soft); }
 .editorial-callout h2 { margin-top: 0; }
+.case-grid { margin: 34px 0 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); }
+.case-grid article { min-height: 255px; padding: 30px; }
+.case-grid article:nth-child(even) { border-left: 1px solid var(--line); }
+.case-grid article:nth-child(n+3) { border-top: 1px solid var(--line); }
+.case-grid h3 { margin: 8px 0 13px; font: 400 28px/1.12 "DM Serif Display", Georgia, serif; }
+.case-grid article > p:last-child { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.case-kicker { margin: 0 !important; color: var(--blue) !important; font-size: 12px !important; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.skill-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 10px; }
+.skill-cloud span { padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; background: white; color: #243044; font-size: 14px; line-height: 1.2; }
+.recruiter-callout { padding: 44px; border-left: 0; background: var(--ink); color: white; }
+.recruiter-callout h2 { max-width: 700px; color: white; }
+.recruiter-callout > p:not(.case-kicker) { max-width: 760px; color: #cbd5e1; }
+.recruiter-callout .case-kicker { color: #76a9ff !important; }
+.recruiter-callout .profile-actions { margin-bottom: 0; }
+.recruiter-callout .text-link { color: white; }
 
 .archive-toolbar { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 8px 24px; margin-bottom: 38px; }
 .archive-toolbar label { color: var(--ink); font-weight: 700; }
@@ -166,6 +183,7 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
 .archive-search-wrap input { width: 100%; height: 52px; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; }
 .archive-list { border-top: 1px solid var(--line); }
 .archive-entry { display: grid; grid-template-columns: 120px 1fr 30px; gap: 24px; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.archive-entry[hidden] { display: none; }
 .archive-entry time { color: var(--muted); font-size: 14px; }
 .archive-entry h2 { margin: 0; font: 400 27px/1.2 "DM Serif Display", Georgia, serif; }
 .archive-entry h2 a { color: var(--ink); text-decoration: none; }
@@ -226,6 +244,13 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
   .editorial-content h2 { margin-top: 48px; font-size: 34px; }
   .profile-facts { grid-template-columns: 1fr; }
   .profile-facts div + div { border-left: 0; border-top: 1px solid var(--line); }
+  .profile-actions { align-items: stretch; flex-direction: column; }
+  .profile-actions .button { width: 100%; }
+  .case-grid { grid-template-columns: 1fr; }
+  .case-grid article { min-height: auto; padding: 26px; }
+  .case-grid article:nth-child(even) { border-left: 0; }
+  .case-grid article + article { border-top: 1px solid var(--line); }
+  .recruiter-callout { padding: 32px 25px; }
   .archive-toolbar { grid-template-columns: 1fr; }
   .archive-toolbar > p { grid-column: 1; grid-row: auto; }
   .archive-entry { grid-template-columns: 1fr 26px; gap: 8px 14px; padding: 22px 0; }

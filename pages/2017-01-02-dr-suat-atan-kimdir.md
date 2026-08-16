@@ -1,41 +1,82 @@
 ---
 layout: editorial
-title: Dr. Suat Atan Kimdir?
-description: Kurumsal yapay zekâ, RAG, NLP ve veri sistemleri alanlarında çalışan veri bilimci, danışman, araştırmacı, eğitmen ve yazar.
+title: Dr. Suat Atan — Kıdemli Veri Bilimci ve Uygulamalı AI Lideri
+description: RAG, NLP, makine öğrenmesi ve veri platformlarını üretime taşıyan; düzenlemeye tabi sektörler ve uluslararası kuruluşlarda 15+ yıllık deneyime sahip veri bilimci ve yapay zekâ lideri.
 permalink: /pages/2017-01-02-dr-suat-atan-kimdir.html
 lang: tr
-eyebrow: MÜHENDİS · VERİ BİLİMCİ · EĞİTMEN
+eyebrow: PROFESYONEL PROFİL · KIDEMLİ VE LİDER POZİSYONLAR
 ---
 
-<p class="editorial-lead">Teknik derinliği, kurumların gerçek ihtiyaçlarını ve ölçülebilir sonuçları bir araya getirerek kullanışlı yapay zekâ ve veri sistemleri geliştiriyorum.</p>
+<p class="editorial-lead">Belirsiz iş problemlerini üretimde çalışan yapay zekâ ve veri sistemlerine dönüştürüyorum. Kurumsal RAG, NLP, tahminleme, veri platformları ve ajan tabanlı iş akışlarında güvenilirlik, benimsenme ve ölçülebilir değer odağıyla çalışıyorum.</p>
 
-<div class="profile-facts">
-  <div><strong>Akademik</strong><span>Doktora ve NLP postdoktora araştırması</span></div>
-  <div><strong>Deneyim</strong><span>Kamu ve düzenlemeye tabi sektörlerde 15+ yıl</span></div>
-  <div><strong>Danışmanlık</strong><span>Ontario Cloud üzerinden kurumsal çözümler</span></div>
+<div class="profile-actions">
+  <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Kariyer%20fırsatı">İletişime geçin</a>
+  <a class="button button-secondary" href="https://www.linkedin.com/in/suatatan" target="_blank" rel="me noopener">LinkedIn profili</a>
 </div>
 
-## Ne yapıyorum?
+<div class="profile-facts">
+  <div><strong>Deneyim</strong><span>AI, veri ve kurumsal yazılımda 15+ yıl</span></div>
+  <div><strong>Araştırma</strong><span>Metin madenciliği doktorası · İtalya’da NLP postdoktorası</span></div>
+  <div><strong>Çalışma modeli</strong><span>Ankara merkezli · Kuzey Amerika ve Avrupa’ya uzaktan</span></div>
+</div>
 
-Bugünkü çalışmalarım kurumsal RAG sistemleri, semantik arama, belge zekâsı, tahminleme, yapay zekâ ajanları ve üretken yapay zekânın sorumlu biçimde kurumsal süreçlere alınması üzerine yoğunlaşıyor. Kamu kurumları, bankalar, enerji şirketleri, üniversiteler ve uluslararası kuruluşlar için fikir aşamasından üretime kadar veri, yapay zekâ ve yazılım projeleri geliştirdim.
+## Güncel çalışmalarım
 
-Tarım ve Kırsal Kalkınmayı Destekleme Kurumunda kurumsal yapay zekâ ve veri çalışmalarına katkı sağlıyor; gıda kaybı ve israfının ölçülmesine yönelik uluslararası çalışmalarda kıdemli uzman olarak görev alıyorum. Kurucusu olduğum [Ontario Bilişim ve Danışmanlık Ltd. Şti.](https://ontariocloud.com) üzerinden kurumlara yapay zekâ, NLP ve veri mühendisliği danışmanlığı ile uygulamalı eğitimler sunuyorum.
+[Ontario Bilişim ve Danışmanlık Ltd. Şti.](https://ontariocloud.com) üzerinden uygulamalı yapay zekâ, NLP, veri mühendisliği ve tahminleme projelerine liderlik ediyorum. Tarım ve Kırsal Kalkınmayı Destekleme Kurumunda kurumsal yapay zekâ ve yazılım çalışmalarına katkı sağlıyor; gıda kaybı ve israfının ölçülmesine yönelik uluslararası programlarda kıdemli uzman olarak görev alıyorum.
 
-## Akademik ve mesleki geçmiş
+Yakın dönem çalışmalarım; kurumsal bilgi sistemleri kurmayı, yapay zekâ destekli iş akışları tasarlamayı, çok disiplinli teknik ekipleri yönetmeyi ve veri bilimi ekiplerinin üretken yapay zekâ kavramlarından üretime hazır uygulamalara geçmesini sağlamayı kapsıyor.
 
-Temel eğitimim inşaat mühendisliği alanında. Ardından MBA yaptım; metin madenciliği ve duygu analizi odaklı doktoramı tamamladım. İtalya’daki Torino Üniversitesinde doğal dil işleme alanında postdoktora araştırmaları yürüttüm. Mühendislik, işletme, yazılım geliştirme ve uygulamalı araştırmayı birleştiren bu geçmiş, çalışma biçimimi de belirliyor: önce gerçek kararı veya iş akışını anlamak, sonra en sade ve güvenilir mimariyi kurmak ve sonucun pratikte işe yarayıp yaramadığını ölçmek.
+## Yakın dönemden seçili etkiler
 
-Yüksek lisans düzeyinde ağ analizi dersi verdim; Python, R, Google App Engine ve ağ analizi konularında kitaplar yazdım ve editörlük yaptım. [Udemy eğitimlerimde](https://www.udemy.com/user/suat-atan/) aynı birikimi anlaşılır ve uygulanabilir öğrenme deneyimlerine dönüştürüyorum.
+<div class="case-grid">
+  <article>
+    <p class="case-kicker">Kurumsal RAG</p>
+    <h3>Mevzuat bilgi asistanı</h3>
+    <p>Bosphorus AI bünyesinde 10 kişilik ekibe liderlik ederek Emeklilik Gözetim Merkezi için mevzuat odaklı bir RAG asistanı geliştirdim.</p>
+  </article>
+  <article>
+    <p class="case-kicker">AI Yetkinliği</p>
+    <h3>Gemini ve RAG eğitimi</h3>
+    <p>ING Türkiye’nin 30 kişilik veri bilimi ekibine Gemini AI, RAG mimarisi ve uygulama geliştirme üzerine senaryo temelli eğitim verdim.</p>
+  </article>
+  <article>
+    <p class="case-kicker">Uluslararası Veri</p>
+    <h3>Gıda kaybı ve israfı zekâsı</h3>
+    <p>53 ülke, 87 ürün türü ve 56.376 ülke-yıl-ürün birleşimini kapsayan IOFS programının; dijital platform ve AI ajanıyla birlikte geliştirilmesine katkı sundum.</p>
+  </article>
+  <article>
+    <p class="case-kicker">Tahminleme</p>
+    <h3>Enerji karar sistemleri</h3>
+    <p>Aras, Başkent ve Dicle elektrik dağıtım kuruluşları için tahminleme ve veri çözümleri geliştiriyorum.</p>
+  </article>
+</div>
 
-## Danışmanlık dışındaki çalışmalar
+## Sektörler arasında taşınan deneyim
 
-[FYLARK](https://fylark.com), başta disleksili gençler olmak üzere farklı öğrenen çocuklar için geliştirdiğim erişilebilir teknoloji eğitimi girişimidir. Çocukların kodlama ve yapay zekâyı küçük, görsel ve güven veren adımlarla keşfetmesini amaçlar.
+2022’den Ocak 2026’ya kadar Kanada merkezli [VectorSolv](https://vectorsolv.com) ile önce çalışan, ardından danışman olarak Kuzey Amerika otomotiv garanti ve sigorta operasyonlarına yönelik veri hatları, analitik sistemler ve NLP/LLM iş akışları geliştirdim. Bu çalışmalar Azure, SQL, API’ler, Git/Docker süreçleri ve dağıtık iş ekiplerinin kullandığı üretim sistemlerini kapsıyordu.
 
-Bu siteyi 2006’dan beri açık bir bellek olarak tutuyorum: teknik notların, araştırmaların, gözlemlerin ve kaybolmaması gereken fikirlerin bulunduğu bir alan. [Verimlilik Bülteni](https://suatatan.substack.com)’nde yapay zekâ, öğrenme ve anlamlı çalışma üzerine Türkçe; [3000 Days](https://3000days.substack.com)’te ise meditasyon, dikkat ve iç yaşam üzerine İngilizce yazıyorum.
+Önceki ve eş zamanlı çalışmalarım bankacılık, enerji, üniversiteler, kamu kurumları ve uluslararası kuruluşlara uzanıyor. Kadir Has Üniversitesi için nefret söylemi odaklı web scraping ve metin analitiği, düzenlemeye tabi kurumlar için kurumsal AI çözümleri ve operasyon ekipleri için karar destek sistemleri bunlardan bazıları.
 
-<div class="editorial-callout">
-  <h2>Birlikte çalışalım</h2>
-  <p>Danışmanlık, eğitim, araştırma iş birliği veya konuşma talepleri için <a href="mailto:suatatan+site@gmail.com">suatatan+site@gmail.com</a> adresinden ulaşabilir ya da <a href="https://ontariocloud.com">Ontario Cloud</a> sitesini ziyaret edebilirsiniz.</p>
+## Teknik odağım
+
+<div class="skill-cloud">
+  <span>Python</span><span>SQL</span><span>R</span><span>RAG ve LLM uygulamaları</span><span>Ajan tabanlı iş akışları</span><span>NLP</span><span>Makine öğrenmesi</span><span>Tahminleme</span><span>Semantik arama</span><span>Bilgi çıkarımı</span><span>Azure ve AWS</span><span>Databricks ve Spark</span><span>PostgreSQL · MSSQL · MongoDB</span><span>Docker ve CI/CD</span><span>Power BI ve Streamlit</span>
+</div>
+
+## Eğitim, öğretim ve kamusal çalışmalar
+
+Temel eğitimim inşaat mühendisliği alanında. Ardından MBA ve metin madenciliği odaklı mühendislik doktorası yaptım; Torino Üniversitesinde NLP alanında postdoktora araştırmaları yürüttüm. Yüksek lisans düzeyinde ağ analizi dersi verdim; Python, R, Google App Engine ve ağ analizi üzerine kitaplar yazdım ve editörlük yaptım.
+
+Disleksili gençlere yönelik erişilebilir kodlama ve yapay zekâ girişimi [FYLARK](https://fylark.com)’ı geliştirdim. [Verimlilik Bülteni](https://suatatan.substack.com)’nde Türkçe, [3000 Days](https://3000days.substack.com)’te İngilizce yazıyorum.
+
+<div class="editorial-callout recruiter-callout">
+  <p class="case-kicker">İŞE ALIM EKİPLERİ İÇİN</p>
+  <h2>Kıdemli veri bilimci veya uygulamalı AI lideri mi arıyorsunuz?</h2>
+  <p>Teknik liderliği üretim deneyimiyle birleştiren kıdemli veri bilimi, makine öğrenmesi, uygulamalı yapay zekâ ve AI platform rollerini görüşmeye açığım.</p>
+  <div class="profile-actions">
+    <a class="button button-primary" href="mailto:suatatan+site@gmail.com?subject=Kıdemli%20AI%20veya%20veri%20rolü">Suat’a yazın</a>
+    <a class="text-link" href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub’ı inceleyin</a>
+  </div>
 </div>
 
 [English version](/pages/about-en.html)
