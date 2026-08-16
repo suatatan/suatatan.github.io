@@ -11,6 +11,7 @@
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="alternate" hreflang="en" href="{{ site.url }}/">
     <link rel="alternate" hreflang="tr" href="{{ site.url }}/tr/">
+    <link rel="alternate" hreflang="fr" href="{{ site.url }}/fr/">
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ page.title }}">
@@ -21,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}?v=20260816-4">
+    <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}?v=20260816-5">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/icons/png/icon-32x32.png' | relative_url }}">
     <script type="application/ld+json">
       {
@@ -36,7 +37,7 @@
           "url": "https://ontariocloud.com"
         },
         "sameAs": [
-          "https://www.linkedin.com/in/suatatan",
+          "https://www.linkedin.com/in/suat-atan/",
           "https://github.com/suatatan",
           "https://suatatan.substack.com"
         ]
@@ -44,16 +45,20 @@
     </script>
   </head>
   <body class="landing-body">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">{% if page.lang == 'tr' %}İçeriğe geç{% elsif page.lang == 'fr' %}Aller au contenu{% else %}Skip to content{% endif %}</a>
     <header class="site-header" data-header>
-      <a class="wordmark" href="{% if page.lang == 'tr' %}/tr/{% else %}/{% endif %}" aria-label="Dr. Suat Atan home"><span>Dr. Suat Atan</span><small>PhD</small></a>
+      <a class="wordmark" href="{% if page.lang == 'tr' %}/tr/{% elsif page.lang == 'fr' %}/fr/{% else %}/{% endif %}" aria-label="Dr. Suat Atan home"><span>Dr. Suat Atan</span><small>PhD</small></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
         <span class="material-symbols-rounded" aria-hidden="true">menu</span>
         <span class="sr-only">Menu</span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
         {% for item in t.nav %}<a href="{{ item.url }}">{{ item.label }}</a>{% endfor %}
-        <a class="language-switch" href="{{ t.switch_url }}" hreflang="{% if page.lang == 'tr' %}en{% else %}tr{% endif %}">{{ t.switch_label }}</a>
+        <div class="language-menu" aria-label="Language">
+          <a href="/" hreflang="en"{% if page.lang == 'en' %} aria-current="page"{% endif %}>EN</a>
+          <a href="/tr/" hreflang="tr"{% if page.lang == 'tr' %} aria-current="page"{% endif %}>TR</a>
+          <a href="/fr/" hreflang="fr"{% if page.lang == 'fr' %} aria-current="page"{% endif %}>FR</a>
+        </div>
       </nav>
     </header>
 
@@ -169,14 +174,14 @@
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="section-shell contact-inner">
           <div><p class="eyebrow">CONTACT</p><h2 id="contact-title">{{ t.contact_title }}</h2><p>{{ t.contact_text }}</p></div>
-          <a class="button button-light" href="mailto:suatatan+site@gmail.com?subject={% if page.lang == 'tr' %}Danışmanlık görüşmesi{% else %}Consulting enquiry{% endif %}">{{ t.contact_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
+          <a class="button button-light" href="mailto:suatatan+site@gmail.com?subject={% if page.lang == 'tr' %}Danışmanlık görüşmesi{% elsif page.lang == 'fr' %}Projet IA / échange{% else %}Consulting enquiry{% endif %}">{{ t.contact_cta }} <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer section-shell">
       <p>© {{ site.time | date: '%Y' }} Suat Atan</p>
-      <div><a href="https://ontariocloud.com" target="_blank" rel="noopener">Ontario Cloud</a><a href="https://www.linkedin.com/in/suatatan" target="_blank" rel="me noopener">Suat Atan · LinkedIn</a><a href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub</a></div>
+      <div><a href="https://ontariocloud.com" target="_blank" rel="noopener">Ontario Cloud</a><a href="https://www.linkedin.com/in/suat-atan/" target="_blank" rel="me noopener">Suat Atan · LinkedIn</a><a href="https://github.com/suatatan" target="_blank" rel="noopener">GitHub</a></div>
     </footer>
     <script src="{{ '/js/landing.js' | relative_url }}" defer></script>
   </body>
