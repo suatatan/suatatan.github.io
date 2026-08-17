@@ -14,8 +14,9 @@ No normal historical article was removed or noindexed merely because it is old. 
 
 - Consolidated the weaker AJAX duplicate into `/bilgisayar/2008/11/03/ajax-ile-veri-cekerken-veriyi-salt-veya-htmlnin-okunmus-hali-olarak-alma.html`.
 - Consolidated the truncated DOM duplicate into `/bilgisayar/2008/12/21/dom-erisimi-ile-tarayici-tarafinda-dinamik-olarak-icerik-olusturulmasi.html`.
-- Moved the malformed SQL Server route containing a literal space to `/data/performance/sql-server/2025/08/07/sql-approx-query.html` and retained a redirect document at the old route.
 - Redirect sources are zero-delay redirect pages with canonical targets, `noindex,follow`, and sitemap exclusion. There are no redirect chains or loops.
+
+The malformed SQL Server route was audited but intentionally not moved in this PR. Its article contains an internal-looking schema/table identifier; moving it would republish the entire document. The route should be normalized only after that identifier is anonymized or its republication is explicitly approved.
 
 GitHub Pages cannot emit a true origin-level HTTP 301 from repository content alone. The redirect documents are the safest repository-only fallback. True 301 status codes can later be configured at the CDN/DNS edge using the same source/target mapping.
 
@@ -36,7 +37,7 @@ GitHub Pages cannot emit a true origin-level HTTP 301 from repository content al
 
 ### Front matter and content parsing
 
-- Systematically merged accidentally nested YAML front matter in migrated 2024 dyslexia content so fields such as `meta_desc`, `meta_keywords`, `imgurl`, and `statu` no longer appear in article bodies.
+- Merged accidentally nested YAML front matter in 22 migrated 2024 dyslexia posts so fields such as `meta_desc`, `meta_keywords`, `imgurl`, and `statu` no longer appear in article bodies.
 - Mapped legacy fields to usable Jekyll metadata and converted resolvable Obsidian-style wiki links to real internal links.
 - Improved human-facing titles and descriptions for the two priority dyslexia pages.
 - Added complete front matter to the SymPy, Effective Journaling, and NLP package-list posts, which previously lacked reliable page metadata.
@@ -52,6 +53,7 @@ GitHub Pages cannot emit a true origin-level HTTP 301 from repository content al
 - Added `noindex,follow` and sitemap exclusion to the thin Stack Overflow excerpt, the automated Fizy status, three near-empty Arabic quotation pages, and tag pages.
 - Kept four low-value historical announcements/definitions accessible but removed them from the sitemap: LibreOffice 3.5, Fast Track, Blogger for Android, and free visitor-statistics applications.
 - Preserved the remaining original essays, reading notes, tutorials, and personal archive pages at their existing public URLs.
+- Left the legacy `kimim.md` source unchanged because it contains an expiring LinkedIn image token; its current professional replacement remains the maintained About page.
 
 ### Duplicate candidates intentionally left unchanged
 
@@ -59,7 +61,7 @@ Archive-wide title scanning found additional possible pairs listed in `SEO_INDEX
 
 ## Verification
 
-- `python scripts/validate_seo.py` passes: 873 generated documents, 873 unique routes, and all 62 supplied URLs classified.
+- `python scripts/validate_seo.py` passes: 872 generated documents, 872 unique routes, and all 62 supplied URLs classified.
 - YAML/front matter parsing passes for the repository content.
 - Redirect targets exist; redirect loops and chains were not found.
 - `git diff --check` passes.
