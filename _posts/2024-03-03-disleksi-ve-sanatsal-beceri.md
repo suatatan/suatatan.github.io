@@ -1,24 +1,18 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'disleksi-ve-sanatsal-beceri'
+title: disleksi-ve-sanatsal-beceri
 tags:
-  - opinion
-  - disleksi
+- opinion
+- disleksi
+- ebeveyn
+- bilimsel
+source_published_at: 2024-09-23T22:16
+status: blog
+legacy_image: /static/img/sanat.jpg
+description: Disleksi ve sanat yeteneği arasında ilişki var mı
+keywords: Disleksi, diskalkuli, öğrenme güçlüğü, sanat
 ---
-
----
-tags:
-  - ebeveyn
-  - bilimsel
-tarih: 2024-09-23T22:16
-statu: blog
-imgurl: /static/img/sanat.jpg
-meta_desc: Disleksi ve sanat yeteneği arasında ilişki var mı
-meta_keywords: Disleksi, diskalkuli, öğrenme güçlüğü, sanat
----
-
-
 
 # Disleksi ve Sanatsal Beceri 
 
@@ -63,9 +57,3 @@ Disleksi ve sanatsal beceri arasındaki ilişkiye dair kesin araştırmalar hala
 [7] https://www.succeedwithdyslexia.org/blog/7-off-the-page-signs-of-dyslexia-in-kids-doing-art/ 
 
 [8] https://monolisadesigns.com/blogs/being-a-designer/art-dyslexia
-
-
-
-
-
-

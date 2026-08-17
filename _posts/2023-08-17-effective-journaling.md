@@ -1,3 +1,16 @@
+---
+date: 2023-08-17
+layout: post
+title: "Effective Daily Journaling for Productivity and Self-Reflection"
+description: "A practical daily journaling template combining planning, Pomodoro tracking, reflection, ideas and stress awareness."
+lang: en
+tags:
+  - english
+  - productivity
+  - journaling
+  - reflection
+---
+
 ## Mastering Productivity and Self-Reflection: A Guide to Effective Daily Journaling
 
 In the fast-paced world we live in, finding ways to stay productive and maintain a sense of self-awareness can be a challenging task. One powerful technique that combines both aspects is daily journaling. In this blog post, we'll delve into a comprehensive template that can transform your daily journaling practice into a powerhouse of productivity and self-reflection.

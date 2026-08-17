@@ -180,6 +180,12 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
 .recruiter-callout .text-link { color: white; }
 
 .archive-toolbar { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 8px 24px; margin-bottom: 38px; }
+.archive-featured { display: grid; grid-template-columns: .8fr 1.2fr; gap: 44px; margin: 0 0 54px; padding: 34px; border: 1px solid #c9d9ef; background: #f5f9ff; }
+.archive-featured h2 { margin: 8px 0 12px; font-size: 31px; }
+.archive-featured p { margin-bottom: 0; color: var(--muted); }
+.archive-featured nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; align-content: start; }
+.archive-featured nav a { color: var(--ink); font-weight: 650; text-decoration-color: #a9c6ef; text-underline-offset: 4px; }
+.archive-featured nav a:hover { color: var(--blue); }
 .archive-toolbar label { color: var(--ink); font-weight: 700; }
 .archive-toolbar > p { grid-column: 2; grid-row: 1 / span 2; margin: 0; color: var(--muted); }
 .archive-search-wrap { max-width: 640px; display: flex; align-items: center; gap: 12px; padding: 0 18px; border: 1px solid var(--line); background: white; }
@@ -218,6 +224,9 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
 .post-content-modern table { width: 100%; display: block; overflow-x: auto; border-collapse: collapse; font-size: 15px; }
 .post-content-modern th, .post-content-modern td { padding: 10px 12px; border: 1px solid var(--line); text-align: left; }
 .post-content-modern blockquote { margin: 34px 0; padding: 8px 0 8px 25px; border-left: 3px solid var(--blue); color: var(--muted); font: 400 24px/1.5 "DM Serif Display", Georgia, serif; }
+.historical-note { margin: 0 0 42px; padding: 20px 22px; border: 1px solid #c9d9ef; border-left: 4px solid var(--blue); background: #f5f9ff; color: #30445f; font-size: 15px; line-height: 1.6; }
+.historical-note strong { display: block; margin-bottom: 4px; color: var(--ink); }
+.historical-note p { margin: 0; }
 .post-content-modern pre { max-width: 100%; overflow-x: auto; padding: 20px; border: 1px solid var(--line); border-radius: 3px; background: #f4f7fb; font-size: 14px; line-height: 1.55; }
 .post-content-modern code { padding: .12em .32em; border-radius: 3px; background: #f0f4f8; font-size: .9em; }
 .post-content-modern pre code { padding: 0; background: transparent; }
@@ -300,6 +309,8 @@ h1 { max-width: 740px; margin: 0; font-size: clamp(54px, 5vw, 78px); line-height
   .case-grid article:nth-child(even) { border-left: 0; }
   .case-grid article + article { border-top: 1px solid var(--line); }
   .recruiter-callout { padding: 32px 25px; }
+  .archive-featured { grid-template-columns: 1fr; gap: 28px; padding: 26px 22px; }
+  .archive-featured nav { grid-template-columns: 1fr; }
   .archive-toolbar { grid-template-columns: 1fr; }
   .archive-toolbar > p { grid-column: 1; grid-row: auto; }
   .archive-entry { grid-template-columns: 1fr 26px; gap: 8px 14px; padding: 22px 0; }

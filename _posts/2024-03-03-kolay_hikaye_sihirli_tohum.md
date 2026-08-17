@@ -1,21 +1,17 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'kolay_hikaye_sihirli_tohum'
+title: kolay_hikaye_sihirli_tohum
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - 7sinif
-  - çocuklariçin
-  - kolayokuma
-tarih: 2024-09-04T22:19
-statu: blog
-imgurl: /static/img/tohum.jpg
+- opinion
+- disleksi
+- ebeveyn
+- 7sinif
+- çocuklariçin
+- kolayokuma
+source_published_at: 2024-09-04T22:19
+status: blog
+legacy_image: /static/img/tohum.jpg
 ---
 
 ## Sihirli tohum
@@ -47,4 +43,4 @@ Sihirli tohum herkesi sevindirdi.
 
 **Etiketler**
 
-#çocuklariçin, #7sinif 
+#çocuklariçin, #7sinif

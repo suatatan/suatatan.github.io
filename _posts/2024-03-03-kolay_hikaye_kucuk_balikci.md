@@ -1,20 +1,16 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'kolay_hikaye_kucuk_balikci'
+title: kolay_hikaye_kucuk_balikci
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - 7sinif
-  - çocuklariçin
-  - kolayokuma
-tarih: 2024-09-04T22:16
-statu: blog
-imgurl: /static/img/balikci.jpg
+- opinion
+- disleksi
+- 7sinif
+- çocuklariçin
+- kolayokuma
+source_published_at: 2024-09-04T22:16
+status: blog
+legacy_image: /static/img/balikci.jpg
 ---
 
 # Küçük Balıkçı
@@ -53,11 +49,4 @@ Ana sayfada da gösterilecek intro buraya
 
 ## Alt başlık 2
 
-## Varsa Kaynaklar 
-
-
-
-
-
-
-
+## Varsa Kaynaklar

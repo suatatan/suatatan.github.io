@@ -7,8 +7,8 @@
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="author" content="Dr. Suat Atan">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta name="robots" content="{{ page.robots | default: 'index, follow, max-image-preview:large' }}">
+    <link rel="canonical" href="{{ page.canonical_url | default: page.url | absolute_url }}">
     <link rel="alternate" hreflang="en" href="{{ site.url }}/">
     <link rel="alternate" hreflang="tr" href="{{ site.url }}/tr/">
     <link rel="alternate" hreflang="fr" href="{{ site.url }}/fr/">
@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}?v=20260816-5">
+    <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}?v=20260817-1">
     <meta name="theme-color" content="#0758d9">
     <link rel="icon" type="image/svg+xml" href="{{ '/images/icons/favicon-2026.svg' | relative_url }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/icons/png/favicon-32x32-2026.png' | relative_url }}">

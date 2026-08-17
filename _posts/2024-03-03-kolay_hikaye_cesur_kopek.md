@@ -1,21 +1,17 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'kolay_hikaye_cesur_kopek'
+title: kolay_hikaye_cesur_kopek
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - çocuklariçin
-  - 7sinif
-  - kolayokuma
-tarih: 2024-09-04T13:47
-statu: blog
-imgurl: /static/img/kopek.jpg
+- opinion
+- disleksi
+- ebeveyn
+- çocuklariçin
+- 7sinif
+- kolayokuma
+source_published_at: 2024-09-04T13:47
+status: blog
+legacy_image: /static/img/kopek.jpg
 ---
 
 # Cesur Köpek
@@ -43,5 +39,3 @@ Birlikte oyun oynadılar.
 Akşam oldu, eve döndüler.  
 Boncuk yorgun ama mutluydu.  
 O gün kahraman olmuştu.
-
-

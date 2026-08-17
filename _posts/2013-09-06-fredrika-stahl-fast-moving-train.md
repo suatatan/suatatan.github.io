@@ -3,6 +3,8 @@ categories:
 - genel
 date: 2013-09-06
 layout: post
+robots: noindex, follow
+sitemap: false
 tags:
 - english
 - facebookstatus

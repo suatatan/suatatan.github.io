@@ -1,20 +1,16 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'test-mantigindan-cektigimiz'
+title: test-mantigindan-cektigimiz
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-tarih: 2024-10-08T21:20
-statu: blog
-imgurl: /static/img/umut.png
-meta_desc: Türkiye eğitim sisteminin test takıntısı
-meta_keywords: Disleksi, özel öğrenme güçlüğü,  İngilizce
+- opinion
+- disleksi
+- ebeveyn
+source_published_at: 2024-10-08T21:20
+status: blog
+legacy_image: /static/img/umut.png
+description: Türkiye eğitim sisteminin test takıntısı
+keywords: Disleksi, özel öğrenme güçlüğü,  İngilizce
 ---
 
 # Test Mantığından Çektiğimiz
@@ -42,10 +38,4 @@ Maslow'a ithaf olunan sözde denilir ki: **"Çekiçten başka bir şey olamayan 
 
 Bu kabus bize yaşattırılsa da bu olgunun kabus olma vasfını değiştirmiyor. Ya ne yapalım sistem bu mecburuz! da kuşkusuz bir cevap ancak çocuklarınızın katıldığı koşuda çocuklarınızın koşma imkanı varsa! Ancak eğer ki uçma yarışı söz konusu ise ve çocuklarınıza zorla kanat takamayacaksanız, bunu sizden isteyenlerin uydurduğu saçma gerçeklik yanılsaması yerine bundan daha büyük olan koca bir dünyayı ve içindeki imkanları hedefleyebilirsiniz. Fizik, matematik, tarih ve sonsuz testler yerine çocuklarınızı erken yaşta İngilizceye yönlendirerek! Bu diğer derslerden daha kolay olduğu gibi, dilediklerinde yurt dışında veya içinde bizi zorladıkları anlamsız yarış dışındaki bir kulvarı da olanaklı kılar, belki bilmediğimiz başka kulvarlardı da!  
 
-İngilizce konusundaki yazımı okumak için [[cocuklari-ingilizce-tesvik]]
-
-
-
-
-
-
+İngilizce konusundaki yazımı okumak için [cocuklari ingilizce tesvik](/2024/03/03/cocuklari-ingilizce-tesvik.html)

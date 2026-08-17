@@ -1,21 +1,18 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'umudun-bittigi-yer'
+title: umudun-bittigi-yer
 tags:
-  - opinion
-  - disleksi
+- opinion
+- disleksi
+- ebeveyn
+source_published_at: 2024-10-06T21:41
+status: blog
+legacy_image: /static/img/umut.png
+description: Bazen umudunuzu kaybedersiniz
+keywords: Umut, motivasyon
 ---
 
----
-tags:
-  - ebeveyn
-tarih: 2024-10-06T21:41
-statu: blog
-imgurl: /static/img/umut.png
-meta_desc: Bazen umudunuzu kaybedersiniz
-meta_keywords: Umut, motivasyon
----
 # Umudun Bittiği Yer
 
 Evet, tüm bilginize, motivasyonunuza ve çabanıza rağmen umudunuz tükenecektir! Bugün başıma gelen ve zaman zaman yaşadığım böyle bir olayı sizlerle paylaşacağım. Okumanızı öneririm çünkü problemleri halının altına süpürmek yerine onlarla başa çıkmaya çalışan herkesin yaşayacağı durum budur.  
@@ -33,10 +30,3 @@ Evet, kimse kusura bakmasın. Ben de bir kitap yazarı olarak çok merak ediyoru
 ## Biz ne yapacağız
 
 Maalesef, bu atmosferde ısrarla karşı durduğum "kaygılı veli" haline gelmemek olası değil, umudu diri tutmak da! Ancak bu da bir tuzak! Evet, sürekli olarak eleştirmek, kızmak, şikayet etmek (haklı da olsak) araştırmalara göre zihinde problem çözme bölgelerini zayıflatırken, bir sonraki şikayet için ağrı eşiğimizi düşürüyor, daha az düşünüp daha fazla tepkisel olmamıza neden olan amigdala bölgesini büyütüyor araştırmalara göre. Bu nedenle böyle zorlu ödev günlerinin, ya da çocuğunuzun ya da sizin duygusal olarak tükendiği anlarda bir ara verin... Zamanı gelmiştir. Sonra da düştüğünüz  yerden kalkın.
-
-
-
-
-
-
-

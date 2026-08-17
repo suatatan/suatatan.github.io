@@ -1,19 +1,15 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'disleksinin_tarihi'
+title: disleksinin_tarihi
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - bilimsel
-tarih: 2024-09-04T13:36
-statu: blog
-imgurl: /static/img/tarih.jpg
+- opinion
+- disleksi
+- ebeveyn
+- bilimsel
+source_published_at: 2024-09-04T13:36
+status: blog
+legacy_image: /static/img/tarih.jpg
 ---
 
 # Disleksinin Tarihi
@@ -237,6 +233,3 @@ Tarihçiler, psikologlar ve eğitim politikası uzmanlarını içeren disiplinle
 - [21]: LITERACY KEY AWARDS — The Lucy Project
 
 - [22]: Dyslexia: A History of the Term and Current Challenges
-
-
-
