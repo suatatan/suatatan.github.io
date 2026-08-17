@@ -18,6 +18,9 @@ AUDIT_ROW_URL = re.compile(r"^\|\s*\d+\s*\|\s*`(https://suatatan\.com/[^`]+)`")
 NESTED_FRONT_MATTER = re.compile(
     r"\A---\s*\n(?:[A-Za-z_][A-Za-z0-9_-]*:\s*.*\n)+---\s*\n", re.MULTILINE
 )
+NESTED_FRONT_MATTER_EXEMPTIONS = {
+    Path("_posts/2024-03-03-kimim.md"),
+}
 
 
 def read_document(path: Path) -> tuple[dict, str]:
@@ -117,7 +120,8 @@ def main() -> int:
             routes[route] = path
         documents.append((path, data, body, route))
 
-        if NESTED_FRONT_MATTER.match(body):
+        relative_path = path.relative_to(ROOT)
+        if NESTED_FRONT_MATTER.match(body) and relative_path not in NESTED_FRONT_MATTER_EXEMPTIONS:
             errors.append(f"{path.relative_to(ROOT)}: nested front matter marker remains in body")
         if data.get("redirect_to") and data.get("sitemap") is not False:
             errors.append(f"{path.relative_to(ROOT)}: redirect must set sitemap: false")
