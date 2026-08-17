@@ -1,21 +1,17 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'disleksi_tezler'
+title: disleksi_tezler
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - bilimsel
-  - akademik
-tarih: 2024-09-04T12:29
-statu: blog
-meta_desc: Disleksi ne demektir
-meta_keywords: Disleksi, diskalkuli, öğrenme güçlüğü
-imgurl: /static/img/tezler.png
+- opinion
+- disleksi
+- bilimsel
+- akademik
+source_published_at: 2024-09-04T12:29
+status: blog
+description: Disleksi ne demektir
+keywords: Disleksi, diskalkuli, öğrenme güçlüğü
+legacy_image: /static/img/tezler.png
 ---
 
 # Diseksi ile ilgili akademik tezler

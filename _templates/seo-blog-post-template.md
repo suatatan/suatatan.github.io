@@ -10,7 +10,7 @@ description: "Makale açıklaması - 155-160 karakter arası, anahtar kelimeler 
 keywords: "anahtar, kelimeler, virgülle, ayrılmış"
 author: "Dr. Suat ATAN"
 lang: tr
-image: "/images/social-preview.svg" # Özel görsel varsa değiştirin
+image: "/images/social-preview-2026.png" # Özel görsel varsa değiştirin
 
 # Blog kategorileri ve etiketler
 categories:

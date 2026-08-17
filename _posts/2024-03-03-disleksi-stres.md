@@ -1,25 +1,21 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'disleksi-stres'
+title: disleksi-stres
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-tarih: 2024-10-03T06:57
-statu: blog
-imgurl: /static/img/sunflower.webp
-meta_desc: Disleksili çocuğu olanlar stresle nasıl başa çıkar
-meta_keywords: Stres, duygula
+- opinion
+- disleksi
+- ebeveyn
+source_published_at: 2024-10-03T06:57
+status: blog
+legacy_image: /static/img/sunflower.webp
+description: Disleksili çocuğu olanlar stresle nasıl başa çıkar
+keywords: Stres, duygula
 ---
 
 # Ebeveynler için disleksi ile uyumlanma ve stresle başa çıkma rehberi
 
-Tamamen disleksi üzerine deneyimler, araştırmalar ve yardımcı materyaller üzerine hasrettiğim bu blogda disleksinin tanımı ile ilgili olarak yeterli yazı var. İlk defa duyanlar için [[disleksi_nedir]] sorusunun cevabından, disleksiyi bildikleri halde toplumda kulaktan kulağa gezen şehir efsaneleri için [[disleksi_yanilgilar]] yazısına göz atabilirsiniz. Bugün bunların dışında, bilgi ile ilgili değil, duygularla ilgili bir konuyu ele alacağız. Çocuğunuz veya bakmakla yükümlü olduğunuz bir birey disleksili ise bunun yaratabileceği başta stres olmak üzere bazı durumlarla nasıl başa çıkarsınız?
+Tamamen disleksi üzerine deneyimler, araştırmalar ve yardımcı materyaller üzerine hasrettiğim bu blogda disleksinin tanımı ile ilgili olarak yeterli yazı var. İlk defa duyanlar için [disleksi nedir](/2024/03/03/disleksi_nedir.html) sorusunun cevabından, disleksiyi bildikleri halde toplumda kulaktan kulağa gezen şehir efsaneleri için [disleksi yanilgilar](/2024/03/03/disleksi_yanilgilar.html) yazısına göz atabilirsiniz. Bugün bunların dışında, bilgi ile ilgili değil, duygularla ilgili bir konuyu ele alacağız. Çocuğunuz veya bakmakla yükümlü olduğunuz bir birey disleksili ise bunun yaratabileceği başta stres olmak üzere bazı durumlarla nasıl başa çıkarsınız?
 
 ## Zor sorudan başlayalım: Stres nedir?
 
@@ -45,7 +41,7 @@ Disleksili bir çocuğa sahip olmak, ebeveynler için bir dizi zorluk doğurur. 
 
 Bir başka önemli zorluk, çocuğun duygusal ihtiyaçlarını doğru şekilde anlamaktır. Disleksi sadece akademik bir zorluk değildir; aynı zamanda özgüven kaybına, sosyal izolasyona ve duygusal sıkıntılara da yol açabilir. Ebeveynler, çocuğun bu duygusal süreçlerini anlamaya ve desteklemeye çalışırken, kendi duygusal dengesizlikleri ile de başa çıkmak zorunda kalabilirler. 
 
-İşte bu noktada, sadece disleksi çocukarımızın değil bizlerin de bir birey olarak bu stresle başa çıkarken zorlanabileceğimizi kabul etmek, disleksi ile ilgili yanılgılardan kaçınmak, daha önce insanlığa mal olmuş bir çok kişinin de disleksili olduğunu hatırlamak (Bkz [[disleksi_kahramanlar]]) önemlidir. Toplumda disleksili birey sayısı az değildir sadece genel olarak görünmez veya maalesef gizlenir.
+İşte bu noktada, sadece disleksi çocukarımızın değil bizlerin de bir birey olarak bu stresle başa çıkarken zorlanabileceğimizi kabul etmek, disleksi ile ilgili yanılgılardan kaçınmak, daha önce insanlığa mal olmuş bir çok kişinin de disleksili olduğunu hatırlamak (Bkz [disleksi kahramanlar](/2024/03/03/disleksi_kahramanlar.html)) önemlidir. Toplumda disleksili birey sayısı az değildir sadece genel olarak görünmez veya maalesef gizlenir.
 
 ## Bu zorlukların dönüştürücü gücü
 
@@ -59,7 +55,7 @@ Zorluklar, aile bağlarını güçlendirebilir. Ortak bir hedef doğrultusunda �
     
 - **Sabırlı Olun**: Hem çocuğunuz hem de kendiniz için sabırlı olmayı öğrenin. Disleksi bir süreçtir ve zaman alır. Küçük adımlarla büyük ilerlemeler kaydedebilirsiniz.
     
-- **Destek Alın**: Uzmanlardan ve disleksi konusunda deneyimli eğitimcilerden profesyonel destek almak, çocuğunuzun gelişimine katkı sağlar. Aynı zamanda, ebeveynler için oluşturulan destek gruplarına katılmak da süreci kolaylaştırabilir. Ayrıca disleksi eğitim merkezleri ile temasa geçebilirsiniz. Bu merkezlerin listesi için bakınız [[disleksi_egitim_merkezleri]]. Hangi merkezi seçmelisiniz bilmiyorsanız da şu sayfaya bakınız [[hangi_merkez]]
+- **Destek Alın**: Uzmanlardan ve disleksi konusunda deneyimli eğitimcilerden profesyonel destek almak, çocuğunuzun gelişimine katkı sağlar. Aynı zamanda, ebeveynler için oluşturulan destek gruplarına katılmak da süreci kolaylaştırabilir. Ayrıca disleksi eğitim merkezleri ile temasa geçebilirsiniz. Bu merkezlerin listesi için bakınız [disleksi egitim merkezleri](/2024/03/03/disleksi_egitim_merkezleri.html). Hangi merkezi seçmelisiniz bilmiyorsanız da şu sayfaya bakınız [hangi merkez](/2024/03/03/hangi_merkez.html)
     
 - **Pozitif Bir Atmosfer Yaratın**: Çocuğunuzun disleksi ile ilgili yaşadığı zorluklara odaklanmak yerine, onun güçlü yanlarını öne çıkaran bir ev ortamı yaratın. Bu, onun özgüvenini artıracak ve motivasyonunu destekleyecektir.
     
@@ -78,9 +74,3 @@ Dr. Suat ATAN
 3: https://en.wikipedia.org/wiki/Eustress
 
 4: Smith, Craig (1991), "The Self, Appraisal and Coping", _Handbook of Social and Clinical Psychology: The Health Perspective_, New York, NY: Pergamon Press, pp. 116–137
-
-
-
-
-
-

@@ -1,20 +1,16 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'kolay_hikaye_tomas'
+title: kolay_hikaye_tomas
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - kolayokuma
-  - 7sinif
-  - çocuklariçin
-tarih: 2024-09-04T22:20
-statu: blog
+- opinion
+- disleksi
+- ebeveyn
+- kolayokuma
+- 7sinif
+- çocuklariçin
+source_published_at: 2024-09-04T22:20
+status: blog
 ---
 
 # Tomas'ın Hikayesi Kolay Okuma Metni
@@ -51,5 +47,4 @@ Thomas, hepinizi aydınlattı.
 
 **Etiketler**
 
-#çocuklariçin, #7sinif  
-
+#çocuklariçin, #7sinif

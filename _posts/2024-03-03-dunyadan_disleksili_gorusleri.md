@@ -1,20 +1,16 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'dunyadan_disleksili_gorusleri'
+title: dunyadan_disleksili_gorusleri
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - akademik
-  - bilimsel
-tarih: 2024-09-04T13:38
-statu: blog
-imgurl: /static/img/gorusler.jpg
+- opinion
+- disleksi
+- ebeveyn
+- akademik
+- bilimsel
+source_published_at: 2024-09-04T13:38
+status: blog
+legacy_image: /static/img/gorusler.jpg
 ---
 
 # Disleksili Bireylerden Çeşitli Görüşler
@@ -173,5 +169,3 @@ sağladı.’’sözleriyle ailenin katkısını belirtmiştir.
 
 “Ailem bu konuda yeterince bilgiye sahip değildi ve destek olamadı’’ şeklinde
 cevaplamıştır.
-
-

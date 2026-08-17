@@ -1,20 +1,16 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'evde_disleksi_etkinlikleri'
+title: evde_disleksi_etkinlikleri
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - destekaraçları
-  - etkinlikyap
-tarih: 2024-09-04T13:44
-statu: blog
-imgurl: /static/img/evde.webp
+- opinion
+- disleksi
+- ebeveyn
+- destekaraçları
+- etkinlikyap
+source_published_at: 2024-09-04T13:44
+status: blog
+legacy_image: /static/img/evde.webp
 ---
 
 # Disleksili Çocuklar İçin Evde Eğlenceli Etkinlikler
@@ -50,12 +46,10 @@ Disleksi, öğrenme zorluklarından biridir ve çocukların okuma, yazma ve hece
 
 Ayrıca blogumda bulabileceğiniz kısa kelime ve kısa cümlelerle oluşturulmuş basit metinleri çocuğunuza okutabilirsiniz. Bu metinler disleksililerin zorlandığı uzun heceli ifadeler ve karmaşık cümeleler içermediğinden onları okumaya teşvik edecektir. İşte bazı kolay hikayeler
 
-- Cesur Köpek [[kolay_hikaye_cesur_kopek]]
-- Küçük Balıkçı [[kolay_hikaye_kucuk_balikci]]
-- Neşeli Bahçe [[kolay_hikaye_neseli_bahce]]
-- Sihirli Tohum [[kolay_hikaye_sihirli_tohum]]
-- Tomas [[kolay_hikaye_tomas]]
+- Cesur Köpek [kolay hikaye cesur kopek](/2024/03/03/kolay_hikaye_cesur_kopek.html)
+- Küçük Balıkçı [kolay hikaye kucuk balikci](/2024/03/03/kolay_hikaye_kucuk_balikci.html)
+- Neşeli Bahçe [kolay hikaye neseli bahce](/2024/03/03/kolay_hikaye_neseli_bahce.html)
+- Sihirli Tohum [kolay hikaye sihirli tohum](/2024/03/03/kolay_hikaye_sihirli_tohum.html)
+- Tomas [kolay hikaye tomas](/2024/03/03/kolay_hikaye_tomas.html)
 
 Unutmayın, disleksili çocukların öğrenme şekilleri farklı olabilir. Sabırlı olun, çocuğunuzu destekleyin ve onunla birlikte eğlenin. Bu etkinlikler, çocuğunuzun kısa süreli hafızasını güçlendirmeye ve öğrenme sürecini daha keyifli hale getirmeye yardımcı olacaktır.
-
-

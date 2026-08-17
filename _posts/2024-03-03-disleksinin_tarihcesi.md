@@ -1,21 +1,17 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'disleksinin_tarihcesi'
+title: Disleksinin Tarihçesi
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - bilimsel
-tarih: 2024-09-04T13:35
-statu: blog
-meta_desc: Disleksi Tarihçesi, disleksi ne zaman ortaya çıktı
-meta_keywords: Disleksi, diskalkuli, öğrenme güçlüğü
-imgurl: /static/img/tarihce.jpg
+- opinion
+- disleksi
+- ebeveyn
+- bilimsel
+source_published_at: 2024-09-04T13:35
+status: blog
+description: Disleksinin tanımlanmasından modern nörolojik araştırmalara uzanan kısa tarihçe ve önemli dönüm noktaları.
+keywords: Disleksi, diskalkuli, öğrenme güçlüğü
+legacy_image: /static/img/tarihce.jpg
 ---
 
 # Disleksinin Tarihçesi
@@ -47,7 +43,7 @@ Son yıllarda, disleksinin sadece bir zorluk değil, aynı zamanda bireylerin ya
 
 Disleksi, tarih boyunca birçok bilim insanı ve araştırmacı tarafından incelenmiş ve anlaşılmaya çalışılmış bir durumdur. Disleksinin tanımı, zamanla evrilmiş ve günümüzde daha geniş bir anlayışa ulaşılmıştır. Disleksili bireylerin güçlü yönlerini anlamak ve desteklemek, onların potansiyellerini en üst düzeye çıkarmalarına yardımcı olacaktır. Disleksinin tarihi, aynı zamanda öğrenme güçlükleri ile ilgili toplumsal algının da nasıl değiştiğini gösteren bir yolculuktur.
 
-Disleksinin tarihi ile ilgili daha ayrıntılı bir tarihçe için [[disleksinin_tarihi]] başlıklı yazımızı okuyabilirsiniz. Ayrıca disleksinin tarihçesi içinde ele almadığımız ancak disleksi ile ilgili problemleri çözmeye yarayan Disleksi ile ilgili yardımcı teknolojiler yazımı okuyun [[disleksi_teknolojiler]].
+Disleksinin tarihi ile ilgili daha ayrıntılı bir tarihçe için [disleksinin tarihi](/2024/03/03/disleksinin_tarihi.html) başlıklı yazımızı okuyabilirsiniz. Ayrıca disleksinin tarihçesi içinde ele almadığımız ancak disleksi ile ilgili problemleri çözmeye yarayan Disleksi ile ilgili yardımcı teknolojiler yazımı okuyun [disleksi teknolojiler](/2024/03/03/disleksi_teknolojiler.html).
 
 Kaynaklar:
 

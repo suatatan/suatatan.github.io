@@ -1,23 +1,20 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'rapor-almaktan-korkan-veliler-buraya'
+title: rapor-almaktan-korkan-veliler-buraya
 tags:
-  - opinion
-  - disleksi
+- opinion
+- disleksi
+- ebeveyn
+- resmi
+- yasalhaklar
+source_published_at: 2024-10-04 22:17:00
+status: blog
+legacy_image: /static/img/rapor.webp
+description: Disleksi Raporunu almaktan korkuyor musunuz?
+keywords: Disleksi, diskalkuli, öğrenme güçlüğü,
 ---
 
----
-tags:
-  - ebeveyn
-  - resmi
-  - yasalhaklar
-tarih: 2024-10-04T22:17:00
-statu: blog
-imgurl: /static/img/rapor.webp
-meta_desc: Disleksi Raporunu almaktan korkuyor musunuz?
-meta_keywords: Disleksi, diskalkuli, öğrenme güçlüğü,
----
 # Disleksi Raporunu Almaktan Çekininen Veliler Buraya?
 
 Bazı veliler çocuklarının ileride polis veya subay olamayacakları endişesi ile almıyorlar. Peki bu endişede haklılar mı?
@@ -46,7 +43,7 @@ Avukat İbrahim Azcan tarafından, Özel Çocuklar Eğitim ve araştırma derne�
 
 *"Disleksi problemi yaşayan çocuklar için engelli ifadesi kullanılması kuşkusuz ki çok doğru olmayan bir ifadedir. Muhtemelen fırsat eşitliği açısından diğer çocuklarla kıyaslandığında dezavantajlı grup içinde yer aldıklarından böylesi bir ifade kullanılmıştır. Ebeveynlerin yaşadıkları en büyük çelişkinin başında çocuklarının geniş hayal dünyaları karşısında böylesi bir nitelendirme onlarda bir kabul edilemezliğe ve bir tepkiye yol açmaktadır."*
 
-Dolayısıyla disleksi için hukuken zorlama bir tanım olan "engelli" ifadesinin gerçekle bir ilgisi yoktur. Elbette "engelli" ifadesi bir ayıp veya eksik değil bir durum tanımıdır ancak disleksi için alınan %20 (yazının yazıldığı dönem itibariyle) engelli raporu bir engeli teşkil etmez.  Bu konuyu daha iyi anlamak  için [[disleksi_yanilgilar]] yazısını okuyabilirsiniz.
+Dolayısıyla disleksi için hukuken zorlama bir tanım olan "engelli" ifadesinin gerçekle bir ilgisi yoktur. Elbette "engelli" ifadesi bir ayıp veya eksik değil bir durum tanımıdır ancak disleksi için alınan %20 (yazının yazıldığı dönem itibariyle) engelli raporu bir engeli teşkil etmez.  Bu konuyu daha iyi anlamak  için [disleksi yanilgilar](/2024/03/03/disleksi_yanilgilar.html) yazısını okuyabilirsiniz.
 
 ## Rapor Engel midir?
 
@@ -58,4 +55,3 @@ Aynı yazıdan analadığımıza göre, bu disleksi raporu bir engel değildir! 
 Okuduğunuz için teşekkür ederim, lütfen bu yazıyı ilgileneceğiniz diğer velilerle de paylaşmayı unutmayın.
 
 Dr. Suat ATAN
-

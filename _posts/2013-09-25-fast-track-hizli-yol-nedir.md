@@ -3,6 +3,7 @@ categories:
 - genel
 date: 2013-09-25
 layout: post
+sitemap: false
 tags:
 - turkish
 - insaat-muhendisligi

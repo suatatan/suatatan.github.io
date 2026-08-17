@@ -4,6 +4,7 @@ categories:
 - genel
 date: 2011-01-05
 layout: post
+sitemap: false
 tags:
 - turkish
 - inceleme

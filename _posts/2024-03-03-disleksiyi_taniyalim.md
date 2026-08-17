@@ -1,24 +1,20 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'disleksiyi_taniyalim'
+title: disleksiyi_taniyalim
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - bilimsel
-tarih: 2024-09-04T13:37
-statu: blog
-imgurl: /static/img/taniyalim.jpg
+- opinion
+- disleksi
+- ebeveyn
+- bilimsel
+source_published_at: 2024-09-04T13:37
+status: blog
+legacy_image: /static/img/taniyalim.jpg
 ---
 
 # Disleksiyi Tanıyalım
 
-Bu uzun yazı konuyu tüm yönleri ile ele almaya çalışıyor daha kısa bir yazımız için Disleksi Nedir [[disleksi_nedir]] ya da Disleksinin tarihçesi  [[disleksinin_tarihcesi]] yazılarımıza göz atabilirsiniz.
+Bu uzun yazı konuyu tüm yönleri ile ele almaya çalışıyor daha kısa bir yazımız için Disleksi Nedir [disleksi nedir](/2024/03/03/disleksi_nedir.html) ya da Disleksinin tarihçesi  [disleksinin tarihcesi](/2024/03/03/disleksinin_tarihcesi.html) yazılarımıza göz atabilirsiniz.
 
 ## Disleksi Nedir, Yanlış Anlamalarla Mücadeleye Giriş
 
@@ -104,7 +100,7 @@ Başarılı disleksi tedavisi, klinisyen ve birey arasında, belirli ihtiyaçlar
 #### Evrensel Destek
 Evrensel destek, disleksililer de dahil olmak üzere tüm öğrencilerin ihtiyaçlarını karşılamayı amaçlayan bir dizi kapsayıcı öğretim stratejisini kapsar. Bu stratejiler genellikle çok duyulu, etkileşimli ve iyi yapılandırılmış olup etkili öğrenmeyi kolaylaştırır[19]. Okullar genellikle yalnızca disleksili öğrencileri değil, aynı zamanda özel eğitim uygulamalarından faydalanabilecek diğerlerini de desteklemek için çeşitli kaynaklar ve yaklaşımlar uygular[19].
 #### Yardımcı Teknoloji
-Yardımcı teknoloji, disleksili bireyleri desteklemede önemli bir rol oynar. Bu, okuma, yazma ve öğrenmeye yardımcı olmak için tasarlanmış araçlar ve yazılımları içerir, böylece erişilebilirliği ve katılımı artırır[5]. Bu tür teknolojilerin kullanımı, öğrencilere eğitim yolculuklarında yardımcı olacak değerli kaynaklar sağlayabilir.  Disleksi ile ilgli yardımcı teknolojiler konusunda [[disleksi_teknolojiler]] yazımızı okuyabilirsiniz.
+Yardımcı teknoloji, disleksili bireyleri desteklemede önemli bir rol oynar. Bu, okuma, yazma ve öğrenmeye yardımcı olmak için tasarlanmış araçlar ve yazılımları içerir, böylece erişilebilirliği ve katılımı artırır[5]. Bu tür teknolojilerin kullanımı, öğrencilere eğitim yolculuklarında yardımcı olacak değerli kaynaklar sağlayabilir.  Disleksi ile ilgli yardımcı teknolojiler konusunda [disleksi teknolojiler](/2024/03/03/disleksi_teknolojiler.html) yazımızı okuyabilirsiniz.
 
 #### İşbirliği ve İletişim
 Eğitimciler, aileler ve özel eğitim profesyonelleri arasındaki sürekli iletişim, bireyselleştirilmiş öğrenme planları geliştirmede hayati önem taşır. Düzenli kontroller, ortaya çıkan ihtiyaçları belirlemeye ve destek sistemlerinin etkili ve alakalı kalmasını sağlamaya yardımcı olabilir[6]. Ebeveynler ayrıca çocuklarının ilerlemesi, kullanılan stratejiler ve müdahalelerde gerekli ayarlamalar hakkında bilgilendirilmelidir[20].
@@ -184,4 +180,3 @@ Kaynak başlıkları internette aratılarak bulunabilirsiniz.
 - [23]: Advocacy Outreach
 - [24]: Supporting Students with Dyslexia
 - [25]: Everything you wanted to know about Dyslexia Awareness Month
-

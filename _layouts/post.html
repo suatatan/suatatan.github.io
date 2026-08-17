@@ -2,6 +2,9 @@
 {% if page.tags contains 'english' %}{% assign post_lang = 'en' %}{% endif %}
 {% assign post_description = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 %}
 {% assign share_image = page.image | default: '/images/social-preview-2026.png' %}
+{% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
+{% assign robots_value = page.robots | default: 'index, follow, max-image-preview:large' %}
+{% assign legacy_technical_urls = site.data.seo.legacy_technical_urls %}
 <!doctype html>
 <html lang="{{ post_lang }}">
   <head>
@@ -10,12 +13,12 @@
     <title>{{ page.title | escape }} — Dr. Suat Atan</title>
     <meta name="description" content="{{ post_description | escape }}">
     <meta name="author" content="Dr. Suat Atan">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="robots" content="{{ robots_value }}">
+    <link rel="canonical" href="{{ canonical_url }}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ page.title | escape }}">
     <meta property="og:description" content="{{ post_description | escape }}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:url" content="{{ canonical_url }}">
     <meta property="og:image" content="{{ share_image | absolute_url }}">
     <meta property="og:image:secure_url" content="{{ share_image | absolute_url }}">
     <meta property="og:image:alt" content="{{ page.title | escape }} — Dr. Suat Atan">
@@ -26,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}?v=20260816-4">
+    <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}?v=20260817-1">
     <meta name="theme-color" content="#0758d9">
     <link rel="icon" type="image/svg+xml" href="{{ '/images/icons/favicon-2026.svg' | relative_url }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/icons/png/favicon-32x32-2026.png' | relative_url }}">
@@ -62,15 +65,21 @@
         </header>
 
         <div class="post-content-modern e-content" itemprop="articleBody">
+          {% if page.legacy_technical or legacy_technical_urls contains page.url %}
+            <aside class="historical-note" aria-label="{% if post_lang == 'en' %}Archive note{% else %}Arşiv notu{% endif %}">
+              <strong>{% if post_lang == 'en' %}Historical archive note{% else %}Tarihsel arşiv notu{% endif %}</strong>
+              <p>{% if post_lang == 'en' %}This article is part of the historical suatatan.com archive. Some APIs, libraries or interfaces may have changed since publication.{% else %}Bu yazı suatatan.com’un tarihsel arşivinin bir parçasıdır. Yayından bu yana bazı API’ler, kütüphaneler veya arayüzler değişmiş olabilir.{% endif %}</p>
+            </aside>
+          {% endif %}
           {{ content }}
         </div>
 
         <footer class="post-modern-footer">
           <div class="post-share">
             <strong>{% if post_lang == 'en' %}Share this article{% else %}Bu yazıyı paylaş{% endif %}</strong>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener">X</a>
-            <a href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">Email</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ canonical_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?url={{ canonical_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener">X</a>
+            <a href="mailto:?subject={{ page.title | url_encode }}&body={{ canonical_url | url_encode }}">Email</a>
           </div>
 
           <aside class="post-author-card">

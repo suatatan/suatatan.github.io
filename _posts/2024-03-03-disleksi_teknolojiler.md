@@ -1,23 +1,20 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'disleksi_teknolojiler'
+title: disleksi_teknolojiler
 tags:
-  - opinion
-  - disleksi
+- opinion
+- disleksi
+- ebeveyn
+- destekaraçları
+- teknoloji
+source_published_at: 2024-09-04T12:27
+status: blog
+keywords: Disleksi, diskalkuli, öğrenme güçlüğü
+description: Disleksi ile ilgili teknolojiler
+legacy_image: /static/img/teknoloji.jpg
 ---
 
----
-tags:
-  - ebeveyn
-  - destekaraçları
-  - teknoloji
-tarih: 2024-09-04T12:27
-statu: blog
-meta_keywords: Disleksi, diskalkuli, öğrenme güçlüğü
-meta_desc: Disleksi ile ilgili teknolojiler
-imgurl: /static/img/teknoloji.jpg
----
 # Disleksi ile ilgili yardımcı teknolojiler
 
 Disleksi, bireylerin okuma, yazma ve heceleme gibi dil becerilerinde zorluk yaşadığı bir öğrenme güçlüğüdür. Bu durum, bireylerin eğitim hayatında ve günlük yaşamlarında çeşitli zorluklarla karşılaşmasına neden olabilir. Ancak, teknolojinin gelişmesiyle birlikte disleksiye sahip bireyler için birçok yardımcı teknoloji geliştirilmiştir. Bu yazıda, dünyada kullanılan bazı yardımcı teknolojilerin örnekleri ve işlevleri ele alınacaktır.
@@ -30,7 +27,7 @@ Sesli kitaplar, disleksiye sahip bireylerin okuma becerilerini geliştirmelerine
 
 ### 2. Okuma ve Yazma Uygulamaları
 
-Birçok mobil uygulama, disleksiye sahip bireylerin okuma ve yazma becerilerini geliştirmeye yönelik tasarlanmıştır. Örneğin, **Ghotit** ve **Voice Dream Reader** gibi uygulamalar, kelime tahmini, sesli okuma ve yazım denetimi gibi özellikler sunarak kullanıcıların yazılı ifadelerini geliştirmelerine yardımcı olur [2][3]. Ayrıca Open Dyslexia adlı bir fontla disleksililer  için daha kolay okuma sağlandığına dair çalışmalar mevcuttur. Bu konudaki yazımı okuyun [[open_dyslexia]] .
+Birçok mobil uygulama, disleksiye sahip bireylerin okuma ve yazma becerilerini geliştirmeye yönelik tasarlanmıştır. Örneğin, **Ghotit** ve **Voice Dream Reader** gibi uygulamalar, kelime tahmini, sesli okuma ve yazım denetimi gibi özellikler sunarak kullanıcıların yazılı ifadelerini geliştirmelerine yardımcı olur [2][3]. Ayrıca Open Dyslexia adlı bir fontla disleksililer  için daha kolay okuma sağlandığına dair çalışmalar mevcuttur. Bu konudaki yazımı okuyun [open dyslexia](/2024/03/03/open_dyslexia.html) .
 
 ### 3. Kelime Tanıma Yazılımları
 
@@ -64,4 +61,3 @@ Disleksi ile başa çıkmak için geliştirilen yardımcı teknolojiler, bireyle
 - https://dergipark.org.tr/tr/pub/trakyasobed/issue/30919/334756
 - https://tr.linkedin.com/pulse/kurumsal-disleksi-arda-mevl%C3%BCto%C4%9Flu
 - https://cdn.teknofest.org/media/upload/diger/96dc3b73a59a150c00fcd18d55105c3f18.pdf
-

@@ -1,20 +1,16 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'open_dyslexia'
+title: open_dyslexia
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - destekaraçları
-  - teknoloji
-tarih: 2024-09-04T22:22
-statu: blog
-imgurl: /static/img/openfont.png
+- opinion
+- disleksi
+- ebeveyn
+- destekaraçları
+- teknoloji
+source_published_at: 2024-09-04T22:22
+status: blog
+legacy_image: /static/img/openfont.png
 ---
 
 # OpenDyslexic: Disleksiyle Mücadelede Bir Font Mu?
@@ -51,7 +47,7 @@ Bu sitede fontun nasıl göründüğünü görebilir bu fontu bilgisayarınıza 
 
 ## Sonuç
 
-OpenDyslexic fontu, disleksiyle mücadele için geliştirilmiş ilginç bir araçtır. Ancak, bu fontun her birey için etkili olup olmadığı ve uzun vadeli etkileri hakkında daha fazla araştırmaya ihtiyaç vardır. Disleksi, çok yönlü bir sorun olduğu için, tek başına bir fontun bu sorunu çözmesi beklenemez. Disleksi tanısı konmuş bireylere, özel eğitim, terapi ve uygun öğrenme ortamları gibi farklı desteklerin bir arada sunulması önemlidir. Disleksi ile ilgili diğer yardımcı teknolojiler için şu yazımı okuyun [[disleksi_teknolojiler]] .
+OpenDyslexic fontu, disleksiyle mücadele için geliştirilmiş ilginç bir araçtır. Ancak, bu fontun her birey için etkili olup olmadığı ve uzun vadeli etkileri hakkında daha fazla araştırmaya ihtiyaç vardır. Disleksi, çok yönlü bir sorun olduğu için, tek başına bir fontun bu sorunu çözmesi beklenemez. Disleksi tanısı konmuş bireylere, özel eğitim, terapi ve uygun öğrenme ortamları gibi farklı desteklerin bir arada sunulması önemlidir. Disleksi ile ilgili diğer yardımcı teknolojiler için şu yazımı okuyun [disleksi teknolojiler](/2024/03/03/disleksi_teknolojiler.html) .
 
 **Özetle,** OpenDyslexic fontu, disleksili bireyler için bir alternatif sunsa da, bu fontun etkinliği bireysel farklılıklara ve diğer faktörlere bağlı olarak değişebilir. Bu nedenle, disleksi tanısı konmuş her birey için en uygun yöntemin bir uzman tarafından belirlenmesi gerekmektedir.
 
@@ -60,5 +56,3 @@ OpenDyslexic fontu, disleksiyle mücadele için geliştirilmiş ilginç bir ara�
 **Bu yazı, disleksi ve OpenDyslexic fontu hakkında genel bir bilgi sunmaktadır. Daha detaylı bilgi için bir uzmana danışmanız önerilir.**
 
 **Not:** Bu yazı, bilgi amaçlıdır ve herhangi bir tıbbi tavsiye niteliği taşımaz.
-
-

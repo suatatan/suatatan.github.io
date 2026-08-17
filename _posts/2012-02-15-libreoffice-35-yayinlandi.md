@@ -4,6 +4,7 @@ categories:
 - genel
 date: 2012-02-15
 layout: post
+sitemap: false
 tags:
 - turkish
 - quickread

@@ -1,4 +1,16 @@
-## Satan's favorite NLP Packages List
+---
+layout: post
+title: "Suat's Favorite NLP Packages List"
+description: "A practical reference list of Python packages and resources for NLP, summarization, text cleaning, semantic networks and information extraction."
+lang: en
+tags:
+  - english
+  - nlp
+  - python
+  - machine-learning
+---
+
+## Suat's Favorite NLP Packages List
 
 
 ### SpaCy

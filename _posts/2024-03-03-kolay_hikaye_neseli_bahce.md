@@ -1,20 +1,17 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'kolay_hikaye_neseli_bahce'
+title: kolay_hikaye_neseli_bahce
 tags:
-  - opinion
-  - disleksi
+- opinion
+- disleksi
+- 7sinif
+- çocuklariçin
+source_published_at: 2024-09-04T22:16
+status: blog
+legacy_image: /static/img/bahce.jpg
 ---
 
----
-tags:
-  - 7sinif
-  - çocuklariçin
-tarih: 2024-09-04T22:16
-statu: blog
-imgurl: /static/img/bahce.jpg
----
 # Neşeli Bahçe
 
 Bu metin disleksili çocuklara özek olarak hazırlanmıştır.
@@ -50,11 +47,4 @@ Ana sayfada da gösterilecek intro buraya
 
 ## Alt başlık 2
 
-## Varsa Kaynaklar 
-
-
-
-
-
-
-
+## Varsa Kaynaklar

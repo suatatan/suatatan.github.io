@@ -1,14 +1,13 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'universite_sinavinda_disleksi'
+title: universite_sinavinda_disleksi
 tags:
-  - opinion
-  - disleksi
+- opinion
+- disleksi
 ---
 
-
-Disleksili çocuklarımız da üniversite sınavına girebilirler. Onlara özel bazı uygulamalar da var. O uygulamalarla ilgili olarak MEB'e ait bir kaynakta şu bilgi bulunuyor [[oog_rehber_kitapçık]] .
+Disleksili çocuklarımız da üniversite sınavına girebilirler. Onlara özel bazı uygulamalar da var. O uygulamalarla ilgili olarak MEB'e ait bir kaynakta şu bilgi bulunuyor [oog rehber kitapçık](/2024/03/03/oog_rehber_kitapçık.html) .
 
 >Üniversite sınavında öğrencilere engel durumlarına uygun; ek süre, okuyucu, işaretleyici desteği gibi düzenlemeler yapılabilmesi için başvuru aşamasında öğrencilerin engelli sağlık kurulu raporlarını ÖSYM kayıt bürolarına vermeleri gerekmektedir. Özel eğitim gereksinimi olan bireylerin eğitim haklarının yanı sıra; kamusal, sağlık, vergi muafiyeti ve indirimi, istihdam, çalışma hayatı, sosyal güvenlik, sosyal yardım, engelli çocuğu/yakını olan çalışanlar gibi alanlarda hakları da bulunmaktadır. Söz konusu haklar ile ilgili detaylı bilgi almak için aşağıda yer alan web adresleri ve iletişim numaralarından yararlanabilirsiniz: 
 >

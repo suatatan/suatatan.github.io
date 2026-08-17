@@ -3,6 +3,8 @@ categories:
 - genel
 date: 2013-02-08
 layout: post
+robots: noindex, follow
+sitemap: false
 tags:
 - english
 - quickread

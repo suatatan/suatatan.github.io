@@ -1,17 +1,13 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'Özel Öğrenme Güçlüğü Rehber Kitapçık'
+title: Özel Öğrenme Güçlüğü Rehber Kitapçık
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-tarih: 2024-09-04T22:21
-statu: blog
+- opinion
+- disleksi
+- ebeveyn
+source_published_at: 2024-09-04T22:21
+status: blog
 ---
 
 # Özel Öğrenme Güçlüğü Rehber Kitapçık
@@ -36,4 +32,4 @@ Doçent Doktor Macit Ayhan Melekoğlu ve Gökhan Yıldız tarafından kaleme al�
 
 **Etiketler**
 
-#ebeveyn, #kaynaklar,  #resmi 
+#ebeveyn, #kaynaklar,  #resmi

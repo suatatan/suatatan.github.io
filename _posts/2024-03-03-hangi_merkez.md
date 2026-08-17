@@ -1,22 +1,18 @@
 ---
 date: 2024-03-03
 layout: post
-title: 'hangi_merkez'
+title: hangi_merkez
 tags:
-  - opinion
-  - disleksi
----
-
----
-tags:
-  - ebeveyn
-  - merkezler
-  - resmi
-tarih: 2024-09-1721:00
-statu: blog
-meta_desc: Hangi Merkez, Hangi Disleksi Eğitim Merkezi iyi
-meta_keywords: Ankara Disleksi Eğitimi, İstanbul Disleksi Eğitimi
-imgurl: /static/img/merkez2.jpg
+- opinion
+- disleksi
+- ebeveyn
+- merkezler
+- resmi
+source_published_at: 2024-09-1721:00
+status: blog
+description: Hangi Merkez, Hangi Disleksi Eğitim Merkezi iyi
+keywords: Ankara Disleksi Eğitimi, İstanbul Disleksi Eğitimi
+legacy_image: /static/img/merkez2.jpg
 ---
 
 # Hangi Merkezi Seçmeliyim?
@@ -43,4 +39,4 @@ Kamuoyunun kolektif bilincindeki negatif algıyı resmetmek kolay değilse de, r
 
 Mevzuat ve doğası gereği bu eğitimlerin temellerinin fiziksel olarak verilmesi gerekir bu nedenle online disleksi eğitimi bir seçenek olmayacaktır. Blogumda olduğu gibi bazı egzersizler ve takviye uygulamalar söz konusudur ve bunlar çocuğunuzu destekleyecektir, ancak aslolan fiziksel ve resmi eğitimin devamıdır.
 
-Bu merkezlerin iletişim bilgilerine nereden ulaşabilirim? Bunun cevabını şu yazıda bulabilirsiniz: [[disleksi_egitim_merkezleri]]
+Bu merkezlerin iletişim bilgilerine nereden ulaşabilirim? Bunun cevabını şu yazıda bulabilirsiniz: [disleksi egitim merkezleri](/2024/03/03/disleksi_egitim_merkezleri.html)
