@@ -2,6 +2,9 @@ name: Sync published Notion content
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/notion-sync-trigger"
   schedule:
     - cron: "17 4 * * *"
 
