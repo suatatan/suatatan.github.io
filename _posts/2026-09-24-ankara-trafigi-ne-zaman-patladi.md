@@ -7,6 +7,7 @@ lang: tr
 tags: ["data", "turkish"]
 notion_id: "3e510c65-eea4-8142-bd6b-f99521cd9fe7"
 notion_generated: true
+permalink: /2026/09/24/ankara-trafigi-ne-zaman-patladi/
 ---
 
 Ankara trafiğinin son birkaç yılda belirgin biçimde ağırlaştığını düşünüyorsanız, bu yalnızca kişisel bir izlenim değil. Araç sayısı, nüfus artışı ve yolculuk süreleri birlikte incelendiğinde özellikle **2023 sonrasında dikkat çekici bir hızlanma** görülüyor.
