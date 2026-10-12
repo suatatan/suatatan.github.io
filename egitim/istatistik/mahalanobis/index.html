@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mahalanobis Uzaklığı: Gizli Aykırı Değerler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFBF6; --grid:#E1EAF3; --ink:#1B2A4E; --ink-soft:#56627F;
+  --blue:#1F4FB8; --blue-soft:#DCE6FB; --red:#D23B33; --red-soft:#FBE1DE;
+  --amber:#C98A00; --amber-bg:#FFE38A; --pt:#2A3A63;
+  --card:rgba(255,255,255,.9); --margin:#E9A3A0; --line:#C9D5E4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+    --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+    --amber:#F5C042; --amber-bg:#5A4614; --pt:#C9D3EC;
+    --card:rgba(25,32,54,.92); --margin:#7A3B3B; --line:#2A3552;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+  --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+  --amber:#F5C042; --amber-bg:#5A4614; --pt:#C9D3EC;
+  --card:rgba(25,32,54,.92); --margin:#7A3B3B; --line:#2A3552;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{
+  margin:0;height:100%;color:var(--ink);
+  font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;font-variant-numeric:tabular-nums;
+}
+body::before{content:"";position:fixed;top:0;bottom:0;left:56px;width:2px;background:var(--margin);pointer-events:none;z-index:0}
+.app{position:relative;z-index:1;height:100%;display:grid;grid-template-rows:auto 1fr auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px 10px 76px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.author{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-top:2px;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.author a{color:var(--blue);text-decoration:none;border-bottom:1.5px solid currentColor}
+.author a:hover{border-bottom-width:2.5px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:.88rem;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);border-radius:999px;padding:6px 13px;cursor:pointer}
+.tabs button[aria-current="true"]{border-color:var(--ink);color:var(--ink);font-weight:700}
+.viewport{overflow:hidden;position:relative}
+.slides{display:flex;height:100%;transition:transform .55s cubic-bezier(.65,0,.35,1)}
+.slide{flex:0 0 100%;height:100%;overflow-y:auto;padding:12px 28px 28px 76px}
+.slide-inner{max-width:1200px}
+h1{font-size:clamp(1.9rem,4.2vw,3.1rem);line-height:1.02;letter-spacing:-.03em;margin:.1em 0 .3em;font-weight:800}
+.lead{font-size:1.06rem;line-height:1.55;max-width:66ch;margin:0 0 16px}
+.layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,1fr);gap:28px;align-items:start}
+.panel{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px}
+.panel h2{margin:0 0 6px;font-size:1.05rem}
+.panel p{line-height:1.5;margin:0 0 10px}
+.sub{font-size:.9rem;color:var(--ink-soft);line-height:1.45}
+.hand{font-family:"Caveat","Comic Sans MS",cursive;font-size:1.4rem;line-height:1.2;color:var(--red)}
+.btn{font:inherit;font-weight:700;font-size:.95rem;padding:10px 16px;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn[aria-pressed="true"]{background:var(--blue-soft);color:var(--blue);border-color:var(--blue)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.note{font-size:.82rem;color:var(--ink-soft);margin-top:12px}
+.chartcard{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px}
+
+/* ---------- SVG ---------- */
+svg.sc{width:100%;height:auto;display:block;max-height:72vh;touch-action:none}
+svg.sc text{fill:var(--ink-soft);font-family:inherit;font-size:12px}
+svg.sc .axlbl{fill:var(--ink);font-size:13px;font-weight:700}
+svg.sc .tick line{stroke:var(--line)}
+svg.sc .base{stroke:var(--ink);stroke-width:1.6}
+svg.sc .ref{fill:var(--pt);opacity:.5}
+svg.sc .hbar{fill:var(--blue-soft);stroke:var(--blue);stroke-width:1}
+svg.sc .hbar.out{fill:var(--red-soft);stroke:var(--red)}
+svg.sc .band{fill:var(--blue);opacity:.07}
+svg.sc .layer{opacity:0;transition:opacity .5s}
+svg.sc .layer.on{opacity:1}
+svg.sc .guide{stroke:var(--red);stroke-width:2;stroke-dasharray:6 5}
+svg.sc .glbl{fill:var(--red);font-weight:700;font-size:13px}
+svg.sc .ubox{fill:none;stroke:var(--blue);stroke-width:2;stroke-dasharray:7 5}
+svg.sc .ublbl{fill:var(--blue);font-weight:700;font-size:12px}
+svg.sc .ell{fill:none;stroke:var(--red);stroke-width:2.2}
+svg.sc .ellfill{fill:var(--red);opacity:.05}
+svg.sc .elbl{fill:var(--red);font-weight:700;font-size:12px}
+svg.sc .contour{fill:none;stroke-width:1.8;transition:opacity .4s}
+svg.sc .contour.euc{stroke:var(--ink-soft);stroke-dasharray:5 5}
+svg.sc .contour.mah{stroke:var(--red)}
+svg.sc .clbl{font-size:11.5px;font-weight:700}
+svg.sc .star{fill:var(--red);stroke:var(--paper);stroke-width:2}
+svg.sc .plbl{fill:var(--ink);font-weight:800;font-size:13px;paint-order:stroke;stroke:var(--paper);stroke-width:4px}
+svg.sc .drag{cursor:grab}
+svg.sc .drag:active{cursor:grabbing}
+svg.sc .drag circle.hit{fill:transparent}
+svg.sc .drag:focus{outline:none}
+svg.sc .drag:focus-visible circle.dot{stroke:var(--ink);stroke-width:3}
+svg.sc .drag text{fill:#fff;font-weight:800;font-size:13px;pointer-events:none}
+svg.sc .spoke{stroke-width:1.6;stroke-dasharray:4 4}
+svg.sc .ctr{fill:var(--ink)}
+
+/* ---------- slayt 1 ---------- */
+.person{display:flex;gap:14px;align-items:center;padding:12px 14px;border-radius:12px;background:var(--paper);border:1.5px solid var(--line);margin-bottom:12px}
+.person .av{width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.2rem;flex:none}
+.person b{font-size:1.1rem}
+ol.stepl{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+ol.stepl li{opacity:.4;transition:opacity .3s;line-height:1.45;font-size:.94rem}
+ol.stepl li.on{opacity:1}
+ol.stepl li b.t{display:block;font-size:1rem}
+.verdict{display:inline-block;font-weight:800;font-size:.82rem;padding:2px 9px;border-radius:999px;border:2px solid;margin-left:4px}
+.verdict.ok{color:var(--blue);border-color:var(--blue);background:var(--blue-soft)}
+.verdict.bad{color:var(--red);border-color:var(--red);background:var(--red-soft)}
+.verdict.warn{color:var(--ink);border-color:var(--amber);background:var(--amber-bg)}
+
+/* ---------- slayt 2 ---------- */
+.seg{display:inline-flex;border:2px solid var(--ink);border-radius:10px;overflow:hidden;margin:4px 0 12px}
+.seg button{font:inherit;font-weight:700;font-size:.9rem;padding:8px 12px;border:none;background:transparent;color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+table.dist{width:100%;border-collapse:collapse;font-size:.92rem;margin:4px 0 12px}
+table.dist th,table.dist td{text-align:left;padding:7px 6px;border-bottom:1.5px solid var(--line)}
+table.dist th{font-size:.8rem;color:var(--ink-soft);font-weight:700}
+table.dist td.num{font-weight:800;font-size:1.05rem}
+.tagA,.tagB{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;color:#fff;font-weight:800;font-size:.85rem}
+.tagA{background:var(--red)} .tagB{background:var(--blue)}
+.formula{font-size:1.12rem;font-weight:700;margin:6px 0 4px;line-height:1.5;overflow-x:auto}
+.formula sub,.formula sup{font-size:.7em}
+.frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 4px}
+.frac span:first-child{border-bottom:2px solid currentColor;padding:0 4px 2px}
+.frac span:last-child{padding-top:2px}
+
+/* ---------- slayt 3 ---------- */
+.tablewrap{overflow-x:auto;margin-top:16px;background:var(--card);border:1.5px solid var(--line);border-radius:14px}
+table.cmp{width:100%;border-collapse:collapse;font-size:.92rem;min-width:720px}
+table.cmp th,table.cmp td{padding:9px 10px;border-bottom:1.5px solid var(--line);text-align:left;white-space:nowrap}
+table.cmp th{font-size:.8rem;color:var(--ink-soft)}
+table.cmp tbody tr{cursor:pointer}
+table.cmp tbody tr.sel{background:var(--blue-soft)}
+table.cmp input{font:inherit;font-weight:700;width:72px;padding:5px 7px;border-radius:8px;border:2px solid var(--amber);background:var(--paper);color:var(--ink)}
+.rule{display:grid;gap:8px;margin-top:6px}
+.rule div{display:flex;gap:10px;align-items:center;font-size:.92rem}
+.sw{width:30px;height:0;border-top:2.5px dashed var(--blue);flex:none}
+.sw.e{border-top:2.5px solid var(--red)}
+
+footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 24px 14px 76px}
+.counter{font-weight:700;color:var(--ink-soft)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+@media (max-width:960px){.layout{grid-template-columns:1fr}}
+@media (max-width:640px){
+  body::before{left:18px}
+  header,footer{padding-left:32px;padding-right:14px}
+  .slide{padding:8px 14px 24px 32px}
+  .tabs button{padding:5px 9px;font-size:.8rem}
+  svg.sc text{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.slides,svg.sc .layer{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="brand">Mahalanobis Uzaklığı: Gizli Aykırı Değerler</div>
+      <div class="author">Dr. Suat ATAN <a href="https://suatatan.com" target="_blank" rel="noopener">suatatan.com</a></div>
+    </div>
+    <nav class="tabs" aria-label="Slaytlar">
+      <button type="button" data-go="0" aria-current="true">1 · Tek tek bakınca</button>
+      <button type="button" data-go="1" aria-current="false">2 · Verinin cetveli</button>
+      <button type="button" data-go="2" aria-current="false">3 · Kim yakalanır?</button>
+    </nav>
+  </header>
+
+  <main class="viewport">
+    <div class="slides" id="slides">
+
+      <!-- ========== SLAYT 1 ========== -->
+      <section class="slide" aria-label="Slayt 1: Tek tek bakınca">
+        <div class="slide-inner">
+          <h1>Tek tek bakınca her şey normal</h1>
+          <p class="lead">Elimizde 150 kişinin boy ve kilo ölçümü var. Her nokta bir kişi. Bilinen kural şu: bir değerin z-puanı ±2,5'in dışındaysa aykırı say. Peki bu kural yeni gelen birini doğru değerlendirir mi?</p>
+          <div class="layout">
+            <div class="chartcard"><div id="p1"></div></div>
+            <aside class="panel">
+              <div class="person"><div class="av">A</div><div><b>Ayşe</b><br>188 cm, 58 kg</div></div>
+              <ol class="stepl">
+                <li id="s1a"><b class="t">Boya tek başına bak</b>z = (188 − 172) ÷ 9 = +1,78 <span class="verdict ok">Normal</span><br><span class="sub">Gruptaki birkaç kişi ondan da uzun.</span></li>
+                <li id="s1b"><b class="t">Kiloya tek başına bak</b>z = (58 − 72) ÷ 11 = −1,27 <span class="verdict ok">Normal</span><br><span class="sub">Ondan hafif kişiler de var.</span></li>
+                <li id="s1c"><b class="t">İkisine birlikte bak</b>Ayşe bulutun tamamen dışında! Bu boydaki biri genellikle çok daha kilolu. <span class="verdict bad">Aykırı</span><br><span class="sub">Ayşe mavi kutunun (tek değişkenli kural) içinde kaldığı için kural onu kaçırdı.</span></li>
+              </ol>
+              <div class="actions">
+                <button class="btn" id="next1" type="button">Boya bak</button>
+                <button class="btn ghost" id="reset1" type="button">Baştan başla</button>
+              </div>
+              <div class="hand">Aykırılık bazen tek bir değerde değil, değerlerin birleşiminde saklıdır.</div>
+              <p class="note">Ortalama boy 172 cm (ss 9), ortalama kilo 72 kg (ss 11), korelasyon 0,70. Veriler ders amacıyla üretilmiş temsili verilerdir.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SLAYT 2 ========== -->
+      <section class="slide" aria-label="Slayt 2: Verinin cetveli">
+        <div class="slide-inner">
+          <h1>Mahalanobis: verinin kendi cetveli</h1>
+          <p class="lead">Sıradan (Öklid) uzaklık her yönü eşit sayar ve merkezin etrafına çember çizer. Oysa boy ile kilo birlikte artar; bulut eğik bir elipstir. Hintli istatistikçi P. C. Mahalanobis 1936'da uzaklığı bu elipse göre ölçmeyi önerdi. <b>A ve B noktalarını sürükle.</b></p>
+          <div class="layout">
+            <div class="chartcard"><div id="p2"></div></div>
+            <aside class="panel">
+              <div class="seg" role="group" aria-label="Uzaklık türü">
+                <button type="button" id="mEuc" aria-pressed="false">Öklid çemberleri</button>
+                <button type="button" id="mMah" aria-pressed="true">Mahalanobis elipsleri</button>
+              </div>
+              <table class="dist">
+                <thead><tr><th></th><th>Kişi</th><th>Öklid (z)</th><th>Mahalanobis D</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td><span class="tagA">A</span></td><td id="dA0"></td><td class="num" id="dA1"></td><td class="num" id="dA2"></td><td id="dA3"></td></tr>
+                  <tr><td><span class="tagB">B</span></td><td id="dB0"></td><td class="num" id="dB1"></td><td class="num" id="dB2"></td><td id="dB3"></td></tr>
+                </tbody>
+              </table>
+              <p id="msg2"></p>
+              <div class="actions" style="margin-top:0"><button class="btn ghost" id="reset2" type="button">Noktaları başa al</button></div>
+              <h2>Formül</h2>
+              <div class="formula">D² = (x − μ)<sup>T</sup> Σ<sup>−1</sup> (x − μ)</div>
+              <p class="sub" style="margin-bottom:6px">İki değişkende, z-puanları ve korelasyon ρ ile:</p>
+              <div class="formula">D² = <span class="frac"><span>z<sub>boy</sub>² − 2ρ·z<sub>boy</sub>·z<sub>kilo</sub> + z<sub>kilo</sub>²</span><span>1 − ρ²</span></span></div>
+              <p class="sub">Ortadaki terime dikkat: boy ve kilo aynı yönde saparsa (ikisi de yüksek) uzaklık küçülür; zıt yönde saparsa (uzun ama hafif) büyür. ρ = 0 olsaydı formül sıradan Öklid uzaklığına dönerdi.</p>
+              <p class="sub">Veri normal dağılıyorsa D², 2 serbestlik dereceli ki-kare dağılımına uyar. %97,5 eşiği: <b>D &gt; 2,72</b> ise aykırı.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SLAYT 3 ========== -->
+      <section class="slide" aria-label="Slayt 3: Kim yakalanır?">
+        <div class="slide-inner">
+          <h1>Hangi kural kimi yakalar?</h1>
+          <p class="lead">İki kuralı yan yana koyalım. Mavi kesikli kutu tek değişkenli kuralı (her değişken ayrı ayrı ±2,5 z), kırmızı elips Mahalanobis kuralını (D ≤ 2,72) gösteriyor. Bir satıra tıkla; son satıra kendi kişini yaz.</p>
+          <div class="layout">
+            <div class="chartcard"><div id="p3"></div></div>
+            <aside class="panel">
+              <h2>İki kural, iki farklı hata</h2>
+              <div class="rule">
+                <div><span class="sw"></span>Tek değişkenli kutu: köşelerdeki boşluğu "normal" sayar, eğik bulutun uçlarını keser.</div>
+                <div><span class="sw e"></span>Mahalanobis elipsi: bulutun gerçek şeklini izler.</div>
+              </div>
+              <p style="margin-top:12px"><b style="color:var(--red)">Kaçırılan aykırı:</b> Ayşe ve Mehmet her ölçüde normal görünür ama birleşimleri olağandışıdır.</p>
+              <p><b style="color:var(--amber)">Boşuna alarm:</b> Kerem çok uzun, ama kilosu boyuyla orantılı; gruba gayet uyuyor.</p>
+              <p class="sub">Gerçek hayatta: kredi kartında tutar normal, saat normal, ama gece 3'te yüksek tutar olağandışı olabilir. Fabrikada sıcaklık ve basınç ayrı ayrı normal, birlikteyse arıza işareti olabilir.</p>
+              <div class="hand">Değişkenler birlikte hareket ediyorsa, aykırılığı da birlikte ara.</div>
+            </aside>
+          </div>
+          <div class="tablewrap">
+            <table class="cmp">
+              <thead><tr><th>Kişi</th><th>Boy (cm)</th><th>Kilo (kg)</th><th>z boy</th><th>z kilo</th><th>Tek değişkenli kural</th><th>Mahalanobis D</th><th>Mahalanobis kuralı</th><th>Sonuç</th></tr></thead>
+              <tbody id="cmpBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <button class="btn ghost" id="prev" type="button">Önceki</button>
+    <span class="counter" id="counter">1 / 3</span>
+    <button class="btn" id="next" type="button">Sonraki</button>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const NS = 'http://www.w3.org/2000/svg';
+  const f1 = (x,d=2) => x.toLocaleString('tr-TR',{minimumFractionDigits:d,maximumFractionDigits:d});
+  const sgn = x => (x>=0?'+':'−') + f1(Math.abs(x));
+
+  /* ---------- parametreler ---------- */
+  const MB=172, SB=9, MK=72, SK=11, RHO=0.7;
+  const TH_Z = 2.5, TH_D = Math.sqrt(-2*Math.log(0.025)); // 2,716
+  const zb = b => (b-MB)/SB, zk = k => (k-MK)/SK;
+  const euc = (b,k) => Math.hypot(zb(b), zk(k));
+  const mah = (b,k) => { const a=zb(b), c=zk(k); return Math.sqrt((a*a - 2*RHO*a*c + c*c)/(1-RHO*RHO)); };
+
+  /* ---------- tam momentli temsili veri (n = 150) ---------- */
+  function mulberry32(a){ return function(){ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  const rnd = mulberry32(138);
+  const randn = () => { let u=0,v=0; while(!u) u=rnd(); while(!v) v=rnd(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); };
+  const mean = a => a.reduce((s,x)=>s+x,0)/a.length, center = a => { const m=mean(a); return a.map(x=>x-m); };
+  const dot = (a,b) => a.reduce((s,x,i)=>s+x*b[i],0);
+  const stdz = a => { const c=center(a); const s=Math.sqrt(dot(c,c)/(c.length-1)); return c.map(x=>x/s); };
+  const N = 150;
+  const z1 = stdz(Array.from({length:N},randn));
+  let e = center(Array.from({length:N},randn)); const kk = dot(e,z1)/dot(z1,z1); e = stdz(e.map((x,i)=>x-kk*z1[i]));
+  const z2 = z1.map((z,i)=>RHO*z + Math.sqrt(1-RHO*RHO)*e[i]);
+  const DATA = z1.map((z,i)=>({b: MB+SB*z, k: MK+SK*z2[i]}));
+
+  /* ---------- ortak grafik ---------- */
+  const SPAN = 34/9; // ±3,78 ss: her iki eksende 1 ss aynı piksel
+  function makePlot(el, hist){
+    const L=64, P=440, T=hist?100:16, R=hist?92:18, B=52, W=L+P+R, H=T+P+B;
+    const pps = P/(2*SPAN);
+    const sx = b => L + (zb(b)+SPAN)*pps, sy = k => T + P - (zk(k)+SPAN)*pps;
+    const ix = X => MB + SB*((X-L)/pps - SPAN), iy = Y => MK + SK*((T+P-Y)/pps - SPAN);
+    el.innerHTML = '<svg class="sc" viewBox="0 0 '+W+' '+H+'"></svg>';
+    const svg = el.querySelector('svg');
+    const g = (cls) => { const n=document.createElementNS(NS,'g'); if(cls) n.setAttribute('class',cls); svg.appendChild(n); return n; };
+    let a='';
+    for(let b=140;b<=200;b+=10){ const X=sx(b); a+='<g class="tick"><line x1="'+X+'" x2="'+X+'" y1="'+T+'" y2="'+(T+P)+'"/><text x="'+X+'" y="'+(T+P+18)+'" text-anchor="middle">'+b+'</text></g>'; }
+    for(let k=40;k<=110;k+=10){ const Y=sy(k); a+='<g class="tick"><line x1="'+L+'" x2="'+(L+P)+'" y1="'+Y+'" y2="'+Y+'"/><text x="'+(L-8)+'" y="'+(Y+4)+'" text-anchor="end">'+k+'</text></g>'; }
+    a+='<line class="base" x1="'+L+'" x2="'+(L+P)+'" y1="'+(T+P)+'" y2="'+(T+P)+'"/><line class="base" x1="'+L+'" x2="'+L+'" y1="'+T+'" y2="'+(T+P)+'"/>';
+    a+='<text class="axlbl" x="'+(L+P/2)+'" y="'+(H-8)+'" text-anchor="middle">Boy (cm)</text>';
+    a+='<text class="axlbl" text-anchor="middle" transform="translate(16,'+(T+P/2)+') rotate(-90)">Kilo (kg)</text>';
+    g('axes').innerHTML = a;
+    return {svg, g, sx, sy, ix, iy, pps, L, T, P, W, H, cx:sx(MB), cy:sy(MK)};
+  }
+  const ellipse = (p, c, cls) => '<ellipse class="'+cls+'" cx="'+p.cx+'" cy="'+p.cy+'" rx="'+(c*Math.sqrt(1+RHO)*p.pps)+'" ry="'+(c*Math.sqrt(1-RHO)*p.pps)+'" transform="rotate(-45 '+p.cx+' '+p.cy+')"/>';
+  const refDots = p => DATA.map(d=>'<circle class="ref" r="3.4" cx="'+p.sx(d.b)+'" cy="'+p.sy(d.k)+'"/>').join('');
+  const uniBox = p => { const x0=p.sx(MB-TH_Z*SB), x1=p.sx(MB+TH_Z*SB), y0=p.sy(MK+TH_Z*SK), y1=p.sy(MK-TH_Z*SK);
+    return '<rect class="ubox" x="'+x0+'" y="'+y0+'" width="'+(x1-x0)+'" height="'+(y1-y0)+'" rx="4"/>'; };
+
+  /* ---------- SLAYT 1 ---------- */
+  const p1 = makePlot($('p1'), true);
+  (function build1(){
+    const {L,T,P,pps,sx,sy} = p1;
+    // üst histogram (boy)
+    const bins = [], HB = 72;
+    for(let lo=-3.5; lo<3.5; lo+=0.5) bins.push(lo);
+    const cntB = bins.map(lo=>DATA.filter(d=>zb(d.b)>=lo && zb(d.b)<lo+0.5).length);
+    const cntK = bins.map(lo=>DATA.filter(d=>zk(d.k)>=lo && zk(d.k)<lo+0.5).length);
+    const mx = Math.max(...cntB, ...cntK);
+    let top = '<rect class="band" x="'+sx(MB-TH_Z*SB)+'" y="'+(T-8-HB)+'" width="'+(5*pps)+'" height="'+HB+'"/>';
+    bins.forEach((lo,i)=>{ const h=cntB[i]/mx*HB; const out=Math.abs(lo+0.25)>TH_Z;
+      top += '<rect class="hbar'+(out?' out':'')+'" x="'+sx(MB+lo*SB)+'" y="'+(T-8-h)+'" width="'+(0.5*pps)+'" height="'+h+'"/>'; });
+    top += '<text x="'+(L+4)+'" y="'+(T-HB-14)+'" style="font-weight:700">Boy dağılımı</text>';
+    let right = '<rect class="band" x="'+(L+P+8)+'" y="'+sy(MK+TH_Z*SK)+'" width="'+HB+'" height="'+(5*pps)+'"/>';
+    bins.forEach((lo,i)=>{ const w=cntK[i]/mx*HB; const out=Math.abs(lo+0.25)>TH_Z;
+      right += '<rect class="hbar'+(out?' out':'')+'" x="'+(L+P+8)+'" y="'+sy(MK+(lo+0.5)*SK)+'" width="'+w+'" height="'+(0.5*pps)+'"/>'; });
+    right += '<text text-anchor="middle" transform="translate('+(L+P+8+HB+5)+','+(T+P/2)+') rotate(90)" style="font-weight:700">Kilo dağılımı</text>';
+    p1.g('').innerHTML = top + right;
+    p1.g('').innerHTML = refDots(p1);
+    const X=sx(188), Y=sy(58);
+    p1.lA = p1.g('layer'); p1.lA.innerHTML = '<line class="guide" x1="'+X+'" x2="'+X+'" y1="'+(T-84)+'" y2="'+(T+P)+'"/><text class="glbl" x="'+(X+6)+'" y="'+(T-70)+'">188 cm, z = +1,78</text>';
+    p1.lB = p1.g('layer'); p1.lB.innerHTML = '<line class="guide" x1="'+L+'" x2="'+(L+P+84)+'" y1="'+Y+'" y2="'+Y+'"/><text class="glbl" x="'+(L+6)+'" y="'+(Y-7)+'">58 kg, z = −1,27</text>';
+    p1.lC = p1.g('layer');
+    p1.lC.innerHTML = uniBox(p1) + '<text class="ublbl" x="'+(sx(MB-TH_Z*SB)+6)+'" y="'+(sy(MK+TH_Z*SK)+16)+'">Tek değişkenli kural: normal bölge</text>'
+      + ellipse(p1, TH_D, 'ell') + '<circle class="star" r="9" cx="'+X+'" cy="'+Y+'"/><text class="plbl" x="'+(X+13)+'" y="'+(Y+5)+'">Ayşe</text>';
+  })();
+  let step1 = 0;
+  const lbl1 = ['Boya bak','Kiloya bak','İkisine birlikte bak','Tamamlandı'];
+  function render1(){
+    p1.lA.classList.toggle('on', step1>=1); p1.lB.classList.toggle('on', step1>=2); p1.lC.classList.toggle('on', step1>=3);
+    ['s1a','s1b','s1c'].forEach((id,i)=>$(id).classList.toggle('on', step1>=i+1));
+    $('next1').textContent = lbl1[step1]; $('next1').disabled = step1>=3;
+  }
+  $('next1').addEventListener('click', ()=>{ if(step1<3){ step1++; render1(); } });
+  $('reset1').addEventListener('click', ()=>{ step1=0; render1(); });
+
+  /* ---------- SLAYT 2 ---------- */
+  const p2 = makePlot($('p2'), false);
+  const START = {A:{b:188,k:58}, B:{b:186,k:89}};
+  const pts2 = {A:{...START.A}, B:{...START.B}};
+  let mode = 'mah';
+  (function build2(){
+    const cont = p2.g(''); p2.cont = cont;
+    p2.g('').innerHTML = refDots(p2);
+    p2.spokes = p2.g('');
+    p2.g('').innerHTML = '<circle class="ctr" r="5" cx="'+p2.cx+'" cy="'+p2.cy+'"/>';
+    p2.handles = {};
+    ['A','B'].forEach(id=>{
+      const gEl = document.createElementNS(NS,'g'); gEl.setAttribute('class','drag'); gEl.setAttribute('tabindex','0');
+      gEl.setAttribute('role','slider'); gEl.setAttribute('aria-label', id+' noktası; ok tuşlarıyla taşı');
+      const col = id==='A' ? 'var(--red)' : 'var(--blue)';
+      gEl.innerHTML = '<circle class="hit" r="22"/><circle class="dot" r="13" style="fill:'+col+'"/><text text-anchor="middle" y="5">'+id+'</text>';
+      p2.svg.appendChild(gEl); p2.handles[id]=gEl;
+      let dragging=false;
+      gEl.addEventListener('pointerdown', ev=>{ dragging=true; gEl.setPointerCapture(ev.pointerId); ev.preventDefault(); });
+      gEl.addEventListener('pointermove', ev=>{
+        if(!dragging) return;
+        const pt = p2.svg.createSVGPoint(); pt.x=ev.clientX; pt.y=ev.clientY;
+        const q = pt.matrixTransform(p2.svg.getScreenCTM().inverse());
+        const X = Math.max(p2.L, Math.min(p2.L+p2.P, q.x)), Y = Math.max(p2.T, Math.min(p2.T+p2.P, q.y));
+        pts2[id] = {b:p2.ix(X), k:p2.iy(Y)}; render2();
+      });
+      const end = ()=>{ dragging=false; };
+      gEl.addEventListener('pointerup', end); gEl.addEventListener('pointercancel', end);
+      gEl.addEventListener('keydown', ev=>{
+        const s = ev.shiftKey ? 5 : 1, p = pts2[id];
+        if(ev.key==='ArrowLeft') p.b-=s; else if(ev.key==='ArrowRight') p.b+=s;
+        else if(ev.key==='ArrowUp') p.k+=s; else if(ev.key==='ArrowDown') p.k-=s; else return;
+        p.b=Math.max(140,Math.min(204,p.b)); p.k=Math.max(31,Math.min(113,p.k));
+        ev.preventDefault(); render2();
+      });
+    });
+  })();
+  function drawContours(){
+    let s='';
+    const dx = Math.SQRT1_2, dy = Math.SQRT1_2; // (1,-1) z yönü = SVG'de sağ-aşağı
+    [1,2,3].forEach(c=>{
+      if(mode==='euc'){
+        s += '<circle class="contour euc" cx="'+p2.cx+'" cy="'+p2.cy+'" r="'+(c*p2.pps)+'"/>';
+        const r=c*p2.pps; s += '<text class="clbl" style="fill:var(--ink-soft)" x="'+(p2.cx+r*dx+4)+'" y="'+(p2.cy+r*dy+12)+'">'+c+'</text>';
+      } else {
+        s += ellipse(p2, c, 'contour mah');
+        const r=c*Math.sqrt(1-RHO)*p2.pps; s += '<text class="clbl" style="fill:var(--red)" x="'+(p2.cx+r*dx+4)+'" y="'+(p2.cy+r*dy+12)+'">D = '+c+'</text>';
+      }
+    });
+    p2.cont.innerHTML = s;
+  }
+  function render2(){
+    drawContours();
+    let sp='';
+    ['A','B'].forEach(id=>{
+      const p = pts2[id], X=p2.sx(p.b), Y=p2.sy(p.k);
+      p2.handles[id].setAttribute('transform','translate('+X+','+Y+')');
+      p2.handles[id].setAttribute('aria-valuetext', Math.round(p.b)+' cm, '+Math.round(p.k)+' kg');
+      sp += '<line class="spoke" x1="'+p2.cx+'" y1="'+p2.cy+'" x2="'+X+'" y2="'+Y+'" style="stroke:'+(id==='A'?'var(--red)':'var(--blue)')+'"/>';
+      const E = euc(p.b,p.k), D = mah(p.b,p.k);
+      $('d'+id+'0').textContent = Math.round(p.b)+' cm, '+Math.round(p.k)+' kg';
+      $('d'+id+'1').textContent = f1(E);
+      $('d'+id+'2').textContent = f1(D);
+      $('d'+id+'3').innerHTML = D>TH_D ? '<span class="verdict bad">Aykırı</span>' : '<span class="verdict ok">Normal</span>';
+    });
+    p2.spokes.innerHTML = sp;
+    const A=pts2.A, B=pts2.B, eA=euc(A.b,A.k), eB=euc(B.b,B.k), mA=mah(A.b,A.k), mB=mah(B.b,B.k);
+    const atStart = ['A','B'].every(id=>pts2[id].b===START[id].b && pts2[id].k===START[id].k);
+    $('msg2').innerHTML = atStart
+      ? 'A ve B merkeze <b>aynı Öklid uzaklığında</b> (2,19). Ama A bulutun eğimine ters yönde, B ise eğim boyunca duruyor. Mahalanobis bu farkı görüyor: A için D = 3,95, B için D = 1,68.'
+      : (Math.abs(eA-eB) < 0.3 && Math.abs(mA-mB) > 1
+          ? 'Öklid uzaklıkları neredeyse aynı, Mahalanobis uzaklıkları çok farklı. Fark, noktanın bulutun eğimine göre hangi yönde durmasından geliyor.'
+          : 'Noktayı elipslerin uzun ekseni boyunca götür: D yavaş artar. Kısa ekseni boyunca götür: D hızla artar.');
+  }
+  function setMode(m){ mode=m; $('mEuc').setAttribute('aria-pressed',String(m==='euc')); $('mMah').setAttribute('aria-pressed',String(m==='mah')); render2(); }
+  $('mEuc').addEventListener('click', ()=>setMode('euc'));
+  $('mMah').addEventListener('click', ()=>setMode('mah'));
+  $('reset2').addEventListener('click', ()=>{ pts2.A={...START.A}; pts2.B={...START.B}; render2(); });
+
+  /* ---------- SLAYT 3 ---------- */
+  const p3 = makePlot($('p3'), false);
+  const PEOPLE = [
+    {n:'Ali', b:172, k:72}, {n:'Ayşe', b:188, k:58}, {n:'Mehmet', b:158, k:90},
+    {n:'Kerem', b:195, k:92}, {n:'Can', b:204, k:64}, {n:'Senin kişin', b:180, k:75, custom:true}
+  ];
+  let sel = 1;
+  (function build3(){
+    p3.g('').innerHTML = refDots(p3);
+    p3.g('').innerHTML = uniBox(p3) + '<text class="ublbl" x="'+(p3.sx(MB-TH_Z*SB)+6)+'" y="'+(p3.sy(MK+TH_Z*SK)+16)+'">±2,5 z kutusu</text>'
+      + ellipse(p3, TH_D, 'ellfill') + ellipse(p3, TH_D, 'ell')
+      + '<text class="elbl" x="'+(p3.cx+TH_D*Math.sqrt(1+RHO)*p3.pps*Math.SQRT1_2-70)+'" y="'+(p3.cy-TH_D*Math.sqrt(1+RHO)*p3.pps*Math.SQRT1_2-8)+'">D = 2,72</text>';
+    p3.pp = p3.g('');
+  })();
+  function classify(p){
+    const a=zb(p.b), c=zk(p.k), D=mah(p.b,p.k);
+    const uni = Math.abs(a)>TH_Z || Math.abs(c)>TH_Z, mh = D>TH_D;
+    let res;
+    if(uni && mh) res = '<span class="verdict bad">İkisi de yakaladı</span>';
+    else if(!uni && !mh) res = '<span class="verdict ok">İkisi de normal dedi</span>';
+    else if(!uni && mh) res = '<span class="verdict bad">Tek değişkenli kural kaçırdı</span>';
+    else res = '<span class="verdict warn">Tek değişkenli kural boşuna alarm verdi</span>';
+    return {a,c,D,uni,mh,res};
+  }
+  const tb = $('cmpBody');
+  PEOPLE.forEach((p,i)=>{
+    const tr = document.createElement('tr'); tr.dataset.i=i;
+    const bCell = p.custom ? '<input type="number" inputmode="decimal" id="cb" value="'+p.b+'" aria-label="Boy, cm">' : p.b;
+    const kCell = p.custom ? '<input type="number" inputmode="decimal" id="ck" value="'+p.k+'" aria-label="Kilo, kg">' : p.k;
+    tr.innerHTML = '<td><b>'+p.n+'</b></td><td>'+bCell+'</td><td>'+kCell+'</td><td class="za"></td><td class="zc"></td><td class="u"></td><td class="d"></td><td class="m"></td><td class="r"></td>';
+    tr.addEventListener('click', ()=>{ sel=i; render3(); });
+    tb.appendChild(tr);
+  });
+  ['cb','ck'].forEach(id=>$(id).addEventListener('input', ()=>{
+    const b=parseFloat($('cb').value), k=parseFloat($('ck').value);
+    if(isFinite(b)) PEOPLE[5].b=b; if(isFinite(k)) PEOPLE[5].k=k; sel=5; render3();
+  }));
+  function render3(){
+    let s='';
+    PEOPLE.forEach((p,i)=>{
+      const C = classify(p), tr = tb.children[i];
+      tr.querySelector('.za').textContent = sgn(C.a);
+      tr.querySelector('.zc').textContent = sgn(C.c);
+      tr.querySelector('.u').innerHTML = C.uni ? '<span class="verdict bad">Aykırı</span>' : '<span class="verdict ok">Normal</span>';
+      tr.querySelector('.d').innerHTML = '<b>'+f1(C.D)+'</b>';
+      tr.querySelector('.m').innerHTML = C.mh ? '<span class="verdict bad">Aykırı</span>' : '<span class="verdict ok">Normal</span>';
+      tr.querySelector('.r').innerHTML = C.res;
+      tr.classList.toggle('sel', i===sel);
+      const X = Math.max(p3.L, Math.min(p3.L+p3.P, p3.sx(p.b))), Y = Math.max(p3.T, Math.min(p3.T+p3.P, p3.sy(p.k)));
+      const col = C.mh ? 'var(--red)' : 'var(--blue)';
+      const r = i===sel ? 11 : 8;
+      s += '<circle r="'+r+'" cx="'+X+'" cy="'+Y+'" style="fill:'+col+';stroke:'+(p.custom?'var(--amber)':'var(--paper)')+';stroke-width:'+(p.custom?3:2)+'"/>';
+      const right = X > p3.L + p3.P - 90;
+      s += '<text class="plbl" x="'+(right? X-14 : X+14)+'" y="'+(Y+5)+'" text-anchor="'+(right?'end':'start')+'">'+p.n+'</text>';
+    });
+    p3.pp.innerHTML = s;
+  }
+
+  /* ---------- gezinme ---------- */
+  const slidesEl = $('slides'), slideEls=[...slidesEl.children];
+  let cur = 0;
+  function go(i){
+    cur = Math.max(0, Math.min(slideEls.length-1, i));
+    slidesEl.style.transform = 'translateX('+(-cur*100)+'%)';
+    slideEls.forEach((s,k)=>{ if(k===cur) s.removeAttribute('inert'); else s.setAttribute('inert',''); });
+    document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-current', String(+b.dataset.go===cur)));
+    $('counter').textContent = (cur+1)+' / '+slideEls.length;
+    $('prev').disabled = cur===0; $('next').disabled = cur===slideEls.length-1;
+  }
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click', ()=>go(+b.dataset.go)));
+  $('prev').addEventListener('click', ()=>go(cur-1));
+  $('next').addEventListener('click', ()=>go(cur+1));
+  document.addEventListener('keydown', e=>{
+    if(e.target.matches('input, textarea') || e.target.closest && e.target.closest('.drag')) return;
+    if(e.key==='ArrowRight'||e.key==='PageDown') go(cur+1);
+    if(e.key==='ArrowLeft'||e.key==='PageUp') go(cur-1);
+  });
+
+  render1(); render2(); render3(); go(0);
+})();
+</script>
+</body>
+</html>

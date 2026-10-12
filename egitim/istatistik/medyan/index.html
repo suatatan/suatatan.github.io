@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Medyanın Bilgeliği</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFBF6; --grid:#E1EAF3; --ink:#1B2A4E; --ink-soft:#56627F;
+  --blue:#1F4FB8; --blue-soft:#DCE6FB; --red:#D23B33; --red-soft:#FBE1DE;
+  --amber:#C98A00; --amber-bg:#FFE38A; --bar:#C3D1E3; --bar-edge:#93A8C4;
+  --card:rgba(255,255,255,.88); --margin:#E9A3A0; --line:#C9D5E4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+    --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+    --amber:#F5C042; --amber-bg:#5A4614; --bar:#33405F; --bar-edge:#4C5D86;
+    --card:rgba(25,32,54,.9); --margin:#7A3B3B; --line:#2A3552;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+  --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+  --amber:#F5C042; --amber-bg:#5A4614; --bar:#33405F; --bar-edge:#4C5D86;
+  --card:rgba(25,32,54,.9); --margin:#7A3B3B; --line:#2A3552;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{
+  margin:0;height:100%;color:var(--ink);
+  font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+  font-variant-numeric:tabular-nums;
+}
+body::before{ /* defter kenar çizgisi */
+  content:"";position:fixed;top:0;bottom:0;left:56px;width:2px;background:var(--margin);pointer-events:none;z-index:0;
+}
+.app{position:relative;z-index:1;height:100%;display:grid;grid-template-rows:auto 1fr auto;}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px 10px 76px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.author{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-top:2px;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.author a{color:var(--blue);text-decoration:none;border-bottom:1.5px solid currentColor}
+.author a:hover{border-bottom-width:2.5px}
+.tabs{display:flex;gap:6px}
+.tabs button{font:inherit;font-size:.9rem;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);border-radius:999px;padding:6px 14px;cursor:pointer}
+.tabs button[aria-current="true"]{border-color:var(--ink);color:var(--ink);font-weight:700}
+.viewport{overflow:hidden;position:relative}
+.slides{display:flex;height:100%;transition:transform .55s cubic-bezier(.65,0,.35,1)}
+.slide{flex:0 0 100%;height:100%;overflow-y:auto;padding:12px 28px 28px 76px}
+.slide-inner{max-width:1180px;margin:0 auto 0 0}
+h1{font-size:clamp(1.9rem,4.2vw,3.1rem);line-height:1.02;letter-spacing:-.03em;margin:.1em 0 .3em;font-weight:800}
+.lead{font-size:1.06rem;line-height:1.55;max-width:62ch;color:var(--ink);margin:0 0 18px}
+.lead em{font-style:normal;font-weight:700}
+.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,1fr);gap:28px;align-items:start}
+.panel{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px 18px 16px;backdrop-filter:blur(2px)}
+.hand{font-family:"Caveat","Comic Sans MS",cursive;font-size:1.35rem;line-height:1.2;color:var(--red)}
+
+/* ---------- grafik ---------- */
+.chart{position:relative;padding:26px 10px 34px 44px;background:var(--card);border:1.5px solid var(--line);border-radius:14px}
+#chart1{height:clamp(260px,44vh,400px)}
+#chart2{height:clamp(300px,54vh,500px)}
+.plot{position:relative;height:100%;border-bottom:2px solid var(--ink)}
+.gridline{position:absolute;left:0;right:0;border-top:1px solid var(--line);transition:bottom .6s cubic-bezier(.2,.8,.2,1)}
+.gridline span{position:absolute;right:calc(100% + 6px);transform:translateY(-50%);font-size:.72rem;color:var(--ink-soft)}
+.unit{position:absolute;left:6px;top:6px;font-size:.72rem;color:var(--ink-soft)}
+.bar{
+  position:absolute;bottom:0;height:0;border-radius:6px 6px 0 0;
+  background:var(--bar);box-shadow:inset 0 0 0 1.5px var(--bar-edge);
+  transition:left .7s cubic-bezier(.2,.8,.2,1),width .7s cubic-bezier(.2,.8,.2,1),height .7s cubic-bezier(.2,.8,.2,1),opacity .4s,background .3s;
+}
+.bar .val{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:3px;font-size:.78rem;font-weight:600;white-space:nowrap}
+.bar .name{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:7px;font-size:.74rem;color:var(--ink-soft);white-space:nowrap}
+.bar.hl{background:var(--blue-soft);box-shadow:inset 0 0 0 2.5px var(--blue)}
+.bar.hl .val,.bar.hl .name{color:var(--blue);font-weight:700}
+.bar.outlier{background:var(--amber-bg);box-shadow:inset 0 0 0 2px var(--amber)}
+.bar.outlier .name{color:var(--amber);font-weight:700}
+.bar.leaving{opacity:0;height:0!important}
+.chart.focus .bar:not(.hl){opacity:.45}
+.mline{position:absolute;left:-4px;right:-4px;height:0;opacity:0;pointer-events:none;z-index:3;transition:bottom .7s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.mline.show{opacity:1}
+.mline.mean{border-top:3px dashed var(--red)}
+.mline.median{border-top:3px solid var(--blue)}
+.mline .tag{position:absolute;bottom:4px;font-size:.8rem;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap;background:var(--paper)}
+.mline.mean .tag{right:6px;color:var(--red);border:1.5px solid var(--red)}
+.mline.median .tag{left:6px;color:var(--blue);border:1.5px solid var(--blue)}
+
+/* ---------- slayt 1 adımları ---------- */
+.def{margin:0 0 16px;padding:14px 16px;border-left:4px solid var(--blue);background:var(--card);border-radius:0 12px 12px 0;font-size:1.05rem;line-height:1.5;max-width:62ch}
+.def b{color:var(--blue)}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:10px;opacity:.5;transition:opacity .3s}
+ol.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;border:2px solid var(--ink-soft);display:grid;place-items:center;font-weight:700;font-size:.9rem;color:var(--ink-soft)}
+ol.steps li.current,ol.steps li.done{opacity:1}
+ol.steps li.current::before{border-color:var(--ink);color:var(--ink)}
+ol.steps li.done::before{content:"✓";background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.steps h3{margin:3px 0 2px;font-size:1rem}
+.steps p{margin:0;font-size:.92rem;line-height:1.45;color:var(--ink-soft)}
+.result{display:none;margin-top:6px;font-weight:700;font-size:.98rem;line-height:1.45}
+li.done .result{display:block}
+.result.blue{color:var(--blue)} .result.red{color:var(--red)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.btn{font:inherit;font-weight:700;font-size:.95rem;padding:10px 16px;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.amber{background:var(--amber-bg);color:var(--ink);border-color:var(--amber)}
+.conclusion{display:none;margin-top:16px;padding-top:14px;border-top:1.5px dashed var(--line);line-height:1.5}
+.conclusion.show{display:block}
+.note-even{margin-top:14px;font-size:.88rem;color:var(--ink-soft);line-height:1.45}
+
+/* ---------- slayt 2 ---------- */
+.inputs{display:grid;gap:8px;margin:4px 0 12px}
+.inputs label{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:10px;font-weight:600;font-size:.92rem}
+.inputs input{font:inherit;font-size:1.05rem;font-weight:700;width:100%;padding:8px 10px;border-radius:10px;border:2px solid var(--amber);background:var(--paper);color:var(--ink)}
+.inputs .u{color:var(--ink-soft);font-size:.85rem}
+.read{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.stat{border-radius:12px;padding:12px;border:2px solid}
+.stat.mean{border-color:var(--red);background:var(--red-soft)}
+.stat.median{border-color:var(--blue);background:var(--blue-soft)}
+.stat .k{font-size:.85rem;font-weight:700}
+.stat.mean .k{color:var(--red)} .stat.median .k{color:var(--blue)}
+.stat .v{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:2px 0}
+.stat .d{font-size:.8rem;color:var(--ink-soft);line-height:1.35}
+.stat .d b{color:var(--ink)}
+.insight{margin:14px 0 0;line-height:1.5;font-size:.95rem}
+.change{margin:8px 0 0;font-size:.92rem;line-height:1.45;min-height:1.4em}
+.change .still{color:var(--blue);font-weight:800}
+.panel h2{margin:0 0 6px;font-size:1.05rem}
+.panel .sub{margin:0 0 8px;font-size:.88rem;color:var(--ink-soft);line-height:1.4}
+.hand.note{margin-top:14px}
+
+footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 24px 14px 76px}
+.counter{font-weight:700;color:var(--ink-soft)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body::before{left:18px}
+  header,footer{padding-left:32px;padding-right:14px}
+  .slide{padding:8px 14px 24px 32px}
+  .tabs button{padding:5px 10px;font-size:.82rem}
+  .chart{padding-left:38px}
+  #chart2 .bar .name{display:none}
+  #chart2{padding-bottom:12px}
+  .bar .val{font-size:.66rem}
+  #chart1 .bar .name{font-size:.62rem}
+  .read{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .slides,.bar,.mline,.gridline{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brandwrap">
+      <div class="brand">Medyanın Bilgeliği</div>
+      <div class="author">Dr. Suat ATAN <a href="https://suatatan.com" target="_blank" rel="noopener">suatatan.com</a></div>
+    </div>
+    <nav class="tabs" aria-label="Slaytlar">
+      <button type="button" data-go="0" aria-current="true">1 · Medyan nedir?</button>
+      <button type="button" data-go="1" aria-current="false">2 · Uç değer deneyi</button>
+    </nav>
+  </header>
+
+  <main class="viewport">
+    <div class="slides" id="slides">
+
+      <!-- ================= SLAYT 1 ================= -->
+      <section class="slide" aria-label="Slayt 1: Medyan nedir?">
+        <div class="slide-inner">
+          <h1>Medyan nedir?</h1>
+          <p class="def"><b>Medyan</b>, sayılar küçükten büyüğe sıralandığında tam ortada kalan değerdir. Verinin yarısı ondan küçük, yarısı ondan büyüktür.</p>
+          <div class="layout">
+            <div>
+              <p class="lead">Sınıftaki 9 öğrencinin boyunu ölçtük. Adımları sırayla izleyerek medyanı ve ortalamayı birlikte bulalım.</p>
+              <div class="chart" id="chart1"></div>
+            </div>
+            <aside class="panel">
+              <ol class="steps" id="steps1">
+                <li data-k="1">
+                  <div>
+                    <h3>Boyları sırala</h3>
+                    <p>Öğrencileri kısadan uzuna diz.</p>
+                    <div class="result">158, 162, 165, 167, 170, 172, 174, 176, 181</div>
+                  </div>
+                </li>
+                <li data-k="2">
+                  <div>
+                    <h3>Ortadakini bul</h3>
+                    <p>9 öğrenci var. 5. sıradaki tam ortada: solunda 4, sağında 4 kişi.</p>
+                    <div class="result blue">Medyan = 170 cm</div>
+                  </div>
+                </li>
+                <li data-k="3">
+                  <div>
+                    <h3>Ortalamayı hesapla</h3>
+                    <p>Bütün boyları topla, öğrenci sayısına böl.</p>
+                    <div class="result red">(158 + 162 + 165 + 167 + 170 + 172 + 174 + 176 + 181) ÷ 9<br>= 1525 ÷ 9 ≈ 169,4 cm</div>
+                  </div>
+                </li>
+              </ol>
+              <div class="actions">
+                <button class="btn" id="next1" type="button">Boyları sırala</button>
+                <button class="btn ghost" id="reset1" type="button">Baştan başla</button>
+              </div>
+              <div class="conclusion" id="concl1">
+                Veri dengeli olduğunda ortalama ile medyan neredeyse aynı yeri gösterir: <b>169,4</b> ve <b>170</b>.
+                <div class="hand">Peki sınıfa çok uç birkaç değer girerse?</div>
+                <div class="actions"><button class="btn amber" type="button" data-go="1">Deneye geç</button></div>
+              </div>
+              <p class="note-even">Çift sayıda değer varsa ortada iki sayı kalır; medyan bu ikisinin ortalamasıdır. Örneğin 12 kişide 6. ve 7. kişinin ortalaması alınır.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLAYT 2 ================= -->
+      <section class="slide" aria-label="Slayt 2: Uç değer deneyi">
+        <div class="slide-inner">
+          <h1>Uç değerler gelince ne olur?</h1>
+          <p class="lead">Aynı 9 öğrenciye 3 yeni değer ekledik: belki kayıt sırasında boylar yanlış girildi, belki de sınıfa üç dev katıldı. Sarı kutulardaki sayıları değiştir; <em>kırmızı kesikli çizgi ortalamayı</em>, <em>mavi çizgi medyanı</em> gösteriyor.</p>
+          <div class="layout">
+            <div class="chart" id="chart2"></div>
+            <aside class="panel">
+              <h2>Eklenen değerler</h2>
+              <p class="sub">Bir kutuyu boşaltırsan o değer veriden çıkar.</p>
+              <div class="inputs">
+                <label>Yeni 1 <input class="out" type="number" inputmode="decimal" min="1" value="300" aria-label="Yeni değer 1, santimetre"><span class="u">cm</span></label>
+                <label>Yeni 2 <input class="out" type="number" inputmode="decimal" min="1" value="450" aria-label="Yeni değer 2, santimetre"><span class="u">cm</span></label>
+                <label>Yeni 3 <input class="out" type="number" inputmode="decimal" min="1" value="600" aria-label="Yeni değer 3, santimetre"><span class="u">cm</span></label>
+              </div>
+              <div class="actions" style="margin-top:4px">
+                <button class="btn amber" id="double" type="button">Değerleri 2 katına çıkar</button>
+                <button class="btn ghost" id="clear" type="button">Değerleri kaldır</button>
+                <button class="btn ghost" id="defaults" type="button">Varsayılana dön</button>
+              </div>
+
+              <div class="read">
+                <div class="stat mean">
+                  <div class="k">Ortalama</div>
+                  <div class="v" id="meanV">–</div>
+                  <div class="d" id="meanD"></div>
+                </div>
+                <div class="stat median">
+                  <div class="k">Medyan</div>
+                  <div class="v" id="medV">–</div>
+                  <div class="d" id="medD"></div>
+                </div>
+              </div>
+              <p class="insight" id="insight"></p>
+              <p class="change" id="change" aria-live="polite"></p>
+              <div class="hand note">Medyan biraz kayabilir, çünkü 3 kişi eklenince orta sıra değişir. Ama uç değerleri ne kadar büyütürsen büyüt, medyan yerinden oynamaz!</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <button class="btn ghost" id="prev" type="button">Önceki</button>
+    <span class="counter" id="counter">1 / 2</span>
+    <button class="btn" id="next" type="button">Sonraki</button>
+  </footer>
+</div>
+
+<script>
+(function(){
+  /* ---------- yardımcılar ---------- */
+  const fmt = x => x.toLocaleString('tr-TR',{maximumFractionDigits:1});
+  const signed = x => Math.abs(x) < 0.05 ? '0' : (x > 0 ? '+' : '−') + fmt(Math.abs(x));
+  const mean = a => a.reduce((s,x)=>s+x,0)/a.length;
+  const median = a => { const s=[...a].sort((x,y)=>x-y), n=s.length, m=Math.floor(n/2); return n%2 ? s[m] : (s[m-1]+s[m])/2; };
+
+  const students = [
+    {id:'s1',label:'Ali',v:172},{id:'s2',label:'Ayşe',v:158},{id:'s3',label:'Can',v:181},
+    {id:'s4',label:'Deniz',v:165},{id:'s5',label:'Elif',v:170},{id:'s6',label:'Emre',v:176},
+    {id:'s7',label:'Zeynep',v:162},{id:'s8',label:'Mert',v:174},{id:'s9',label:'Selin',v:167}
+  ];
+  const baseVals = students.map(s=>s.v);
+  const baseMean = mean(baseVals), baseMed = median(baseVals);
+  const sortedStudents = [...students].sort((a,b)=>a.v-b.v);
+
+  /* ---------- çubuk grafik ---------- */
+  class BarChart{
+    constructor(root){
+      this.root = root;
+      root.innerHTML = '<span class="unit">cm</span><div class="plot"><div class="g"></div><div class="b"></div><div class="l"></div></div>';
+      this.plot = root.querySelector('.plot');
+      this.gEl = root.querySelector('.g'); this.bEl = root.querySelector('.b'); this.lEl = root.querySelector('.l');
+      this.bars = new Map(); this.lines = new Map();
+    }
+    pct(v){ return Math.max(0, (v - this.base) / (this.max - this.base) * 100); }
+    update(items, o){
+      this.base = o.base; this.max = o.max;
+      const hl = o.highlight || new Set();
+      // ızgara
+      this.gEl.innerHTML = '';
+      o.ticks.forEach(t=>{
+        const d = document.createElement('div'); d.className='gridline';
+        d.style.bottom = this.pct(t)+'%';
+        d.innerHTML = '<span>'+fmt(t)+'</span>';
+        if (t === this.base) d.style.borderTopColor = 'transparent';
+        this.gEl.appendChild(d);
+      });
+      // çubuklar
+      const n = items.length, seen = new Set();
+      items.forEach((it,i)=>{
+        let b = this.bars.get(it.id);
+        const left = ((i+0.14)/n*100)+'%', width = (0.72/n*100)+'%';
+        if(!b){
+          b = document.createElement('div'); b.className='bar';
+          b.innerHTML = '<span class="val"></span><span class="name"></span>';
+          b.style.left = left; b.style.width = width; b.style.height = '0%';
+          this.bEl.appendChild(b); this.bars.set(it.id,b);
+          void b.offsetWidth;
+        }
+        b.classList.remove('leaving');
+        seen.add(it.id);
+        b.style.left = left; b.style.width = width; b.style.height = this.pct(it.v)+'%';
+        b.querySelector('.val').textContent = fmt(it.v);
+        b.querySelector('.name').textContent = it.label;
+        b.classList.toggle('outlier', !!it.outlier);
+        b.classList.toggle('hl', hl.has(it.id));
+      });
+      this.bars.forEach((b,id)=>{
+        if(!seen.has(id)){
+          b.classList.add('leaving');
+          setTimeout(()=>{ if(b.classList.contains('leaving')){ b.remove(); this.bars.delete(id); } }, 500);
+        }
+      });
+      // ortalama / medyan çizgileri
+      const want = new Map((o.lines||[]).map(l=>[l.key,l]));
+      ['median','mean'].forEach(key=>{
+        let el = this.lines.get(key);
+        if(!el){
+          el = document.createElement('div'); el.className='mline '+key;
+          el.innerHTML = '<span class="tag"></span>';
+          el.style.bottom = '0%';
+          this.lEl.appendChild(el); this.lines.set(key,el);
+          void el.offsetWidth;
+        }
+        const l = want.get(key);
+        if(l){ el.style.bottom = this.pct(l.v)+'%'; el.querySelector('.tag').textContent = l.label; el.classList.add('show'); }
+        else el.classList.remove('show');
+      });
+    }
+  }
+
+  /* ---------- SLAYT 1 ---------- */
+  const chart1El = document.getElementById('chart1');
+  const c1 = new BarChart(chart1El);
+  const next1 = document.getElementById('next1');
+  const steps1 = [...document.querySelectorAll('#steps1 li')];
+  const concl1 = document.getElementById('concl1');
+  const labels1 = ['Boyları sırala','Ortadakini bul','Ortalamayı hesapla','Tamamlandı'];
+  let step = 0;
+
+  function render1(){
+    const items = step >= 1 ? sortedStudents : students;
+    const hl = step >= 2 ? new Set([sortedStudents[4].id]) : new Set();
+    const lines = [];
+    if(step >= 2) lines.push({key:'median', v:baseMed, label:'Medyan '+fmt(baseMed)});
+    if(step >= 3) lines.push({key:'mean', v:baseMean, label:'Ortalama '+fmt(baseMean)});
+    c1.update(items, {base:140, max:190, ticks:[140,150,160,170,180,190], highlight:hl, lines});
+    chart1El.classList.toggle('focus', step === 2);
+    steps1.forEach((li,i)=>{
+      li.classList.toggle('done', step >= i+1);
+      li.classList.toggle('current', step === i);
+    });
+    next1.textContent = labels1[step];
+    next1.disabled = step >= 3;
+    concl1.classList.toggle('show', step >= 3);
+  }
+  next1.addEventListener('click', ()=>{ if(step<3){ step++; render1(); } });
+  document.getElementById('reset1').addEventListener('click', ()=>{ step = 0; render1(); });
+
+  /* ---------- SLAYT 2 ---------- */
+  const c2 = new BarChart(document.getElementById('chart2'));
+  const inputs = [...document.querySelectorAll('input.out')];
+  const DEFAULTS = [300,450,600];
+  const $ = id => document.getElementById(id);
+  let last = null;
+
+  function niceStep(range){
+    const ladder = [10,20,25,50,100,200,250,500];
+    let mult = 1;
+    while(true){
+      for(const s of ladder){ if(range/(s*mult) <= 6) return s*mult; }
+      mult *= 10;
+    }
+  }
+
+  function render2(fromUser){
+    const outs = inputs.map((inp,i)=>({id:'o'+i, label:'Yeni '+(i+1), v:parseFloat(inp.value), outlier:true}))
+                       .filter(o=>Number.isFinite(o.v) && o.v > 0);
+    const all = [...students, ...outs].sort((a,b)=>a.v-b.v);
+    const vals = all.map(x=>x.v), n = vals.length;
+    const mn = mean(vals), md = median(vals);
+    const hl = new Set(n%2 ? [all[(n-1)/2].id] : [all[n/2-1].id, all[n/2].id]);
+
+    const minV = Math.min(...vals), maxV = Math.max(...vals);
+    const base = minV < 140 ? Math.max(0, Math.floor((minV-10)/10)*10) : 140;
+    const top = Math.max(190, maxV*1.06);
+    const step = niceStep(top - base);
+    const max = Math.ceil(top/step)*step;
+    const ticks = [base];
+    for(let t = Math.ceil(base/step)*step; t <= max + 1e-9; t += step){
+      if(t - base >= step*0.4) ticks.push(t);
+    }
+
+    c2.update(all, {base, max, ticks, highlight:hl, lines:[
+      {key:'median', v:md, label:'Medyan '+fmt(md)},
+      {key:'mean', v:mn, label:'Ortalama '+fmt(mn)}
+    ]});
+
+    $('meanV').textContent = fmt(mn)+' cm';
+    $('medV').textContent = fmt(md)+' cm';
+    $('meanD').innerHTML = 'Eklemeden önce '+fmt(baseMean)+'<br>Kayma: <b>'+signed(mn-baseMean)+' cm</b>';
+    $('medD').innerHTML = 'Eklemeden önce '+fmt(baseMed)+'<br>Kayma: <b>'+signed(md-baseMed)+' cm</b>';
+
+    const below = vals.filter(v=>v < mn).length;
+    if(outs.length === 0){
+      $('insight').innerHTML = 'Hiç değer eklenmedi: ortalama ve medyan neredeyse üst üste.';
+    } else if(Math.abs(mn - md) < 5){
+      $('insight').innerHTML = 'Eklenen değerler sınıfa benziyor; ortalama ve medyan hâlâ birbirine yakın.';
+    } else {
+      $('insight').innerHTML = 'Ortalamanın altında kalan öğrenci: <b>'+below+' / '+n+'</b>. Ortalama artık tipik bir öğrenciyi anlatmıyor; medyan ise hâlâ sınıfın ortasında.';
+    }
+
+    if(fromUser && last){
+      const dm = mn - last.mn, dd = md - last.md;
+      if(Math.abs(dm) < 0.05 && Math.abs(dd) < 0.05){
+        $('change').innerHTML = '';
+      } else {
+        $('change').innerHTML = 'Son değişiklikte ortalama <b style="color:var(--red)">'+signed(dm)+' cm</b> kaydı, ' +
+          (Math.abs(dd) < 0.05 ? '<span class="still">medyan hiç kıpırdamadı.</span>'
+                               : 'medyan <b style="color:var(--blue)">'+signed(dd)+' cm</b> kaydı.');
+      }
+    }
+    last = {mn, md};
+  }
+
+  inputs.forEach(inp=>inp.addEventListener('input', ()=>render2(true)));
+  $('double').addEventListener('click', ()=>{
+    inputs.forEach(inp=>{ const v = parseFloat(inp.value); if(Number.isFinite(v) && v>0) inp.value = Math.round(v*2*10)/10; });
+    render2(true);
+  });
+  $('clear').addEventListener('click', ()=>{ inputs.forEach(inp=>inp.value=''); render2(true); });
+  $('defaults').addEventListener('click', ()=>{ inputs.forEach((inp,i)=>inp.value=DEFAULTS[i]); render2(true); });
+
+  /* ---------- slayt gezinme ---------- */
+  const slidesEl = $('slides');
+  const slideEls = [...slidesEl.children];
+  let cur = 0;
+  function go(i){
+    cur = Math.max(0, Math.min(slideEls.length-1, i));
+    slidesEl.style.transform = 'translateX(' + (-cur*100) + '%)';
+    slideEls.forEach((s,k)=>{ if(k===cur) s.removeAttribute('inert'); else s.setAttribute('inert',''); });
+    document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-current', String(+b.dataset.go===cur)));
+    $('counter').textContent = (cur+1)+' / '+slideEls.length;
+    $('prev').disabled = cur === 0;
+    $('next').disabled = cur === slideEls.length-1;
+  }
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click', ()=>go(+b.dataset.go)));
+  $('prev').addEventListener('click', ()=>go(cur-1));
+  $('next').addEventListener('click', ()=>go(cur+1));
+  document.addEventListener('keydown', e=>{
+    if(e.target.matches('input')) return;
+    if(e.key === 'ArrowRight' || e.key === 'PageDown') go(cur+1);
+    if(e.key === 'ArrowLeft' || e.key === 'PageUp') go(cur-1);
+  });
+
+  render1();
+  render2(false);
+  go(0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Korelasyon Kandırmacası</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFBF6; --grid:#E1EAF3; --ink:#1B2A4E; --ink-soft:#56627F;
+  --blue:#1F4FB8; --blue-soft:#DCE6FB; --red:#D23B33; --red-soft:#FBE1DE;
+  --amber:#C98A00; --amber-bg:#FFE38A; --pt:#2A3A63;
+  --card:rgba(255,255,255,.9); --margin:#E9A3A0; --line:#C9D5E4;
+  --q-pos:rgba(31,79,184,.08); --q-neg:rgba(210,59,51,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+    --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+    --amber:#F5C042; --amber-bg:#5A4614; --pt:#C9D3EC;
+    --card:rgba(25,32,54,.92); --margin:#7A3B3B; --line:#2A3552;
+    --q-pos:rgba(134,169,255,.12); --q-neg:rgba(255,131,121,.12);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+  --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+  --amber:#F5C042; --amber-bg:#5A4614; --pt:#C9D3EC;
+  --card:rgba(25,32,54,.92); --margin:#7A3B3B; --line:#2A3552;
+  --q-pos:rgba(134,169,255,.12); --q-neg:rgba(255,131,121,.12);
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{
+  margin:0;height:100%;color:var(--ink);
+  font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;font-variant-numeric:tabular-nums;
+}
+body::before{content:"";position:fixed;top:0;bottom:0;left:56px;width:2px;background:var(--margin);pointer-events:none;z-index:0}
+.app{position:relative;z-index:1;height:100%;display:grid;grid-template-rows:auto 1fr auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px 10px 76px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.author{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-top:2px;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.author a{color:var(--blue);text-decoration:none;border-bottom:1.5px solid currentColor}
+.author a:hover{border-bottom-width:2.5px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:.88rem;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);border-radius:999px;padding:6px 13px;cursor:pointer}
+.tabs button[aria-current="true"]{border-color:var(--ink);color:var(--ink);font-weight:700}
+.viewport{overflow:hidden;position:relative}
+.slides{display:flex;height:100%;transition:transform .55s cubic-bezier(.65,0,.35,1)}
+.slide{flex:0 0 100%;height:100%;overflow-y:auto;padding:12px 28px 28px 76px}
+.slide-inner{max-width:1200px}
+h1{font-size:clamp(1.9rem,4.2vw,3.1rem);line-height:1.02;letter-spacing:-.03em;margin:.1em 0 .3em;font-weight:800}
+.lead{font-size:1.06rem;line-height:1.55;max-width:66ch;margin:0 0 16px}
+.layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:28px;align-items:start}
+.panel{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px}
+.panel h2{margin:0 0 6px;font-size:1.05rem}
+.panel p{line-height:1.5;margin:0 0 10px}
+.sub{font-size:.9rem;color:var(--ink-soft);line-height:1.45}
+.hand{font-family:"Caveat","Comic Sans MS",cursive;font-size:1.4rem;line-height:1.2;color:var(--red)}
+.btn{font:inherit;font-weight:700;font-size:.95rem;padding:10px 16px;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.amber{background:var(--amber-bg);color:var(--ink);border-color:var(--amber)}
+.btn[aria-pressed="true"]{background:var(--blue-soft);color:var(--blue);border-color:var(--blue)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.note{font-size:.82rem;color:var(--ink-soft);margin-top:14px}
+
+/* ---------- saçılım grafiği ---------- */
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 12px 6px;margin-bottom:16px}
+.cardhead{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;padding:0 6px 4px}
+.cardhead h3{margin:0;font-size:1rem}
+.rbadge{font-weight:800;font-size:1.05rem;padding:3px 11px;border-radius:999px;border:2px solid var(--ink)}
+.rbadge.strong{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)}
+.rbadge.zero{border-color:var(--ink-soft);color:var(--ink-soft)}
+.counts{font-size:.85rem;color:var(--ink-soft);padding:0 6px 6px;min-height:1.3em}
+.counts b.p{color:var(--blue)} .counts b.n{color:var(--red)}
+svg.sc{width:100%;height:auto;display:block;overflow:visible}
+svg.sc text{fill:var(--ink-soft);font-family:inherit;font-size:12px}
+svg.sc .axlbl{fill:var(--ink);font-size:13px;font-weight:700}
+svg.sc .tick line{stroke:var(--line)}
+svg.sc .base{stroke:var(--ink);stroke-width:1.6}
+svg.sc circle{stroke:var(--paper);stroke-width:1.2;transition:transform .8s cubic-bezier(.2,.8,.2,1),fill .4s}
+svg.sc .fitline{stroke:var(--ink);stroke-width:2;stroke-dasharray:6 5;opacity:.65;transition:opacity .4s}
+svg.sc .quad rect{transition:opacity .4s}
+svg.sc .meanline{stroke:var(--ink-soft);stroke-width:1.4;stroke-dasharray:3 4}
+svg.sc .qlbl{font-size:11.5px;font-weight:700}
+
+/* r cetveli */
+.rruler{position:relative;height:64px;margin:20px 6px 6px}
+.rruler .track{position:absolute;left:0;right:0;top:24px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--red),var(--line) 50%,var(--blue))}
+.rruler .lab{position:absolute;top:38px;font-size:.75rem;color:var(--ink-soft);transform:translateX(-50%);white-space:nowrap;text-align:center;line-height:1.2}
+.rruler .mk{position:absolute;top:0;transform:translateX(-50%);font-size:.75rem;font-weight:800;white-space:nowrap;text-align:center}
+.rruler .mk::after{content:"";display:block;width:3px;height:16px;margin:2px auto 0;background:currentColor;border-radius:2px}
+.msg{min-height:3em;margin:6px 0 0;padding:10px 12px;border-radius:10px;background:var(--blue-soft);font-size:.93rem;line-height:1.45;display:none}
+.msg.show{display:block}
+
+/* ---------- slayt 2 ---------- */
+.bigr{display:flex;align-items:baseline;gap:10px;margin:2px 0 8px}
+.bigr .v{font-size:2.6rem;font-weight:800;letter-spacing:-.02em;line-height:1;transition:color .4s}
+.headline{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:1.25rem;line-height:1.25;padding:12px 14px;border:2px solid var(--ink);border-radius:4px;background:var(--paper);margin:0 0 12px;transition:opacity .4s}
+.headline.struck{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:3px;opacity:.55}
+ol.stepl{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ol.stepl li{opacity:.45;transition:opacity .3s;font-size:.93rem;line-height:1.45}
+ol.stepl li.on{opacity:1}
+ol.stepl li b{display:block;font-size:.98rem}
+.legendgrad{display:none;align-items:center;gap:8px;font-size:.8rem;color:var(--ink-soft);padding:0 6px 8px}
+.legendgrad.show{display:flex}
+.legendgrad i{width:140px;height:10px;border-radius:5px;background:linear-gradient(90deg,hsl(215 75% 52%),hsl(45 90% 52%),hsl(5 80% 52%))}
+.dag{display:block;width:100%;max-width:360px;height:auto;margin:10px 0 0;opacity:0;transition:opacity .5s}
+.dag.show{opacity:1}
+.dag text{font-family:inherit;font-size:13px;font-weight:700;fill:var(--ink)}
+.dag rect{fill:var(--paper);stroke:var(--ink);stroke-width:1.6}
+.dag .hot{stroke:var(--red);stroke-width:2.2}
+.dag .arr{stroke:var(--ink);stroke-width:2}
+.dag .fake{stroke:var(--red);stroke-width:2;stroke-dasharray:5 4}
+.dag .x{fill:var(--red);font-size:20px}
+
+/* ---------- slayt 3 ---------- */
+.quiz{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.qcard{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px}
+.qcard .headline{font-size:1.06rem;margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts button{font:inherit;font-size:.86rem;font-weight:600;padding:7px 10px;border-radius:9px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.opts button.right{border-color:var(--blue);background:var(--blue-soft);color:var(--blue)}
+.opts button.wrong{border-color:var(--red);background:var(--red-soft);color:var(--red)}
+.opts button:disabled{cursor:default}
+.fb{display:none;margin-top:10px;font-size:.9rem;line-height:1.45}
+.fb.show{display:block}
+.fb b{display:block}
+.score{font-weight:800;font-size:1.1rem;margin:0 0 12px}
+ol.three{margin:0;padding-left:1.3em;display:grid;gap:10px}
+ol.three li{line-height:1.45}
+ol.three b{display:block}
+
+footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 24px 14px 76px}
+.counter{font-weight:700;color:var(--ink-soft)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+@media (max-width:900px){.layout{grid-template-columns:1fr}}
+@media (max-width:640px){
+  body::before{left:18px}
+  header,footer{padding-left:32px;padding-right:14px}
+  .slide{padding:8px 14px 24px 32px}
+  .tabs button{padding:5px 9px;font-size:.8rem}
+  svg.sc text{font-size:15px}
+  svg.sc .axlbl{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.slides,svg.sc circle{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="brand">Korelasyon Kandırmacası</div>
+      <div class="author">Dr. Suat ATAN <a href="https://suatatan.com" target="_blank" rel="noopener">suatatan.com</a></div>
+    </div>
+    <nav class="tabs" aria-label="Slaytlar">
+      <button type="button" data-go="0" aria-current="true">1 · Korelasyon ne ölçer?</button>
+      <button type="button" data-go="1" aria-current="false">2 · Dondurma boğar mı?</button>
+      <button type="button" data-go="2" aria-current="false">3 · Manşet dedektifi</button>
+    </nav>
+  </header>
+
+  <main class="viewport">
+    <div class="slides" id="slides">
+
+      <!-- ========== SLAYT 1 ========== -->
+      <section class="slide" aria-label="Slayt 1: Korelasyon ne ölçer?">
+        <div class="slide-inner">
+          <h1>İki sayı birlikte mi hareket ediyor?</h1>
+          <p class="lead">Bir şehirde 60 hafta boyunca haftalık ortalama sıcaklığı, dondurma satışlarını ve cinayet oranını kaydettik. Her nokta bir hafta. Korelasyon katsayısı <b>r</b>, iki değişkenin bir doğru boyunca birlikte ne kadar hareket ettiğini −1 ile +1 arasında ölçer.</p>
+          <div class="layout">
+            <div>
+              <div class="card">
+                <div class="cardhead"><h3 id="t1a">Sıcaklık ve dondurma satışı</h3><span class="rbadge strong" id="r1a">r = –</span></div>
+                <div class="counts" id="c1a"></div>
+                <div id="sc1a"></div>
+              </div>
+              <div class="card">
+                <div class="cardhead"><h3 id="t1b">Sıcaklık ve cinayet oranı</h3><span class="rbadge zero" id="r1b">r = –</span></div>
+                <div class="counts" id="c1b"></div>
+                <div id="sc1b"></div>
+              </div>
+            </div>
+            <aside class="panel">
+              <h2>r cetveli</h2>
+              <div class="rruler" id="rruler">
+                <div class="track"></div>
+                <div class="lab" style="left:0%">−1<br>tam ters</div>
+                <div class="lab" style="left:50%">0<br>ilişki yok</div>
+                <div class="lab" style="left:100%">+1<br>tam birlikte</div>
+              </div>
+              <p style="margin-top:22px">Üstteki grafikte noktalar sağa yukarı doğru bir şerit oluşturuyor: sıcak haftalarda satış yüksek. Alttakinde noktalar rastgele bir bulut: sıcaklığı bilmek, cinayet oranı hakkında hiçbir şey söylemiyor.</p>
+              <h2 style="margin-top:14px">r nasıl hesaplanır?</h2>
+              <div class="actions">
+                <button class="btn" id="quadBtn" type="button" aria-pressed="false">Ortalama çizgilerini göster</button>
+                <button class="btn ghost" id="swapBtn" type="button" aria-pressed="false">Eksenleri değiştir</button>
+              </div>
+              <div class="msg" id="quadMsg">Her iki değişken de ortalamanın <b>üstündeyse</b> ya da ikisi de <b>altındaysa</b> nokta <b style="color:var(--blue)">mavi</b> olur ve r'yi yukarı çeker. Biri üstte, öteki alttaysa nokta <b style="color:var(--red)">kırmızı</b> olur ve r'yi aşağı çeker. Dondurmada mavi noktalar ezici çoğunlukta; cinayette mavi ve kırmızı birbirini götürüyor.</div>
+              <div class="msg" id="swapMsg" style="margin-top:8px">r hiç değişmedi! Korelasyon simetriktir. "Sıcaklık satışı artırır" ile "satışlar havayı ısıtır" verinin gözünde aynı şeydir. Yönü burada sağduyumuz biliyor, veri değil.</div>
+              <div class="hand" style="margin-top:14px">Korelasyon "birlikte hareket" demektir, "biri ötekini itiyor" değil.</div>
+              <p class="note">Grafikteki veriler ders amacıyla üretilmiş temsili verilerdir.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SLAYT 2 ========== -->
+      <section class="slide" aria-label="Slayt 2: Dondurma boğar mı?">
+        <div class="slide-inner">
+          <h1>Dondurma boğar mı?</h1>
+          <p class="lead">Aynı 60 haftada bölgedeki boğulma vakalarını da saydık. Dondurma satışı ile boğulmalar arasında güçlü bir korelasyon çıktı. Bir gazete hemen manşeti attı:</p>
+          <div class="layout">
+            <div class="card">
+              <div class="cardhead"><h3 id="t2">Dondurma satışı ve boğulma vakaları</h3></div>
+              <div class="legendgrad" id="lg2"><span>Soğuk hafta</span><i></i><span>Sıcak hafta</span></div>
+              <div id="sc2"></div>
+            </div>
+            <aside class="panel">
+              <div class="headline" id="hl2">DONDURMA ÖLDÜRÜYOR! Satışlar arttıkça boğulmalar da artıyor</div>
+              <div class="bigr"><span class="sub">Korelasyon</span><span class="v" id="r2">r = –</span></div>
+              <ol class="stepl">
+                <li id="st1" class="on"><b>Ham veri</b>Dondurma satışı yüksek haftalarda boğulma da fazla. İlişki gerçek, ama nedensel mi?</li>
+                <li id="st2"><b>Gizli değişken</b>Noktaları o haftanın sıcaklığına göre boya. Sağ üstteki noktaların hepsi sıcak haftalar, sol alttakiler soğuk haftalar.</li>
+                <li id="st3"><b>Sıcaklığı sabit tut</b>Aynı sıcaklıktaki haftaları karşılaştırınca dondurma satışı fazla olan hafta, daha çok boğulma demek değil. Korelasyon sıfıra iniyor.</li>
+              </ol>
+              <div class="actions">
+                <button class="btn" id="next2" type="button">Gizli değişkeni göster</button>
+                <button class="btn ghost" id="reset2" type="button">Baştan başla</button>
+              </div>
+              <svg class="dag" id="dag" viewBox="0 0 360 170" aria-label="Sıcaklık hem dondurma satışını hem boğulmaları etkiler; dondurma boğulmaya neden olmaz">
+                <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+                <rect class="hot" x="120" y="8" width="120" height="38" rx="8"/><text x="180" y="32" text-anchor="middle">Sıcak hava</text>
+                <rect x="8" y="118" width="130" height="38" rx="8"/><text x="73" y="142" text-anchor="middle">Dondurma satışı</text>
+                <rect x="222" y="118" width="130" height="38" rx="8"/><text x="287" y="142" text-anchor="middle">Boğulma (denize girme)</text>
+                <line class="arr" x1="150" y1="48" x2="90" y2="114" marker-end="url(#ah)" style="color:var(--ink)"/>
+                <line class="arr" x1="210" y1="48" x2="270" y2="114" marker-end="url(#ah)" style="color:var(--ink)"/>
+                <line class="fake" x1="142" y1="137" x2="218" y2="137"/>
+                <text class="x" x="180" y="133" text-anchor="middle">✕</text>
+              </svg>
+              <p class="note">Grafikteki veriler ders amacıyla üretilmiş temsili verilerdir.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SLAYT 3 ========== -->
+      <section class="slide" aria-label="Slayt 3: Manşet dedektifi">
+        <div class="slide-inner">
+          <h1>Manşet dedektifi</h1>
+          <p class="lead">Her manşette gerçek bir korelasyon var, ama çıkarılan sonuç yanlış. Kandırmacanın hangi türde olduğunu bul.</p>
+          <div class="layout">
+            <div>
+              <p class="score" id="score">Doğru: 0 / 4</p>
+              <div class="quiz" id="quiz"></div>
+            </div>
+            <aside class="panel">
+              <h2>Bir korelasyon gördüğünde üç soru sor</h2>
+              <ol class="three">
+                <li><b>Yön ters olabilir mi?</b>A, B'ye mi yol açıyor, yoksa B mi A'ya? Veri bunu söylemez.</li>
+                <li><b>Gizli bir değişken var mı?</b>İkisini birden etkileyen üçüncü bir şey (sıcaklık, zenginlik, yaş) olabilir mi?</li>
+                <li><b>Tesadüf olabilir mi?</b>Binlerce değişken taranırsa bazıları şans eseri birlikte hareket eder.</li>
+              </ol>
+              <p style="margin-top:14px">Nedenselliği göstermenin en sağlam yolu deneydir: bir gruba müdahale edip benzer bir kontrol grubuyla karşılaştırmak. Deney yapılamıyorsa gizli değişkenleri ölçüp sabit tutmak gerekir; tıpkı 2. slaytta sıcaklığı sabit tuttuğumuz gibi.</p>
+              <div class="hand" style="margin-top:12px">Korelasyon soruyu sorar, nedensellik cevabı ister.</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <button class="btn ghost" id="prev" type="button">Önceki</button>
+    <span class="counter" id="counter">1 / 3</span>
+    <button class="btn" id="next" type="button">Sonraki</button>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const NS = 'http://www.w3.org/2000/svg';
+  const fmt = (x,d=1) => x.toLocaleString('tr-TR',{maximumFractionDigits:d});
+  const fmtR = r => { const a=Math.abs(r); const d = a < 0.01 ? 3 : 2; return (r<0?'−':'') + a.toLocaleString('tr-TR',{minimumFractionDigits:d,maximumFractionDigits:d}); };
+
+  /* ---------- istatistik ---------- */
+  const mean = a => a.reduce((s,x)=>s+x,0)/a.length;
+  const center = a => { const m=mean(a); return a.map(x=>x-m); };
+  const dot = (a,b) => a.reduce((s,x,i)=>s+x*b[i],0);
+  const stdz = a => { const c=center(a); const s=Math.sqrt(dot(c,c)/(c.length-1)); return c.map(x=>x/s); };
+  const corr = (a,b) => { const ca=center(a), cb=center(b); return dot(ca,cb)/Math.sqrt(dot(ca,ca)*dot(cb,cb)); };
+  function resid(y, x){ const cx=center(x), cy=center(y), b=dot(cx,cy)/dot(cx,cx), my=mean(y); return cy.map((v,i)=>my + v - b*cx[i]); }
+
+  /* ---------- tohumlu temsili veri ---------- */
+  function mulberry32(a){ return function(){ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  const rnd = mulberry32(20261012);
+  const randn = () => { let u=0,v=0; while(!u) u=rnd(); while(!v) v=rnd(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); };
+  function orthoStd(v, basis){
+    let c = center(v);
+    basis.forEach(b=>{ const k = dot(c,b)/dot(b,b); c = c.map((x,i)=>x-k*b[i]); });
+    return stdz(c);
+  }
+  const N = 60;
+  const temp = Array.from({length:N},(_,i)=>17 + 12*Math.sin(2*Math.PI*i/52 - Math.PI/2) + 2.5*randn());
+  const zx = stdz(temp);
+  const e1 = orthoStd(Array.from({length:N},randn), [zx]);
+  const e2 = orthoStd(Array.from({length:N},randn), [zx,e1]);
+  const e3 = orthoStd(Array.from({length:N},randn), [zx]);
+  const mix = (r,e) => zx.map((z,i)=>r*z + Math.sqrt(1-r*r)*e[i]);
+  const ice    = mix(0.80, e1).map(z=>2600 + 900*z);
+  const murder = mix(0.003,e3).map(z=>1.2 + 0.35*z);
+  const drown  = mix(0.75, e2).map(z=>10 + 3.2*z);
+
+  /* ---------- saçılım grafiği ---------- */
+  function niceDomain(lo, hi, count=5){
+    const raw = (hi-lo)/count, p = Math.pow(10, Math.floor(Math.log10(raw)));
+    const step = [1,2,2.5,5,10].map(m=>m*p).find(s=>s>=raw);
+    return {lo: Math.floor(lo/step)*step, hi: Math.ceil(hi/step)*step, step};
+  }
+  class Scatter{
+    constructor(el, W=600, H=300){
+      this.W=W; this.H=H; this.m={l:64,r:14,t:12,b:48};
+      const id = 'clip'+Math.random().toString(36).slice(2,8);
+      el.innerHTML = '<svg class="sc" viewBox="0 0 '+W+' '+H+'"><defs><clipPath id="'+id+'"><rect x="'+this.m.l+'" y="'+this.m.t+'" width="'+(W-this.m.l-this.m.r)+'" height="'+(H-this.m.t-this.m.b)+'"/></clipPath></defs><g class="quad" clip-path="url(#'+id+')"></g><g class="axes"></g><line class="fitline" clip-path="url(#'+id+')"/><g class="pts"></g><text class="axlbl xl" text-anchor="middle"></text><text class="axlbl yl" text-anchor="middle"></text></svg>';
+      this.svg = el.querySelector('svg');
+      this.qG = this.svg.querySelector('.quad'); this.aG = this.svg.querySelector('.axes');
+      this.fit = this.svg.querySelector('.fitline'); this.pG = this.svg.querySelector('.pts');
+      this.circles = [];
+    }
+    draw(o){
+      const {xs, ys, xLabel, yLabel} = o, W=this.W, H=this.H, m=this.m;
+      const dx = niceDomain(Math.min(...xs), Math.max(...xs)), dy = niceDomain(Math.min(...ys), Math.max(...ys));
+      const sx = v => m.l + (v-dx.lo)/(dx.hi-dx.lo)*(W-m.l-m.r);
+      const sy = v => H-m.b - (v-dy.lo)/(dy.hi-dy.lo)*(H-m.t-m.b);
+      // eksenler
+      let a = '';
+      for(let t=dx.lo; t<=dx.hi+1e-9; t+=dx.step){ const X=sx(t); a+='<g class="tick"><line x1="'+X+'" x2="'+X+'" y1="'+m.t+'" y2="'+(H-m.b)+'"/><text x="'+X+'" y="'+(H-m.b+17)+'" text-anchor="middle">'+fmt(t,2)+'</text></g>'; }
+      for(let t=dy.lo; t<=dy.hi+1e-9; t+=dy.step){ const Y=sy(t); a+='<g class="tick"><line x1="'+m.l+'" x2="'+(W-m.r)+'" y1="'+Y+'" y2="'+Y+'"/><text x="'+(m.l-8)+'" y="'+(Y+4)+'" text-anchor="end">'+fmt(t,2)+'</text></g>'; }
+      a += '<line class="base" x1="'+m.l+'" x2="'+(W-m.r)+'" y1="'+(H-m.b)+'" y2="'+(H-m.b)+'"/><line class="base" x1="'+m.l+'" x2="'+m.l+'" y1="'+m.t+'" y2="'+(H-m.b)+'"/>';
+      this.aG.innerHTML = a;
+      const xl = this.svg.querySelector('.xl'), yl = this.svg.querySelector('.yl');
+      xl.setAttribute('x', (m.l+W-m.r)/2); xl.setAttribute('y', H-8); xl.textContent = xLabel;
+      yl.setAttribute('transform','translate(16,'+((m.t+H-m.b)/2)+') rotate(-90)'); yl.textContent = yLabel;
+      // ortalama dörtgenleri
+      const mx = mean(xs), my = mean(ys), MX=sx(mx), MY=sy(my);
+      if(o.quad){
+        const L=m.l, R=W-m.r, T=m.t, B=H-m.b;
+        this.qG.innerHTML =
+          '<rect x="'+MX+'" y="'+T+'" width="'+(R-MX)+'" height="'+(MY-T)+'" fill="var(--q-pos)"/>'+
+          '<rect x="'+L+'" y="'+MY+'" width="'+(MX-L)+'" height="'+(B-MY)+'" fill="var(--q-pos)"/>'+
+          '<rect x="'+L+'" y="'+T+'" width="'+(MX-L)+'" height="'+(MY-T)+'" fill="var(--q-neg)"/>'+
+          '<rect x="'+MX+'" y="'+MY+'" width="'+(R-MX)+'" height="'+(B-MY)+'" fill="var(--q-neg)"/>'+
+          '<line class="meanline" x1="'+MX+'" x2="'+MX+'" y1="'+T+'" y2="'+B+'"/>'+
+          '<line class="meanline" x1="'+L+'" x2="'+R+'" y1="'+MY+'" y2="'+MY+'"/>'+
+          '<text class="qlbl" x="'+(R-6)+'" y="'+(T+14)+'" text-anchor="end" style="fill:var(--blue)">ikisi de üstte</text>'+
+          '<text class="qlbl" x="'+(L+6)+'" y="'+(B-6)+'" style="fill:var(--blue)">ikisi de altta</text>';
+      } else this.qG.innerHTML = '';
+      // eğilim çizgisi
+      if(o.fit){
+        const cx=center(xs), cy=center(ys), b=dot(cx,cy)/dot(cx,cx);
+        const f = x => my + b*(x-mx);
+        this.fit.setAttribute('x1',sx(dx.lo)); this.fit.setAttribute('y1',sy(f(dx.lo)));
+        this.fit.setAttribute('x2',sx(dx.hi)); this.fit.setAttribute('y2',sy(f(dx.hi)));
+        this.fit.style.opacity = '';
+      } else this.fit.style.opacity = '0';
+      // noktalar
+      xs.forEach((x,i)=>{
+        let c = this.circles[i];
+        if(!c){
+          c = document.createElementNS(NS,'circle'); c.setAttribute('r','5.5');
+          c.appendChild(document.createElementNS(NS,'title'));
+          c.style.transform = 'translate('+sx(x)+'px,'+(H-m.b)+'px)';
+          this.pG.appendChild(c); this.circles.push(c);
+          void c.getBoundingClientRect();
+        }
+        c.style.transform = 'translate('+sx(x)+'px,'+sy(ys[i])+'px)';
+        let fill = 'var(--pt)';
+        if(o.quad) fill = (x-mx)*(ys[i]-my) >= 0 ? 'var(--blue)' : 'var(--red)';
+        if(o.color) fill = o.color(i);
+        c.style.fill = fill;
+        c.querySelector('title').textContent = o.tip ? o.tip(i) : '';
+      });
+      let pos=0; xs.forEach((x,i)=>{ if((x-mx)*(ys[i]-my) >= 0) pos++; });
+      return {r: corr(xs,ys), pos, neg: xs.length-pos};
+    }
+  }
+
+  /* ---------- SLAYT 1 ---------- */
+  const s1a = new Scatter($('sc1a')), s1b = new Scatter($('sc1b'));
+  const L = {temp:'Haftalık ortalama sıcaklık (°C)', ice:'Dondurma satışı (adet/hafta)', mur:'Cinayet oranı (milyon kişide)'};
+  let quad = false, swapped = false;
+  const tipA = i => (i+1)+'. hafta: '+fmt(temp[i])+' °C, '+fmt(ice[i],0)+' dondurma';
+  const tipB = i => (i+1)+'. hafta: '+fmt(temp[i])+' °C, '+fmt(murder[i],2)+' cinayet / milyon';
+  function render1(){
+    const A = swapped ? {xs:ice, ys:temp, xLabel:L.ice, yLabel:L.temp} : {xs:temp, ys:ice, xLabel:L.temp, yLabel:L.ice};
+    const B = swapped ? {xs:murder, ys:temp, xLabel:L.mur, yLabel:L.temp} : {xs:temp, ys:murder, xLabel:L.temp, yLabel:L.mur};
+    const ra = s1a.draw({...A, quad, fit:!quad, tip:tipA});
+    const rb = s1b.draw({...B, quad, fit:!quad, tip:tipB});
+    $('r1a').textContent = 'r = '+fmtR(ra.r); $('r1b').textContent = 'r = '+fmtR(rb.r);
+    $('t1a').textContent = swapped ? 'Dondurma satışı ve sıcaklık' : 'Sıcaklık ve dondurma satışı';
+    $('t1b').textContent = swapped ? 'Cinayet oranı ve sıcaklık' : 'Sıcaklık ve cinayet oranı';
+    const cnt = o => quad ? '<b class="p">'+o.pos+'</b> uyumlu nokta, <b class="n">'+o.neg+'</b> zıt nokta' : '';
+    $('c1a').innerHTML = cnt(ra); $('c1b').innerHTML = cnt(rb);
+    // cetvel işaretleri
+    const rr = $('rruler'); rr.querySelectorAll('.mk').forEach(e=>e.remove());
+    [[ra.r,'Dondurma','var(--blue)'],[rb.r,'Cinayet','var(--ink-soft)']].forEach(([r,lbl,col])=>{
+      const d=document.createElement('div'); d.className='mk'; d.style.left=((r+1)/2*100)+'%'; d.style.color=col;
+      d.textContent = lbl+' '+fmtR(r); rr.appendChild(d);
+    });
+  }
+  $('quadBtn').addEventListener('click', e=>{ quad=!quad; e.currentTarget.setAttribute('aria-pressed',String(quad)); $('quadMsg').classList.toggle('show',quad); render1(); });
+  $('swapBtn').addEventListener('click', e=>{ swapped=!swapped; e.currentTarget.setAttribute('aria-pressed',String(swapped)); $('swapMsg').classList.toggle('show',swapped); render1(); });
+
+  /* ---------- SLAYT 2 ---------- */
+  const s2 = new Scatter($('sc2'), 600, 400);
+  const iceR = resid(ice, temp), drR = resid(drown, temp);
+  const tMin = Math.min(...temp), tMax = Math.max(...temp);
+  const tempColor = i => { const k=(temp[i]-tMin)/(tMax-tMin); return 'hsl('+(215-210*k)+' '+(75+10*k)+'% 52%)'; };
+  let st = 0;
+  const btnLabels = ['Gizli değişkeni göster','Sıcaklığı sabit tut','Tamamlandı'];
+  function render2(){
+    const resid = st >= 2;
+    const xs = resid ? iceR : ice, ys = resid ? drR : drown;
+    const res = s2.draw({
+      xs, ys,
+      xLabel: resid ? 'Dondurma satışı (sıcaklık etkisi çıkarılmış)' : L.ice,
+      yLabel: resid ? 'Boğulma (sıcaklık etkisi çıkarılmış)' : 'Boğulma vakası (hafta)',
+      fit:true, color: st>=1 ? tempColor : null,
+      tip: i => (i+1)+'. hafta: '+fmt(temp[i])+' °C, '+fmt(ice[i],0)+' dondurma, '+fmt(drown[i],0)+' boğulma'
+    });
+    $('r2').textContent = 'r = '+fmtR(Math.abs(res.r)<0.005?0:res.r);
+    $('r2').style.color = resid ? 'var(--ink-soft)' : 'var(--red)';
+    $('t2').textContent = resid ? 'Aynı sıcaklıkta: dondurma ve boğulma' : 'Dondurma satışı ve boğulma vakaları';
+    $('lg2').classList.toggle('show', st>=1);
+    $('dag').classList.toggle('show', st>=1);
+    $('hl2').classList.toggle('struck', st>=2);
+    ['st1','st2','st3'].forEach((id,k)=>$(id).classList.toggle('on', k<=st));
+    $('next2').textContent = btnLabels[st]; $('next2').disabled = st>=2;
+  }
+  $('next2').addEventListener('click', ()=>{ if(st<2){ st++; render2(); } });
+  $('reset2').addEventListener('click', ()=>{ st=0; render2(); });
+
+  /* ---------- SLAYT 3: manşet testi ---------- */
+  const OPTS = ['Ters nedensellik','Gizli değişken','Tesadüf'];
+  const Q = [
+    {h:'İtfaiyeci sayısı arttıkça yangın hasarı büyüyor. İtfaiyeciler zarar mı veriyor?', a:1,
+     e:'Gizli değişken: yangının büyüklüğü. Büyük yangına hem çok itfaiyeci gönderilir hem de hasar büyük olur.'},
+    {h:'Spor yapanlar daha mutlu. Uzmanlar: “Spor mutluluk getiriyor!”', a:0,
+     e:'Ters nedensellik olabilir: mutlu ve enerjik insanlar spora daha kolay başlıyor olabilir. Yön, ancak deneyle anlaşılır.'},
+    {h:'Çikolata tüketimi yüksek ülkeler daha çok Nobel ödülü kazanıyor.', a:1,
+     e:'Gizli değişken: ülkenin zenginliği. Zengin ülkelerde hem çikolata tüketimi hem de bilime yapılan yatırım yüksektir.'},
+    {h:'Margarin tüketimi azaldıkça bir eyalette boşanmalar da azaldı.', a:2,
+     e:'Tesadüf: iki bağımsız eğilim aynı yıllarda aşağı inmiş. Binlerce veri dizisi taranırsa birlikte hareket eden çiftler mutlaka bulunur.'}
+  ];
+  let score = 0;
+  Q.forEach(q=>{
+    const card = document.createElement('div'); card.className='qcard';
+    card.innerHTML = '<div class="headline">'+q.h+'</div><div class="opts"></div><div class="fb"></div>';
+    const opts = card.querySelector('.opts'), fb = card.querySelector('.fb');
+    OPTS.forEach((t,k)=>{
+      const b = document.createElement('button'); b.type='button'; b.textContent=t;
+      b.addEventListener('click', ()=>{
+        const btns = [...opts.children];
+        btns.forEach((x,j)=>{ x.disabled=true; if(j===q.a) x.classList.add('right'); });
+        if(k===q.a){ score++; fb.innerHTML='<b style="color:var(--blue)">Doğru!</b>'+q.e; }
+        else { b.classList.add('wrong'); fb.innerHTML='<b style="color:var(--red)">Asıl sorun başka.</b>'+q.e; }
+        fb.classList.add('show');
+        $('score').textContent = 'Doğru: '+score+' / '+Q.length;
+      });
+      opts.appendChild(b);
+    });
+    $('quiz').appendChild(card);
+  });
+
+  /* ---------- gezinme ---------- */
+  const slidesEl = $('slides'), slideEls=[...slidesEl.children];
+  let cur = 0;
+  function go(i){
+    cur = Math.max(0, Math.min(slideEls.length-1, i));
+    slidesEl.style.transform = 'translateX('+(-cur*100)+'%)';
+    slideEls.forEach((s,k)=>{ if(k===cur) s.removeAttribute('inert'); else s.setAttribute('inert',''); });
+    document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-current', String(+b.dataset.go===cur)));
+    $('counter').textContent = (cur+1)+' / '+slideEls.length;
+    $('prev').disabled = cur===0; $('next').disabled = cur===slideEls.length-1;
+  }
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click', ()=>go(+b.dataset.go)));
+  $('prev').addEventListener('click', ()=>go(cur-1));
+  $('next').addEventListener('click', ()=>go(cur+1));
+  document.addEventListener('keydown', e=>{
+    if(e.target.matches('input, textarea')) return;
+    if(e.key==='ArrowRight'||e.key==='PageDown') go(cur+1);
+    if(e.key==='ArrowLeft'||e.key==='PageUp') go(cur-1);
+  });
+
+  render1(); render2(); go(0);
+})();
+</script>
+</body>
+</html>

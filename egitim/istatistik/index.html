@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9faf6">
+  <meta name="description" content="Dr. Suat ATAN'ın etkileşimli istatistik laboratuvarı. Medyan, korelasyon, Benford Yasası ve Mahalanobis uzaklığını deneyerek öğrenin.">
+  <link rel="canonical" href="https://suatatan.com/egitim/istatistik/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <title>İstatistiği Anlamak — Dr. Suat ATAN | Etkileşimli Eğitim</title>
+  <style>
+    :root{--paper:#fafbf6;--ink:#1b2a4e;--muted:#596784;--line:#d6e0eb;--blue:#1f4fb8;--bluebg:#e9efff;--red:#cb453e;--yellow:#f6c84c;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,Segoe UI,sans-serif;background:var(--paper);background-image:linear-gradient(#e6edf4 1px,transparent 1px),linear-gradient(90deg,#e6edf4 1px,transparent 1px);background-size:28px 28px}
+    a{color:inherit}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+    .wrap{width:min(1180px,calc(100% - 44px));margin:0 auto}
+    .top{background:rgba(250,251,246,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:19px 0;gap:16px}
+    .signature{text-decoration:none;font-weight:800;font-size:1.04rem}.signature span{color:var(--blue)}.toplinks{display:flex;align-items:center;gap:22px}.toplinks a{font-size:.88rem;text-decoration:none;font-weight:700}.toplinks a:hover{text-decoration:underline}
+    .hero{padding:72px 0 56px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);align-items:center;gap:64px}
+    .eyebrow{font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--blue);margin:0 0 20px}
+    h1{font-size:clamp(3.1rem,7vw,6.1rem);line-height:.99;letter-spacing:-.055em;margin:0 0 22px;font-weight:800}
+    h1 em{font-style:normal;position:relative;white-space:nowrap;color:var(--blue)}h1 em:after{content:"";display:block;position:absolute;bottom:-8px;left:2%;right:1%;height:7px;border-radius:4px;background:var(--yellow);transform:rotate(-2deg)}
+    .lead{font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.7;max-width:58ch;color:#3b4b69;margin:26px 0}
+    .hero-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:28px 0 0}.primary,.secondary{display:inline-flex;gap:9px;align-items:center;justify-content:center;text-decoration:none;padding:13px 19px;border-radius:12px;font-weight:800}.primary{background:var(--ink);color:white}.primary:hover{background:var(--blue)}.secondary{border:1.5px solid var(--line);background:var(--white)}.secondary:hover{border-color:var(--blue)}
+    .illustration{position:relative;background:#fffefa;border:2px solid var(--ink);border-radius:18px;padding:24px;box-shadow:12px 12px 0 var(--bluebg);transform:rotate(2deg);min-height:330px}.illus-label{display:flex;align-items:center;justify-content:space-between;font-size:.8rem;font-weight:800}.illus-label span:last-child{color:var(--red)}.chart{width:100%;height:210px;margin-top:15px}.illus-note{font-weight:700;line-height:1.35;margin:4px 0 0;font-size:1.04rem}.marker{display:inline-block;background:var(--yellow);padding:3px 8px;border-radius:5px;transform:rotate(-2deg)}
+    .sectionhead{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:22px}.sectionhead h2{font-size:clamp(1.8rem,4vw,2.55rem);letter-spacing:-.04em;margin:0}.sectionhead p{color:var(--muted);margin:8px 0 0;line-height:1.55}
+    .library{padding:36px 0 80px}.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 22px}.searchbox{min-width:230px;flex:1 1 280px;max-width:400px;display:flex;align-items:center;gap:9px;padding:12px 15px;border:1.5px solid var(--line);border-radius:12px;background:var(--white)}.searchbox:focus-within{border-color:var(--blue)}.searchbox svg{flex:none}.searchbox input{border:0;outline:0;width:100%;background:transparent;color:var(--ink);font-size:.94rem}.filters{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1.5px solid var(--line);background:var(--white);color:var(--muted);padding:9px 14px;border-radius:999px;font-size:.86rem;font-weight:700}.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--white)}
+    .count{color:var(--muted);font-size:.86rem;font-weight:700;margin:0 0 16px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.lesson{background:rgba(255,255,255,.96);border:1.5px solid var(--line);border-radius:18px;padding:25px;display:flex;flex-direction:column;position:relative;transition:transform .2s,border-color .2s,box-shadow .2s;min-height:330px}.lesson:hover{transform:translateY(-4px);border-color:#8da7d8;box-shadow:0 15px 30px #1b2a4e11}.lesson[hidden]{display:none}
+    .lesson-top{display:flex;justify-content:space-between;align-items:start;gap:14px}.number{font-weight:800;color:#8e9db6;font-size:.86rem;letter-spacing:.07em}.tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:end}.tag{font-weight:700;font-size:.72rem;padding:6px 9px;background:var(--bluebg);color:var(--blue);border-radius:999px}.tag.advanced{background:#fff2da;color:#9e6210}.tag.audit{background:#fae6e2;color:#b3443d}
+    .lesson-content{display:grid;grid-template-columns:minmax(0,1fr) 136px;gap:12px;align-items:center;margin:24px 0 18px}.lesson h3{font-size:clamp(1.28rem,2.8vw,1.65rem);line-height:1.15;margin:0 0 12px;letter-spacing:-.035em}.lesson .desc{color:var(--muted);font-size:.96rem;line-height:1.57;margin:0}.preview{height:118px;width:136px;background:#f4f7fd;border:1px solid #e3e9f4;border-radius:13px;padding:8px}.preview svg{width:100%;height:100%}
+    .lesson-bottom{border-top:1px solid var(--line);padding-top:17px;margin-top:auto;display:flex;gap:12px;align-items:center;justify-content:space-between}.lesson-bottom small{color:var(--muted);font-weight:700;font-size:.8rem}.lesson-bottom a{color:var(--blue);font-weight:800;text-decoration:none;white-space:nowrap}.lesson-bottom a:hover{text-decoration:underline}.empty{display:none;border:1.5px dashed var(--line);text-align:center;padding:30px;border-radius:14px;background:white;color:var(--muted)}.empty.show{display:block}
+    .how{padding:65px 0 76px;border-top:1.5px solid var(--line);background:rgba(255,255,255,.7)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}.step{border-top:3px solid var(--ink);padding:18px 10px 4px 0}.stepnum{display:inline-block;color:var(--blue);font-size:.82rem;font-weight:800;margin-bottom:18px}.step h3{margin:0 0 10px;font-size:1.23rem}.step p{margin:0;color:var(--muted);line-height:1.65;font-size:.95rem}
+    .note{margin-top:34px;padding:23px 25px;border:1.5px solid #d3dced;border-radius:15px;background:#eff4ff;line-height:1.6;color:#293d66}.note b{color:var(--blue)}
+    footer{border-top:1px solid var(--line);padding:30px 0 50px;background:var(--paper)}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer p{margin:0;font-size:.85rem;color:var(--muted)}footer a{color:var(--blue);font-weight:700;text-decoration:none}
+    @media(max-width:900px){.hero{gap:32px}.illustration{min-height:290px;padding:16px}.lesson-content{grid-template-columns:1fr 112px}.preview{width:112px}}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:45px 0}.illustration{max-width:460px;min-height:280px;transform:rotate(0)}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr;gap:10px}.step{padding-top:15px}.toplinks{gap:11px}.toplinks a{font-size:.79rem}}
+    @media(max-width:440px){.wrap{width:min(100% - 28px,1180px)}.toplinks a:first-child{display:none}.lesson{padding:19px}.lesson-content{grid-template-columns:1fr 90px;gap:6px}.preview{width:90px;height:100px}.lesson h3{font-size:1.28rem}.toolbar{align-items:stretch}.filters{gap:6px}.chip{padding:8px 10px;font-size:.81rem}}
+    @media(prefers-color-scheme:dark){:root{--paper:#121827;--ink:#e8edf7;--muted:#acb7cc;--line:#334159;--blue:#93b4ff;--bluebg:#243759;--white:#1b263a}.top{background:rgba(18,24,39,.93)}.hero .lead{color:#bbc5d8} .illustration{background:#1c2840;box-shadow:12px 12px 0 #263858}.illustration svg text{fill:#dbe4f5}.lesson{background:#1b263a}.preview{background:#1c304d;border-color:#34496a}.how{background:#162035}.note{background:#203252;color:#cfd9ef;border-color:#405479}.empty{background:#1b263a}h1 em{color:#91b5ff}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <a href="https://suatatan.com/tr/" class="signature">Dr. Suat <span>ATAN</span> <span aria-hidden="true">/</span> Öğrenme Laboratuvarı</a>
+    <nav class="toplinks" aria-label="Üst menü"><a href="#dersler">Deneyler</a><a href="#egitimde-kullanim">Eğitimde kullanım</a><a href="https://suatatan.com/tr/">Ana site ↗</a></nav>
+  </div></header>
+  <main>
+    <section class="hero wrap">
+      <div><p class="eyebrow">Etkileşimli eğitim · İstatistik ve veri okuryazarlığı</p>
+        <h1>İstatistiği<br><em>anlamak.</em></h1>
+        <p class="lead">Formülleri ezberlemeden önce verinin nasıl davrandığını gör. Medyanı değiştir, korelasyonu sorgula, sayıların ilk hanesini incele ve gizli aykırı değerleri yakala. <strong>Her anlatımda deneyin kontrolü sende.</strong></p>
+        <div class="hero-links"><a class="primary" href="#dersler">Deneyleri keşfet <span aria-hidden="true">↓</span></a><a class="secondary" href="#egitimde-kullanim">Eğitimde nasıl kullanılır?</a></div>
+      </div>
+      <div class="illustration" aria-hidden="true"><div class="illus-label"><span>VERİYİ HİSSET / 01</span><span>● CANLI DENEY</span></div>
+        <svg class="chart" viewBox="0 0 350 220" role="img"><path d="M24 18V192H332" fill="none" stroke="#8495b2" stroke-width="2"/>
+          <g stroke="#dce4f0" stroke-width="1"><path d="M24 60H330M24 104H330M24 148H330"/></g>
+          <g fill="#c8d6ed" stroke="#6d8cc8" stroke-width="2"><rect x="48" y="117" width="35" height="75" rx="5"/><rect x="96" y="81" width="35" height="111" rx="5"/><rect x="144" y="99" width="35" height="93" rx="5"/><rect x="192" y="57" width="35" height="135" rx="5"/><rect x="240" y="112" width="35" height="80" rx="5"/></g><rect x="286" y="19" width="35" height="173" rx="5" fill="#ffe189" stroke="#c48b13" stroke-width="2"/><path d="M20 92H330" stroke="#cb453e" stroke-width="3" stroke-dasharray="8 6"/><rect x="27" y="69" width="128" height="24" rx="5" fill="#fce2df"/><text x="35" y="86" font-size="13" font-weight="bold" fill="#bd443a">ORTALAMA</text></svg>
+        <p class="illus-note"><span class="marker">Bir değeri değiştir.</span><br>Hikâyenin nasıl değiştiğini gör.</p>
+      </div>
+    </section>
+    <section id="dersler" class="library wrap" aria-labelledby="lessons-title">
+      <div class="sectionhead"><div><p class="eyebrow">Açık öğrenme koleksiyonu</p><h2 id="lessons-title">Dört küçük deney. Büyük fikirler.</h2><p>Her ders yeni sekmede açılır, tarayıcıda çalışır ve kurulum gerektirmez.</p></div></div>
+      <div class="toolbar"><label class="searchbox"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="search" type="search" placeholder="Konu veya kavram ara…" aria-label="Derslerde ara"></label>
+        <div class="filters" role="group" aria-label="Dersleri filtrele"><button class="chip" type="button" data-filter="all" aria-pressed="true">Tümü</button><button class="chip" type="button" data-filter="temel" aria-pressed="false">Temel</button><button class="chip" type="button" data-filter="yorum" aria-pressed="false">Veriyi yorumlama</button><button class="chip" type="button" data-filter="ileri" aria-pressed="false">İleri</button></div>
+      </div>
+      <p id="count" class="count" aria-live="polite">4 etkileşimli anlatım</p>
+      <div id="cards" class="cards">
+        <article class="lesson" data-category="temel" data-keywords="medyan ortalama uç değer merkezi eğilim robust dayanıklılık">
+          <div class="lesson-top"><span class="number">01 / TEMELLER</span><div class="tags"><span class="tag">Temel</span><span class="tag">2 sahne</span></div></div>
+          <div class="lesson-content"><div><h3>Medyanın Bilgeliği</h3><p class="desc">Bir uç değer geldiğinde ortalama neden yer değiştirirken medyan sakin kalır? Değerleri kendin değiştirerek keşfet.</p></div>
+            <div class="preview" aria-hidden="true"><svg viewBox="0 0 120 110"><path d="M8 88H114" stroke="#7e91b0" stroke-width="2"/><g fill="#b9caed" stroke="#537bbd" stroke-width="1"><rect x="16" y="52" width="14" height="36" rx="3"/><rect x="34" y="45" width="14" height="43" rx="3"/><rect x="52" y="38" width="14" height="50" rx="3"/><rect x="70" y="46" width="14" height="42" rx="3"/></g><rect x="88" y="6" width="14" height="82" rx="3" fill="#ffe4a2" stroke="#c38c17"/><path d="M5 49H113" stroke="#cf5148" stroke-width="2" stroke-dasharray="4 3"/><path d="M5 37H113" stroke="#2457b1" stroke-width="2"/></svg></div>
+          </div><div class="lesson-bottom"><small>Ortalama · Medyan · Uç değer</small><a href="./medyan/" aria-label="Medyanın Bilgeliği dersini aç">Deneye başla ↗</a></div>
+        </article>
+        <article class="lesson" data-category="yorum" data-keywords="korelasyon nedensellik ilişki üçüncü değişken saçılım grafik dondurma manşet">
+          <div class="lesson-top"><span class="number">02 / VERİYİ YORUMLAMA</span><div class="tags"><span class="tag">Veri okuryazarlığı</span><span class="tag">3 sahne</span></div></div>
+          <div class="lesson-content"><div><h3>Korelasyon Kandırmacası</h3><p class="desc">İki değişken beraber hareket edince biri diğerinin nedeni olur mu? Saçılım grafikleri ve yanıltıcı manşetleri sorgula.</p></div>
+          <div class="preview" aria-hidden="true"><svg viewBox="0 0 120 110"><path d="M8 9V95H114" fill="none" stroke="#889abc" stroke-width="2"/><path d="M16 90L107 17" stroke="#cf5148" stroke-width="2" stroke-dasharray="5 4"/><g fill="#2655a6"><circle cx="24" cy="75" r="4"/><circle cx="34" cy="82" r="4"/><circle cx="46" cy="67" r="4"/><circle cx="55" cy="56" r="4"/><circle cx="66" cy="59" r="4"/><circle cx="78" cy="40" r="4"/><circle cx="88" cy="45" r="4"/><circle cx="104" cy="21" r="4"/></g></svg></div>
+          </div><div class="lesson-bottom"><small>Korelasyon · Nedensellik · Yanılgı</small><a href="./korelasyon/" aria-label="Korelasyon Kandırmacası dersini aç">Deneye başla ↗</a></div>
+        </article>
+        <article class="lesson" data-category="yorum" data-keywords="benford ilk hane denetim sahtecilik rakam frekans olasılık veri seti">
+          <div class="lesson-top"><span class="number">03 / UYGULAMALI ANALİZ</span><div class="tags"><span class="tag audit">Denetim</span><span class="tag">4 sahne</span></div></div>
+          <div class="lesson-content"><div><h3>Benford Yasası: İlk Hanenin Sırrı</h3><p class="desc">Neden gerçek sayıların ilk hanesinde 1, çoğu zaman 9'dan daha sık görülür? Dağılımları karşılaştır, kendi verini dene.</p></div>
+          <div class="preview" aria-hidden="true"><svg viewBox="0 0 120 110"><path d="M5 90H116" stroke="#8697b3" stroke-width="2"/><g fill="#ceddf9" stroke="#4275ba" stroke-width="1.2"><rect x="11" y="13" width="9" height="77" rx="2"/><rect x="23" y="37" width="9" height="53" rx="2"/><rect x="35" y="49" width="9" height="41" rx="2"/><rect x="47" y="60" width="9" height="30" rx="2"/><rect x="59" y="66" width="9" height="24" rx="2"/><rect x="71" y="71" width="9" height="19" rx="2"/><rect x="83" y="75" width="9" height="15" rx="2"/><rect x="95" y="78" width="9" height="12" rx="2"/><rect x="107" y="81" width="9" height="9" rx="2"/></g></svg></div>
+          </div><div class="lesson-bottom"><small>İlk hane · Örüntü · Denetim</small><a href="./benford/" aria-label="Benford Yasası dersini aç">Deneye başla ↗</a></div>
+        </article>
+        <article class="lesson" data-category="ileri" data-keywords="mahalanobis öklid aykırı değer çok değişkenli kovaryans korelasyon uzaklık anomali">
+          <div class="lesson-top"><span class="number">04 / İLERİ ANALİZ</span><div class="tags"><span class="tag advanced">İleri</span><span class="tag">3 sahne</span></div></div>
+          <div class="lesson-content"><div><h3>Mahalanobis Uzaklığı: Gizli Aykırı Değerler</h3><p class="desc">Tek tek normal görünen iki ölçüm, birlikte neden olağan dışı olabilir? Öklid ve Mahalanobis bakışlarını karşılaştır.</p></div>
+          <div class="preview" aria-hidden="true"><svg viewBox="0 0 120 110"><ellipse cx="59" cy="54" rx="47" ry="20" fill="#e9f0ff" stroke="#cf5148" stroke-width="2" transform="rotate(-32 59 54)"/><g fill="#365da1"><circle cx="37" cy="67" r="3"/><circle cx="49" cy="63" r="3"/><circle cx="60" cy="51" r="3"/><circle cx="77" cy="42" r="3"/><circle cx="84" cy="34" r="3"/></g><circle cx="84" cy="81" r="5" fill="#cf5148"/><path d="M84 73V66M84 89V96M76 81H69M92 81H99" stroke="#cf5148" stroke-width="2"/></svg></div>
+          </div><div class="lesson-bottom"><small>Öklid · Kovaryans · Aykırılık</small><a href="./mahalanobis/" aria-label="Mahalanobis Uzaklığı dersini aç">Deneye başla ↗</a></div>
+        </article>
+      </div><div id="empty" class="empty" role="status">Bu aramayla eşleşen bir anlatım yok. Başka bir kavram dene veya “Tümü”ne dön.</div>
+    </section>
+    <section id="egitimde-kullanim" class="how"><div class="wrap">
+      <div class="sectionhead"><div><p class="eyebrow">Eğitmen notu</p><h2>İzletme. Önce merak ettir.</h2><p>Bu anlatımlar sunumun yerine değil, öğrenmeyi görünür kılmak için tasarlandı.</p></div></div>
+      <div class="steps"><div class="step"><span class="stepnum">ADIM 01</span><h3>Önce tahmin ettir</h3><p>“En yüksek değeri 10 katına çıkarırsak medyan ne olur?” gibi bir soruyla başla. Katılımcılar düşüncesini söylesin.</p></div><div class="step"><span class="stepnum">ADIM 02</span><h3>Deneyi birlikte değiştir</h3><p>Grafiklerdeki değerlerle ve senaryolarla oynayın. Tahmin ile gerçek sonuç arasındaki farkı birlikte görün.</p></div><div class="step"><span class="stepnum">ADIM 03</span><h3>Gerçek hayata bağla</h3><p>Maaş, sınav, ihale, performans veya haber verisiyle aynı soruyu tekrar sorun: Bu yöntem hangi durumda işe yarar?</p></div></div>
+      <div class="note"><b>Önemli:</b> Benford dağılımından sapma tek başına hile kanıtı değildir. Korelasyon nedensellik göstermez. Mahalanobis uzaklığı ise verinin kovaryans yapısına bağlıdır. Her görsel aracın yanında bu sınırları da tartışın.</div>
+    </div></section>
+  </main>
+  <footer><div class="wrap"><p>© 2026 Dr. Suat ATAN · Etkileşimli İstatistik Laboratuvarı</p><p><a href="https://suatatan.com/tr/">suatatan.com</a> · Eğitim, sunum ve bireysel öğrenme için açık koleksiyon</p></div></footer>
+  <script>
+    (function(){
+      const search=document.getElementById('search'),chips=[...document.querySelectorAll('.chip')],cards=[...document.querySelectorAll('.lesson')],count=document.getElementById('count'),empty=document.getElementById('empty');
+      let filter='all';
+      function normalize(s){return s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+      function update(){
+        const q=normalize(search.value.trim());let shown=0;
+        for(const card of cards){
+          const text=normalize(card.textContent+' '+card.dataset.keywords);
+          const ok=(filter==='all'||card.dataset.category===filter)&&(!q||text.includes(q));
+          card.hidden=!ok;if(ok)shown++;
+        }
+        count.textContent=shown+' etkileşimli anlatım gösteriliyor';
+        empty.classList.toggle('show',shown===0);
+      }
+      chips.forEach(chip=>chip.addEventListener('click',function(){filter=this.dataset.filter;chips.forEach(c=>c.setAttribute('aria-pressed',String(c===this)));update()}));
+      search.addEventListener('input',update);update();
+    })();
+  </script>
+</body>
+</html>

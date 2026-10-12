@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Benford Yasası: İlk Hanenin Sırrı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFBF6; --grid:#E1EAF3; --ink:#1B2A4E; --ink-soft:#56627F;
+  --blue:#1F4FB8; --blue-soft:#DCE6FB; --red:#D23B33; --red-soft:#FBE1DE;
+  --amber:#C98A00; --amber-bg:#FFE38A; --gray:#C9CFDA; --gray-edge:#9AA3B5;
+  --card:rgba(255,255,255,.9); --margin:#E9A3A0; --line:#C9D5E4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+    --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+    --amber:#F5C042; --amber-bg:#5A4614; --gray:#323B52; --gray-edge:#4C5672;
+    --card:rgba(25,32,54,.92); --margin:#7A3B3B; --line:#2A3552;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121726; --grid:#1B2338; --ink:#E6EAF4; --ink-soft:#9AA5C0;
+  --blue:#86A9FF; --blue-soft:#1F2D55; --red:#FF8379; --red-soft:#4A2228;
+  --amber:#F5C042; --amber-bg:#5A4614; --gray:#323B52; --gray-edge:#4C5672;
+  --card:rgba(25,32,54,.92); --margin:#7A3B3B; --line:#2A3552;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{
+  margin:0;height:100%;color:var(--ink);
+  font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;font-variant-numeric:tabular-nums;
+}
+body::before{content:"";position:fixed;top:0;bottom:0;left:56px;width:2px;background:var(--margin);pointer-events:none;z-index:0}
+.app{position:relative;z-index:1;height:100%;display:grid;grid-template-rows:auto 1fr auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px 10px 76px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.author{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-top:2px;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.author a{color:var(--blue);text-decoration:none;border-bottom:1.5px solid currentColor}
+.author a:hover{border-bottom-width:2.5px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:.88rem;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);border-radius:999px;padding:6px 13px;cursor:pointer}
+.tabs button[aria-current="true"]{border-color:var(--ink);color:var(--ink);font-weight:700}
+.viewport{overflow:hidden;position:relative}
+.slides{display:flex;height:100%;transition:transform .55s cubic-bezier(.65,0,.35,1)}
+.slide{flex:0 0 100%;height:100%;overflow-y:auto;padding:12px 28px 28px 76px}
+.slide-inner{max-width:1180px}
+h1{font-size:clamp(1.9rem,4.2vw,3.1rem);line-height:1.02;letter-spacing:-.03em;margin:.1em 0 .3em;font-weight:800}
+.lead{font-size:1.06rem;line-height:1.55;max-width:64ch;margin:0 0 16px}
+.layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(290px,1fr);gap:28px;align-items:start}
+.panel{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:18px}
+.panel h2{margin:0 0 6px;font-size:1.05rem}
+.panel p{line-height:1.5}
+.sub{margin:0 0 10px;font-size:.9rem;color:var(--ink-soft);line-height:1.45}
+.hand{font-family:"Caveat","Comic Sans MS",cursive;font-size:1.35rem;line-height:1.2;color:var(--red)}
+.btn{font:inherit;font-weight:700;font-size:.95rem;padding:10px 16px;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.amber{background:var(--amber-bg);color:var(--ink);border-color:var(--amber)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+/* ---------- rakam grafiği ---------- */
+.chart{position:relative;padding:28px 10px 52px 44px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;height:clamp(280px,48vh,440px)}
+.plot{position:relative;height:100%;border-bottom:2px solid var(--ink)}
+.gridline{position:absolute;left:0;right:0;border-top:1px solid var(--line)}
+.gridline span{position:absolute;right:calc(100% + 6px);transform:translateY(-50%);font-size:.72rem;color:var(--ink-soft)}
+.bar{position:absolute;bottom:0;height:0;border-radius:6px 6px 0 0;background:var(--blue-soft);box-shadow:inset 0 0 0 2px var(--blue);
+  transition:height .7s cubic-bezier(.2,.8,.2,1),background .4s,box-shadow .4s}
+.bar.naive{background:var(--gray);box-shadow:inset 0 0 0 1.5px var(--gray-edge)}
+.bar.benf{background:var(--red-soft);box-shadow:inset 0 0 0 2px var(--red)}
+.bar .val{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:3px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.bar.benf .val{color:var(--red)}
+.dig{position:absolute;top:100%;transform:translateX(-50%);margin-top:6px;text-align:center;line-height:1.1}
+.dig b{display:block;font-size:1.05rem}
+.dig small{display:block;font-size:.7rem;color:var(--red);font-weight:600;transition:opacity .4s}
+.chart.hide-benf .dig small{opacity:0}
+.exp{position:absolute;height:0;border-top:3px solid var(--red);z-index:3;transition:bottom .7s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.exp::after{content:"";position:absolute;left:50%;top:-6.5px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--red)}
+.chart.no-exp .exp{opacity:0}
+.uni{position:absolute;left:0;right:0;height:0;border-top:2px dashed var(--gray-edge);z-index:2;transition:opacity .4s}
+.uni span{position:absolute;right:4px;bottom:3px;font-size:.74rem;font-weight:600;color:var(--ink-soft);background:var(--paper);padding:1px 6px;border-radius:5px}
+.chart.no-uni .uni{opacity:0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.84rem;color:var(--ink-soft);margin:10px 0 0}
+.legend i{display:inline-block;width:14px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend .lo{background:var(--blue-soft);box-shadow:inset 0 0 0 2px var(--blue)}
+.legend .le{height:3px;background:var(--red);vertical-align:3px}
+.legend .lu{height:0;border-top:2px dashed var(--gray-edge);vertical-align:3px}
+
+/* ---------- slayt 1 ---------- */
+.examples{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.ex{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:6px 12px;font-size:.98rem}
+.ex b{color:var(--red);font-size:1.1rem}
+.guess{display:grid;gap:8px;margin:6px 0 4px}
+.guess .gv{font-size:2.4rem;font-weight:800;letter-spacing:-.02em;line-height:1}
+input[type=range]{width:100%;accent-color:var(--blue)}
+.reveal{display:none;margin-top:14px;padding-top:14px;border-top:1.5px dashed var(--line)}
+.reveal.show{display:block}
+.formula{font-size:1.25rem;font-weight:700;margin:6px 0;color:var(--red)}
+.formula sub{font-size:.7em}
+
+/* ---------- slayt 2 ---------- */
+.dsets{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px}
+.dsets button{font:inherit;font-size:.86rem;font-weight:600;padding:7px 11px;border-radius:9px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.dsets button[aria-pressed="true"]{border-color:var(--blue);background:var(--blue-soft);color:var(--blue)}
+.dsets .tagbad{color:var(--ink-soft);font-weight:500}
+.rowlbl{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600;margin-top:4px}
+.desc{margin:12px 0 0;font-size:.95rem;line-height:1.5;min-height:4.5em}
+.score{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+.badge{font-weight:800;font-size:.9rem;padding:5px 11px;border-radius:999px;border:2px solid}
+.badge.good{color:var(--blue);border-color:var(--blue);background:var(--blue-soft)}
+.badge.ok{color:var(--blue);border-color:var(--blue)}
+.badge.warn{color:var(--ink);border-color:var(--amber);background:var(--amber-bg)}
+.badge.bad{color:var(--red);border-color:var(--red);background:var(--red-soft)}
+.badge.none{color:var(--ink-soft);border-color:var(--line)}
+.mad{font-size:.88rem;color:var(--ink-soft)}
+.mad b{color:var(--ink)}
+
+/* ---------- slayt 3 ---------- */
+.counterbox{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px}
+.bigval{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;letter-spacing:-.02em;line-height:1}
+.bigval .fd{color:var(--red)}
+.smallstat{font-size:.85rem;color:var(--ink-soft)}
+.smallstat b{color:var(--ink);font-size:1rem}
+.ruler{position:relative;display:flex;height:58px;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--card);margin-bottom:6px}
+.seg{position:relative;border-right:1.5px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:1rem;transition:background .2s}
+.seg:last-child{border-right:none}
+.seg small{position:absolute;bottom:3px;left:0;right:0;text-align:center;font-size:.66rem;font-weight:600;color:var(--ink-soft)}
+.seg.on{background:var(--red-soft);color:var(--red)}
+.marker{position:absolute;top:-2px;bottom:-2px;width:3px;margin-left:-1.5px;background:var(--red);z-index:2}
+.marker.anim{transition:left .11s linear}
+.rulercap{font-size:.84rem;color:var(--ink-soft);margin:0 0 16px;line-height:1.4}
+.chart.sm{height:clamp(220px,34vh,320px)}
+
+/* ---------- slayt 4 ---------- */
+textarea{width:100%;min-height:180px;font:inherit;font-size:.92rem;line-height:1.4;padding:10px 12px;border-radius:10px;border:2px solid var(--line);background:var(--paper);color:var(--ink);resize:vertical}
+textarea:focus{border-color:var(--blue)}
+.warn{font-size:.86rem;color:var(--amber);font-weight:600;margin:8px 0 0;min-height:1.2em}
+.when{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.when div{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.9rem;line-height:1.5}
+.when h3{margin:0 0 4px;font-size:.95rem}
+.when .yes h3{color:var(--blue)} .when .no h3{color:var(--red)}
+
+footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 24px 14px 76px}
+.counter{font-weight:700;color:var(--ink-soft)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+@media (max-width:900px){.layout{grid-template-columns:1fr}}
+@media (max-width:640px){
+  body::before{left:18px}
+  header,footer{padding-left:32px;padding-right:14px}
+  .slide{padding:8px 14px 24px 32px}
+  .tabs button{padding:5px 9px;font-size:.8rem}
+  .chart{padding-left:36px}
+  .bar .val{font-size:.62rem}
+  .dig small{font-size:.6rem}
+  .when{grid-template-columns:1fr}
+  .seg small{display:none}
+}
+@media (prefers-reduced-motion:reduce){.slides,.bar,.exp,.marker.anim{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="brand">Benford Yasası: İlk Hanenin Sırrı</div>
+      <div class="author">Dr. Suat ATAN <a href="https://suatatan.com" target="_blank" rel="noopener">suatatan.com</a></div>
+    </div>
+    <nav class="tabs" aria-label="Slaytlar">
+      <button type="button" data-go="0" aria-current="true">1 · Tahmin</button>
+      <button type="button" data-go="1" aria-current="false">2 · Veriler</button>
+      <button type="button" data-go="2" aria-current="false">3 · Neden?</button>
+      <button type="button" data-go="3" aria-current="false">4 · Kendi verin</button>
+    </nav>
+  </header>
+
+  <main class="viewport">
+    <div class="slides" id="slides">
+
+      <!-- ========== SLAYT 1 ========== -->
+      <section class="slide" aria-label="Slayt 1: Tahmin">
+        <div class="slide-inner">
+          <h1>Hangi rakam daha sık başlar?</h1>
+          <p class="lead">Şehir nüfusları, nehir uzunlukları, şirket faturaları, borsa hacimleri… Bu sayıların yalnızca <b>ilk hanesine</b>, yani soldaki ilk sıfır olmayan rakama bakalım. Bu rakam 1 ile 9 arasında bir şeydir.</p>
+          <div class="examples">
+            <span class="ex">3.482 ➜ <b>3</b></span>
+            <span class="ex">0,0071 ➜ <b>7</b></span>
+            <span class="ex">1.250.000 ➜ <b>1</b></span>
+            <span class="ex">95 ➜ <b>9</b></span>
+          </div>
+          <div class="layout">
+            <div>
+              <div class="chart hide-benf no-exp" id="chart1"></div>
+              <div class="legend"><span><i class="lu"></i>Her rakam eşit şansa sahip olsaydı (%11,1)</span></div>
+            </div>
+            <aside class="panel">
+              <h2>Önce tahmin et</h2>
+              <p class="sub">Gerçek hayattan rastgele bir sayı seçsek, ilk hanesinin 1 olma olasılığı sence yüzde kaç?</p>
+              <div class="guess">
+                <div class="gv" id="gv">%11</div>
+                <input type="range" id="guess" min="0" max="60" value="11" aria-label="Tahminin, yüzde">
+              </div>
+              <div class="actions">
+                <button class="btn" id="revealBtn" type="button">Cevabı göster</button>
+                <button class="btn ghost" id="resetBtn" type="button">Baştan başla</button>
+              </div>
+              <div class="reveal" id="reveal">
+                <p id="guessRes" style="margin:0 0 8px"></p>
+                <p style="margin:0">Benford yasasına göre ilk hanesi <i>d</i> olan sayıların oranı:</p>
+                <div class="formula">P(d) = log<sub>10</sub>(1 + 1/d)</div>
+                <p class="sub" style="margin:0">P(1) = log<sub>10</sub>2 ≈ %30,1 &nbsp; P(9) = log<sub>10</sub>(10/9) ≈ %4,6</p>
+                <div class="hand" style="margin-top:12px">1881'de Simon Newcomb, logaritma tablolarının ilk sayfalarının daha çok yıprandığını fark etti. 1938'de Frank Benford bunu binlerce gerçek sayı üzerinde sınadı.</div>
+                <div class="actions"><button class="btn amber" type="button" data-go="1">Verilerle sınayalım</button></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SLAYT 2 ========== -->
+      <section class="slide" aria-label="Slayt 2: Veriler">
+        <div class="slide-inner">
+          <h1>Veriler ne diyor?</h1>
+          <p class="lead">Bir veri seti seç ve ilk hanelerin dağılımını Benford beklentisiyle karşılaştır. Mavi çubuklar gözlenen oranı, kırmızı çizgiler Benford'un beklediği oranı gösterir.</p>
+          <div class="layout">
+            <div>
+              <div class="chart" id="chart2"></div>
+              <div class="legend"><span><i class="lo"></i>Gözlenen</span><span><i class="le"></i>Benford beklentisi</span></div>
+            </div>
+            <aside class="panel">
+              <h2>Veri seti</h2>
+              <div class="dsets" id="dsets" role="group" aria-label="Veri seti seçimi"></div>
+              <div class="rowlbl"><span>Sayı adedi</span><span id="nVal">300</span></div>
+              <input type="range" id="nRange" min="20" max="1000" step="10" value="300" aria-label="Sayı adedi">
+              <div class="actions"><button class="btn ghost" id="regen" type="button">Yeniden üret</button></div>
+              <p class="desc" id="desc"></p>
+              <div class="score"><span class="badge none" id="badge2">–</span><span class="mad" id="mad2"></span></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SLAYT 3 ========== -->
+      <section class="slide" aria-label="Slayt 3: Neden?">
+        <div class="slide-inner">
+          <h1>Neden en çok 1?</h1>
+          <p class="lead">1.000 ₺'lik birikimin her adımda aynı oranda büyüdüğünü düşün. 1.000'den 2.000'e çıkmak için paranın <b>iki katına</b> çıkması gerekir. 9.000'den 10.000'e çıkmak için ise yalnızca <b>%11</b> büyümesi yeter. Büyüyen bir sayı bu yüzden "1 ile başlayan" bölgede en uzun süre kalır.</p>
+          <div class="layout">
+            <div>
+              <div class="counterbox">
+                <div><div class="smallstat">Birikim</div><div class="bigval" id="simVal">1.000 ₺</div></div>
+                <div class="smallstat">Adım <b id="simSteps">0</b></div>
+                <div class="smallstat">10 katına çıkma <b id="simDec">0</b> kez</div>
+              </div>
+              <div class="ruler" id="ruler"><div class="marker" id="marker"></div></div>
+              <p class="rulercap">Logaritmik cetvel: kırmızı imleç her adımda aynı mesafe ilerler. Her rakamın kutusu, o rakamda geçen zamanın payı kadar geniştir.</p>
+              <div class="chart sm" id="chart3"></div>
+              <div class="legend"><span><i class="lo"></i>Her ilk hanede geçen zaman</span><span><i class="le"></i>Benford beklentisi</span></div>
+            </div>
+            <aside class="panel">
+              <h2>Büyümeyi başlat</h2>
+              <div class="rowlbl"><span>Adım başına büyüme</span><span id="rVal">%10</span></div>
+              <input type="range" id="rRange" min="1" max="50" value="10" aria-label="Adım başına büyüme oranı, yüzde">
+              <div class="actions">
+                <button class="btn" id="simPlay" type="button">Başlat</button>
+                <button class="btn amber" id="simFast" type="button">Hızlandır</button>
+                <button class="btn ghost" id="simReset" type="button">Sıfırla</button>
+              </div>
+              <p style="margin:14px 0 0">Büyüme oranı ne olursa olsun, yeterince uzun süre izlersen dağılım Benford'a yaklaşır. Sayıyı hangi birimle ölçersen ölç (₺, $, km, mil) sonuç değişmez; Benford dağılımı birim değişikliğinden etkilenmeyen tek ilk hane dağılımıdır.</p>
+              <div class="hand" style="margin-top:12px">Sırrı şu: doğa ve ekonomi toplayarak değil, çarparak büyür.</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SLAYT 4 ========== -->
+      <section class="slide" aria-label="Slayt 4: Kendi verin">
+        <div class="slide-inner">
+          <h1>Kendi verini sına</h1>
+          <p class="lead">Denetçiler Benford yasasını muhasebe hilelerini aramak için kullanır. İnsanlar sayı uydururken rakamları "eşit" dağıtma eğilimindedir ve bu doğal dağılıma uymaz. Kendi sayılarını yapıştır ya da bir örnek yükle.</p>
+          <div class="layout">
+            <div>
+              <div class="chart" id="chart4"></div>
+              <div class="legend"><span><i class="lo"></i>Gözlenen</span><span><i class="le"></i>Benford beklentisi</span></div>
+              <div class="when">
+                <div class="yes"><h3>Benford'a uyması beklenir</h3>Birkaç basamağa yayılan, çarparak büyüyen veriler: nüfuslar, faturalar, satış tutarları, hisse hacimleri, nehir uzunlukları.</div>
+                <div class="no"><h3>Uyması beklenmez</h3>Dar aralıktaki ya da atanmış sayılar: boylar, sınav notları, telefon numaraları, posta kodları, "en fazla 999 ₺" gibi sınırlanmış tutarlar.</div>
+              </div>
+            </div>
+            <aside class="panel">
+              <h2>Sayılarını yapıştır</h2>
+              <p class="sub">Her biçim olur: satır satır, virgülle ya da Excel'den kopyala. Yalnızca her sayının ilk anlamlı rakamı okunur.</p>
+              <textarea id="ta" placeholder="Örnek:&#10;1.284,50&#10;342,00&#10;17.900&#10;…" aria-label="Analiz edilecek sayılar"></textarea>
+              <div class="actions">
+                <button class="btn ghost" id="exReal" type="button">Örnek: gerçekçi faturalar</button>
+                <button class="btn ghost" id="exFake" type="button">Örnek: uydurulmuş faturalar</button>
+                <button class="btn ghost" id="exClear" type="button">Temizle</button>
+              </div>
+              <p class="sub" style="margin-top:8px">Örnekler bilgisayarda simüle edilmiş 1.000'er tutardır.</p>
+              <div class="score"><span class="badge none" id="badge4">Veri bekleniyor</span><span class="mad" id="mad4"></span></div>
+              <p class="warn" id="warn4"></p>
+              <p class="sub" style="margin:4px 0 0">Uyum ölçüsü: ortalama mutlak sapma (MAD), Mark Nigrini'nin önerdiği eşiklerle. Uyumsuzluk tek başına hile kanıtı değildir; denetçiye nereye bakması gerektiğini gösterir.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <button class="btn ghost" id="prev" type="button">Önceki</button>
+    <span class="counter" id="counter">1 / 4</span>
+    <button class="btn" id="next" type="button">Sonraki</button>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const pctFmt = x => '%' + (x*100).toLocaleString('tr-TR',{minimumFractionDigits:1,maximumFractionDigits:1});
+  const BENF = [1,2,3,4,5,6,7,8,9].map(d=>Math.log10(1+1/d));
+
+  /* ---------- rakam grafiği ---------- */
+  class DigitChart{
+    constructor(root){
+      this.root = root;
+      root.innerHTML = '<div class="plot"><div class="g"></div><div class="uni"><span>Eşit dağılım %11,1</span></div><div class="b"></div></div>';
+      this.plot = root.querySelector('.plot'); this.g = root.querySelector('.g');
+      this.uni = root.querySelector('.uni'); const b = root.querySelector('.b');
+      this.bars = []; this.exps = [];
+      for(let i=0;i<9;i++){
+        const bar = document.createElement('div'); bar.className='bar';
+        bar.style.left = ((i+0.16)/9*100)+'%'; bar.style.width = (0.68/9*100)+'%';
+        bar.innerHTML = '<span class="val"></span>';
+        b.appendChild(bar); this.bars.push(bar);
+        const e = document.createElement('div'); e.className='exp';
+        e.style.left = ((i+0.1)/9*100)+'%'; e.style.width = (0.8/9*100)+'%';
+        b.appendChild(e); this.exps.push(e);
+        const dg = document.createElement('div'); dg.className='dig';
+        dg.style.left = ((i+0.5)/9*100)+'%';
+        dg.innerHTML = '<b>'+(i+1)+'</b><small>'+pctFmt(BENF[i])+'</small>';
+        b.appendChild(dg);
+      }
+      this.max = null;
+    }
+    set(obs, opt={}){
+      const vals = obs || Array(9).fill(0);
+      const top = Math.max(0.34, ...vals) + 0.04;
+      const step = top <= 0.5 ? 0.1 : 0.2;
+      const max = Math.min(1, Math.ceil(top/step)*step);
+      if(max !== this.max){
+        this.max = max; this.g.innerHTML='';
+        for(let t=0; t<=max+1e-9; t+=step){
+          const d=document.createElement('div'); d.className='gridline';
+          d.style.bottom=(t/max*100)+'%'; d.innerHTML='<span>%'+Math.round(t*100)+'</span>';
+          if(t===0) d.style.borderTopColor='transparent';
+          this.g.appendChild(d);
+        }
+      }
+      this.uni.style.bottom = (1/9/max*100)+'%';
+      this.bars.forEach((bar,i)=>{
+        bar.style.height = (vals[i]/max*100)+'%';
+        bar.className = 'bar' + (opt.cls ? ' '+opt.cls : '');
+        bar.querySelector('.val').textContent = obs ? pctFmt(vals[i]) : '';
+      });
+      this.exps.forEach((e,i)=>{ e.style.bottom = (BENF[i]/max*100)+'%'; });
+    }
+  }
+
+  const firstDigitNum = x => { if(!(x>0) || !isFinite(x)) return 0; return +x.toExponential()[0]; };
+  const distFrom = digits => {
+    const c = Array(9).fill(0); let n=0;
+    digits.forEach(d=>{ if(d>=1&&d<=9){ c[d-1]++; n++; } });
+    return {n, p: n ? c.map(x=>x/n) : null};
+  };
+  const madOf = p => p.reduce((s,x,i)=>s+Math.abs(x-BENF[i]),0)/9;
+  function verdict(m){
+    if(m<=0.006) return ['Yakın uyum','good'];
+    if(m<=0.012) return ['Kabul edilebilir uyum','ok'];
+    if(m<=0.015) return ['Sınırda uyum','warn'];
+    return ['Uyumsuz','bad'];
+  }
+  function showScore(badgeEl, madEl, p){
+    if(!p){ badgeEl.className='badge none'; badgeEl.textContent='Veri bekleniyor'; madEl.innerHTML=''; return; }
+    const m = madOf(p), [t,c] = verdict(m);
+    badgeEl.className='badge '+c; badgeEl.textContent=t;
+    madEl.innerHTML = 'MAD = <b>'+m.toLocaleString('tr-TR',{minimumFractionDigits:4,maximumFractionDigits:4})+'</b>';
+  }
+
+  /* ---------- SLAYT 1 ---------- */
+  const c1 = new DigitChart($('chart1'));
+  const ch1 = $('chart1');
+  let revealed = false;
+  function render1(){
+    if(revealed){
+      ch1.classList.remove('hide-benf');
+      c1.set(BENF, {cls:'benf'});
+    } else {
+      ch1.classList.add('hide-benf');
+      c1.set(Array(9).fill(1/9), {cls:'naive'});
+    }
+    $('reveal').classList.toggle('show', revealed);
+    $('revealBtn').disabled = revealed;
+  }
+  $('guess').addEventListener('input', e=>{ $('gv').textContent = '%'+e.target.value; });
+  $('revealBtn').addEventListener('click', ()=>{
+    revealed = true;
+    const g = +$('guess').value;
+    let msg = 'Senin tahminin <b>%'+g+'</b>. Gerçek oran <b style="color:var(--red)">%30,1</b>: eşit dağılımda beklenen %11,1’in neredeyse üç katı.';
+    if(Math.abs(g-30) <= 3) msg = 'Tahminin <b>%'+g+'</b>, harika! Gerçek oran <b style="color:var(--red)">%30,1</b>.';
+    $('guessRes').innerHTML = msg;
+    render1();
+  });
+  $('resetBtn').addEventListener('click', ()=>{ revealed=false; $('guess').value=11; $('gv').textContent='%11'; render1(); });
+
+  /* ---------- SLAYT 2: veri setleri ---------- */
+  const MAXN = 1000;
+  function bigSeqDigits(gen){ const out=[]; for(const v of gen) { out.push(+v.toString()[0]); if(out.length>=MAXN) break; } return out; }
+  const cache = {};
+  function seqPow2(){ return cache.p2 ||= bigSeqDigits((function*(){ let v=2n; while(true){ yield v; v*=2n; } })()); }
+  function seqFib(){ return cache.fib ||= bigSeqDigits((function*(){ let a=1n,b=1n; while(true){ yield a; [a,b]=[b,a+b]; } })()); }
+  function seqFact(){ return cache.fact ||= bigSeqDigits((function*(){ let v=1n,k=1n; while(true){ v*=k; yield v; k++; } })()); }
+  function seqInterest(){
+    if(cache.int) return cache.int;
+    const out=[], g=Math.log10(1.07);
+    for(let i=0;i<MAXN;i++){ const L = 3 + i*g; out.push(Math.min(9, Math.floor(Math.pow(10, L-Math.floor(L))+1e-9))); }
+    return cache.int = out;
+  }
+  const gauss = () => { let u=0,v=0; while(!u) u=Math.random(); while(!v) v=Math.random(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); };
+  let randomPool = {};
+  function randDigits(key, fn){ if(!randomPool[key]){ const a=[]; for(let i=0;i<MAXN;i++) a.push(firstDigitNum(fn())); randomPool[key]=a; } return randomPool[key]; }
+
+  const DSETS = [
+    {key:'pow2', name:"2'nin kuvvetleri", get:seqPow2, rnd:false,
+     desc:"2, 4, 8, 16, 32, 64, 128, 256… Her adımda ikiye katlanan sayılar. Sayı adedi arttıkça Benford'a çok yakın bir dağılım çıkar."},
+    {key:'fib', name:'Fibonacci', get:seqFib, rnd:false,
+     desc:"1, 1, 2, 3, 5, 8, 13, 21… Her sayı önceki ikisinin toplamı; dizi her adımda yaklaşık %61,8 büyür. Benford'a neredeyse kusursuz uyar."},
+    {key:'fact', name:'Faktöriyeller', get:seqFact, rnd:false,
+     desc:"1, 2, 6, 24, 120, 720… Çok hızlı büyüyen bir dizi. Büyüme hızı sürekli değişse de dağılım yine Benford'a yaklaşır."},
+    {key:'int', name:'%7 faizli birikim', get:seqInterest, rnd:false,
+     desc:"1.000 ₺, yıllık %7 bileşik faizle. Her yıl sonundaki bakiyenin ilk hanesi. Az yıl seçersen sapma büyür; yıllar arttıkça uyum güçlenir."},
+    {key:'prod', name:'Rastgele çarpımlar', rnd:true,
+     get:()=>randDigits('prod',()=>{ let p=1; for(let k=0;k<6;k++) p*=1+9*Math.random(); return p; }),
+     desc:"1 ile 10 arasında rastgele seçilen 6 sayının çarpımı. Çarpma, sayıları birçok basamağa yayar; Benford'un ortaya çıkma sebebi tam olarak budur."},
+    {key:'unif', name:'Eşit rastgele 1–999', rnd:true, bad:true,
+     get:()=>randDigits('unif',()=>1+Math.floor(Math.random()*999)),
+     desc:"1 ile 999 arasından eşit olasılıkla seçilmiş tam sayılar. Üst sınır sabit olduğu için her ilk hane yaklaşık %11 çıkar: Benford'a uymaz."},
+    {key:'boy', name:'Öğrenci boyları', rnd:true, bad:true,
+     get:()=>randDigits('boy',()=>170+8*gauss()),
+     desc:"Ortalama 170 cm, standart sapma 8 cm olan boylar. Veri tek bir basamakta sıkışmış, neredeyse hepsi 1 ile başlıyor. Benford için veri birkaç basamağa yayılmalı."}
+  ];
+  let cur2 = DSETS[0];
+  const c2 = new DigitChart($('chart2'));
+  DSETS.forEach(ds=>{
+    const b=document.createElement('button'); b.type='button'; b.textContent=ds.name;
+    b.setAttribute('aria-pressed', String(ds===cur2));
+    b.addEventListener('click', ()=>{ cur2=ds; document.querySelectorAll('#dsets button').forEach(x=>x.setAttribute('aria-pressed',String(x===b))); render2(); });
+    $('dsets').appendChild(b);
+  });
+  function render2(){
+    const n = +$('nRange').value; $('nVal').textContent = n.toLocaleString('tr-TR');
+    const digits = cur2.get().slice(0,n);
+    const {p} = distFrom(digits);
+    c2.set(p);
+    $('desc').textContent = cur2.desc;
+    $('regen').disabled = !cur2.rnd;
+    showScore($('badge2'), $('mad2'), p);
+  }
+  $('nRange').addEventListener('input', render2);
+  $('regen').addEventListener('click', ()=>{ delete randomPool[cur2.key]; render2(); });
+
+  /* ---------- SLAYT 3: büyüme simülasyonu ---------- */
+  const c3 = new DigitChart($('chart3'));
+  const ruler = $('ruler'), marker = $('marker');
+  const segs = [];
+  for(let d=1; d<=9; d++){
+    const s=document.createElement('div'); s.className='seg';
+    s.style.width = (BENF[d-1]*100)+'%';
+    s.innerHTML = d + '<small>'+pctFmt(BENF[d-1])+'</small>';
+    ruler.insertBefore(s, marker); segs.push(s);
+  }
+  let r = 0.10, logV = 3, steps = 0, tally = Array(9).fill(0), timer = null, fast = false;
+  function fdFromLog(L){ return Math.min(9, Math.max(1, Math.floor(Math.pow(10, L-Math.floor(L))+1e-9))); }
+  function valueHTML(L){
+    const d = fdFromLog(L);
+    if(L < 15){
+      const s = Math.round(Math.pow(10,L)).toLocaleString('tr-TR');
+      return '<span class="fd">'+s[0]+'</span>'+s.slice(1)+' ₺';
+    }
+    const e = Math.floor(L), m = Math.pow(10, L-e).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2});
+    return '<span class="fd">'+m[0]+'</span>'+m.slice(1)+' × 10<sup>'+e+'</sup> ₺';
+  }
+  function render3(animate){
+    const frac = logV - Math.floor(logV);
+    marker.classList.toggle('anim', !!animate);
+    marker.style.left = (frac*100)+'%';
+    const d = fdFromLog(logV);
+    segs.forEach((s,i)=>s.classList.toggle('on', i===d-1));
+    $('simVal').innerHTML = valueHTML(logV);
+    $('simSteps').textContent = steps.toLocaleString('tr-TR');
+    $('simDec').textContent = (Math.floor(logV)-3).toLocaleString('tr-TR');
+    c3.set(steps ? tally.map(x=>x/steps) : null);
+  }
+  function tick(){
+    const reps = fast ? 25 : 1;
+    let wrapped = false;
+    for(let k=0;k<reps;k++){
+      tally[fdFromLog(logV)-1]++; steps++;
+      const before = Math.floor(logV);
+      logV += Math.log10(1+r);
+      if(Math.floor(logV) !== before) wrapped = true;
+    }
+    render3(!fast && !wrapped);
+  }
+  function stop(){ clearInterval(timer); timer=null; $('simPlay').textContent='Başlat'; }
+  function start(){ if(timer) return; timer=setInterval(tick, 130); $('simPlay').textContent='Durdur'; }
+  function reset3(){ stop(); logV=3; steps=0; tally=Array(9).fill(0); render3(false); }
+  $('simPlay').addEventListener('click', ()=> timer ? stop() : start());
+  $('simFast').addEventListener('click', ()=>{ fast=!fast; $('simFast').textContent = fast ? 'Yavaşlat' : 'Hızlandır'; start(); });
+  $('simReset').addEventListener('click', reset3);
+  $('rRange').addEventListener('input', e=>{ r = +e.target.value/100; $('rVal').textContent='%'+e.target.value; const was=!!timer; reset3(); if(was) start(); });
+
+  /* ---------- SLAYT 4: kendi verin ---------- */
+  const c4 = new DigitChart($('chart4'));
+  function parseDigits(text){
+    const toks = text.match(/\d[\d.,]*/g) || [];
+    const out = [];
+    toks.forEach(t=>{ const s = t.replace(/[.,]/g,'').replace(/^0+/,''); if(s) out.push(+s[0]); });
+    return out;
+  }
+  let deb;
+  function render4(){
+    const {n,p} = distFrom(parseDigits($('ta').value));
+    c4.set(p);
+    showScore($('badge4'), $('mad4'), p);
+    if(p) $('mad4').innerHTML += ' &nbsp; n = <b>'+n.toLocaleString('tr-TR')+'</b>';
+    $('warn4').textContent = (n>0 && n<300) ? 'Az veri var. Güvenilir bir karşılaştırma için en az birkaç yüz sayı önerilir.' : '';
+  }
+  $('ta').addEventListener('input', ()=>{ clearTimeout(deb); deb=setTimeout(render4, 200); });
+  const money = x => x.toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  $('exReal').addEventListener('click', ()=>{
+    const a=[]; for(let i=0;i<1000;i++) a.push(money(Math.exp(Math.log(800)+2*gauss())));
+    $('ta').value = a.join('\n'); render4();
+  });
+  $('exFake').addEventListener('click', ()=>{
+    const a=[]; for(let i=0;i<1000;i++){ const d=1+Math.floor(Math.random()*9), k=2+Math.floor(Math.random()*2); a.push(money((d+Math.random())*Math.pow(10,k))); }
+    $('ta').value = a.join('\n'); render4();
+  });
+  $('exClear').addEventListener('click', ()=>{ $('ta').value=''; render4(); });
+
+  /* ---------- gezinme ---------- */
+  const slidesEl = $('slides'), slideEls=[...slidesEl.children];
+  let cur = 0;
+  function go(i){
+    cur = Math.max(0, Math.min(slideEls.length-1, i));
+    slidesEl.style.transform = 'translateX('+(-cur*100)+'%)';
+    slideEls.forEach((s,k)=>{ if(k===cur) s.removeAttribute('inert'); else s.setAttribute('inert',''); });
+    document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-current', String(+b.dataset.go===cur)));
+    $('counter').textContent = (cur+1)+' / '+slideEls.length;
+    $('prev').disabled = cur===0; $('next').disabled = cur===slideEls.length-1;
+    if(cur!==2) stop();
+  }
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click', ()=>go(+b.dataset.go)));
+  $('prev').addEventListener('click', ()=>go(cur-1));
+  $('next').addEventListener('click', ()=>go(cur+1));
+  document.addEventListener('keydown', e=>{
+    if(e.target.matches('input, textarea')) return;
+    if(e.key==='ArrowRight'||e.key==='PageDown') go(cur+1);
+    if(e.key==='ArrowLeft'||e.key==='PageUp') go(cur-1);
+  });
+
+  render1(); render2(); render3(false); render4(); go(0);
+})();
+</script>
+</body>
+</html>
