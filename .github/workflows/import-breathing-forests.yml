@@ -1,0 +1,39 @@
+name: Import Pixabay breathing backgrounds
+
+on:
+  push:
+    paths:
+      - '.github/workflows/import-breathing-forests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Download Pixabay photographs into website assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/breathing
+          curl --fail --location --retry 3 --retry-delay 2 --silent --show-error             'https://cdn.pixabay.com/photo/2018/06/02/17/50/forest-3448818_1280.jpg'             --output assets/breathing/sunlit-forest.jpg
+          curl --fail --location --retry 3 --retry-delay 2 --silent --show-error             'https://cdn.pixabay.com/photo/2021/05/09/12/32/forest-6240706_1280.jpg'             --output assets/breathing/pine-forest.jpg
+          curl --fail --location --retry 3 --retry-delay 2 --silent --show-error             'https://cdn.pixabay.com/photo/2017/11/12/13/37/forest-2942477_1280.jpg'             --output assets/breathing/forest-path.jpg
+          for img in assets/breathing/*.jpg; do
+            test "$(file --brief --mime-type "$img")" = "image/jpeg"
+            test "$(stat --printf='%s' "$img")" -gt 20000
+          done
+      - name: Commit self-hosted images
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/breathing/*.jpg
+          if ! git diff --staged --quiet; then
+            git commit -m "Add locally hosted Pixabay forest photos for breathing exercise"
+            git push
+          fi
