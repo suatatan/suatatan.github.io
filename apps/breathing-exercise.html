@@ -14,7 +14,7 @@
       min-height: 100vh;
       margin: 0;
       background-color: #102a24;
-      background-image: linear-gradient(rgba(5, 22, 20, 0.36), rgba(5, 22, 20, 0.50)), url('https://cdn.pixabay.com/photo/2018/06/02/17/50/forest-3448818_1280.jpg');
+      background-image: linear-gradient(rgba(5, 22, 20, 0.36), rgba(5, 22, 20, 0.50)), url('/assets/breathing/sunlit-forest.jpg');
       background-size: cover;
       background-position: center;
       font-family: 'Segoe UI', Arial, sans-serif;
@@ -161,15 +161,15 @@
     <h2 id="background-picker-title">Arka plan seçin</h2>
     <div class="background-options" role="group" aria-label="Orman fotoğrafları" id="background-options">
       <button type="button" class="background-option" data-background="0" aria-pressed="true">
-        <img src="https://cdn.pixabay.com/photo/2018/06/02/17/50/forest-3448818_1280.jpg" alt="" loading="lazy">
+        <img src="/assets/breathing/sunlit-forest.jpg" alt="" loading="lazy">
         <span id="background-name-0">Gün ışığı</span>
       </button>
       <button type="button" class="background-option" data-background="1" aria-pressed="false">
-        <img src="https://cdn.pixabay.com/photo/2021/05/09/12/32/forest-6240706_1280.jpg" alt="" loading="lazy">
+        <img src="/assets/breathing/pine-forest.jpg" alt="" loading="lazy">
         <span id="background-name-1">Çam ormanı</span>
       </button>
       <button type="button" class="background-option" data-background="2" aria-pressed="false">
-        <img src="https://cdn.pixabay.com/photo/2017/11/12/13/37/forest-2942477_1280.jpg" alt="" loading="lazy">
+        <img src="/assets/breathing/forest-path.jpg" alt="" loading="lazy">
         <span id="background-name-2">Orman yolu</span>
       </button>
     </div>
@@ -262,17 +262,17 @@
 
     const presetBackgrounds = [
       {
-        url: 'https://cdn.pixabay.com/photo/2018/06/02/17/50/forest-3448818_1280.jpg',
+        url: '/assets/breathing/sunlit-forest.jpg',
         source: 'https://pixabay.com/photos/forest-sunbeams-sunlight-trees-3448818/',
         credit: 'Pixabay · jplenio'
       },
       {
-        url: 'https://cdn.pixabay.com/photo/2021/05/09/12/32/forest-6240706_1280.jpg',
+        url: '/assets/breathing/pine-forest.jpg',
         source: 'https://pixabay.com/photos/forest-trees-landscape-sunlight-6240706/',
         credit: 'Pixabay · Sunriseforever'
       },
       {
-        url: 'https://cdn.pixabay.com/photo/2017/11/12/13/37/forest-2942477_1280.jpg',
+        url: '/assets/breathing/forest-path.jpg',
         source: 'https://pixabay.com/photos/forest-trail-sunbeams-forest-path-2942477/',
         credit: 'Pixabay · Seaq68'
       }
