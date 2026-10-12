@@ -13,11 +13,13 @@
       align-items: center;
       min-height: 100vh;
       margin: 0;
-      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-color: #102a24;
+      background-image: linear-gradient(rgba(5, 22, 20, 0.36), rgba(5, 22, 20, 0.50)), url('https://cdn.pixabay.com/photo/2018/06/02/17/50/forest-3448818_1280.jpg');
       background-size: cover;
       background-position: center;
       font-family: 'Segoe UI', Arial, sans-serif;
       padding: 20px;
+      box-sizing: border-box;
     }
     
     .header {
@@ -92,12 +94,59 @@
       line-height: 1.6;
     }
     
+    /* Background picker: photo details stay sharp; only the controls are translucent. */
+    .background-picker {
+      width: min(100%, 580px);
+      box-sizing: border-box;
+      margin: 0 auto 20px;
+      padding: 16px;
+      color: #fff;
+      background: rgba(5, 24, 22, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+    .background-picker h2 { font-size: 1.1rem; margin: 0 0 12px; }
+    .background-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .background-option {
+      display: block;
+      min-width: 0;
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid transparent;
+      border-radius: 12px;
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+    }
+    .background-option:hover { background: rgba(255, 255, 255, 0.2); }
+    .background-option[aria-pressed="true"] { border-color: #b5f3c2; background: rgba(181, 243, 194, 0.20); }
+    .background-option img { display: block; width: 100%; height: 76px; object-fit: cover; border-radius: 7px; }
+    .background-option span { display: block; margin-top: 5px; font-size: .88rem; }
+    .background-picker :focus-visible { outline: 3px solid #f8e5a4; outline-offset: 3px; }
+    .upload-row { margin-top: 12px; }
+    .upload-row label { display: block; margin-bottom: 6px; font-size: .95rem; }
+    .upload-row input { display: block; max-width: 100%; margin: auto; font: inherit; font-size: .85rem; }
+    .upload-row input::file-selector-button {
+      margin-right: 9px; padding: 7px 12px; color: #133126; background: #e8f5e9;
+      border: 0; border-radius: 7px; font: inherit; cursor: pointer;
+    }
+    .background-hint, .background-source, .background-status { margin: 8px 0 0; font-size: .8rem; line-height: 1.45; }
+    .background-source a { color: #e0f7e2; text-underline-offset: 3px; }
+    .background-status:empty { display: none; }
+    #canvas-container { box-sizing: border-box; max-width: 100%; }
+    #canvas-container canvas { display: block; max-width: 100% !important; height: auto !important; }
     @media (max-width: 768px) {
       .header h1 { font-size: 2em; }
       .header p { font-size: 1em; }
       #instructions { font-size: 24px; }
       #timer { font-size: 20px; }
-      #canvas-container { padding: 20px; }
+      #canvas-container { padding: 15px; }
+      .background-picker { padding: 12px; }
+      .background-options { gap: 6px; }
+      .background-option img { height: 60px; }
+      .background-option span { font-size: .77rem; }
     }
   </style>
 </head>
@@ -107,6 +156,33 @@
     <p id="app-subtitle">Derin nefes alarak rahatlamaya odaklanın</p>
     <a href="/" class="back-link" id="back-link">← Ana Sayfaya Dön</a>
   </div>
+
+  <section class="background-picker" aria-labelledby="background-picker-title">
+    <h2 id="background-picker-title">Arka plan seçin</h2>
+    <div class="background-options" role="group" aria-label="Orman fotoğrafları" id="background-options">
+      <button type="button" class="background-option" data-background="0" aria-pressed="true">
+        <img src="https://cdn.pixabay.com/photo/2018/06/02/17/50/forest-3448818_1280.jpg" alt="" loading="lazy">
+        <span id="background-name-0">Gün ışığı</span>
+      </button>
+      <button type="button" class="background-option" data-background="1" aria-pressed="false">
+        <img src="https://cdn.pixabay.com/photo/2021/05/09/12/32/forest-6240706_1280.jpg" alt="" loading="lazy">
+        <span id="background-name-1">Çam ormanı</span>
+      </button>
+      <button type="button" class="background-option" data-background="2" aria-pressed="false">
+        <img src="https://cdn.pixabay.com/photo/2017/11/12/13/37/forest-2942477_1280.jpg" alt="" loading="lazy">
+        <span id="background-name-2">Orman yolu</span>
+      </button>
+    </div>
+    <div class="upload-row">
+      <label for="background-upload" id="background-upload-label">Ya da kendi arka plan fotoğrafınızı seçin</label>
+      <input id="background-upload" type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/gif">
+    </div>
+    <p class="background-hint" id="background-hint">Kendi görseliniz yalnızca bu oturumda, cihazınızda kullanılır.</p>
+    <p class="background-source" id="background-source">
+      <a id="background-credit" target="_blank" rel="noopener noreferrer" href="https://pixabay.com/photos/forest-sunbeams-sunlight-trees-3448818/">Pixabay · jplenio</a>
+    </p>
+    <p class="background-status" id="background-status" role="status" aria-live="polite"></p>
+  </section>
 
   <div id="canvas-container">
     <div id="instructions">Nefes Alın</div>
@@ -119,7 +195,7 @@
     <div style="margin-top: 25px; padding: 20px; background: rgba(255, 255, 255, 0.15); border-radius: 10px; backdrop-filter: blur(5px);">
       <h3 style="margin: 0 0 10px 0; color: #fff;" id="more-info-title">📚 Daha Fazla Bilgi</h3>
       <p style="margin: 0 0 15px 0; color: #fff;" id="more-info-text">Nefes egzersizlerinin bilimsel faydaları ve 4-4-4-4 tekniğinin detayları hakkında:</p>
-      <a href="/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html" 
+      <a href="/sa%C4%9Fl%C4%B1k/wellness/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html" 
          style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: bold; transition: all 0.3s;"
          id="blog-link">
         🔬 Nefes Egzersizinin Bilimi
@@ -145,7 +221,16 @@
         moreInfoTitle: '📚 Daha Fazla Bilgi',
         moreInfoText: 'Nefes egzersizlerinin bilimsel faydaları ve 4-4-4-4 tekniğinin detayları hakkında:',
         moreInfoLink: '🔬 Nefes Egzersizinin Bilimi',
-        blogUrl: '/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html'
+        blogUrl: '/sa%C4%9Fl%C4%B1k/wellness/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html',
+        backgroundTitle: 'Arka plan seçin',
+        backgroundGroup: 'Orman fotoğrafları',
+        backgrounds: ['Gün ışığı', 'Çam ormanı', 'Orman yolu'],
+        upload: 'Ya da kendi arka plan fotoğrafınızı seçin',
+        hint: 'Kendi görseliniz yalnızca bu oturumda, cihazınızda kullanılır.',
+        picked: 'Arka plan değiştirildi:',
+        uploaded: 'Kendi fotoğrafınız kullanılıyor.',
+        invalid: 'Lütfen JPG, PNG, WebP, AVIF veya GIF dosyası seçin (en fazla 15 MB).',
+        loadError: 'Görsel yüklenemedi. Başka bir fotoğraf deneyin.'
       },
       en: {
         title: '🫁 Breathing Exercise',
@@ -159,11 +244,125 @@
         moreInfoTitle: '📚 Learn More',
         moreInfoText: 'About the scientific benefits of breathing exercises and details of the 4-4-4-4 technique:',
         moreInfoLink: '🔬 The Science of Breathing',
-        blogUrl: '/2025/07/17/the-power-of-breathing-exercises-4-4-4-4-technique.html'
+        blogUrl: '/health/wellness/2025/07/17/the-power-of-breathing-exercises-4-4-4-4-technique.html',
+        backgroundTitle: 'Choose a background',
+        backgroundGroup: 'Forest photos',
+        backgrounds: ['Sunlit forest', 'Pine forest', 'Forest path'],
+        upload: 'Or use your own background photo',
+        hint: 'Your photo stays on your device and is used only for this session.',
+        picked: 'Background changed to:',
+        uploaded: 'Your own photo is now the background.',
+        invalid: 'Please choose a JPG, PNG, WebP, AVIF or GIF file (maximum 15 MB).',
+        loadError: 'Could not load this image. Please try another photo.'
       }
     };
     
-    const currentTexts = texts[lang];
+    const currentTexts = texts[lang] || texts.tr;
+    document.documentElement.lang = texts[lang] ? lang : 'tr';
+
+    const presetBackgrounds = [
+      {
+        url: 'https://cdn.pixabay.com/photo/2018/06/02/17/50/forest-3448818_1280.jpg',
+        source: 'https://pixabay.com/photos/forest-sunbeams-sunlight-trees-3448818/',
+        credit: 'Pixabay · jplenio'
+      },
+      {
+        url: 'https://cdn.pixabay.com/photo/2021/05/09/12/32/forest-6240706_1280.jpg',
+        source: 'https://pixabay.com/photos/forest-trees-landscape-sunlight-6240706/',
+        credit: 'Pixabay · Sunriseforever'
+      },
+      {
+        url: 'https://cdn.pixabay.com/photo/2017/11/12/13/37/forest-2942477_1280.jpg',
+        source: 'https://pixabay.com/photos/forest-trail-sunbeams-forest-path-2942477/',
+        credit: 'Pixabay · Seaq68'
+      }
+    ];
+    const backgroundButtons = Array.from(document.querySelectorAll('[data-background]'));
+    const backgroundStatus = document.getElementById('background-status');
+    const backgroundCredit = document.getElementById('background-credit');
+    const backgroundSource = document.getElementById('background-source');
+    const backgroundUpload = document.getElementById('background-upload');
+    const backgroundStorageKey = 'breathing-exercise-background-v1';
+    let customBackgroundUrl = null;
+
+    document.getElementById('background-picker-title').textContent = currentTexts.backgroundTitle;
+    document.getElementById('background-options').setAttribute('aria-label', currentTexts.backgroundGroup);
+    document.getElementById('background-upload-label').textContent = currentTexts.upload;
+    backgroundUpload.setAttribute('aria-label', currentTexts.upload);
+    document.getElementById('background-hint').textContent = currentTexts.hint;
+    currentTexts.backgrounds.forEach((name, index) => {
+      document.getElementById('background-name-' + index).textContent = name;
+    });
+
+    function showBackground(url) {
+      document.body.style.backgroundImage =
+        'linear-gradient(rgba(5, 22, 20, .36), rgba(5, 22, 20, .50)), url("' + url + '")';
+    }
+
+    function setPreset(index, announce = false) {
+      const preset = presetBackgrounds[index];
+      if (!preset) return;
+      const preview = new Image();
+      preview.onload = () => {
+        showBackground(preset.url);
+        if (customBackgroundUrl) {
+          URL.revokeObjectURL(customBackgroundUrl);
+          customBackgroundUrl = null;
+        }
+        backgroundButtons.forEach((button, buttonIndex) => {
+          button.setAttribute('aria-pressed', String(buttonIndex === index));
+        });
+        backgroundSource.hidden = false;
+        backgroundCredit.href = preset.source;
+        backgroundCredit.textContent = preset.credit;
+        backgroundUpload.value = '';
+        backgroundStatus.textContent = announce ? currentTexts.picked + ' ' + currentTexts.backgrounds[index] : '';
+        try { localStorage.setItem(backgroundStorageKey, String(index)); } catch (_) { /* private mode */ }
+      };
+      preview.onerror = () => { backgroundStatus.textContent = currentTexts.loadError; };
+      preview.src = preset.url;
+    }
+
+    backgroundButtons.forEach((button) => {
+      button.addEventListener('click', () => setPreset(Number(button.dataset.background), true));
+    });
+
+    backgroundUpload.addEventListener('change', () => {
+      const file = backgroundUpload.files && backgroundUpload.files[0];
+      if (!file) return;
+      if (!/^image\/(jpeg|png|webp|avif|gif)$/.test(file.type) || file.size > 15 * 1024 * 1024) {
+        backgroundStatus.textContent = currentTexts.invalid;
+        backgroundUpload.value = '';
+        return;
+      }
+      const tempUrl = URL.createObjectURL(file);
+      const preview = new Image();
+      preview.onload = () => {
+        showBackground(tempUrl);
+        if (customBackgroundUrl) URL.revokeObjectURL(customBackgroundUrl);
+        customBackgroundUrl = tempUrl;
+        backgroundButtons.forEach(button => button.setAttribute('aria-pressed', 'false'));
+        backgroundSource.hidden = true;
+        backgroundStatus.textContent = currentTexts.uploaded;
+        try { localStorage.removeItem(backgroundStorageKey); } catch (_) { /* private mode */ }
+      };
+      preview.onerror = () => {
+        URL.revokeObjectURL(tempUrl);
+        backgroundUpload.value = '';
+        backgroundStatus.textContent = currentTexts.loadError;
+      };
+      preview.src = tempUrl;
+    });
+
+    let savedBackground = 0;
+    try {
+      const stored = Number(localStorage.getItem(backgroundStorageKey));
+      if (Number.isInteger(stored) && stored >= 0 && stored < presetBackgrounds.length) {
+        savedBackground = stored;
+      }
+    } catch (_) { /* localStorage unavailable */ }
+    setPreset(savedBackground);
+
 
     let radius = 50;
     let growing = true;
@@ -181,6 +380,7 @@
       document.getElementById('app-title').innerText = currentTexts.title;
       document.getElementById('app-subtitle').innerText = currentTexts.subtitle;
       document.getElementById('back-link').innerText = currentTexts.backLink;
+      document.getElementById('back-link').href = lang === 'en' ? '/index-en.html' : '/';
       document.getElementById('description-text').innerText = currentTexts.description;
       document.getElementById('more-info-title').innerText = currentTexts.moreInfoTitle;
       document.getElementById('more-info-text').innerText = currentTexts.moreInfoText;
