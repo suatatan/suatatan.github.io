@@ -96,9 +96,16 @@
     
     /* Background picker: photo details stay sharp; only the controls are translucent. */
     .background-picker {
-      width: min(100%, 580px);
+      position: fixed;
+      right: 20px;
+      bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+      z-index: 1000;
+      width: min(420px, calc(100vw - 32px));
+      max-height: min(72vh, 540px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
       box-sizing: border-box;
-      margin: 0 auto 20px;
+      margin: 0;
       padding: 16px;
       color: #fff;
       background: rgba(5, 24, 22, 0.72);
@@ -107,6 +114,30 @@
       text-align: center;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
+    .background-picker[hidden] { display: none; }
+    .settings-toggle {
+      position: fixed;
+      right: 20px;
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      z-index: 1001;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, .45);
+      border-radius: 999px;
+      background: rgba(5, 24, 22, .76);
+      color: #fff;
+      font: 600 .93rem 'Segoe UI', Arial, sans-serif;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .25);
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+    .settings-toggle:hover, .settings-toggle[aria-expanded="true"] {
+      background: rgba(5, 34, 28, .96);
+    }
+    .settings-toggle:focus-visible { outline: 3px solid #f8e5a4; outline-offset: 3px; }
+    .settings-icon { font-size: 1.2rem; line-height: 1; }
     .background-picker h2 { font-size: 1.1rem; margin: 0 0 12px; }
     .background-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
     .background-option {
@@ -143,7 +174,13 @@
       #instructions { font-size: 24px; }
       #timer { font-size: 20px; }
       #canvas-container { padding: 15px; }
-      .background-picker { padding: 12px; }
+      .background-picker {
+        right: 12px;
+        bottom: calc(67px + env(safe-area-inset-bottom, 0px));
+        max-height: min(70vh, 520px);
+        padding: 12px;
+      }
+      .settings-toggle { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
       .background-options { gap: 6px; }
       .background-option img { height: 60px; }
       .background-option span { font-size: .77rem; }
@@ -157,7 +194,13 @@
     <a href="/" class="back-link" id="back-link">← Ana Sayfaya Dön</a>
   </div>
 
-  <section class="background-picker" aria-labelledby="background-picker-title">
+  <button type="button" id="background-settings-toggle" class="settings-toggle"
+          aria-controls="background-settings" aria-expanded="false" aria-label="Arka plan ayarlarını aç">
+    <span class="settings-icon" aria-hidden="true">⚙</span>
+    <span id="background-settings-label">Arka plan</span>
+  </button>
+
+  <section id="background-settings" class="background-picker" aria-labelledby="background-picker-title" hidden>
     <h2 id="background-picker-title">Arka plan seçin</h2>
     <div class="background-options" role="group" aria-label="Orman fotoğrafları" id="background-options">
       <button type="button" class="background-option" data-background="0" aria-pressed="true">
@@ -223,6 +266,9 @@
         moreInfoLink: '🔬 Nefes Egzersizinin Bilimi',
         blogUrl: '/sa%C4%9Fl%C4%B1k/wellness/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html',
         backgroundTitle: 'Arka plan seçin',
+        settingsLabel: 'Arka plan',
+        settingsOpenLabel: 'Arka plan ayarlarını aç',
+        settingsCloseLabel: 'Arka plan ayarlarını kapat',
         backgroundGroup: 'Orman fotoğrafları',
         backgrounds: ['Gün ışığı', 'Çam ormanı', 'Orman yolu'],
         upload: 'Ya da kendi arka plan fotoğrafınızı seçin',
@@ -246,6 +292,9 @@
         moreInfoLink: '🔬 The Science of Breathing',
         blogUrl: '/health/wellness/2025/07/17/the-power-of-breathing-exercises-4-4-4-4-technique.html',
         backgroundTitle: 'Choose a background',
+        settingsLabel: 'Background',
+        settingsOpenLabel: 'Open background settings',
+        settingsCloseLabel: 'Close background settings',
         backgroundGroup: 'Forest photos',
         backgrounds: ['Sunlit forest', 'Pine forest', 'Forest path'],
         upload: 'Or use your own background photo',
@@ -277,6 +326,8 @@
         credit: 'Pixabay · Seaq68'
       }
     ];
+    const backgroundPicker = document.getElementById('background-settings');
+    const settingsToggle = document.getElementById('background-settings-toggle');
     const backgroundButtons = Array.from(document.querySelectorAll('[data-background]'));
     const backgroundStatus = document.getElementById('background-status');
     const backgroundCredit = document.getElementById('background-credit');
@@ -286,6 +337,28 @@
     let customBackgroundUrl = null;
 
     document.getElementById('background-picker-title').textContent = currentTexts.backgroundTitle;
+    document.getElementById('background-settings-label').textContent = currentTexts.settingsLabel;
+
+    function setSettingsOpen(open, focusToggle = false) {
+      backgroundPicker.hidden = !open;
+      settingsToggle.setAttribute('aria-expanded', String(open));
+      settingsToggle.setAttribute('aria-label', open ? currentTexts.settingsCloseLabel : currentTexts.settingsOpenLabel);
+      if (open) {
+        backgroundButtons[0].focus();
+      } else if (focusToggle) {
+        settingsToggle.focus();
+      }
+    }
+    setSettingsOpen(false);
+    settingsToggle.addEventListener('click', () => setSettingsOpen(backgroundPicker.hidden));
+    document.addEventListener('pointerdown', event => {
+      if (!backgroundPicker.hidden && !backgroundPicker.contains(event.target) && !settingsToggle.contains(event.target)) {
+        setSettingsOpen(false);
+      }
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !backgroundPicker.hidden) setSettingsOpen(false, true);
+    });
     document.getElementById('background-options').setAttribute('aria-label', currentTexts.backgroundGroup);
     document.getElementById('background-upload-label').textContent = currentTexts.upload;
     backgroundUpload.setAttribute('aria-label', currentTexts.upload);
@@ -317,6 +390,7 @@
         backgroundCredit.textContent = preset.credit;
         backgroundUpload.value = '';
         backgroundStatus.textContent = announce ? currentTexts.picked + ' ' + currentTexts.backgrounds[index] : '';
+        if (announce) setSettingsOpen(false, true);
         try { localStorage.setItem(backgroundStorageKey, String(index)); } catch (_) { /* private mode */ }
       };
       preview.onerror = () => { backgroundStatus.textContent = currentTexts.loadError; };
@@ -344,6 +418,7 @@
         backgroundButtons.forEach(button => button.setAttribute('aria-pressed', 'false'));
         backgroundSource.hidden = true;
         backgroundStatus.textContent = currentTexts.uploaded;
+        setSettingsOpen(false, true);
         try { localStorage.removeItem(backgroundStorageKey); } catch (_) { /* private mode */ }
       };
       preview.onerror = () => {
