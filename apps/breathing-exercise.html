@@ -185,21 +185,60 @@
       .background-option img { height: 60px; }
       .background-option span { font-size: .77rem; }
     }
-  </style>
+  </style><style>
+[hidden]{display:none!important}
+body{justify-content:flex-start;padding:30px 15px 112px;background-attachment:fixed;text-align:center}
+.header{margin:0 0 20px}.header h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:350;letter-spacing:-.04em;margin:0 0 8px}
+.header h1:before{content:"";display:block;width:48px;height:48px;border-radius:50%;margin:0 auto 16px;background:radial-gradient(circle,transparent 22%,#ffffffb0 26%,transparent 30%,transparent 48%,#ffffff80 52%,transparent 55%);border:1px solid #ffffff50}
+.header p{font-size:1rem;font-weight:350;margin:0 0 14px;color:#e0ebe2}.back-link{background:none;text-decoration:underline;text-underline-offset:4px;font-size:.85rem}
+#canvas-container{width:min(492px,100%);padding:24px 20px 26px;border-radius:27px;background:#092c257a;border:1px solid #ffffff33;box-shadow:0 24px 60px #071e1a55}
+#instructions{font-size:1.3rem;font-weight:400;min-height:1.6em;margin:0}#timer{font-size:1.13rem;letter-spacing:.13em;margin:4px 0 0}
+#canvas-stage{position:relative;isolation:isolate;width:min(400px,100%);aspect-ratio:1;display:grid;place-items:center;margin:0 auto 14px}
+#intention-overlay{position:absolute;inset:14px;z-index:0;display:grid;place-items:center;pointer-events:none;color:#fff;opacity:.30;font-size:clamp(1.08rem,4vw,1.7rem);font-weight:350;line-height:1.36;overflow-wrap:anywhere;text-shadow:0 0 25px #ffffff55}
+#canvas-stage canvas{position:relative;z-index:1;display:block;box-shadow:none;width:100%!important;height:auto!important;pointer-events:none}
+.exercise-action{padding:12px 26px;min-width:170px;background:#e2f1dd;color:#143b2e;border-radius:40px;border:1px solid #ffffff66;font-size:1rem;font-weight:650;cursor:pointer}
+.exercise-action:hover{background:white}.exercise-action.secondary{background:#ffffff24;color:white}
+.floating-actions{position:fixed;right:17px;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;z-index:1002;align-items:center}
+.floating-actions .settings-toggle{position:static;white-space:nowrap}
+.stats-toggle{padding:10px 16px;border:1px solid #ffffff70;border-radius:40px;background:#051816c5;color:white;backdrop-filter:blur(8px);font-size:.91rem;font-weight:600;cursor:pointer}
+.stats-toggle:hover{background:#174e3d}
+.background-picker,.stats-panel{position:fixed;bottom:calc(76px + env(safe-area-inset-bottom,0px));right:17px;width:min(430px,calc(100vw - 28px));max-height:min(73vh,620px);overflow:auto;z-index:1001;box-sizing:border-box;border-radius:17px;background:#081e1bed;border:1px solid #ffffff44;padding:17px;color:white;text-align:left;box-shadow:0 12px 35px #0006;backdrop-filter:blur(15px)}
+.background-picker h2,.stats-panel h2{font-size:1.1rem;margin:0 0 14px}
+.intention-settings{border-top:1px solid #ffffff37;margin-top:17px;padding-top:3px}
+.intention-settings h3,.stats-panel h3{font-size:.97rem;font-weight:600;margin:13px 0 9px}
+.intention-settings label,.intention-settings p,.stats-note{font-size:.82rem;line-height:1.45;color:#dae8dc}
+.intention-settings label{display:block;margin-bottom:7px}
+#intentions-input{width:100%;box-sizing:border-box;resize:vertical;min-height:125px;border-radius:10px;padding:11px;color:white;background:#0003;border:1px solid #ffffff55;line-height:1.45;font:inherit;font-size:.86rem}
+.intention-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}
+#intentions-save{padding:9px 16px;background:#dff0d9;color:#164131;border:0;border-radius:9px;font-weight:650;cursor:pointer}
+#intentions-reset{color:#fff;text-decoration:underline;border:0;background:none;cursor:pointer}
+.stats-summary{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.stats-summary>div{padding:14px 8px;border:1px solid #ffffff24;background:#ffffff11;border-radius:13px;text-align:center}
+.stats-summary strong{display:block;font-size:1.45rem;font-variant-numeric:tabular-nums}
+.stats-summary span{display:block;margin-top:5px;font-size:.76rem;color:#d8e9da}
+.stats-day{display:grid;grid-template-columns:55px 1fr 83px;gap:9px;align-items:center;margin:9px 0;font-size:.76rem}
+.stats-track{height:9px;border-radius:20px;background:#ffffff24;overflow:hidden}.stats-bar{height:100%;border-radius:20px;background:#bde6bb}.stats-day>span:last-child{text-align:right}
+.description{font-size:.91rem;margin-top:19px}.description>div{background:#071e1a80!important;border-radius:16px!important}
+button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-offset:3px}
+@media(max-width:520px){body{padding:21px 12px 105px}#canvas-container{padding:16px 12px 22px}#instructions{font-size:1.14rem}
+.floating-actions{right:12px;bottom:12px}.background-picker,.stats-panel{right:12px;bottom:67px;padding:13px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
 </head>
 <body>
   <div class="header">
-    <h1 id="app-title">🫁 Nefes Egzersizi</h1>
+    <h1 id="app-title">Nefese dön.</h1>
     <p id="app-subtitle">Derin nefes alarak rahatlamaya odaklanın</p>
     <a href="/" class="back-link" id="back-link">← Ana Sayfaya Dön</a>
   </div>
 
-  <button type="button" id="background-settings-toggle" class="settings-toggle"
+  <div class="floating-actions"><button type="button" id="background-settings-toggle" class="settings-toggle"
           aria-controls="background-settings" aria-expanded="false" aria-label="Arka plan ayarlarını aç">
     <span class="settings-icon" aria-hidden="true">⚙</span>
     <span id="background-settings-label">Arka plan</span>
   </button>
 
+  <button type="button" id="stats-toggle" class="stats-toggle" aria-controls="stats-panel" aria-expanded="false">İstatistikler</button></div>
   <section id="background-settings" class="background-picker" aria-labelledby="background-picker-title" hidden>
     <h2 id="background-picker-title">Arka plan seçin</h2>
     <div class="background-options" role="group" aria-label="Orman fotoğrafları" id="background-options">
@@ -225,11 +264,31 @@
       <a id="background-credit" target="_blank" rel="noopener noreferrer" href="https://pixabay.com/photos/forest-sunbeams-sunlight-trees-3448818/">Pixabay · jplenio</a>
     </p>
     <p class="background-status" id="background-status" role="status" aria-live="polite"></p>
+    <div class="intention-settings">
+      <h3 id="intentions-heading">Niyetlerim</h3>
+      <label id="intentions-label" for="intentions-input">Her satırda bir niyet (en fazla 10).</label>
+      <textarea id="intentions-input" rows="6" maxlength="1500"></textarea>
+      <p id="intentions-hint"></p>
+      <div class="intention-actions"><button id="intentions-save" type="button">Kaydet</button><button id="intentions-reset" type="button">Varsayılana dön</button></div>
+      <p id="intentions-status" role="status" aria-live="polite"></p>
+    </div>
   </section>
 
+  <section id="stats-panel" class="stats-panel" aria-labelledby="stats-heading" hidden>
+    <h2 id="stats-heading">Nefes istatistiklerim</h2>
+    <div class="stats-summary">
+      <div><strong id="total-duration">0 sn</strong><span id="total-duration-label">Toplam süre</span></div>
+      <div><strong id="total-sessions">0</strong><span id="total-sessions-label">Tamamlanan seans</span></div>
+    </div>
+    <h3 id="daily-heading">Son 7 gün</h3>
+    <div id="daily-chart"></div><p id="stats-note" class="stats-note"></p>
+  </section>
   <div id="canvas-container">
-    <div id="instructions">Nefes Alın</div>
-    <div id="timer">02:00</div>
+    <div id="instructions" aria-live="polite">Hazır olduğunda başla.</div>
+    <div id="timer" role="timer">02:00</div>
+    <div id="canvas-stage"><div id="intention-overlay" aria-hidden="true"></div></div>
+    <button type="button" id="start-button" class="exercise-action">Başlat</button>
+    <button type="button" id="pause-button" class="exercise-action secondary" hidden>Duraklat</button>
   </div>
 
   <div class="description">
@@ -439,107 +498,186 @@
     setPreset(savedBackground);
 
 
-    let radius = 50;
-    let growing = true;
-    let phase = 'inhale';
-    let timer = 0;
-    let inhaleTime = 4 * 60; // 4 seconds at 60 FPS
-    let exhaleTime = 4 * 60; // 4 seconds at 60 FPS
-    let holdTime = 4 * 60;  // 4 seconds at 60 FPS
-    let totalTime = 120 * 60; // 2 minutes at 60 FPS
-    let timeLeft = totalTime;
 
-    function setup() {
-      // Update page content based on language
-      document.title = currentTexts.title.replace('🫁 ', '') + ' | Suat Atan';
-      document.getElementById('app-title').innerText = currentTexts.title;
-      document.getElementById('app-subtitle').innerText = currentTexts.subtitle;
-      document.getElementById('back-link').innerText = currentTexts.backLink;
-      document.getElementById('back-link').href = lang === 'en' ? '/index-en.html' : '/';
-      document.getElementById('description-text').innerText = currentTexts.description;
-      document.getElementById('more-info-title').innerText = currentTexts.moreInfoTitle;
-      document.getElementById('more-info-text').innerText = currentTexts.moreInfoText;
-      document.getElementById('blog-link').innerText = currentTexts.moreInfoLink;
-      document.getElementById('blog-link').href = currentTexts.blogUrl;
-      document.getElementById('instructions').innerText = currentTexts.inhale;
-      
-      let canvas = createCanvas(400, 400);
-      canvas.parent('canvas-container');
-      frameRate(60);
-      textAlign(CENTER, CENTER);
-      textSize(20);
+    // Locale-specific intent and progress interface.
+    const words=(lang==='en'?{
+      title:'Return to your breath.',subtitle:'Two minutes, just for yourself.',
+      ready:'Begin whenever you are ready.',completed:'Well done. You made time for yourself.',
+      start:'Start breathing',pause:'Pause',resume:'Resume',restart:'Start again',
+      settings:'Settings',stats:'Statistics',intentions:'My intentions',label:'One intention per line (up to 10).',
+      hint:'Intentions rotate every 16-second breath cycle behind the circle.',
+      save:'Save',reset:'Restore examples',saved:'Intentions saved.',restored:'Examples restored.',
+      limit:'Maximum 10 intentions.',long:'Keep each intention within 120 characters.',
+      statsTitle:'My breathing statistics',total:'Total time',sessions:'Completed sessions',
+      daily:'Last 7 days',note:'Time, including unfinished exercises, is stored only in this browser.',
+      minute:'min',second:'sec',hour:'hr',
+      defaults:['I am enough.','I focus on what I can control.','I choose to be present.',
+        'One breath, one step.','I release what I cannot change.','I am kind to myself.']
+    }:{
+      title:'Nefese dön.',subtitle:'İki dakika, sadece kendin için.',
+      ready:'Hazır olduğunda başla.',completed:'Harika. Kendine zaman ayırdın.',
+      start:'Başlat',pause:'Duraklat',resume:'Devam et',restart:'Yeniden başlat',
+      settings:'Ayarlar',stats:'İstatistikler',intentions:'Niyetlerim',label:'Her satırda bir niyet (en fazla 10).',
+      hint:'Niyetler her 16 saniyelik nefes döngüsünde balonun arkasında hafifçe görünür.',
+      save:'Kaydet',reset:'Varsayılana dön',saved:'Niyetler kaydedildi.',restored:'Örnek niyetler geri yüklendi.',
+      limit:'En fazla 10 niyet.',long:'Her niyet en fazla 120 karakter olabilir.',
+      statsTitle:'Nefes istatistiklerim',total:'Toplam süre',sessions:'Tamamlanan seans',
+      daily:'Son 7 gün',note:'Yarım kalan egzersizlerdeki süre dahil tüm kayıtlar yalnızca bu tarayıcıdadır.',
+      minute:'dk',second:'sn',hour:'sa',
+      defaults:['Ben olduğum hâlimle yeterliyim.','Kontrol edebildiğim şeylere odaklanıyorum.',
+        'Bu anda kalmayı seçiyorum.','Bir nefes, bir adım.',
+        'Değiştiremeyeceklerimi bırakıyorum.','Kendime nazik davranıyorum.']
+    });
+    currentTexts.title=words.title;
+    currentTexts.subtitle=words.subtitle;
+    currentTexts.completed=words.completed;
+    currentTexts.settingsLabel=words.settings;
+    currentTexts.settingsOpenLabel=words.settings;
+    currentTexts.settingsCloseLabel=words.settings;
+    const write=(id,value)=>{document.getElementById(id).textContent=value;};
+    ['stats-toggle','intentions-heading','intentions-label','intentions-hint','intentions-save','intentions-reset','stats-heading','total-duration-label','total-sessions-label','daily-heading','stats-note']
+      .forEach((id,i)=>write(id,[words.stats,words.intentions,words.label,words.hint,words.save,words.reset,words.statsTitle,words.total,words.sessions,words.daily,words.note][i]));
+    write('background-settings-label',words.settings);
+    const intentionKey='breathing-exercise-intentions-v1-'+(lang==='en'?'en':'tr');
+    const editor=document.getElementById('intentions-input');
+    let intentions=words.defaults.slice();
+    try {const raw=localStorage.getItem(intentionKey);if(raw!==null){
+      const data=JSON.parse(raw);if(Array.isArray(data)) intentions=data.filter(x=>typeof x==='string').slice(0,10).map(x=>x.trim().slice(0,120)).filter(Boolean);
+    }}catch(_){}
+    editor.value=intentions.join('\n');
+    let elapsedMs=0,status='ready',lastFrame=0,untrackedMs=0;
+    function showIntention(){
+      document.getElementById('intention-overlay').textContent=intentions.length?intentions[Math.floor(elapsedMs/16000)%intentions.length]:'';
     }
-
-    function draw() {
-      background(0, 0, 0, 0); // Transparent canvas to show background image
-      
-      // Update and display timer
-      timeLeft--;
-      let minutes = Math.floor(timeLeft / (60 * 60));
-      let seconds = Math.floor((timeLeft / 60) % 60);
-      let timeString = nf(minutes, 2) + ':' + nf(seconds, 2);
-      document.getElementById('timer').innerText = timeString;
-
-      // Stop game when time is up
-      if (timeLeft <= 0) {
-        document.getElementById('instructions').innerText = currentTexts.completed;
-        noLoop();
-        return;
+    document.getElementById('intentions-save').addEventListener('click',()=>{
+      const lines=editor.value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+      if(lines.length>10){write('intentions-status',words.limit);return;}
+      if(lines.some(x=>x.length>120)){write('intentions-status',words.long);return;}
+      intentions=lines;
+      try{localStorage.setItem(intentionKey,JSON.stringify(lines));}catch(_){}
+      showIntention();write('intentions-status',words.saved);
+    });
+    document.getElementById('intentions-reset').addEventListener('click',()=>{
+      intentions=words.defaults.slice();editor.value=intentions.join('\n');
+      try{localStorage.setItem(intentionKey,JSON.stringify(intentions));}catch(_){}
+      showIntention();write('intentions-status',words.restored);
+    });
+    const statsKey='breathing-exercise-stats-v1';
+    let stats={totalSeconds:0,completedSessions:0,days:{}};
+    try{const data=JSON.parse(localStorage.getItem(statsKey));if(data&&data.days&&typeof data.days==='object'){
+      stats={totalSeconds:Math.max(0,Number(data.totalSeconds)||0),
+        completedSessions:Math.max(0,Number(data.completedSessions)||0),days:data.days};
+    }}catch(_){}
+    function dateKey(d=new Date()){
+      return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    }
+    function today(){
+      const key=dateKey();
+      if(!stats.days[key]||typeof stats.days[key]!=='object')stats.days[key]={seconds:0,sessions:0};
+      return stats.days[key];
+    }
+    function persist(){try{localStorage.setItem(statsKey,JSON.stringify(stats));}catch(_){}}
+    function duration(n){
+      n=Math.max(0,Math.floor(Number(n)||0));
+      if(n>=3600)return Math.floor(n/3600)+' '+words.hour+' '+Math.floor(n%3600/60)+' '+words.minute;
+      if(n>=60)return Math.floor(n/60)+' '+words.minute+(n%60?' '+(n%60)+' '+words.second:'');
+      return n+' '+words.second;
+    }
+    function renderStats(){
+      write('total-duration',duration(stats.totalSeconds));write('total-sessions',String(stats.completedSessions));
+      const chart=document.getElementById('daily-chart');chart.replaceChildren();
+      const days=[];
+      for(let i=6;i>=0;i--){
+        const day=new Date();day.setHours(12,0,0,0);day.setDate(day.getDate()-i);
+        days.push({day,seconds:Math.max(0,Number((stats.days[dateKey(day)]||{}).seconds)||0)});
       }
-
-      // Create gradient for the circle (ocean theme)
-      let gradient = drawingContext.createRadialGradient(
-        width / 2, height / 2, radius * 0.3,
-        width / 2, height / 2, radius
-      );
-      gradient.addColorStop(0, 'rgba(0, 191, 255, 0.9)'); // Deep sky blue center
-      gradient.addColorStop(0.5, 'rgba(64, 224, 208, 0.7)'); // Turquoise
-      gradient.addColorStop(1, 'rgba(0, 105, 148, 0.5)'); // Darker blue edge
-
-      // Draw breathing circle with heartbeat-like pulse
-      drawingContext.fillStyle = gradient;
-      noStroke();
-      let pulse = sin(frameCount * 0.05) * 5; // Subtle heartbeat pulse
-      let currentRadius = radius + pulse;
-      ellipse(width / 2, height / 2, currentRadius * 2, currentRadius * 2);
-      
-      // Update radius and phase
-      if (phase === 'inhale') {
-        if (growing) radius += 0.5; // Slower growth for smoother animation
-        timer++;
-        if (timer >= inhaleTime) {
-          phase = 'hold1';
-          timer = 0;
-          growing = false;
-          document.getElementById('instructions').innerText = currentTexts.hold;
-        }
-      } else if (phase === 'hold1') {
-        timer++;
-        if (timer >= holdTime) {
-          phase = 'exhale';
-          timer = 0;
-          document.getElementById('instructions').innerText = currentTexts.exhale;
-        }
-      } else if (phase === 'exhale') {
-        radius -= 0.5; // Slower shrink for smoother animation
-        timer++;
-        if (timer >= exhaleTime) {
-          phase = 'hold2';
-          timer = 0;
-          document.getElementById('instructions').innerText = currentTexts.hold;
-        }
-      } else if (phase === 'hold2') {
-        timer++;
-        if (timer >= holdTime) {
-          phase = 'inhale';
-          timer = 0;
-          growing = true;
-          document.getElementById('instructions').innerText = currentTexts.inhale;
-        }
+      const max=Math.max(60,...days.map(x=>x.seconds));
+      for(const item of days){
+        const row=document.createElement('div');row.className='stats-day';
+        const name=document.createElement('span');
+        name.textContent=item.day.toLocaleDateString(lang==='en'?'en-US':'tr-TR',{weekday:'short',day:'numeric'});
+        const track=document.createElement('div');track.className='stats-track';
+        const bar=document.createElement('div');bar.className='stats-bar';bar.style.width=(100*item.seconds/max)+'%';
+        track.appendChild(bar);
+        const value=document.createElement('span');value.textContent=duration(item.seconds);
+        row.append(name,track,value);chart.appendChild(row);
       }
-
-      // Keep radius within bounds
-      radius = constrain(radius, 50, 150);
+    }
+    const statsPanel=document.getElementById('stats-panel'),statsToggle=document.getElementById('stats-toggle');
+    statsToggle.addEventListener('click',()=>{
+      const open=statsPanel.hidden;statsPanel.hidden=!open;statsToggle.setAttribute('aria-expanded',String(open));
+      if(open){setSettingsOpen(false);renderStats();}
+    });
+    settingsToggle.addEventListener('click',()=>{statsPanel.hidden=true;statsToggle.setAttribute('aria-expanded','false');});
+    document.addEventListener('pointerdown',e=>{
+      if(!statsPanel.hidden&&!statsPanel.contains(e.target)&&!statsToggle.contains(e.target)){
+        statsPanel.hidden=true;statsToggle.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'&&!statsPanel.hidden){
+        statsPanel.hidden=true;statsToggle.setAttribute('aria-expanded','false');statsToggle.focus();
+      }
+    });
+    const LENGTH=120000,start=document.getElementById('start-button'),pause=document.getElementById('pause-button');
+    function instruction(){
+      if(status==='ready')return words.ready;
+      if(status==='paused')return words.resume;
+      if(status==='finished')return words.completed;
+      return [currentTexts.inhale,currentTexts.hold,currentTexts.exhale,currentTexts.hold][Math.floor((elapsedMs%16000)/4000)];
+    }
+    function updateUI(){
+      write('instructions',instruction());
+      const remaining=Math.max(0,Math.ceil((LENGTH-elapsedMs)/1000));
+      write('timer',String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0'));
+      start.hidden=status==='running';pause.hidden=status!=='running';
+      write('start-button',status==='finished'?words.restart:status==='paused'?words.resume:words.start);
+      write('pause-button',words.pause);showIntention();
+    }
+    start.addEventListener('click',()=>{
+      if(status==='finished'){elapsedMs=0;untrackedMs=0;}
+      status='running';lastFrame=performance.now();updateUI();
+    });
+    pause.addEventListener('click',()=>{status='paused';updateUI();});
+    document.addEventListener('visibilitychange',()=>{
+      if(document.hidden&&status==='running'){status='paused';updateUI();}
+    });
+    function setup(){
+      document.title=currentTexts.title+' | Suat Atan';
+      write('app-title',currentTexts.title);write('app-subtitle',currentTexts.subtitle);
+      write('back-link',currentTexts.backLink);
+      document.getElementById('back-link').href=lang==='en'?'/index-en.html':'/';
+      write('description-text',currentTexts.description);
+      write('more-info-title',currentTexts.moreInfoTitle);
+      write('more-info-text',currentTexts.moreInfoText);
+      write('blog-link',currentTexts.moreInfoLink);
+      document.getElementById('blog-link').href=currentTexts.blogUrl;
+      const canvas=createCanvas(400,400);canvas.parent('canvas-stage');frameRate(60);updateUI();
+    }
+    function draw(){
+      if(status==='running'){
+        const now=performance.now(),delta=Math.min(1000,Math.max(0,now-lastFrame));
+        lastFrame=now;
+        const step=Math.min(delta,LENGTH-elapsedMs);
+        elapsedMs+=step;untrackedMs+=step;
+        const seconds=Math.floor(untrackedMs/1000);
+        if(seconds){untrackedMs-=seconds*1000;today().seconds+=seconds;stats.totalSeconds+=seconds;persist();}
+        if(elapsedMs>=LENGTH){
+          elapsedMs=LENGTH;status='finished';stats.completedSessions++;today().sessions++;persist();renderStats();
+        }
+        updateUI();
+      }
+      clear();
+      const cycle=elapsedMs%16000,ease=x=>x*x*(3-2*x);
+      const extent=cycle<4000?ease(cycle/4000):cycle<8000?1:cycle<12000?1-ease((cycle-8000)/4000):0;
+      const r=72+extent*75,ctx=drawingContext;
+      const grad=ctx.createRadialGradient(width/2,height/2,r*.15,width/2,height/2,r);
+      grad.addColorStop(0,'rgba(165,237,227,.82)');
+      grad.addColorStop(.5,'rgba(55,200,196,.67)');
+      grad.addColorStop(1,'rgba(30,116,140,.25)');
+      ctx.save();ctx.shadowColor='rgba(120,225,212,.30)';ctx.shadowBlur=30;
+      ctx.fillStyle=grad;ctx.beginPath();ctx.arc(width/2,height/2,r,0,Math.PI*2);ctx.fill();ctx.restore();
+      noFill();stroke(230,255,250,44);strokeWeight(1);circle(width/2,height/2,r*2.02);
     }
   </script>
 </body>
