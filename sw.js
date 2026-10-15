@@ -42,7 +42,7 @@ self.addEventListener('activate', event => {
       .then(cacheNames => {
         return Promise.all(
           cacheNames.map(cacheName => {
-            if (cacheName !== CACHE_NAME) {
+            if (cacheName.startsWith('suat-atan-blog-') && cacheName !== CACHE_NAME) {
               console.log('Service Worker: Deleting old cache', cacheName);
               return caches.delete(cacheName);
             }

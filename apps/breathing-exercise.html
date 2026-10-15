@@ -2,7 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#102a24">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Breathe">
+  <meta name="description" content="Kendi ritminde nefes al. Sakinlik, niyetler ve günlük nefes takibi.">
+  <link rel="manifest" href="/apps/breathe-manifest.json">
+  <link rel="icon" type="image/png" href="/apps/icons/breathe-192.png">
+  <link rel="apple-touch-icon" href="/apps/icons/breathe-180.png">
   <title>Breathing Exercise | Suat Atan</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
   <style>
@@ -229,6 +238,20 @@ button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-of
 .floating-actions{right:12px;bottom:12px}.background-picker,.stats-panel{right:12px;bottom:67px;padding:13px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<style>
+    /* Standalone mobile app: allow for phone notches and compact screens. */
+    @media (max-width: 520px) {
+      body { padding-top: max(21px, env(safe-area-inset-top, 0px)); }
+      .floating-actions { left: 12px; right: 12px; justify-content: center; flex-wrap: wrap; }
+    }
+    .install-app-button {
+      padding: 10px 15px; border: 1px solid #d0eed5; border-radius: 40px;
+      background: #dff0d9; color: #164131; font: 650 .91rem 'Segoe UI', Arial, sans-serif;
+      cursor: pointer;
+    }
+    .install-app-button:hover { background: white; }
+    .install-app-button:focus-visible { outline: 3px solid #f8e2aa; outline-offset: 3px; }
+  </style>
 </head>
 <body>
   <div class="header">
@@ -237,7 +260,8 @@ button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-of
     <a href="/" class="back-link" id="back-link">← Ana Sayfaya Dön</a>
   </div>
 
-  <div class="floating-actions"><button type="button" id="background-settings-toggle" class="settings-toggle"
+  <div class="floating-actions">
+    <button type="button" id="install-app" class="install-app-button" hidden>Telefona yükle</button><button type="button" id="background-settings-toggle" class="settings-toggle"
           aria-controls="background-settings" aria-expanded="false" aria-label="Arka plan ayarlarını aç">
     <span class="settings-icon" aria-hidden="true">⚙</span>
     <span id="background-settings-label">Arka plan</span>
@@ -713,6 +737,42 @@ button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-of
       ctx.fillStyle=grad;ctx.beginPath();ctx.arc(width/2,height/2,r,0,Math.PI*2);ctx.fill();ctx.restore();
       noFill();stroke(230,255,250,44);strokeWeight(1);circle(width/2,height/2,r*2.02);
     }
+  </script>
+  <script>
+    // The dedicated service worker allows Breathe to be installed independently
+    // from the main blog and used after an initial successful online visit.
+    (() => {
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/apps/breathe-sw.js', { scope: '/apps/' })
+            .catch(error => console.warn('Breathe offline support could not start:', error));
+        });
+      }
+      let installEvent = null;
+      const installButton = document.getElementById('install-app');
+      const isStandalone = () =>
+        window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+      window.addEventListener('beforeinstallprompt', event => {
+        if (isStandalone()) return;
+        event.preventDefault();
+        installEvent = event;
+        installButton.textContent = (new URLSearchParams(location.search).get('lang') === 'en')
+          ? 'Install app' : 'Telefona yükle';
+        installButton.hidden = false;
+      });
+      installButton.addEventListener('click', async () => {
+        if (!installEvent) return;
+        const promptEvent = installEvent;
+        installEvent = null;
+        installButton.hidden = true;
+        try { await promptEvent.prompt(); }
+        catch (error) { console.warn('Breathe install prompt failed:', error); }
+      });
+      window.addEventListener('appinstalled', () => {
+        installEvent = null;
+        installButton.hidden = true;
+      });
+    })();
   </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+{
+  "id": "/apps/breathe",
+  "name": "Breathe – Nefese Dön",
+  "short_name": "Breathe",
+  "description": "Sakinlik için 4-4-4-4 nefes egzersizi, niyetler ve günlük istatistikler.",
+  "start_url": "/apps/breathing-exercise.html",
+  "scope": "/apps/",
+  "display": "standalone",
+  "background_color": "#102a24",
+  "theme_color": "#102a24",
+  "lang": "tr",
+  "categories": [
+    "health",
+    "lifestyle",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/apps/icons/breathe-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apps/icons/breathe-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
