@@ -233,7 +233,8 @@ body{justify-content:flex-start;padding:30px 15px 112px;background-attachment:fi
 .stats-day{display:grid;grid-template-columns:55px 1fr 83px;gap:9px;align-items:center;margin:9px 0;font-size:.76rem}
 .stats-track{height:9px;border-radius:20px;background:#ffffff24;overflow:hidden}.stats-bar{height:100%;border-radius:20px;background:#bde6bb}.stats-day>span:last-child{text-align:right}
 .description{font-size:.91rem;margin-top:19px}.description>div{background:#071e1a80!important;border-radius:16px!important}
-button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-offset:3px}
+.sound-controls{margin:18px auto 0;max-width:350px;color:#e7f3eb;font-size:.86rem;line-height:1.5}.sound-row{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}.sound-controls input{accent-color:#bde6bb}.sound-controls input[type="range"]{width:110px}.sound-controls button{border:1px solid #ffffff60;border-radius:20px;padding:6px 13px;color:white;background:#ffffff18;cursor:pointer}.sound-controls p{margin:8px 0 0;font-size:.78rem;color:#d7e5db}.sound-controls label{display:inline-flex;align-items:center;gap:6px}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-offset:3px}
 @media(max-width:520px){body{padding:21px 12px 105px}#canvas-container{padding:16px 12px 22px}#instructions{font-size:1.14rem}
 .floating-actions{right:12px;bottom:12px}.background-picker,.stats-panel{right:12px;bottom:67px;padding:13px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -324,6 +325,15 @@ button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-of
     </div>
     <button type="button" id="start-button" class="exercise-action">Başlat</button>
     <button type="button" id="pause-button" class="exercise-action secondary" hidden>Duraklat</button>
+    <div class="sound-controls">
+      <div class="sound-row">
+        <label><input id="sound-enabled" type="checkbox" checked><span id="sound-label">Meditatif sesler</span></label>
+        <label><span id="volume-label">Ses</span><input id="sound-volume" type="range" min="0" max="100" value="40"></label>
+        <button id="sound-preview" type="button">Dinle</button>
+      </div>
+      <p id="sound-hint"></p>
+      <p id="sound-status" role="status" aria-live="polite"></p>
+    </div>
   </div>
 
   <div class="description">
@@ -692,13 +702,116 @@ button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-of
       write('start-button',status==='finished'?words.restart:status==='paused'?words.resume:words.start);
       write('pause-button',words.pause);showIntention();
     }
+    // Synthesized locally: no downloads, speech voices, or network needed for cues.
+    const soundKey='breathe-sound-v1';
+    const soundEnabled=document.getElementById('sound-enabled');
+    const soundVolume=document.getElementById('sound-volume');
+    const soundPreview=document.getElementById('sound-preview');
+    const soundWords=lang==='en'?{
+      label:'Meditative sounds',volume:'Volume',preview:'Listen',
+      hint:'Inhale: rising tones · Hold: one bell · Exhale: falling tones · Rest: two soft bells. Keep the app open; switching apps or locking the screen pauses the exercise.',
+      error:'Sound could not start. Tap Listen to try again.',unavailable:'Sound is not supported in this browser.'
+    }:{
+      label:'Meditatif sesler',volume:'Ses',preview:'Dinle',
+      hint:'Nefes al: yükselen tonlar · Tut: tek çan · Nefes ver: alçalan tonlar · Bekle: iki hafif çan. Uygulama açık kalsın; ekran kilitlenince veya uygulama değişince egzersiz duraklar.',
+      error:'Ses başlatılamadı. Yeniden denemek için Dinle’ye dokun.',unavailable:'Bu tarayıcı sesleri desteklemiyor.'
+    };
+    write('sound-label',soundWords.label);write('volume-label',soundWords.volume);
+    write('sound-preview',soundWords.preview);write('sound-hint',soundWords.hint);
+    soundVolume.setAttribute('aria-label',soundWords.volume);
+    try{
+      const saved=JSON.parse(localStorage.getItem(soundKey));
+      if(saved){soundEnabled.checked=saved.enabled!==false;
+        if(Number.isFinite(saved.volume))soundVolume.value=String(Math.max(0,Math.min(100,saved.volume)));}
+    }catch(_){}
+    let audioContext=null,audioMaster=null,lastSoundPhase=-1,previewTimer=null;
+    const activeTones=new Set();
+    const AudioEngine=window.AudioContext||window.webkitAudioContext;
+    function saveSound(){try{localStorage.setItem(soundKey,JSON.stringify({enabled:soundEnabled.checked,volume:Number(soundVolume.value)}));}catch(_){}}
+    function stopSounds(){
+      clearTimeout(previewTimer);previewTimer=null;lastSoundPhase=-1;
+      for(const tone of activeTones){
+        try{
+          const now=audioContext.currentTime;
+          tone.gain.gain.cancelScheduledValues(now);
+          tone.gain.gain.setTargetAtTime(0,now,.015);
+          tone.osc.stop(now+.08);
+        }catch(_){}
+      }
+    }
+    async function unlockSound(){
+      if(!AudioEngine){write('sound-status',soundWords.unavailable);return false;}
+      try{
+        if(!audioContext){
+          audioContext=new AudioEngine();audioMaster=audioContext.createGain();
+          audioMaster.gain.value=Number(soundVolume.value)/100*.3;
+          audioMaster.connect(audioContext.destination);
+        }
+        if(audioContext.state!=='running')await audioContext.resume();
+        if(audioContext.state!=='running')throw new Error('Audio is suspended');
+        write('sound-status','');return true;
+      }catch(_){write('sound-status',soundWords.error);return false;}
+    }
+    function bell(frequency,delay=0,length=1.7,strength=.55){
+      const when=audioContext.currentTime+delay;
+      // Gentle attack and long decay; quiet harmonics give a rounded bowl timbre.
+      [[1,1],[2.01,.16],[3.98,.035]].forEach(([ratio,level])=>{
+        const osc=audioContext.createOscillator(),gain=audioContext.createGain();
+        osc.type='sine';osc.frequency.value=frequency*ratio;
+        gain.gain.setValueAtTime(0,when);
+        gain.gain.linearRampToValueAtTime(strength*level,when+.07);
+        gain.gain.exponentialRampToValueAtTime(.0001,when+length);
+        osc.connect(gain);gain.connect(audioMaster);
+        const tone={osc,gain};activeTones.add(tone);
+        osc.onended=()=>{osc.disconnect();gain.disconnect();activeTones.delete(tone);};
+        osc.start(when);osc.stop(when+length+.05);
+      });
+    }
+    function playCue(phase){
+      if(!soundEnabled.checked||!audioContext||audioContext.state!=='running')return;
+      if(phase===0){bell(261.63);bell(329.63,.22);bell(392,.44);}
+      else if(phase===1)bell(329.63,0,1.9,.5);
+      else if(phase===2){bell(392);bell(329.63,.22);bell(261.63,.44);}
+      else if(phase===3){bell(220,0,1.6,.4);bell(220,.36,1.6,.35);}
+      else {bell(261.63,0,2.6,.5);bell(329.63,.35,2.6,.4);bell(523.25,.7,3,.3);}
+    }
+    function syncSound(){
+      const phase=Math.floor(elapsedMs/4000);
+      if(phase===lastSoundPhase)return;
+      lastSoundPhase=phase;playCue(phase%4);
+    }
+    soundEnabled.addEventListener('change',async()=>{
+      saveSound();stopSounds();
+      if(soundEnabled.checked&&await unlockSound()){
+        if(status==='running')syncSound();else playCue(0);
+      }
+    });
+    soundVolume.addEventListener('input',()=>{
+      saveSound();
+      if(audioMaster)audioMaster.gain.setTargetAtTime(Number(soundVolume.value)/100*.3,audioContext.currentTime,.04);
+    });
+    soundPreview.addEventListener('click',async()=>{
+      stopSounds();soundEnabled.checked=true;saveSound();
+      if(!await unlockSound())return;
+      if(status==='running'){syncSound();return;}
+      playCue(0);
+      let phase=1;
+      const next=()=>{
+        if(status==='running'||!soundEnabled.checked)return;
+        playCue(phase++);
+        if(phase<=4)previewTimer=setTimeout(next,2100);
+      };
+      previewTimer=setTimeout(next,2100);
+    });
     start.addEventListener('click',()=>{
+      stopSounds();
+      if(soundEnabled.checked)unlockSound().then(ok=>{if(ok&&status==='running') {lastSoundPhase=-1;syncSound();}});
       if(status==='finished'){elapsedMs=0;untrackedMs=0;}
       status='running';lastFrame=performance.now();updateUI();
     });
-    pause.addEventListener('click',()=>{status='paused';updateUI();});
+    pause.addEventListener('click',()=>{status='paused';stopSounds();updateUI();});
     document.addEventListener('visibilitychange',()=>{
-      if(document.hidden&&status==='running'){status='paused';updateUI();}
+      if(document.hidden){stopSounds();if(status==='running'){status='paused';updateUI();}}
     });
     function setup(){
       document.title=currentTexts.title+' | Suat Atan';
@@ -721,8 +834,9 @@ button:focus-visible,textarea:focus-visible{outline:3px solid #f8e2aa;outline-of
         const seconds=Math.floor(untrackedMs/1000);
         if(seconds){untrackedMs-=seconds*1000;today().seconds+=seconds;stats.totalSeconds+=seconds;persist();}
         if(elapsedMs>=LENGTH()){
-          elapsedMs=LENGTH();status='finished';stats.completedSessions++;today().sessions++;persist();renderStats();
+          elapsedMs=LENGTH();status='finished';stopSounds();playCue(4);stats.completedSessions++;today().sessions++;persist();renderStats();
         }
+        if(status==='running')syncSound();
         updateUI();
       }
       clear();

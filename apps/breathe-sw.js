@@ -1,6 +1,6 @@
 // Scoped to /apps/ so Breathe can work separately from the blog PWA.
 // Other apps under /apps/ are never intercepted by this worker.
-const CACHE = 'breathe-assets-v1';
+const CACHE = 'breathe-assets-v2';
 const APP = '/apps/breathing-exercise.html';
 const LIB = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js';
 const CORE = [
