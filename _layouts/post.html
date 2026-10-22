@@ -37,6 +37,7 @@
     <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
   </head>
   <body>
+    {% include analytics.html %}
     <a class="skip-link" href="#article">{% if post_lang == 'en' %}Skip to article{% else %}Yazıya geç{% endif %}</a>
     <header class="site-header">
       <a class="wordmark" href="{% if post_lang == 'en' %}/{% else %}/tr/{% endif %}" aria-label="Dr. Suat Atan home"><span>Dr. Suat Atan</span><small>PhD</small></a>

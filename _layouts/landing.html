@@ -58,6 +58,7 @@
     </script>
   </head>
   <body class="landing-body">
+    {% include analytics.html %}
     <a class="skip-link" href="#main">{% if page.lang == 'tr' %}İçeriğe geç{% elsif page.lang == 'fr' %}Aller au contenu{% else %}Skip to content{% endif %}</a>
     <header class="site-header" data-header>
       <a class="wordmark" href="{% if page.lang == 'tr' %}/tr/{% elsif page.lang == 'fr' %}/fr/{% else %}/{% endif %}" aria-label="Dr. Suat Atan home"><span>Dr. Suat Atan</span><small>PhD</small></a>
