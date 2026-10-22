@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fafbf6">
+  <title>Lineer Regresyon: Noktalardan tahmine — Dr. Suat ATAN</title>
+  <meta name="description" content="Lineer regresyonu deneyerek öğrenin: evlerin metrekaresi ve fiyatı, eğim, sabit terim, hata kareleri, en küçük kareler, uç değer ve yeni gözlem tahmini.">
+  <link rel="canonical" href="https://suatatan.com/egitim/makineogrenmesi/lineer-regresyon/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./lesson.mjs"></script>
+</head>
+<body class="regression">
+<!-- Yandex.Metrika counter -->
+<script src="/js/analytics.js" defer></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/98433671" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<a class="skip" href="#ders">Derse geç</a>
+<header class="top"><div class="wrap"><a class="brand" href="../">Dr. Suat <b>ATAN</b> <span>/ Makine Öğrenmesi</span></a><nav aria-label="Üst menü"><a href="../">← Tüm dersler</a><button id="present" class="quiet" type="button" aria-pressed="false">Sunum görünümü</button></nav></div></header>
+<main id="ders" class="wrap">
+  <section class="lesson-hero">
+    <div><p class="eyebrow">DERS 02 / DENETİMLİ ÖĞRENME · REGRESYON</p><h1>Noktaları gör.<br><em>Bir değer tahmin et.</em></h1><p class="lead">KNN’de “Öder mi?” diye sorduk. Şimdi “Bu ev kaç lira eder?” diyoruz. Metrekare ile fiyat arasına bir doğru yerleştir; modelin nasıl öğrendiğini hataları azaltarak keşfet.</p></div>
+    <div class="stamp"><strong>ŷ</strong><span>Lineer regresyon<br>Sınıf değil, sayısal değer</span></div>
+  </section>
+  <nav class="stages" aria-label="Ders adımları">
+    <button type="button" data-stage="0" aria-current="step"><b>01</b> Veriyi tanı</button>
+    <button type="button" data-stage="1"><b>02</b> Doğruyu sen ayarla</button>
+    <button type="button" data-stage="2"><b>03</b> Model öğrensin</button>
+    <button type="button" data-stage="3"><b>04</b> Yeni evi tahmin et</button>
+  </nav>
+  <section class="experiment" aria-labelledby="stage-title">
+    <div class="scene-intro"><div><p class="eyebrow" id="stage-count">ADIM 01 / 04</p><h2 id="stage-title">Büyük ev, daha yüksek fiyat mı?</h2></div><p id="stage-description">Her nokta geçmişte satılmış kurmaca bir ev. Metrekaresini ve satış fiyatını biliyoruz. Bunlar eğitim verimiz.</p></div>
+    <div class="lab-grid">
+      <div class="graph-card">
+        <div class="graph-head"><span id="plot-label">Eğitim verisinin dağılımı</span><span class="badge" id="sample-count">12 ev</span></div>
+        <div class="legend"><span><i class="dot"></i> Gerçek satış · y</span><span id="line-legend" hidden><i class="line-key"></i> Model · ŷ</span><span id="residual-legend" hidden><i class="residual-key"></i> Artık · y − ŷ</span><span id="query-legend" hidden><i class="diamond"></i> Yeni evin tahmini</span></div>
+        <svg id="plot" viewBox="0 0 760 480" role="img" aria-labelledby="plot-title plot-desc">
+          <title id="plot-title">Metrekare ve fiyat saçılım grafiği</title><desc id="plot-desc">Her mavi nokta bir evin metrekaresini ve milyon TL cinsinden bilinen satış fiyatını gösterir. Sayısal değerler aşağıdaki tabloda bulunur.</desc>
+          <defs><clipPath id="reg-clip"><rect x="78" y="32" width="650" height="374"/></clipPath></defs>
+          <g id="extrapolation" clip-path="url(#reg-clip)"></g><g id="grid"></g><g id="residuals" clip-path="url(#reg-clip)"></g><g id="lines" clip-path="url(#reg-clip)"></g><g id="points"></g><g id="query-marker" clip-path="url(#reg-clip)"></g>
+        </svg>
+        <p id="graph-hint" class="graph-hint">Bir noktayı seçip yukarı veya aşağı sürükle; aynı büyüklükteki evin fiyatını değiştir. Kaydırıcıyla da yapabilirsin.</p>
+        <div id="point-info" class="hover-info" role="status">Ev #6 · 100 m² · 3,00 milyon TL</div>
+        <div id="metrics" class="metrics" hidden>
+          <div><span>Hata kareleri toplamı · SSE</span><strong id="sse-value">—</strong><small>(milyon TL)² · daha küçük, daha iyi uyum</small></div>
+          <div><span>Eğitim RMSE’si</span><strong id="rmse-value">—</strong><small>milyon TL · √(SSE / ev sayısı)</small></div>
+        </div>
+        <p id="fit-comparison" class="tiny fit-comparison" hidden></p>
+      </div>
+      <aside class="controls" aria-label="Deney ayarları">
+        <div id="training-panel">
+          <p class="eyebrow">NE BİLİYORUZ?</p><h3>Bir özellik, sayısal bir hedef.</h3>
+          <div class="variable"><b>x</b><p><strong>Metrekare</strong><span>Evin büyüklüğü, m² olarak.</span></p></div>
+          <div class="variable"><b>y</b><p><strong>Satış fiyatı</strong><span>Bilinen fiyat, milyon TL olarak.</span></p></div>
+          <p class="callout">Aynı büyüklükte evlerin fiyatı farklı olabilir. Model, bütün noktaların içinden geçen bir çizgi bulmak zorunda değil.</p>
+        </div>
+        <div id="manual-panel" hidden>
+          <p class="eyebrow">BU KEZ MODEL SENSİN</p><h3>Doğruyu iki ayarla değiştir.</h3>
+          <label class="range-label" for="slope">Eğim · b <output id="slope-out" for="slope">0,0160</output></label>
+          <input id="slope" type="range" min="-0.01" max="0.06" step="0.0005" value="0.016">
+          <p class="tiny">b büyürse doğru daha dik olur. Bir m² artış için tahmindeki değişim; birimi milyon TL / m².</p>
+          <label class="range-label" for="intercept">Sabit terim · a <output id="intercept-out" for="intercept">1,20</output></label>
+          <input id="intercept" type="range" min="-3" max="4" step="0.05" value="1.2">
+          <p class="tiny">a, doğruyu yukarı veya aşağı taşır. x = 0 için doğrunun değeridir; gerçek bir “0 m² evin fiyatı” diye yorumlanmaz.</p>
+          <label class="check"><input id="compare-best" type="checkbox"> En iyi doğruyu kesikli göster</label>
+        </div>
+        <div id="auto-panel" hidden>
+          <p class="eyebrow">EN KÜÇÜK KARELER / OLS</p><h3>En küçük toplam hatayı bul.</h3>
+          <p class="tiny">Model a ve b’yi birlikte seçti. Bu eğitim kümesinde SSE’yi en küçük yapan doğruyu görüyorsun. KNN’den farklı olarak, burada katsayılar öğreniliyor.</p>
+          <p id="learned-coefficients" class="formula"></p>
+          <label class="check"><input id="outlier" type="checkbox"> Uç değer ekle: 190 m² bir ev</label>
+          <div id="outlier-controls" hidden><label class="range-label" for="outlier-price">Uç değerin fiyatı <output id="outlier-out" for="outlier-price">9,0</output></label><input id="outlier-price" type="range" min="1" max="10" step="0.1" value="9"><label class="check"><input id="baseline" type="checkbox" checked> Uç değersiz doğruyu da göster</label></div>
+          <p id="outlier-effect" class="callout">Uç değeri açıp doğrunun nasıl değiştiğine bak. Yeni örnek eğitim kümesine katıldığında model yeniden eğitilir.</p>
+        </div>
+        <div id="prediction-panel" hidden>
+          <p class="eyebrow">YENİ GÖZLEM / x YENİ</p><h3>Bu evin fiyatını bilmiyoruz.</h3>
+          <label class="range-label" for="new-area">Yeni evin büyüklüğü <output id="new-area-out" for="new-area">115 m²</output></label>
+          <input id="new-area" type="range" min="20" max="220" step="1" value="115">
+          <div class="preset-row"><button type="button" data-area="75">75 m²</button><button type="button" data-area="115">115 m²</button><button type="button" data-area="220">220 m² · dışarıda</button></div>
+          <div id="prediction" class="prediction" role="status" aria-live="polite"></div>
+          <p id="prediction-formula" class="formula"></p><p id="range-warning" class="callout"></p>
+          <p class="tiny">Sarı elmas, modelin tahmini ŷ. Gerçek y hâlâ bilinmiyor. Yeni ev eğitim verisine eklenmez; doğruyu değiştirmez.</p>
+        </div>
+        <div id="equation-panel" class="equation-panel" hidden><p class="eyebrow">DOĞRUNUN DENKLEMİ</p><p class="big-equation">ŷ = a + b × x</p><p id="live-equation" class="formula"></p><p id="slope-meaning" class="tiny"></p></div>
+        <div id="edit-panel" class="control-divider-wrap">
+          <div class="control-divider"></div><label class="field-label" for="house-select">Bir eğitim örneğini değiştir</label>
+          <select id="house-select"></select>
+          <label class="range-label" for="house-price">Seçili evin fiyatı <output id="house-price-out" for="house-price">3,0</output></label><input id="house-price" type="range" min="0.5" max="10" step="0.1" value="3">
+          <p class="tiny">Milyon TL. Metrekare sabit kalır; seçilen evin y değerini değiştiriyoruz.</p>
+        </div>
+        <label id="residual-control" class="check residual-control" hidden><input id="show-residuals" type="checkbox" checked> Dikey hata çizgilerini göster</label>
+      </aside>
+    </div>
+    <div id="error-detail" class="error-detail" hidden>
+      <div><p class="eyebrow">HATAYI GÖRÜNÜR KIL</p><h3>Çizgiden ne kadar uzağız?</h3><p>Her evde <strong>artık (e) = gerçek fiyat − tahmin</strong>. Artı ve eksi artıklar birbirini götürmesin diye karelerini alıp topluyoruz: <strong>SSE = Σ(y − ŷ)²</strong>.</p><p id="selected-error" class="formula"></p><p class="tiny">Çubuklar her evin e² katkısını gösterir. Büyük bir hata, kare alındığında toplamı çok daha fazla etkiler. Grafikteki hata, doğruya dik en kısa mesafe değil; y yönündeki farktır.</p></div>
+      <div><svg id="error-bars" viewBox="0 0 600 220" role="img" aria-labelledby="bars-title bars-desc"><title id="bars-title">Evlerin hata kareleri</title><desc id="bars-desc">Her çubuğun yüksekliği ilgili evin hata karesidir. Ayrıntılı sayılar eğitim verisi tablosundadır.</desc></svg><p id="bars-note" class="tiny"></p></div>
+    </div>
+    <div class="step-footer"><button type="button" id="previous" class="secondary" disabled>← Önceki adım</button><span id="progress-text">1 / 4</span><button type="button" id="next" class="primary">Bir doğru çizelim →</button></div>
+  </section>
+  <section class="understanding"><p class="eyebrow">DENEYİN ARKASINDAKİ FİKİR</p><h2>Öğrenmek, bu kez bir denklem bulmak.</h2><div class="concepts">
+    <article><span class="concept-no">01 / TEMSİL</span><h3>Bir ilişkiyi basitleştir.</h3><p>Basit lineer regresyonda bir x ve sayısal bir y vardır. Modelin tahmini ŷ = a + b × x. Eğim b, x bir birim arttığında tahminin ne kadar değiştiğini söyler. Bu, tek başına nedensellik göstermez.</p></article>
+    <article><span class="concept-no">02 / EĞİTİM</span><h3>Hata karelerini küçült.</h3><p>En küçük kareler yöntemi, eğitim verisindeki hata kareleri toplamını en aza indiren a ve b’yi bulur. SSE’yi ev sayısına bölersen MSE; karekökünü alırsan RMSE elde edersin.</p><p class="formula">b = Σ[(x − x̄)(y − ȳ)] / Σ[(x − x̄)²]<br>a = ȳ − b × x̄</p><p class="tiny">Bu deneyde çözüm bu formülle doğrudan hesaplanır; bir yinelemeli optimizasyon gösterimi değildir.</p></article>
+    <article><span class="concept-no">03 / TAHMİN</span><h3>Yeni x’i yerine koy.</h3><p>Katsayılar öğrenilince yeni evin metrekaresini denklemde x yerine yazarız. Eğitimde gördüğümüz metrekare aralığındaki tahmin interpolasyon, dışındaki tahmin ekstrapolasyondur. Dışarıda aynı eğilimin süreceğinden daha az emin oluruz.</p></article>
+  </div></section>
+  <section class="data-section"><details><summary>Eğitim verisi ve hata hesabını aç <span id="data-summary">12 kurmaca ev · x, y, ŷ ve e²</span></summary><p>Fiyatlar öğretim için hazırlanmıştır; piyasa verisi değildir. y bilinen satış fiyatı, ŷ modelin aynı ev için ürettiği tahmindir. Yeni evin bilinmeyen gerçek fiyatı bu tabloya katılmaz.</p><div class="data-actions"><button type="button" id="download" class="secondary">Veri ve hesapları CSV indir ↓</button><button type="button" id="reset" class="secondary">Deneyi sıfırla ↺</button></div><div class="table-scroll data-table"><table><caption id="table-caption">Eğitim verisi · tahminler 2. adımda açılır</caption><thead><tr><th scope="col">Ev</th><th scope="col">Metrekare · x</th><th scope="col">Gerçek · y</th><th scope="col">Tahmin · ŷ</th><th scope="col">Artık · e</th><th scope="col">Hata karesi · e²</th></tr></thead><tbody id="training-data"></tbody></table></div></details></section>
+  <section class="teacher-note"><p class="eyebrow">EĞİTMEN NOTU</p><h2>“En iyi” derken neyi kastediyoruz?</h2><p>Önce katılımcılardan çizginin nereden geçmesi gerektiğini tahmin etmelerini iste. Sonra eğim ve sabit terimle oynayıp SSE’yi küçültmelerini sağla. Modelin doğrusunu açınca sor: “Neden bütün noktalara tam değmiyor?” Uç değeri ekleyince bu kez soruyu değiştir: “Tek bir ev, diğer bütün evlerin tahminini değiştirmeli mi?”</p><p><strong>Uyum ile genelleme farklıdır.</strong> Buradaki SSE ve RMSE eğitim verisi üzerinde hesaplanır. Modelin yeni evlerdeki başarısını ölçmek için ayrı test verisi gerekir. Küçük eğitim hatası, gelecekteki doğruluğun garantisi değildir.</p><p class="callout"><strong>Bu modelin sınırı:</strong> Konum, bina yaşı ve başka özellikler burada yok. Tek doğru, doğrusal olmayan bir ilişkiyi kaçırabilir. Uç değerler katsayıları etkileyebilir. Tahmin fiyat aralığı ya da güven aralığı göstermiyoruz; hesaplanan sayı kurmaca örneğin model çıktısıdır.</p><p class="tiny">Teknik kaynak: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html" target="_blank" rel="noopener">scikit-learn · Ordinary Least Squares ↗</a></p><p><a href="../knn/">← Önceki ders: KNN</a> · <a href="../">Serinin tüm dersleri →</a></p></section>
+  <noscript><p class="callout">Etkileşimli deney için JavaScript’i etkinleştir. Açıklamalar JavaScript olmadan da okunabilir.</p></noscript>
+</main>
+<footer><div class="wrap"><p>Dr. Suat ATAN · Öğrenme Laboratuvarı</p><p><a href="../">Makine öğrenmesi</a> · <a href="../../istatistik/">İstatistik</a> · <a href="/tr/">Ana site ↗</a></p></div></footer>
+</body>
+</html>
