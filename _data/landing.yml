@@ -13,6 +13,8 @@ en:
       url: "#insights"
     - label: About
       url: "#about"
+    - label: Apps
+      url: "/apps/en/"
   eyebrow: "ARTIFICIAL INTELLIGENCE • DATA SCIENCE • ORGANIZATIONAL TRANSFORMATION"
   headline: "I turn complex AI ideas into systems that work."
   intro: "With 15+ years of experience, I build RAG, NLP and data solutions for organizations—and help teams adopt them with confidence."
@@ -97,6 +99,8 @@ tr:
       url: "#insights"
     - label: Hakkımda
       url: "#about"
+    - label: Uygulamalar
+      url: "/apps/"
   eyebrow: "YAPAY ZEKÂ • VERİ BİLİMİ • KURUMSAL DÖNÜŞÜM"
   headline: "Karmaşık yapay zekâ fikirlerini çalışan sistemlere dönüştürüyorum."
   intro: "15+ yıllık deneyimle kurumlar için RAG, NLP ve veri çözümleri geliştiriyor; ekiplerin bu teknolojileri güvenle kullanmasına yardımcı oluyorum."
@@ -179,6 +183,8 @@ fr:
       url: "#insights"
     - label: À propos
       url: "#about"
+    - label: Applications
+      url: "/apps/"
   eyebrow: "INTELLIGENCE ARTIFICIELLE • SCIENCE DES DONNÉES • TRANSFORMATION DES ORGANISATIONS"
   headline: "Je transforme des idées complexes en systèmes d’IA qui fonctionnent."
   intro: "Avec plus de 15 ans d’expérience, je conçois des solutions RAG, NLP et data pour les organisations, et j’aide leurs équipes à les adopter avec confiance."
