@@ -19,7 +19,14 @@
 <!-- /Yandex.Metrika counter -->
     <div id="root"></div>
 
-    <script type="text/babel" data-presets="typescript,react">
+    <script>
+      // Explicit classic JSX output uses the React UMD global already loaded above.
+      // The automatic runtime emits module imports, which classic scripts cannot run.
+      Babel.registerPreset('jaccard-react', {
+        presets: [[Babel.availablePresets.react, { runtime: 'classic' }]]
+      });
+    </script>
+    <script type="text/babel" data-presets="jaccard-react">
       const { useState, useEffect } = React;
 
       // İkon yerine basit span kullanalım:
