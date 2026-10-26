@@ -1,0 +1,48 @@
+---
+layout: null
+lang: en
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Share files directly between browsers on your local network. No uploads, accounts, or relay servers. Keep the sender open while downloading.">
+  <meta name="theme-color" content="#235947">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="canonical" href="https://suatatan.com/apps/local-share/">
+  <link rel="stylesheet" href="./style.css?v=1">
+  <title>Local Share — Files, directly | Suat Atan</title>
+</head>
+<body>
+<main>
+  <header class="top"><a href="/apps/en/">← All apps</a><a class="wordmark" href="/">SUAT ATAN</a><span class="badge"><span class="dot"></span> LOCAL CONNECTIONS ONLY</span></header>
+  <section class="hero"><div><p class="eyebrow">LOCAL SHARE</p><h1>Your files.<br>Just across the room.</h1><p class="intro">Send files straight to another device on your network. They stay on your computer until the other person downloads them.</p></div><div class="orbit" aria-hidden="true"><span class="device one">↗</span><span class="orbit-label">DIRECT &amp; ENCRYPTED</span><span class="device two">↙</span></div></section>
+  <div class="workspace">
+    <section class="panel" aria-label="File sharing">
+      <div class="tabs" role="tablist" aria-label="Choose a role"><button id="send-tab" role="tab" aria-selected="true" aria-controls="send-panel">Send files <span>↗</span></button><button id="receive-tab" role="tab" aria-selected="false" aria-controls="receive-panel" tabindex="-1">Receive files <span>↙</span></button></div>
+      <div id="send-panel" role="tabpanel" aria-labelledby="send-tab">
+        <div class="step-heading"><span class="step">01</span><div><h2>Choose what to share</h2><p>Only files you select will be available.</p></div></div>
+        <label class="dropzone" id="dropzone"><input id="files" type="file" multiple><span class="file-icon" aria-hidden="true">＋</span><strong>Choose files <span>or drop them here</span></strong><small>Any file type · Up to 100 files per session</small></label>
+        <ul id="selected-files" class="file-list" aria-label="Selected files"></ul>
+        <button id="create-invite" class="primary" disabled>Create invitation <span>→</span></button>
+        <div id="invite-area" class="pairing" hidden><div class="step-heading"><span class="step">02</span><div><h2>Invite the other device</h2><p>Send this link through a trusted chat, email, or another channel. It expires in 20 minutes.</p></div></div><label for="invite-link">Invitation link</label><textarea id="invite-link" rows="3" readonly spellcheck="false"></textarea><button id="copy-invite" class="secondary">Copy invitation link</button><div class="step-heading"><span class="step">03</span><div><h2>Paste their reply</h2><p>The other device will show a reply code. Paste it below to connect.</p></div></div><label for="reply-input">Reply code from the receiver</label><textarea id="reply-input" rows="3" placeholder="LS1.…" spellcheck="false" autocomplete="off"></textarea><button id="connect" class="primary">Connect devices <span>↗</span></button></div>
+      </div>
+      <div id="receive-panel" role="tabpanel" aria-labelledby="receive-tab" hidden>
+        <div id="receive-setup"><div class="step-heading"><span class="step">01</span><div><h2>Open an invitation</h2><p>Open the sender’s link on this device, or paste the full link below.</p></div></div><label for="offer-input">Invitation link or code</label><textarea id="offer-input" rows="4" placeholder="Paste the invitation link here…" spellcheck="false" autocomplete="off"></textarea><button id="create-reply" class="primary">Create reply <span>→</span></button></div>
+        <div id="reply-area" class="pairing" hidden><div class="step-heading"><span class="step">02</span><div><h2>Send this reply back</h2><p>Ask the sender to paste this code into their “Reply code” box and click “Connect devices”. Keep this tab open.</p></div></div><label for="reply-code">Your reply code</label><textarea id="reply-code" rows="4" readonly spellcheck="false"></textarea><button id="copy-reply" class="secondary">Copy reply code</button></div>
+        <div id="available-area" hidden><div class="step-heading"><span class="step">↓</span><div><h2>Ready to download</h2><p>Choose a file. The sender’s computer and tab must stay open.</p></div></div><p id="save-note" class="hint"></p><ul id="available-files" class="file-list" aria-label="Available files"></ul></div>
+      </div>
+      <section id="transfer" class="transfer" aria-label="Transfer progress" hidden><div class="transfer-head"><strong id="transfer-name"></strong><span id="transfer-percent">0%</span></div><progress id="progress" max="100" value="0"></progress><div class="transfer-head"><span id="transfer-detail"></span><button id="cancel-transfer" class="text-button">Cancel</button></div></section>
+      <p id="notice" class="notice" role="status" aria-live="polite">Both devices need this page and a shared local network.</p>
+      <button id="stop" class="secondary stop" hidden>End session</button>
+    </section>
+    <aside class="sidebar"><section class="connection-card"><p class="eyebrow">YOUR CONNECTION</p><div class="connection-status"><span id="status-dot" class="dot"></span><h2 id="status">Not connected</h2></div><p id="status-detail">Select files to start, or open a sender’s invitation.</p><div id="verification" hidden><span class="small-label">COMPARE ON BOTH DEVICES</span><strong id="verify-code" class="verify-code"></strong><p>These numbers should match. If they do not, end the session.</p></div><div class="network-line"><span>Transfer route</span><strong id="route">Local only</strong></div><div class="network-line"><span>Cloud file storage</span><strong>None</strong></div></section><section class="keep-open"><span aria-hidden="true">◷</span><div><h3>Keep the sender open</h3><p>Closing the tab, sleeping the computer, or leaving the network ends access. Files already downloaded remain on the receiver’s device.</p></div></section><p class="sidebar-note">No account. No installation.<br>No file uploads to a server.</p></aside>
+  </div>
+  <section class="details"><h2>A short connection. A direct transfer.</h2><div class="explain-grid"><div><span>01 / PAIR</span><h3>Exchange an invitation &amp; reply</h3><p>Pairing is manual so there is no matchmaking server. Share connection codes only with the person you intend to connect to.</p></div><div><span>02 / CONNECT</span><h3>Use your local network</h3><p>Only private or link-local addresses and local device names are accepted. There is no internet relay or public-address fallback.</p></div><div><span>03 / TRANSFER</span><h3>Download from the sender</h3><p>Encrypted WebRTC carries the files between the two browsers. Choose “End session” at any time to stop sharing.</p></div></div><details><summary>Network requirements &amp; browser limits</summary><p>Connect both devices to the same Wi-Fi or wired LAN. Guest Wi-Fi, access-point isolation, firewalls, or denied Local Network permission can prevent connections. Allow Local Network access if your browser asks. VPNs and routed private networks may also connect: a browser cannot prove that two devices are on the same physical Wi-Fi. This is a local-address restriction, not a network security boundary.</p><p>Use a current desktop browser for best results. Where supported, files stream straight to the destination you choose. Other browsers buffer downloads in memory, limited to 200 MiB per file. Mobile browsers may pause a background tab; keep both screens awake. An interrupted transfer must be restarted. One receiver can connect per session; start a new session for another receiver.</p><p>The public website needs internet to load. Once both pages and their connection codes have been exchanged, no internet service is used for the file transfer. The website host receives normal page requests, but the application sends it no filenames, connection codes, or file contents. Connection details are carried in the link fragment and removed from the address bar when opened.</p></details></section>
+  <footer><span>Local Share · A small tool by <a href="/">Suat Atan</a></span><a href="/apps/en/">Explore more apps ↗</a></footer>
+</main>
+<noscript><p>This app needs JavaScript and a browser with WebRTC support.</p></noscript>
+<script type="module" src="./app.mjs?v=1"></script>
+</body></html>

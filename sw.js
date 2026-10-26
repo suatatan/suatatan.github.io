@@ -1,4 +1,4 @@
-const CACHE_NAME = 'suat-atan-blog-v1.0.4';
+const CACHE_NAME = 'suat-atan-blog-v1.0.5';
 const urlsToCache = [
   '/',
   '/index-en.html',
