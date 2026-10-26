@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fafbf6"><title>Naive Bayes: Olasılıkla karar ver — Dr. Suat ATAN</title>
+<meta name="description" content="Naive Bayes sınıflandırmasını kredi geri ödeme örneğinde interaktif öğrenin. Önsel olasılık, koşullu olasılık, Laplace düzeltmesi ve posterior tahmini değiştirerek keşfedin.">
+<link rel="canonical" href="https://suatatan.com/egitim/makineogrenmesi/naive-bayes/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.nb .lesson-hero{padding-bottom:25px}.nb .stamp strong{font-size:3.8rem}
+.nb .controls select{display:block;width:100%;padding:11px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:9px;font:inherit}
+.nb .controls label.field{display:block;margin:16px 0;font-size:.88rem;font-weight:800}.nb .controls label.field span{display:block;margin-bottom:7px}
+.nb .score-panel{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.nb .score{padding:17px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper)}.nb .score strong{font-size:2rem;display:block}.nb .score small{color:var(--muted)}.nb .score.blue strong{color:var(--blue)}.nb .score.red strong{color:var(--red)}
+.nb .prob-track{height:18px;background:var(--red);border-radius:20px;overflow:hidden;margin:15px 0 6px}.nb .prob-track div{height:100%;background:var(--blue);transition:width .2s}
+.nb .math-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}.nb .math-row>div{border:1px solid var(--line);border-radius:10px;padding:13px;min-width:0}.nb .math-row h3{font-size:1rem;margin-bottom:8px}.nb .math-row p{font-size:.85rem;margin:0;overflow-wrap:anywhere}
+.nb .explain{padding:15px;background:var(--bluebg);border-radius:10px;font-size:.91rem;line-height:1.6}.nb table{white-space:normal}.nb th,.nb td{text-align:left}.nb td:nth-child(n+2),.nb th:nth-child(n+2){text-align:right}.nb .count-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.nb .count-actions button{font:inherit;border:1px solid var(--line);border-radius:9px;background:var(--paper);padding:9px 11px;color:var(--ink);font-size:.8rem;font-weight:700}
+.nb .count-actions button:hover{border-color:var(--blue)}.nb .pill{display:inline-block;border-radius:999px;padding:3px 8px;font-weight:800;font-size:.76rem;background:var(--bluebg);color:var(--blue)}.nb .pill.no{background:var(--redbg);color:var(--red)}
+.nb .record-table{max-height:340px;overflow:auto}.nb .record-table td,.nb .record-table th{font-size:.78rem}.nb .record-table td:last-child{text-align:left}
+.nb .resetbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.nb .muted{color:var(--muted)}.nb .result-title{font-size:1.15rem;font-weight:800;margin:0 0 10px}
+.nb .stage-panel[hidden]{display:none!important}
+@media(max-width:620px){.nb .score-panel,.nb .math-row{grid-template-columns:1fr}.nb .graph-card{padding:16px}.nb table{font-size:.73rem}.nb td,.nb th{padding:8px 5px}}
+</style><script src="/js/analytics.js" defer></script></head>
+<body class="nb"><a class="skip" href="#ders">Derse geç</a><header class="top"><div class="wrap"><a class="brand" href="../">Dr. Suat <b>ATAN</b> <span>/ Makine Öğrenmesi</span></a><nav aria-label="Üst menü"><a href="../">← Tüm dersler</a><button class="quiet" id="present" type="button" aria-pressed="false">Sunum görünümü</button></nav></div></header>
+<main class="wrap" id="ders">
+<section class="lesson-hero"><div><p class="eyebrow">DERS 03 / DENETİMLİ ÖĞRENME · SINIFLANDIRMA</p><h1>Kanıtları birleştir.<br><em>Olasılıkla karar ver.</em></h1><p class="lead">Bir müşteri kredisini geri öder mi? Naive Bayes geçmiş örneklerdeki oranlardan öğrenir. Özellikleri değiştir; küçük olasılıkların nasıl bir karara dönüştüğünü adım adım gör.</p></div><div class="stamp"><strong>P(Y|X)</strong><span>Naive Bayes<br>Olasılıksal sınıflandırma</span></div></section>
+<nav class="stages" aria-label="Ders adımları">
+<button data-stage="0" aria-current="step"><b>01</b> Veriyi tanı</button><button data-stage="1"><b>02</b> Olasılıkları hesapla</button><button data-stage="2"><b>03</b> Sıfır tuzağı</button><button data-stage="3"><b>04</b> Yeni kişiyi tahmin et</button></nav>
+<section class="experiment"><div class="scene-intro"><div><p class="eyebrow" id="stage-num">ADIM 01 / 04</p><h2 id="stage-title">Geçmiş müşteriler ne söylüyor?</h2></div><p id="stage-desc">Her satır, öğretim amacıyla oluşturulmuş bir müşteri. Üç evet/hayır özelliği ve gerçekleşmiş geri ödeme durumu biliniyor.</p></div>
+<div class="lab-grid"><div class="graph-card">
+<div class="graph-head"><span id="graph-title">Eğitim kümesi</span><span class="badge" id="sample-badge">16 müşteri</span></div>
+<div class="stage-panel" id="dataset-panel"><p class="tiny">Öğrenme buradaki sayımlarla başlıyor. “Ödedi” ve “Ödemedi” sütunlarındaki örnekleri karşılaştır.</p>
+<div class="score-panel"><div class="score blue"><small>Ödedi · Y = Evet</small><strong id="count-yes">—</strong></div><div class="score red"><small>Ödemedi · Y = Hayır</small><strong id="count-no">—</strong></div></div>
+<div class="table-scroll record-table"><table><thead><tr><th>#</th><th>Düzenli gelir</th><th>Yüksek borç</th><th>Gecikme</th><th>Sonuç</th></tr></thead><tbody id="records"></tbody></table></div>
+<div class="count-actions"><button id="add-yes" type="button">+ Ödeyen örnek ekle</button><button id="add-no" type="button">+ Ödemeyen örnek ekle</button><button id="reset-data" type="button">Veriyi sıfırla ↺</button></div><p class="tiny">Eklenen örneğin özellikleri sağdaki seçimlerden alınır. Böylece eğitim kümesini bizzat değiştirebilirsin.</p></div>
+<div class="stage-panel" id="math-panel" hidden>
+<p class="result-title">Yeni müşteri için hesabın içi</p>
+<p class="tiny">Her satır P(özellik değeri | sınıf) koşullu olasılığıdır. Naive Bayes bunları sınıfın önsel olasılığıyla çarpar.</p>
+<div class="table-scroll"><table><thead><tr><th>Çarpan</th><th>Ödedi</th><th>Ödemedi</th></tr></thead><tbody id="factors"></tbody></table></div>
+<div class="math-row"><div><h3>Ödedi · ham skor</h3><p class="formula" id="formula-yes"></p></div><div><h3>Ödemedi · ham skor</h3><p class="formula" id="formula-no"></p></div></div>
+<p class="tiny">Ham skorlar toplamına bölünerek olasılıklar 100%'e normalize edilir. Bu hesap kategorik Naive Bayes'in Bernoulli özellikli özel bir örneğidir.</p></div>
+<div class="stage-panel" id="zero-panel" hidden><h3>Hiç görülmeyen bir özellik, tüm skoru sıfırlar mı?</h3><p class="tiny">“Gecikme var” seçeneğini işaretle. Eğitim verisinde ödeyen müşterilerin hiçbirinde gecikme yoksa, düzeltmesiz P(gecikme=var | ödedi) = 0 olur. Çarpımdaki tek sıfır bütün skoru siler.</p><div class="formula" id="zero-demo"></div><p class="callout">Laplace düzeltmesi: Her iki olası değerin sayımına 1 eklenir. İkili özellikte <strong>(eşleşen sayı + α) / (sınıftaki sayı + 2α)</strong>. α = 1 varsayılandır.</p></div>
+<div class="stage-panel" id="predict-panel" hidden><h3>İki sınıf, tek karar</h3><div class="score-panel"><div class="score blue"><small>Öder olasılığı</small><strong id="p-yes">—</strong></div><div class="score red"><small>Ödemez olasılığı</small><strong id="p-no">—</strong></div></div><div class="prob-track" role="img" id="prob-track" aria-label="Tahmin olasılıkları"><div id="prob-fill"></div></div><p class="result-title" id="decision"></p><p id="result-explain" class="explain" aria-live="polite"></p><p class="tiny">Gösterilen değerler bu küçük kurmaca eğitim kümesine göre modelin hesapladığı posterior olasılıklardır; gerçek dünyadaki riskin kalibre edilmiş olasılıkları değildir.</p></div>
+</div>
+<aside class="controls"><p class="eyebrow">YENİ MÜŞTERİ · X</p><h3>Özelliklerini değiştir.</h3>
+<label class="field"><span>Düzenli gelir var mı?</span><select id="income"><option value="1">Evet · düzenli gelir</option><option value="0">Hayır · düzensiz gelir</option></select></label>
+<label class="field"><span>Mevcut borç yüksek mi?</span><select id="debt"><option value="0">Hayır · düşük borç</option><option value="1">Evet · yüksek borç</option></select></label>
+<label class="field"><span>Geçmişte gecikme var mı?</span><select id="late"><option value="0">Hayır · gecikme yok</option><option value="1">Evet · gecikme var</option></select></label>
+<div class="control-divider"></div><label class="check"><input id="smoothing" type="checkbox" checked> Laplace düzeltmesi (α = 1)</label><p class="tiny">Kapatınca eğitimde hiç görülmeyen kombinasyonların tekil özellik olasılıkları sıfır olabilir.</p>
+<div class="prediction" id="side-prediction" role="status" aria-live="polite"><span>Modelin kararı</span><strong id="side-decision">—</strong><span id="side-prob">—</span></div>
+<div class="preset-row"><button type="button" data-preset="safe">Güçlü profil</button><button type="button" data-preset="risky">Riskli profil</button><button type="button" data-preset="surprise">Sıfır olasılık deneyi</button></div>
+<p class="callout">Burada sınıflandırılan kişi eğitim verisine otomatik eklenmez. Ancak birinci adımda “örnek ekle” dersen yeni bir eğitim satırı oluşur.</p></aside></div>
+<div class="step-footer"><button id="prev" class="secondary" type="button" disabled>← Önceki adım</button><span id="progress">1 / 4</span><button id="next" class="primary" type="button">Olasılıkları hesapla →</button></div></section>
+<section class="understanding"><p class="eyebrow">FORMÜLÜN ARKASINDAKİ FİKİR</p><h2>Bayes, kanıt geldikçe fikrini günceller.</h2><div class="concepts"><article><span class="concept-no">01 / ÖNSEL</span><h3>Önce sınıfın sıklığı.</h3><p>P(Y), geçmiş örneklerdeki sınıf oranıdır. 16 kişiden 10'u ödemişse başlangıçta öder sınıfının önsel olasılığı 10/16'dır.</p></article><article><span class="concept-no">02 / KOŞULLU OLASILIK</span><h3>Kanıt sınıflarda ne kadar yaygın?</h3><p>P(Xᵢ | Y), ilgili özelliğin o sınıfta görülme oranıdır. “Naive” varsayımı, özelliklerin sınıf bilindiğinde birbirinden bağımsız olmasıdır; gerçekte her zaman doğru değildir.</p></article><article><span class="concept-no">03 / POSTERIOR</span><h3>Çarp, sonra normalize et.</h3><p class="formula">P(Y | X) ∝ P(Y) × ∏ P(Xᵢ | Y)</p><p>Her sınıf için skoru hesapla; skorları toplamlarına böl. En büyük posterior sınıfı kazanır. Sıfır skorların ikisi birden oluşursa sonuç belirlenemez.</p></article></div></section>
+<section class="teacher-note"><p class="eyebrow">EĞİTMEN NOTU</p><h2>Neden “naive”?</h2><p>Önce aynı müşteri için iki sınıfın ham skorlarını tahmin ettir. Ardından “gelir” ile “yüksek borç” gerçekten bağımsız mı diye sor. Birinci adımda örnekler ekleyerek sınıf önsellerini ve oranları değiştir; üçüncü adımda Laplace düzeltmesini kapatıp sıfır olasılığı göster.</p><p class="callout"><strong>Sınır:</strong> Bu küçük, sentetik veri ve basitleştirilmiş üç ikili özellik kredi kararı vermek için uygun değildir. Gerçek finansal değerlendirmelerde temsil, ayrımcılık, kalibrasyon, doğrulama verisi ve mevzuat ayrıca ele alınmalıdır.</p><p><a href="https://scikit-learn.org/stable/modules/naive_bayes.html" target="_blank" rel="noopener">Teknik kaynak: scikit-learn Naive Bayes ↗</a></p><p><a href="../lineer-regresyon/">← Önceki ders: Lineer Regresyon</a> · <a href="../">Tüm dersler →</a></p></section>
+<noscript><p class="callout">Etkileşimli hesaplama için JavaScript gerekir. Üstteki kavramsal açıklamalar yine okunabilir.</p></noscript></main><footer><div class="wrap"><p>Dr. Suat ATAN · Makine Öğrenmesi Laboratuvarı</p><p><a href="../">Tüm dersler</a> · <a href="/tr/">Ana site ↗</a></p></div></footer>
+<script>
+(()=>{
+'use strict';
+const initial=[
+[1,0,0,1],[1,0,0,1],[1,0,0,1],[1,0,0,1],[1,0,0,1],
+[1,1,0,1],[1,1,0,1],[0,0,0,1],[0,0,0,1],[0,1,0,1],
+[0,1,1,0],[0,1,1,0],[0,1,1,0],[1,1,1,0],[0,0,1,0],[1,0,1,0]
+];
+let data=initial.map(r=>[...r]),stage=0;
+const $=id=>document.getElementById(id),fmt=n=>Number.isFinite(n)?(n*100).toLocaleString('tr-TR',{maximumFractionDigits:1})+'%':'—',dec=n=>n.toLocaleString('tr-TR',{maximumFractionDigits:4});
+const titles=['Geçmiş müşteriler ne söylüyor?','Bir karar, dört çarpan.','Sıfır olasılık tuzağı.','Yeni müşteri hangi sınıfta?'];
+const desc=['Her satır sentetik bir müşteri. Veriyi değiştirip sınıf oranlarının nasıl oynadığını izle.','Önsel olasılık ve üç koşullu olasılığı sınıflar için ayrı ayrı hesapla.','Bir özelliğin ilgili sınıfta hiç görülmemesi, düzeltmesiz çarpımı sıfıra indirir.','Özellikleri seç, normalize edilmiş posterior olasılıkları ve model kararını karşılaştır.'];
+const inputs=['income','debt','late'];
+function calculate(){
+const x=inputs.map(id=>Number($(id).value)),alpha=$('smoothing').checked?1:0,n=data.length;
+const out=[1,0].map(cls=>{
+ const subset=data.filter(r=>r[3]===cls), count=subset.length, prior=count/n;
+ const parts=x.map((value,i)=>{const matched=subset.filter(r=>r[i]===value).length;return {matched,denom:count,prob:(matched+alpha)/(count+2*alpha)};});
+ return {cls,count,prior,parts,score:prior*parts.reduce((p,q)=>p*q.prob,1)};
+});
+const sum=out[0].score+out[1].score;
+return {x,out,sum,yes:sum?out[0].score/sum:NaN,no:sum?out[1].score/sum:NaN};
+}
+function render(){
+const r=calculate(),[y,n]=r.out;
+$('count-yes').textContent=y.count+' / '+data.length;$('count-no').textContent=n.count+' / '+data.length;$('sample-badge').textContent=data.length+' müşteri';
+$('records').innerHTML=data.map((a,i)=>'<tr><td>'+(i+1)+'</td>'+a.slice(0,3).map(v=>'<td>'+(v?'Evet':'Hayır')+'</td>').join('')+'<td><span class="pill '+(a[3]?'':'no')+'">'+(a[3]?'Ödedi':'Ödemedi')+'</span></td></tr>').join('');
+let names=['Önsel · P(Y)','Düzenli gelir = '+(r.x[0]?'Evet':'Hayır'),'Yüksek borç = '+(r.x[1]?'Evet':'Hayır'),'Gecikme = '+(r.x[2]?'Evet':'Hayır')];
+let ys=[y.prior,...y.parts.map(q=>q.prob)],ns=[n.prior,...n.parts.map(q=>q.prob)];
+$('factors').innerHTML=names.map((label,i)=>'<tr><th scope="row">'+label+'</th><td>'+dec(ys[i])+'</td><td>'+dec(ns[i])+'</td></tr>').join('');
+$('formula-yes').textContent=ys.map(dec).join(' × ')+' = '+dec(y.score);$('formula-no').textContent=ns.map(dec).join(' × ')+' = '+dec(n.score);
+$('zero-demo').textContent='P(gecikme='+(r.x[2]?'var':'yok')+' | ödedi) = ('+y.parts[2].matched+' + '+($('smoothing').checked?'1':'0')+') / ('+y.count+' + '+($('smoothing').checked?'2':'0')+') = '+dec(y.parts[2].prob);
+$('p-yes').textContent=fmt(r.yes);$('p-no').textContent=fmt(r.no);$('prob-fill').style.width=(Number.isFinite(r.yes)?r.yes*100:50)+'%';
+$('prob-track').setAttribute('aria-label','Öder '+fmt(r.yes)+', ödemez '+fmt(r.no));
+let verdict=!Number.isFinite(r.yes)?'Karar belirsiz':r.yes===r.no?'Eşit olasılık':r.yes>r.no?'Öder':'Ödemez';
+$('decision').textContent=verdict==='Karar belirsiz'?'İki skor da sıfır: karşılaştırılamıyor.':'Model kararı: '+verdict;
+$('side-decision').textContent=verdict;$('side-prob').textContent='Öder '+fmt(r.yes)+' · Ödemez '+fmt(r.no);
+$('result-explain').textContent=!Number.isFinite(r.yes)?'İki sınıfta da ham skor sıfır. Laplace düzeltmesini aç veya eğitim örneklerini değiştir.': 'Öder skoru '+dec(y.score)+'; ödemez skoru '+dec(n.score)+'. Her birini toplam skor '+dec(r.sum)+' değerine bölerek posterior olasılıkları elde ettik.';
+}
+function showStage(s){stage=Math.max(0,Math.min(3,s));document.querySelectorAll('[data-stage]').forEach((b,i)=>{if(i===stage)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});
+$('stage-num').textContent='ADIM 0'+(stage+1)+' / 04';$('stage-title').textContent=titles[stage];$('stage-desc').textContent=desc[stage];
+['dataset','math','zero','predict'].forEach((id,i)=>$(id+'-panel').hidden=i!==stage);
+$('graph-title').textContent=['Eğitim kümesi','Bayes çarpanları','Laplace düzeltmesi','Canlı sınıflandırma'][stage];
+$('prev').disabled=stage===0;$('next').textContent=stage===3?'Başa dön ↺':['Olasılıkları hesapla →','Sıfır tuzağına bak →','Yeni kişiyi tahmin et →'][stage];$('progress').textContent=(stage+1)+' / 4';
+render();}
+document.querySelectorAll('[data-stage]').forEach(b=>b.addEventListener('click',()=>showStage(+b.dataset.stage)));
+$('prev').addEventListener('click',()=>showStage(stage-1));$('next').addEventListener('click',()=>showStage(stage===3?0:stage+1));
+inputs.forEach(id=>$(id).addEventListener('change',render));$('smoothing').addEventListener('change',render);
+$('add-yes').addEventListener('click',()=>{data.push([...inputs.map(id=>+$(id).value),1]);render()});
+$('add-no').addEventListener('click',()=>{data.push([...inputs.map(id=>+$(id).value),0]);render()});
+$('reset-data').addEventListener('click',()=>{data=initial.map(r=>[...r]);render()});
+document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{const p={safe:[1,0,0],risky:[0,1,1],surprise:[1,0,1]}[b.dataset.preset];inputs.forEach((id,i)=>$(id).value=p[i]);if(b.dataset.preset==='surprise')showStage(2);else render()}));
+$('present').addEventListener('click',()=>{document.body.classList.toggle('is-presenting');const active=document.body.classList.contains('is-presenting');$('present').setAttribute('aria-pressed',String(active));$('present').textContent=active?'Normal görünüm':'Sunum görünümü'});
+showStage(0);
+})();
+</script></body></html>
