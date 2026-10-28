@@ -1,5 +1,5 @@
 // Only this app's shell is cached. Local Ollama/Anki traffic bypasses this worker.
-const CACHE='suat-flaner-v9-turkish-20261028';
+const CACHE='suat-flaner-v10-anki-permission-20261028';
 const APP=new URL('./',self.location.href).href;
 const INDEX=new URL('index.html',APP).href;
 self.addEventListener('install',event=>{

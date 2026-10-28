@@ -2,7 +2,7 @@
 const{test}=require('node:test');const assert=require('node:assert/strict');const vm=require('node:vm');const fs=require('node:fs');const crypto=require('node:crypto');const path=require('node:path');const ROOT=path.resolve(__dirname,'..');const localHTML=fs.readFileSync(path.join(ROOT,'apps/flaner/flaner.html'),'utf8');const nanoSource=[...localHTML.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)][2][1];const nanoContext={module:{exports:{}}};vm.createContext(nanoContext);vm.runInContext(nanoSource,nanoContext);const Nano=nanoContext.module.exports;
 const tick=()=>new Promise(r=>setImmediate(r));
 function fixture(edition="flaner.html"){
- let ankiError=null;
+ let ankiError=null,permission='granted',requireKey=false,permissionRequested=false;
  const els={},storage=new Map(),calls=[];let revision=0,disk=null;
  class El{constructor(){this.value='';this.children=[];this.classList={add(){},remove(){},toggle(){}};this.dataset={};this.scrollHeight=100;this.clientHeight=100;this.scrollTop=0;}set id(id){els[id]=this;}append(...nodes){this.children.push(...nodes);if(!this.value&&nodes[0]?.value)this.value=nodes[0].value;}replaceChildren(){this.children=[];this.value='';}showModal(){}close(){}focus(){}checkValidity(){return true;}}
  let nanoOptions,destroyed=0;
@@ -14,11 +14,11 @@ function fixture(edition="flaner.html"){
    if(url==='/state'){if(!value)return {ok:true,json:async()=>({revision,state:disk})};assert.equal(value.revision,revision);disk=value.state;return {ok:true,json:async()=>({revision:++revision})};}
    if(url.endsWith('/api/tags'))throw Error('Ollama not installed');
    if(url==='/open-chrome')return {ok:true,json:async()=>({url:'http://127.0.0.1:18766'})};
-   if(url==='http://127.0.0.1:8765'){const results={version:6,deckNames:['French'],modelNames:['Basic'],modelFieldNames:['Front','Back'],addNote:12345};return {ok:true,json:async()=>({result:ankiError?null:results[value.action],error:ankiError})};}
+   if(url==='http://127.0.0.1:8765'){if(init.headers?.['Content-Type']!=='text/plain;charset=UTF-8')throw new TypeError('preflight blocked');if(value.action==='requestPermission'){permissionRequested=true;return {ok:true,json:async()=>({result:{permission,requireApikey:requireKey},error:null})};}if(!permissionRequested||permission!=='granted')throw new TypeError('origin blocked');const results={version:6,deckNames:['French'],modelNames:['Basic'],modelFieldNames:['Front','Back'],addNote:12345};return {ok:true,json:async()=>({result:ankiError?null:results[value.action],error:ankiError})};}
    throw Error('Unexpected route '+url);
   }};
  vm.createContext(c);vm.runInContext(fs.readFileSync(path.join(ROOT,'apps/flaner',edition),'utf8').split('<script>').at(-1).split('</script>')[0],c);
- return {setAnkiError:e=>ankiError=e,run:x=>vm.runInContext(x,c),els,calls,storage,get disk(){return disk;},get nanoOptions(){return nanoOptions;},get destroyed(){return destroyed;}};
+ return {setPermission:(p,k=false)=>{permission=p;requireKey=k;},setAnkiError:e=>ankiError=e,run:x=>vm.runInContext(x,c),els,calls,storage,get disk(){return disk;},get nanoOptions(){return nanoOptions;},get destroyed(){return destroyed;}};
 }
 test('Anki full form loads fields, preserves edits on failure, retries and escapes model HTML',async()=>{
  const f=fixture();await tick();await tick();f.run("cardDraft={front:'avoir hâte de',back:'<img src=x>\\nDört gözle beklemek'};openAnki()");
@@ -36,3 +36,8 @@ test('web edition uses Nano without local requests and excludes Anki UI',async()
 });
 
 test('file origin repair command includes null and selected Ollama address',async()=>{const f=fixture();await tick();f.run("location.protocol='file:';state.base='http://127.0.0.1:11434'");f.els.ollamaFix.onclick();assert.match(f.els.ollamaCommand.textContent,/null/);assert.match(f.els.ollamaCommand.textContent,/ollama serve/);assert.equal(f.els.ollamaProbe.href,'http://127.0.0.1:11434/api/tags');assert.match(f.run('defaults.system'),/TÜRKÇE/);});
+
+test('Anki permission runs before lists; denial and required key prevent further requests',async()=>{
+ for(const scenario of ['denied','key']){const f=fixture();await tick();f.setPermission(scenario==='denied'?'denied':'granted',scenario==='key');f.run('openAnki()');await f.els.loadAnki.onclick();const calls=f.calls.filter(c=>c.url==='http://127.0.0.1:8765');assert.equal(calls.length,1);assert.equal(JSON.parse(calls[0].init.body).action,'requestPermission');assert.match(f.els.ankiStatus.textContent,scenario==='key'?/API anahtarı/:/izni verilmedi/);assert.equal(f.els.addAnki.disabled,true);}
+ const f=fixture();await tick();f.run('openAnki()');await f.els.loadAnki.onclick();const calls=f.calls.filter(c=>c.url==='http://127.0.0.1:8765');assert.equal(JSON.parse(calls[0].init.body).action,'requestPermission');assert(calls.every(c=>c.init.headers['Content-Type']==='text/plain;charset=UTF-8'));assert.equal(f.els.addAnki.disabled,false);
+});
