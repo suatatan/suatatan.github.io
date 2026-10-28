@@ -43,6 +43,6 @@ web=web.replace('Türkçe için Ollama’yı seç.','Türkçe için Ollama deste
 (out/'index.html').write_text(web)
 # Keep the old address and existing storage compatible.
 (ROOT/'apps/ollama-local/index.html').write_text(web)
-worker=(ROOT/'apps/ollama-local/sw.js').read_text().replace('v9-turkish-20261028','v10-anki-permission-20261028')
+worker=(ROOT/'apps/ollama-local/sw.js').read_text().replace('v10-anki-permission-20261028','v11-ollama-origin-fix-20261028')
 (ROOT/'apps/ollama-local/sw.js').write_text(worker)
 (out/'sw.js').write_text(worker.replace('suat-ollama-local-','suat-flaner-'))
