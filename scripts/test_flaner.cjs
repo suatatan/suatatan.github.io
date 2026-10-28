@@ -31,6 +31,8 @@ test('Anki full form loads fields, preserves edits on failure, retries and escap
 });
 
 test('web edition uses Nano without local requests and excludes Anki UI',async()=>{
- const f=fixture('index.html');await tick();assert.equal(f.calls.length,0);assert.equal(f.run('state.engine'),'chrome');f.els.prompt.value='Bonjour';await f.els.composer.onsubmit({preventDefault(){}});assert.equal(f.run('current().messages.at(-1).content'),'Bonjour');assert.equal(f.calls.length,0);assert.equal(f.destroyed,1);
+ const f=fixture('index.html');await tick();assert.equal(f.calls.length,0);assert.equal(f.run('state.engine'),'chrome');f.els.prompt.value='Bonjour';await f.els.composer.onsubmit({preventDefault(){}});assert.equal(f.run('current().messages.at(-1).content'),'Bonjour');assert.equal(f.calls.length,0);assert.equal(f.destroyed,1);assert.match(f.nanoOptions.initialPrompts[0].content,/TÜRKÇE/);assert.equal(f.run('current().cfg.chromeLanguage'),'tr');assert.deepEqual(Object.keys(Nano.spec({mode:'french',language:'tr'})),[]);
  const html=fs.readFileSync(path.join(ROOT,'apps/flaner/index.html'),'utf8');assert(!html.includes('id="addAnki"'));assert(!html.includes("action('Anki’ye ekle'"));assert(html.includes('by Dr. Suat ATAN'));
 });
+
+test('file origin repair command includes null and selected Ollama address',async()=>{const f=fixture();await tick();f.run("location.protocol='file:';state.base='http://127.0.0.1:11434'");f.els.ollamaFix.onclick();assert.match(f.els.ollamaCommand.textContent,/null/);assert.match(f.els.ollamaCommand.textContent,/ollama serve/);assert.equal(f.els.ollamaProbe.href,'http://127.0.0.1:11434/api/tags');assert.match(f.run('defaults.system'),/TÜRKÇE/);});
