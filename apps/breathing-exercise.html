@@ -253,8 +253,18 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
     .install-app-button:hover { background: white; }
     .install-app-button:focus-visible { outline: 3px solid #f8e2aa; outline-offset: 3px; }
   </style>
+
+  <style>
+    #breath-reactive-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+    body > :not(#breath-reactive-canvas) { position: relative; z-index: 1; }
+    .reactive-settings { border-top: 1px solid #ffffff37; margin-top: 16px; padding-top: 14px; }
+    .reactive-settings label { display: flex; align-items: center; gap: 9px; font-size: .91rem; cursor: pointer; }
+    .reactive-settings input { accent-color: #bde6bb; width: 18px; height: 18px; }
+    .reactive-settings p { font-size: .79rem; color: #d4e8dd; line-height: 1.45; margin: 9px 0 0; }
+  </style>
 </head>
 <body>
+  <canvas id="breath-reactive-canvas" aria-hidden="true"></canvas>
 <!-- Yandex.Metrika counter -->
 <script src="/js/analytics.js" defer></script>
 <noscript><div><img src="https://mc.yandex.ru/watch/98433671" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -298,6 +308,11 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
       <a id="background-credit" target="_blank" rel="noopener noreferrer" href="https://pixabay.com/photos/forest-sunbeams-sunlight-trees-3448818/">Pixabay · jplenio</a>
     </p>
     <p class="background-status" id="background-status" role="status" aria-live="polite"></p>
+    <div class="reactive-settings">
+      <label for="reactive-background-enabled"><input type="checkbox" id="reactive-background-enabled"><span id="reactive-background-label">Nefes sesimle hareket eden ışıklar</span></label>
+      <p id="reactive-background-hint">Mikrofon yalnızca açıkken kullanılır. Ses kaydedilmez veya gönderilmez. Ortam gürültüsü de hareket oluşturabilir.</p>
+      <p id="reactive-background-status" role="status" aria-live="polite"></p>
+    </div>
     <div class="intention-settings">
       <h3 id="intentions-heading">Niyetlerim</h3>
       <label id="intentions-label" for="intentions-input">Her satırda bir niyet (en fazla 10).</label>
@@ -890,6 +905,123 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
         installEvent = null;
         installButton.hidden = true;
       });
+    })();
+  </script>
+
+  <script>
+    // Optional microphone-reactive ambient canvas. All audio processing stays on device.
+    (() => {
+      const enabled = document.getElementById('reactive-background-enabled');
+      const status = document.getElementById('reactive-background-status');
+      const label = document.getElementById('reactive-background-label');
+      const hint = document.getElementById('reactive-background-hint');
+      const english = new URLSearchParams(location.search).get('lang') === 'en';
+      label.textContent = english ? 'Lights respond to my breathing' : 'Nefes sesimle hareket eden ışıklar';
+      hint.textContent = english
+        ? 'Microphone is used only while enabled. No audio is recorded or uploaded. Other sounds may also affect the animation.'
+        : 'Mikrofon yalnızca açıkken kullanılır. Ses kaydedilmez veya gönderilmez. Ortam sesleri de animasyonu etkileyebilir.';
+      const canvas = document.getElementById('breath-reactive-canvas');
+      const ctx = canvas.getContext('2d', { alpha: true });
+      let stream, audioContext, source, analyser, samples, frame = 0, level = 0, baseline = .008, runId = 0;
+      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      const message = (tr, en) => { status.textContent = english ? en : tr; };
+
+      function resize() {
+        const dpr = Math.min(devicePixelRatio || 1, 2);
+        canvas.width = Math.round(innerWidth * dpr);
+        canvas.height = Math.round(innerHeight * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      function stop() {
+        runId++;
+        cancelAnimationFrame(frame);
+        frame = 0;
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        if (stream) stream.getTracks().forEach(track => track.stop());
+        stream = null;
+        if (source) { try { source.disconnect(); } catch (_) {} }
+        source = null;
+        if (analyser) { try { analyser.disconnect(); } catch (_) {} }
+        analyser = null;
+        if (audioContext) audioContext.close().catch(() => {});
+        audioContext = null;
+        level = 0; baseline = .008;
+      }
+      function animate() {
+        if (!enabled.checked || !analyser || document.hidden) return;
+        analyser.getFloatTimeDomainData(samples);
+        let sum = 0;
+        for (let i = 0; i < samples.length; i++) sum += samples[i] * samples[i];
+        const rms = Math.sqrt(sum / samples.length);
+        // Slowly estimate ambient noise; do not let a loud breath immediately raise the noise floor.
+        baseline += (rms < baseline ? .035 : .001) * (rms - baseline);
+        const target = Math.min(1, Math.max(0, (rms - Math.max(.008, baseline * 1.4)) * 18));
+        level += (target - level) * (target > level ? .18 : .055);
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        const w = innerWidth, h = innerHeight, t = performance.now() * .00035;
+        const amplitude = reducedMotion.matches ? level * .22 : level;
+        for (let i = 0; i < 3; i++) {
+          const x = w * (.25 + i * .26) + Math.sin(t + i * 2) * w * .075 * amplitude;
+          const y = h * (.28 + (i % 2) * .42) + Math.cos(t * .7 + i) * h * .055 * amplitude;
+          const radius = Math.max(w, h) * (.19 + i * .035 + amplitude * .19);
+          const gradient = ctx.createRadialGradient(x, y, radius * .08, x, y, radius);
+          const alpha = .075 + amplitude * .19;
+          gradient.addColorStop(0, 'rgba(125,238,216,' + alpha + ')');
+          gradient.addColorStop(.45, 'rgba(89,199,213,' + (alpha * .35) + ')');
+          gradient.addColorStop(1, 'rgba(89,199,213,0)');
+          ctx.fillStyle = gradient;
+          ctx.fillRect(x-radius,y-radius,radius*2,radius*2);
+        }
+        frame = requestAnimationFrame(animate);
+      }
+      async function start() {
+        if (!enabled.checked || stream) return;
+        if (!navigator.mediaDevices?.getUserMedia) {
+          enabled.checked = false;
+          message('Bu tarayıcıda mikrofon kullanılamıyor. HTTPS gerekir.', 'Microphone unavailable in this browser. HTTPS is required.');
+          return;
+        }
+        const id = ++runId;
+        message('Mikrofon izni bekleniyor…', 'Waiting for microphone permission…');
+        try {
+          const requested = await navigator.mediaDevices.getUserMedia({
+            audio: { echoCancellation: true, noiseSuppression: false, autoGainControl: false },
+            video: false
+          });
+          if (id !== runId || !enabled.checked) { requested.getTracks().forEach(t => t.stop()); return; }
+          stream = requested;
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          analyser = audioContext.createAnalyser();
+          analyser.fftSize = 2048;
+          samples = new Float32Array(analyser.fftSize);
+          source = audioContext.createMediaStreamSource(stream);
+          source.connect(analyser); // No connection to speakers: avoid mic feedback.
+          await audioContext.resume();
+          if (id !== runId || !enabled.checked) { stop(); return; }
+          resize(); animate();
+          message('Etkin · ses yalnızca cihazınızda işleniyor.', 'Active · audio stays on your device.');
+          stream.getAudioTracks().forEach(track => track.addEventListener('ended', () => {
+            enabled.checked = false; stop();
+            message('Mikrofon bağlantısı kesildi.', 'Microphone disconnected.');
+          }, { once: true }));
+        } catch (error) {
+          stop(); enabled.checked = false;
+          message('Mikrofona erişilemedi. Tarayıcı izinlerini kontrol edin.', 'Could not access microphone. Check browser permissions.');
+        }
+      }
+      enabled.addEventListener('change', () => {
+        if (enabled.checked) start();
+        else { stop(); message('Kapalı', 'Off'); }
+      });
+      window.addEventListener('resize', resize);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden && enabled.checked) {
+          enabled.checked = false; stop();
+          message('Sekme arka plana geçtiği için mikrofon kapatıldı.', 'Microphone stopped when the tab became hidden.');
+        }
+      });
+      window.addEventListener('pagehide', stop);
+      message('Kapalı', 'Off');
     })();
   </script>
 </body>
