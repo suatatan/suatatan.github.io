@@ -1,0 +1,300 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101b29">
+<meta name="description" content="A-B tekrar, hız kontrolü, zaman damgalı notlar, bookmark ve isteğe bağlı cihaz içi Fransızca transkripsiyon. Sesler cihazınızda kalır.">
+<title>LoopLab — Akıllı A–B Dinleme</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark;--bg:#0c1421;--panel:#172335;--panel2:#202e43;--line:#35445a;--text:#eef3f9;--muted:#aab9ca;--accent:#67d9b7;--danger:#ff8e98}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(125deg,#10223b 0%,var(--bg) 42%,#101b29 100%);color:var(--text)}
+a{color:var(--accent)}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}
+.wrap{width:min(1100px,calc(100% - 28px));margin:auto;padding:24px 0 80px}
+.top{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:26px}
+.brand{font-size:1.55rem;font-weight:820;letter-spacing:-.04em}.brand em{font-style:normal;color:var(--accent)}
+.subtitle{font-size:.83rem;color:var(--muted);margin-top:3px}.top a{font-size:.86rem;text-decoration:none}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:16px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 30px #0002}
+.stack{display:grid;gap:16px}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.between{justify-content:space-between}
+h2{margin:0 0 14px;font-size:1.04rem}h3{margin:0 0 12px;font-size:.95rem}.muted{color:var(--muted)}.small{font-size:.8rem}
+button,.button{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:10px 13px;transition:background .15s;text-decoration:none;text-align:center}
+button:hover,.button:hover{background:#2a4057}
+button.primary,.button.primary{background:var(--accent);border-color:var(--accent);color:#10242b;font-weight:750}
+button.primary:hover{background:#9ae8d1}.tiny{padding:6px 9px;font-size:.81rem}.danger{color:var(--danger)}
+input[type=text],input[type=number],input[type=time],textarea,select{min-width:0;width:100%;padding:10px 11px;border-radius:10px;color:var(--text);background:#111d2b;border:1px solid var(--line)}
+textarea{resize:vertical;min-height:76px}input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer}
+label{font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.drop{display:block;cursor:pointer;border:1.5px dashed #658276;padding:18px 12px;text-align:center;border-radius:13px;background:#19322e}
+.drop:hover{border-color:var(--accent)}.drop input{display:none}
+.library-item{display:flex;align-items:center;gap:8px;border-radius:10px;padding:9px;margin-top:7px;background:#101c2d;border:1px solid transparent}
+.library-item.active{border-color:var(--accent);background:#16372e}
+.library-item .name{font-size:.83rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;cursor:pointer}
+.library{max-height:310px;overflow:auto}.notice{font-size:.79rem;line-height:1.5;color:var(--muted)}
+.now{font-size:.85rem;overflow-wrap:anywhere}.clock{font-size:.85rem;font-variant-numeric:tabular-nums}
+.play{min-width:120px}.progress{margin:9px 0}
+.controls{display:grid;grid-template-columns:1fr 1fr 1.4fr 1fr 1fr;gap:6px}
+.controls button{padding:12px 4px;font-size:.86rem}
+.rule{height:1px;background:var(--line);margin:18px 0}.pill{font-size:.76rem;background:#1b3d38;color:#adf4df;padding:5px 8px;border-radius:999px}
+.interval{background:#10273a;padding:12px;border-radius:12px;border:1px solid #376071}
+.interval .range{position:relative;height:7px;border-radius:6px;background:#3f5266;margin:3px 0 14px;overflow:hidden}
+.interval .range div{height:100%;background:var(--accent);position:absolute;top:0}
+.item{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:8px;background:#121f30}
+.item p{margin:5px 0;white-space:pre-wrap;overflow-wrap:anywhere}.item-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.info{padding:10px 12px;background:#19342e;border-radius:10px;color:#c4f4e7;font-size:.82rem}
+.warning{padding:10px 12px;background:#443121;border-radius:10px;color:#ffe1b9;font-size:.82rem}
+.status{font-size:.81rem;margin-top:7px;min-height:1.1em}
+#transcriptText{min-height:100px}
+details summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+footer{text-align:center;padding:24px;color:var(--muted);font-size:.75rem}
+@media(max-width:750px){.layout{grid-template-columns:1fr}.wrap{padding-top:14px}.top{margin-bottom:18px}.card{padding:15px}.library{max-height:135px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div><div class="brand">Loop<em>Lab</em> <span style="font-size:.75rem;font-weight:500;color:var(--muted)">/ écoute</span></div><div class="subtitle">Duy, yakala, tekrar et.</div></div><a href="/apps/">← Uygulamalar</a></header>
+<div class="layout">
+<aside class="stack">
+<section class="card">
+<h2>Ses kütüphanem</h2>
+<label class="drop">＋ MP3 / ses dosyası ekle <input type="file" id="file" accept="audio/*,.mp3,.m4a,.wav,.ogg" multiple></label>
+<p class="notice">Ses dosyaları bir sunucuya gönderilmez. İzin verdiğin sürece bu cihazdaki tarayıcı veritabanında saklanır.</p>
+<div id="library" class="library"></div><div id="storage" class="status muted"></div>
+</section>
+<section class="card">
+<h2>Gizlilik ve yedek</h2>
+<div class="info">🔒 Dosyalar, notlar ve bookmark'lar yalnızca bu tarayıcıda (IndexedDB). Başka cihazda kendiliğinden görünmez.</div>
+<p class="notice">Tarayıcı verileri temizlenirse kayıtların silinebilir. Yedek dosyanı indirmeni öneririm.</p>
+<div class="grid2"><button id="export">Notları yedekle</button><label class="button" style="margin:0">Yedeği yükle<input type="file" accept="application/json,.json" id="import" hidden></label></div>
+</section>
+</aside>
+<main class="stack">
+<section class="card">
+<div class="row between"><h2 style="margin:0">Dinleme oynatıcısı</h2><span class="pill">A–B LOOP</span></div>
+<p id="fileName" class="now muted">Başlamak için bir ses dosyası seç.</p>
+<div class="row between clock"><span id="current">00:00.0</span><span id="duration">00:00.0</span></div>
+<input class="progress" id="seek" type="range" min="0" max="1000" value="0" aria-label="Ses konumunu değiştir">
+<div class="controls">
+<button id="prev" aria-label="Önceki 5 saniye">−5 sn</button><button id="back" aria-label="Önceki 2 saniye">−2 sn</button><button id="play" class="primary play">▶ Oynat</button><button id="forward" aria-label="Sonraki 2 saniye">+2 sn</button><button id="next" aria-label="Sonraki 5 saniye">+5 sn</button>
+</div>
+<div class="rule"></div>
+<div class="row between"><h3 style="margin:0">Hız kontrolü</h3><strong id="speedLabel">1.00×</strong></div>
+<input id="speed" type="range" min="0.5" max="2" step="0.05" value="1" aria-label="Dinleme hızı">
+<div class="row between muted small"><span>0.50×</span><span>1.00×</span><span>1.50×</span><span>2.00×</span></div>
+</section>
+<section class="card">
+<div class="row between"><h2 style="margin:0">Tekrarlanacak aralık</h2><span class="muted small" id="length">—</span></div>
+<p class="notice">Sesi istediğin yere getirip A ve B'yi işaretle veya süreleri kendin yaz.</p>
+<div class="grid2">
+<div><label for="aInput">A / başlangıç (dk:sn)</label><input id="aInput" type="text" inputmode="decimal" value="00:00.0" aria-label="A süresi"></div>
+<div><label for="bInput">B / bitiş (dk:sn)</label><input id="bInput" type="text" inputmode="decimal" value="00:00.0" aria-label="B süresi"></div>
+</div>
+<div class="grid2" style="margin-top:9px"><button id="setA">⟵ Şimdi A</button><button id="setB">Şimdi B ⟶</button></div>
+<div class="interval" style="margin-top:13px"><div class="range"><div id="intervalBar" style="width:0;left:0"></div></div>
+<div class="grid2">
+<div><label for="repeatCount">Tekrar adedi</label><input id="repeatCount" type="number" min="1" max="9999" value="10"></div>
+<div><label for="infinite">Mod</label><label style="padding:9px 2px;color:var(--text)"><input id="infinite" type="checkbox"> Sonsuz tekrar</label></div>
+</div>
+<div class="row between" style="margin-top:12px"><button id="start" class="primary">↻ Döngüyü başlat</button><button id="stop">■ Durdur</button><span id="counter" class="small muted">Hazır</span></div>
+</div>
+</section>
+<section class="card">
+<h2>Bookmark'lar</h2>
+<div class="row"><input id="bookmarkLabel" type="text" placeholder="Örn. liaison, sorunun başlangıcı" style="flex:1;min-width:170px"><button id="addBookmark" class="primary">＋ Bu ana ekle</button></div>
+<div id="bookmarks"></div>
+<div class="rule"></div>
+<h2>Zaman damgalı notlar</h2>
+<textarea id="note" placeholder="Ne duydun, neyi anlamadın?"></textarea>
+<div class="row between"><span id="noteStamp" class="muted small">Şimdiki konum: 00:00</span><button id="addNote" class="primary">＋ Notu kaydet</button></div>
+<div id="notes"></div>
+</section>
+<section class="card">
+<div class="row between"><h2 style="margin:0">Seçili bölümü yazıya dök</h2><span class="pill">Yerel AI · deneysel</span></div>
+<p class="notice">A–B aralığını (en fazla 30 saniye) cihazında çalışan Whisper modeliyle Fransızca metne çevirmeyi dener. İlk kullanımda model internetten indirilir; ses dosyan sunucuya yüklenmez. Özellikle telefonda yavaş olabilir. Sonucu mutlaka dinleyerek kontrol et.</p>
+<button id="transcribe" class="primary">✨ A–B aralığını yazıya dök</button>
+<div id="transcribeStatus" class="status muted" role="status"></div>
+<label for="transcriptText" style="margin-top:10px">Metin (düzenlenebilir)</label>
+<textarea id="transcriptText" placeholder="Transkripsiyon sonucu veya kendi duyduğun metin…"></textarea>
+<div class="row between"><span id="transcriptStamp" class="small muted">Aralık: —</span><button id="saveTranscript">Metni not olarak kaydet</button></div>
+</section>
+</main>
+</div>
+<footer>LoopLab · Dr. Suat ATAN · Ses dosyalarına uzaktan erişim yok. · <a href="/apps/">Diğer uygulamalar</a></footer>
+</div>
+<audio id="audio" preload="metadata"></audio>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const audio=$('audio');
+const DB_NAME='looplab_local_v1',STORE='recordings';
+let db=null,records=[],current=null,url=null,repeat=null,lastRepeatTick=-1,transcriber=null;
+let A=0,B=0,dbAvailable=true;
+const format=s=>{if(!Number.isFinite(s)||s<0)s=0;const m=Math.floor(s/60),sec=Math.floor(s%60),dec=Math.floor((s%1)*10);return String(m).padStart(2,'0')+':'+String(sec).padStart(2,'0')+'.'+dec};
+const parse=s=>{const p=String(s).replace(',','.').trim().split(':').map(Number);if(p.some(x=>!Number.isFinite(x)||x<0)||p.length>3)return NaN;return p.reduce((sum,v)=>sum*60+v,0)};
+const len=()=>Number.isFinite(audio.duration)?audio.duration:0;
+const clamp=(v,min,max)=>Math.min(max,Math.max(min,v));
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const key=f=>'file:'+f.name+':'+f.size+':'+f.lastModified;
+const notify=(msg)=>{$('storage').textContent=msg};
+function openDB(){
+ return new Promise((resolve,reject)=>{if(!('indexedDB' in window))return reject(Error('IndexedDB yok'));
+ const request=indexedDB.open(DB_NAME,1);request.onupgradeneeded=()=>{if(!request.result.objectStoreNames.contains(STORE))request.result.createObjectStore(STORE,{keyPath:'id'})};
+ request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error)});
+}
+function dbAction(mode,fn){return new Promise((resolve,reject)=>{if(!db)return reject(Error('Veritabanı kapalı'));const t=db.transaction(STORE,mode),store=t.objectStore(STORE);let value;let req;try{req=fn(store)}catch(e){reject(e);return}if(req){req.onsuccess=()=>{value=req.result};req.onerror=()=>reject(req.error)}t.oncomplete=()=>resolve(value);t.onerror=()=>reject(t.error)})}
+async function persist(r){if(!r)return;if(db){try{await dbAction('readwrite',s=>s.put(r));notify('Cihazda saklandı ✓')}catch(e){notify('Saklama başarısız (depolama dolu olabilir): '+e.message)}}else notify('Geçici oturum: bu cihazda kalıcı saklama kullanılamıyor')}
+async function reload(){if(!db)return;records=await dbAction('readonly',s=>s.getAll());records.sort((a,b)=>(b.created||0)-(a.created||0));drawLibrary();notify(records.length+' dosya cihazda saklanıyor')}
+function drawLibrary(){
+ const root=$('library');root.replaceChildren();
+ if(!records.length){const p=document.createElement('p');p.className='notice';p.textContent='Henüz dosya eklemedin.';root.append(p);return}
+ records.forEach(r=>{const row=document.createElement('div');row.className='library-item'+(current&&r.id===current.id?' active':'');
+ const name=document.createElement('span');name.className='name';name.title=r.name;name.textContent=r.name;name.onclick=()=>select(r.id);
+ const del=document.createElement('button');del.className='tiny danger';del.textContent='×';del.title='Cihazdan sil';del.onclick=async()=>{if(!confirm('Bu ses kaydı, notları ve bookmarkları cihazdan silinsin mi?'))return; if(db)await dbAction('readwrite',s=>s.delete(r.id));records=records.filter(x=>x.id!==r.id);if(current&&current.id===r.id){audio.pause();if(url)URL.revokeObjectURL(url);url=null;current=null;audio.removeAttribute('src');audio.load();$('fileName').textContent='Başlamak için bir ses dosyası seç.';drawMeta()}drawLibrary()};
+ row.append(name,del);root.append(row)});
+}
+async function select(id){
+ const r=records.find(x=>x.id===id);if(!r)return;
+ stopLoop();audio.pause();if(url)URL.revokeObjectURL(url);current=r;url=URL.createObjectURL(r.blob);
+ audio.src=url;audio.playbackRate=Number($('speed').value);audio.load();A=0;B=0;$('fileName').textContent=r.name;
+ drawLibrary();drawEntries();drawMeta();$('transcriptText').value='';
+}
+function drawMeta(){
+ $('current').textContent=format(audio.currentTime||0);$('duration').textContent=format(len());if(document.activeElement!==$('aInput'))$('aInput').value=format(A);
+ if(document.activeElement!==$('bInput'))$('bInput').value=format(B);$('length').textContent=format(Math.max(0,B-A))+' uzunluk';
+ $('intervalBar').style.left=(len()?100*A/len():0)+'%';$('intervalBar').style.width=(len()?100*Math.max(0,B-A)/len():0)+'%';
+ $('noteStamp').textContent='Şimdiki konum: '+format(audio.currentTime||0);$('transcriptStamp').textContent='Aralık: '+format(A)+' – '+format(B);
+ $('seek').value=len()?Math.round(1000*(audio.currentTime||0)/len()):0;
+}
+function updateAB(a,b){
+ const d=len();if(!d)return;A=clamp(a,0,d);B=clamp(b,0,d);
+ if(B<=A){$('length').textContent='B, A noktasından sonra olmalı';}
+ drawMeta();
+}
+function validAB(){if(!current||!len()){alert('Önce ses dosyası yükle.');return false}if(B<=A+.05){alert('B, A noktasından sonra olmalı.');return false}return true}
+function stopLoop(msg){repeat=null;lastRepeatTick=-1;$('counter').textContent=msg||'Hazır'}
+function startLoop(){
+ if(!validAB())return;
+ const max=$('infinite').checked?Infinity:clamp(parseInt($('repeatCount').value,10)||1,1,9999);
+ repeat={a:A,b:B,max,completed:0};lastRepeatTick=-1;
+ audio.currentTime=A;$('counter').textContent='0 / '+(Number.isFinite(max)?max:'∞');
+ audio.play().catch(e=>{$('counter').textContent='Oynatılamadı: '+e.message});
+}
+function loopTick(){
+ if(!repeat)return;
+ if(audio.currentTime>=repeat.b-.03 && lastRepeatTick!==repeat.completed){
+  lastRepeatTick=repeat.completed;repeat.completed++;
+  if(repeat.completed>=repeat.max){const done=repeat.completed;audio.pause();audio.currentTime=repeat.b;stopLoop(done+' tekrar tamamlandı');return}
+  $('counter').textContent=repeat.completed+' / '+(Number.isFinite(repeat.max)?repeat.max:'∞');
+  audio.currentTime=repeat.a;
+ }
+}
+function addEntry(type){
+ if(!current)return alert('Önce bir ses kaydı seç.');
+ const input=type==='bookmarks'?$('bookmarkLabel'):$('note'),txt=input.value.trim();
+ if(!txt)return alert('Bir açıklama yaz.');
+ current[type]=current[type]||[];current[type].push({id:crypto.randomUUID(),time:audio.currentTime||0,text:txt,created:Date.now()});
+ current[type].sort((a,b)=>a.time-b.time);input.value='';persist(current);drawEntries();
+}
+function drawEntries(){
+ for(const type of ['bookmarks','notes']){
+ const root=$(type);root.replaceChildren();
+ if(!current||!(current[type]||[]).length){root.innerHTML='<p class="notice">Henüz kayıt yok.</p>';continue}
+ (current[type]||[]).forEach(item=>{
+ const outer=document.createElement('div');outer.className='item';
+ const head=document.createElement('div');head.className='item-head';
+ const jump=document.createElement('button');jump.className='tiny';jump.textContent='▶ '+format(item.time);jump.onclick=()=>{stopLoop();audio.currentTime=clamp(item.time,0,len());audio.play().catch(()=>{})};
+ const del=document.createElement('button');del.className='tiny danger';del.textContent='Sil';del.onclick=()=>{if(!confirm('Bu kayıt silinsin mi?'))return;current[type]=current[type].filter(x=>x.id!==item.id);persist(current);drawEntries()};
+ const p=document.createElement('p');p.textContent=item.text;
+ head.append(jump,del);outer.append(head,p);root.append(outer);
+ });
+ }
+}
+function download(name,content,mime){
+ const blob=new Blob([content],{type:mime}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)
+}
+$('file').onchange=async e=>{
+ const files=Array.from(e.target.files||[]);let added=0;
+ for(const f of files){
+  if(!f.type.startsWith('audio/')&&!/\.(mp3|m4a|wav|ogg|aac|flac)$/i.test(f.name))continue;
+  const id=key(f);if(records.some(r=>r.id===id))continue;
+  const r={id,name:f.name,blob:f,size:f.size,created:Date.now(),bookmarks:[],notes:[]};
+  records.unshift(r);added++;await persist(r);
+ }
+ drawLibrary();if(!current&&added)select(records[0].id);e.target.value='';
+};
+$('play').onclick=()=>{if(!current)return;if(audio.paused)audio.play().catch(()=>{});else audio.pause()};
+$('back').onclick=()=>{audio.currentTime=clamp(audio.currentTime-2,0,len())};
+$('forward').onclick=()=>{audio.currentTime=clamp(audio.currentTime+2,0,len())};
+$('prev').onclick=()=>{audio.currentTime=clamp(audio.currentTime-5,0,len())};
+$('next').onclick=()=>{audio.currentTime=clamp(audio.currentTime+5,0,len())};
+$('seek').oninput=e=>{if(len())audio.currentTime=len()*Number(e.target.value)/1000};
+$('speed').oninput=e=>{audio.playbackRate=Number(e.target.value);$('speedLabel').textContent=Number(e.target.value).toFixed(2)+'×';localStorage.setItem('looplab_speed',e.target.value)};
+$('setA').onclick=()=>updateAB(audio.currentTime,Math.max(B,audio.currentTime+.1));
+$('setB').onclick=()=>updateAB(A,audio.currentTime);
+$('aInput').onchange=e=>{const v=parse(e.target.value);if(Number.isFinite(v))updateAB(v,B);else drawMeta()};
+$('bInput').onchange=e=>{const v=parse(e.target.value);if(Number.isFinite(v))updateAB(A,v);else drawMeta()};
+$('start').onclick=startLoop;$('stop').onclick=()=>{audio.pause();stopLoop('Durduruldu')};
+$('addBookmark').onclick=()=>addEntry('bookmarks');$('addNote').onclick=()=>addEntry('notes');
+audio.onloadedmetadata=()=>{if(!current)return;B=len();drawMeta()};
+audio.ontimeupdate=()=>{loopTick();drawMeta()};
+audio.onplay=()=>{$('play').textContent='Ⅱ Duraklat'};
+audio.onpause=()=>{$('play').textContent='▶ Oynat'};
+audio.onended=()=>{if(repeat){loopTick();if(repeat){audio.currentTime=repeat.a;audio.play().catch(()=>{})}}};
+$('infinite').onchange=e=>{$('repeatCount').disabled=e.target.checked};
+$('export').onclick=()=>{
+ const data={version:1,created:new Date().toISOString(),recordings:records.map(r=>({id:r.id,name:r.name,size:r.size,bookmarks:r.bookmarks||[],notes:r.notes||[]}))};
+ download('looplab-notlar.json',JSON.stringify(data,null,2),'application/json');
+};
+$('import').onchange=async e=>{
+ try{const f=e.target.files[0];if(!f)return;const data=JSON.parse(await f.text());if(!Array.isArray(data.recordings))throw Error('Geçersiz yedek');
+ let n=0;for(const saved of data.recordings){const r=records.find(x=>x.id===saved.id);if(!r)continue;r.bookmarks=Array.isArray(saved.bookmarks)?saved.bookmarks:[];r.notes=Array.isArray(saved.notes)?saved.notes:[];await persist(r);n++}
+ drawEntries();alert(n+' eşleşen ses kaydının notları geri yüklendi. Ses dosyalarını ayrıca yüklemelisin.');
+ }catch(err){alert('Yedek okunamadı: '+err.message)}e.target.value='';
+};
+$('saveTranscript').onclick=()=>{
+ if(!current)return alert('Önce ses dosyası seç.');
+ const txt=$('transcriptText').value.trim();if(!txt)return alert('Kaydedilecek metin yok.');
+ current.notes=current.notes||[];current.notes.push({id:crypto.randomUUID(),time:A,text:'[Transkript '+format(A)+'–'+format(B)+']\n'+txt,created:Date.now()});current.notes.sort((a,b)=>a.time-b.time);
+ persist(current);drawEntries();$('transcribeStatus').textContent='Metin zaman damgalı notlara kaydedildi ✓';
+};
+$('transcribe').onclick=async()=>{
+ if(!validAB())return;
+ if(B-A>30)return alert('Yerel tanıma için en fazla 30 saniyelik aralık seç.');
+ if(!('OfflineAudioContext' in window))return alert('Tarayıcın yerel ses işlemeyi desteklemiyor.');
+ const button=$('transcribe'),status=$('transcribeStatus');
+ button.disabled=true;status.textContent='Hazırlanıyor… Model ilk seferde büyük bir indirme yapabilir.';
+ try{
+  if(!transcriber){
+    status.textContent='Yerel Whisper modeli indiriliyor/hazırlanıyor. Biraz sürebilir…';
+    const mod=await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.2');
+    transcriber=await mod.pipeline('automatic-speech-recognition','Xenova/whisper-tiny',{dtype:'q8'});
+  }
+  status.textContent='Ses cihazda çözümleniyor…';
+  const file=current.blob;
+  const audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  let decoded;
+  try{decoded=await audioCtx.decodeAudioData(await file.arrayBuffer())}finally{audioCtx.close()}
+  const duration=Math.min(B-A,decoded.duration-A);
+  if(duration<=0)throw Error('Geçersiz ses aralığı');
+  const offline=new OfflineAudioContext(1,Math.ceil(duration*16000),16000);
+  const src=offline.createBufferSource();src.buffer=decoded;src.connect(offline.destination);src.start(0,A,duration);
+  const pcm=(await offline.startRendering()).getChannelData(0);
+  status.textContent='Fransızca konuşma yerel modelde yazıya dökülüyor…';
+  const out=await transcriber(pcm,{language:'french',task:'transcribe'});
+  $('transcriptText').value=out.text||'';
+  status.textContent='Tamamlandı ✓ Metni kontrol edip kaydedebilirsin.';
+ }catch(err){status.textContent='Bu cihazda transkripsiyon çalışmadı: '+(err?.message||err)+'. Manuel metin yazabilirsin.'}
+ finally{button.disabled=false}
+};
+(async()=>{try{db=await openDB();await reload()}catch(e){dbAvailable=false;notify('Kalıcı depolama kullanılamıyor. Dosyalar bu oturumda kalır.');drawLibrary()}
+ const s=Number(localStorage.getItem('looplab_speed'));if(s>=.5&&s<=2){$('speed').value=s;audio.playbackRate=s;$('speedLabel').textContent=s.toFixed(2)+'×'}
+ drawMeta();})();
+})();
+</script>
+</body>
+</html>
