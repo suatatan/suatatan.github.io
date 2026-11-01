@@ -255,12 +255,36 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
   </style>
 
   <style>
-    #breath-reactive-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
-    body > :not(#breath-reactive-canvas) { position: relative; z-index: 1; }
+    #breath-reactive-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; border-radius: 0; box-shadow: none; mix-blend-mode: screen; }
+    body > .header, body > #canvas-container { position: relative; z-index: 1; }
     .reactive-settings { border-top: 1px solid #ffffff37; margin-top: 16px; padding-top: 14px; }
     .reactive-settings label { display: flex; align-items: center; gap: 9px; font-size: .91rem; cursor: pointer; }
     .reactive-settings input { accent-color: #bde6bb; width: 18px; height: 18px; }
     .reactive-settings p { font-size: .79rem; color: #d4e8dd; line-height: 1.45; margin: 9px 0 0; }
+
+    body { padding: 12px 14px 86px; min-height: 100svh; }
+    .header { margin: 0 0 10px; }
+    .header h1 { font-size: clamp(1.85rem, 4vw, 2.6rem); margin: 0 0 4px; }
+    .header h1:before { width: 28px; height: 28px; margin-bottom: 5px; }
+    .header p { margin: 0 0 5px; font-size: .9rem; }
+    #canvas-container { padding: 13px 16px 17px; width: min(430px, 100%); }
+    #canvas-stage { width: min(315px, 100%); margin-bottom: 5px; }
+    #instructions { font-size: 1.12rem; }
+    #timer { font-size: 1rem; }
+    .session-length-control { margin-bottom: 9px; }
+    .sound-controls { margin-top: 10px; }
+    .floating-actions { position: fixed; bottom: calc(15px + env(safe-area-inset-bottom, 0px)); right: 15px; z-index: 1002; }
+    .floating-actions .blog-toggle { display: inline-flex; align-items: center; padding: 10px 15px;
+      border: 1px solid #ffffff70; border-radius: 40px; background: #051816c5;
+      color: white; text-decoration: none; font-size: .91rem; font-weight: 600; backdrop-filter: blur(8px); }
+    .floating-actions .blog-toggle:hover { background: #174e3d; }
+    @media (max-width: 520px) {
+      body { padding: max(9px, env(safe-area-inset-top, 0px)) 10px 90px; }
+      #canvas-container { padding: 11px 10px 15px; }
+      #canvas-stage { width: min(275px, 100%); }
+      .floating-actions { left: 8px; right: 8px; gap: 5px; justify-content: center; }
+      .floating-actions .blog-toggle,.floating-actions .stats-toggle,.floating-actions .settings-toggle { padding: 9px 10px; font-size: .79rem; }
+    }
   </style>
 </head>
 <body>
@@ -282,7 +306,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
     <span id="background-settings-label">Arka plan</span>
   </button>
 
-  <button type="button" id="stats-toggle" class="stats-toggle" aria-controls="stats-panel" aria-expanded="false">İstatistikler</button></div>
+  <button type="button" id="stats-toggle" class="stats-toggle" aria-controls="stats-panel" aria-expanded="false">İstatistikler</button><a class="blog-toggle" id="blog-link" href="/sa%C4%9Fl%C4%B1k/wellness/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html">↗ Nefesin bilimi</a></div>
   <section id="background-settings" class="background-picker" aria-labelledby="background-picker-title" hidden>
     <h2 id="background-picker-title">Arka plan seçin</h2>
     <div class="background-options" role="group" aria-label="Orman fotoğrafları" id="background-options">
@@ -352,20 +376,6 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
       </div>
       <p id="sound-hint"></p>
       <p id="sound-status" role="status" aria-live="polite"></p>
-    </div>
-  </div>
-
-  <div class="description">
-    <p id="description-text">Bu egzersiz, 4-4-4-4 nefes tekniğini kullanır: 4 saniye nefes alın, 4 saniye tutun, 4 saniye verin, 4 saniye tutun. Dairenin büyümesini ve küçülmesini takip ederek nefes alıp verin.</p>
-    
-    <div style="margin-top: 25px; padding: 20px; background: rgba(255, 255, 255, 0.15); border-radius: 10px; backdrop-filter: blur(5px);">
-      <h3 style="margin: 0 0 10px 0; color: #fff;" id="more-info-title">📚 Daha Fazla Bilgi</h3>
-      <p style="margin: 0 0 15px 0; color: #fff;" id="more-info-text">Nefes egzersizlerinin bilimsel faydaları ve 4-4-4-4 tekniğinin detayları hakkında:</p>
-      <a href="/sa%C4%9Fl%C4%B1k/wellness/2025/07/17/nefes-egzersizi-4-4-4-4-teknigi.html" 
-         style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-weight: bold; transition: all 0.3s;"
-         id="blog-link">
-        🔬 Nefes Egzersizinin Bilimi
-      </a>
     </div>
   </div>
 
@@ -837,10 +847,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
       write('app-title',currentTexts.title);write('app-subtitle',currentTexts.subtitle);
       write('back-link',currentTexts.backLink);
       document.getElementById('back-link').href=lang==='en'?'/index-en.html':'/';
-      write('description-text',currentTexts.description);
-      write('more-info-title',currentTexts.moreInfoTitle);
-      write('more-info-text',currentTexts.moreInfoText);
-      write('blog-link',currentTexts.moreInfoLink);
+      write('blog-link',lang==='en'?'↗ Breathing science':'↗ Nefesin bilimi');
       document.getElementById('blog-link').href=currentTexts.blogUrl;
       const canvas=createCanvas(400,400);canvas.parent('canvas-stage');frameRate(60);updateUI();
     }
@@ -965,12 +972,19 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
           const y = h * (.28 + (i % 2) * .42) + Math.cos(t * .7 + i) * h * .055 * amplitude;
           const radius = Math.max(w, h) * (.19 + i * .035 + amplitude * .19);
           const gradient = ctx.createRadialGradient(x, y, radius * .08, x, y, radius);
-          const alpha = .075 + amplitude * .19;
+          const alpha = .16 + amplitude * .50;
           gradient.addColorStop(0, 'rgba(125,238,216,' + alpha + ')');
-          gradient.addColorStop(.45, 'rgba(89,199,213,' + (alpha * .35) + ')');
+          gradient.addColorStop(.45, 'rgba(89,199,213,' + (alpha * .50) + ')');
           gradient.addColorStop(1, 'rgba(89,199,213,0)');
           ctx.fillStyle = gradient;
           ctx.fillRect(x-radius,y-radius,radius*2,radius*2);
+          if (amplitude > .025 && !reducedMotion.matches) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius * (.24 + amplitude * .34), 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(165,255,229,' + Math.min(.65, amplitude * .65) + ')';
+            ctx.lineWidth = 2 + amplitude * 5;
+            ctx.stroke();
+          }
         }
         frame = requestAnimationFrame(animate);
       }
