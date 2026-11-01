@@ -255,7 +255,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
   </style>
 
   <style>
-    #breath-reactive-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; border-radius: 0; box-shadow: none; mix-blend-mode: screen; }
+    #breath-reactive-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; border-radius: 0; box-shadow: none; }
     body > .header, body > #canvas-container { position: relative; z-index: 1; }
     .reactive-settings { border-top: 1px solid #ffffff37; margin-top: 16px; padding-top: 14px; }
     .reactive-settings label { display: flex; align-items: center; gap: 9px; font-size: .91rem; cursor: pointer; }
@@ -288,7 +288,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
   </style>
 </head>
 <body>
-  <canvas id="breath-reactive-canvas" aria-hidden="true"></canvas>
+  <canvas id="breath-reactive-canvas" aria-hidden="true" hidden></canvas>
 <!-- Yandex.Metrika counter -->
 <script src="/js/analytics.js" defer></script>
 <noscript><div><img src="https://mc.yandex.ru/watch/98433671" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -333,7 +333,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
     </p>
     <p class="background-status" id="background-status" role="status" aria-live="polite"></p>
     <div class="reactive-settings">
-      <label for="reactive-background-enabled"><input type="checkbox" id="reactive-background-enabled"><span id="reactive-background-label">Nefes sesimle hareket eden ışıklar</span></label>
+      <label for="reactive-background-enabled"><input type="checkbox" id="reactive-background-enabled"><span id="reactive-background-label">Dönen enerji küresi</span></label>
       <p id="reactive-background-hint">Mikrofon yalnızca açıkken kullanılır. Ses kaydedilmez veya gönderilmez. Ortam gürültüsü de hareket oluşturabilir.</p>
       <p id="reactive-background-status" role="status" aria-live="polite"></p>
     </div>
@@ -916,126 +916,214 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
   </script>
 
   <script>
-    // Optional microphone-reactive ambient canvas. All audio processing stays on device.
+    // Optional autonomous energy-orb animation. No microphone or external calls.
     (() => {
-      const enabled = document.getElementById('reactive-background-enabled');
-      const status = document.getElementById('reactive-background-status');
+      const toggle = document.getElementById('reactive-background-enabled');
       const label = document.getElementById('reactive-background-label');
       const hint = document.getElementById('reactive-background-hint');
+      const status = document.getElementById('reactive-background-status');
+      let canvas = document.getElementById('breath-reactive-canvas');
       const english = new URLSearchParams(location.search).get('lang') === 'en';
-      label.textContent = english ? 'Lights respond to my breathing' : 'Nefes sesimle hareket eden ışıklar';
-      hint.textContent = english
-        ? 'Microphone is used only while enabled. No audio is recorded or uploaded. Other sounds may also affect the animation.'
-        : 'Mikrofon yalnızca açıkken kullanılır. Ses kaydedilmez veya gönderilmez. Ortam sesleri de animasyonu etkileyebilir.';
-      const canvas = document.getElementById('breath-reactive-canvas');
-      const ctx = canvas.getContext('2d', { alpha: true });
-      let stream, audioContext, source, analyser, samples, frame = 0, level = 0, baseline = .008, runId = 0;
       const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      const storageKey = 'breathe-energy-orb-enabled-v1';
+      label.textContent = english ? 'Rotating energy sphere' : 'Dönen enerji küresi';
+      hint.textContent = english
+        ? 'A quiet, self-running animation with moving light inside a sphere. No microphone required.'
+        : 'Kendi kendine dönen, içinde ışık akımları olan sessiz animasyon. Mikrofon gerekmez.';
       const message = (tr, en) => { status.textContent = english ? en : tr; };
+      const vertex = String.raw`
+        attribute vec2 a_position;
+        varying vec2 v_uv;
+        void main() {
+          v_uv = a_position * .5 + .5;
+          gl_Position = vec4(a_position, 0., 1.);
+        }
+      `;
+      const fragment = String.raw`
+        precision highp float;
+        varying vec2 v_uv;
+        uniform vec2 u_resolution;
+        uniform float u_time;
+        float hash(vec2 p) {
+          return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+        }
+        void main() {
+          vec2 uv = v_uv;
+          float aspect = u_resolution.x / u_resolution.y;
+          vec2 p = (uv - vec2(.5)) * vec2(aspect, 1.);
+          float wide = step(1.25, aspect);
+          vec2 center = mix(vec2(0., -.015), vec2(aspect * .25, .005), wide);
+          vec2 q = p - center;
+          float d = length(q);
+          float radius = .41;
+          float t = u_time * .17;
 
+          vec3 color = mix(vec3(.008,.026,.048), vec3(.009,.055,.065), smoothstep(.75,0.,length(p)));
+          float halo = exp(-max(d-radius,0.)*12.) * (1.-smoothstep(radius+.27,radius+.85,d));
+          color += vec3(.025,.29,.32) * halo * .4;
+
+          // Deliberately slow orbital rings, appearing in front of and behind the sphere.
+          float ring = abs(length(vec2(q.x, q.y*2.8)) - radius*.95);
+          float ringGlow = exp(-ring*48.) * .34 + exp(-ring*12.) * .09;
+          color += vec3(.14,.63,.61) * ringGlow * (0.65+0.35*sin(t*3.+q.x*9.));
+
+          if (d < radius) {
+            vec2 xy = q / radius;
+            float z = sqrt(max(.0001,1.-dot(xy,xy)));
+            vec3 n = vec3(xy,z);
+            float angle = t;
+            vec3 rotated = vec3(
+              n.x*cos(angle)+n.z*sin(angle),
+              n.y,
+              n.z*cos(angle)-n.x*sin(angle)
+            );
+            float turbulence = sin(rotated.x*13. + sin(rotated.y*10. - t*3.)*1.8)
+                             + sin(rotated.y*17. + rotated.z*6. + t*4.)*.7
+                             + sin((rotated.x+rotated.y)*25.-t*5.)*.4;
+            float energy = pow(max(0., .5+.5*sin(turbulence*2.7 + rotated.z*5.)), 8.);
+            float filament = pow(max(0.,1.-abs(sin(rotated.y*14.+rotated.x*9.+sin(rotated.z*8.+t*3.)))),19.);
+            float core = exp(-(xy.x*xy.x+xy.y*xy.y)*7.);
+            vec3 orb = mix(vec3(.010,.17,.20),vec3(.045,.39,.43),max(0.,n.z));
+            orb += vec3(.15,.85,.84) * energy*.72;
+            orb += vec3(.48,.86,1.) * filament * .68;
+            orb += vec3(.07,.34,.46) * core;
+            float light = max(.14,dot(n,normalize(vec3(-.6,.8,1.7))));
+            orb *= .56 + light*.76;
+            float fresnel = pow(1.-z,3.);
+            orb += vec3(.23,.96,.92)*fresnel*1.4;
+            orb += vec3(.65,.91,1.)*pow(max(0.,z),18.)*.38;
+            color = mix(color,orb,(1.0-smoothstep(radius-.008,radius,d)));
+          }
+
+          // Distant motes move slowly, but never flash rapidly.
+          for (int i=0;i<12;i++) {
+            float fi = float(i);
+            vec2 seed = vec2(fi*3.17,fi*7.91);
+            vec2 star = vec2(hash(seed),hash(seed+2.));
+            vec2 sp = (star-.5)*vec2(aspect,1.);
+            sp.y = mod(sp.y + t*(.01+hash(seed+3.)*.015)+.5,1.)-.5;
+            float sd = length(p-sp);
+            float blink = .55+.45*sin(t*2.+fi);
+            color += vec3(.22,.66,.7) * exp(-sd*500.) * blink * .32;
+          }
+          gl_FragColor = vec4(pow(color,vec3(.86)),1.);
+        }
+      `;
+      let gl, program, uniforms, fallbackCtx, frame = 0, startedAt = 0, elapsed = 0, active = false;
+      let positions, lastDraw = 0;
+
+      function shader(type, source) {
+        const result = gl.createShader(type);
+        gl.shaderSource(result, source);
+        gl.compileShader(result);
+        if (!gl.getShaderParameter(result, gl.COMPILE_STATUS)) {
+          const error = gl.getShaderInfoLog(result);
+          gl.deleteShader(result); throw new Error(error);
+        }
+        return result;
+      }
+      function setupWebGL() {
+        gl = canvas.getContext('webgl', { alpha: false, antialias: false, depth: false, powerPreference: 'low-power' });
+        if (!gl) return false;
+        const vs = shader(gl.VERTEX_SHADER, vertex), fs = shader(gl.FRAGMENT_SHADER, fragment);
+        program = gl.createProgram();
+        gl.attachShader(program,vs);gl.attachShader(program,fs);gl.linkProgram(program);
+        gl.deleteShader(vs);gl.deleteShader(fs);
+        if (!gl.getProgramParameter(program,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(program));
+        gl.useProgram(program);
+        const buffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
+        gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
+        positions = gl.getAttribLocation(program,'a_position');
+        gl.enableVertexAttribArray(positions);
+        gl.vertexAttribPointer(positions,2,gl.FLOAT,false,0,0);
+        uniforms = { resolution: gl.getUniformLocation(program,'u_resolution'), time: gl.getUniformLocation(program,'u_time') };
+        return true;
+      }
       function resize() {
-        const dpr = Math.min(devicePixelRatio || 1, 2);
-        canvas.width = Math.round(innerWidth * dpr);
-        canvas.height = Math.round(innerHeight * dpr);
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const ratio = Math.min(devicePixelRatio||1, innerWidth < 650 ? 1 : 1.25);
+        canvas.width = Math.max(1,Math.round(innerWidth*ratio));
+        canvas.height = Math.max(1,Math.round(innerHeight*ratio));
+        if (gl) gl.viewport(0,0,canvas.width,canvas.height);
+      }
+      function fallback(time) {
+        const ctx = fallbackCtx;
+        const w = canvas.width, h = canvas.height, dpr = w / innerWidth;
+        const cx = w*(innerWidth/innerHeight>1.25?.74:.5),cy=h*.5,r=Math.min(w,h)*.37;
+        const bg = ctx.createLinearGradient(0,0,w,h);
+        bg.addColorStop(0,'#061321');bg.addColorStop(1,'#092f37');
+        ctx.fillStyle=bg;ctx.fillRect(0,0,w,h);
+        const glow=ctx.createRadialGradient(cx,cy,r*.1,cx,cy,r*1.7);
+        glow.addColorStop(0,'#54d5d777');glow.addColorStop(.6,'#168e9466');glow.addColorStop(1,'#03131d00');
+        ctx.fillStyle=glow;ctx.beginPath();ctx.arc(cx,cy,r*1.7,0,Math.PI*2);ctx.fill();
+        const sphere=ctx.createRadialGradient(cx-r*.25,cy-r*.35,r*.02,cx,cy,r);
+        sphere.addColorStop(0,'#b2ffea');sphere.addColorStop(.3,'#2a9fa9');sphere.addColorStop(.8,'#085367');sphere.addColorStop(1,'#80e9e8');
+        ctx.fillStyle=sphere;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fill();
+        ctx.save();ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();
+        for(let i=0;i<8;i++){
+          const angle=time*.25+i*.8; const x=cx+Math.cos(angle)*r*.55,y=cy+Math.sin(angle*1.3+i)*r*.58;
+          const light=ctx.createRadialGradient(x,y,0,x,y,r*.35);
+          light.addColorStop(0,'#e7fff7bb');light.addColorStop(1,'#1cffff00');
+          ctx.fillStyle=light;ctx.beginPath();ctx.arc(x,y,r*.35,0,Math.PI*2);ctx.fill();
+        }
+        ctx.restore();
+        ctx.strokeStyle='#8efcff88';ctx.lineWidth=2*dpr;
+        ctx.beginPath();ctx.ellipse(cx,cy,r*1.15,r*.3,time*.13,0,Math.PI*2);ctx.stroke();
+      }
+      function render(now) {
+        if(!active || document.hidden)return;
+        if(now-lastDraw<32){frame=requestAnimationFrame(render);return;}
+        lastDraw=now;
+        if(!startedAt)startedAt=now;
+        const seconds = elapsed+(now-startedAt)/1000*(reducedMotion.matches?.2:1);
+        if(gl){
+          gl.useProgram(program);
+          gl.uniform2f(uniforms.resolution,canvas.width,canvas.height);
+          gl.uniform1f(uniforms.time,seconds);
+          gl.drawArrays(gl.TRIANGLES,0,6);
+        }else if(fallbackCtx) fallback(seconds);
+        frame=requestAnimationFrame(render);
       }
       function stop() {
-        runId++;
-        cancelAnimationFrame(frame);
-        frame = 0;
-        ctx.clearRect(0, 0, innerWidth, innerHeight);
-        if (stream) stream.getTracks().forEach(track => track.stop());
-        stream = null;
-        if (source) { try { source.disconnect(); } catch (_) {} }
-        source = null;
-        if (analyser) { try { analyser.disconnect(); } catch (_) {} }
-        analyser = null;
-        if (audioContext) audioContext.close().catch(() => {});
-        audioContext = null;
-        level = 0; baseline = .008;
+        if(startedAt)elapsed+=(performance.now()-startedAt)/1000*(reducedMotion.matches?.2:1);
+        startedAt=0;active=false;cancelAnimationFrame(frame);frame=0;canvas.hidden=true;
       }
-      function animate() {
-        if (!enabled.checked || !analyser || document.hidden) return;
-        analyser.getFloatTimeDomainData(samples);
-        let sum = 0;
-        for (let i = 0; i < samples.length; i++) sum += samples[i] * samples[i];
-        const rms = Math.sqrt(sum / samples.length);
-        // Slowly estimate ambient noise; do not let a loud breath immediately raise the noise floor.
-        baseline += (rms < baseline ? .035 : .001) * (rms - baseline);
-        const target = Math.min(1, Math.max(0, (rms - Math.max(.008, baseline * 1.4)) * 18));
-        level += (target - level) * (target > level ? .18 : .055);
-        ctx.clearRect(0, 0, innerWidth, innerHeight);
-        const w = innerWidth, h = innerHeight, t = performance.now() * .00035;
-        const amplitude = reducedMotion.matches ? level * .22 : level;
-        for (let i = 0; i < 3; i++) {
-          const x = w * (.25 + i * .26) + Math.sin(t + i * 2) * w * .075 * amplitude;
-          const y = h * (.28 + (i % 2) * .42) + Math.cos(t * .7 + i) * h * .055 * amplitude;
-          const radius = Math.max(w, h) * (.19 + i * .035 + amplitude * .19);
-          const gradient = ctx.createRadialGradient(x, y, radius * .08, x, y, radius);
-          const alpha = .16 + amplitude * .50;
-          gradient.addColorStop(0, 'rgba(125,238,216,' + alpha + ')');
-          gradient.addColorStop(.45, 'rgba(89,199,213,' + (alpha * .50) + ')');
-          gradient.addColorStop(1, 'rgba(89,199,213,0)');
-          ctx.fillStyle = gradient;
-          ctx.fillRect(x-radius,y-radius,radius*2,radius*2);
-          if (amplitude > .025 && !reducedMotion.matches) {
-            ctx.beginPath();
-            ctx.arc(x, y, radius * (.24 + amplitude * .34), 0, Math.PI * 2);
-            ctx.strokeStyle = 'rgba(165,255,229,' + Math.min(.65, amplitude * .65) + ')';
-            ctx.lineWidth = 2 + amplitude * 5;
-            ctx.stroke();
-          }
-        }
-        frame = requestAnimationFrame(animate);
-      }
-      async function start() {
-        if (!enabled.checked || stream) return;
-        if (!navigator.mediaDevices?.getUserMedia) {
-          enabled.checked = false;
-          message('Bu tarayıcıda mikrofon kullanılamıyor. HTTPS gerekir.', 'Microphone unavailable in this browser. HTTPS is required.');
-          return;
-        }
-        const id = ++runId;
-        message('Mikrofon izni bekleniyor…', 'Waiting for microphone permission…');
+      function start() {
+        if(active)return;
         try {
-          const requested = await navigator.mediaDevices.getUserMedia({
-            audio: { echoCancellation: true, noiseSuppression: false, autoGainControl: false },
-            video: false
-          });
-          if (id !== runId || !enabled.checked) { requested.getTracks().forEach(t => t.stop()); return; }
-          stream = requested;
-          audioContext = new (window.AudioContext || window.webkitAudioContext)();
-          analyser = audioContext.createAnalyser();
-          analyser.fftSize = 2048;
-          samples = new Float32Array(analyser.fftSize);
-          source = audioContext.createMediaStreamSource(stream);
-          source.connect(analyser); // No connection to speakers: avoid mic feedback.
-          await audioContext.resume();
-          if (id !== runId || !enabled.checked) { stop(); return; }
-          resize(); animate();
-          message('Etkin · ses yalnızca cihazınızda işleniyor.', 'Active · audio stays on your device.');
-          stream.getAudioTracks().forEach(track => track.addEventListener('ended', () => {
-            enabled.checked = false; stop();
-            message('Mikrofon bağlantısı kesildi.', 'Microphone disconnected.');
-          }, { once: true }));
-        } catch (error) {
-          stop(); enabled.checked = false;
-          message('Mikrofona erişilemedi. Tarayıcı izinlerini kontrol edin.', 'Could not access microphone. Check browser permissions.');
+          if(!gl && !fallbackCtx){
+            try { setupWebGL(); }
+            catch(error){ console.warn('Breathe WebGL fallback:',error); }
+            if(!gl || !program) {
+              // A failed WebGL context cannot be swapped to 2D: replace the canvas.
+              const fresh=document.createElement('canvas');
+              fresh.id=canvas.id;fresh.setAttribute('aria-hidden','true');
+              canvas.replaceWith(fresh);canvas=fresh;
+              gl=null;fallbackCtx=canvas.getContext('2d');
+            }
+          }
+          if(!gl && !fallbackCtx) throw new Error('Canvas unavailable');
+          canvas.hidden=false;resize();active=true;startedAt=0;
+          frame=requestAnimationFrame(render);
+          message('Etkin · mikrofon kullanılmıyor.', 'Active · no microphone is used.');
+        }catch(error){
+          console.warn('Breathe energy animation:',error);
+          toggle.checked=false;stop();
+          message('Animasyon bu tarayıcıda başlatılamadı.', 'Animation could not start in this browser.');
         }
       }
-      enabled.addEventListener('change', () => {
-        if (enabled.checked) start();
-        else { stop(); message('Kapalı', 'Off'); }
+      toggle.addEventListener('change',()=>{
+        try { localStorage.setItem(storageKey,toggle.checked?'1':'0'); } catch (_) {}
+        if(toggle.checked)start();else{stop();message('Kapalı','Off');}
       });
-      window.addEventListener('resize', resize);
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden && enabled.checked) {
-          enabled.checked = false; stop();
-          message('Sekme arka plana geçtiği için mikrofon kapatıldı.', 'Microphone stopped when the tab became hidden.');
-        }
+      window.addEventListener('resize',()=>{if(active)resize();});
+      document.addEventListener('visibilitychange',()=>{
+        if(document.hidden){if(active)stop();}
+        else if(toggle.checked)start();
       });
-      window.addEventListener('pagehide', stop);
-      message('Kapalı', 'Off');
+      window.addEventListener('pagehide',stop);
+      message('Kapalı','Off');
+      try { if(localStorage.getItem(storageKey)==='1') {toggle.checked=true;start();} } catch (_) {}
     })();
   </script>
 </body>
