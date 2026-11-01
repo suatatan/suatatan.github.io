@@ -958,7 +958,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
           float radius = .41;
           float t = u_time * .17;
 
-          vec3 color = mix(vec3(.008,.026,.048), vec3(.009,.055,.065), smoothstep(.75,0.,length(p)));
+          vec3 color = mix(vec3(.008,.026,.048), vec3(.009,.055,.065), (1.-smoothstep(0.,.75,length(p))));
           float halo = exp(-max(d-radius,0.)*12.) * (1.-smoothstep(radius+.27,radius+.85,d));
           color += vec3(.025,.29,.32) * halo * .4;
 
