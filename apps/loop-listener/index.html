@@ -100,6 +100,7 @@ footer{text-align:center;padding:24px;color:var(--muted);font-size:.75rem}
 <div><label for="infinite">Mod</label><label style="padding:9px 2px;color:var(--text)"><input id="infinite" type="checkbox"> Sonsuz tekrar</label></div>
 </div>
 <div class="row between" style="margin-top:12px"><button id="start" class="primary">↻ Döngüyü başlat</button><button id="stop">■ Durdur</button><span id="counter" class="small muted">Hazır</span></div>
+<div style="margin-top:10px"><button id="saveRange" class="tiny">☆ Bu A–B aralığını bookmark olarak sakla</button></div>
 </div>
 </section>
 <section class="card">
@@ -207,7 +208,7 @@ function drawEntries(){
  (current[type]||[]).forEach(item=>{
  const outer=document.createElement('div');outer.className='item';
  const head=document.createElement('div');head.className='item-head';
- const jump=document.createElement('button');jump.className='tiny';jump.textContent='▶ '+format(item.time);jump.onclick=()=>{stopLoop();audio.currentTime=clamp(item.time,0,len());audio.play().catch(()=>{})};
+ const jump=document.createElement('button');jump.className='tiny';jump.textContent='▶ '+format(item.time)+(Number.isFinite(item.end)?' – '+format(item.end):'');jump.onclick=()=>{stopLoop();if(type==='bookmarks'&&Number.isFinite(item.end)){updateAB(item.time,item.end);startLoop()}else{audio.currentTime=clamp(item.time,0,len());audio.play().catch(()=>{})}};
  const del=document.createElement('button');del.className='tiny danger';del.textContent='Sil';del.onclick=()=>{if(!confirm('Bu kayıt silinsin mi?'))return;current[type]=current[type].filter(x=>x.id!==item.id);persist(current);drawEntries()};
  const p=document.createElement('p');p.textContent=item.text;
  head.append(jump,del);outer.append(head,p);root.append(outer);
@@ -240,6 +241,7 @@ $('aInput').onchange=e=>{const v=parse(e.target.value);if(Number.isFinite(v))upd
 $('bInput').onchange=e=>{const v=parse(e.target.value);if(Number.isFinite(v))updateAB(A,v);else drawMeta()};
 $('start').onclick=startLoop;$('stop').onclick=()=>{audio.pause();stopLoop('Durduruldu')};
 $('addBookmark').onclick=()=>addEntry('bookmarks');$('addNote').onclick=()=>addEntry('notes');
+$('saveRange').onclick=()=>{if(!validAB())return;const name=prompt('Bu aralığın adı ne olsun?','A–B '+format(A)+'–'+format(B));if(name===null||!name.trim())return;current.bookmarks=current.bookmarks||[];current.bookmarks.push({id:crypto.randomUUID(),time:A,end:B,text:name.trim(),created:Date.now()});current.bookmarks.sort((a,b)=>a.time-b.time);persist(current);drawEntries()};
 audio.onloadedmetadata=()=>{if(!current)return;B=len();drawMeta()};
 audio.ontimeupdate=()=>{loopTick();drawMeta()};
 audio.onplay=()=>{$('play').textContent='Ⅱ Duraklat'};
