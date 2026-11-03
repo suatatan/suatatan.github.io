@@ -236,7 +236,7 @@
             }
         }
     </style>
-</head>
+<link rel="manifest" href="/apps/tfidf-manifest.json"><link rel="apple-touch-icon" href="/apps/icons/tfidf.svg"><meta name="apple-mobile-web-app-capable" content="yes"></head>
 <body>
 <!-- Yandex.Metrika counter -->
 <script src="/js/analytics.js" defer></script>
@@ -565,5 +565,5 @@
     </script>
 
     Dr. Suat ATAN tarafından geliştirildi. İzinsiz kullanılamaz.
-</body>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/apps/sw.js',{scope:'/apps/',updateViaCache:'none'}).catch(e=>console.warn('Offline destek kurulamadı:',e)));}</script><script src="/apps/pwa-install.js" defer></script></body>
 </html>

@@ -1,0 +1,30 @@
+{
+  "id": "/apps/ollama-local",
+  "name": "Flâner Local — Yerel AI",
+  "short_name": "Flâner Local",
+  "description": "Yerel modellerle konuş ve Fransızca çalış.",
+  "start_url": "/apps/ollama-local/",
+  "scope": "/apps/ollama-local/",
+  "display": "standalone",
+  "background_color": "#183127",
+  "theme_color": "#183127",
+  "lang": "tr",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/apps/icons/ollama-local-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apps/icons/ollama-local.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

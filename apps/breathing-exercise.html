@@ -884,7 +884,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
     (() => {
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/apps/breathe-sw.js', { scope: '/apps/' })
+          navigator.serviceWorker.register('/apps/sw.js', { scope: '/apps/', updateViaCache: 'none' })
             .catch(error => console.warn('Breathe offline support could not start:', error));
         });
       }

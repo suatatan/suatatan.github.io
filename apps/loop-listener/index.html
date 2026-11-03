@@ -53,7 +53,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:.85rem}
 footer{text-align:center;padding:24px;color:var(--muted);font-size:.75rem}
 @media(max-width:750px){.layout{grid-template-columns:1fr}.wrap{padding-top:14px}.top{margin-bottom:18px}.card{padding:15px}.library{max-height:135px}}
 </style>
-</head>
+<link rel="manifest" href="/apps/loop-listener/manifest.webmanifest"><link rel="apple-touch-icon" href="/apps/icons/loop-listener.svg"><meta name="apple-mobile-web-app-capable" content="yes"></head>
 <body>
 <div class="wrap">
 <header class="top"><div><div class="brand">Loop<em>Lab</em> <span style="font-size:.75rem;font-weight:500;color:var(--muted)">/ écoute</span></div><div class="subtitle">Duy, yakala, tekrar et.</div></div><a href="/apps/">← Uygulamalar</a></header>
@@ -103,6 +103,7 @@ footer{text-align:center;padding:24px;color:var(--muted);font-size:.75rem}
 <div style="margin-top:10px"><button id="saveRange" class="tiny">☆ Bu A–B aralığını bookmark olarak sakla</button></div>
 </div>
 </section>
+<section class="card"><h2>Dinleme alışkanlığım</h2><div data-listening-habit class="info" aria-live="polite"></div><p class="notice" style="margin-bottom:0">Kaldığın saniye, A–B aralığı ve transkript bu cihazda saklanır. Android'de ekran kilitliyken oynatım ve bildirim kontrolleri desteklenir; tarayıcı güç tasarrufu özellikle A–B döngülerini etkileyebilir.</p></section>
 <section class="card">
 <h2>Bookmark'lar</h2>
 <div class="row"><input id="bookmarkLabel" type="text" placeholder="Örn. liaison, sorunun başlangıcı" style="flex:1;min-width:170px"><button id="addBookmark" class="primary">＋ Bu ana ekle</button></div>
@@ -126,13 +127,42 @@ footer{text-align:center;padding:24px;color:var(--muted);font-size:.75rem}
 </div>
 <footer>LoopLab · Dr. Suat ATAN · Ses dosyalarına uzaktan erişim yok. · <a href="/apps/">Diğer uygulamalar</a></footer>
 </div>
-<audio id="audio" preload="metadata"></audio>
-<script>
+<audio id="audio" preload="auto" playsinline></audio>
+<script src="/apps/listening-habits.js"></script><script>
 (function(){
 'use strict';
 const $=id=>document.getElementById(id);
 const audio=$('audio');
-const DB_NAME='looplab_local_v1',STORE='recordings';
+const DB_NAME='looplab_local_v1',STORE='recordings',PROGRESS_KEY='looplab_progress_v2';
+let progressMap={};
+try{const stored=JSON.parse(localStorage.getItem(PROGRESS_KEY)||'{}');if(stored&&typeof stored==='object')progressMap=stored}catch{}
+let lastSave=0,lastListenTime=0,pendingListen=0;
+function saveProgress(){
+ if(!current)return;
+ progressMap[current.id]={time:audio.currentTime||0,a:A,b:B,transcript:$('transcriptText').value.slice(0,10000),count:$('repeatCount').value,infinite:$('infinite').checked,updated:Date.now()};
+ try{const entries=Object.entries(progressMap).sort((x,y)=>(y[1].updated||0)-(x[1].updated||0)).slice(0,80);progressMap=Object.fromEntries(entries);localStorage.setItem(PROGRESS_KEY,JSON.stringify(progressMap));localStorage.setItem('looplab_last_recording',current.id)}catch(e){console.warn('Dinleme konumu saklanamadı',e)}
+ lastSave=Date.now();
+}
+function listeningTick(){
+ if(!current||audio.paused){lastListenTime=0;return}
+ const now=Date.now();if(lastListenTime)pendingListen+=Math.max(0,Math.min(1800,(now-lastListenTime)/1000));lastListenTime=now;
+ if(pendingListen>=5){window.FrenchListeningHabit?.record('loop-listener','listen',pendingListen);pendingListen=0}
+}
+function flushListen(){
+ if(current&&lastListenTime)pendingListen+=Math.max(0,Math.min(1800,(Date.now()-lastListenTime)/1000));
+ if(pendingListen>0){window.FrenchListeningHabit?.record('loop-listener','listen',pendingListen);pendingListen=0}lastListenTime=0;
+}
+function mediaPosition(){
+ if(!('mediaSession' in navigator)||!Number.isFinite(audio.duration)||audio.duration<=0)return;
+ try{navigator.mediaSession.setPositionState({duration:audio.duration,playbackRate:audio.playbackRate,position:Math.min(audio.currentTime,audio.duration)})}catch{}
+}
+function mediaDetails(){
+ if(!('mediaSession' in navigator)||!current||typeof MediaMetadata==='undefined')return;
+ navigator.mediaSession.metadata=new MediaMetadata({title:current.name,artist:'LoopLab · Suat Atan',album:'Fransızca dinleme',artwork:[{src:'/apps/icons/loop-listener.svg',sizes:'512x512',type:'image/svg+xml'}]});
+ const handlers={play:()=>audio.play().catch(()=>{}),pause:()=>audio.pause(),stop:()=>{audio.pause();stopLoop('Durduruldu')},seekbackward:d=>{audio.currentTime=Math.max(0,audio.currentTime-(d.seekOffset||10))},seekforward:d=>{audio.currentTime=Math.min(len(),audio.currentTime+(d.seekOffset||10))},seekto:d=>{if(Number.isFinite(d.seekTime))audio.currentTime=clamp(d.seekTime,0,len())}};
+ for(const [action,fn]of Object.entries(handlers)){try{navigator.mediaSession.setActionHandler(action,fn)}catch{}}
+ mediaPosition();
+}
 let db=null,records=[],current=null,url=null,repeat=null,lastRepeatTick=-1,transcriber=null;
 let A=0,B=0,dbAvailable=true;
 const format=s=>{if(!Number.isFinite(s)||s<0)s=0;const m=Math.floor(s/60),sec=Math.floor(s%60),dec=Math.floor((s%1)*10);return String(m).padStart(2,'0')+':'+String(sec).padStart(2,'0')+'.'+dec};
@@ -161,7 +191,7 @@ function drawLibrary(){
 async function select(id){
  const r=records.find(x=>x.id===id);if(!r)return;
  stopLoop();audio.pause();if(url)URL.revokeObjectURL(url);current=r;url=URL.createObjectURL(r.blob);
- audio.src=url;audio.playbackRate=Number($('speed').value);audio.load();A=0;B=0;$('fileName').textContent=r.name;
+ audio.src=url;audio.playbackRate=Number($('speed').value);A=0;B=0;$('fileName').textContent=r.name;audio.load();$('transcriptText').value=progressMap[id]?.transcript||'';if(progressMap[id]?.count)$('repeatCount').value=progressMap[id].count;$('infinite').checked=!!progressMap[id]?.infinite;$('repeatCount').disabled=$('infinite').checked;mediaDetails();
  drawLibrary();drawEntries();drawMeta();$('transcriptText').value='';
 }
 function drawMeta(){
@@ -174,15 +204,15 @@ function drawMeta(){
 function updateAB(a,b){
  const d=len();if(!d)return;A=clamp(a,0,d);B=clamp(b,0,d);
  if(B<=A){$('length').textContent='B, A noktasından sonra olmalı';}
- drawMeta();
+ drawMeta();saveProgress();
 }
 function validAB(){if(!current||!len()){alert('Önce ses dosyası yükle.');return false}if(B<=A+.05){alert('B, A noktasından sonra olmalı.');return false}return true}
-function stopLoop(msg){repeat=null;lastRepeatTick=-1;$('counter').textContent=msg||'Hazır'}
+function stopLoop(msg){repeat=null;lastRepeatTick=-1;$('counter').textContent=msg||'Hazır';saveProgress()}
 function startLoop(){
  if(!validAB())return;
  const max=$('infinite').checked?Infinity:clamp(parseInt($('repeatCount').value,10)||1,1,9999);
  repeat={a:A,b:B,max,completed:0};lastRepeatTick=-1;
- audio.currentTime=A;$('counter').textContent='0 / '+(Number.isFinite(max)?max:'∞');
+ audio.currentTime=A;$('counter').textContent='0 / '+(Number.isFinite(max)?max:'∞');saveProgress();
  audio.play().catch(e=>{$('counter').textContent='Oynatılamadı: '+e.message});
 }
 function loopTick(){
@@ -199,7 +229,7 @@ function addEntry(type){
  const input=type==='bookmarks'?$('bookmarkLabel'):$('note'),txt=input.value.trim();
  if(!txt)return alert('Bir açıklama yaz.');
  current[type]=current[type]||[];current[type].push({id:crypto.randomUUID(),time:audio.currentTime||0,text:txt,created:Date.now()});
- current[type].sort((a,b)=>a.time-b.time);input.value='';persist(current);drawEntries();
+ current[type].sort((a,b)=>a.time-b.time);input.value='';persist(current);drawEntries();window.FrenchListeningHabit?.record('loop-listener','activity');
 }
 function drawEntries(){
  for(const type of ['bookmarks','notes']){
@@ -233,8 +263,8 @@ $('back').onclick=()=>{audio.currentTime=clamp(audio.currentTime-2,0,len())};
 $('forward').onclick=()=>{audio.currentTime=clamp(audio.currentTime+2,0,len())};
 $('prev').onclick=()=>{audio.currentTime=clamp(audio.currentTime-5,0,len())};
 $('next').onclick=()=>{audio.currentTime=clamp(audio.currentTime+5,0,len())};
-$('seek').oninput=e=>{if(len())audio.currentTime=len()*Number(e.target.value)/1000};
-$('speed').oninput=e=>{audio.playbackRate=Number(e.target.value);$('speedLabel').textContent=Number(e.target.value).toFixed(2)+'×';localStorage.setItem('looplab_speed',e.target.value)};
+$('seek').oninput=e=>{if(len())audio.currentTime=len()*Number(e.target.value)/1000;saveProgress()};
+$('speed').oninput=e=>{audio.playbackRate=Number(e.target.value);$('speedLabel').textContent=Number(e.target.value).toFixed(2)+'×';localStorage.setItem('looplab_speed',e.target.value);mediaPosition();saveProgress()};
 $('setA').onclick=()=>updateAB(audio.currentTime,Math.max(B,audio.currentTime+.1));
 $('setB').onclick=()=>updateAB(A,audio.currentTime);
 $('aInput').onchange=e=>{const v=parse(e.target.value);if(Number.isFinite(v))updateAB(v,B);else drawMeta()};
@@ -242,12 +272,12 @@ $('bInput').onchange=e=>{const v=parse(e.target.value);if(Number.isFinite(v))upd
 $('start').onclick=startLoop;$('stop').onclick=()=>{audio.pause();stopLoop('Durduruldu')};
 $('addBookmark').onclick=()=>addEntry('bookmarks');$('addNote').onclick=()=>addEntry('notes');
 $('saveRange').onclick=()=>{if(!validAB())return;const name=prompt('Bu aralığın adı ne olsun?','A–B '+format(A)+'–'+format(B));if(name===null||!name.trim())return;current.bookmarks=current.bookmarks||[];current.bookmarks.push({id:crypto.randomUUID(),time:A,end:B,text:name.trim(),created:Date.now()});current.bookmarks.sort((a,b)=>a.time-b.time);persist(current);drawEntries()};
-audio.onloadedmetadata=()=>{if(!current)return;B=len();drawMeta()};
-audio.ontimeupdate=()=>{loopTick();drawMeta()};
-audio.onplay=()=>{$('play').textContent='Ⅱ Duraklat'};
-audio.onpause=()=>{$('play').textContent='▶ Oynat'};
-audio.onended=()=>{if(repeat){loopTick();if(repeat){audio.currentTime=repeat.a;audio.play().catch(()=>{})}}};
-$('infinite').onchange=e=>{$('repeatCount').disabled=e.target.checked};
+audio.onloadedmetadata=()=>{if(!current)return;const saved=progressMap[current.id]||{};A=clamp(Number(saved.a)||0,0,len());B=Number.isFinite(saved.b)&&saved.b>A?clamp(saved.b,A,len()):len();audio.currentTime=clamp(Number(saved.time)||0,0,len());drawMeta();mediaPosition()};
+audio.ontimeupdate=()=>{loopTick();drawMeta();listeningTick();if(Date.now()-lastSave>7000)saveProgress();mediaPosition()};
+audio.onplay=()=>{$('play').textContent='Ⅱ Duraklat';lastListenTime=Date.now();if('mediaSession' in navigator)navigator.mediaSession.playbackState='playing'};
+audio.onpause=()=>{$('play').textContent='▶ Oynat';flushListen();saveProgress();if('mediaSession' in navigator)navigator.mediaSession.playbackState='paused'};
+audio.onended=()=>{flushListen();saveProgress();if(repeat){loopTick();if(repeat){audio.currentTime=repeat.a;audio.play().catch(()=>{})}}};
+$('infinite').onchange=e=>{$('repeatCount').disabled=e.target.checked;saveProgress()};$('repeatCount').onchange=saveProgress;$('transcriptText').addEventListener('input',()=>{if(Date.now()-lastSave>1200)saveProgress()});document.addEventListener('visibilitychange',()=>{if(!document.hidden){listeningTick();saveProgress()}});window.addEventListener('pagehide',()=>{flushListen();saveProgress()});
 $('export').onclick=()=>{
  const data={version:1,created:new Date().toISOString(),recordings:records.map(r=>({id:r.id,name:r.name,size:r.size,bookmarks:r.bookmarks||[],notes:r.notes||[]}))};
  download('looplab-notlar.json',JSON.stringify(data,null,2),'application/json');
@@ -262,7 +292,7 @@ $('saveTranscript').onclick=()=>{
  if(!current)return alert('Önce ses dosyası seç.');
  const txt=$('transcriptText').value.trim();if(!txt)return alert('Kaydedilecek metin yok.');
  current.notes=current.notes||[];current.notes.push({id:crypto.randomUUID(),time:A,text:'[Transkript '+format(A)+'–'+format(B)+']\n'+txt,created:Date.now()});current.notes.sort((a,b)=>a.time-b.time);
- persist(current);drawEntries();$('transcribeStatus').textContent='Metin zaman damgalı notlara kaydedildi ✓';
+ persist(current);drawEntries();saveProgress();window.FrenchListeningHabit?.record('loop-listener','sentence',0,txt);$('transcribeStatus').textContent='Metin zaman damgalı notlara kaydedildi ✓';
 };
 $('transcribe').onclick=async()=>{
  if(!validAB())return;
@@ -288,15 +318,15 @@ $('transcribe').onclick=async()=>{
   const pcm=(await offline.startRendering()).getChannelData(0);
   status.textContent='Fransızca konuşma yerel modelde yazıya dökülüyor…';
   const out=await transcriber(pcm,{language:'french',task:'transcribe'});
-  $('transcriptText').value=out.text||'';
+  $('transcriptText').value=out.text||'';saveProgress();if(out.text)window.FrenchListeningHabit?.record('loop-listener','transcript',0,out.text);
   status.textContent='Tamamlandı ✓ Metni kontrol edip kaydedebilirsin.';
  }catch(err){status.textContent='Bu cihazda transkripsiyon çalışmadı: '+(err?.message||err)+'. Manuel metin yazabilirsin.'}
  finally{button.disabled=false}
 };
 (async()=>{try{db=await openDB();await reload()}catch(e){dbAvailable=false;notify('Kalıcı depolama kullanılamıyor. Dosyalar bu oturumda kalır.');drawLibrary()}
  const s=Number(localStorage.getItem('looplab_speed'));if(s>=.5&&s<=2){$('speed').value=s;audio.playbackRate=s;$('speedLabel').textContent=s.toFixed(2)+'×'}
- drawMeta();})();
+ drawMeta();const last=localStorage.getItem('looplab_last_recording');if(last&&records.some(r=>r.id===last))select(last);})();
 })();
 </script>
-</body>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/apps/loop-listener/sw.js',{scope:'/apps/loop-listener/',updateViaCache:'none'}).catch(e=>console.warn('Offline destek kurulamadı:',e)));}</script><script src="/apps/pwa-install.js" defer></script></body>
 </html>

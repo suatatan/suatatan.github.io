@@ -1,0 +1,29 @@
+{
+  "id": "/apps/loop-listener",
+  "name": "LoopLab — A–B Dinleme",
+  "short_name": "LoopLab",
+  "description": "Ses kayıtlarında A–B döngüleriyle Fransızca dinleme pratiği yap.",
+  "start_url": "/apps/loop-listener/",
+  "scope": "/apps/loop-listener/",
+  "display": "standalone",
+  "background_color": "#101b29",
+  "theme_color": "#101b29",
+  "lang": "tr",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "/apps/icons/loop-listener-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apps/icons/loop-listener.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

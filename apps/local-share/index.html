@@ -14,7 +14,7 @@ lang: en
   <link rel="canonical" href="https://suatatan.com/apps/local-share/">
   <link rel="stylesheet" href="./style.css?v=1">
   <title>Local Share — Files, directly | Suat Atan</title>
-</head>
+<link rel="manifest" href="/apps/local-share/manifest.webmanifest"><link rel="apple-touch-icon" href="/apps/icons/local-share.svg"><meta name="apple-mobile-web-app-capable" content="yes"></head>
 <body>
 <main>
   <header class="top"><a href="/apps/en/">← All apps</a><a class="wordmark" href="/">SUAT ATAN</a><span class="badge"><span class="dot"></span> LOCAL CONNECTIONS ONLY</span></header>
@@ -45,4 +45,4 @@ lang: en
 </main>
 <noscript><p>This app needs JavaScript and a browser with WebRTC support.</p></noscript>
 <script type="module" src="./app.mjs?v=1"></script>
-</body></html>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/apps/local-share/sw.js',{scope:'/apps/local-share/',updateViaCache:'none'}).catch(e=>console.warn('Offline destek kurulamadı:',e)));}</script><script src="/apps/pwa-install.js" defer></script></body></html>

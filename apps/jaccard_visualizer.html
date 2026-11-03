@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- Babel: TSX/JSX'i tarayıcıda derlemek için -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+  <link rel="manifest" href="/apps/jaccard-manifest.json"><link rel="apple-touch-icon" href="/apps/icons/jaccard.svg"><meta name="apple-mobile-web-app-capable" content="yes"></head>
   <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
 <!-- Yandex.Metrika counter -->
 <script src="/js/analytics.js" defer></script>
@@ -207,5 +207,5 @@
 
       ReactDOM.createRoot(document.getElementById('root')).render(<JaccardSimilarityCalculator />);
     </script>
-  </body>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/apps/sw.js',{scope:'/apps/',updateViaCache:'none'}).catch(e=>console.warn('Offline destek kurulamadı:',e)));}</script><script src="/apps/pwa-install.js" defer></script></body>
 </html>

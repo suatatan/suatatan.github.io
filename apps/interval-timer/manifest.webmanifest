@@ -1,0 +1,29 @@
+{
+  "id": "/apps/interval-timer",
+  "name": "Aralık — Tekrarlı Zamanlayıcı",
+  "short_name": "Aralık",
+  "description": "Aralıklı sesli uyarılar ve tekrar zamanlayıcısı.",
+  "start_url": "/apps/interval-timer/",
+  "scope": "/apps/interval-timer/",
+  "display": "standalone",
+  "background_color": "#235947",
+  "theme_color": "#235947",
+  "lang": "tr",
+  "categories": [
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "/apps/icons/interval-timer-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apps/icons/interval-timer.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

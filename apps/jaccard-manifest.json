@@ -1,0 +1,29 @@
+{
+  "id": "/apps/jaccard",
+  "name": "Jaccard Benzerlik Görselleştirici",
+  "short_name": "Jaccard",
+  "description": "Jaccard benzerliğini etkileşimli olarak keşfet.",
+  "start_url": "/apps/jaccard_visualizer.html",
+  "scope": "/apps/jaccard_visualizer.html",
+  "display": "standalone",
+  "background_color": "#193557",
+  "theme_color": "#193557",
+  "lang": "tr",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "/apps/icons/jaccard-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apps/icons/jaccard.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

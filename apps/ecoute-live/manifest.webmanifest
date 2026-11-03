@@ -1,0 +1,29 @@
+{
+  "id": "/apps/ecoute-live",
+  "name": "Écoute Live — Fransızca Dinleme",
+  "short_name": "Écoute Live",
+  "description": "Fransızca sesi yerel olarak yazıya dök ve incele.",
+  "start_url": "/apps/ecoute-live/",
+  "scope": "/apps/ecoute-live/",
+  "display": "standalone",
+  "background_color": "#102220",
+  "theme_color": "#102220",
+  "lang": "tr",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "/apps/icons/ecoute-live-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apps/icons/ecoute-live.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

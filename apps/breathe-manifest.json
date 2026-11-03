@@ -4,7 +4,7 @@
   "short_name": "Breathe",
   "description": "Sakinlik için 4-4-4-4 nefes egzersizi, niyetler ve günlük istatistikler.",
   "start_url": "/apps/breathing-exercise.html",
-  "scope": "/apps/",
+  "scope": "/apps/breathing-exercise.html",
   "display": "standalone",
   "background_color": "#102a24",
   "theme_color": "#102a24",
