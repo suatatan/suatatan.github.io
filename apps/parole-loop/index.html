@@ -6,7 +6,7 @@ layout: null
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#e8f6ee;background:#101a17;--panel:#1c2d27;--line:#3a5548;--green:#8bdfaa;--muted:#b6c9bd}*{box-sizing:border-box}
 body{margin:0;background:radial-gradient(ellipse at 90% 0,#244636,transparent 55%),#101a17}main{max-width:950px;margin:auto;padding:24px 16px 65px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.85rem}a{color:var(--green)}h1{font-size:clamp(2.2rem,6vw,3.5rem);letter-spacing:-.055em;margin:30px 0 5px}h1 em{color:var(--green);font-style:normal}.intro{color:var(--muted);margin:0 0 24px;line-height:1.6}
 .card{background:var(--panel);padding:22px;border:1px solid var(--line);border-radius:16px;margin-bottom:16px}label{display:block;color:var(--muted);font-size:.86rem;margin-bottom:8px}textarea{width:100%;min-height:165px;resize:vertical;padding:15px;color:#e8f6ee;background:#102019;border:1px solid var(--line);border-radius:12px;font:1.05rem/1.65 inherit}
-button,select,input{font:inherit}button,select,input[type=number]{padding:10px 13px;border-radius:10px;border:1px solid var(--line);background:#2b4436;color:#ecf9ef}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.primary{background:var(--green);color:#14261c;border-color:var(--green);font-weight:750}.row{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.row>label{margin:0}select{max-width:100%}.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.control{min-width:0}.control select,.control input[type=range],.control input[type=number]{width:100%;margin-top:5px}.control input[type=range]{accent-color:var(--green)}.buttons{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0}.status{font-size:.85rem;background:#294639;padding:11px;border-radius:10px;min-height:42px}.muted,.hint{color:var(--muted);font-size:.83rem;line-height:1.6}.sentences{display:grid;gap:7px;max-height:300px;overflow:auto}.sentence{display:flex;gap:9px;align-items:start;padding:11px;border:1px solid var(--line);border-radius:10px;background:#14251e}.sentence.active{border-color:var(--green);background:#254535}.sentence button{flex-shrink:0;padding:6px 9px}.sentence span{line-height:1.5;cursor:pointer;overflow-wrap:anywhere}.counter{font-variant-numeric:tabular-nums;color:var(--green)}footer{color:var(--muted);font-size:.78rem;margin-top:25px}
+button,select,input{font:inherit}button,select,input[type=number]{padding:10px 13px;border-radius:10px;border:1px solid var(--line);background:#2b4436;color:#ecf9ef}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.primary{background:var(--green);color:#14261c;border-color:var(--green);font-weight:750}.row{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.row>label{margin:0}select{max-width:100%}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.control{min-width:0}.control select,.control input[type=range],.control input[type=number]{width:100%;margin-top:5px}.control input[type=range]{accent-color:var(--green)}.buttons{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0}.status{font-size:.85rem;background:#294639;padding:11px;border-radius:10px;min-height:42px}.muted,.hint{color:var(--muted);font-size:.83rem;line-height:1.6}.sentences{display:grid;gap:7px;max-height:300px;overflow:auto}.sentence{display:flex;gap:9px;align-items:start;padding:11px;border:1px solid var(--line);border-radius:10px;background:#14251e}.sentence.active{border-color:var(--green);background:#254535}.sentence button{flex-shrink:0;padding:6px 9px}.sentence span{line-height:1.5;cursor:pointer;overflow-wrap:anywhere}.counter{font-variant-numeric:tabular-nums;color:var(--green)}footer{color:var(--muted);font-size:.78rem;margin-top:25px}
 @media(max-width:650px){.controls{grid-template-columns:1fr}.card{padding:15px}}
 </style><link rel="manifest" href="/apps/parole-loop/manifest.webmanifest"><link rel="apple-touch-icon" href="/apps/icons/parole-loop.svg"><meta name="apple-mobile-web-app-capable" content="yes"></head><body><main><header><strong>PAROLE <span style="color:#8bdfaa">LOOP</span> · Suat Atan</strong><a href="/apps/">← Uygulamalar</a></header>
 <h1>Écoute. <em>Répète.</em></h1><p class="intro">Fransızca metni dinle, yavaşlat, cümleyi seç ve istediğin kadar tekrar ettir. TCF dinleme ve telaffuz çalışmaları için.</p>
@@ -15,6 +15,7 @@ C'est assez loin, mais nous pouvons y aller en voiture.
 Il faut que je fasse attention à la prononciation.</textarea>
 <div class="row" style="justify-content:space-between;margin-top:10px"><span id="count" class="hint">—</span><button id="parse">Cümleleri güncelle</button></div></section>
 <section class="card"><div class="controls">
+<div class="control"><label for="engine">Seslendirme modu</label><select id="engine"><option value="browser">Hızlı · telefonun sesi</option><option value="piper">Arka plan · Piper</option></select></div>
 <div class="control"><label for="voice">Fransızca ses</label><select id="voice"></select></div>
 <div class="control"><label for="rate">Hız · <strong id="rateValue">0.85×</strong></label><input type="range" id="rate" min="0.5" max="1.5" step="0.05" value="0.85"></div>
 <div class="control"><label for="repeat">Tekrar sayısı</label><select id="repeat"><option value="1">1 kez</option><option value="3">3 kez</option><option value="5" selected>5 kez</option><option value="10">10 kez</option><option value="inf">Sonsuz döngü ∞</option></select></div>
@@ -22,31 +23,35 @@ Il faut que je fasse attention à la prononciation.</textarea>
 <div class="row" style="margin-top:16px"><label for="scope">Oynatma kapsamı</label><select id="scope"><option value="all">Tüm metin</option><option value="selected">Seçili cümle</option></select>
 <label for="gap">Tekrar arası</label><select id="gap"><option value="0">Ara yok</option><option value="700" selected>0,7 saniye</option><option value="1500">1,5 saniye</option><option value="3000">3 saniye</option></select></div>
 <div class="buttons"><button class="primary" id="play">▶ Dinle / döngüyü başlat</button><button id="pause">Ⅱ Duraklat</button><button id="stop">■ Durdur</button><span id="progress" class="counter"></span></div>
-<div class="status" id="status" role="status">Hazır. Fransızca sesler yükleniyor…</div><p class="hint">Bu sürüm tarayıcının Speech Synthesis motorunu kullanır. Windows'ta yüklenen Fransızca sesler burada görünür. Ses kalitesi motora bağlıdır; konuşma modeli veya sunucuya veri gönderilmez.</p></section>
-<section class="card"><div data-listening-habit class="status" aria-live="polite"></div><p class="hint">Günlük hedef: 1 dakika dinleme veya 3 cümle. Çalışma geçmişi yalnızca bu cihazda tutulur. <strong>Ekran kilitliyken:</strong> tarayıcı seslendirme motoru durabilir; özellikle iPhone'da arka plan oynatımı garanti değildir.</p></section>
+<div id="piperPanel" hidden><p class="hint">🔒 <strong>Arka planda dinleme:</strong> Fransızca ses, telefonunda Piper ile gerçek bir WAV dosyasına dönüştürülür. İlk seferde yaklaşık 63 MB model ve çalışma dosyaları indirilir. Ses üretildikten sonra ekranı kapatabilirsin. Büyük metinler biraz zaman alabilir.</p>
+<audio id="nativeAudio" controls playsinline preload="metadata" style="width:100%;margin:8px 0" aria-label="Hazırlanan Fransızca ses"></audio>
+<div class="row"><button id="downloadAudio" disabled>↓ Hazırlanan WAV'ı indir</button><span id="nativeLength" class="hint"></span></div></div>
+<div class="status" id="status" role="status">Hazır. Fransızca sesler yükleniyor…</div><p class="hint">Hızlı mod tarayıcının konuşma motorunu kullanır. Piper modu metni cihazda ses dosyasına dönüştürür; ses ve cümleler sunucuya gönderilmez. İlk model indirmesi internet gerektirir.</p></section>
+<section class="card"><div data-listening-habit class="status" aria-live="polite"></div><p class="hint">Günlük hedef: 1 dakika dinleme veya 3 cümle. Çalışma geçmişi yalnızca bu cihazda tutulur. Ekran kilitliyken <strong>Arka plan · Piper</strong> modunu kullan. İlk hazırlık sırasında ekran açık kalmalı; WAV oynarken Android medya kontrolleri devreye girer.</p></section>
 <section class="card"><div class="row" style="justify-content:space-between"><h2 style="margin:0 0 12px;font-size:1.15rem">Cümleler</h2><span class="hint">Cümleye dokunarak seç</span></div><div id="sentences" class="sentences"></div></section>
 <footer>Parole Loop · by Dr. Suat ATAN · Seslendirme tarayıcı içinde çalışır.</footer>
 </main><script src="/apps/listening-habits.js"></script><script>
 (()=>{'use strict';
-const $=id=>document.getElementById(id);const synth=window.speechSynthesis;
+const $=id=>document.getElementById(id);const synth=window.speechSynthesis;const native=$('nativeAudio');
 let sentences=[],selected=0,voices=[],active=false,paused=false,token=0,round=0,target=1,sequence=[],position=0,pending=null;
+let generated=null,generatedUrl=null,renderId=0,piperMarked=0,lastNativeTime=0,lastListenTick=0,listenPending=0;
 const defaultLang='fr-FR',STUDY_KEY='parole_loop_study_v2';
-function saveStudy(){try{localStorage.setItem(STUDY_KEY,JSON.stringify({text:$('source').value,selected,rate:$('rate').value,repeat:$('repeat').value,scope:$('scope').value,gap:$('gap').value,round,updated:Date.now()}))}catch(e){console.warn('Çalışma kaydedilemedi',e)}}
+function saveStudy(){try{localStorage.setItem(STUDY_KEY,JSON.stringify({text:$('source').value,selected,rate:$('rate').value,repeat:$('repeat').value,scope:$('scope').value,gap:$('gap').value,engine:$('engine').value,round,updated:Date.now()}))}catch(e){console.warn('Çalışma kaydedilemedi',e)}}
 function restoreStudy(){try{const s=JSON.parse(localStorage.getItem(STUDY_KEY)||'null');if(!s)return;
 if(typeof s.text==='string')$('source').value=s.text.replace(/\\n/g,'\n');
 if(Number.isInteger(s.selected)&&s.selected>=0)selected=s.selected;
-for(const id of ['rate','repeat','scope','gap'])if(s[id]!=null&&Array.from($(id).options||[]).some(o=>o.value===s[id])||id==='rate'&&Number(s.rate)>=.5&&Number(s.rate)<=1.5)$(id).value=s[id];
+for(const id of ['rate','repeat','scope','gap','engine'])if(s[id]!=null&&Array.from($(id).options||[]).some(o=>o.value===s[id])||id==='rate'&&Number(s.rate)>=.5&&Number(s.rate)<=1.5)$(id).value=s[id];
 $('rateValue').textContent=Number($('rate').value).toFixed(2)+'×';
 }catch(e){console.warn('Çalışma yüklenemedi',e)}}
 function status(t){$('status').textContent=t}
 function parse(){stop();const value=$('source').value.trim();sentences=(value.match(/[^.!?…\n]+(?:[.!?…]+|$)/g)||[]).map(x=>x.trim()).filter(Boolean);selected=Math.min(selected,Math.max(0,sentences.length-1));$('count').textContent=sentences.length+' cümle';draw();saveStudy()}
 function draw(){const container=$('sentences');container.replaceChildren();sentences.forEach((line,i)=>{const row=document.createElement('div');row.className='sentence'+(selected===i?' active':'');const btn=document.createElement('button');btn.textContent='▶';btn.title='Bu cümleyi oynat';btn.onclick=()=>{selected=i;$('scope').value='selected';draw();play()};const span=document.createElement('span');span.textContent=line;span.onclick=()=>{selected=i;$('scope').value='selected';draw();saveStudy()};row.append(btn,span);container.append(row)})}
 function updateVoices(){voices=synth?.getVoices().filter(v=>v.lang.toLowerCase().startsWith('fr'))||[];const previous=$('voice').value;$('voice').replaceChildren();
-if(!voices.length){const op=document.createElement('option');op.value='';op.textContent='Fransızca ses bulunamadı';$('voice').append(op);status('Henüz Fransızca ses bulunamadı. Windows dil/ses paketlerini kontrol et.');return}
+if(!voices.length){const op=document.createElement('option');op.value='';op.textContent='Fransızca ses bulunamadı';$('voice').append(op);if($('engine').value==='browser')status('Henüz Fransızca ses bulunamadı. Windows dil/ses paketlerini kontrol et.');return}
 voices.sort((a,b)=>Number(b.localService)-Number(a.localService)||a.name.localeCompare(b.name));voices.forEach(v=>{const o=document.createElement('option');o.value=v.voiceURI;o.textContent=v.name+' ('+v.lang+')'+(v.localService?' · yerel':'');$('voice').append(o)});
-const saved=localStorage.getItem('parole_voice');$('voice').value=voices.some(v=>v.voiceURI===previous)?previous:voices.some(v=>v.voiceURI===saved)?saved:voices[0].voiceURI;status(voices.length+' Fransızca ses hazır.')}
+const saved=localStorage.getItem('parole_voice');$('voice').value=voices.some(v=>v.voiceURI===previous)?previous:voices.some(v=>v.voiceURI===saved)?saved:voices[0].voiceURI;if($('engine').value==='browser')status(voices.length+' Fransızca ses hazır.')}
 function cancelPending(){if(pending!==null){clearTimeout(pending);pending=null}}
-function stop(){active=false;paused=false;token++;cancelPending();synth?.cancel();$('pause').textContent='Ⅱ Duraklat';$('progress').textContent='';if(voices.length)status('Durduruldu.')}
+function stop(){active=false;paused=false;token++;renderId++;cancelPending();synth?.cancel();native.pause();try{native.currentTime=0}catch{}lastListenTick=0;listenPending=0;$('pause').textContent='Ⅱ Duraklat';$('progress').textContent='';status('Durduruldu.')}
 function next(id){if(!active||id!==token)return;
 if(position>=sequence.length){round++;if(round>=target){active=false;status('Tamamlandı ✓ '+round+' tekrar.');$('progress').textContent='';return}position=0}
 const idx=sequence[position++],line=sentences[idx];if(!line){next(id);return}
@@ -56,16 +61,105 @@ const roundDisplay=Number.isFinite(target)?round+1+'/'+target:'∞';$('progress'
 utter.onend=()=>{if(!active||id!==token)return;window.FrenchListeningHabit?.record('parole-loop','sentence',0,line);saveStudy();pending=setTimeout(()=>{pending=null;next(id)},Number($('gap').value))};
 utter.onerror=e=>{if(!active||id!==token)return;if(e.error==='canceled'||e.error==='interrupted')return;active=false;status('Seslendirme hatası: '+e.error)};
 synth.speak(utter)}
-function play(){if(!synth)return status('Tarayıcı seslendirmeyi desteklemiyor.');if(!sentences.length)parse();if(!sentences.length)return status('Önce Fransızca metin gir.');
+function setMode(){
+ stop();
+ const piper=$('engine').value==='piper';
+ $('voice').closest('.control').hidden=piper;
+ $('piperPanel').hidden=!piper;
+ $('play').textContent=piper?'▶ Arka plan sesini hazırla / oynat':'▶ Dinle / döngüyü başlat';
+ status(piper?'Piper hazır. Başlatınca Fransızca sesi bu cihazda hazırlayacağım.':'Hızlı seslendirme hazır.');
+ saveStudy();
+}
+function nativePosition(){
+ if(!('mediaSession' in navigator)||!Number.isFinite(native.duration)||native.duration<=0)return;
+ try{navigator.mediaSession.setPositionState({duration:native.duration,position:Math.min(native.currentTime,native.duration),playbackRate:native.playbackRate})}catch{}
+}
+function nativeMedia(){
+ if(!('mediaSession' in navigator)||typeof MediaMetadata==='undefined')return;
+ navigator.mediaSession.metadata=new MediaMetadata({title:'Écoute Répète · Français',artist:'Suat Atan · Piper',album:'Fransızca dinleme',artwork:[{src:'/apps/icons/parole-loop.svg',sizes:'512x512',type:'image/svg+xml'}]});
+ const actions={play:()=>native.play().catch(()=>{}),pause:()=>native.pause(),stop:stop,
+  seekto:e=>{if(Number.isFinite(e.seekTime)){native.currentTime=Math.max(0,Math.min(e.seekTime,native.duration));piperMarked=generated?.markers.findIndex(m=>m.end>native.currentTime)??0;if(piperMarked<0)piperMarked=generated?.markers.length||0}},
+  seekbackward:e=>{native.currentTime=Math.max(0,native.currentTime-(e.seekOffset||10))},
+  seekforward:e=>{native.currentTime=Math.min(native.duration,native.currentTime+(e.seekOffset||10))}};
+ for(const [action,fn]of Object.entries(actions)){try{navigator.mediaSession.setActionHandler(action,fn)}catch{}}
+}
+function logNativeListening(flush=false){
+ const now=Date.now();
+ if(lastListenTick&&generated)listenPending+=Math.min(1800,Math.max(0,(now-lastListenTick)/1000));
+ lastListenTick=native.paused?0:now;
+ if(listenPending>=5||flush&&listenPending>0){window.FrenchListeningHabit?.record('parole-loop','listen',listenPending);listenPending=0}
+}
+function markPiperSentences(t){
+ if(!generated)return;
+ if(generated.infinite&&t+.25<lastNativeTime){
+  while(piperMarked<generated.markers.length){const m=generated.markers[piperMarked++];window.FrenchListeningHabit?.record('parole-loop','sentence',0,m.text)}
+  piperMarked=0;
+ }
+ const marks=generated.markers;
+ while(piperMarked<marks.length&&marks[piperMarked].end<=t+.03){
+  const m=marks[piperMarked++];window.FrenchListeningHabit?.record('parole-loop','sentence',0,m.text);
+ }
+ const current=marks.find(m=>m.start<=t&&m.end>t);
+ if(current&&selected!==current.index){selected=current.index;draw()}
+ lastNativeTime=t;
+ if(generated.infinite)$('progress').textContent='Sonsuz tekrar · '+Math.round(t)+' sn';
+ else $('progress').textContent='Dinleniyor · '+Math.round(t)+' / '+Math.round(generated.totalSeconds)+' sn';
+}
+async function startNative(){
+ if(!generated)return;
+ piperMarked=0;lastNativeTime=0;lastListenTick=0;listenPending=0;
+ native.loop=generated.infinite;
+ native.playbackRate=Number($('rate').value);
+ try{native.currentTime=0}catch{}
+ nativeMedia();
+ try{await native.play();status('Arka plan sesi çalıyor. Artık ekranı kilitleyebilirsin.')}
+ catch(e){status('Ses hazır. Oynatmak için aşağıdaki ses oynatıcısının ▶ düğmesine dokun.')}
+}
+async function playNative(){
+ if(!sentences.length)parse();
+ if(!sentences.length)return status('Önce Fransızca metin gir.');
+ const items=($('scope').value==='selected'?[selected]:sentences.map((_,i)=>i)).map(index=>({index,text:sentences[index]}));
+ const repeat=$('repeat').value,gapMs=Number($('gap').value);
+ const key=JSON.stringify({items,repeat,gapMs});
+ stop();
+ const id=renderId;
+ $('piperPanel').hidden=false;
+ if(generated&&generated.key===key)return startNative();
+ $('play').disabled=true;$('downloadAudio').disabled=true;
+ status('Piper hazırlanıyor. İlk kullanımda model indirilecek; lütfen bekle…');
+ try{
+  const module=await import('/apps/parole-loop/piper-audio.js');
+  const result=await module.render({items,repeat,gapMs,cancelled:()=>id!==renderId,onProgress:msg=>{if(id===renderId)status(msg)}});
+  if(id!==renderId)return;
+  if(generatedUrl)URL.revokeObjectURL(generatedUrl);
+  generated={...result,key};
+  generatedUrl=URL.createObjectURL(result.blob);
+  native.src=generatedUrl;native.load();
+  $('downloadAudio').disabled=false;
+  $('nativeLength').textContent='Hazırlandı · '+Math.round(result.totalSeconds)+' saniye · '+Math.round(result.blob.size/1024/1024*10)/10+' MB';
+  saveStudy();
+  await startNative();
+ }catch(e){if(id===renderId){const msg=String(e?.message||e);status('Piper hazırlanamadı: '+msg+' · İstersen hızlı modu kullan.');console.error(e)}}
+ finally{if(id===renderId)$('play').disabled=false}
+}
+native.addEventListener('play',()=>{lastListenTick=Date.now();$('pause').textContent='Ⅱ Duraklat';if('mediaSession' in navigator)navigator.mediaSession.playbackState='playing';nativeMedia()});
+native.addEventListener('timeupdate',()=>{logNativeListening();markPiperSentences(native.currentTime);nativePosition()});
+native.addEventListener('pause',()=>{logNativeListening(true);$('pause').textContent='▶ Devam';if('mediaSession' in navigator)navigator.mediaSession.playbackState='paused'});
+native.addEventListener('ended',()=>{markPiperSentences(native.duration);logNativeListening(true);status('Seslendirme tamamlandı ✓');$('progress').textContent=''});
+native.addEventListener('error',()=>status('Hazırlanan WAV oynatılamadı. Tekrar dene.'));
+$('downloadAudio').onclick=()=>{if(!generatedUrl)return;const a=document.createElement('a');a.href=generatedUrl;a.download='ecoute-repete-francais.wav';a.click()};
+
+function play(){if($('engine').value==='piper')return playNative();if(!synth)return status('Tarayıcı seslendirmeyi desteklemiyor.');if(!sentences.length)parse();if(!sentences.length)return status('Önce Fransızca metin gir.');
 stop();active=true;round=0;position=0;target=$('repeat').value==='inf'?Infinity:Number($('repeat').value);sequence=$('scope').value==='selected'?[selected]:sentences.map((_,i)=>i);const id=token;saveStudy();next(id)}
-$('play').onclick=play;$('stop').onclick=stop;$('pause').onclick=()=>{if(!active)return;if(paused){synth.resume();paused=false;$('pause').textContent='Ⅱ Duraklat';status('Devam ediyor…')}else{synth.pause();paused=true;$('pause').textContent='▶ Devam';status('Duraklatıldı.')}};
+$('play').onclick=play;$('stop').onclick=stop;$('pause').onclick=()=>{if($('engine').value==='piper'){if(!generated)return;if(native.paused)native.play().catch(e=>status(e.message));else native.pause();return}if(!active)return;if(paused){synth.resume();paused=false;$('pause').textContent='Ⅱ Duraklat';status('Devam ediyor…')}else{synth.pause();paused=true;$('pause').textContent='▶ Devam';status('Duraklatıldı.')}};
 $('parse').onclick=parse;$('scope').onchange=draw;$('source').addEventListener('input',()=>{$('count').textContent='Metin değişti; Cümleleri güncelle';saveStudy()});
-$('rate').oninput=()=>{$('rateValue').textContent=Number($('rate').value).toFixed(2)+'×';localStorage.setItem('parole_rate',$('rate').value);saveStudy()};
+$('rate').oninput=()=>{$('rateValue').textContent=Number($('rate').value).toFixed(2)+'×';localStorage.setItem('parole_rate',$('rate').value);if($('engine').value==='piper')native.playbackRate=Number($('rate').value);saveStudy()};
 $('voice').onchange=()=>localStorage.setItem('parole_voice',$('voice').value);
 const r=Number(localStorage.getItem('parole_rate'));if(r>=.5&&r<=1.5){$('rate').value=r;$('rateValue').textContent=r.toFixed(2)+'×'}
 for(const id of ['repeat','scope','gap'])$(id).addEventListener('change',saveStudy);
+$('engine').addEventListener('change',setMode);
 window.addEventListener('pagehide',saveStudy);
-restoreStudy();
-if(!synth){status('Bu tarayıcı Speech Synthesis desteklemiyor.')}else{updateVoices();synth.addEventListener?.('voiceschanged',updateVoices);setTimeout(updateVoices,700);setTimeout(updateVoices,2000)}
+restoreStudy();setMode();
+if(!synth){if($('engine').value!=='piper')status('Bu tarayıcı Speech Synthesis desteklemiyor.')}else{updateVoices();synth.addEventListener?.('voiceschanged',updateVoices);setTimeout(updateVoices,700);setTimeout(updateVoices,2000)}
 parse();})();
 </script><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/apps/parole-loop/sw.js',{scope:'/apps/parole-loop/',updateViaCache:'none'}).catch(e=>console.warn('Offline destek kurulamadı:',e)));}</script><script src="/apps/pwa-install.js" defer></script></body></html>
