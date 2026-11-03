@@ -1,0 +1,129 @@
+---
+layout: null
+lang: tr
+---
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#235947">
+<meta name="description" content="Tarayıcıda yerel kayıt yapan, küçük dil modeliyle semantik arama sunan hızlı not defteri.">
+<title>Hızlı Not · Suat Atan</title>
+<link rel="canonical" href="https://suatatan.com/apps/hizli-not/">
+<style>
+:root{color-scheme:light;--bg:#f6f5ef;--panel:#fffef9;--text:#203c32;--muted:#647369;--line:#dde3d6;--green:#235947;--soft:#e7efe5;--danger:#ad3c41}
+html[data-theme=dark]{color-scheme:dark;--bg:#151e1a;--panel:#1e2b24;--text:#e7f0e8;--muted:#adbbaf;--line:#3c5144;--green:#8bd0ad;--soft:#294737;--danger:#ff979d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,sans-serif}
+button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #b08426;outline-offset:2px}
+a{color:var(--green);text-decoration:none}.shell{max-width:1450px;margin:auto;min-height:100dvh;display:grid;grid-template-columns:300px minmax(0,1fr)}
+aside{border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;max-height:100dvh;position:sticky;top:0}
+aside header{padding:24px 20px 12px}.back{font-size:12px;color:var(--muted)}h1{font-size:29px;letter-spacing:-1.2px;line-height:1.1;font-weight:550;margin:18px 0 5px}.sub{color:var(--muted);font-size:12px;margin:0}
+.sideactions{padding:12px 16px}.primary{border:0;border-radius:10px;background:#235947;color:white;font-weight:650;padding:11px 15px}.primary:hover{background:#194937}.wide{width:100%}
+input[type=search]{width:100%;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:10px 12px;color:var(--text);margin-top:10px}
+.searchmode{display:flex;align-items:center;gap:8px;margin-top:9px;font-size:12px;color:var(--muted)}.searchmode input{accent-color:#235947}
+#modelState{font-size:11px;color:var(--muted);min-height:32px;margin:7px 0 0}.noteList{overflow:auto;flex:1;padding:0 10px}
+.noteRow{display:flex;align-items:center;border-radius:11px;margin:4px 0}.noteRow:hover,.noteRow.active{background:var(--soft)}
+.notePick{flex:1;min-width:0;text-align:left;border:0;background:none;color:var(--text);padding:12px}.notePick strong,.notePick small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.notePick strong{font-size:13px}.notePick small{font-size:11px;color:var(--muted);margin-top:4px}
+.pin{border:0;background:none;color:var(--muted);padding:8px 12px;font-size:18px}.pin.on{color:#be8b22}
+.sidefoot{padding:12px 16px;border-top:1px solid var(--line)}.row{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.small{border:1px solid var(--line);border-radius:9px;color:var(--text);background:var(--panel);padding:8px 10px;font-size:12px}.small:hover{background:var(--soft)}.notice{font-size:11px;color:var(--muted);line-height:1.5;margin:11px 0 0}
+main{display:flex;flex-direction:column;min-width:0;min-height:100dvh;background:var(--panel)}
+.toolbar,.statusbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 27px;border-bottom:1px solid var(--line)}.toolbar{font-size:12px;color:var(--muted)}.statusbar{border-top:1px solid var(--line);border-bottom:0;font-size:11px;color:var(--muted)}
+.editor{width:100%;max-width:950px;margin:0 auto;flex:1;display:flex;flex-direction:column;min-height:0;padding:34px 46px}
+#title{width:100%;border:0;background:none;color:var(--text);font-size:clamp(24px,3vw,36px);font-weight:550;letter-spacing:-1px;padding:0 0 15px;outline:0}
+#body{width:100%;border:0;background:none;color:var(--text);resize:none;flex:1;min-height:300px;line-height:1.8;font-size:16px;outline:0}
+#title::placeholder,#body::placeholder{color:var(--muted);opacity:.65}.danger{color:var(--danger)}.empty{padding:20px 12px;color:var(--muted);font-size:13px;text-align:center}
+.toast{position:fixed;z-index:9;bottom:20px;left:50%;transform:translateX(-50%);background:#203c32;color:white;padding:12px 18px;border-radius:10px;box-shadow:0 6px 25px #0003;max-width:90vw}.toast[hidden]{display:none}
+button:disabled,input:disabled,textarea:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:700px){.shell{display:flex;flex-direction:column}aside{position:relative;max-height:none;height:250px;flex:none;border-right:0;border-bottom:1px solid var(--line)}aside header{padding:10px 15px 0}h1{font-size:21px;margin:5px 0 0}.sub{display:none}.sideactions{padding:6px 12px}.searchmode{margin-top:5px}#modelState{min-height:0;margin:2px 0}.noteList{padding:0 8px}.notePick{padding:7px 10px}.sidefoot{padding:6px 12px}.notice{display:none}.small{padding:7px 9px}.toolbar{padding:10px 14px}.editor{padding:24px 18px}.statusbar{padding:10px 14px}main{min-height:calc(100dvh - 250px)}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside>
+<header><a class="back" href="/apps/">← Tüm uygulamalar</a><h1>hızlı not<span style="color:#b18b39">.</span></h1><p class="sub">Yaz, bul, kopyala. Her şey cihazında.</p></header>
+<div class="sideactions"><button id="new" class="primary wide">+ Yeni not</button><input id="search" type="search" aria-label="Not ara" placeholder="Notlarında ara…">
+<label class="searchmode"><input id="semantic" type="checkbox"> Anlamsal arama <span aria-label="Yerel yapay zeka">✦ AI</span></label><p id="modelState" role="status">Normal metin araması hazır.</p></div>
+<nav id="list" class="noteList" aria-label="Notlar"></nav>
+<div class="sidefoot"><div class="row"><button id="json" class="small">JSON ↓</button><button id="csv" class="small">CSV ↓</button><button id="import" class="small">İçe aktar</button><button id="theme" class="small">◐ Tema</button></div><input id="file" type="file" accept=".json,application/json" hidden><p class="notice">Notların bu tarayıcıda saklanır. Tarayıcı verilerini silersen kaybolabilir; düzenli yedek al. AI modeli ilk kullanımda internetten indirilir, not metni sunucuya gönderilmez.</p></div>
+</aside>
+<main>
+<div class="toolbar"><span id="date">Hızlı not</span><div class="row"><button id="copy" class="small">⧉ Kopyala</button><button id="delete" class="small danger">Sil</button></div></div>
+<div class="editor"><input id="title" maxlength="200" aria-label="Not başlığı" placeholder="Not başlığı"><textarea id="body" aria-label="Not içeriği" placeholder="Yazmaya başla…" spellcheck="true"></textarea></div>
+<div class="statusbar"><span id="counts">0 kelime · 0 karakter</span><span id="saved">Hazır</span></div>
+</main></div><div id="toast" class="toast" role="status" hidden></div>
+<script type="module">
+const KEY="hizlinot_v1", THEME="hizlinot_theme", $=id=>document.getElementById(id);
+let notes=[],active=null,saveOK=true,model=null,embeddingPipeline=null,vectorCache=new Map(),searchGeneration=0,searchTimer=0,toastTimer;
+const uid=()=>globalThis.crypto?.randomUUID?.() || Date.now().toString(36)+Math.random().toString(36).slice(2);
+function toast(s){$("toast").textContent=s;$("toast").hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").hidden=true,4200)}
+function valid(n){return n&&typeof n.id==="string"&&typeof n.title==="string"&&typeof n.body==="string"&&Number.isFinite(n.created)&&Number.isFinite(n.updated)&&typeof n.pinned==="boolean"}
+function validAll(a){return Array.isArray(a)&&a.length<=10000&&a.every(valid)&&new Set(a.map(x=>x.id)).size===a.length}
+try{const raw=localStorage.getItem(KEY);if(raw){const data=JSON.parse(raw);if(validAll(data))notes=data;else toast("Depolama biçimi geçersiz. JSON yedeğinden geri yükleyin.")}}catch(e){saveOK=false;toast("Yerel depolama okunamadı. JSON yedeği alın.")}
+function save(){if(!saveOK){$("saved").textContent="Yalnızca bellekte";return}try{localStorage.setItem(KEY,JSON.stringify(notes));$("saved").textContent="✓ Kaydedildi"}catch(e){saveOK=false;$("saved").textContent="Kaydedilemedi";toast("Depolama dolu veya engellendi. JSON yedeği alın.")}}
+function current(){return notes.find(n=>n.id===active)}
+function ordered(a){return [...a].sort((x,y)=>Number(y.pinned)-Number(x.pinned)||y.updated-x.updated)}
+function label(n){return n.title.trim()||n.body.trim().split("\n")[0].slice(0,55)||"Başlıksız not"}
+function date(t){return new Date(t).toLocaleString("tr-TR",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})}
+function render(items=ordered(notes)){const list=$("list");list.replaceChildren();if(!items.length){const el=document.createElement("p");el.className="empty";el.textContent="Not bulunamadı.";list.append(el);return}
+for(const n of items){const row=document.createElement("div");row.className="noteRow"+(n.id===active?" active":"");const pick=document.createElement("button");pick.className="notePick";const strong=document.createElement("strong"),small=document.createElement("small");strong.textContent=label(n);small.textContent=n.body.replace(/\s+/g," ").slice(0,54)+" · "+date(n.updated);pick.append(strong,small);pick.onclick=()=>select(n.id);const pin=document.createElement("button");pin.className="pin"+(n.pinned?" on":"");pin.textContent=n.pinned?"★":"☆";pin.title=n.pinned?"Sabitlemeyi kaldır":"Sabitle";pin.setAttribute("aria-label",pin.title);pin.onclick=()=>{n.pinned=!n.pinned;n.updated=Date.now();save();refreshSearch()};row.append(pick,pin);list.append(row)}}
+function counts(){const s=$("body").value;$("counts").textContent=(s.trim()?s.trim().split(/\s+/).length:0)+" kelime · "+s.length+" karakter"}
+function select(id){active=id;const n=current();if(!n)return;$("title").disabled=$("body").disabled=$("copy").disabled=$("delete").disabled=false;$("title").value=n.title;$("body").value=n.body;$("date").textContent="Son değişiklik: "+date(n.updated);counts();refreshSearch()}
+function blank(){active=null;$("title").value=$("body").value="";$("title").disabled=$("body").disabled=$("copy").disabled=$("delete").disabled=true;$("date").textContent="Henüz not yok";counts();refreshSearch()}
+function add(){const t=Date.now(),n={id:uid(),title:"",body:"",created:t,updated:t,pinned:false};notes.unshift(n);$("search").value="";save();select(n.id);$("body").focus()}
+function edit(){const n=current();if(!n)return;n.title=$("title").value;n.body=$("body").value;n.updated=Date.now();vectorCache.delete(n.id);save();counts();$("date").textContent="Son değişiklik: "+date(n.updated);refreshSearch()}
+function remove(){if(!current()||!confirm("Bu not kalıcı olarak silinsin mi?"))return;notes=notes.filter(n=>n.id!==active);vectorCache.delete(active);save();notes.length?select(ordered(notes)[0].id):blank();toast("Not silindi.")}
+async function copy(){const n=current();if(!n)return;const value=[n.title.trim(),n.body].filter(Boolean).join("\n\n");if(!value)return toast("Kopyalanacak metin yok.");try{await navigator.clipboard.writeText(value);toast("Panoya kopyalandı.")}catch(e){const tmp=document.createElement("textarea");tmp.value=value;tmp.style.position="fixed";tmp.style.opacity="0";document.body.append(tmp);tmp.select();let ok=false;try{ok=document.execCommand("copy")}catch(e){}tmp.remove();toast(ok?"Panoya kopyalandı.":"Kopyalama engellendi, metni seçip kopyalayın.")}}
+function download(s,name,type){const u=URL.createObjectURL(new Blob([s],{type}));const a=document.createElement("a");a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),30000)}
+function csvCell(s){s=String(s??"");if(/^\s*[=+\-@]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}
+function exportCSV(){const rows=[["Başlık","İçerik","Oluşturulma","Güncellenme","Sabit"],...notes.map(n=>[n.title,n.body,new Date(n.created).toISOString(),new Date(n.updated).toISOString(),n.pinned?"Evet":"Hayır"])];download("\uFEFF"+rows.map(r=>r.map(csvCell).join(",")).join("\r\n"),"hizli-not.csv","text/csv;charset=utf-8")}
+async function importFile(f){if(!f)return;if(f.size>20*1024*1024)return toast("Dosya 20 MB sınırını aşıyor.");try{const a=JSON.parse(await f.text());if(!validAll(a))throw Error("format");if(!confirm(a.length+" not içe aktarılacak. Mevcut "+notes.length+" notun ÜZERİNE YAZILACAK. Devam?"))return;if(saveOK){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){return toast("Depolamaya yazılamadı; mevcut notlar korundu.")}}else if(!confirm("Depolama devre dışı. Notlar yalnızca bellekte kalacak. Devam?"))return;notes=a;vectorCache.clear();$("search").value="";notes.length?select(ordered(notes)[0].id):blank();$("saved").textContent=saveOK?"✓ Kaydedildi":"Yalnızca bellekte";toast("Yedek geri yüklendi.")}catch(e){toast("Geçersiz JSON yedeği.")}}
+function textSearch(q){const s=q.toLocaleLowerCase("tr-TR");return ordered(notes.filter(n=>(n.title+" "+n.body).toLocaleLowerCase("tr-TR").includes(s)))}
+function contentOf(n){return (n.title+"\n"+n.body).slice(0,1800)||"boş not"}
+async function loadModel(){
+if(model)return model;
+$("modelState").textContent="Çok dilli model indiriliyor… İlk yükleme zaman alabilir.";
+try{
+const pkg=await import("https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2");
+pkg.env.allowLocalModels=false;
+embeddingPipeline=await pkg.pipeline("feature-extraction","Xenova/paraphrase-multilingual-MiniLM-L12-v2",{quantized:true});
+model=embeddingPipeline;
+$("modelState").textContent="AI hazır · arama cihazında çalışır.";
+return model;
+}catch(e){$("semantic").checked=false;$("modelState").textContent="Model yüklenemedi; normal aramaya dönüldü.";toast("AI modeli indirilemedi. İnternet bağlantısı veya tarayıcı kısıtını kontrol edin.");throw e}
+}
+async function embed(s){const result=await model(s,{pooling:"mean",normalize:true});return Float32Array.from(result.data)}
+function cosine(a,b){let x=0,y=0,z=0;for(let i=0;i<a.length;i++){x+=a[i]*b[i];y+=a[i]*a[i];z+=b[i]*b[i]}return x/(Math.sqrt(y*z)||1)}
+async function semanticSearch(q,gen){
+await loadModel();if(gen!==searchGeneration)return;
+$("modelState").textContent="Notlar anlamlarına göre taranıyor…";
+const queryVec=await embed(q);if(gen!==searchGeneration)return;
+const scored=[];
+for(const n of notes){if(gen!==searchGeneration)return;const source=contentOf(n);let entry=vectorCache.get(n.id);if(!entry||entry.source!==source){entry={source,vector:await embed(source)};vectorCache.set(n.id,entry)}scored.push({n,score:cosine(queryVec,entry.vector)})}
+if(gen!==searchGeneration)return;
+scored.sort((a,b)=>b.score-a.score);
+render(scored.map(x=>x.n));
+$("modelState").textContent="AI hazır · en yakın anlamlı notlar üstte.";
+}
+function refreshSearch(){
+const gen=++searchGeneration;clearTimeout(searchTimer);
+const q=$("search").value.trim();
+if(!q){render();$("modelState").textContent=model?"AI hazır · arama cihazında çalışır.":"Normal metin araması hazır.";return}
+if(!$("semantic").checked){render(textSearch(q));$("modelState").textContent="Kelime eşleşmesi";return}
+$("modelState").textContent="Anlamsal arama hazırlanıyor…";
+searchTimer=setTimeout(()=>semanticSearch(q,gen).catch(()=>{if(gen===searchGeneration)render(textSearch(q))}),350)
+}
+function theme(t){document.documentElement.dataset.theme=t;$("theme").textContent=t==="dark"?"☀ Açık":"◐ Koyu";try{localStorage.setItem(THEME,t)}catch(e){}}
+let initialTheme="light";try{initialTheme=localStorage.getItem(THEME)|| (matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){}theme(initialTheme==="dark"?"dark":"light");
+$("new").onclick=add;$("delete").onclick=remove;$("copy").onclick=copy;
+$("title").addEventListener("input",edit);$("body").addEventListener("input",edit);
+$("search").addEventListener("input",refreshSearch);
+$("semantic").onchange=refreshSearch;
+$("json").onclick=()=>download(JSON.stringify(notes,null,2),"hizli-not-yedek.json","application/json");
+$("csv").onclick=exportCSV;$("import").onclick=()=>{$("file").value="";$("file").click()};
+$("file").onchange=e=>importFile(e.target.files[0]);
+$("theme").onclick=()=>theme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.altKey&&e.key.toLowerCase()==="n"){e.preventDefault();add()}});
+if(notes.length)select(ordered(notes)[0].id);else add();
+if(location.protocol==="file:")toast("file:// modunda depolama değişken olabilir; localhost kullanmanız önerilir.");
+</script>
+</body></html>
