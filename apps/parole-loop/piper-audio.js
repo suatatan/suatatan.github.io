@@ -73,15 +73,44 @@ function pcmFromWav(buffer){
  if(!format||format.channels!==1||format.bits!==16||format.type!==1||dataStart<0)throw Error('Yalnızca tek kanallı PCM WAV destekleniyor');
  return {rate:format.rate,pcm:new Uint8Array(buffer,dataStart,dataBytes)};
 }
-function writeWav(raw,rate){
+function writeWav(raw,rate,channels=1){
  const view=new DataView(new ArrayBuffer(44+raw.length));
  const tag=(offset,s)=>{for(let i=0;i<s.length;i++)view.setUint8(offset+i,s.charCodeAt(i))};
  tag(0,'RIFF');view.setUint32(4,36+raw.length,true);tag(8,'WAVE');
- tag(12,'fmt ');view.setUint32(16,16,true);view.setUint16(20,1,true);view.setUint16(22,1,true);
- view.setUint32(24,rate,true);view.setUint32(28,rate*2,true);
- view.setUint16(32,2,true);view.setUint16(34,16,true);tag(36,'data');view.setUint32(40,raw.length,true);
+ tag(12,'fmt ');view.setUint32(16,16,true);view.setUint16(20,1,true);view.setUint16(22,channels,true);
+ view.setUint32(24,rate,true);view.setUint32(28,rate*channels*2,true);
+ view.setUint16(32,channels*2,true);view.setUint16(34,16,true);tag(36,'data');view.setUint32(40,raw.length,true);
  new Uint8Array(view.buffer,44).set(raw);
  return new Blob([view.buffer],{type:'audio/wav'});
+}
+
+/** Mix binaural carriers and quiet ambient A-minor tones into stereo PCM.
+ * Spoken sentences remain centered, including during the pauses between them.
+ * Binaural left/right frequencies require stereo headphones to be perceived.
+ */
+function mixFocusStereo(mono,rate,focus,cancelled=()=>false){
+ if(mono.length%2)throw Error('PCM örnek sayısı geçersiz');
+ const volume=Math.max(0,Math.min(60,Number(focus.volume)||0))/100;
+ const beat=[10,14,18].includes(Number(focus.beatHz))?Number(focus.beatHz):14;
+ const frames=mono.length/2,source=new DataView(mono.buffer,mono.byteOffset,mono.byteLength);
+ const result=new Uint8Array(mono.length*2),out=new DataView(result.buffer);
+ const tau=Math.PI*2,stepL=tau*200/rate,stepR=tau*(200+beat)/rate;
+ const stepA=tau*110/rate,stepE=tau*164.81/rate,stepA2=tau*220/rate,stepC=tau*261.63/rate;
+ let l=0,r=0,a=0,e=0,a2=0,c=0;
+ const fadeSamples=Math.max(1,Math.round(rate*.45));
+ for(let i=0;i<frames;i++){
+  if((i&65535)===0&&cancelled())throw Error('Hazırlama iptal edildi');
+  const pad=Math.sin(a)*.19+Math.sin(e)*.11+Math.sin(a2)*.06+Math.sin(c)*.035;
+  const envelope=Math.min(1,i/fadeSamples,(frames-1-i)/fadeSamples);
+  const gain=volume*.22*envelope;
+  const speech=source.getInt16(i*2,true);
+  const left=Math.max(-32768,Math.min(32767,Math.round(speech+32767*gain*(Math.sin(l)+pad))));
+  const right=Math.max(-32768,Math.min(32767,Math.round(speech+32767*gain*(Math.sin(r)+pad))));
+  out.setInt16(i*4,left,true);out.setInt16(i*4+2,right,true);
+  l+=stepL;r+=stepR;a+=stepA;e+=stepE;a2+=stepA2;c+=stepC;
+  if(l>=tau)l-=tau;if(r>=tau)r-=tau;if(a>=tau)a-=tau;if(e>=tau)e-=tau;if(a2>=tau)a2-=tau;if(c>=tau)c-=tau;
+ }
+ return result;
 }
 
 /**
@@ -89,7 +118,7 @@ function writeWav(raw,rate){
  * is needed after the phone locks. For infinite repeats, native audio.loop
  * repeats one complete cycle; finite repeats are concatenated into the WAV.
  */
-export async function render({items,repeat,gapMs=700,onProgress=()=>{},cancelled=()=>false}){
+export async function render({items,repeat,gapMs=700,focus={enabled:false},onProgress=()=>{},cancelled=()=>false}){
  const input=[];
  for(const item of items)for(const fragment of chunks(item.text))input.push({index:item.index,text:fragment});
  if(!input.length)throw Error('Önce bir Fransızca cümle gir');
@@ -108,10 +137,10 @@ export async function render({items,repeat,gapMs=700,onProgress=()=>{},cancelled
   pieces.push({pcm:wav.pcm,index:input[i].index,text:input[i].text,start,end:start+wav.pcm.length/(rate*2)});
   bytePos+=wav.pcm.length;
   bytePos+=Math.round(rate*gapMs/1000)*2;
-  if(bytePos*count>MAX_AUDIO_BYTES)throw Error('Ses çok uzun. Daha az tekrar veya daha kısa metin seç');
+  if(bytePos*count*(focus.enabled?2:1)>MAX_AUDIO_BYTES)throw Error('Ses çok uzun. Daha az tekrar veya daha kısa metin seç');
  }
  const total=bytePos*count;
- if(total>MAX_AUDIO_BYTES)throw Error('Hazırlanan ses telefon belleği için fazla büyük');
+ if(total*(focus.enabled?2:1)>MAX_AUDIO_BYTES)throw Error('Hazırlanan ses telefon belleği için fazla büyük');
  const pcm=new Uint8Array(total),markers=[];
  const silence=Math.round(rate*gapMs/1000)*2;
  for(let n=0;n<count;n++){
@@ -123,6 +152,8 @@ export async function render({items,repeat,gapMs=700,onProgress=()=>{},cancelled
    pos+=part.pcm.length+silence;
   }
  }
- return {blob:writeWav(pcm,rate),markers,cycleSeconds:bytePos/(rate*2),totalSeconds:total/(rate*2),infinite:repeat==='inf'};
+ let output=pcm,channels=1;
+ if(focus.enabled){onProgress('Stereo binaural Focus sesi WAV içine ekleniyor…');output=mixFocusStereo(pcm,rate,focus,cancelled);channels=2}
+ return {blob:writeWav(output,rate,channels),markers,cycleSeconds:bytePos/(rate*2),totalSeconds:total/(rate*2),infinite:repeat==='inf'};
 }
-export {pcmFromWav,writeWav};
+export {pcmFromWav,writeWav,mixFocusStereo};
