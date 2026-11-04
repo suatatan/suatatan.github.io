@@ -7,7 +7,9 @@ layout: null
 body{margin:0;background:radial-gradient(ellipse at 90% 0,#244636,transparent 55%),#101a17}main{max-width:950px;margin:auto;padding:24px 16px 65px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.85rem}a{color:var(--green)}h1{font-size:clamp(2.2rem,6vw,3.5rem);letter-spacing:-.055em;margin:30px 0 5px}h1 em{color:var(--green);font-style:normal}.intro{color:var(--muted);margin:0 0 24px;line-height:1.6}
 .card{background:var(--panel);padding:22px;border:1px solid var(--line);border-radius:16px;margin-bottom:16px}label{display:block;color:var(--muted);font-size:.86rem;margin-bottom:8px}textarea{width:100%;min-height:165px;resize:vertical;padding:15px;color:#e8f6ee;background:#102019;border:1px solid var(--line);border-radius:12px;font:1.05rem/1.65 inherit}
 button,select,input{font:inherit}button,select,input[type=number]{padding:10px 13px;border-radius:10px;border:1px solid var(--line);background:#2b4436;color:#ecf9ef}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.primary{background:var(--green);color:#14261c;border-color:var(--green);font-weight:750}.row{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.row>label{margin:0}select{max-width:100%}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.control{min-width:0}.control select,.control input[type=range],.control input[type=number]{width:100%;margin-top:5px}.control input[type=range]{accent-color:var(--green)}.buttons{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0}.status{font-size:.85rem;background:#294639;padding:11px;border-radius:10px;min-height:42px}.muted,.hint{color:var(--muted);font-size:.83rem;line-height:1.6}.sentences{display:grid;gap:7px;max-height:300px;overflow:auto}.sentence{display:flex;gap:9px;align-items:start;padding:11px;border:1px solid var(--line);border-radius:10px;background:#14251e}.sentence.active{border-color:var(--green);background:#254535}.sentence button{flex-shrink:0;padding:6px 9px}.sentence span{line-height:1.5;cursor:pointer;overflow-wrap:anywhere}.counter{font-variant-numeric:tabular-nums;color:var(--green)}footer{color:var(--muted);font-size:.78rem;margin-top:25px}
+.focus-panel{margin-top:16px;padding:14px 16px;border:1px solid #49705b;border-radius:12px;background:#162b22}.focus-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.focus-switch{display:flex;align-items:center;gap:10px;margin:0;color:#e8f6ee;font-size:1rem;font-weight:700;cursor:pointer}.focus-switch input{width:19px;height:19px;accent-color:var(--green)}.focus-badge{color:#a7ebc0;font-size:.73rem;border:1px solid #49705b;border-radius:100px;padding:4px 9px}.focus-options{display:grid;grid-template-columns:minmax(150px,1fr) minmax(160px,1fr);gap:16px;margin-top:14px}.focus-panel .hint{margin:9px 0 0}.focus-panel output{color:var(--green)}[hidden]{display:none!important}
 @media(max-width:650px){.controls{grid-template-columns:1fr}.card{padding:15px}}
+@media(max-width:480px){.focus-options{grid-template-columns:1fr}}
 </style><link rel="manifest" href="/apps/parole-loop/manifest.webmanifest"><link rel="apple-touch-icon" href="/apps/icons/parole-loop.svg"><meta name="apple-mobile-web-app-capable" content="yes"></head><body><main><header><strong>PAROLE <span style="color:#8bdfaa">LOOP</span> · Suat Atan</strong><a href="/apps/">← Uygulamalar</a></header>
 <h1>Écoute. <em>Répète.</em></h1><p class="intro">Fransızca metni dinle, yavaşlat, cümleyi seç ve istediğin kadar tekrar ettir. TCF dinleme ve telaffuz çalışmaları için.</p>
 <section class="card"><label for="source">Fransızca metin</label><textarea id="source" spellcheck="false">Je voudrais avoir plus de temps pour lire en français.
@@ -22,6 +24,9 @@ Il faut que je fasse attention à la prononciation.</textarea>
 </div>
 <div class="row" style="margin-top:16px"><label for="scope">Oynatma kapsamı</label><select id="scope"><option value="all">Tüm metin</option><option value="selected">Seçili cümle</option></select>
 <label for="gap">Tekrar arası</label><select id="gap"><option value="0">Ara yok</option><option value="700" selected>0,7 saniye</option><option value="1500">1,5 saniye</option><option value="3000">3 saniye</option></select></div>
+<div class="focus-panel"><div class="focus-heading"><label class="focus-switch" for="focusEnabled"><input id="focusEnabled" type="checkbox"> 🎧 Focus · binaural arka plan</label><span class="focus-badge">İsteğe bağlı · varsayılan kapalı</span></div>
+<div id="focusOptions" class="focus-options" hidden><div class="control"><label for="focusBeat">Odak ritmi</label><select id="focusBeat"><option value="10">10 Hz · sakin</option><option value="14" selected>14 Hz · dengeli</option><option value="18">18 Hz · canlı</option></select></div><div class="control"><label for="focusVolume">Arka plan sesi · <output id="focusVolumeValue" for="focusVolume">20%</output></label><input type="range" id="focusVolume" min="0" max="60" step="5" value="20"></div></div>
+<p class="hint">Yumuşak, enstrümantal ambient tonlar ve iki kulağa farklı frekanslar. Binaural etki için <strong>stereo kulaklık</strong> kullan. Etkisi kişiden kişiye değişebilir. Piper modunda ses WAV dosyasına eklenir ve ekran kilitliyken de sürer.</p></div>
 <div class="buttons"><button class="primary" id="play">▶ Dinle / döngüyü başlat</button><button id="pause">Ⅱ Duraklat</button><button id="stop">■ Durdur</button><span id="progress" class="counter"></span></div>
 <div id="piperPanel" hidden><p class="hint">🔒 <strong>Arka planda dinleme:</strong> Fransızca ses, telefonunda Piper ile gerçek bir WAV dosyasına dönüştürülür. İlk seferde yaklaşık 63 MB model ve çalışma dosyaları indirilir. Ses üretildikten sonra ekranı kapatabilirsin. Büyük metinler biraz zaman alabilir.</p>
 <audio id="nativeAudio" controls playsinline preload="metadata" style="width:100%;margin:8px 0" aria-label="Hazırlanan Fransızca ses"></audio>
@@ -33,17 +38,63 @@ Il faut que je fasse attention à la prononciation.</textarea>
 </main><script src="/apps/listening-habits.js"></script><script>
 (()=>{'use strict';
 const $=id=>document.getElementById(id);const synth=window.speechSynthesis;const native=$('nativeAudio');
-let sentences=[],selected=0,voices=[],active=false,paused=false,token=0,round=0,target=1,sequence=[],position=0,pending=null;
+let sentences=[],selected=0,voices=[],active=false,paused=false,token=0,round=0,target=1,sequence=[],position=0,pending=null,focusAudio=null;
 let generated=null,generatedUrl=null,renderId=0,piperMarked=0,lastNativeTime=0,lastListenTick=0,listenPending=0;
 const defaultLang='fr-FR',STUDY_KEY='parole_loop_study_v2';
-function saveStudy(){try{localStorage.setItem(STUDY_KEY,JSON.stringify({text:$('source').value,selected,rate:$('rate').value,repeat:$('repeat').value,scope:$('scope').value,gap:$('gap').value,engine:$('engine').value,round,updated:Date.now()}))}catch(e){console.warn('Çalışma kaydedilemedi',e)}}
+function focusSettings(){return {enabled:$('focusEnabled').checked,volume:Number($('focusVolume').value),beatHz:Number($('focusBeat').value)}}
+function saveStudy(){try{localStorage.setItem(STUDY_KEY,JSON.stringify({text:$('source').value,selected,rate:$('rate').value,repeat:$('repeat').value,scope:$('scope').value,gap:$('gap').value,engine:$('engine').value,focus:focusSettings(),round,updated:Date.now()}))}catch(e){console.warn('Çalışma kaydedilemedi',e)}}
 function restoreStudy(){try{const s=JSON.parse(localStorage.getItem(STUDY_KEY)||'null');if(!s)return;
 if(typeof s.text==='string')$('source').value=s.text.replace(/\\n/g,'\n');
 if(Number.isInteger(s.selected)&&s.selected>=0)selected=s.selected;
-for(const id of ['rate','repeat','scope','gap','engine'])if(s[id]!=null&&Array.from($(id).options||[]).some(o=>o.value===s[id])||id==='rate'&&Number(s.rate)>=.5&&Number(s.rate)<=1.5)$(id).value=s[id];
+for(const id of ['repeat','scope','gap','engine'])if(s[id]!=null&&Array.from($(id).options).some(o=>o.value===s[id]))$(id).value=s[id];
+if(Number(s.rate)>=.5&&Number(s.rate)<=1.5)$('rate').value=s.rate;
+if(s.focus&&typeof s.focus==='object'){
+ $('focusEnabled').checked=s.focus.enabled===true;
+ if([10,14,18].includes(Number(s.focus.beatHz)))$('focusBeat').value=String(s.focus.beatHz);
+ if(Number.isFinite(Number(s.focus.volume)))$('focusVolume').value=Math.max(0,Math.min(60,Number(s.focus.volume)));
+}
 $('rateValue').textContent=Number($('rate').value).toFixed(2)+'×';
 }catch(e){console.warn('Çalışma yüklenemedi',e)}}
 function status(t){$('status').textContent=t}
+function stopFocus(){
+ const p=focusAudio;focusAudio=null;if(!p)return;
+ try{const t=p.ctx.currentTime;p.fade.gain.cancelScheduledValues(t);p.fade.gain.setTargetAtTime(0,t,.045);setTimeout(()=>p.ctx.close().catch(()=>{}),220)}catch{p.ctx.close().catch(()=>{})}
+}
+function startFocus(){
+ if(focusAudio||!$('focusEnabled').checked||$('engine').value!=='browser')return;
+ const Ctx=window.AudioContext||window.webkitAudioContext;
+ if(!Ctx){status('Bu tarayıcı Focus sesini desteklemiyor.');return}
+ try{
+  const ctx=new Ctx(),merger=ctx.createChannelMerger(2),master=ctx.createGain(),fade=ctx.createGain();
+  merger.connect(master);master.connect(fade);fade.connect(ctx.destination);
+  fade.gain.setValueAtTime(0,ctx.currentTime);fade.gain.linearRampToValueAtTime(1,ctx.currentTime+.4);
+  const addTone=(frequency,gain,channels)=>{
+   const osc=ctx.createOscillator(),amp=ctx.createGain();osc.type='sine';osc.frequency.value=frequency;amp.gain.value=gain;
+   osc.connect(amp);for(const channel of channels)amp.connect(merger,0,channel);osc.start();return osc;
+  };
+  addTone(200,1,[0]);const right=addTone(200+focusSettings().beatHz,1,[1]);
+  // Soft A-minor ambient chord under the stereo binaural carriers.
+  for(const [frequency,gain]of [[110,.19],[164.81,.11],[220,.06],[261.63,.035]])addTone(frequency,gain,[0,1]);
+  focusAudio={ctx,master,fade,right};updateFocusGain();ctx.resume().catch(e=>console.warn('Focus sesi başlatılamadı',e));
+ }catch(e){console.warn('Focus sesi kullanılamıyor',e);status('Focus sesi başlatılamadı: '+e.message)}
+}
+function updateFocusGain(){
+ if(!focusAudio)return;
+ const {ctx,master,right}=focusAudio,s=focusSettings();
+ master.gain.setTargetAtTime(s.volume/100*.22,ctx.currentTime,.05);
+ right.frequency.setTargetAtTime(200+s.beatHz,ctx.currentTime,.05);
+}
+function syncFocus(){
+ const enabled=$('focusEnabled').checked;
+ $('focusOptions').hidden=!enabled;
+ $('focusVolumeValue').textContent=$('focusVolume').value+'%';saveStudy();
+ if($('engine').value==='piper'){
+  if(generatedUrl)status('Focus ayarı kaydedildi. Yeni WAV için ▶ düğmesine bas.');
+  return;
+ }
+ if(!enabled){stopFocus();return}
+ if(active&&!paused){startFocus();updateFocusGain()}
+}
 function parse(){stop();const value=$('source').value.trim();sentences=(value.match(/[^.!?…\n]+(?:[.!?…]+|$)/g)||[]).map(x=>x.trim()).filter(Boolean);selected=Math.min(selected,Math.max(0,sentences.length-1));$('count').textContent=sentences.length+' cümle';draw();saveStudy()}
 function draw(){const container=$('sentences');container.replaceChildren();sentences.forEach((line,i)=>{const row=document.createElement('div');row.className='sentence'+(selected===i?' active':'');const btn=document.createElement('button');btn.textContent='▶';btn.title='Bu cümleyi oynat';btn.onclick=()=>{selected=i;$('scope').value='selected';draw();play()};const span=document.createElement('span');span.textContent=line;span.onclick=()=>{selected=i;$('scope').value='selected';draw();saveStudy()};row.append(btn,span);container.append(row)})}
 function updateVoices(){voices=synth?.getVoices().filter(v=>v.lang.toLowerCase().startsWith('fr'))||[];const previous=$('voice').value;$('voice').replaceChildren();
@@ -51,15 +102,15 @@ if(!voices.length){const op=document.createElement('option');op.value='';op.text
 voices.sort((a,b)=>Number(b.localService)-Number(a.localService)||a.name.localeCompare(b.name));voices.forEach(v=>{const o=document.createElement('option');o.value=v.voiceURI;o.textContent=v.name+' ('+v.lang+')'+(v.localService?' · yerel':'');$('voice').append(o)});
 const saved=localStorage.getItem('parole_voice');$('voice').value=voices.some(v=>v.voiceURI===previous)?previous:voices.some(v=>v.voiceURI===saved)?saved:voices[0].voiceURI;if($('engine').value==='browser')status(voices.length+' Fransızca ses hazır.')}
 function cancelPending(){if(pending!==null){clearTimeout(pending);pending=null}}
-function stop(){active=false;paused=false;token++;renderId++;cancelPending();synth?.cancel();native.pause();try{native.currentTime=0}catch{}lastListenTick=0;listenPending=0;$('pause').textContent='Ⅱ Duraklat';$('progress').textContent='';status('Durduruldu.')}
+function stop(){active=false;paused=false;token++;renderId++;cancelPending();synth?.cancel();native.pause();stopFocus();try{native.currentTime=0}catch{}lastListenTick=0;listenPending=0;$('pause').textContent='Ⅱ Duraklat';$('progress').textContent='';status('Durduruldu.')}
 function next(id){if(!active||id!==token)return;
-if(position>=sequence.length){round++;if(round>=target){active=false;status('Tamamlandı ✓ '+round+' tekrar.');$('progress').textContent='';return}position=0}
+if(position>=sequence.length){round++;if(round>=target){active=false;stopFocus();status('Tamamlandı ✓ '+round+' tekrar.');$('progress').textContent='';return}position=0}
 const idx=sequence[position++],line=sentences[idx];if(!line){next(id);return}
 selected=idx;draw();const utter=new SpeechSynthesisUtterance(line);utter.lang=defaultLang;utter.rate=Number($('rate').value);utter.pitch=1;
 const voice=voices.find(v=>v.voiceURI===$('voice').value);if(voice)utter.voice=voice;
 const roundDisplay=Number.isFinite(target)?round+1+'/'+target:'∞';$('progress').textContent='Tekrar '+roundDisplay+' · Cümle '+position+'/'+sequence.length;status('Okunuyor: '+line);
 utter.onend=()=>{if(!active||id!==token)return;window.FrenchListeningHabit?.record('parole-loop','sentence',0,line);saveStudy();pending=setTimeout(()=>{pending=null;next(id)},Number($('gap').value))};
-utter.onerror=e=>{if(!active||id!==token)return;if(e.error==='canceled'||e.error==='interrupted')return;active=false;status('Seslendirme hatası: '+e.error)};
+utter.onerror=e=>{if(!active||id!==token)return;if(e.error==='canceled'||e.error==='interrupted')return;active=false;stopFocus();status('Seslendirme hatası: '+e.error)};
 synth.speak(utter)}
 function setMode(){
  stop();
@@ -119,8 +170,8 @@ async function playNative(){
  if(!sentences.length)parse();
  if(!sentences.length)return status('Önce Fransızca metin gir.');
  const items=($('scope').value==='selected'?[selected]:sentences.map((_,i)=>i)).map(index=>({index,text:sentences[index]}));
- const repeat=$('repeat').value,gapMs=Number($('gap').value);
- const key=JSON.stringify({items,repeat,gapMs});
+ const repeat=$('repeat').value,gapMs=Number($('gap').value),focus=focusSettings();
+ const key=JSON.stringify({items,repeat,gapMs,focus});
  stop();
  const id=renderId;
  $('piperPanel').hidden=false;
@@ -129,7 +180,7 @@ async function playNative(){
  status('Piper hazırlanıyor. İlk kullanımda model indirilecek; lütfen bekle…');
  try{
   const module=await import('/apps/parole-loop/piper-audio.js');
-  const result=await module.render({items,repeat,gapMs,cancelled:()=>id!==renderId,onProgress:msg=>{if(id===renderId)status(msg)}});
+  const result=await module.render({items,repeat,gapMs,focus,cancelled:()=>id!==renderId,onProgress:msg=>{if(id===renderId)status(msg)}});
   if(id!==renderId)return;
   if(generatedUrl)URL.revokeObjectURL(generatedUrl);
   generated={...result,key};
@@ -150,16 +201,17 @@ native.addEventListener('error',()=>status('Hazırlanan WAV oynatılamadı. Tekr
 $('downloadAudio').onclick=()=>{if(!generatedUrl)return;const a=document.createElement('a');a.href=generatedUrl;a.download='ecoute-repete-francais.wav';a.click()};
 
 function play(){if($('engine').value==='piper')return playNative();if(!synth)return status('Tarayıcı seslendirmeyi desteklemiyor.');if(!sentences.length)parse();if(!sentences.length)return status('Önce Fransızca metin gir.');
-stop();active=true;round=0;position=0;target=$('repeat').value==='inf'?Infinity:Number($('repeat').value);sequence=$('scope').value==='selected'?[selected]:sentences.map((_,i)=>i);const id=token;saveStudy();next(id)}
-$('play').onclick=play;$('stop').onclick=stop;$('pause').onclick=()=>{if($('engine').value==='piper'){if(!generated)return;if(native.paused)native.play().catch(e=>status(e.message));else native.pause();return}if(!active)return;if(paused){synth.resume();paused=false;$('pause').textContent='Ⅱ Duraklat';status('Devam ediyor…')}else{synth.pause();paused=true;$('pause').textContent='▶ Devam';status('Duraklatıldı.')}};
+stop();active=true;round=0;position=0;target=$('repeat').value==='inf'?Infinity:Number($('repeat').value);sequence=$('scope').value==='selected'?[selected]:sentences.map((_,i)=>i);const id=token;saveStudy();startFocus();next(id)}
+$('play').onclick=play;$('stop').onclick=stop;$('pause').onclick=()=>{if($('engine').value==='piper'){if(!generated)return;if(native.paused)native.play().catch(e=>status(e.message));else native.pause();return}if(!active)return;if(paused){synth.resume();paused=false;if($('focusEnabled').checked){startFocus();focusAudio?.ctx.resume().catch(()=>{})}$('pause').textContent='Ⅱ Duraklat';status('Devam ediyor…')}else{synth.pause();paused=true;focusAudio?.ctx.suspend().catch(()=>{});$('pause').textContent='▶ Devam';status('Duraklatıldı.')}};
 $('parse').onclick=parse;$('scope').onchange=draw;$('source').addEventListener('input',()=>{$('count').textContent='Metin değişti; Cümleleri güncelle';saveStudy()});
 $('rate').oninput=()=>{$('rateValue').textContent=Number($('rate').value).toFixed(2)+'×';localStorage.setItem('parole_rate',$('rate').value);if($('engine').value==='piper')native.playbackRate=Number($('rate').value);saveStudy()};
 $('voice').onchange=()=>localStorage.setItem('parole_voice',$('voice').value);
 const r=Number(localStorage.getItem('parole_rate'));if(r>=.5&&r<=1.5){$('rate').value=r;$('rateValue').textContent=r.toFixed(2)+'×'}
 for(const id of ['repeat','scope','gap'])$(id).addEventListener('change',saveStudy);
 $('engine').addEventListener('change',setMode);
+for(const id of ['focusEnabled','focusBeat','focusVolume'])$(id).addEventListener(id==='focusVolume'?'input':'change',syncFocus);
 window.addEventListener('pagehide',saveStudy);
-restoreStudy();setMode();
+restoreStudy();setMode();syncFocus();
 if(!synth){if($('engine').value!=='piper')status('Bu tarayıcı Speech Synthesis desteklemiyor.')}else{updateVoices();synth.addEventListener?.('voiceschanged',updateVoices);setTimeout(updateVoices,700);setTimeout(updateVoices,2000)}
 parse();})();
 </script><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/apps/parole-loop/sw.js',{scope:'/apps/parole-loop/',updateViaCache:'none'}).catch(e=>console.warn('Offline destek kurulamadı:',e)));}</script><script src="/apps/pwa-install.js" defer></script></body></html>
