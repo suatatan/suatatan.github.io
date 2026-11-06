@@ -1,0 +1,14 @@
+{
+  "name": "La Page — Lecture & Présentation Orale",
+  "short_name": "La Page",
+  "description": "Fransızca–Türkçe kitap gibi okuma ve sözlü sunum çalışma defteri",
+  "lang": "tr",
+  "start_url": "/apps/la-page/",
+  "scope": "/apps/la-page/",
+  "display": "standalone",
+  "background_color": "#f7f2e9",
+  "theme_color": "#1d3432",
+  "icons": [
+    {"src":"/apps/la-page/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
