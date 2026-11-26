@@ -209,6 +209,49 @@
     $('generateDraft').onclick=generateDraft;$('copyAiPrompt').onclick=async()=>{const d=doc();if(!d)return;const notes=fields.map(f=>`${f.title}: ${d.notes[f.key]||'(boş)'}`).join('\n');const prompt=`Use $french-reading-oral-coach to help me create a natural B1–B2 French présentation orale lasting 2–3 minutes. Explain any corrections briefly in Turkish. Keep my own opinions and do not invent facts.\n\nArticle: ${d.title}\nSource: ${d.source||'unspecified'}\n\nMy notes:\n${notes}\n\nPlease produce (1) a fluent, editable French oral script, (2) five key cue-card words, and (3) three expressions I can reuse.`;try{await navigator.clipboard.writeText(prompt);notify('ChatGPT promptu kopyalandı. Sohbete yapıştırabilirsin.');}catch{const ta=document.createElement('textarea');ta.value=prompt;document.body.append(ta);ta.select();document.execCommand('copy');ta.remove();notify('Prompt kopyalandı.');}};$('scriptEditor').oninput=e=>{const d=doc();if(!d)return;d.oralDraft=e.target.value;save();};$('playScript').onclick=()=>{const t=doc()?.oralDraft;if(t)speak(t);else notify('Önce bir konuşma taslağı oluştur.');};$('copyScript').onclick=async()=>{const t=doc()?.oralDraft;if(!t)return notify('Kopyalanacak metin yok.');try{await navigator.clipboard.writeText(t);notify('Konuşma metni kopyalandı.');}catch{const el=$('scriptEditor');el.select();document.execCommand('copy');notify('Metin seçildi / kopyalandı.');}};$('downloadScript').onclick=()=>{const d=doc();if(d?.oralDraft)download(slug(d.title)+'-presentation-orale.txt',d.oralDraft);else notify('Önce konuşma metni oluştur.');};$('cueMode').onclick=()=>{cuesVisible=!cuesVisible;$('cueCards').hidden=!cuesVisible;if(cuesVisible)renderCues();$('cueMode').textContent=cuesVisible?'☷ Kartları gizle':'☷ Kartlarla prova';};$('startTimer').onclick=()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;$('startTimer').textContent='Devam et';return;}$('startTimer').textContent='Duraklat';timerInterval=setInterval(()=>{timerSeconds++;$('timer').textContent=String(Math.floor(timerSeconds/60)).padStart(2,'0')+':'+String(timerSeconds%60).padStart(2,'0');},1000);};$('resetTimer').onclick=()=>{clearInterval(timerInterval);timerInterval=null;timerSeconds=0;$('timer').textContent='00:00';$('startTimer').textContent='Başlat';};$('stopSpeech').onclick=()=>window.speechSynthesis?.cancel();
     $('exportBackup').onclick=exportData;$('uploadBackup').onclick=()=>$('backupPicker').click();$('backupPicker').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const candidate=JSON.parse(await file.text());if(!Array.isArray(candidate.docs)||!Array.isArray(candidate.words)||typeof candidate.gloss!=='object')throw Error('Dosya formatı yanlış');if(!confirm('Mevcut kitaplığın yerine yedek yüklensin mi? Önce mevcut verilerini yedekleyebilirsin.'))return;data=candidate;data.docs.forEach(d=>{d.notes||={};d.oralDraft||='';});data.activeId=data.docs.find(d=>d.id===data.activeId)?.id||data.docs[0]?.id||null;save();renderDocs();view('reader');notify('Yedek geri yüklendi.');}catch(err){notify('Yedek okunamadı: '+err.message);}finally{e.target.value='';}};window.addEventListener('scroll',handleScroll,{passive:true});window.addEventListener('beforeunload',()=>window.speechSynthesis?.cancel());}
   wire();renderDocs();view(['reader','vocabulary','oral'].includes(data.view)?data.view:'reader');
+
+  // ChatGPT / local deep links. A link never overwrites an existing document.
+  function parseReadingLink(hash){
+    const p=Object.create(null);
+    for(const part of hash.replace(/^#/,'').split('&')){
+      const i=part.indexOf('=');if(i<0)continue;
+      const decode=s=>decodeURIComponent(s.replace(/\+/g,' '));
+      p[decode(part.slice(0,i))]=decode(part.slice(i+1));
+    }
+    if(p.action!=='add-text')return null;
+    const mode=p.mode||'plain';
+    if(!['plain','json'].includes(mode))throw Error('Geçersiz metin biçimi.');
+    const raw=(mode==='json'?p.pack:p.text)||'';
+    if(!raw.trim()||raw.length>100000)throw Error('Metin boş veya bağlantı çok uzun.');
+    const pack=mode==='json'?parsePack(raw):null;
+    const title=(p.title||pack?.title||'Fransızca metin').trim();
+    const source=(p.source||pack?.source||'ChatGPT').trim();
+    const text=pack?textFromPack(pack.paragraphs):raw.trim();
+    if(!title||title.length>300||source.length>500||!text.trim())throw Error('Geçersiz başlık veya metin.');
+    return {title,source,text,readingMode:mode,...(pack?{paragraphs:pack.paragraphs}:{})};
+  }
+  function receiveReadingLink(){
+    let incoming;
+    try{incoming=parseReadingLink(location.hash);}catch(e){notify('Bağlantı okunamadı: '+e.message);return;}
+    if(!incoming)return;
+    const existing=data.docs.find(d=>d.title===incoming.title&&d.text===incoming.text&&isPlain(d)===(incoming.readingMode==='plain')&&
+      (incoming.readingMode==='plain'||JSON.stringify(d.paragraphs)===JSON.stringify(incoming.paragraphs)));
+    const previous={docs:data.docs,activeId:data.activeId,view:data.view};
+    const d=existing||{...incoming,id:uid(),progress:0,updatedAt:Date.now(),notes:{},oralDraft:''};
+    if(!existing)data.docs=[d,...data.docs];
+    data.activeId=d.id;data.view='reader';
+    try{localStorage.setItem(KEY,JSON.stringify(data));}
+    catch{Object.assign(data,previous);notify('Metin kaydedilemedi. Depolama alanını kontrol et.');return;}
+    selected=null;
+    history.replaceState(history.state,'',location.pathname+location.search);
+    if(!$('importModal').hidden)closeModal();
+    renderDocs();view('reader');
+    notify(existing?'Bu metin kitaplığında zaten var.':'ChatGPT metni kitaplığa eklendi ✓');
+  }
+  window.addEventListener('hashchange',receiveReadingLink);
+  window.addEventListener('pageshow',receiveReadingLink);
+  receiveReadingLink();
+
   if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol))navigator.serviceWorker.register('/apps/la-page/sw.js',{scope:'/apps/la-page/'}).catch(()=>{});
 })();
 </script>
