@@ -31,3 +31,35 @@ $('exportJson').onclick=()=>download('lapage-cards.json',JSON.stringify({format:
 $('importBtn').onclick=()=>$('file').click();$('file').onchange=async()=>{let added=0,errors=[];for(let f of $('file').files){try{let text=await f.text(),items;if(/\.json$/i.test(f.name)){let obj=JSON.parse(text);items=Array.isArray(obj)?obj:obj.notes;if(!Array.isArray(items))throw Error('Not dizisi bulunamadı')}else{let heading=text.match(/^#\s+(.+)$/m);items=[{title:heading?.[1]||f.name.replace(/\.[^.]+$/,''),body:text,tags:''}]}for(let x of items){if(!x||typeof x.title!=='string'||typeof x.body!=='string'||!x.title.trim()||!x.body.trim())continue;if(state.notes.some(n=>n.id===x.id||n.title===x.title&&n.body===x.body))continue;state.notes.push({id:uid(),title:x.title.slice(0,200),body:x.body,tags:typeof x.tags==='string'?x.tags:'',created:validDate(x.created)||new Date().toISOString(),last:validDate(x.last),next:validDate(x.next),count:Math.max(0,Math.floor(Number(x.count)||0)),streak:Math.max(0,Math.min(6,Math.floor(Number(x.streak)||0)))});added++}}catch(e){errors.push(f.name)}}$('file').value='';if(save())say(added+' not eklendi.'+(errors.length?' Okunamadı: '+errors.join(', '):''));choose(null);renderList()};
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;$('install').hidden=false});$('install').onclick=async()=>{if(installEvent){await installEvent.prompt();installEvent=null;$('install').hidden=true}};window.addEventListener('appinstalled',()=>{$('install').hidden=true});if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{$('offline').textContent='Çevrim dışı kullanıma hazır.'}).catch(()=>{$('offline').textContent='Çevrim dışı kurulum başarısız.'})}else $('offline').textContent='Çevrim dışı kurulum desteklenmiyor.';
 save();choose(null);
+/* v1.1: local-only inbound links. */
+function parseCardLink(hash){
+  const p=Object.create(null);
+  for(const part of hash.replace(/^#/, '').split('&')){
+    const i=part.indexOf('=');
+    if(i<0)continue;
+    const decode=s=>decodeURIComponent(s.replace(/\+/g,' '));
+    p[decode(part.slice(0,i))]=decode(part.slice(i+1));
+  }
+  if(p.action!=='add-card')return null;
+  const title=(p.title||'').trim(), body=(p.body||'').trim(), tags=(p.tags||'').trim();
+  if(!title||title.length>200||!body||body.length>30000||tags.length>500)throw Error('Kart bağlantısı geçersiz veya çok uzun.');
+  return {title,body,tags};
+}
+function receiveCardLink(){
+  let data;
+  try{data=parseCardLink(location.hash)}catch(e){say('Kart bağlantısı okunamadı.');return}
+  if(!data)return;
+  let existing=state.notes.find(n=>n.title===data.title&&n.body===data.body);
+  if(existing){current=existing.id;say('Bu kart zaten kayıtlı. Tekrar geçmişi korundu.')}
+  else{
+    const note={...data,id:uid(),created:new Date().toISOString(),last:null,next:null,count:0,streak:0};
+    state.notes.push(note);
+    if(!save()){state.notes.pop();return}
+    current=note.id;say('Yeni kart bağlantıdan kaydedildi ✓');
+  }
+  history.replaceState(history.state,'',location.pathname+location.search);
+  switchTab('review');
+}
+window.addEventListener('hashchange',receiveCardLink);
+window.addEventListener('pageshow',receiveCardLink);
+receiveCardLink();
