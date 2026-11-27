@@ -1,18 +1,3 @@
-// Shared Yandex Metrica counter for the site and standalone learning apps.
-(function () {
-    if (window.__suatMetricaInitialized) return;
-    window.__suatMetricaInitialized = true;
-
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-    ym(98433671, 'init', {webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-})();
-
 // Microsoft Clarity session replay (optional analytics, separate from Metrica).
 (function () {
     if (window.__suatClaritySetup) return;
@@ -26,7 +11,6 @@
     function preference() { try { return localStorage.getItem(key); } catch (_) { return null; } }
     function start() {
         if (window.__suatClarityInitialized) return;
-        window.__suatClarityInitialized = true;
         if (privateApp) document.body.setAttribute('data-clarity-mask', 'true');
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -34,11 +18,12 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "zk44qce35h");
         window.clarity("consentv2", {analytics_Storage:"granted", ad_Storage:"denied"});
+        window.__suatClarityInitialized = true;
     }
     function setup() {
         var tr = /^tr/i.test(document.documentElement.lang || '') || /^\/(tr|egitim)(\/|$)/.test(location.pathname);
         var pref = preference();
-        if (pref === 'yes') start();
+        if (pref === 'yes') { try { start(); } catch (error) { console.warn('Clarity initialization failed:', error); } }
         var panel = document.createElement('div');
         panel.setAttribute('data-clarity-mask', 'true');
         panel.style.cssText = 'position:fixed;bottom:14px;left:14px;z-index:2147483647;max-width:calc(100vw - 28px);font:13px/1.45 system-ui,sans-serif;color:#172033';
@@ -49,7 +34,7 @@
         };
         function choose(value) {
             try { localStorage.setItem(key, value); } catch (_) {}
-            if (value === 'yes') { start(); compact(); }
+            if (value === 'yes') { try { start(); compact(); } catch (error) { console.warn('Clarity initialization failed:', error); } }
             else if (window.__suatClarityInitialized) { window.clarity('consentv2', {analytics_Storage:'denied', ad_Storage:'denied'}); location.reload(); }
             else compact();
         }
@@ -70,3 +55,23 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setup, {once:true});
     else setup();
 })();
+
+// Keep Metrica independent from Clarity setup.
+try {
+// Shared Yandex Metrica counter for the site and standalone learning apps.
+(function () {
+    if (window.__suatMetricaInitialized) return;
+    window.__suatMetricaInitialized = true;
+
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(98433671, 'init', {webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+})();
+
+
+} catch (error) { console.warn('Metrica initialization failed:', error); }
