@@ -33,6 +33,7 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "zk44qce35h");
+        window.clarity("consentv2", {analytics_Storage:"granted", ad_Storage:"denied"});
     }
     function setup() {
         var tr = /^tr/i.test(document.documentElement.lang || '') || /^\/(tr|egitim)(\/|$)/.test(location.pathname);
@@ -49,12 +50,12 @@
         function choose(value) {
             try { localStorage.setItem(key, value); } catch (_) {}
             if (value === 'yes') { start(); compact(); }
-            else if (window.__suatClarityInitialized) { location.reload(); }
+            else if (window.__suatClarityInitialized) { window.clarity('consentv2', {analytics_Storage:'denied', ad_Storage:'denied'}); location.reload(); }
             else compact();
         }
         function compact() {
             panel.replaceChildren(button(tr ? 'Analitik tercihleri' : 'Analytics preferences', expand));
-            panel.style.background = 'transparent'; panel.style.padding = '0';
+            panel.style.background = 'transparent'; panel.style.padding = '0'; panel.style.width = 'auto'; panel.style.border = '0'; panel.style.boxShadow = 'none';
         }
         function expand() {
             panel.replaceChildren();
