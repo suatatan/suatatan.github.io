@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Clarity bağlantı testi</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;max-width:700px;margin:50px auto;padding:20px;color:#172033}button{padding:12px 18px;border-radius:8px;border:1px solid #225ac2;background:#225ac2;color:white;font:inherit;cursor:pointer}pre{white-space:pre-wrap;background:#f0f4fa;padding:16px;border-radius:8px}a{color:#225ac2}</style></head>
+<body><h1>Microsoft Clarity bağlantı testi</h1><p>Bu sayfa sadece takip kodunu sınar. Testi başlatırsanız bu sayfadaki etkileşimler Microsoft Clarity'ye gönderilebilir.</p><p>Proje: <code>zk44qce35h</code></p><button id="start">Onay ver ve testi başlat</button> <button id="interaction" disabled>Test tıklaması</button><pre id="log" aria-live="polite">Henüz başlatılmadı.</pre><p><a href="https://clarity.microsoft.com/projects/view/zk44qce35h/dashboard">Clarity paneli</a> · <a href="/">Ana sayfa</a></p>
+<script>
+(function(){
+ var log=document.getElementById('log'), start=document.getElementById('start'), interaction=document.getElementById('interaction'), found=false;
+ function report(s){log.textContent += '\n'+s;}
+ start.addEventListener('click',function(){
+  if(navigator.globalPrivacyControl===true){report('Tarayıcı Global Privacy Control etkin. Takip başlatılmadı.');return;}
+  start.disabled=true; interaction.disabled=false; log.textContent='Test başlatıldı.';
+  window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments);};
+  var script=document.createElement('script');script.async=true;script.src='https://www.clarity.ms/tag/zk44qce35h';
+  script.onload=function(){report('Clarity tag dosyası tarayıcıya ulaştı.');window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'granted'});window.clarity('event','installation_test');};
+  script.onerror=function(){report('Clarity tag yüklenemedi. Reklam engelleyici, DNS, ağ veya CSP kontrol edilmeli.');};
+  window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'granted'});
+  document.head.appendChild(script);
+  try{new PerformanceObserver(function(list){list.getEntries().forEach(function(e){if(!found && /clarity\.ms\/collect/.test(e.name)){found=true;report('Clarity collect ağ isteği gözlendi. HTTP sonucunu Network sekmesinden doğrulayın.');}});}).observe({type:'resource',buffered:true});}catch(e){}
+  setTimeout(function(){if(!found)report('Henüz collect isteği gözlenmedi. Test tıklaması yapın; Network sekmesinde collect kontrol edilebilir.');},15000);
+ });
+ interaction.addEventListener('click',function(){report('Test tıklaması: '+new Date().toLocaleTimeString());if(window.clarity)window.clarity('event','installation_test_click');});
+})();
+</script></body></html>
